@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCash" xml:space="preserve">
+    <value>資金を追加</value>
+  </data>
+  <data name="AddCashAmount" xml:space="preserve">
+    <value>資金を指定額で追加</value>
+  </data>
+  <data name="AddCashThreshold" xml:space="preserve">
+    <value>資金が閾値以下で追加</value>
+  </data>
+  <data name="AddCashTooltip" xml:space="preserve">
+    <value>Cash Anarchy機能が有効化しているか確認して下さい。</value>
+  </data>
+  <data name="CashAnarchy" xml:space="preserve">
+    <value>Cash Anarchyモード: 自動/手動(ホットキー) で資金を追加</value>
+  </data>
+  <data name="CityServiceOptions" xml:space="preserve">
+    <value>都市サービスのオプション</value>
+  </data>
+  <data name="CommercialMultiplierFactor" xml:space="preserve">
+    <value>商業税収の倍率係数</value>
+  </data>
+  <data name="EnableAchievements" xml:space="preserve">
+    <value>Steamの実績システムを有効化</value>
+  </data>
+  <data name="EnabledInfoView" xml:space="preserve">
+    <value>情報ビューを全てアンロック</value>
+  </data>
+  <data name="EnabledInfoViewTooltip" xml:space="preserve">
+    <value>Unlock All機能が既に有効な場合は、情報ビューも全てアンロックされるのでオプションは使用できません。</value>
+  </data>
+  <data name="EnabledSkipIntro" xml:space="preserve">
+    <value>ゲーム起動時のイントロをスキップ</value>
+  </data>
+  <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
+    <value>ユニーク施設を無制限に配置可能</value>
+  </data>
+  <data name="FastReturn" xml:space="preserve">
+    <value>ゲームの高速終了</value>
+  </data>
+  <data name="IncomeOptions" xml:space="preserve">
+    <value>収入のオプション</value>
+  </data>
+  <data name="IndustrialMultiplierFactor" xml:space="preserve">
+    <value>産業税収の倍率係数</value>
+  </data>
+  <data name="InitialCash" xml:space="preserve">
+    <value>ゲームの初期資金</value>
+  </data>
+  <data name="InitialCashWarning" xml:space="preserve">
+    <value>ゲームの開始前に資金を設定して下さい。セーブをロードする度に設定した資金で開始するので、変えたくない場合は機能を一度有効化してから無効化します。その後でゲームのシミュレーションが開始されると、資金が変更されます。</value>
+  </data>
+  <data name="LocalModWarning" xml:space="preserve">
+    <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。</value>
+  </data>
+  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
+    <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。債務超過の破産に備えて、設定パネルで初期資金を設定して下さい。 (ゲームのクラッシュを回避)</value>
+  </data>
+  <data name="MaximizeAttractiveness" xml:space="preserve">
+    <value>魅力度を最大化: より多くの観光客が訪れます。</value>
+  </data>
+  <data name="MaximizeEducationCoverage" xml:space="preserve">
+    <value>教育範囲を最大化: 教育は必要なので各学校は必要です。</value>
+  </data>
+  <data name="MaximizeEntertainment" xml:space="preserve">
+    <value>娯楽度を最大化: 住民の幸福度を上昇させます。</value>
+  </data>
+  <data name="MaximizeLandValue" xml:space="preserve">
+    <value>都市の地価を最高化</value>
+  </data>
+  <data name="MOD_Description" xml:space="preserve">
+    <value>ゲームの様々な機能を拡張＆最適化します</value>
+  </data>
+  <data name="OfficeMultiplierFactor" xml:space="preserve">
+    <value>オフィス税収の倍率係数</value>
+  </data>
+  <data name="OptimizeOptions" xml:space="preserve">
+    <value>最適化のオプション</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
+    <value>オプションパネルのカテゴリーバーの水平オフセット</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
+    <value>オプションパネルのカテゴリーバーの水平オフセットは、オプションパネルを再度開いた後で有効化されます。</value>
+  </data>
+  <data name="Refund" xml:space="preserve">
+    <value>建物撤去時に全額を返金</value>
+  </data>
+  <data name="RemoveCrime" xml:space="preserve">
+    <value>全ての建物から犯罪者を除去して、警察サービスの有効範囲を最大化します。</value>
+  </data>
+  <data name="RemoveDeath" xml:space="preserve">
+    <value>亡くなった市民を除去して、葬儀サービスの有効範囲を最大化します。</value>
+  </data>
+  <data name="RemoveFire" xml:space="preserve">
+    <value>火災の危険を無くして、消防サービスを最大化します。</value>
+  </data>
+  <data name="RemoveGarbage" xml:space="preserve">
+    <value>ゴミを除去</value>
+  </data>
+  <data name="RemoveGroundPollution" xml:space="preserve">
+    <value>土壌汚染の発生源を除去</value>
+  </data>
+  <data name="RemoveNoisePollution" xml:space="preserve">
+    <value>騒音公害の発生源を除去</value>
+  </data>
+  <data name="RemoveWaterPollution" xml:space="preserve">
+    <value>水質汚染の発生源を除去</value>
+  </data>
+  <data name="ResetValue" xml:space="preserve">
+    <value>数値をリセット</value>
+  </data>
+  <data name="ResidentialMultiplierFactor" xml:space="preserve">
+    <value>住宅税収の倍率係数</value>
+  </data>
+  <data name="ResourceOptions" xml:space="preserve">
+    <value>資源のオプション</value>
+  </data>
+  <data name="SortSettings" xml:space="preserve">
+    <value>オプションパネルでMODの名前順にソート</value>
+  </data>
+  <data name="UnlimitedOil" xml:space="preserve">
+    <value>石油資源が減少しない</value>
+  </data>
+  <data name="UnlimitedOre" xml:space="preserve">
+    <value>鉱石資源が減少しない</value>
+  </data>
+  <data name="UnlockAll" xml:space="preserve">
+    <value>全てをアンロック</value>
+  </data>
+  <data name="UnlockOptions" xml:space="preserve">
+    <value>アンロックのオプション</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
+    <value>[ADD]初期資金の機能を追加</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
+    <value>[ADD]オプションパネルのカテゴリバーの水平オフセットの調整機能を追加</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
+    <value>[ADD]オリジナルのUnlimited Money機能を追加して、動的に切り替えが可能</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
+    <value>[ADD]情報ビューの表示機能を追加</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
+    <value>[FIX]Steamの実績ボタンが正しく動作するようになりました</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
+    <value>[UPT]オプションパネルを刷新して、優れた拡張機能をサポート</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
+    <value>[UPT]互換性のチェック機能を更新</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
+    <value>[UPT]多言語サポートのフレームワークを更新</value>
+  </data>
+  <data name="VanillaUnlimitedMoney" xml:space="preserve">
+    <value>バニラのUnlimited Moneyモード: 動的な切り替えを許可します。</value>
+  </data>
+</root>

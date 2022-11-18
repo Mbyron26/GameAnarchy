@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net3.5</TargetFramework>
+	<LangVersion>10.0</LangVersion>
+	<Product>Game Anarchy</Product>
+	<Copyright>Copyright © 2022 Mbyron26</Copyright>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<Authors>Mbyron26</Authors>
+	<Version>0.9.1</Version>
+  </PropertyGroup>
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-CN\CommonLocaleShared.zh-CN.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\KeyBindingShared\KeyBindingShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\MessageBoxShared\MessageBoxShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\ModBaseShared\ModBaseShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\ModUtilsShared\ModUtilsShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\OptionPanelShared\OptionPanelShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\UIShared\UIShared.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\en\CommonLocaleShared.en.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ja\CommonLocaleShared.ja.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Users\M\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CitiesHarmony.API">
+      <HintPath>C:\Users\M\Desktop\Assembly\CitiesHarmony.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CitiesHarmony.Harmony">
+      <HintPath>C:\Users\M\Desktop\Assembly\CitiesHarmony.Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>C:\Users\M\Desktop\Assembly\ColossalManaged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>C:\Users\M\Desktop\Assembly\ICities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Users\M\Desktop\Assembly\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Localization\Localize.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Localize.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.0\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
+      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Localize.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localize.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>GameAnarchy</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

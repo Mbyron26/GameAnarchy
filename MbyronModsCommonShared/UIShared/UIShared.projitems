@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3eb3690c-1fa5-4960-ba1f-9c4b93b8c8c8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>UIShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomAtlas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomCheckBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomDropdown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomScrollablePanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomScrollbar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomSlider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomTabStrip.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomTextfield.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomUIPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderLeftSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderMidSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderRightSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonHovered.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonNormal.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonPressed.png" />
+  </ItemGroup>
+</Project>

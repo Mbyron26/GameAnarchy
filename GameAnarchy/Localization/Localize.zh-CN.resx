@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCash" xml:space="preserve">
+    <value>增加现金</value>
+  </data>
+  <data name="AddCashAmount" xml:space="preserve">
+    <value>加钱金额</value>
+  </data>
+  <data name="AddCashThreshold" xml:space="preserve">
+    <value>自动加钱门槛</value>
+  </data>
+  <data name="AddCashTooltip" xml:space="preserve">
+    <value>请确保启用了金钱无碰撞功能。</value>
+  </data>
+  <data name="CashAnarchy" xml:space="preserve">
+    <value>金钱无碰撞模式, 自动/手动(快捷键)加钱</value>
+  </data>
+  <data name="CityServiceOptions" xml:space="preserve">
+    <value>城市服务选项</value>
+  </data>
+  <data name="CommercialMultiplierFactor" xml:space="preserve">
+    <value>商业区收入倍乘因子</value>
+  </data>
+  <data name="EnableAchievements" xml:space="preserve">
+    <value>成就系统总是可用</value>
+  </data>
+  <data name="EnabledInfoView" xml:space="preserve">
+    <value>游戏内左上角信息面板总是可用</value>
+  </data>
+  <data name="EnabledInfoViewTooltip" xml:space="preserve">
+    <value>当启用解锁所有功能后该选项将不可用, 因为解锁所有时信息面板已被解锁。</value>
+  </data>
+  <data name="EnabledSkipIntro" xml:space="preserve">
+    <value>跳过游戏启动时logo显示</value>
+  </data>
+  <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
+    <value>允许无限制摆放独特建筑</value>
+  </data>
+  <data name="FastReturn" xml:space="preserve">
+    <value>快速退出游戏</value>
+  </data>
+  <data name="IncomeOptions" xml:space="preserve">
+    <value>收入选项</value>
+  </data>
+  <data name="IndustrialMultiplierFactor" xml:space="preserve">
+    <value>工业区收入倍乘因子</value>
+  </data>
+  <data name="InitialCash" xml:space="preserve">
+    <value>游戏初始现金</value>
+  </data>
+  <data name="InitialCashWarning" xml:space="preserve">
+    <value>需在开始游戏前设定。如果不希望每次加载存档后现金都为该值, 在启用一次后禁用此功能。游戏模拟开始后现金将会变更设置的值。</value>
+  </data>
+  <data name="LocalModWarning" xml:space="preserve">
+    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。如果你想使用Game Anarchy功能，请禁用这个本地模组。</value>
+  </data>
+  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
+    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。请禁用这个本地模组，并在GA的设置面板中设置初始金额，以防你的城市因透支而破产(以避免游戏崩溃)。</value>
+  </data>
+  <data name="MaximizeAttractiveness" xml:space="preserve">
+    <value>最大化吸引力, 将会吸引更多的游客</value>
+  </data>
+  <data name="MaximizeEducationCoverage" xml:space="preserve">
+    <value>最大化教育服务覆盖范围, 仍然需要学校获得受教育的市民</value>
+  </data>
+  <data name="MaximizeEntertainment" xml:space="preserve">
+    <value>最大化娱乐服务, 将会提高市民的幸福度</value>
+  </data>
+  <data name="MaximizeLandValue" xml:space="preserve">
+    <value>最大化城市的土地价值</value>
+  </data>
+  <data name="MOD_Description" xml:space="preserve">
+    <value>扩展、优化游戏特性。</value>
+  </data>
+  <data name="OfficeMultiplierFactor" xml:space="preserve">
+    <value>办公区收入倍乘因子</value>
+  </data>
+  <data name="OptimizeOptions" xml:space="preserve">
+    <value>优化选项</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
+    <value>选项面板类别栏水平偏移</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
+    <value>选项面板类别栏水平偏移功能将在重新打开选项面板后生效。</value>
+  </data>
+  <data name="Refund" xml:space="preserve">
+    <value>铲平建筑物全额退款</value>
+  </data>
+  <data name="RemoveCrime" xml:space="preserve">
+    <value>移除所有建筑的罪犯并最大化警察服务的覆盖</value>
+  </data>
+  <data name="RemoveDeath" xml:space="preserve">
+    <value>移除死亡市民, 并最大化殉葬服务覆盖</value>
+  </data>
+  <data name="RemoveFire" xml:space="preserve">
+    <value>移除火灾隐患并最大化消防覆盖范围</value>
+  </data>
+  <data name="RemoveGarbage" xml:space="preserve">
+    <value>移除垃圾</value>
+  </data>
+  <data name="RemoveGroundPollution" xml:space="preserve">
+    <value>移除地面污染源头</value>
+  </data>
+  <data name="RemoveNoisePollution" xml:space="preserve">
+    <value>移除噪声污染源头</value>
+  </data>
+  <data name="RemoveWaterPollution" xml:space="preserve">
+    <value>移除水污染源头</value>
+  </data>
+  <data name="ResetValue" xml:space="preserve">
+    <value>重置数值</value>
+  </data>
+  <data name="ResidentialMultiplierFactor" xml:space="preserve">
+    <value>住宅区收入倍乘因子</value>
+  </data>
+  <data name="ResourceOptions" xml:space="preserve">
+    <value>资源选项</value>
+  </data>
+  <data name="SortSettings" xml:space="preserve">
+    <value>选项菜单按名称对齐</value>
+  </data>
+  <data name="UnlimitedOil" xml:space="preserve">
+    <value>石油资源不会被消耗</value>
+  </data>
+  <data name="UnlimitedOre" xml:space="preserve">
+    <value>矿石资源不会被消耗</value>
+  </data>
+  <data name="UnlockAll" xml:space="preserve">
+    <value>解锁所有</value>
+  </data>
+  <data name="UnlockOptions" xml:space="preserve">
+    <value>解锁选项</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
+    <value>[ADD]添加初始金钱功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
+    <value>[ADD]添加选项面板类别栏水平偏移调整功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
+    <value>[ADD]添加游戏自带无限金钱模式，允许动态切换。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
+    <value>[ADD]添加游戏左上角信息面板可用选项。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
+    <value>[FIX]成就按钮现已正常工作。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
+    <value>[UPT]选项面板完全重写，以支持更好的扩展。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
+    <value>[UPT]更新兼容性检查功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
+    <value>[UPT]更新多语言支持框架。</value>
+  </data>
+  <data name="VanillaUnlimitedMoney" xml:space="preserve">
+    <value>原版无限金钱模式, 允许动态切换</value>
+  </data>
+</root>
