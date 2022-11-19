@@ -1,9 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ICities;
+using MbyronModsCommon;
+
 namespace GameAnarchy {
     public class MilestonesExtension : MilestonesExtensionBase {
         public override void OnRefreshMilestones() {
+
+            #region UnlockCommon
+            if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockBasicRoad && Config.Instance.CustomUnlock)) {
+                milestonesManager.UnlockMilestone("Basic Road Created");
+            }
+            if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockTrainTrack && Config.Instance.CustomUnlock)) {
+                milestonesManager.UnlockMilestone("Train Track Requirements");
+            }
+            if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockMetroTrack && Config.Instance.CustomUnlock)) {
+                milestonesManager.UnlockMilestone("Metro Track Requirements");
+            }
+            #endregion
+
+            #region UnlockAll
             if (Config.Instance.EnabledUnlockAll) {
                 if (managers.application.SupportsExpansion(Expansion.PlazasAndPromenades)) {
                     milestonesManager.UnlockMilestone("Pedestrian Zone Created");
@@ -181,9 +198,7 @@ namespace GameAnarchy {
                 }
 
 
-                milestonesManager.UnlockMilestone("Basic Road Created");
-                milestonesManager.UnlockMilestone("Train Track Requirements");
-                milestonesManager.UnlockMilestone("Metro Track Requirements");
+
 
 
                 UnlockBuildings(new List<string>
@@ -276,9 +291,46 @@ namespace GameAnarchy {
                 "Brandenburg Gate",
                 "Arc de Triomphe", });
             }
+            #endregion
+
+            #region CustomUnlock
+            if (Config.Instance.CustomUnlock && Config.Instance.MilestoneLevel != 0) {
+                milestonesManager.UnlockMilestone("Milestone" + Config.Instance.MilestoneLevel.ToString());
+            }
+            #endregion
+
+            #region Unlock Policies
+            if (Config.Instance.CustomUnlock && Config.Instance.UnlockPolicies) {
+                if (UnlockManager.exists) {
+                    try {
+                        UnlockManager.instance.m_properties.m_FeatureMilestones[2] = null;
+                        var icon = UnlockManager.instance.m_properties.m_PolicyTypeMilestones;
+                        for (int i = 1; i < 4; i++) {
+                            icon[i] = null;
+                        }
+                        var servicePanel = UnlockManager.instance.m_properties.m_ServicePolicyMilestones;
+                        for (int i = 0; i < servicePanel.Length - 2; i++) {
+                            servicePanel[i] = null;
+                        }
+                        var taxationPanel = UnlockManager.instance.m_properties.m_TaxationPolicyMilestones;
+                        for (int i = 0; i < taxationPanel.Length; i++) {
+                            taxationPanel[i] = null;
+                        }
+                        var cityPlanningPanel = UnlockManager.instance.m_properties.m_CityPlanningPolicyMilestones;
+                        for (int i = 0; i < cityPlanningPanel.Length; i++) {
+                            cityPlanningPanel[i] = null;
+                        }
+                    }
+                    catch (Exception e) {
+                        ModLogger.ModLog($"Couldn't unlock policies, detail: {e}");
+                    }
+                } else {
+                    ModLogger.ModLog("UnlockManager doesn't exist.");
+                }
+            }
+            # endregion
+
         }
-
-
 
         private void UnlockBuildings(List<string> list, string postfix = "Requirements") {
             foreach (var item in list) {
@@ -289,10 +341,9 @@ namespace GameAnarchy {
             }
         }
 
-
         public override int OnGetPopulationTarget(int originalTarget, int scaledTarget) {
-            if(Config.Instance.EnabledUnlockAll) return 0;
-            else  return base.OnGetPopulationTarget(originalTarget, scaledTarget);
+            if (Config.Instance.EnabledUnlockAll) return 0;
+            else return base.OnGetPopulationTarget(originalTarget, scaledTarget);
         }
     }
 }

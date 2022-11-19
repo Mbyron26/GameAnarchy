@@ -138,14 +138,17 @@
   <data name="CommercialMultiplierFactor" xml:space="preserve">
     <value>Commercial income multiplier factor</value>
   </data>
+  <data name="CustomUnlock" xml:space="preserve">
+    <value>Custom unlock</value>
+  </data>
+  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+  </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Achievements system is always available</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
     <value>Info view is always available</value>
-  </data>
-  <data name="EnabledInfoViewTooltip" xml:space="preserve">
-    <value>This option is not available when Unlock All function is enabled, because Info View is already unlocked when Unlock All is enabled.</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>Skip game Intro interface</value>
@@ -166,7 +169,7 @@
     <value>Game Initial cash</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gamming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disabled this local mod if you wan to use Game Anarchy funcitons.</value>
@@ -185,6 +188,51 @@
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>Maximize the land value of city</value>
+  </data>
+  <data name="MilestonelevelName_BigCity" xml:space="preserve">
+    <value>Big City</value>
+  </data>
+  <data name="MilestonelevelName_BigTown" xml:space="preserve">
+    <value>Big Town</value>
+  </data>
+  <data name="MilestonelevelName_BoomTown" xml:space="preserve">
+    <value>Boom Town</value>
+  </data>
+  <data name="MilestonelevelName_BusyTown" xml:space="preserve">
+    <value>Busy Town</value>
+  </data>
+  <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
+    <value>Capital City</value>
+  </data>
+  <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
+    <value>Colossal City</value>
+  </data>
+  <data name="MilestonelevelName_GrandCity" xml:space="preserve">
+    <value>Grand City</value>
+  </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>Little Hamlet</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>Megalopolis</value>
+  </data>
+  <data name="MilestonelevelName_Metropolis" xml:space="preserve">
+    <value>Metropolis</value>
+  </data>
+  <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
+    <value>Milestone unlock level</value>
+  </data>
+  <data name="MilestonelevelName_SmallCity" xml:space="preserve">
+    <value>Small City</value>
+  </data>
+  <data name="MilestonelevelName_TinyTown" xml:space="preserve">
+    <value>Tiny Town</value>
+  </data>
+  <data name="MilestonelevelName_Vanilla" xml:space="preserve">
+    <value>Vanilla</value>
+  </data>
+  <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
+    <value>Worthy Village</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Extends and optimize game's functions.</value>
@@ -246,8 +294,20 @@
   <data name="UnlockAll" xml:space="preserve">
     <value>Unlock all</value>
   </data>
+  <data name="UnlockBasicRoad" xml:space="preserve">
+    <value>Unlock basic road</value>
+  </data>
+  <data name="UnlockMetroTrack" xml:space="preserve">
+    <value>Unlock metro track</value>
+  </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>Unlock Options</value>
+  </data>
+  <data name="UnlockPolicies" xml:space="preserve">
+    <value>Unlock policies panel</value>
+  </data>
+  <data name="UnlockTrainTrack" xml:space="preserve">
+    <value>Unlock train track</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]Add initial cash function.</value>
@@ -272,6 +332,12 @@
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]Updated multi-language support framework.</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
+    <value>[ADD]Add custom unlock function, includes custom milestones level, base road, policy panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
+    <value>[OPT]Optimize language switching speed and language list format.</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Vanilla unlimited money mode, allow dynamic toggling</value>

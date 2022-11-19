@@ -24,7 +24,7 @@ namespace MbyronModsCommon {
                 AddTitleTextLabel(_titlePanel, titleText, 1.8f, CustomFont.SemiBold);
             }
             titlePanel = _titlePanel;
-            contentPanel.autoLayoutPadding = new RectOffset(30, 10, 10, 0);
+            contentPanel.autoLayoutPadding = new RectOffset(30, 10, 6, 0);
             return contentPanel;
         }
 
@@ -47,6 +47,7 @@ namespace MbyronModsCommon {
     public class Card : AdvancedAutoFitChildrenVerticallyPanel {
         public Card() {
             autoSize = false;
+            //backgroundSprite = "SubcategoriesPanel";
             backgroundSprite = "TextFieldPanel";
             color = UIColor.CardBackground;
         }

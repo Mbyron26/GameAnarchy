@@ -138,14 +138,17 @@
   <data name="CommercialMultiplierFactor" xml:space="preserve">
     <value>商业区收入倍乘因子</value>
   </data>
+  <data name="CustomUnlock" xml:space="preserve">
+    <value>自定义解锁</value>
+  </data>
+  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
+    <value>这些选项在启用“解锁所有”特性时不可用，因为解锁所有已解锁以下所有选项。</value>
+  </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>成就系统总是可用</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
     <value>游戏内左上角信息面板总是可用</value>
-  </data>
-  <data name="EnabledInfoViewTooltip" xml:space="preserve">
-    <value>当启用解锁所有功能后该选项将不可用, 因为解锁所有时信息面板已被解锁。</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>跳过游戏启动时logo显示</value>
@@ -185,6 +188,51 @@
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>最大化城市的土地价值</value>
+  </data>
+  <data name="MilestonelevelName_BigCity" xml:space="preserve">
+    <value>大型城市</value>
+  </data>
+  <data name="MilestonelevelName_BigTown" xml:space="preserve">
+    <value>大型城镇</value>
+  </data>
+  <data name="MilestonelevelName_BoomTown" xml:space="preserve">
+    <value>快速发展的城镇</value>
+  </data>
+  <data name="MilestonelevelName_BusyTown" xml:space="preserve">
+    <value>忙碌的城镇</value>
+  </data>
+  <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
+    <value>首都级城市</value>
+  </data>
+  <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
+    <value>超大城市</value>
+  </data>
+  <data name="MilestonelevelName_GrandCity" xml:space="preserve">
+    <value>特大城市</value>
+  </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>小村庄</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>超级大都会</value>
+  </data>
+  <data name="MilestonelevelName_Metropolis" xml:space="preserve">
+    <value>大都会</value>
+  </data>
+  <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
+    <value>里程碑解锁等级</value>
+  </data>
+  <data name="MilestonelevelName_SmallCity" xml:space="preserve">
+    <value>小型城市</value>
+  </data>
+  <data name="MilestonelevelName_TinyTown" xml:space="preserve">
+    <value>小城镇</value>
+  </data>
+  <data name="MilestonelevelName_Vanilla" xml:space="preserve">
+    <value>原版</value>
+  </data>
+  <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
+    <value>富有的村庄</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>扩展、优化游戏特性。</value>
@@ -246,8 +294,20 @@
   <data name="UnlockAll" xml:space="preserve">
     <value>解锁所有</value>
   </data>
+  <data name="UnlockBasicRoad" xml:space="preserve">
+    <value>解锁基础道路</value>
+  </data>
+  <data name="UnlockMetroTrack" xml:space="preserve">
+    <value>解锁地铁轨道</value>
+  </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>解锁选项</value>
+  </data>
+  <data name="UnlockPolicies" xml:space="preserve">
+    <value>解锁政策面板</value>
+  </data>
+  <data name="UnlockTrainTrack" xml:space="preserve">
+    <value>解锁火车轨道</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]添加初始金钱功能。</value>
@@ -272,6 +332,12 @@
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]更新多语言支持框架。</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
+    <value>[ADD]增加自定义解锁功能，包括自定义里程碑级别，基础道路，政策面板。</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
+    <value>[OPT]优化语言切换速度和语言列表格式。</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>原版无限金钱模式, 允许动态切换</value>

@@ -124,6 +124,24 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Custom unlock 的本地化字符串。
+        /// </summary>
+        public static string CustomUnlock {
+            get {
+                return ResourceManager.GetString("CustomUnlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. 的本地化字符串。
+        /// </summary>
+        public static string CustomUnlockPanelTooltip {
+            get {
+                return ResourceManager.GetString("CustomUnlockPanelTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Achievements system is always available 的本地化字符串。
         /// </summary>
         public static string EnableAchievements {
@@ -138,15 +156,6 @@ namespace GameAnarchy {
         public static string EnabledInfoView {
             get {
                 return ResourceManager.GetString("EnabledInfoView", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 This option is not available when Unlock All function is enabled, because Info View is already unlocked when Unlock All is enabled. 的本地化字符串。
-        /// </summary>
-        public static string EnabledInfoViewTooltip {
-            get {
-                return ResourceManager.GetString("EnabledInfoViewTooltip", resourceCulture);
             }
         }
         
@@ -205,7 +214,7 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Set value before you start gamming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts. 的本地化字符串。
+        ///   查找类似 Set value before you start gaming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts. 的本地化字符串。
         /// </summary>
         public static string InitialCashWarning {
             get {
@@ -264,6 +273,141 @@ namespace GameAnarchy {
         public static string MaximizeLandValue {
             get {
                 return ResourceManager.GetString("MaximizeLandValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Big City 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_BigCity {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_BigCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Big Town 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_BigTown {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_BigTown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Boom Town 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_BoomTown {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_BoomTown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Busy Town 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_BusyTown {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_BusyTown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Capital City 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_CapitalCity {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_CapitalCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Colossal City 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_ColossalCity {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_ColossalCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Grand City 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_GrandCity {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_GrandCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Little Hamlet 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_LittleHamlet {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_LittleHamlet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Megalopolis 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_Megalopolis {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_Megalopolis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Metropolis 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_Metropolis {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_Metropolis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Milestone unlock level 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_MilestoneUnlockLevel {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_MilestoneUnlockLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Small City 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_SmallCity {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_SmallCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Tiny Town 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_TinyTown {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_TinyTown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Vanilla 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_Vanilla {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_Vanilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Worthy Village 的本地化字符串。
+        /// </summary>
+        public static string MilestonelevelName_WorthyVillage {
+            get {
+                return ResourceManager.GetString("MilestonelevelName_WorthyVillage", resourceCulture);
             }
         }
         
@@ -448,11 +592,47 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Unlock basic road 的本地化字符串。
+        /// </summary>
+        public static string UnlockBasicRoad {
+            get {
+                return ResourceManager.GetString("UnlockBasicRoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock metro track 的本地化字符串。
+        /// </summary>
+        public static string UnlockMetroTrack {
+            get {
+                return ResourceManager.GetString("UnlockMetroTrack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Unlock Options 的本地化字符串。
         /// </summary>
         public static string UnlockOptions {
             get {
                 return ResourceManager.GetString("UnlockOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock policies panel 的本地化字符串。
+        /// </summary>
+        public static string UnlockPolicies {
+            get {
+                return ResourceManager.GetString("UnlockPolicies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock train track 的本地化字符串。
+        /// </summary>
+        public static string UnlockTrainTrack {
+            get {
+                return ResourceManager.GetString("UnlockTrainTrack", resourceCulture);
             }
         }
         
@@ -525,6 +705,24 @@ namespace GameAnarchy {
         public static string UpdateLog_V0_9_0_UPT3 {
             get {
                 return ResourceManager.GetString("UpdateLog_V0_9_0_UPT3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Add custom unlock function, includes custom milestones level, base road, policy panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_1_ADD1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_1_ADD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimize language switching speed and language list format. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_1_OPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_1_OPT1", resourceCulture);
             }
         }
         

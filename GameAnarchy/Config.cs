@@ -12,6 +12,12 @@ namespace GameAnarchy {
 
         public bool EnabledInfoView { get; set; } = false;
         public bool EnabledUnlockAll { get; set; } = true;
+        public bool CustomUnlock { get; set; } = false;
+        public bool UnlockBasicRoad { get; set; } = false;
+        public bool UnlockTrainTrack { get; set; } = false;
+        public bool UnlockMetroTrack { get; set; } = false;
+        public int MilestoneLevel { get; set; } = 0;
+        public bool UnlockPolicies { get; set; } = false;
 
         public bool RemoveNoisePollution { get; set; } = false;
         public bool RemoveGroundPollution { get; set; } = false;

@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -138,14 +138,17 @@
   <data name="CommercialMultiplierFactor" xml:space="preserve">
     <value>商業税収の倍率係数</value>
   </data>
+  <data name="CustomUnlock" xml:space="preserve">
+    <value>Custom unlock</value>
+  </data>
+  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+  </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Steamの実績システムを有効化</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
     <value>情報ビューを全てアンロック</value>
-  </data>
-  <data name="EnabledInfoViewTooltip" xml:space="preserve">
-    <value>Unlock All機能が既に有効な場合は、情報ビューも全てアンロックされるのでオプションは使用できません。</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>ゲーム起動時のイントロをスキップ</value>
@@ -185,6 +188,51 @@
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>都市の地価を最高化</value>
+  </data>
+  <data name="MilestonelevelName_BigCity" xml:space="preserve">
+    <value>Big City</value>
+  </data>
+  <data name="MilestonelevelName_BigTown" xml:space="preserve">
+    <value>Big Town</value>
+  </data>
+  <data name="MilestonelevelName_BoomTown" xml:space="preserve">
+    <value>Boom Town</value>
+  </data>
+  <data name="MilestonelevelName_BusyTown" xml:space="preserve">
+    <value>Busy Town</value>
+  </data>
+  <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
+    <value>Capital City</value>
+  </data>
+  <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
+    <value>Colossal City</value>
+  </data>
+  <data name="MilestonelevelName_GrandCity" xml:space="preserve">
+    <value>Grand City</value>
+  </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>Little Hamlet</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>Megalopolis</value>
+  </data>
+  <data name="MilestonelevelName_Metropolis" xml:space="preserve">
+    <value>Metropolis</value>
+  </data>
+  <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
+    <value>Milestone unlock level</value>
+  </data>
+  <data name="MilestonelevelName_SmallCity" xml:space="preserve">
+    <value>Small City</value>
+  </data>
+  <data name="MilestonelevelName_TinyTown" xml:space="preserve">
+    <value>Tiny Town</value>
+  </data>
+  <data name="MilestonelevelName_Vanilla" xml:space="preserve">
+    <value>Vanilla</value>
+  </data>
+  <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
+    <value>Worthy Village</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>ゲームの様々な機能を拡張＆最適化します</value>
@@ -246,8 +294,20 @@
   <data name="UnlockAll" xml:space="preserve">
     <value>全てをアンロック</value>
   </data>
+  <data name="UnlockBasicRoad" xml:space="preserve">
+    <value>Unlock basic road</value>
+  </data>
+  <data name="UnlockMetroTrack" xml:space="preserve">
+    <value>Unlock metro track</value>
+  </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>アンロックのオプション</value>
+  </data>
+  <data name="UnlockPolicies" xml:space="preserve">
+    <value>Unlock policies panel</value>
+  </data>
+  <data name="UnlockTrainTrack" xml:space="preserve">
+    <value>Unlock train track</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]初期資金の機能を追加</value>
@@ -272,6 +332,12 @@
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]多言語サポートのフレームワークを更新</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
+    <value>[ADD]Add custom unlock function, includes custom milestones level, base road, policy panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
+    <value>[OPT]Optimize language switching speed and language list format.</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>バニラのUnlimited Moneyモード: 動的な切り替えを許可します。</value>
