@@ -162,6 +162,7 @@ namespace GameAnarchy {
             CustomSlider.AddCustomSliderStyleA(incomeOptions, Localize.CommercialMultiplierFactor, 1f, 100f, 1f, Config.Instance.CommercialMultiplierFactor, (c, value) => Config.Instance.CommercialMultiplierFactor = (int)value);
             CustomSlider.AddCustomSliderStyleA(incomeOptions, Localize.OfficeMultiplierFactor, 1f, 100f, 1f, Config.Instance.OfficeMultiplierFactor, (c, value) => Config.Instance.OfficeMultiplierFactor = (int)value);
             #endregion
+
         }
 
 
