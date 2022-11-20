@@ -24,7 +24,7 @@ namespace MbyronModsCommon {
 
         public static void GameLog(object message) => UnityEngine.Debug.Log("[" + AssemblyUtils.CurrentAssemblyName + "]" + " => " + message);
         public static void GameLog(object message, Exception e) => UnityEngine.Debug.Log($"[{AssemblyUtils.CurrentAssemblyName}] => {message}, detial: {e}");
-        public static void CreateDebugFile<Mod>() where Mod : ModBase<Mod> {
+        public static void CreateDebugFile<Mod>() where Mod : IMod {
             using FileStream debugFile = new(DebugFilePath, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
             using StreamWriter sw = new(debugFile);
             sw.WriteLine(@"--- " + ModMainInfo<Mod>.ModName + ' ' + ModMainInfo<Mod>.ModVersion + @" Debug File ---");

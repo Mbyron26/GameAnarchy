@@ -10,7 +10,7 @@ namespace MbyronModsCommon {
             AddButtons(1, 1, CommonLocale.MessageBox_OK, Close);
         }
 
-        public void Initialize<Mod>(bool maximizeFirst = true) where Mod : ModBase<Mod> {
+        public void Initialize<Mod>(bool maximizeFirst = true) where Mod : IMod {
             TitleText = ModMainInfo<Mod>.ModName;
             Card = MainPanel.AddCard();
             if (SingletonMod<Mod>.Instance.GetUpdateLogs() is null ) return;

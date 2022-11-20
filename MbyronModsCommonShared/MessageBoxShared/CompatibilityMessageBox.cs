@@ -10,7 +10,7 @@ namespace MbyronModsCommon {
             AddButtons(1, 1, CommonLocale.MessageBox_OK, Close);
         }
 
-        public void Initialize<Mod>() where Mod : ModBase<Mod> {
+        public void Initialize<Mod>() where Mod : IMod {
             TitleText = ModMainInfo<Mod>.ModName;
             Card = MainPanel.AddCard();
             if (CompatibilityCheck.IsConflict) {

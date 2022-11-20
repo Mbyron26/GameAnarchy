@@ -7,7 +7,7 @@ using System;
 using UnityEngine;
 
 namespace MbyronModsCommon {
-    public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : UIComponent where Mod : ModBase<Mod> {
+    public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : UIPanel where Mod : IMod {
         private static OptionPanel Panel { get; set; }
         private static UIScrollablePanel BaseScrollablePanel { get; set; }
         private static UIPanel BasePanel { get; set; }

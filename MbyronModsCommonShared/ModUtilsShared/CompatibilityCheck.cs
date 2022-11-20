@@ -26,7 +26,7 @@ namespace MbyronModsCommon {
             }
         }
 
-        public static void CheckCompatibility<Mod>() where Mod : ModBase<Mod> {
+        public static void CheckCompatibility<Mod>() where Mod : IMod {
             GetIncompatibleMods<Mod>();
             if (IncompatibleModsInfo.Count > 0) {
                 IsConflict = true;
@@ -35,7 +35,7 @@ namespace MbyronModsCommon {
             }
         }
 
-        private static void GetIncompatibleMods<Mod>() where Mod : ModBase<Mod> {
+        private static void GetIncompatibleMods<Mod>() where Mod : IMod {
             string errorMsg = "";
             foreach (var mod in PlatformService.workshop.GetSubscribedItems()) {
                 for (int i = 0; i < IncompatibleMods.Length; i++) {

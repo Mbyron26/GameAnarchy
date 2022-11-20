@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace MbyronModsCommon {
     public class XMLUtils {
         public static bool DeserializationState { get; set; } = false;
-        public static void LoadData<Class>(string fileNameWithPath) where Class : ModConfigBase<Class>, new() {
+        public static void LoadData<Class>(string fileNameWithPath) where Class : SingletonMod<Class>, new() {
             if (fileNameWithPath.IsNullOrWhiteSpace()) {
                 ModLogger.GameLog($"{fileNameWithPath} is null or empty.");
             } else {
@@ -39,7 +39,7 @@ namespace MbyronModsCommon {
             }
         }
 
-        public static void SaveData<Class>(string fileNameWithPath) where Class : ModConfigBase<Class> {
+        public static void SaveData<Class>(string fileNameWithPath) where Class : SingletonMod<Class> {
             try {
                 using (StreamWriter sw = new(fileNameWithPath)) {
                     XmlSerializer xmlSerializer = new(typeof(Class));

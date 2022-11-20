@@ -4,7 +4,7 @@ using System.Globalization;
 using UnityEngine;
 
 namespace MbyronModsCommon {
-    public class AdvancedBase<Mod> where Mod : ModBase<Mod> {
+    public class AdvancedBase<Mod> where Mod : IMod {
         public AdvancedBase(UIComponent parent, TypeWidth typeWidth) {
             var advanced = OptionPanelCard.AddCard(parent, typeWidth, CommonLocale.OptionPanel_Advanced, out _, true);
             CustomButton.AddButton(advanced, 1f, CommonLocale.OptionPanel_ChangeLog, 400f, 34f, ShowLog);
@@ -21,14 +21,14 @@ namespace MbyronModsCommon {
 
     }
 
-    public class GeneralOptionsBase<Mod, Config> where Mod : ModBase<Mod> where Config : ModConfigBase<Config> {
+    public class GeneralOptionsBase<Mod, Config> where Mod : IMod where Config : ModConfigBase<Config> {
         public UIPanel ModInfo { get; }
         public GeneralOptionsBase(UIComponent parent, TypeWidth typeWidth) {
             ModInfo = OptionPanelCard.AddCard(parent, typeWidth, ModMainInfo<Mod>.ModName, out _, true);
             CustomLabel.AddLabel(ModInfo, $"{CommonLocale.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion}", 690, 1f, UIColor.White);
         }
 
-        public static void AddLocaleDropdown<Panel>(UIComponent parent) where Panel : UIComponent {
+        public static void AddLocaleDropdown<Panel>(UIComponent parent) where Panel : UIPanel {
             var dropdown = CustomDropdown.AddDropdown(parent, CommonLocale.Language, 1f, GetLanguages().ToArray(), LanguagesIndex, 300, 32, 1f, new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0));
             dropdown.eventSelectedIndexChanged += (c, s) => {
                 if (s == 0) {

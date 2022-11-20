@@ -21,7 +21,7 @@ namespace MessageBoxShared {
         public SimpleMessageBox() {
             AddButtons(1, 1, CommonLocale.MessageBox_OK, Close);
         }
-        public virtual void Initialize<Mod>() where Mod : ModBase<Mod> {
+        public virtual void Initialize<Mod>() where Mod : IMod {
             TitleText = ModMainInfo<Mod>.ModName;
             Card = MainPanel.AddCard();
         }

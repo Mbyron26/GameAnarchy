@@ -7,24 +7,35 @@ using System.IO;
 using System.Globalization;
 using MessageBoxShared;
 using ColossalFramework.Globalization;
+using ColossalFramework;
 
 namespace MbyronModsCommon {
-    public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : ModBase<Mod> {
+    public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
         public static string SolidModName => Instance.SolidModName;
         public static string ModName => Instance.ModName;
         public static Version ModVersion => Instance.ModVersion;
         public static ulong ModID => Instance.ModID;
     }
 
-    public abstract class ModBase<Mod> : IMod where Mod : ModBase<Mod> {
+    public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : UIPanel where Config : ModConfigBase<Config>, new() {
         public abstract string SolidModName { get; }
         public abstract string ModName { get; }
         public abstract Version ModVersion { get; }
         public abstract ulong ModID { get; }
         public string Name => ModName + " " + ModVersion;
         public abstract string Description { get; }
-        public UIPanel GameOptionsPanel { get; protected set; }
 
+        private string configFilePath;
+        public string ConfigFilePath {
+            get {
+                if (configFilePath.IsNullOrWhiteSpace()) {
+                    var path = Path.Combine(DataLocation.localApplicationData, $"{SolidModName}Config.xml");
+                    configFilePath = path;
+                    return path;
+                }
+                return configFilePath;
+            }
+        }
 
         private CultureInfo modCulture;
         public CultureInfo ModCulture {
@@ -36,17 +47,26 @@ namespace MbyronModsCommon {
             }
         }
         public virtual void SetModCulture(CultureInfo cultureInfo) { }
+        public abstract string GetLocale(string text);
 
         public ModBase() {
             SingletonMod<Mod>.Instance = (Mod)this;
             ModLogger.GameLog($"Start initializing mod.");
             ModLogger.CreateDebugFile<Mod>();
             LoadConfig();
-
         }
 
-        protected abstract void LoadLocale();
-        protected void ModLocaleChange<Config>() where Config : ModConfigBase<Config> {
+        public void OnSettingsUI(UIHelperBase helper) {
+            ModLogger.GameLog($"Setting UI.");
+            LoadLocale();
+            LocaleManager.eventLocaleChanged += LoadLocale;
+            OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
+            SettingsUI(helper);
+        }
+
+        protected virtual void SettingsUI(UIHelperBase helper) { }
+
+        protected void LoadLocale() {
             CultureInfo locale;
             try {
                 if (SingletonMod<Config>.Instance.ModLanguage == "GameLanguage") {
@@ -60,15 +80,12 @@ namespace MbyronModsCommon {
                 ModCulture = locale;
             }
             catch (Exception e) {
-                ModLogger.GameLog($"Could't change mod locale",e);
+                ModLogger.GameLog($"Could't change mod locale", e);
             }
-
         }
 
-        public abstract void SaveConfig();
-        public abstract void LoadConfig();
-
-        public abstract string GetLocale(string text);
+        public void LoadConfig() => XMLUtils.LoadData<Config>(ConfigFilePath);
+        public void SaveConfig() => XMLUtils.SaveData<Config>(ConfigFilePath);
 
         public abstract List<ModUpdateInfo> ModUpdateLogs { get; set; }
         public List<ModUpdateInfo> GetUpdateLogs() {
@@ -85,52 +102,29 @@ namespace MbyronModsCommon {
             return list;
         }
 
-
-        public virtual void OnSettingsUI(UIHelperBase helper) {
-            ModLogger.GameLog($"Setting UI.");
-            LoadLocale();
-            LocaleManager.eventLocaleChanged += LoadLocale;
-            InitializeSettingsUI(helper);
-            SettingsUI(helper);
-        }
-
-        protected abstract void SettingsUI(UIHelperBase helper);
-
         public virtual void OnEnabled() {
             if (UIView.GetAView() is not null) {
-                OptionsEvent();
+                OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
             } else {
-                LoadingManager.instance.m_introLoaded += OptionsEvent;
+                LoadingManager.instance.m_introLoaded += OptionPanelManager<Mod, OptionPanel>.OptionsEventHook;
             }
             LoadingManager.instance.m_introLoaded += IntroActions;
         }
-        public abstract void InitializeSettingsUI(UIHelperBase helper);
-        public abstract void OptionsEvent();
 
-        public void SettingsUIHook<Panel>(UIHelperBase helper) where Panel : UIPanel {
-            OptionPanelManager<Mod, Panel>.SettingsUI(helper);
-        }
-
-        public void OptionsEventHook<Panel>() where Panel : UIPanel {
-            OptionPanelManager<Mod, Panel>.OptionsEventHook();
-        }
-
-        public string GetConfigFilePath => Path.Combine(DataLocation.localApplicationData, $"{SolidModName}Config.xml");
         public virtual void IntroActions() {
             GetDeserializationState();
-
         }
+
         public virtual void OnDisabled() { }
         public virtual void OnCreated(ILoading loading) { }
         public virtual void OnLevelLoaded(LoadMode mode) {
             ShowLogMessageBox();
-            OptionsEvent();
+            OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
         }
         public virtual void OnLevelUnloading() { }
         public virtual void OnReleased() { }
 
-        protected virtual void ShowLogMessageBox() { }
-        protected void IsNewVersion<Config>() where Config : ModConfigBase<Config> {
+        private void ShowLogMessageBox() {
             if (!string.IsNullOrEmpty(SingletonMod<Config>.Instance.ModVersion)) {
                 var lastVersion = new Version(SingletonMod<Config>.Instance.ModVersion);
                 var nowVersion = ModVersion;
@@ -142,29 +136,32 @@ namespace MbyronModsCommon {
                 }
             }
         }
-        public void GetDeserializationState() {
+
+        private void GetDeserializationState() {
             if (!XMLUtils.DeserializationState) {
                 var messageBox = MessageBox.Show<XMLWariningMessageBox>();
                 messageBox.Initialize<Mod>();
             }
         }
-        public struct ModUpdateInfo {
-            public Version ModVersion;
-            public string Date;
-            public bool IsBeta;
-            public List<string> Log;
-            public ModUpdateInfo(Version version, string date, List<string> log) {
-                ModVersion = version;
-                Date = date;
-                Log = log;
-                IsBeta = false;
-            }
-            public ModUpdateInfo(Version version, string date, List<string> log, bool isBeta = true) {
-                ModVersion = version;
-                Date = date;
-                Log = log;
-                IsBeta = isBeta;
-            }
+
+    }
+
+    public struct ModUpdateInfo {
+        public Version ModVersion;
+        public string Date;
+        public bool IsBeta;
+        public List<string> Log;
+        public ModUpdateInfo(Version version, string date, List<string> log) {
+            ModVersion = version;
+            Date = date;
+            Log = log;
+            IsBeta = false;
+        }
+        public ModUpdateInfo(Version version, string date, List<string> log, bool isBeta = true) {
+            ModVersion = version;
+            Date = date;
+            Log = log;
+            IsBeta = isBeta;
         }
     }
 
@@ -178,5 +175,8 @@ namespace MbyronModsCommon {
         Version ModVersion { get; }
         ulong ModID { get; }
         CultureInfo ModCulture { get; set; }
+        void SaveConfig();
+        void LoadConfig();
+        List<ModUpdateInfo> GetUpdateLogs();
     }
 }

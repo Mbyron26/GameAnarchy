@@ -8,10 +8,10 @@ using UnityEngine;
 using static MbyronModsCommon.CompatibilityCheck;
 
 namespace GameAnarchy {
-    public class Mod : ModBase<Mod> {
+    public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 1);
+        public override Version ModVersion => new(0, 9, 1,1);
         public override ulong ModID => 2781804786;
         public override string Description => Localize.MOD_Description;
         private GameObject AchievementsObject { get; set; }
@@ -28,8 +28,8 @@ namespace GameAnarchy {
                 }
             }
             CheckCompatibility<Mod>();
-
         }
+
         public override void OnLevelLoaded(LoadMode mode) {
             base.OnLevelLoaded(mode);
             EconomyExtension.UpdateStartCash();
@@ -37,6 +37,14 @@ namespace GameAnarchy {
             AchievementsObject.AddComponent<AchievementsManager>();
             InfoViewsObject = new GameObject("InfoViewsExtension");
             InfoViewsObject.AddComponent<InfoViewsExtension>();
+
+            //if (UnlockManager.exists) {
+            //    ModLogger.ModLog("exists");
+            //    var all = UnlockManager.instance.m_allMilestones;
+            //    foreach (var item in all) {
+            //        ModLogger.ModLog(item.Key); 
+            //    }
+            //}
         }
         public override void OnLevelUnloading() {
             base.OnLevelUnloading();
@@ -61,18 +69,8 @@ namespace GameAnarchy {
         }
         protected override void SettingsUI(UIHelperBase helper) {
         }
-        protected override void ShowLogMessageBox() => IsNewVersion<Config>();
 
-        public override void LoadConfig() => XMLUtils.LoadData<Config>(GetConfigFilePath);
-        public override void SaveConfig() => XMLUtils.SaveData<Config>(GetConfigFilePath);
         public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);
-
-        protected override void LoadLocale() {
-            ModLocaleChange<Config>();
-        }
-
-        public override void InitializeSettingsUI(UIHelperBase helper) => SettingsUIHook<OptionPanel>(helper);
-        public override void OptionsEvent() => OptionsEventHook<OptionPanel>();
 
         private IncompatibleModInfo[] ConflictMods { get; set; } = new IncompatibleModInfo[] {
             new IncompatibleModInfo(1567569285, @"Achieve It!", true),
