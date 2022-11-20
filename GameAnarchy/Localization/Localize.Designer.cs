@@ -592,11 +592,11 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Unlock basic road 的本地化字符串。
+        ///   查找类似 Unlock all roads 的本地化字符串。
         /// </summary>
-        public static string UnlockBasicRoad {
+        public static string UnlockAllRoads {
             get {
-                return ResourceManager.GetString("UnlockBasicRoad", resourceCulture);
+                return ResourceManager.GetString("UnlockAllRoads", resourceCulture);
             }
         }
         

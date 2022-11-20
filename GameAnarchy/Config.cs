@@ -13,7 +13,7 @@ namespace GameAnarchy {
         public bool EnabledInfoView { get; set; } = false;
         public bool EnabledUnlockAll { get; set; } = true;
         public bool CustomUnlock { get; set; } = false;
-        public bool UnlockBasicRoad { get; set; } = false;
+        public bool UnlockAllRoads { get; set; } = false;
         public bool UnlockTrainTrack { get; set; } = false;
         public bool UnlockMetroTrack { get; set; } = false;
         public int MilestoneLevel { get; set; } = 0;

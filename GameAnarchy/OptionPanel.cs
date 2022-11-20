@@ -85,8 +85,8 @@ namespace GameAnarchy {
                 Config.Instance.MilestoneLevel = value;
             };
             var infoViews = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.EnabledInfoView, Config.Instance.EnabledInfoView, 670f, (_) => Config.Instance.EnabledInfoView = _);
-            var unlockBase = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockBasicRoad, Config.Instance.UnlockBasicRoad, 670f, (_) => {
-                Config.Instance.UnlockBasicRoad = _;
+            var unlockBase = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockAllRoads, Config.Instance.UnlockAllRoads, 670f, (_) => {
+                Config.Instance.UnlockAllRoads = _;
             });
             var unlockTrainTrack = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockTrainTrack, Config.Instance.UnlockTrainTrack, 670f, (_) => Config.Instance.UnlockTrainTrack = _);
             var unlockMetroTrack = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockMetroTrack, Config.Instance.UnlockMetroTrack, 670f, (_) => Config.Instance.UnlockMetroTrack = _);

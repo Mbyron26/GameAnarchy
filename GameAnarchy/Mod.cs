@@ -38,13 +38,13 @@ namespace GameAnarchy {
             InfoViewsObject = new GameObject("InfoViewsExtension");
             InfoViewsObject.AddComponent<InfoViewsExtension>();
 
-            //if (UnlockManager.exists) {
-            //    ModLogger.ModLog("exists");
-            //    var all = UnlockManager.instance.m_allMilestones;
-            //    foreach (var item in all) {
-            //        ModLogger.ModLog(item.Key); 
-            //    }
-            //}
+            if (UnlockManager.exists) {
+                ModLogger.ModLog("exists");
+                var all = UnlockManager.instance.m_allMilestones;
+                foreach (var item in all) {
+                    ModLogger.ModLog(item.Key);
+                }
+            }
         }
         public override void OnLevelUnloading() {
             base.OnLevelUnloading();

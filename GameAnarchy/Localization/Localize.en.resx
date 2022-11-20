@@ -294,8 +294,8 @@
   <data name="UnlockAll" xml:space="preserve">
     <value>Unlock all</value>
   </data>
-  <data name="UnlockBasicRoad" xml:space="preserve">
-    <value>Unlock basic road</value>
+  <data name="UnlockAllRoads" xml:space="preserve">
+    <value>Unlock all roads</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>Unlock metro track</value>

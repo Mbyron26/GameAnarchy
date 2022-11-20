@@ -294,8 +294,8 @@
   <data name="UnlockAll" xml:space="preserve">
     <value>解锁所有</value>
   </data>
-  <data name="UnlockBasicRoad" xml:space="preserve">
-    <value>解锁基础道路</value>
+  <data name="UnlockAllRoads" xml:space="preserve">
+    <value>解锁所有道路</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>解锁地铁轨道</value>

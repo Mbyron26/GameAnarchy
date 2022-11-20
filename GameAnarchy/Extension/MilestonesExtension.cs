@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using ICities;
 using MbyronModsCommon;
 
@@ -8,20 +9,60 @@ namespace GameAnarchy {
     public class MilestonesExtension : MilestonesExtensionBase {
         public override void OnRefreshMilestones() {
 
-            #region UnlockCommon
-            if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockBasicRoad && Config.Instance.CustomUnlock)) {
+            #region UnlockAllRoads
+            if (Config.Instance.UnlockAllRoads && Config.Instance.CustomUnlock) {
                 milestonesManager.UnlockMilestone("Basic Road Created");
+                var netCount = PrefabCollection<NetInfo>.LoadedCount();
+                var buildingCount = PrefabCollection<BuildingInfo>.LoadedCount();
+                if (netCount == 0 || buildingCount == 0) {
+                    ModLogger.ModLog("Unlock all roads fail, base net road count and building type road count is empty.");
+                    return;
+                }
+
+                try {
+                    for (uint i = 0; i < netCount; i++) {
+                        var netInfo = PrefabCollection<NetInfo>.GetLoaded(i);
+                        if (netInfo is not null && netInfo.m_class is not null && netInfo.m_class.m_service == ItemClass.Service.Road) {
+                            netInfo.m_UnlockMilestone = null;
+                        }
+                    }
+                    ModLogger.ModLog("Unlock base net road succeed.");
+
+                    for (uint j = 0; j < buildingCount; j++) {
+                        var buildingInfo = PrefabCollection<BuildingInfo>.GetLoaded(j);
+                        if (buildingInfo is not null && buildingInfo.m_class is not null && buildingInfo.m_class.m_service == ItemClass.Service.Road) {
+                            buildingInfo.m_UnlockMilestone = null;
+                            var intersectionAI = buildingInfo.m_buildingAI as IntersectionAI;
+                            if (intersectionAI is not null) {
+                                UnityHelper.SetFieldValue<MilestoneInfo>(intersectionAI, "m_cachedUnlockMilestone", BindingFlags.NonPublic | BindingFlags.Instance, null);
+                            }
+                        }
+                    }
+
+                    ModLogger.ModLog("Unlock all type roads succeed.");
+                }
+                catch (Exception e) {
+                    ModLogger.ModLog($"Unlock all road fail, detail: {e}");
+                }
             }
+            #endregion
+
+            #region UnlockCommon
             if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockTrainTrack && Config.Instance.CustomUnlock)) {
                 milestonesManager.UnlockMilestone("Train Track Requirements");
             }
             if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockMetroTrack && Config.Instance.CustomUnlock)) {
                 milestonesManager.UnlockMilestone("Metro Track Requirements");
             }
+
+
+
             #endregion
 
             #region UnlockAll
             if (Config.Instance.EnabledUnlockAll) {
+                milestonesManager.UnlockMilestone("Basic Road Created");
+
                 if (managers.application.SupportsExpansion(Expansion.PlazasAndPromenades)) {
                     milestonesManager.UnlockMilestone("Pedestrian Zone Created");
                     milestonesManager.UnlockMilestone("Service Point Created");

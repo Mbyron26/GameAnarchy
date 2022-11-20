@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DebugUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EMath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UnityHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XMLUtils.cs" />
   </ItemGroup>
 </Project>

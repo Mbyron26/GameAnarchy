@@ -1,5 +1,4 @@
-﻿using ColossalFramework;
-using ColossalFramework.PlatformServices;
+﻿using ColossalFramework.PlatformServices;
 using System.Collections.Generic;
 
 namespace MbyronModsCommon {
