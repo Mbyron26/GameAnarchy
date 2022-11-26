@@ -30,6 +30,12 @@
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ja\CommonLocaleShared.ja.projitems" Label="Shared" />
 
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.de\CommonLocaleShared.de.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pl\CommonLocaleShared.pl.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ru\CommonLocaleShared.ru.projitems" Label="Shared" />
+
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>C:\Users\M\Desktop\Assembly\Assembly-CSharp.dll</HintPath>

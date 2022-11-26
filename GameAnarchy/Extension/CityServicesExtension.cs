@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 namespace GameAnarchy {
-    public  class CityServicesExtension : ThreadingExtensionBase {
+    public class CityServicesExtension : ThreadingExtensionBase {
         public static CityServicesExtension instance { get; protected set; }
         public Action[] handers;
         public CityServicesExtension() {
@@ -54,22 +54,22 @@ namespace GameAnarchy {
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.NoisePollution, -100000);
         }
         private void RemoveGroundPollution() {
-            if(!Config.Instance.RemoveGroundPollution) return;
+            if (!Config.Instance.RemoveGroundPollution) return;
             Singleton<NaturalResourceManager>.instance.AddPollutionDisposeRate(10000);
         }
-        private void RemoveWaterPollution() { 
-            if(!Config.Instance.RemoveWaterPollution) return;
+        private void RemoveWaterPollution() {
+            if (!Config.Instance.RemoveWaterPollution) return;
             Singleton<TerrainManager>.instance.WaterSimulation.AddPollutionDisposeRate(10000);
         }
-        private void RemoveDeath() { 
-            if(!Config.Instance.RemoveDeath) return;
+        private void RemoveDeath() {
+            if (!Config.Instance.RemoveDeath) return;
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.DeathCare, 100000);
         }
-        private void RemoveGarbage() { 
-            if(!Config.Instance.RemoveGarbage) return;
+        private void RemoveGarbage() {
+            if (!Config.Instance.RemoveGarbage) return;
         }
-        private void RemoveCrime() { 
-            if(!Config.Instance.RemoveCrime) return;
+        private void RemoveCrime() {
+            if (!Config.Instance.RemoveCrime) return;
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.CrimeRate, -100000);
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.PoliceDepartment, 100000);
         }
@@ -79,17 +79,17 @@ namespace GameAnarchy {
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireDepartment, 100000);
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FirewatchCoverage, 100000, Vector3.zero, 100000);
         }
-        
-        private void MaximizeAttractiveness() { 
-            if(!Config.Instance.MaximizeAttractiveness) return;
+
+        private void MaximizeAttractiveness() {
+            if (!Config.Instance.MaximizeAttractiveness) return;
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.Attractiveness, 100000);
         }
-        private void MaximizeEntertainment() { 
-            if(!Config.Instance.MaximizeEntertainment) return;
+        private void MaximizeEntertainment() {
+            if (!Config.Instance.MaximizeEntertainment) return;
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.Entertainment, 100000);
         }
-        private void MaximizeLandValue() { 
-            if(!Config.Instance.MaximizeLandValue) return;
+        private void MaximizeLandValue() {
+            if (!Config.Instance.MaximizeLandValue) return;
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.LandValue, 100000);
         }
         private void MaximizeEducationCoverage() {
@@ -125,8 +125,8 @@ namespace GameAnarchy {
                     GetCitizenUnitDeath(cID, ref mBuffer[cID]);
                 }
             }
-            if(Config.Instance.RemoveGarbage) building.m_garbageBuffer = 0;
-            if(Config.Instance.RemoveCrime) building.m_crimeBuffer =0;
+            if (Config.Instance.RemoveGarbage) building.m_garbageBuffer = 0;
+            if (Config.Instance.RemoveCrime) building.m_crimeBuffer = 0;
         }
 
         private void GetCitizenUnitDeath(uint cuID, ref CitizenUnit citizen) {

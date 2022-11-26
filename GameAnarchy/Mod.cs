@@ -11,7 +11,7 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 1,1);
+        public override Version ModVersion => new(0, 9, 1);
         public override ulong ModID => 2781804786;
         public override string Description => Localize.MOD_Description;
         private GameObject AchievementsObject { get; set; }
@@ -89,7 +89,7 @@ namespace GameAnarchy {
         #region ModUpdateLogs
         public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
             new ModUpdateInfo(new Version(0, 9, 1), @"2022/11/19", new List<string> {
-                "UpdateLog_V0_9_1_OPT1", "UpdateLog_V0_9_1_ADD1",
+                "UpdateLog_V0_9_1_ADJ1","UpdateLog_V0_9_1_OPT1", "UpdateLog_V0_9_1_ADD1",
             }),
             new ModUpdateInfo(new Version(0, 9, 0), @"2022/11/10", new List<string> {
                 "UpdateLog_V0_9_0_ADD1", "UpdateLog_V0_9_0_ADD2",  "UpdateLog_V0_9_0_ADD3", "UpdateLog_V0_9_0_ADD4",

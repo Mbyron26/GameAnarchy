@@ -142,6 +142,15 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate. 的本地化字符串。
+        /// </summary>
+        public static string DepletionRateTooltip {
+            get {
+                return ResourceManager.GetString("DepletionRateTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Achievements system is always available 的本地化字符串。
         /// </summary>
         public static string EnableAchievements {
@@ -430,6 +439,15 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Oil depletion rate 的本地化字符串。
+        /// </summary>
+        public static string OilDepletionRate {
+            get {
+                return ResourceManager.GetString("OilDepletionRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Optimize Options 的本地化字符串。
         /// </summary>
         public static string OptimizeOptions {
@@ -453,6 +471,15 @@ namespace GameAnarchy {
         public static string OptionsPanelHorizontalOffsetTooltip {
             get {
                 return ResourceManager.GetString("OptionsPanelHorizontalOffsetTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Ore depletion rate 的本地化字符串。
+        /// </summary>
+        public static string OreDepletionRate {
+            get {
+                return ResourceManager.GetString("OreDepletionRate", resourceCulture);
             }
         }
         
@@ -565,24 +592,6 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Oil resources will not be consumed 的本地化字符串。
-        /// </summary>
-        public static string UnlimitedOil {
-            get {
-                return ResourceManager.GetString("UnlimitedOil", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Ore resources will not be consumed 的本地化字符串。
-        /// </summary>
-        public static string UnlimitedOre {
-            get {
-                return ResourceManager.GetString("UnlimitedOre", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Unlock all 的本地化字符串。
         /// </summary>
         public static string UnlockAll {
@@ -633,6 +642,15 @@ namespace GameAnarchy {
         public static string UnlockTrainTrack {
             get {
                 return ResourceManager.GetString("UnlockTrainTrack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock all transports 的本地化字符串。
+        /// </summary>
+        public static string UnlockTransport {
+            get {
+                return ResourceManager.GetString("UnlockTransport", resourceCulture);
             }
         }
         
@@ -709,11 +727,20 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 [ADD]Add custom unlock function, includes custom milestones level, base road, policy panel. 的本地化字符串。
+        ///   查找类似 [ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_1_ADD1 {
             get {
                 return ResourceManager.GetString("UpdateLog_V0_9_1_ADD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_1_ADJ1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_1_ADJ1", resourceCulture);
             }
         }
         

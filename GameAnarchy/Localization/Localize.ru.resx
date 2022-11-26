@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,237 +118,237 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>增加现金</value>
+    <value>Добавить деньги</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>加钱金额</value>
+    <value>Добавить определенную сумму денег</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>自动加钱门槛</value>
+    <value>Добавить денежный порог</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>请确保启用了金钱无碰撞功能。</value>
+    <value>Убедитесь, что включена функция Cash Anarchy.</value>
   </data>
   <data name="CashAnarchy" xml:space="preserve">
-    <value>金钱无限制模式, 自动/手动(快捷键)加钱</value>
+    <value>Режим Cash anarchy, автоматический/ручной (горячая клавиша) добавить наличные</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>城市服务选项</value>
+    <value>Настройки Городских Служб</value>
   </data>
   <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>商业区收入倍乘因子</value>
+    <value>Мультипликатор коммерческих доходов</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>自定义解锁</value>
+    <value>Custom unlock</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>这些选项在启用“解锁所有”特性时不可用，因为解锁所有已解锁以下所有选项。</value>
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
   </data>
   <data name="DepletionRateTooltip" xml:space="preserve">
-    <value>0表示无限石油/矿石资源，100表示原版资源消耗速率。</value>
+    <value>0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>成就系统总是可用</value>
+    <value>Система достижений всегда доступна</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>游戏内左上角信息面板总是可用</value>
+    <value>Представление информации всегда доступно</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>跳过游戏启动时logo显示</value>
+    <value>Пропустить интро интерфейс</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>允许无限制摆放独特建筑</value>
+    <value>Разрешить размещение уникальных зданий без ограничения</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>快速退出游戏</value>
+    <value>Быстрый возврат</value>
   </data>
   <data name="IncomeOptions" xml:space="preserve">
-    <value>收入选项</value>
+    <value>Параметры дохода</value>
   </data>
   <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>工业区收入倍乘因子</value>
+    <value>Мультипликатор индустриальных доходов</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
-    <value>游戏初始现金</value>
+    <value>Начальная сумма денег в игре</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>需在开始游戏前设定。如果不希望每次加载存档后现金都为该值, 在启用一次后禁用此功能。游戏模拟开始后现金将会变更设置的值。</value>
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。如果你想使用Game Anarchy功能，请禁用这个本地模组。</value>
+    <value>Встроенный мод, Game Anarchy уже включает в себя те же функции. Пожалуйста, отключите этот локальный мод, если вы хотите использовать функции Game Anarchy.</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。请禁用这个本地模组，并在GA的设置面板中设置初始金额，以防你的城市因透支而破产(以避免游戏崩溃)。</value>
+    <value>Встроенный мод, Game Anarchy уже включает в себя те же функции. Пожалуйста, отключите этот локальный мод и установите начальную сумму на панели настроек GA на случай, если ваш город обанкротится из-за долга (чтобы избежать сбоя игры).</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>最大化吸引力, 将会吸引更多的游客</value>
+    <value>Максимальная привлекательность, будет привлекать ещё больше туристов</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>最大化教育服务覆盖范围, 仍然需要学校获得受教育的市民</value>
+    <value>Максимальное число охваченных образованием лиц, по-прежнему требуются школы, чтобы получить образование</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>最大化娱乐服务, 将会提高市民的幸福度</value>
+    <value>Максимизировать развлечения, улучшит счастье граждан</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>最大化城市的土地价值</value>
+    <value>Максимизировать стоимость земли в городе</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>大型城市</value>
+    <value>Big City</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>大型城镇</value>
+    <value>Big Town</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>快速发展的城镇</value>
+    <value>Boom Town</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>忙碌的城镇</value>
+    <value>Busy Town</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>首都级城市</value>
+    <value>Capital City</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>超大城市</value>
+    <value>Colossal City</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>特大城市</value>
+    <value>Grand City</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>小村庄</value>
+    <value>Little Hamlet</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>超级大都会</value>
+    <value>Megalopolis</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>大都会</value>
+    <value>Metropolis</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>里程碑解锁等级</value>
+    <value>Milestone unlock level</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>小型城市</value>
+    <value>Small City</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>小城镇</value>
+    <value>Tiny Town</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>原版</value>
+    <value>Vanilla</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>富有的村庄</value>
+    <value>Worthy Village</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>扩展、优化游戏特性。</value>
+    <value>Расширяет и оптимизирует функции игры.</value>
   </data>
   <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>办公区收入倍乘因子</value>
+    <value>Мультипликатор деловых доходов</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>石油消耗速率</value>
+    <value>Oil depletion rate</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>优化选项</value>
+    <value>Настройки Оптимизации</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>选项面板类别栏水平偏移</value>
+    <value>Горизонтальное смещение панели категорий панели параметров</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>选项面板类别栏水平偏移功能将在重新打开选项面板后生效。</value>
+    <value>Горизонтальное смещение панели категорий панели параметров вступит в силу после повторного открытия панели параметров.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>矿石消耗速率</value>
+    <value>Ore depletion rate</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>铲平建筑物全额退款</value>
+    <value>Полный возврат средств после удаления здания</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>移除所有建筑的罪犯并最大化警察服务的覆盖</value>
+    <value>Убрать преступников из всех зданий и обеспечить максимальный охват полицейской службой</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>移除死亡市民, 并最大化殉葬服务覆盖</value>
+    <value>Убрать погибших граждан и обеспечить максимальный охват услугами по охране здоровья</value>
   </data>
   <data name="RemoveFire" xml:space="preserve">
-    <value>移除火灾隐患并最大化消防覆盖范围</value>
+    <value>Убрать опасность пожара и максимизировать пожарную защиту</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>移除垃圾</value>
+    <value>Удалить мусор</value>
   </data>
   <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>移除地面污染源头</value>
+    <value>Убрать источник загрязнения земли</value>
   </data>
   <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>移除噪声污染源头</value>
+    <value>Убрать источник шумового загрязнения</value>
   </data>
   <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>移除水污染源头</value>
+    <value>Убрать источник загрязнения воды</value>
   </data>
   <data name="ResetValue" xml:space="preserve">
-    <value>重置数值</value>
+    <value>Сбросить значение</value>
   </data>
   <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>住宅区收入倍乘因子</value>
+    <value>Мультипликатор жилых доходов</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>资源选项</value>
+    <value>Параметры Ресурсов</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>选项菜单按名称对齐</value>
+    <value>Сортировать имена модов на панели опций</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
-    <value>解锁所有</value>
+    <value>Разблокировать всё</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>解锁所有道路</value>
+    <value>Unlock all roads</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>解锁地铁轨道</value>
+    <value>Unlock metro track</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>解锁选项</value>
+    <value>Настройки разблокировки</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>解锁政策面板</value>
+    <value>Unlock policies panel</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>解锁火车轨道</value>
+    <value>Unlock train track</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>解锁所有公交运输</value>
+    <value>Unlock all transports</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]添加初始金钱功能。</value>
+    <value>[ADD]Добавлена функция первоначальных наличных средств.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]添加选项面板类别栏水平偏移调整功能。</value>
+    <value>[ADD]Добавлена функция регулировки смещения по горизонтали панели опций.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]添加游戏自带无限金钱模式，允许动态切换。</value>
+    <value>[ADD]Добавлена оригинальная функция Безлимитных Денег, её можно динамически переключать.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]添加游戏左上角信息面板可用选项。</value>
+    <value>[ADD]Добавлена доступная функция Просмотр Информации.</value>
   </data>
   <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]成就按钮现已正常工作。</value>
+    <value>[FIX]Кнопка достижений теперь работает правильно.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]选项面板完全重写，以支持更好的扩展。</value>
+    <value>[UPT]Панель опций полностью переписана для поддержки расширений.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]更新兼容性检查功能。</value>
+    <value>[UPT]Функция проверки совместимости обновлена.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]更新多语言支持框架。</value>
+    <value>[UPT]Обновлён фреймворк для поддержки разных языков.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]增加自定义解锁功能，包括自定义里程碑级别，所有道路，政策面板，公共交通面板。</value>
+    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]调整石油/矿石功能，现可调整耗尽速率，该版本更新将重置该功能，请前往选项面板重新设置石油/矿石耗尽速率。</value>
+    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]优化语言切换速度和语言列表格式。</value>
+    <value>[OPT]Optimize language switching speed and language list format.</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>原版无限金钱模式, 允许动态切换</value>
+    <value>Режим неограниченного доступа к деньгам, возможность динамического переключения</value>
   </data>
 </root>

@@ -144,6 +144,9 @@
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
   </data>
+  <data name="DepletionRateTooltip" xml:space="preserve">
+    <value>0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate.</value>
+  </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Achievements system is always available</value>
   </data>
@@ -240,6 +243,9 @@
   <data name="OfficeMultiplierFactor" xml:space="preserve">
     <value>Office income multiplier factor</value>
   </data>
+  <data name="OilDepletionRate" xml:space="preserve">
+    <value>Oil depletion rate</value>
+  </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimize Options</value>
   </data>
@@ -248,6 +254,9 @@
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
     <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened.</value>
+  </data>
+  <data name="OreDepletionRate" xml:space="preserve">
+    <value>Ore depletion rate</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Bulldozing building full refund</value>
@@ -285,12 +294,6 @@
   <data name="SortSettings" xml:space="preserve">
     <value>Sort mods names in options panel</value>
   </data>
-  <data name="UnlimitedOil" xml:space="preserve">
-    <value>Oil resources will not be consumed</value>
-  </data>
-  <data name="UnlimitedOre" xml:space="preserve">
-    <value>Ore resources will not be consumed</value>
-  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Unlock all</value>
   </data>
@@ -308,6 +311,9 @@
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>Unlock train track</value>
+  </data>
+  <data name="UnlockTransport" xml:space="preserve">
+    <value>Unlock all transports</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]Add initial cash function.</value>
@@ -334,7 +340,10 @@
     <value>[UPT]Updated multi-language support framework.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Add custom unlock function, includes custom milestones level, base road, policy panel.</value>
+    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
+    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
     <value>[OPT]Optimize language switching speed and language list format.</value>

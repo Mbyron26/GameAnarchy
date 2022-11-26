@@ -18,6 +18,7 @@ namespace GameAnarchy {
         public bool UnlockMetroTrack { get; set; } = false;
         public int MilestoneLevel { get; set; } = 0;
         public bool UnlockPolicies { get; set; } = false;
+        public bool UnlockTransport { get; set; } = false;
 
         public bool RemoveNoisePollution { get; set; } = false;
         public bool RemoveGroundPollution { get; set; } = false;
@@ -31,8 +32,10 @@ namespace GameAnarchy {
         public bool MaximizeLandValue { get; set; } = false;
         public bool MaximizeEducationCoverage { get; set; } = false;
 
-        public bool UnlimitedOil { get; set; } = true;
-        public bool UnlimitedOre { get; set; } = true;
+        //public bool UnlimitedOil { get; set; } = true;
+        //public bool UnlimitedOre { get; set; } = true;
+        public int OilDepletionRate { get; set; } = 100;
+        public int OreDepletionRate { get; set; } = 100;
         public bool CashAnarchy { get; set; } = false;
         public bool UnlimitedMoney { get; set; } = false;
         public bool EnabledInitialCash { get; set; } = false;

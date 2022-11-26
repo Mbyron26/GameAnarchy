@@ -80,14 +80,15 @@ namespace GameAnarchy {
             CustomUnlockPanel.autoLayoutDirection = LayoutDirection.Vertical;
             CustomUnlockPanel.isEnabled = CustomUnlock.isChecked;
             CustomUnlockPanel.tooltip = Localize.CustomUnlockPanelTooltip;
-            var MilestonelevelLevel = CustomDropdown.AddDropdown(CustomUnlockPanel, Localize.MilestonelevelName_MilestoneUnlockLevel, 1f, MilestoneLevelNames, Config.Instance.MilestoneLevel, 170f, 32, 1f, new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0));
+            var MilestonelevelLevel = CustomDropdown.AddDropdown(CustomUnlockPanel, Localize.MilestonelevelName_MilestoneUnlockLevel, 1f, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250f, 32, 1f, new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0));
             MilestonelevelLevel.eventSelectedIndexChanged += (c, value) => {
                 Config.Instance.MilestoneLevel = value;
             };
             var infoViews = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.EnabledInfoView, Config.Instance.EnabledInfoView, 670f, (_) => Config.Instance.EnabledInfoView = _);
-            var unlockBase = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockAllRoads, Config.Instance.UnlockAllRoads, 670f, (_) => {
+            var unlockAllRoads = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockAllRoads, Config.Instance.UnlockAllRoads, 670f, (_) => {
                 Config.Instance.UnlockAllRoads = _;
             });
+            var unlockTransport = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockTransport, Config.Instance.UnlockTransport, 670f, (_) => Config.Instance.UnlockTransport = _);
             var unlockTrainTrack = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockTrainTrack, Config.Instance.UnlockTrainTrack, 670f, (_) => Config.Instance.UnlockTrainTrack = _);
             var unlockMetroTrack = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockMetroTrack, Config.Instance.UnlockMetroTrack, 670f, (_) => Config.Instance.UnlockMetroTrack = _);
             var unlock = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockPolicies, Config.Instance.UnlockPolicies, 670f, (_) => Config.Instance.UnlockPolicies = _);
@@ -95,8 +96,11 @@ namespace GameAnarchy {
 
             #region CashOptions
             var cashOptions = OptionPanelCard.AddCard(parent, typeWidth, Localize.ResourceOptions, out UIPanel cashOptionsTitle);
-            CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOil, Config.Instance.UnlimitedOil, 680f, (_) => Config.Instance.UnlimitedOil = _);
-            CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOre, Config.Instance.UnlimitedOre, 680f, (_) => Config.Instance.UnlimitedOre = _);
+            var oilDepletionRate = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.OilDepletionRate, 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => Config.Instance.OilDepletionRate = (int)value);
+            var oreDepletionRate = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.OreDepletionRate, 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => Config.Instance.OreDepletionRate = (int)value);
+            oreDepletionRate.tooltip = oilDepletionRate.tooltip = Localize.DepletionRateTooltip;
+            //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOil, Config.Instance.UnlimitedOil, 680f, (_) => Config.Instance.UnlimitedOil = _);
+            //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOre, Config.Instance.UnlimitedOre, 680f, (_) => Config.Instance.UnlimitedOre = _);
             CustomCheckBox.AddCheckBox(cashOptions, Localize.Refund, Config.Instance.Refund, 680f, (_) => Config.Instance.Refund = _);
             CustomCheckBox.AddCheckBox(cashOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
                 Config.Instance.EnabledInitialCash = _;
@@ -133,10 +137,12 @@ namespace GameAnarchy {
             AddCashThreshold.isVisible = Config.Instance.CashAnarchy;
             AddCashAmount = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.AddCashAmount, 500000f, 8000000f, 100000f, Config.Instance.DefaultGetCash, (_, value) => Config.Instance.DefaultGetCash = (int)value);
             AddCashAmount.isVisible = Config.Instance.CashAnarchy;
-            CustomButton.AddGreenButton(cashOptionsTitle, Localize.ResetValue, 130, 28, new UnityEngine.Vector2(598, 6), CashReset);
+            CustomButton.AddGreenButton(cashOptionsTitle, Localize.ResetValue, 130, 28, new Vector2(594, 6), CashReset);
             void CashReset() {
                 AddCashThreshold.SliderValue = 50000;
                 AddCashAmount.SliderValue = 5000000;
+                oilDepletionRate.SliderValue = 100;
+                oreDepletionRate.SliderValue = 100;
             }
             #endregion
 

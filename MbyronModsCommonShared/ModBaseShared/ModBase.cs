@@ -134,6 +134,10 @@ namespace MbyronModsCommon {
                     var messageBox = MessageBox.Show<LogMessageBox>();
                     messageBox.Initialize<Mod>(true);
                 }
+                if(lastVersion > nowVersion) {
+                    SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
+                    SaveConfig();
+                }
             }
         }
 

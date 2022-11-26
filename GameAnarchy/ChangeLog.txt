@@ -1,4 +1,5 @@
 ﻿
 V0.9.1
+[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.
 [OPT]Optimize language switching speed and language list format.
-[ADD]Add custom unlock function, includes custom milestones level, base road, policy panel.
+[ADD]Add custom unlock function, includes custom milestones level, base road, policy panel, transport.

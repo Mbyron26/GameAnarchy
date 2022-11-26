@@ -369,7 +369,34 @@ namespace GameAnarchy {
                     ModLogger.ModLog("UnlockManager doesn't exist.");
                 }
             }
-            # endregion
+            #endregion
+
+            #region Unlock Transport
+            if (Config.Instance.CustomUnlock && Config.Instance.UnlockTransport) {
+                if (UnlockManager.exists) {
+                    try {
+                        var subService = UnlockManager.instance.m_properties.m_SubServiceMilestones;
+                        if (subService is not null) {
+                            for (int i = 0; i < subService.Length; i++) {
+                                if (subService[i] is not null) {
+                                    var cm = subService[i] as CombinedMilestone;
+                                    if (cm != null && (cm.name == "Milestone4" || cm.name == "Milestone5" || cm.name == "Milestone6" || cm.name == "Milestone7")) {
+                                        cm.m_openUnlockPanel = false;
+                                        cm.m_requirePassedLimit = 0;
+                                    }
+                                }
+                            }
+                        }
+                        ModLogger.ModLog("Unlock transport succeed.");
+                    }
+                    catch (Exception e) {
+                        ModLogger.ModLog($"Unlock transport failed, details: {e}");
+                    }
+                } else {
+                    ModLogger.ModLog($"UnlockManager doesn't exists, unlock transport failed.");
+                }
+            }
+            #endregion
 
         }
 
