@@ -139,13 +139,13 @@
     <value>Mnożnik dochodu komercyjnego</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Custom unlock</value>
+    <value>Niestandardowe ustawienie</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+    <value>Te opcje nie są dostępne, gdy funkcja Odblokuj Wszystko jest włączona, ponieważ Odblokuj Wszystko odblokowuje powyższe funkcje.</value>
   </data>
   <data name="DepletionRateTooltip" xml:space="preserve">
-    <value>0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate.</value>
+    <value>0 oznacza nieograniczone zasoby ropy/rudy, a 100 oznacza stopień wyczerpywania złoża.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Osiągnięcia są zawsze dostępne</value>
@@ -172,7 +172,7 @@
     <value>Domyślna suma gotówki</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>Ustaw wartość przed rozpoczęciem gry. Jeśli nie chcesz, aby pieniądze miały taką wartość za każdym razem, gdy wczytujesz zapis, wyłącz tę funkcję. Wartość gotówki zmieni się po rozpoczęciu symulacji.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Wbudowany mod. Game Anarchy posiada już tę funkcję. Wyłącz podobnego moda, by korzystać z funkcji Game Anarchy.</value>
@@ -193,49 +193,49 @@
     <value>Zmaksymalizuj wartość gruntu</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Big City</value>
+    <value>Duże miasto</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Big Town</value>
+    <value>Duże Miasteczko</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Boom Town</value>
+    <value>Rozwojowe Miasteczko</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Busy Town</value>
+    <value>Ruchliwe Miasteczko</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Capital City</value>
+    <value>Miasto Stołeczne</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Colossal City</value>
+    <value>Ogromne Miasto</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Grand City</value>
+    <value>Wielkie Miasto</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Little Hamlet</value>
+    <value>Osada</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
     <value>Megalopolis</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolis</value>
+    <value>Metropolia</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Milestone unlock level</value>
+    <value>Poziom odblokowania kamieni milowych</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Small City</value>
+    <value>Małe Miasto</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Tiny Town</value>
+    <value>Niewielkie Miasteczko</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Podstawa</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Worthy Village</value>
+    <value>Wieś</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Rozszerza i optymalizuje funkcje gry.</value>
@@ -244,7 +244,7 @@
     <value>Mnożnik dochodów biurowych</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Oil depletion rate</value>
+    <value>Szybkość wyczerpywania się ropy</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optymalizuj Opcje</value>
@@ -256,7 +256,7 @@
     <value>Poziome przesunięcie paska Panelu Opcji zacznie obowiązywać po ponownym jego otwarciu.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Ore depletion rate</value>
+    <value>Szybkość wyczerpywania się kamienia</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Pełny zwrot kosztów przy wyburzaniu</value>
@@ -298,22 +298,22 @@
     <value>Odblokuj Wszystko</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Unlock all roads</value>
+    <value>Odblokuj wszystkie drogi</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Unlock metro track</value>
+    <value>Odblokuj tory metra</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>Odblokuj Opcje</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Unlock policies panel</value>
+    <value>Odblokuj panel Przepisów</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Unlock train track</value>
+    <value>Odblokuj tory kolejowe</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Unlock all transports</value>
+    <value>Odblokuj wszelki transport</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]Dodaj początkową wartość gotówki.</value>
@@ -340,13 +340,13 @@
     <value>[UPT]Zaktualizowano wielojęzyczną strukturę pomocy.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
+    <value>[ADD]Dodaj niestandardowe ustawienie odblokowania, zawierające niestandardowy poziom kamieni milowych, wszystkie drogi, panel zasad, transport.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
+    <value>[ADJ]Dostosuj funkcje ropy/rudy, teraz możesz dostosować szybkość wyczerpywania się, ta aktualizacja zresetuje tę funkcję, przejdź do panelu opcji, aby zresetować szybkość wyczerpywania się ropy/rudy.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Optimize language switching speed and language list format.</value>
+    <value>[OPT]Zoptymalizuj szybkość przełączania języków i format listy języków.</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Domyślny tryb Nielimitowanych pieniędzy</value>

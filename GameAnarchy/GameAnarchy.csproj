@@ -26,8 +26,6 @@
 
   <Import Project="..\MbyronModsCommonShared\UIShared\UIShared.projitems" Label="Shared" />
 
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\en\CommonLocaleShared.en.projitems" Label="Shared" />
-
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ja\CommonLocaleShared.ja.projitems" Label="Shared" />
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.de\CommonLocaleShared.de.projitems" Label="Shared" />

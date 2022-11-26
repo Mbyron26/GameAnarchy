@@ -25,8 +25,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared", "Mbyro
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.zh-CN", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-CN\CommonLocaleShared.zh-CN.shproj", "{45FBFBF3-F423-4F3F-BA0A-424904D05BB1}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.en", "MbyronModsCommonShared\LocalizationShared\en\CommonLocaleShared.en.shproj", "{1DA7015F-A7C4-427D-AF0E-A44F6AC5CFDE}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.ja", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ja\CommonLocaleShared.ja.shproj", "{C607D2F8-F163-449B-8E30-E416FE660588}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.de", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.de\CommonLocaleShared.de.shproj", "{0F442F43-816D-42B5-8C16-2CFF994EFF6E}"
@@ -34,6 +32,8 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.pl", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pl\CommonLocaleShared.pl.shproj", "{4455D6BC-C944-4988-82FF-7575EE01D4D9}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.ru", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ru\CommonLocaleShared.ru.shproj", "{FB432CE5-5939-44BC-84B6-175B57F7570A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocaleShared.en", "MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.en\CommonLocaleShared.en.shproj", "{1DA7015F-A7C4-427D-AF0E-A44F6AC5CFDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,11 +59,11 @@ Global
 		{BB5324C1-C1DF-4020-BEC5-72800B05D0CA} = {A6A5806E-9E3B-47FC-8B3D-102057C29A45}
 		{0F944367-8CA7-4A25-B294-7C02D3057436} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 		{45FBFBF3-F423-4F3F-BA0A-424904D05BB1} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
-		{1DA7015F-A7C4-427D-AF0E-A44F6AC5CFDE} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 		{C607D2F8-F163-449B-8E30-E416FE660588} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 		{0F442F43-816D-42B5-8C16-2CFF994EFF6E} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 		{4455D6BC-C944-4988-82FF-7575EE01D4D9} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 		{FB432CE5-5939-44BC-84B6-175B57F7570A} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
+		{1DA7015F-A7C4-427D-AF0E-A44F6AC5CFDE} = {BB5324C1-C1DF-4020-BEC5-72800B05D0CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {039F761E-9CCF-415C-B080-D4A25DE4C905}
@@ -71,7 +71,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.de\CommonLocaleShared.de.projitems*{0f442f43-816d-42b5-8c16-2cff994eff6e}*SharedItemsImports = 13
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems*{0f944367-8ca7-4a25-b294-7c02d3057436}*SharedItemsImports = 13
-		MbyronModsCommonShared\LocalizationShared\en\CommonLocaleShared.en.projitems*{1da7015f-a7c4-427d-af0e-a44f6ac5cfde}*SharedItemsImports = 13
+		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.en\CommonLocaleShared.en.projitems*{1da7015f-a7c4-427d-af0e-a44f6ac5cfde}*SharedItemsImports = 13
 		MbyronModsCommonShared\OptionPanelShared\OptionPanelShared.projitems*{3d4677bf-9ba5-471a-a08e-ef3c666db60e}*SharedItemsImports = 13
 		MbyronModsCommonShared\UIShared\UIShared.projitems*{3eb3690c-1fa5-4960-ba1f-9c4b93b8c8c8}*SharedItemsImports = 13
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pl\CommonLocaleShared.pl.projitems*{4455d6bc-c944-4988-82ff-7575ee01d4d9}*SharedItemsImports = 13
@@ -88,7 +88,6 @@ Global
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ru\CommonLocaleShared.ru.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-CN\CommonLocaleShared.zh-CN.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 		MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
-		MbyronModsCommonShared\LocalizationShared\en\CommonLocaleShared.en.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 		MbyronModsCommonShared\MessageBoxShared\MessageBoxShared.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 		MbyronModsCommonShared\ModBaseShared\ModBaseShared.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 		MbyronModsCommonShared\ModUtilsShared\ModUtilsShared.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5

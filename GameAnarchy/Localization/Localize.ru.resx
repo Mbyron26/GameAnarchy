@@ -139,13 +139,13 @@
     <value>Мультипликатор коммерческих доходов</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Custom unlock</value>
+    <value>Собственная разблокировка</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+    <value>Эти параметры недоступны, когда включена функция «Разблокировать все», потому что она разблокирует все следующие параметры.</value>
   </data>
   <data name="DepletionRateTooltip" xml:space="preserve">
-    <value>0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate.</value>
+    <value>0 означает неограниченное количество ресурсов нефти/руды, а 100 - количество стандартного истощения.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Система достижений всегда доступна</value>
@@ -172,7 +172,7 @@
     <value>Начальная сумма денег в игре</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>Установите значение перед началом игры. Если вы не хотите, чтобы деньги были этим значением каждый раз, когда вы загружаете сохранение, отключите эту функцию после включения его один раз. После того, как игра начнет симуляцию, наличные будут изменены.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Встроенный мод, Game Anarchy уже включает в себя те же функции. Пожалуйста, отключите этот локальный мод, если вы хотите использовать функции Game Anarchy.</value>
@@ -193,49 +193,49 @@
     <value>Максимизировать стоимость земли в городе</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Big City</value>
+    <value>Областной центр</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Big Town</value>
+    <value>Город</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Boom Town</value>
+    <value>Развивающийся городок</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Busy Town</value>
+    <value>Районный городок</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Capital City</value>
+    <value>Столица</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Colossal City</value>
+    <value>Огромный город</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Grand City</value>
+    <value>Центр региона</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Little Hamlet</value>
+    <value>Деревушка</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>Megalopolis</value>
+    <value>Мегалополис</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolis</value>
+    <value>Мегаполис</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Milestone unlock level</value>
+    <value>Уровень разблокировки этапа</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Small City</value>
+    <value>Большой город</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Tiny Town</value>
+    <value>Маленький городок</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Ваниль</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Worthy Village</value>
+    <value>Крупный посёлок</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Расширяет и оптимизирует функции игры.</value>
@@ -244,7 +244,7 @@
     <value>Мультипликатор деловых доходов</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Oil depletion rate</value>
+    <value>Процент истощения нефти</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Настройки Оптимизации</value>
@@ -256,7 +256,7 @@
     <value>Горизонтальное смещение панели категорий панели параметров вступит в силу после повторного открытия панели параметров.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Ore depletion rate</value>
+    <value>Процент истощения руды</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Полный возврат средств после удаления здания</value>
@@ -298,22 +298,22 @@
     <value>Разблокировать всё</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Unlock all roads</value>
+    <value>Разблокировать все дороги</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Unlock metro track</value>
+    <value>Разблокировать пути метрополитена</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>Настройки разблокировки</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Unlock policies panel</value>
+    <value>Разблокировать панель политик</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Unlock train track</value>
+    <value>Разблокировать железнодорожные пути</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Unlock all transports</value>
+    <value>Разблокировать весь транспорт</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]Добавлена функция первоначальных наличных средств.</value>
@@ -340,13 +340,13 @@
     <value>[UPT]Обновлён фреймворк для поддержки разных языков.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
+    <value>[ADD]Добавлена пользовательская функция разблокировки, включает собственный уровень этапов, все дороги, панель политики, транспорт.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
+    <value>[ADJ]Настройка функции нефти/руды, теперь можно регулировать процент истощения, эта версия обновит эту функцию, пожалуйста, перейдите на панель опций для сброса частоты нефти/руды.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Optimize language switching speed and language list format.</value>
+    <value>[OPT]Оптимизировать скорость переключения языков и формат списка языков.</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Режим неограниченного доступа к деньгам, возможность динамического переключения</value>
