@@ -339,6 +339,12 @@
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]Updated multi-language support framework.</value>
   </data>
+  <data name="UpdateLog_V0_9_1_1ADD" xml:space="preserve">
+    <value>[ADD]Add Spanish localization.</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_1OPT" xml:space="preserve">
+    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+  </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
     <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
   </data>

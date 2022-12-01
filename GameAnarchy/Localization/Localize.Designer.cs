@@ -727,6 +727,24 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Add Spanish localization. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_1_1ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_1_1ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_1_1OPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_1_1OPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 [ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_1_ADD1 {

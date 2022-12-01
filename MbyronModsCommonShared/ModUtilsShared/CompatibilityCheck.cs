@@ -1,4 +1,7 @@
-﻿using ColossalFramework.PlatformServices;
+﻿using ColossalFramework;
+using ColossalFramework.PlatformServices;
+using ColossalFramework.Plugins;
+using ICities;
 using System.Collections.Generic;
 
 namespace MbyronModsCommon {
@@ -36,15 +39,17 @@ namespace MbyronModsCommon {
 
         private static void GetIncompatibleMods<Mod>() where Mod : IMod {
             string errorMsg = "";
-            foreach (var mod in PlatformService.workshop.GetSubscribedItems()) {
-                for (int i = 0; i < IncompatibleMods.Length; i++) {
-                    if (mod.AsUInt64 == IncompatibleMods[i].fileID) {
-                        errorMsg += '[' + IncompatibleMods[i].name + ']' + "  -  " +
-                            (IncompatibleMods[i].inclusive ? $"{ModMainInfo<Mod>.ModName} already includes the same functionality.\n" : $"This mod is incompatible with {ModMainInfo<Mod>.ModName}.\n") +
-                            (IncompatibleMods[i].specialMsg is null ? "" : IncompatibleMods[i].specialMsg + "");
-                        var errorMsgList = '[' + IncompatibleMods[i].name + ']' + @"  -  " +
-                             (IncompatibleMods[i].inclusive ? ModMainInfo<Mod>.ModName + " " + CommonLocale.ResourceManager.GetString("CompatibilityCheck_SameFunctionality", SingletonMod<Mod>.Instance.ModCulture) : CommonLocale.ResourceManager.GetString("CompatibilityCheck_Incompatible", SingletonMod<Mod>.Instance.ModCulture) + (IncompatibleMods[i].specialMsg is null ? "" : IncompatibleMods[i].specialMsg + ""));
-                        IncompatibleModsInfo.Add(errorMsgList);
+            foreach (PluginManager.PluginInfo info in Singleton<PluginManager>.instance.GetPluginsInfo()) {
+                if (info is not null && info.userModInstance is IUserMod) {
+                    for (int i = 0; i < IncompatibleMods.Length; i++) {
+                        if (info.publishedFileID.AsUInt64 == IncompatibleMods[i].fileID) {
+                            errorMsg += '[' + IncompatibleMods[i].name + ']' + "  -  " +
+                                (IncompatibleMods[i].inclusive ? $"{ModMainInfo<Mod>.ModName} already includes the same functionality.\n" : $"This mod is incompatible with {ModMainInfo<Mod>.ModName}.\n") +
+                                (IncompatibleMods[i].specialMsg is null ? "" : IncompatibleMods[i].specialMsg + "");
+                            var errorMsgList = '[' + IncompatibleMods[i].name + ']' + @"  -  " +
+                                 (IncompatibleMods[i].inclusive ? ModMainInfo<Mod>.ModName + " " + CommonLocale.ResourceManager.GetString("CompatibilityCheck_SameFunctionality", SingletonMod<Mod>.Instance.ModCulture) : CommonLocale.ResourceManager.GetString("CompatibilityCheck_Incompatible", SingletonMod<Mod>.Instance.ModCulture) + (IncompatibleMods[i].specialMsg is null ? "" : IncompatibleMods[i].specialMsg + ""));
+                            IncompatibleModsInfo.Add(errorMsgList);
+                        }
                     }
                 }
             }

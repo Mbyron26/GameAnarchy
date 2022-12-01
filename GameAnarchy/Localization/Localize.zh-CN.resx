@@ -339,6 +339,12 @@
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]更新多语言支持框架。</value>
   </data>
+  <data name="UpdateLog_V0_9_1_1ADD" xml:space="preserve">
+    <value>[ADD]添加西班牙语支持。</value>
+  </data>
+  <data name="UpdateLog_V0_9_1_1OPT" xml:space="preserve">
+    <value>[OPT]优化兼容性检测方法，提高与Loading Order Tool的兼容性。</value>
+  </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
     <value>[ADD]增加自定义解锁功能，包括自定义里程碑级别，所有道路，政策面板，公共交通面板。</value>
   </data>

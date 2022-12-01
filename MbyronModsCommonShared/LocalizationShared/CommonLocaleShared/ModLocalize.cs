@@ -76,6 +76,9 @@ namespace MbyronModsCommon {
                     locale = "zh-CN";
                 }
             }
+            if (locale == "es") {
+                locale = "es-ES";
+            }
             return locale;
         }
 

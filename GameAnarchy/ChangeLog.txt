@@ -1,4 +1,9 @@
 ﻿
+
+V0.9.1.1
+[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.
+[ADD]Add Spanish localization.
+
 V0.9.1
 [ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.
 [OPT]Optimize language switching speed and language list format.
