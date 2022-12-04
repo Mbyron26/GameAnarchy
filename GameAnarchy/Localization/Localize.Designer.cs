@@ -142,15 +142,6 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate. 的本地化字符串。
-        /// </summary>
-        public static string DepletionRateTooltip {
-            get {
-                return ResourceManager.GetString("DepletionRateTooltip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Achievements system is always available 的本地化字符串。
         /// </summary>
         public static string EnableAchievements {
@@ -592,6 +583,15 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Unlimited 的本地化字符串。
+        /// </summary>
+        public static string Unlimited {
+            get {
+                return ResourceManager.GetString("Unlimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Unlock all 的本地化字符串。
         /// </summary>
         public static string UnlockAll {
@@ -727,24 +727,6 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 [ADD]Add Spanish localization. 的本地化字符串。
-        /// </summary>
-        public static string UpdateLog_V0_9_1_1ADD {
-            get {
-                return ResourceManager.GetString("UpdateLog_V0_9_1_1ADD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 [OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool. 的本地化字符串。
-        /// </summary>
-        public static string UpdateLog_V0_9_1_1OPT {
-            get {
-                return ResourceManager.GetString("UpdateLog_V0_9_1_1OPT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 [ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_1_ADD1 {
@@ -768,6 +750,51 @@ namespace GameAnarchy {
         public static string UpdateLog_V0_9_1_OPT1 {
             get {
                 return ResourceManager.GetString("UpdateLog_V0_9_1_OPT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Add Spanish, Italian localization support. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_2ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_2ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_2ADJ {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_2ADJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_2OPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_2OPT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimize achievement feature toggling logic to avoid null references in editor mode. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_2OPT2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_2OPT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Vanilla 的本地化字符串。
+        /// </summary>
+        public static string Vanilla {
+            get {
+                return ResourceManager.GetString("Vanilla", resourceCulture);
             }
         }
         

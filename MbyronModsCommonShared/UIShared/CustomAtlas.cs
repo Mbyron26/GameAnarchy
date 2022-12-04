@@ -14,6 +14,9 @@ namespace MbyronModsCommon {
         public static string SliderLeftSprite => nameof(SliderLeftSprite);
         public static string SliderRightSprite => nameof(SliderRightSprite);
 
+        public static string GradientSlider => nameof(GradientSlider);
+        public static string SliderThumb => nameof(SliderThumb);
+
 
         public static string[] Resource = new string[] {
             TabButtonNormal,
@@ -23,6 +26,8 @@ namespace MbyronModsCommon {
             SliderMidSprite,
             SliderLeftSprite,
             SliderRightSprite,
+            GradientSlider,
+            SliderThumb,
         };
 
         public static UITextureAtlas CommonAtlas => UIUtils.CreateTextureAtlas(@"CommonAtlas", $"{AssemblyUtils.CurrentAssemblyName}.Resources.", Resource, 1024);

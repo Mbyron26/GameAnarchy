@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -143,9 +143,6 @@
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>Estas opciones no están disponibles cuando "Desbloquear Todo" está activado, porque "Desbloquear Todo" ha desbloqueado todas las funciones siguientes.</value>
-  </data>
-  <data name="DepletionRateTooltip" xml:space="preserve">
-    <value>0 indica recursos ilimitados de mineral/petroleo, y 100 indica tasa de agotamiento del juego.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>El sistema de Logros está siempre disponible</value>
@@ -294,6 +291,9 @@
   <data name="SortSettings" xml:space="preserve">
     <value>Ordenar nombre de mods en el panel de opciones</value>
   </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Desbloquear todo</value>
   </data>
@@ -339,12 +339,6 @@
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]Actualización del soporte multi lenguaje.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_1ADD" xml:space="preserve">
-    <value>[ADD]Add Spanish localization.</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_1OPT" xml:space="preserve">
-    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
-  </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
     <value>[ADD]Agregada la función de desbloqueo personalizada, incluyendo nivel de hitos personalizados, todos los caminos, panel de políticas, transporte.</value>
   </data>
@@ -353,6 +347,21 @@
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
     <value>[OPT]Optimización de la velocidad al cambiar lenguaje y el formato de lista de lenguajes.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
+    <value>[ADD]Add Spanish, Italian localization support.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
+    <value>[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
+    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
+    <value>[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.</value>
+  </data>
+  <data name="Vanilla" xml:space="preserve">
+    <value>Vanilla</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Modo de dinero ilimitado Vanilla, permite modificación dinámica</value>

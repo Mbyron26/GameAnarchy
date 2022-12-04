@@ -1,10 +1,51 @@
 ﻿using ColossalFramework.UI;
-using System;
-using System.Diagnostics;
 using UnityEngine;
 
 namespace MbyronModsCommon {
     public class CustomSlider {
+        public static UISlider AddCustomSliderStyleB(UIComponent parent, string text, float min, float max, float step, float defaultValue, Vector2 size, PropertyChangedEventHandler<float> callback, out UILabel labelText) {
+            UIPanel panel = parent.AttachUIComponent(UITemplateManager.GetAsGameObject("OptionsSliderTemplate")) as UIPanel;
+            panel.autoLayoutPadding = new RectOffset(1, 0, 2, 0);
+            panel.autoFitChildrenVertically= true;
+            var label = panel.Find<UILabel>("Label");
+            label.text = text;
+            label.textScale = 1f;
+            label.width = size.x;
+            labelText = label;
+            UISlider uislider = panel.Find<UISlider>("Slider");
+            uislider.size = size;
+            uislider.atlas = CustomAtlas.CommonAtlas;
+            uislider.backgroundSprite = "GradientSlider";
+            UISprite sliderThumb = uislider.thumbObject as UISprite;
+            sliderThumb.atlas = CustomAtlas.CommonAtlas;
+            sliderThumb.spriteName = @"SliderThumb";
+            sliderThumb.height = 20f;
+            uislider.minValue = min;
+            uislider.maxValue = max;
+            uislider.stepSize = step;
+            uislider.value = defaultValue;
+            uislider.eventValueChanged += callback;
+            return uislider;
+        }
+
+        public static UISlider AddSlider(UIComponent parent, float min, float max, float step, float defaultVal, PropertyChangedEventHandler<float> callback) {
+            UISlider slider = parent.AddUIComponent<UISlider>();
+            slider.minValue = min;
+            slider.maxValue = max;
+            slider.stepSize = step;
+            slider.value = defaultVal;
+            slider.eventValueChanged += callback;
+            return slider;
+        }
+
+        public static CustomSliderBase AddCustomSliderStyleA(UIComponent parent, string text, float min, float max, float step, float defaultVal, PropertyChangedEventHandler<float> callback, string leftLabel, string rightLabel) {
+            var customSliderStyleA = parent.AddUIComponent<CustomSliderBase>();
+            customSliderStyleA.UseDefaultSize = false;
+            customSliderStyleA.SliderSize = new CustomSliderBase.Size(80, 574, 30);
+            customSliderStyleA.FillSliderValue(text, min, max, step, defaultVal, callback, leftLabel, rightLabel);
+            return customSliderStyleA;
+        }
+
         public static CustomSliderBase AddCustomSliderStyleA(UIComponent parent, string text, float min, float max, float step, float defaultVal, PropertyChangedEventHandler<float> callback) {
             var customSliderStyleA = parent.AddUIComponent<CustomSliderBase>();
             customSliderStyleA.UseDefaultSize = false;
@@ -50,7 +91,23 @@ namespace MbyronModsCommon {
             StartLayout();
         }
 
-
+        public void FillSliderValue(string text, float min, float max, float step, float defaultVal, PropertyChangedEventHandler<float> callback, string leftLabel, string rightLabel) {
+            Slider.minValue = min;
+            Slider.maxValue = max;
+            Slider.stepSize = step;
+            Slider.value = defaultVal;
+            Slider.eventValueChanged += callback;
+            MiddleLabel.textScale = 0.85f;
+            MiddleLabel.textColor = new Color32(0x00, 0x00, 0x00, 0x50); ;
+            MiddleLabel.padding = new RectOffset(0, 0, 4, 0);
+            MiddleLabel.text = text + ": " + defaultVal;
+            Slider.eventValueChanged += (_, value) => {
+                MiddleLabel.text = text + ": " + value;
+            };
+            FillLabelValue(LeftLabel, leftLabel, 0.75f, UIColor.White, new RectOffset(0, 0, 4, 0));
+            FillLabelValue(RightLabel, rightLabel, 0.75f, UIColor.White, new RectOffset(0, 0, 4, 0));
+            StartLayout();
+        }
         public virtual void FillSliderValue(string text, float min, float max, float step, float defaultVal, PropertyChangedEventHandler<float> callback) {
             Slider.minValue = min;
             Slider.maxValue = max;

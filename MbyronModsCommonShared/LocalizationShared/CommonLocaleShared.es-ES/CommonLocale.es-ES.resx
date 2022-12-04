@@ -144,6 +144,9 @@
   <data name="Language_GameLanguage" xml:space="preserve">
     <value>Game Language</value>
   </data>
+  <data name="Language_it" xml:space="preserve">
+    <value>Italian</value>
+  </data>
   <data name="Language_ja" xml:space="preserve">
     <value>Japanese</value>
   </data>

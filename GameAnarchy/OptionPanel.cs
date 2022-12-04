@@ -55,7 +55,10 @@ namespace GameAnarchy {
 
             #region OptimizeOptions
             var optimizeOptions = OptionPanelCard.AddCard(parent, typeWidth, Localize.OptimizeOptions, out _);
-            CustomCheckBox.AddCheckBox(optimizeOptions, Localize.EnableAchievements, Config.Instance.EnabledAchievements, 680f, (_) => Config.Instance.EnabledAchievements = _);
+            CustomCheckBox.AddCheckBox(optimizeOptions, Localize.EnableAchievements, Config.Instance.EnabledAchievements, 680f, (_) => {
+                Config.Instance.EnabledAchievements = _;
+                AchievementsManager.UpdateAchievements(_);
+            });
             CustomCheckBox.AddCheckBox(optimizeOptions, Localize.EnabledSkipIntro, Config.Instance.EnabledSkipIntro, 680f, (_) => Config.Instance.EnabledSkipIntro = _);
             CustomCheckBox.AddCheckBox(optimizeOptions, Localize.EnabledUnlimitedUniqueBuildings, Config.Instance.EnabledUnlimitedUniqueBuildings, 680f, (_) => Config.Instance.EnabledUnlimitedUniqueBuildings = _);
             CustomSlider.AddCustomSliderStyleA(optimizeOptions, Localize.OptionsPanelHorizontalOffset, 0, 400f, 5f, Config.Instance.OptionPanelCategoriesOffset, (c, _) => Config.Instance.OptionPanelCategoriesOffset = (uint)_);
@@ -94,19 +97,53 @@ namespace GameAnarchy {
             var unlock = CustomCheckBox.AddCheckBox(CustomUnlockPanel, Localize.UnlockPolicies, Config.Instance.UnlockPolicies, 670f, (_) => Config.Instance.UnlockPolicies = _);
             #endregion
 
-            #region CashOptions
-            var cashOptions = OptionPanelCard.AddCard(parent, typeWidth, Localize.ResourceOptions, out UIPanel cashOptionsTitle);
-            var oilDepletionRate = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.OilDepletionRate, 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => Config.Instance.OilDepletionRate = (int)value);
-            var oreDepletionRate = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.OreDepletionRate, 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => Config.Instance.OreDepletionRate = (int)value);
-            oreDepletionRate.tooltip = oilDepletionRate.tooltip = Localize.DepletionRateTooltip;
+            #region ResourceOptions
+            var resourceOptions = OptionPanelCard.AddCard(parent, typeWidth, Localize.ResourceOptions, out UIPanel cashOptionsTitle);
+            UILabel label1 = null;
+            UILabel label2 = null;
+
+            var oilDepletionRate = CustomSlider.AddCustomSliderStyleB(resourceOptions, GetText(Localize.OilDepletionRate, Config.Instance.OilDepletionRate), 0, 100, 1, Config.Instance.OilDepletionRate, new Vector2(694, 20), (_, value) => {
+                Config.Instance.OilDepletionRate = (int)value;
+                SetLabel(label1, Localize.OilDepletionRate, Config.Instance.OilDepletionRate);
+            }, out label1);
+
+            var oreDepletionRate = CustomSlider.AddCustomSliderStyleB(resourceOptions, GetText(Localize.OreDepletionRate, Config.Instance.OreDepletionRate), 0, 100, 1, Config.Instance.OreDepletionRate, new Vector2(694, 20), (_, value) => {
+                Config.Instance.OreDepletionRate = (int)value;
+                SetLabel(label2, Localize.OreDepletionRate, Config.Instance.OreDepletionRate);
+            }, out label2);
+
+            void SetLabel(UILabel uILabel, string label, int value) {
+                if (value == 0) {
+                    uILabel.text = label + ": " + Localize.Unlimited;
+                } else if (value == 100) {
+                    uILabel.text = label + ": " + Localize.Vanilla;
+                } else {
+                    uILabel.text = label + ": " + value + "%";
+                }
+            }
+
+            string GetText(string text, int value) {
+                if (value == 0) {
+                    return text + ": " + Localize.Unlimited;
+                } else if (value == 100) {
+                    return text + ": " + Localize.Vanilla;
+                } else {
+                    return text + ": " + value + "%";
+                }
+            }
+
+            //var oilDepletionRate = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.OilDepletionRate, 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => Config.Instance.OilDepletionRate = (int)value);
+            //var oreDepletionRate = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.OreDepletionRate, 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => Config.Instance.OreDepletionRate = (int)value);
+            //oreDepletionRate.tooltip = oilDepletionRate.tooltip = Localize.DepletionRateTooltip;
+
             //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOil, Config.Instance.UnlimitedOil, 680f, (_) => Config.Instance.UnlimitedOil = _);
             //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOre, Config.Instance.UnlimitedOre, 680f, (_) => Config.Instance.UnlimitedOre = _);
-            CustomCheckBox.AddCheckBox(cashOptions, Localize.Refund, Config.Instance.Refund, 680f, (_) => Config.Instance.Refund = _);
-            CustomCheckBox.AddCheckBox(cashOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
+            CustomCheckBox.AddCheckBox(resourceOptions, Localize.Refund, Config.Instance.Refund, 680f, (_) => Config.Instance.Refund = _);
+            CustomCheckBox.AddCheckBox(resourceOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
                 Config.Instance.EnabledInitialCash = _;
                 InitialCashWarning.parent.isVisible = InitialCashWarning.isVisible = InitialCashAmount.parent.isVisible = InitialCashAmount.isVisible = Config.Instance.EnabledInitialCash;
             });
-            var panel = CustomPanel.AddAutoMatchChildPanel(cashOptions, new RectOffset(25, 0, 0, 3));
+            var panel = CustomPanel.AddAutoMatchChildPanel(resourceOptions, new RectOffset(25, 0, 0, 3));
             panel.autoLayoutDirection = LayoutDirection.Vertical;
             InitialCashAmount = CustomTextfield.AddLongTypeField(panel, Config.Instance.InitialCash, null, (c, v) => {
                 long min = 715000;
@@ -124,25 +161,25 @@ namespace GameAnarchy {
             InitialCashAmount.parent.isVisible = InitialCashAmount.isVisible = Config.Instance.EnabledInitialCash;
             InitialCashWarning = CustomLabel.AddLabel(panel, Localize.InitialCashWarning, 600f, 0.8f, color: UIColor.Yellow);
             InitialCashWarning.parent.isVisible = InitialCashWarning.isVisible = Config.Instance.EnabledInitialCash;
-            VanillaUnlimitedMoney = CustomCheckBox.AddCheckBox(cashOptions, Localize.VanillaUnlimitedMoney, Config.Instance.UnlimitedMoney, 680f, (_) => {
+            VanillaUnlimitedMoney = CustomCheckBox.AddCheckBox(resourceOptions, Localize.VanillaUnlimitedMoney, Config.Instance.UnlimitedMoney, 680f, (_) => {
                 Config.Instance.UnlimitedMoney = _;
                 if (_) Config.Instance.CashAnarchy = CashAnarchy.isChecked = false;
             });
-            CashAnarchy = CustomCheckBox.AddCheckBox(cashOptions, Localize.CashAnarchy, Config.Instance.CashAnarchy, 680f, (_) => {
+            CashAnarchy = CustomCheckBox.AddCheckBox(resourceOptions, Localize.CashAnarchy, Config.Instance.CashAnarchy, 680f, (_) => {
                 Config.Instance.CashAnarchy = _;
                 if (_) Config.Instance.UnlimitedMoney = VanillaUnlimitedMoney.isChecked = false;
                 AddCashAmount.isVisible = AddCashThreshold.isVisible = Config.Instance.CashAnarchy;
             });
-            AddCashThreshold = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.AddCashThreshold, 10000f, 100000f, 5000f, Config.Instance.DefaultMinAmount, (_, value) => Config.Instance.DefaultMinAmount = (int)value);
+            AddCashThreshold = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.AddCashThreshold, 10000f, 100000f, 5000f, Config.Instance.DefaultMinAmount, (_, value) => Config.Instance.DefaultMinAmount = (int)value);
             AddCashThreshold.isVisible = Config.Instance.CashAnarchy;
-            AddCashAmount = CustomSlider.AddCustomSliderStyleA(cashOptions, Localize.AddCashAmount, 500000f, 8000000f, 100000f, Config.Instance.DefaultGetCash, (_, value) => Config.Instance.DefaultGetCash = (int)value);
+            AddCashAmount = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.AddCashAmount, 500000f, 8000000f, 100000f, Config.Instance.DefaultGetCash, (_, value) => Config.Instance.DefaultGetCash = (int)value);
             AddCashAmount.isVisible = Config.Instance.CashAnarchy;
             CustomButton.AddGreenButton(cashOptionsTitle, Localize.ResetValue, 130, 28, new Vector2(594, 6), CashReset);
             void CashReset() {
                 AddCashThreshold.SliderValue = 50000;
                 AddCashAmount.SliderValue = 5000000;
-                oilDepletionRate.SliderValue = 100;
-                oreDepletionRate.SliderValue = 100;
+                oilDepletionRate.value = 100;
+                oreDepletionRate.value = 100;
             }
             #endregion
 

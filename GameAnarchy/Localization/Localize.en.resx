@@ -144,9 +144,6 @@
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
   </data>
-  <data name="DepletionRateTooltip" xml:space="preserve">
-    <value>0 indicates unlimited oil/ore resources, and 100 indicates vanilla depletion rate.</value>
-  </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Achievements system is always available</value>
   </data>
@@ -294,6 +291,9 @@
   <data name="SortSettings" xml:space="preserve">
     <value>Sort mods names in options panel</value>
   </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Unlock all</value>
   </data>
@@ -339,12 +339,6 @@
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
     <value>[UPT]Updated multi-language support framework.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_1ADD" xml:space="preserve">
-    <value>[ADD]Add Spanish localization.</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_1OPT" xml:space="preserve">
-    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
-  </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
     <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
   </data>
@@ -353,6 +347,21 @@
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
     <value>[OPT]Optimize language switching speed and language list format.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
+    <value>[ADD]Add Spanish, Italian localization support.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
+    <value>[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
+    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+  </data>
+  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
+    <value>[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.</value>
+  </data>
+  <data name="Vanilla" xml:space="preserve">
+    <value>Vanilla</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Vanilla unlimited money mode, allow dynamic toggling</value>

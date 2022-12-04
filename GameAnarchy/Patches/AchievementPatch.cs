@@ -2,39 +2,61 @@
 using ColossalFramework;
 using MbyronModsCommon;
 using System;
-using UnityEngine;
 using ColossalFramework.Plugins;
 using HarmonyLib;
 using ColossalFramework.Globalization;
+using ICities;
 
 namespace GameAnarchy {
-    public class AchievementsManager : MonoBehaviour {
-        private UnlockingPanel unlockingPanel;
-        private UITabstrip tabstrip;
-        private UIButton button;
-        private void Start() {
-            unlockingPanel = GameObject.Find("UnlockingPanel").GetComponent<UnlockingPanel>();
-            tabstrip = unlockingPanel.Find("Tabstrip").GetComponent<UITabstrip>();
-            button = tabstrip.Find("Achievements").GetComponent<UIButton>();
+    public class AchievementsManager {
+        private static UIPanel unlockingPanel;
+        private static UIButton button;
+        private static bool isInGame;
+        public static void InitializeAchievements(LoadMode loadMode) {
+            isInGame = true;
+            if(loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame) {
+                ModLogger.ModLog("Game mode, start initalize UnlockingPanel.");
+                unlockingPanel = UIView.Find<UIPanel>("UnlockingPanel");
+                if (unlockingPanel is null) {
+                    ModLogger.ModLog("Initialize achievements failed, couldn't find UnlockingPanel.");
+                } else {
+                    var tabstrip = unlockingPanel.Find<UITabstrip>("Tabstrip");
+                    button = tabstrip.Find<UIButton>("Achievements");
+                }
+                UpdateAchievements(Config.Instance.EnabledAchievements);
+            } else {
+                ModLogger.ModLog("Not Game mode, do not initalize UnlockingPanel.");
+                UpdateAchievements(Config.Instance.EnabledAchievements);
+            }
         }
 
-        public void Update() => ToggleAchievements();
-
-        private void ToggleAchievements() {
+        public static void UpdateAchievements(bool isEnable) {
+            if (!isInGame) {
+                return;
+            }
             try {
-                if (Config.Instance.EnabledAchievements) Singleton<SimulationManager>.instance.m_metaData.m_disableAchievements = SimulationMetaData.MetaBool.False;
-                else Singleton<SimulationManager>.instance.m_metaData.m_disableAchievements = SimulationMetaData.MetaBool.True;
-                if (button != null) {
-                    button.isEnabled = Config.Instance.EnabledAchievements;
+                if (isEnable) {
+                    Singleton<SimulationManager>.instance.m_metaData.m_disableAchievements = SimulationMetaData.MetaBool.False;
+                } else {
+                    Singleton<SimulationManager>.instance.m_metaData.m_disableAchievements = SimulationMetaData.MetaBool.True;
                 }
+                if (button is not null) {
+                    button.isEnabled = isEnable;
+                }
+                ModLogger.ModLog($"Update achievements succeed, status: {isEnable}");
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Toggle achievements status failure, detail: {e.Message}");
+                ModLogger.ModLog($"Update achievements status failure, detail: {e.Message}");
             }
         }
 
+        public static void Destroy() {
+            button = null;
+            unlockingPanel = null;
+            isInGame = false;
+        }
     }
-
+    
     [HarmonyPatch(typeof(LoadPanel), "OnListingSelectionChanged")]
     public static class AchievementPatch {
         static void Postfix(UIComponent comp, int sel) {

@@ -1,8 +1,10 @@
 ﻿
 
-V0.9.1.1
+V0.9.2
 [OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.
-[ADD]Add Spanish localization.
+[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.
+[ADD]Add Spanish, Italian localization support.
+[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.
 
 V0.9.1
 [ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.

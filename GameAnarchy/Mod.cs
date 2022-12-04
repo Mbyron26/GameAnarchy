@@ -4,20 +4,16 @@ using MbyronModsCommon;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using static ColossalFramework.IO.EncodedArray;
 using static MbyronModsCommon.CompatibilityCheck;
-using static NetInfo;
 
 namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 1, 1);
+        public override Version ModVersion => new(0, 9, 2);
         public override ulong ModID => 2781804786;
         public override string Description => Localize.MOD_Description;
-        private GameObject AchievementsObject { get; set; }
         private GameObject InfoViewsObject { get; set; }
         public override void SetModCulture(CultureInfo cultureInfo) {
             Localize.Culture = cultureInfo;
@@ -33,11 +29,11 @@ namespace GameAnarchy {
             CheckCompatibility<Mod>();
         }
 
+        public bool AchievementFlag { get; set; }
         public override void OnLevelLoaded(LoadMode mode) {
             base.OnLevelLoaded(mode);
             EconomyExtension.UpdateStartCash();
-            AchievementsObject = new GameObject("AchievementsManager");
-            AchievementsObject.AddComponent<AchievementsManager>();
+            AchievementsManager.InitializeAchievements(mode);
             InfoViewsObject = new GameObject("InfoViewsExtension");
             InfoViewsObject.AddComponent<InfoViewsExtension>();
             ModLogger.OutputPluginsList();
@@ -51,9 +47,7 @@ namespace GameAnarchy {
         }
         public override void OnLevelUnloading() {
             base.OnLevelUnloading();
-            if (AchievementsObject != null) {
-                UnityEngine.Object.Destroy(AchievementsObject);
-            }
+            AchievementsManager.Destroy();
             if (InfoViewsObject != null) {
                 UnityEngine.Object.Destroy(InfoViewsObject);
             }
@@ -91,8 +85,8 @@ namespace GameAnarchy {
 
         #region ModUpdateLogs
         public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
-            new ModUpdateInfo(new Version(0, 9, 1,1), @"2022/12/01", new List<string> {
-                "UpdateLog_V0_9_1_1OPT","UpdateLog_V0_9_1_1ADD"
+            new ModUpdateInfo(new Version(0, 9, 2), @"2022/12/04", new List<string> {
+                "UpdateLog_V0_9_2OPT1","UpdateLog_V0_9_2OPT2","UpdateLog_V0_9_2ADD","UpdateLog_V0_9_2ADJ",
             }),
             new ModUpdateInfo(new Version(0, 9, 1), @"2022/11/19", new List<string> {
                 "UpdateLog_V0_9_1_ADJ1","UpdateLog_V0_9_1_OPT1", "UpdateLog_V0_9_1_ADD1",
