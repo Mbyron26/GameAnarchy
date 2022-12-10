@@ -75,9 +75,15 @@ namespace GameAnarchy {
         }
         private void RemoveFire() {
             if (!Config.Instance.RemoveFire) return;
-            ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireHazard, -100000);
-            ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireDepartment, 100000);
+            //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireHazard, -100000);
+            //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireDepartment, 100000);
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FirewatchCoverage, 100000, Vector3.zero, 100000);
+           
+            BuildingManager bManager = Singleton<BuildingManager>.instance;
+            var bBuffer = bManager.m_buildings.m_buffer;
+            for (int i = 0; i < bBuffer.Length; i++) {
+                bBuffer[i].m_fireIntensity = 0;
+            }
         }
 
         private void MaximizeAttractiveness() {

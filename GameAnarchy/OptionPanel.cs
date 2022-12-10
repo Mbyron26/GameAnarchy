@@ -132,12 +132,6 @@ namespace GameAnarchy {
                 }
             }
 
-            //var oilDepletionRate = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.OilDepletionRate, 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => Config.Instance.OilDepletionRate = (int)value);
-            //var oreDepletionRate = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.OreDepletionRate, 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => Config.Instance.OreDepletionRate = (int)value);
-            //oreDepletionRate.tooltip = oilDepletionRate.tooltip = Localize.DepletionRateTooltip;
-
-            //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOil, Config.Instance.UnlimitedOil, 680f, (_) => Config.Instance.UnlimitedOil = _);
-            //CustomCheckBox.AddCheckBox(cashOptions, Localize.UnlimitedOre, Config.Instance.UnlimitedOre, 680f, (_) => Config.Instance.UnlimitedOre = _);
             CustomCheckBox.AddCheckBox(resourceOptions, Localize.Refund, Config.Instance.Refund, 680f, (_) => Config.Instance.Refund = _);
             CustomCheckBox.AddCheckBox(resourceOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
                 Config.Instance.EnabledInitialCash = _;
@@ -146,7 +140,7 @@ namespace GameAnarchy {
             var panel = CustomPanel.AddAutoMatchChildPanel(resourceOptions, new RectOffset(25, 0, 0, 3));
             panel.autoLayoutDirection = LayoutDirection.Vertical;
             InitialCashAmount = CustomTextfield.AddLongTypeField(panel, Config.Instance.InitialCash, null, (c, v) => {
-                long min = 715000;
+                long min = 10000;
                 long max = long.MaxValue;
                 long defaultValue = Config.Instance.InitialCash;
                 if (long.TryParse(v, out var longValue)) {

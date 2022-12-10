@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net3.5</TargetFramework>
+    <TargetFramework>net35</TargetFramework>
 	<LangVersion>10.0</LangVersion>
 	<Product>Game Anarchy</Product>
 	<Copyright>Copyright © 2022 Mbyron26</Copyright>
 	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<Authors>Mbyron26</Authors>
-	<Version>0.9.2</Version>
+	<Version>0.9.3</Version>
   </PropertyGroup>
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems" Label="Shared" />
@@ -40,30 +40,31 @@
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.it\CommonLocaleShared.it.projitems" Label="Shared" />
 
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.fr\CommonLocaleShared.fr.projitems" Label="Shared" />
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Users\M\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CitiesHarmony.API">
-      <HintPath>C:\Users\M\Desktop\Assembly\CitiesHarmony.API.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\CitiesHarmony.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CitiesHarmony.Harmony">
-      <HintPath>C:\Users\M\Desktop\Assembly\CitiesHarmony.Harmony.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\CitiesHarmony.Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ColossalManaged">
-      <HintPath>C:\Users\M\Desktop\Assembly\ColossalManaged.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\ColossalManaged.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICities">
-      <HintPath>C:\Users\M\Desktop\Assembly\ICities.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\ICities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>C:\Users\M\Desktop\Assembly\UnityEngine.dll</HintPath>
+      <HintPath>C:\Users\SYS1\Desktop\Assembly\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

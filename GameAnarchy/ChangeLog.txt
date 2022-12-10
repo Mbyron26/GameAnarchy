@@ -1,4 +1,9 @@
 ﻿
+V0.9.3
+[FIX]Remove Fire function should now work properly.
+[ADJ]Adjust initial cash adjustable range.
+[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.
+[ADD]Add French localization support.
 
 V0.9.2
 [OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.

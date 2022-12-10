@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,264 +118,252 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>Add cash</value>
+    <value>Ajouter de l'argent</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>Add cash amount</value>
+    <value>Ajouter un montant personnalisé</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>Add cash threshold</value>
+    <value>Ajouter un seuil de trésorerie</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>Make sure Cash Anarchy feature is enabled.</value>
+    <value>Assurez-vous que la fonctionnalité " Anarchie en espèces " est activée.</value>
   </data>
   <data name="CashAnarchy" xml:space="preserve">
-    <value>Cash anarchy mode, automatic/manual(hotkey) add cash</value>
+    <value>Mode anarchique en espèces, automatique/manuel(raccourci) ajouter du cash</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>City Service Options</value>
+    <value>Options des services de la ville</value>
   </data>
   <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>Commercial income multiplier factor</value>
+    <value>Facteur de multiplicateur de revenus commerciaux</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Custom unlock</value>
+    <value>Déverrouillage personnalisé</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+    <value>Ces options ne sont pas disponibles lorsque la fonction « Déverrouiller tous » est activée car " Déverrouiller tout " a débloqué toutes les options suivantes.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>Achievements system is always available</value>
+    <value>Le système de succès est toujours disponible</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>Info view is always available</value>
+    <value>La vue info est toujours disponible</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>Skip game Intro interface</value>
+    <value>Ignorer l'interface d'introduction du jeu</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Allow place unique buildings without limit</value>
+    <value>Permet de placer des bâtiments uniques sans limite</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>Fast Return</value>
+    <value>Retour rapide</value>
   </data>
   <data name="IncomeOptions" xml:space="preserve">
-    <value>Income Options</value>
+    <value>Options de revenus</value>
   </data>
   <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>Industrial income multiplier factor</value>
+    <value>Facteur de multiplicateur de revenus industriels</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
-    <value>Game Initial cash</value>
+    <value>Argent initial du jeu</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>Réglez la valeur avant de commencer à jouer. Si vous ne voulez pas que l'argent ait cette valeur à chaque fois que vous chargez une sauvegarde, désactivez cette fonctionnalité après l'avoir activée une fois. L'argent changera après le début de la simulation de jeu.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disabled this local mod if you wan to use Game Anarchy funcitons.</value>
+    <value>Mod intégré, Game Anarchy inclut déjà la même fonctionnalité. Veuillez désactiver ce mod local si vous souhaitez utiliser les fonctions de Game Anarchy.</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disable this local mod and set initial amount in GA's Settings panel in case your city goes bankrupt due to overdraft (to avoid the game crashing).</value>
+    <value>Mod intégré, Game Anarchy inclut déjà la même fonctionnalité. Veuillez désactiver ce mod local et définir le montant initial dans le panneau Paramètres de GA au cas où votre ville ferait faillite en raison d'un découvert (pour éviter que le jeu ne plante).</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>Maximize attractiveness, will atract more tourists</value>
+    <value>Maximiser l'attractivité, permettra d'attraper plus de touristes</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>Maximize education coverage, still need schools to get educated citizens</value>
+    <value>Optimiser la couverture de l'éducation, tout en ayant besoin d'écoles pour obtenir des citoyens éduqués</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>Maximize entertainment, will improve citizens' happiness</value>
+    <value>Maximiser le divertissement, améliorera le bonheur des citoyens</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>Maximize the land value of city</value>
+    <value>Maximiser la valeur du terrain de la ville</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Big City</value>
+    <value>Grosse Ville</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Big Town</value>
+    <value>Grande agglomération</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Boom Town</value>
+    <value>Agglomération florissante</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Busy Town</value>
+    <value>Agglomération d'affaires</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Capital City</value>
+    <value>Capitale</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Colossal City</value>
+    <value>Ville Colossale</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Grand City</value>
+    <value>Grande Ville</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Little Hamlet</value>
+    <value>Petit hameau</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>Megalopolis</value>
+    <value>Mégalopole</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolis</value>
+    <value>Métropole</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Milestone unlock level</value>
+    <value>Niveau de déverrouillage d'une étape importante</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Small City</value>
+    <value>Petite Ville</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Tiny Town</value>
+    <value>Petite agglomération</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Jeu de base</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Worthy Village</value>
+    <value>Joli village</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>Extends and optimize game's functions.</value>
+    <value>Étend et optimise les fonctions du jeu.</value>
   </data>
   <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>Office income multiplier factor</value>
+    <value>Facteur multiplicateur de revenus de bureau</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Oil depletion rate</value>
+    <value>Taux d'épuisement du pétrole</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>Optimize Options</value>
+    <value>Optimiser les options</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset</value>
+    <value>Décalage horizontal des catégories du panneau d'options</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened.</value>
+    <value>Le décalage horizontal des catégories du panneau d'options prendra effet après la réouverture du panneau d'options.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Ore depletion rate</value>
+    <value>Taux d'épuisement du minerai</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing building full refund</value>
+    <value>Remboursement intégral du bâtiment détruit au bulldozer</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>Remove criminals from all buildings and maximize police service coverage</value>
+    <value>Retirer les criminels de tous les bâtiments et maximiser la couverture des services de police</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>Remove dead citizens and maximize death care coverage</value>
+    <value>Enlevez les citoyens morts et maximisez la couverture des soins de décès</value>
   </data>
   <data name="RemoveFire" xml:space="preserve">
-    <value>Remove fire hazards and maximize fire coverage</value>
+    <value>Enlevez les risques d'incendie et maximisez la couverture incendie</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>Remove garbage</value>
+    <value>Retirer les déchets</value>
   </data>
   <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>Remove the source of ground pollution</value>
+    <value>Enlever la source de pollution du sol</value>
   </data>
   <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>Remove the source of noise pollution</value>
+    <value>Enlever la source de pollution sonore</value>
   </data>
   <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>Remove the source of water pollution</value>
+    <value>Enlever la source de pollution de l'eau</value>
   </data>
   <data name="ResetValue" xml:space="preserve">
-    <value>Reset value</value>
+    <value>Valeur par défaut</value>
   </data>
   <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>Residential income multiplier factor</value>
+    <value>Facteur de multiplicateur de revenus résidentiels</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>Resource Options</value>
+    <value>Options de ressources</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>Sort mods names in options panel</value>
+    <value>Trier les noms des mods dans le panneau des options</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>Illimité</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
-    <value>Unlock all</value>
+    <value>Tout déverrouiller</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Unlock all roads</value>
+    <value>Déverrouiller toutes les routes</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Unlock metro track</value>
+    <value>Déverrouiller toutes les voies de métro</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>Unlock Options</value>
+    <value>Options de déverrouillage</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Unlock policies panel</value>
+    <value>Déverrouiller le panneau des politiques</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Unlock train track</value>
+    <value>Déverrouiller toutes les voies ferroviaires</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Unlock all transports</value>
+    <value>Déverrouiller tous les transports</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]Add initial cash function.</value>
+    <value>[ADD]Ajouter une fonction de trésorerie initiale.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]Add option panel categories bar horizontal offset adjustment function.</value>
+    <value>[ADD]Ajouter une fonction de réglage du décalage horizontal de la barre des catégories du panneau d'options.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]Add original Unlimited Money function, can be dynamically toggle.</value>
+    <value>[ADD]Ajouter la fonction originale d'argent illimité, peut être basculée dynamiquement.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]Add Info View available function.</value>
+    <value>[ADD]Ajout de la fonction de visualisation des informations disponibles.</value>
   </data>
   <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]Achievements button now works properly.</value>
+    <value>[FIX]Le bouton des accomplissements fonctionne maintenant correctement.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]Options panel was completely rewritten to support better extensions.</value>
+    <value>[UPT]Le panneau des options a été entièrement réécrit pour supporter de meilleures extensions.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]Updated compatibility check function.</value>
+    <value>[UPT]Fonction de vérification de compatibilité mise à jour.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]Updated multi-language support framework.</value>
+    <value>[UPT]Mise à jour du cadre de prise en charge multi-langues.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
+    <value>[ADD]Ajoutez une fonction de déverrouillage personnalisée, inclut le niveau des grandes étapes personnalisées, toutes les routes, le panneau de politique, le transport.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
+    <value>[ADJ]Ajuster la fonction Pétrole/Minerai , peut maintenant ajuster le taux d'épuisement, cette mise à jour de version réinitialisera cette fonction, veuillez aller dans le panneau des options pour réinitialiser le taux d'épuisement du pétrole ou du minerai.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Optimize language switching speed and language list format.</value>
+    <value>[OPT]Optimisation de la vitesse de changement de langue et du format de la liste de langue.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]Add Spanish, Italian localization support.</value>
+    <value>[ADD]Ajouter un support de localisation en espagnol, italien.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.</value>
+    <value>[ADJ]Ajustez le style du curseur minerai/Pétrole illimité et obtenez maintenant des conseils logiques plus appropriés.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+    <value>[OPT]Optimisation de la méthode de détection de compatibilité et amélioration de la compatibilité avec le chargement de l’outil de commande.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Add French localization support.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust initial cash adjustable range.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]Remove Fire function should now work properly.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.</value>
+    <value>[OPT]Optimisation de la fonctionnalité d'accomplissement en activant la logique pour éviter les références nulles en mode éditeur.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Jeu de base</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>Vanilla unlimited money mode, allow dynamic toggling</value>
+    <value>Mode argent illimité Vanilla, permettre le basculement dynamique</value>
   </data>
 </root>

@@ -790,6 +790,42 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Add French localization support. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_3ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_3ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADJ]Adjust initial cash adjustable range. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_3ADJ {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_3ADJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [FIX]Remove Fire function should now work properly. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_3FIX {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_3FIX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_3OPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_3OPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {

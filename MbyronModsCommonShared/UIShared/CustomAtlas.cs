@@ -29,8 +29,18 @@ namespace MbyronModsCommon {
             GradientSlider,
             SliderThumb,
         };
+        public static UITextureAtlas commonAtlas;
 
-        public static UITextureAtlas CommonAtlas => UIUtils.CreateTextureAtlas(@"CommonAtlas", $"{AssemblyUtils.CurrentAssemblyName}.Resources.", Resource, 1024);
+        public static UITextureAtlas CommonAtlas {
+            get {
+                if (commonAtlas is null) {
+                    commonAtlas = UIUtils.CreateTextureAtlas(@"CommonAtlas", $"{AssemblyUtils.CurrentAssemblyName}.Resources.", Resource, 1024);
+                    return commonAtlas;
+                } else {
+                    return commonAtlas;
+                }
+            }
+        }
         public static UITextureAtlas InGameAtlas { get; } = GetAtlas("Ingame");
 
         public static UITextureAtlas GetAtlas(string name) {
