@@ -372,6 +372,12 @@
   <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
     <value>[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.</value>
   </data>
+  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
+    <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
+  </data>
+  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
+    <value>[UPT]Support for game version 1.16</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>

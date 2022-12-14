@@ -6,7 +6,7 @@ using UnityEngine;
 namespace MbyronModsCommon {
     public class AdvancedBase<Mod> where Mod : IMod {
         public AdvancedBase(UIComponent parent, TypeWidth typeWidth) {
-            var advanced = OptionPanelCard.AddCard(parent, typeWidth, CommonLocale.OptionPanel_Advanced, out _, true);
+            var advanced = OptionPanelCard.AddCard(parent, typeWidth, CommonLocale.OptionPanel_Advanced, out _, false);
             CustomButton.AddButton(advanced, 1f, CommonLocale.OptionPanel_ChangeLog, 400f, 34f, ShowLog);
             CustomButton.AddButton(advanced, 1f, CommonLocale.OptionPanel_CompatibilityCheck, 400f, 34f, ShowCompatibility);
         }

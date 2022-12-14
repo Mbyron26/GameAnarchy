@@ -63,6 +63,18 @@ namespace GameAnarchy {
             if (Config.Instance.EnabledUnlockAll) {
                 milestonesManager.UnlockMilestone("Basic Road Created");
 
+                if (managers.application.SupportsExpansion(Expansion.FinanceExpansion)) {
+                    milestonesManager.UnlockMilestone("Stock Exchange Level 1 Created");
+                    milestonesManager.UnlockMilestone("Stock Exchange Level 2 Created");
+                    milestonesManager.UnlockMilestone("Stock Exchange Level 3 Created");
+                    milestonesManager.UnlockMilestone("Stock Exchange Level 4 Created");
+                    milestonesManager.UnlockMilestone("Stock Exchange Level 5 Created");
+                    milestonesManager.UnlockMilestone("SE Localized Level 2");
+                    milestonesManager.UnlockMilestone("SE Localized Level 3");
+                    milestonesManager.UnlockMilestone("SE Localized Level 4");
+                    milestonesManager.UnlockMilestone("SE Localized Level 5");
+                }
+
                 if (managers.application.SupportsExpansion(Expansion.PlazasAndPromenades)) {
                     milestonesManager.UnlockMilestone("Pedestrian Zone Created");
                     milestonesManager.UnlockMilestone("Service Point Created");

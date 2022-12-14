@@ -1,4 +1,7 @@
-﻿
+﻿V0.9.4
+[UPT]Support for game version 1.16
+[ADD]Now support unlimited placement of campus buildings and stock exchanges.
+
 V0.9.3
 [FIX]Remove Fire function should now work properly.
 [ADJ]Adjust initial cash adjustable range.

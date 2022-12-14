@@ -360,6 +360,9 @@
   <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
     <value>[OPT]优化成就系统特性切换逻辑，以避免在编辑器模式下的空引用异常。</value>
   </data>
+  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
+    <value>[ADD]添加法语支持。</value>
+  </data>
   <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
     <value>[ADJ]调整初始现金可调范围。</value>
   </data>
@@ -368,6 +371,12 @@
   </data>
   <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
     <value>[OPT]优化一个潜在的纹理加载缓慢问题，提高选项面板打开速度。</value>
+  </data>
+  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
+    <value>[ADD]现支持无限制摆放校园建筑和证券交易所。</value>
+  </data>
+  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
+    <value>[UPT]支持游戏版本1.16。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>

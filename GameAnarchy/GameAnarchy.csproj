@@ -7,7 +7,7 @@
 	<Copyright>Copyright © 2022 Mbyron26</Copyright>
 	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<Authors>Mbyron26</Authors>
-	<Version>0.9.3</Version>
+	<Version>0.9.4</Version>
   </PropertyGroup>
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems" Label="Shared" />

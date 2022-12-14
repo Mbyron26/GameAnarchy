@@ -11,7 +11,7 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 3);
+        public override Version ModVersion => new(0, 9, 4);
         public override ulong ModID => 2781804786;
         public override string Description => Localize.MOD_Description;
         private GameObject InfoViewsObject { get; set; }
@@ -81,10 +81,14 @@ namespace GameAnarchy {
             new IncompatibleModInfo(1237383751, @"Extended Game Options", true),
             new IncompatibleModInfo(1498036881, @"UltimateMod 2.10.2 [STABLE]", true),
             new IncompatibleModInfo(2506369356, @"UltimateMod v2.12.11 [BETA]", true),
+            new IncompatibleModInfo(447789816, @"Unlock All Roads", true),
         };
 
         #region ModUpdateLogs
         public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
+            new ModUpdateInfo(new Version(0, 9, 4), @"2022/12/13", new List<string> {
+                "UpdateLog_V0_9_4UPT","UpdateLog_V0_9_4ADD"
+            }),
             new ModUpdateInfo(new Version(0, 9, 3), @"2022/12/08", new List<string> {
                 "UpdateLog_V0_9_3FIX","UpdateLog_V0_9_3ADJ","UpdateLog_V0_9_3OPT","UpdateLog_V0_9_3ADD",
             }),

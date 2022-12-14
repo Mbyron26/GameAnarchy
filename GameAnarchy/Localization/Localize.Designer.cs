@@ -826,6 +826,24 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Now support unlimited placement of campus buildings and stock exchanges. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_4ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_4ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Support for game version 1.16 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_4UPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_4UPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {

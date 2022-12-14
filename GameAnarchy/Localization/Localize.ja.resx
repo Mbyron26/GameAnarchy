@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -292,7 +292,7 @@
     <value>オプションパネルでMODの名前順にソート</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>無制限</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全てをアンロック</value>
@@ -349,19 +349,37 @@
     <value>[OPT]言語の切り替え速度と言語リストのフォーマットを最適化しました。</value>
   </data>
   <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]Add Spanish, Italian localization support.</value>
+    <value>[ADD]スペイン語、イタリア語の翻訳のサポートを追加</value>
   </data>
   <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.</value>
+    <value>[ADJ]無制限の鉱石/石油スライダーのスタイルを調整して、より適切なロジックヒントを表示するように変更</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+    <value>[OPT]互換性の検出方法を最適化して、Loading Order Toolとの互換性が向上</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.</value>
+    <value>[OPT]実績機能の切り替えロジックを最適化して、エディターモードでのnull参照エラーを回避</value>
+  </data>
+  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
+    <value>[ADD]フランス語の翻訳のサポートを追加</value>
+  </data>
+  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
+    <value>[ADJ]初期資金の調整可能な範囲を調整</value>
+  </data>
+  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
+    <value>[FIX]火災の無効機能が正常に動作するはずです</value>
+  </data>
+  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
+    <value>[OPT]オプションパネルの開閉速度を向上させるために、潜在的なテクスチャの問題点を最適化</value>
+  </data>
+  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
+    <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
+  </data>
+  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
+    <value>[UPT]Support for game version 1.16</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>バニラ</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>バニラのUnlimited Moneyモード: 動的な切り替えを許可します。</value>
