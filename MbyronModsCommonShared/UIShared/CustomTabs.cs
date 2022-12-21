@@ -28,6 +28,7 @@ namespace MbyronModsCommon {
             TabPanel.width = width;
             TabPanel.height = tabHeight;
             TabPanel.autoLayout = true;
+            TabPanel.autoLayoutPadding = new RectOffset(3, 0, 3, 3);
             TabPanel.autoLayoutDirection = LayoutDirection.Horizontal;
             TabPanel.SelectedTabButton += SelectedTabButtonChanged;
             TabPanel.relativePosition = Vector2.zero;

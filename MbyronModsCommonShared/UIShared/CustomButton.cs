@@ -45,20 +45,16 @@ namespace MbyronModsCommon {
         }
         public static UIButton AddButton(UIComponent parent, float textScale, string text, float? width, float? height, OnButtonClicked eventCallback = null) {
             UIButton button = parent.AddUIComponent<UIButton>();
-            button.normalBgSprite = "ButtonWhite";
-            button.disabledBgSprite = "ButtonWhite";
-            button.hoveredBgSprite = "ButtonWhite";
-            button.pressedBgSprite = "ButtonWhite";
+            button.atlas = CustomAtlas.CommonAtlas;
+            button.normalBgSprite = CustomAtlas.ButtonNormal;
+            button.disabledBgSprite = CustomAtlas.ButtonNormal;
+            button.hoveredBgSprite = CustomAtlas.ButtonHovered;
+            button.pressedBgSprite = CustomAtlas.ButtonPressed;
             button.textColor = Color.white;
             button.disabledTextColor = Color.black;
             button.hoveredTextColor = Color.white;
             button.pressedTextColor = Color.white;
             button.focusedTextColor = Color.white;
-            button.color = UIColor.ButtonNormal;
-            button.disabledColor = UIColor.ButtonDisabled;
-            button.hoveredColor = UIColor.ButtonHovered;
-            button.pressedColor = UIColor.ButtonPressed;
-            button.focusedColor = UIColor.ButtonNormal;
             button.autoSize = false;
             button.textScale = textScale;
             button.text = text;

@@ -118,265 +118,265 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>Añadir dinero</value>
+    <value>Adicionar dinheiro</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>Añadir suma de dinero</value>
+    <value>Adicionar um valor específico</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>Límite para añadir dinero</value>
+    <value>Adicionar limite de dinheiro</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>Asegúrate que la función Anarquía de Dinero esté activada.</value>
+    <value>Tenha certeza de que a Anarquia de Caixa está habilitada.</value>
   </data>
   <data name="CashAnarchy" xml:space="preserve">
-    <value>Modo de Anarquía de Dinero, añadir dinero automatico/manual(atajo de teclado)</value>
+    <value>Modo Anarquia de Caixa, automático/manual (atalho) adicionar dinheiro</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>Opciones de Servicios de la ciudad</value>
+    <value>Opções dos Serviços da Cidade</value>
   </data>
   <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>Factor de multiplicador de ingreso de área comercial</value>
+    <value>Por quantas vezes os impostos do Comércio serão multiplicados</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Desbloqueo personalizado</value>
+    <value>Desbloqueio personalizado</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>Estas opciones no están disponibles cuando "Desbloquear Todo" está activado, porque "Desbloquear Todo" ha desbloqueado todas las funciones siguientes.</value>
+    <value>Estas opções não estão disponíveis quando a função "Habilitar Tudo" está habilitada, porque "Habilitar tudo" já liberou todas as opções a seguir.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>El sistema de Logros está siempre disponible</value>
+    <value>Sistema de Conquistas está sempre disponível</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>La vista de información está siempre disponible</value>
+    <value>Ver Informações está sempre disponível</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>Saltar la introducción al iniciar el juego</value>
+    <value>Pular introdução</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Permitir colocar "Edificios únicos" sin límite</value>
+    <value>Permitir que "construções únicas" sejam construídas sem limites</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>Retorno rápido</value>
+    <value>Fechar rápido o jogo</value>
   </data>
   <data name="IncomeOptions" xml:space="preserve">
-    <value>Opciones de ingresos</value>
+    <value>Opções de Impostos</value>
   </data>
   <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>Factor de multiplicador de ingreso de área industrial</value>
+    <value>Por quantas vezes os impostos da Indústria serão multiplicados</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
-    <value>Dinero inicial del juego</value>
+    <value>Dinheiro inicial em caixa</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Establece el valor antes de jugar. Si no quieres este monto de dinero cada vez que cargues un juego salvado, deshabilita esta función después de habilitarla una vez. El monto de dinero cambiará cuando comience la simulación.</value>
+    <value>Coloque os valores antes de começar o jogo. Se você não quer que esta quantia de dinheiro seja a mesma sempre que carregar um jogo salvo, desabilite esta função após habilitar uma vez. O valor em caixa mudará após a simulação do jogo iniciar.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>Mod local, Game Anarchy ya incluye esta misma funcionalidad. Por favor deshabilita este mod local si quieres usar funciones de Game Anarchy.</value>
+    <value>Petróleo e Minério Ilimitado (Mod original do jogo): Game Anarchy já tem a mesma função! Por favor, desabilite este mod local se você quiser usar as funções do Game Anarchy.</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Mod local, Game Anarchy ya incluye esta misma funcionalidad. Por favor deshabilita este mod local y establece el monto inicial en el panel de ajustes de Game Anarchy en caso de que tu ciudad caiga en bancarrota debido a sobregiro (para evitar que el juego falle).</value>
+    <value>Buildtin mod: Game Anarchy já tem a mesma função! Por favor, desabilite este mod local e defina um valor de caixa inicial nas configurações no painel do Game Anarchy (GA) caso sua cidade vá à falência devido ao "saldo negativo". (Isso pode causar falha crítica, crash, no jogo).</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>Maximizar el atractivo atraerá más turistas</value>
+    <value>Maximizar atratividade, o que vai trazer mais turistas</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>Maximizar la cobertura educativa igualmente requiere escuelas para conseguir ciudadanos educados</value>
+    <value>Maximizar cobertura para Educação. Ainda será necessário ter escolas para cidadãos serem educados</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>Maximizar el entretenimiento incrementará la felicidad de los ciudadanos</value>
+    <value>Maximizar Entretenimento. Melhorará a felicidade dos cidadãos</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>Maximizar la valuación del terreno de la ciudad</value>
+    <value>Valor do terreno no máximo em toda a cidade</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Gran Ciudad</value>
+    <value>Cidade Enorme</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Pueblo Grande</value>
+    <value>Cidade Grande</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Pueblo Boom</value>
+    <value>Cidade em Crescimento</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Pueblo Ocupado</value>
+    <value>Cidade Movimentada</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Ciudad Capital</value>
+    <value>Capital</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Ciudad Colosal</value>
+    <value>Cidade Gigantesca</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Gran Ciudad</value>
+    <value>Cidade Grandiosa</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Aldea Pequeña</value>
+    <value>Vilarejo</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>Megalópolis</value>
+    <value>Megalópole</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metrópolis</value>
+    <value>Metrópole</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Nivel de desbloqueo de hito</value>
+    <value>Nível de desbloqueio</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Ciudad Pequeña</value>
+    <value>Cidade Pequena</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Pueblo Pequeño</value>
+    <value>Cidadezinha</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Sem modificações (Vanilla)</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Aldea Digna</value>
+    <value>Vila de Valor</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>Extiende y optimiza las funciones del juego.</value>
+    <value>Extende e otimiza as funções do jogo.</value>
   </data>
   <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>Factor de multiplicador de ingreso de área de oficinas</value>
+    <value>Por quantas vezes os impostos serão multiplicados</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Tasa de agotamiento de petróleo</value>
+    <value>Taxa de esgotamento de petróleo</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>Opciones de optimización</value>
+    <value>Opções de Otimização</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>Desplazamiento horizontal de la barra de categorías del panel de opciones</value>
+    <value>Deslocamento do painel horizontal de categorias</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>El desplazamiento horizontal de la barra de categorías del panel de opciones tendrán efecto después de la reapertura del panel de opciones.</value>
+    <value>O deslocamento da barra do painel de categorias horizontal funcionará após reabrir o painel.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Tasa de agotamiento del mineral</value>
+    <value>Taxa de esgotamento dos minérios</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Reembolso total de dinero al demoler un edificio</value>
+    <value>Reembolso total para demolições</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>Quitar criminales de todos los edificios y maximizar la cobertura del servicio de policía</value>
+    <value>Remover criminosos de todas as construções e maximizar a cobertura da polícia</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>Quitar ciudadanos muertos y maximizar la cobertura de atención de muertos</value>
+    <value>Remover todos os cidadãos mortos e maximizar a cobertura funerária</value>
   </data>
   <data name="RemoveFire" xml:space="preserve">
-    <value>Quitar riesgo de incendio y maximizar la cobertura contra incendios</value>
+    <value>Remover os perigos de incêncio e maximize a cobertura contra incêndios</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>Quitar basura</value>
+    <value>Remover lixo</value>
   </data>
   <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>Quitar fuentes de polución del suelo</value>
+    <value>Remover a fonte de poluição do solo</value>
   </data>
   <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>Quitar fuentes de polución de ruido</value>
+    <value>Remover a fonte de poluição sonora</value>
   </data>
   <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>Quitar fuentes de polución del agua</value>
+    <value>Remover a fonte de poluição da água</value>
   </data>
   <data name="ResetValue" xml:space="preserve">
-    <value>Restablecer valor</value>
+    <value>Restaurar valor</value>
   </data>
   <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>Factor de multiplicador de ingreso de área residencial</value>
+    <value>Por quantas vezes os impostos residenciais serão multiplicados</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>Restablecer opciones</value>
+    <value>Opções de recursos</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>Ordenar nombre de mods en el panel de opciones</value>
+    <value>Ordenar nomes dos mods no painel de opções</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Ilimitado</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
-    <value>Desbloquear todo</value>
+    <value>Desbloquear tudo</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Desbloquear todos los caminos</value>
+    <value>Desbloquerar todas as estradas</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Desbloquear vías de metro</value>
+    <value>Desbloquear trilhos de metrô</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>Opciones de desbloqueo</value>
+    <value>Opções de Desbloqueio</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Desbloquear panel de políticas</value>
+    <value>Desbloquear painel de políticas</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Desbloquear vías de tren</value>
+    <value>Desbloquear trilhos de trem</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Desbloquear todos los transportes</value>
+    <value>Desbloquear todos os transportes</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]Agregada la función de dinero al iniciar.</value>
+    <value>[ADD] Adicionar função: Caixa Inicial.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]Agregado el ajuste de desplazamiento horizontal para la barra de categorías del panel de opciones.</value>
+    <value>[ADD]Adicionar função de ajuste do deslocamento para o painel horizontal de categorias.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]Agregada la función original de Dinero Ilimitado, puede cambiarse dinámicamente.</value>
+    <value>[ADD]Adicionar função original do mod Unlimited Money (dinheiro ilimitado). Pode ser alternado a qualquer hora.</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]Agregada la función de Vista de Información.</value>
+    <value>[ADD]Adicionar função de Ver Informações.</value>
   </data>
   <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]Ahora el botón Logros funciona correctamente.</value>
+    <value>[FIX]Botão de conquistas agora funciona corretamente.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]El panel de opciones se reescribió completamente para soportar mejores extensiones.</value>
+    <value>[UPT]Painel de opções foi completamente reescrito para suportar melhores extensões.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]Función de verificación de compatibilidad actualizada.</value>
+    <value>[UPT]Atualizado: função de verificar compatibilidade.</value>
   </data>
   <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]Actualización del soporte multi lenguaje.</value>
+    <value>[UPT]Estrutura para suporte multilíngue.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Agregada la función de desbloqueo personalizada, incluyendo nivel de hitos personalizados, todos los caminos, panel de políticas, transporte.</value>
+    <value>[ADD]Adicionada função de desbloqueio personalizado para níveis de marcos, todas as rodovias, painel de política e transporte.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Ajustada la función Petróleo/Mineral, ahora puede ajustar la tasa de agotamiento, esta actualización restablecerá esta función, por favor vaya al panel de opciones para restablecer la tasa de agotamiento de minerales/petróleo.</value>
+    <value>[ADJ]Ajuste da função Petróleo/Minérios. Agora pode-se ajustar a taxa de esgotamento. Esta alteração vai reiniciar esta função, por favor, vá ao painel para reiniciar a taxa.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Optimización de la velocidad al cambiar lenguaje y el formato de lista de lenguajes.</value>
+    <value>[OPT]Otimizada a velocidade da mudança de idiomas e o formato da lista de idiomas.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]Añade soporte para lenguaje español e italiano.</value>
+    <value>[ADD]Adicioando suporte de localização em Espanhol e Italiano.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]Ajuste de apariencia del deslizador de Mineral/Petróleo ilimitado; ahora tiene pistas más apropiadas.</value>
+    <value>[ADJ]Ajustado o estilo da barra de Petróleo/Minérios para que se tenha dicas mais lógicas e apropriadas.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]Optimización del método de detección de compatibilidad y mejorada la compatibilidad con Loading Order Tool.</value>
+    <value>[OPT]Otimizado o método para detecção de compatibilidade e melhorada a compatibilidade com o mod Loading Order Tool.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]Optimización de la lógica de la función de logros para evitar referencias nulas en el modo editor.</value>
+    <value>[OPT]Otimizada a função de habilitar e desabilitar a lógica de conquistas para evitar null references no Modo de Edição.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Add French localization support.</value>
+    <value>[ADD]Adicioando suporte de localização em Francês.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust initial cash adjustable range.</value>
+    <value>[ADJ]Ajustado o alcance da quantidade inicial em caixa.</value>
   </data>
   <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]Remove Fire function should now work properly.</value>
+    <value>[FIX]Removido Função de Incêndios. Deve funcionar adequadamente agora.</value>
   </data>
   <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.</value>
+    <value>[OPT]Otimizada uma potencial lentidão no carregamento de texturas para melhorar a velocidade de abertura dos painéis.</value>
   </data>
   <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
     <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
   </data>
   <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]Support for game version 1.16</value>
+    <value>[UPT]Suporte para a versão 1.16 do jogo</value>
   </data>
   <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
     <value>[ADD]Add Brazilian localization support.</value>
@@ -388,9 +388,9 @@
     <value>[UPT]Update UI.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Sem modificações (Vanilla)</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>Modo de dinero ilimitado Vanilla, permite modificación dinámica</value>
+    <value>Modo de Dinheiro Ilimitado "vanilla", permite ajuste dinâmico.</value>
   </data>
 </root>

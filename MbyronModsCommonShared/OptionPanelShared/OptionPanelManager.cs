@@ -21,7 +21,7 @@ namespace MbyronModsCommon {
                 Container.eventVisibilityChanged += (c, isVisible) => {
                     if (isVisible) {
 #if DEBUG
-                        TimeCalculater.DebugTimeCalculater(Create);
+                        DebugUtils.TimeCalculater(Create);
 #else
                         Create();
 #endif

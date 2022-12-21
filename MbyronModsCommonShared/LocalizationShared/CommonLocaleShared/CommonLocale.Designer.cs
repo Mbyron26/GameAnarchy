@@ -117,9 +117,9 @@ namespace MbyronModsCommon {
         /// <summary>
         ///   查找类似 Spanish 的本地化字符串。
         /// </summary>
-        public static string Language_es {
+        public static string Language_es_ES {
             get {
-                return ResourceManager.GetString("Language_es", resourceCulture);
+                return ResourceManager.GetString("Language_es_ES", resourceCulture);
             }
         }
         
@@ -138,6 +138,15 @@ namespace MbyronModsCommon {
         public static string Language_GameLanguage {
             get {
                 return ResourceManager.GetString("Language_GameLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Italian 的本地化字符串。
+        /// </summary>
+        public static string Language_it {
+            get {
+                return ResourceManager.GetString("Language_it", resourceCulture);
             }
         }
         
@@ -205,56 +214,56 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
-        ///   查找类似 Add 的本地化字符串。
+        ///   查找类似 Added 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Add {
+        public static string LogMessageBox_Added {
             get {
-                return ResourceManager.GetString("LogMessageBox_Add", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Added", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Adjust 的本地化字符串。
+        ///   查找类似 Adjusted 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Adjust {
+        public static string LogMessageBox_Adjusted {
             get {
-                return ResourceManager.GetString("LogMessageBox_Adjust", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Adjusted", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Fix 的本地化字符串。
+        ///   查找类似 Fixed 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Fix {
+        public static string LogMessageBox_Fixed {
             get {
-                return ResourceManager.GetString("LogMessageBox_Fix", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Fixed", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Optimize 的本地化字符串。
+        ///   查找类似 Optimized 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Optimize {
+        public static string LogMessageBox_Optimized {
             get {
-                return ResourceManager.GetString("LogMessageBox_Optimize", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Optimized", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Remove 的本地化字符串。
+        ///   查找类似 Removed 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Remove {
+        public static string LogMessageBox_Removed {
             get {
-                return ResourceManager.GetString("LogMessageBox_Remove", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Removed", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Update 的本地化字符串。
+        ///   查找类似 Updated 的本地化字符串。
         /// </summary>
-        public static string LogMessageBox_Update {
+        public static string LogMessageBox_Updated {
             get {
-                return ResourceManager.GetString("LogMessageBox_Update", resourceCulture);
+                return ResourceManager.GetString("LogMessageBox_Updated", resourceCulture);
             }
         }
         

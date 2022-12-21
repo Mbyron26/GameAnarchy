@@ -378,6 +378,15 @@
   <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
     <value>[UPT]支持游戏版本1.16。</value>
   </data>
+  <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
+    <value>[ADD]增加巴西语本地化支持。</value>
+  </data>
+  <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
+    <value>[UPT]更新Harmony Nuget 包。</value>
+  </data>
+  <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
+    <value>[UPT]更新UI。</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>
   </data>

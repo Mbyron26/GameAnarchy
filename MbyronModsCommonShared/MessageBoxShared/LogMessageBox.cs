@@ -162,27 +162,27 @@ namespace MbyronModsCommon {
                     switch (c) {
                         case "ADD":
                             Category.color = new Color32(0, 176, 73, 255);
-                            Category.text =CommonLocale.LogMessageBox_Add;
+                            Category.text =CommonLocale.LogMessageBox_Added;
                             break;
                         case "REM":
                             Category.color = new Color32(250, 67, 47, 255);
-                            Category.text = CommonLocale.LogMessageBox_Remove;
+                            Category.text = CommonLocale.LogMessageBox_Removed;
                             break;
                         case "UPT":
                             Category.color = new Color32(74, 105, 240, 255);
-                            Category.text = CommonLocale.LogMessageBox_Update;
+                            Category.text = CommonLocale.LogMessageBox_Updated;
                             break;
                         case "FIX":
                             Category.color = new Color32(255, 162, 41, 255);
-                            Category.text = CommonLocale.LogMessageBox_Fix;
+                            Category.text = CommonLocale.LogMessageBox_Fixed;
                             break;
                         case "OPT":
                             Category.color = new Color32(131, 46, 184, 255);
-                            Category.text = CommonLocale.LogMessageBox_Optimize;
+                            Category.text = CommonLocale.LogMessageBox_Optimized;
                             break;
                         case "ADJ":
                             Category.color = new Color32(2, 194, 184, 255);
-                            Category.text = CommonLocale.LogMessageBox_Adjust;
+                            Category.text = CommonLocale.LogMessageBox_Adjusted;
                             break;
                         default:
                             Category.color = new Color32(204, 204, 204, 255);

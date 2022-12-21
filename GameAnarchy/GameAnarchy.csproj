@@ -7,7 +7,7 @@
 	<Copyright>Copyright © 2022 Mbyron26</Copyright>
 	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<Authors>Mbyron26</Authors>
-	<Version>0.9.4</Version>
+	<Version>0.9.5</Version>
   </PropertyGroup>
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems" Label="Shared" />
@@ -43,16 +43,12 @@
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.fr\CommonLocaleShared.fr.projitems" Label="Shared" />
 
   <ItemGroup>
+    <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>C:\Users\SYS1\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CitiesHarmony.API">
-      <HintPath>C:\Users\SYS1\Desktop\Assembly\CitiesHarmony.API.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CitiesHarmony.Harmony">
-      <HintPath>C:\Users\SYS1\Desktop\Assembly\CitiesHarmony.Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ColossalManaged">
@@ -70,6 +66,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.Designer.cs">
+      <DependentUpon>CommonLocale.resx</DependentUpon>
+    </Compile>
     <Compile Update="Localization\Localize.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -79,6 +78,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.0\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
+      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
       <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Localization\Localize.resx">

@@ -844,6 +844,33 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Add Brazilian localization support. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_5ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_5ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Update Harmony Nuget package. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_5UPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_5UPT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Update UI. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_5UPT2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_5UPT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {

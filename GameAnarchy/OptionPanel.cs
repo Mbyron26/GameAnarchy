@@ -139,7 +139,7 @@ namespace GameAnarchy {
             });
             var panel = CustomPanel.AddAutoMatchChildPanel(resourceOptions, new RectOffset(25, 0, 0, 3));
             panel.autoLayoutDirection = LayoutDirection.Vertical;
-            InitialCashAmount = CustomTextfield.AddLongTypeField(panel, Config.Instance.InitialCash, null, (c, v) => {
+            InitialCashAmount = CustomTextField.AddLongTypeField(panel, Config.Instance.InitialCash, null, (c, v) => {
                 long min = 10000;
                 long max = long.MaxValue;
                 long defaultValue = Config.Instance.InitialCash;

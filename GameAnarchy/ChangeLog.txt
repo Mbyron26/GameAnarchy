@@ -1,4 +1,10 @@
-﻿V0.9.4
+﻿
+V0.9.5
+[UPT]Update harmony nuget package.
+[UPT]Update UI.
+[ADD]Add Brazilian localization support.
+
+V0.9.4
 [UPT]Support for game version 1.16
 [ADD]Now support unlimited placement of campus buildings and stock exchanges.
 

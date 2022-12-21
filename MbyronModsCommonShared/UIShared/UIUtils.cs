@@ -1,47 +1,53 @@
-﻿using ColossalFramework.UI;
+﻿using ColossalFramework.Importers;
+using ColossalFramework.UI;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
 namespace MbyronModsCommon {
     public class UIUtils {
-        public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, string[] spriteNames, int maxSpriteSize) {
-            Texture2D texture2D = new Texture2D(maxSpriteSize, maxSpriteSize, TextureFormat.ARGB32, false);
-            Texture2D[] textures = new Texture2D[spriteNames.Length];
-            for (int i = 0; i < spriteNames.Length; i++) {
-                textures[i] = LoadTextureFromAssembly(path + spriteNames[i] + ".png");
+        public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, Dictionary<string, RectOffset> spriteParams, int maxSpriteSize = 1024) {
+            var keys = spriteParams.Keys.ToArray();
+            var value = spriteParams.Values.ToArray();
+            Texture2D texture2D = new(maxSpriteSize, maxSpriteSize, TextureFormat.ARGB32, false);
+            Texture2D[] textures = new Texture2D[spriteParams.Count];
+            for (int i = 0; i < spriteParams.Count; i++) {
+                textures[i] = LoadTextureFromAssembly(path + keys[i] + ".png");
             }
             Rect[] regions = texture2D.PackTextures(textures, 2, maxSpriteSize);
             UITextureAtlas uITextureAtlas = ScriptableObject.CreateInstance<UITextureAtlas>();
-            Material material = Object.Instantiate(UIView.GetAView().defaultAtlas.material);
+            Material material = UnityEngine.Object.Instantiate(UIView.GetAView().defaultAtlas.material);
             material.mainTexture = texture2D;
             uITextureAtlas.material = material;
             uITextureAtlas.name = atlasName;
-            for (int j = 0; j < spriteNames.Length; j++) {
-                UITextureAtlas.SpriteInfo item = new UITextureAtlas.SpriteInfo() {
-                    name = spriteNames[j],
+            for (int j = 0; j < spriteParams.Count; j++) {
+                UITextureAtlas.SpriteInfo item = new() {
+                    name = keys[j],
                     texture = textures[j],
-                    region = regions[j]
+                    region = regions[j],
+                    border = value[j]
                 };
                 uITextureAtlas.AddSprite(item);
             }
             return uITextureAtlas;
         }
 
-        public static Texture2D LoadTextureFromAssembly(string filename) {
-            Texture2D texture = null;
+
+
+        public static Texture2D LoadTextureFromAssembly(string fileName) {
             try {
-                Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(filename);
+                Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
                 byte[] array = new byte[s.Length];
                 s.Read(array, 0, array.Length);
-                texture = new Texture2D(2, 2);
-                texture.LoadImage(array);
+                return new Image(array).CreateTexture();
             }
-            catch {
-                Debug.Log($"Error loading: {filename}");
-                throw;
+            catch (Exception e) {
+                ModLogger.ModLog($"Couldn't load texture from assembly, file name:{fileName}, detial:{e.Message}");
+                return null;
             }
-            return texture;
         }
 
         public static UITextureAtlas GetAtlas(string name) {

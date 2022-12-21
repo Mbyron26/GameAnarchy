@@ -15,10 +15,10 @@ namespace MbyronModsCommon {
             UISlider uislider = panel.Find<UISlider>("Slider");
             uislider.size = size;
             uislider.atlas = CustomAtlas.CommonAtlas;
-            uislider.backgroundSprite = "GradientSlider";
+            uislider.backgroundSprite = CustomAtlas.GradientSlider; 
             UISprite sliderThumb = uislider.thumbObject as UISprite;
             sliderThumb.atlas = CustomAtlas.CommonAtlas;
-            sliderThumb.spriteName = @"SliderThumb";
+            sliderThumb.spriteName = CustomAtlas.SliderThumb;
             sliderThumb.height = 20f;
             uislider.minValue = min;
             uislider.maxValue = max;

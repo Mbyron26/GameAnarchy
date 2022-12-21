@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
+    <value>This mod is incompatible.</value>
+  </data>
+  <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
+    <value>already includes the same functionality.</value>
+  </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Wciśnij dowolny klawisz</value>
   </data>
@@ -130,7 +136,7 @@
     <value>Angielski</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Hiszpański</value>
+    <value>Spanish</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
     <value>Francuski</value>
@@ -153,6 +159,9 @@
   <data name="Language_pt" xml:space="preserve">
     <value>Portugalski</value>
   </data>
+  <data name="Language_pt_BR" xml:space="preserve">
+    <value>Brazilian</value>
+  </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Rosyjski</value>
   </data>
@@ -162,23 +171,23 @@
   <data name="Language_zh_TW" xml:space="preserve">
     <value>Tradycyjny Chiński</value>
   </data>
-  <data name="LogMessageBox_Add" xml:space="preserve">
-    <value>Dodaj</value>
+  <data name="LogMessageBox_Added" xml:space="preserve">
+    <value>Added</value>
   </data>
-  <data name="LogMessageBox_Adjust" xml:space="preserve">
-    <value>Dostosuj</value>
+  <data name="LogMessageBox_Adjusted" xml:space="preserve">
+    <value>Adjusted</value>
   </data>
-  <data name="LogMessageBox_Fix" xml:space="preserve">
-    <value>Napraw</value>
+  <data name="LogMessageBox_Fixed" xml:space="preserve">
+    <value>Fixed</value>
   </data>
-  <data name="LogMessageBox_Optimize" xml:space="preserve">
-    <value>Zoptymalizuj</value>
+  <data name="LogMessageBox_Optimized" xml:space="preserve">
+    <value>Optimized</value>
   </data>
-  <data name="LogMessageBox_Remove" xml:space="preserve">
-    <value>Usuń</value>
+  <data name="LogMessageBox_Removed" xml:space="preserve">
+    <value>Removed</value>
   </data>
-  <data name="LogMessageBox_Update" xml:space="preserve">
-    <value>Zaktualizuj</value>
+  <data name="LogMessageBox_Updated" xml:space="preserve">
+    <value>Updated</value>
   </data>
   <data name="MessageBox_NORMAL" xml:space="preserve">
     <value>NORMALNY</value>
@@ -221,5 +230,8 @@
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Wersja</value>
+  </data>
+  <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
+    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
   </data>
 </root>

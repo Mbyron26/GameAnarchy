@@ -31,11 +31,39 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderRightSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonPressed.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ListBackground.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonFocused.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\GradientSlider.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SliderThumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TextFieldHovered.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TextFieldNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\CornerMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ButtonHovered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ButtonNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ButtonPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\TabButtonNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\EmptySprite.png" />
   </ItemGroup>
 </Project>

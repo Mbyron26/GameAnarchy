@@ -4,11 +4,16 @@ using System.Collections.Generic;
 
 namespace MbyronModsCommon {
     public class CustomTabStrip : UIPanel {
-        private const int tabHeight = 30;
+        private const int tabHeight = 24;
+        private const int gap = 3;
         public Action<int> SelectedTabButton;
         public List<TabButton> TabButtons { get; set; } = new List<TabButton>();
         private int index = -1;
+        public CustomTabStrip() {
 
+            atlas = CustomAtlas.CommonAtlas;
+            backgroundSprite = CustomAtlas.TabButtonNormal;
+        }
         public int Index {
             get => index;
             set {
@@ -33,10 +38,10 @@ namespace MbyronModsCommon {
             var tabButton = AddUIComponent<TabButton>();
             tabButton.name = name;
             tabButton.atlas = CustomAtlas.CommonAtlas;
-            tabButton.normalBgSprite = @"TabButtonNormal";
-            tabButton.focusedBgSprite = @"TabButtonPressed";
-            tabButton.hoveredBgSprite = @"TabButtonHovered";
-            tabButton.pressedBgSprite = @"TabButtonNormal";
+            tabButton.normalBgSprite = CustomAtlas.TabButtonNormal;
+            tabButton.focusedBgSprite = CustomAtlas.ButtonNormal;
+            tabButton.hoveredBgSprite = CustomAtlas.TabButtonHovered;
+            tabButton.pressedBgSprite = CustomAtlas.ButtonPressed;
             tabButton.height = tabHeight;
             tabButton.text = _text;
             tabButton.tooltip = _text;
@@ -49,7 +54,8 @@ namespace MbyronModsCommon {
         private void AdaptWidth() {
             if (TabButtons.Count <= 0) isVisible = false;
             var amount = TabButtons.Count;
-            var buttonWidth = width / amount;
+            //var buttonWidth = width / amount;
+            var buttonWidth = (width - (amount + 1) * gap) / amount;
             foreach (var item in TabButtons) {
                 item.width = buttonWidth;
             }
