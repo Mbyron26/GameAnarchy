@@ -1,7 +1,6 @@
 ﻿using ColossalFramework.UI;
-using MbyronModsCommon;
 
-namespace MessageBoxShared {
+namespace MbyronModsCommon {
     public class XMLWariningMessageBox : SimpleMessageBox {
         public UILabel WarningText { get; set; }
         public override void Initialize<Mod>() {

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using ColossalFramework.IO;
 using System.IO;
 using System.Globalization;
-using MessageBoxShared;
 using ColossalFramework.Globalization;
 using ColossalFramework;
 
