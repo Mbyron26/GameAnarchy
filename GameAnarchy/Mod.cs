@@ -65,7 +65,7 @@ namespace GameAnarchy {
 
         public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);
 
-        private IncompatibleModInfo[] ConflictMods { get; set; } = new IncompatibleModInfo[] {
+        private List<IncompatibleModInfo> ConflictMods { get; set; } = new()  {
             new IncompatibleModInfo(1567569285, @"Achieve It!", true),
             new IncompatibleModInfo(2037888659, @"Instant Return To Desktop", true),
             new IncompatibleModInfo(466834228, @"Not So Unqiue Buildings", true),
