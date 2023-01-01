@@ -60,8 +60,6 @@ namespace GameAnarchy {
                 Patcher.DisablePatches();
             }
         }
-        protected override void SettingsUI(UIHelperBase helper) {
-        }
 
         public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);
 
