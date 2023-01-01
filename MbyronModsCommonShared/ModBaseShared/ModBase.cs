@@ -89,10 +89,12 @@ namespace MbyronModsCommon {
 
         public abstract List<ModUpdateInfo> ModUpdateLogs { get; set; }
         public List<ModUpdateInfo> GetUpdateLogs() {
-            if (ModUpdateLogs.Count == 0) return null;
+            if (ModUpdateLogs is null || ModUpdateLogs.Count == 0) {
+                return new();
+            }
             List<ModUpdateInfo> list = new();
             for (int i = 0; i < ModUpdateLogs.Count; i++) {
-                ModUpdateInfo info = ModUpdateLogs[i];
+                var info = ModUpdateLogs[i];
                 List<string> log = new();
                 for (int j = 0; j < info.Log.Count; j++) {
                     log.Add(GetLocale(info.Log[j]));
