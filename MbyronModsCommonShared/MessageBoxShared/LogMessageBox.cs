@@ -13,7 +13,7 @@ namespace MbyronModsCommon {
             TitleText = $"{ModMainInfo<Mod>.ModName} {CommonLocale.OptionPanel_ChangeLog}";
             MainPanel.autoLayoutPadding = new RectOffset(10, 10, 10, 0);
             if (SingletonMod<Mod>.Instance.GetUpdateLogs().Count == 0) {
-                CustomPanel.AddSpace(MainPanel, buttonWidth, 20);
+                CustomPanel.AddSpace(MainPanel, buttonWidth, 30);
                 return;
             }
             var first = default(VersionPanel);
