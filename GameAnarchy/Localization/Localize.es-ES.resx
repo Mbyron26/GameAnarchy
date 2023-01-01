@@ -361,31 +361,31 @@
     <value>[OPT]Optimización de la lógica de la función de logros para evitar referencias nulas en el modo editor.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Add French localization support.</value>
+    <value>[ADD]Agregado soporte en idioma Francés.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust initial cash adjustable range.</value>
+    <value>[ADJ]Se ajustó el rango de dinero inicial.</value>
   </data>
   <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]Remove Fire function should now work properly.</value>
+    <value>[FIX]La función de quitar el fuego ahora debería funcionar adecuadamente.</value>
   </data>
   <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.</value>
+    <value>[OPT]Optimizada lentitud potencial en la carga de texturas para incrementar la velocidad de apertura del panel de opciones.</value>
   </data>
   <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
+    <value>[ADD]Soporte para colocación ilimitada de edificios de campus y bolsa de valores.</value>
   </data>
   <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]Support for game version 1.16</value>
+    <value>[UPT]Soporte para la versión del juego 1.16</value>
   </data>
   <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]Add Brazilian localization support.</value>
+    <value>[ADD]Agregado soporte en idioma Portugués (Brasil).</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Update Harmony Nuget package.</value>
+    <value>[UPT]Actualizado el paquete Harmony NuGet.</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]Update UI.</value>
+    <value>[UPT]Actualización de la Interfaz de Usuario.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

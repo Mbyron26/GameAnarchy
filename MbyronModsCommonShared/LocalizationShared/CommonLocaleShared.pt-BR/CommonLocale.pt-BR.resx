@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -123,53 +123,62 @@
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>already includes the same functionality.</value>
   </data>
+  <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
+    <value>Use {0} instead.</value>
+  </data>
+  <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Press any key</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Idioma</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>German</value>
+    <value>Alemão</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>English</value>
+    <value>Português</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Espanhol</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>French</value>
+    <value>Francês</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Game Language</value>
+    <value>Idioma do jogo</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>Italiano</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanese</value>
+    <value>Japonês</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Korean</value>
+    <value>Coreano</value>
+  </data>
+  <data name="Language_nl" xml:space="preserve">
+    <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polish</value>
+    <value>Polonês</value>
   </data>
   <data name="Language_pt" xml:space="preserve">
-    <value>Portuguese</value>
+    <value>Português</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Brazilian</value>
+    <value>Português Brasil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russian</value>
+    <value>Russo</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
-    <value>Simplified Chinese</value>
+    <value>Chinês Simplificado</value>
   </data>
   <data name="Language_zh_TW" xml:space="preserve">
-    <value>Traditional Chinese</value>
+    <value>Chinês tradicional</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
     <value>Added</value>
@@ -189,20 +198,14 @@
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
   </data>
-  <data name="MessageBox_NORMAL" xml:space="preserve">
-    <value>NORMAL</value>
-  </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>Did not detect any incompatible mods.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="MessageBox_WARNING" xml:space="preserve">
-    <value>WARNING</value>
-  </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Detected incompatible mods, please unsubscribe from the following incompatible mods.</value>
+    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Advanced</value>

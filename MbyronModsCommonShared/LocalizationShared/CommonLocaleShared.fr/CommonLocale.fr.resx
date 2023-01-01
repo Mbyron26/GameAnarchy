@@ -123,6 +123,12 @@
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>contient déjà la même fonctionnalité.</value>
   </data>
+  <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
+    <value>Use {0} instead.</value>
+  </data>
+  <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Appuyez sur n'importe quelle touche</value>
   </data>
@@ -153,6 +159,9 @@
   <data name="Language_ko" xml:space="preserve">
     <value>Coréen</value>
   </data>
+  <data name="Language_nl" xml:space="preserve">
+    <value>Dutch</value>
+  </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polonais</value>
   </data>
@@ -160,7 +169,7 @@
     <value>Portugais</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Brazilian</value>
+    <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russe</value>
@@ -189,20 +198,14 @@
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
   </data>
-  <data name="MessageBox_NORMAL" xml:space="preserve">
-    <value>NORMAL</value>
-  </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>N'a détecté aucun mod incompatible.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="MessageBox_WARNING" xml:space="preserve">
-    <value>ATTENTION</value>
-  </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Mods incompatibles détectés, veuillez vous désabonner des mods incompatibles suivants.</value>
+    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avancé</value>

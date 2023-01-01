@@ -130,55 +130,55 @@
     <value>Unsubscribe</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
-    <value>Beliebige Taste drücken</value>
+    <value>Press any key</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Sprache</value>
+    <value>Taal</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>Deutsch</value>
+    <value>German</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>Englisch</value>
+    <value>English</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
     <value>Spanish</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>Französisch</value>
+    <value>French</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Spielsprache</value>
+    <value>Dezelfde taal als spel</value>
   </data>
   <data name="Language_it" xml:space="preserve">
     <value>Italian</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanisch</value>
+    <value>Japanese</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Koreanisch</value>
+    <value>Korean</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>Nederlands</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Polish</value>
   </data>
   <data name="Language_pt" xml:space="preserve">
-    <value>Portugiesisch</value>
+    <value>Portuguese</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russisch</value>
+    <value>Russian</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
-    <value>Vereinfachtes Chinesisch</value>
+    <value>Simplified Chinese</value>
   </data>
   <data name="Language_zh_TW" xml:space="preserve">
-    <value>Traditionelles Chinesisch</value>
+    <value>Traditional Chinese</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
     <value>Added</value>
@@ -199,7 +199,7 @@
     <value>Updated</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
-    <value>Keine inkompatiblen Mods erkannt.</value>
+    <value>Did not detect any incompatible mods.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>OK</value>
@@ -208,28 +208,28 @@
     <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
-    <value>Erweitert</value>
+    <value>Advanced</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
-    <value>Eingebaute Funktionen</value>
+    <value>Builtin Function</value>
   </data>
   <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Änderungsprotokoll</value>
+    <value>Change Log</value>
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
-    <value>Kompatibilitätsprüfung</value>
+    <value>Compatibility Check</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
-    <value>Allgemein</value>
+    <value>General</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
-    <value>Tastenkürzel</value>
+    <value>Hotkeys</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>Ist deaktiviert</value>
+    <value>Is Disabled</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>Ist aktiviert</value>
+    <value>Is Enabled</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Version</value>

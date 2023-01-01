@@ -5,20 +5,20 @@ using UnityEngine;
 
 namespace MbyronModsCommon {
     public class LogMessageBox : MessageBoxBase {
-        public AdvancedAutoFitChildrenVerticallyPanel Card { get; private set; }
         public LogMessageBox() {
             AddButtons(1, 1, CommonLocale.MessageBox_OK, Close);
         }
 
         public void Initialize<Mod>(bool maximizeFirst = true) where Mod : IMod {
-            TitleText = ModMainInfo<Mod>.ModName;
-            Card = MainPanel.AddCard();
-            if (SingletonMod<Mod>.Instance.GetUpdateLogs() is null ) return;
+            TitleText = $"{ModMainInfo<Mod>.ModName} {CommonLocale.OptionPanel_ChangeLog}";
+            MainPanel.autoLayoutPadding = new RectOffset(10, 10, 10, 0);
+            if (SingletonMod<Mod>.Instance.GetUpdateLogs().Count == 0) {
+                CustomPanel.AddSpace(MainPanel, buttonWidth, 20);
+                return;
+            }
             var first = default(VersionPanel);
             foreach (var list in SingletonMod<Mod>.Instance.GetUpdateLogs()) {
-                var versionPaenl = Card.AddUIComponent<VersionPanel>();
-                versionPaenl.width = Card.width - Card.autoLayoutPadding.horizontal;
-                Card.eventSizeChanged += (c, s) => versionPaenl.width = Card.width - Card.autoLayoutPadding.horizontal;
+                var versionPaenl = MainPanel.AddUIComponent<VersionPanel>();
                 versionPaenl.InitValue(list.ModVersion.ToString(), list.Date, list.Log);
                 if (first == null) first = versionPaenl;
             }
@@ -33,9 +33,11 @@ namespace MbyronModsCommon {
             private AutoLayoutPanel container;
             public List<LogPanel> LogLists { get; private set; } = new List<LogPanel>();
             public VersionPanel() {
+                name = nameof(VersionPanel);
                 autoLayoutPadding = new RectOffset(0, 0, 0, 5);
                 autoLayoutDirection = LayoutDirection.Vertical;
                 autoFitChildrenVertically = true;
+                width = 570;
                 InitTitle();
                 InitContainer();
             }
@@ -111,7 +113,7 @@ namespace MbyronModsCommon {
                 container.autoLayoutDirection = LayoutDirection.Vertical;
                 container.autoLayoutPadding = new RectOffset(0, 0, 0, 5);
                 container.autoFitChildrenVertically = true;
-                container.width = 550f;
+                container.width = 570f;
             }
 
             public List<string> ObtainSplitLog(string log) {
@@ -127,10 +129,11 @@ namespace MbyronModsCommon {
 
         public class LogPanel : AutoLayoutPanel {
             public LogPanel() {
+                name = nameof(LogPanel);
                 autoLayoutDirection = LayoutDirection.Horizontal;
                 autoFitChildrenVertically = true;
                 autoLayoutPadding = new RectOffset(0, 5, 0, 0);
-                width = 550f;
+                width = 570f;
                 InitComponents();
             }
 
@@ -142,7 +145,7 @@ namespace MbyronModsCommon {
                 Category.autoSize = false;
                 Category.size = new Vector2(100, 22);
                 Category.padding = new RectOffset(0, 0, 4, 0);
-                Category.textScale = 1f;
+                Category.textScale = 0.8f;
                 Category.textAlignment = UIHorizontalAlignment.Center;
                 Category.verticalAlignment = UIVerticalAlignment.Middle;
                 Category.atlas = CustomAtlas.InGameAtlas;
@@ -150,6 +153,7 @@ namespace MbyronModsCommon {
                 Info = AddUIComponent<UILabel>();
                 Info.autoSize = false;
                 Info.autoHeight = true;
+                //Info.width = 465;
                 Info.wordWrap = true;
                 Info.textScale = 0.9f;
                 Info.textAlignment = UIHorizontalAlignment.Left;
@@ -162,7 +166,7 @@ namespace MbyronModsCommon {
                     switch (c) {
                         case "ADD":
                             Category.color = new Color32(0, 176, 73, 255);
-                            Category.text =CommonLocale.LogMessageBox_Added;
+                            Category.text = CommonLocale.LogMessageBox_Added;
                             break;
                         case "REM":
                             Category.color = new Color32(250, 67, 47, 255);

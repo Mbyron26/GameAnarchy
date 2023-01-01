@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
-using static MbyronModsCommon.CompatibilityCheck;
 
 namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
@@ -20,13 +19,11 @@ namespace GameAnarchy {
         }
         public override void IntroActions() {
             base.IntroActions();
-            IncompatibleMods = ConflictMods;
-            if (CompatibilityExtension.GetLocalIncompatibleMods().Count != 0) {
-                foreach (var item in CompatibilityExtension.GetLocalIncompatibleMods()) {
-                    IncompatibleModsInfo.Add(item);
-                }
-            }
-            CheckCompatibility<Mod>();
+            CompatibilityCheck.IncompatibleMods = ConflictMods;
+            CompatibilityCheck.GetExtraModsInfo += CompatibilityExtension.GetLocalIncompatibleMods;
+            CompatibilityCheck.RemoveConflictModsAction += CompatibilityExtension.RemoveConflictMods;
+            CompatibilityCheck.CheckCompatibility();
+            ModLogger.OutputPluginsList();
         }
 
         public bool AchievementFlag { get; set; }
@@ -36,7 +33,6 @@ namespace GameAnarchy {
             AchievementsManager.InitializeAchievements(mode);
             InfoViewsObject = new GameObject("InfoViewsExtension");
             InfoViewsObject.AddComponent<InfoViewsExtension>();
-            ModLogger.OutputPluginsList();
             //if (UnlockManager.exists) {
             //    ModLogger.ModLog("exists");
             //    var all = UnlockManager.instance.m_allMilestones;

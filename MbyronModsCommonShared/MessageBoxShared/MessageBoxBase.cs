@@ -44,36 +44,49 @@ namespace MbyronModsCommon {
             UnityEngine.Object.Destroy(messageBox);
         }
     }
+
+    public class MessageBoxParameters {
+        public const float Width = 600;
+        public const int Padding = 10;
+        public const float ComponentWidth = 580;
+    }
+
     public abstract class MessageBoxBase : UIPanel {
         private const int dragBarHeight = 40;
         protected const float defaultWidth = 600;
         protected const int defaultHeight = 200;
-        protected const int defaultPadding = 10;
+        protected const int DefaultPadding = 10;
         protected const float buttonHeight = 48f;
         protected const float buttonWidth = 580;
-        protected const float buttonPanelHeight = 48f + 2 * defaultPadding;
+        protected const float buttonPanelHeight = 48f + 2 * DefaultPadding;
+        public UIPanel Background { get; protected set; }
         public string TitleText { set => Title.text = value; }
         protected UIDragHandle DragBar { get; private set; }
         protected UILabel Title { get; private set; }
         protected UIButton CloseButton { get; private set; }
         public MessageBoxScrollablePanel ScrollableContentPanel { get; private set; }
-        public ScrollablePanelWithCard MainPanel => ScrollableContentPanel.MainPanel;
+        public AutoSizeScrollablePanel MainPanel => ScrollableContentPanel.MainPanel;
         protected UIPanel ButtonPanel { get; set; }
         public MessageBoxBase() {
             isVisible = true;
             canFocus = true;
             isInteractive = true;
             size = new Vector2(defaultWidth, defaultHeight);
-            backgroundSprite = "MenuPanel";
-            color = new Color32(58, 88, 104, 255);
-
+            AddBackgound();
             AddTitleBar();
             AddContentPanel();
             AddButtonPanel();
             Resize();
             ScrollableContentPanel.eventSizeChanged += (component, size) => Resize();
         }
-
+        private void AddBackgound() {
+            Background = AddUIComponent<UIPanel>();
+            Background.name = nameof(Background);
+            Background.size = new Vector2(defaultWidth, defaultHeight);
+            Background.backgroundSprite = "TextFieldPanel";
+            Background.color = new(43, 47, 64, 240);
+            Background.relativePosition = Vector2.zero;
+        }
         protected void Close() => MessageBox.Hide(this);
         private void AddTitleBar() {
             DragBar = AddUIComponent<UIDragHandle>();
@@ -83,9 +96,14 @@ namespace MbyronModsCommon {
             Title.textAlignment = UIHorizontalAlignment.Center;
             Title.verticalAlignment = UIVerticalAlignment.Middle;
             Title.textScale = 1.3f;
+            Title.font = CustomFont.SemiBold;
+            Title.autoHeight = true;
             Title.eventTextChanged += (component, text) => {
                 Title.CenterToParent();
             };
+
+        }
+        protected void AddCaptionCloseButton() {
             CloseButton = DragBar.AddUIComponent<UIButton>();
             CloseButton.normalBgSprite = "buttonclose";
             CloseButton.hoveredBgSprite = "buttonclosehover";
@@ -97,17 +115,17 @@ namespace MbyronModsCommon {
 
         private void CloseButtonOnClicked(UIComponent component, UIMouseEventParameter eventParam) => Close();
 
-        private Vector2 MaxScrollableContentSize {
+        private float MaxScrollableContentHeight {
             get {
                 var resolution = GetUIView().GetScreenResolution();
-                return new Vector2(defaultWidth, resolution.y - 600f);
+                return resolution.y - 600f;
             }
         }
 
         private void AddContentPanel() {
             ScrollableContentPanel = AddUIComponent<MessageBoxScrollablePanel>();
             ScrollableContentPanel.relativePosition = new Vector2(0f, dragBarHeight);
-            ScrollableContentPanel.CustomMaxSize = MaxScrollableContentSize;
+            ScrollableContentPanel.MaxHeight = MaxScrollableContentHeight;
         }
 
         private void AddButtonPanel() {
@@ -116,8 +134,8 @@ namespace MbyronModsCommon {
         }
 
         protected void AddButtons(uint number, uint total, string _text, Action action) {
-            var spacing = (total - 1) * defaultPadding;
-            var buttonWidth = (defaultWidth - 2 * defaultPadding - spacing) / total;
+            var spacing = (total - 1) * DefaultPadding;
+            var buttonWidth = (defaultWidth - 2 * DefaultPadding - spacing) / total;
             UIButton button = CustomButton.AddButton(ButtonPanel, 1f, _text, buttonWidth, buttonHeight);
             ArrangePosition(button, number, buttonWidth);
             button.eventClicked += (component, eventParam) => action?.Invoke();
@@ -125,7 +143,7 @@ namespace MbyronModsCommon {
 
         private UIButton ArrangePosition(UIButton button, uint number, float buttonWidth) {
             button.name = "Button" + number.ToString();
-            var posX = defaultPadding + (number - 1) * (buttonWidth + defaultPadding);
+            var posX = DefaultPadding + (number - 1) * (buttonWidth + DefaultPadding);
             float posY = 10f;
             button.relativePosition = new Vector2(posX, posY);
             return button;
@@ -146,6 +164,7 @@ namespace MbyronModsCommon {
         protected void Resize() {
             height = dragBarHeight + ScrollableContentPanel.height + buttonPanelHeight;
             ButtonPanel.relativePosition = new Vector2(0f, dragBarHeight + ScrollableContentPanel.height);
+            Background.height = height;
         }
 
         protected override void OnKeyDown(UIKeyEventParameter p) {

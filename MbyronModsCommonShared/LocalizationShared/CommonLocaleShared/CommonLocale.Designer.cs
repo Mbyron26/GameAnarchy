@@ -79,6 +79,24 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Use {0} instead. 的本地化字符串。
+        /// </summary>
+        public static string CompatibilityCheck_UseInstead {
+            get {
+                return ResourceManager.GetString("CompatibilityCheck_UseInstead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unsubscribe 的本地化字符串。
+        /// </summary>
+        public static string CompatibilityMessageBox_Unsubscribe {
+            get {
+                return ResourceManager.GetString("CompatibilityMessageBox_Unsubscribe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Press any key 的本地化字符串。
         /// </summary>
         public static string KeyBinding_PressAnyKey {
@@ -169,6 +187,15 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Dutch 的本地化字符串。
+        /// </summary>
+        public static string Language_nl {
+            get {
+                return ResourceManager.GetString("Language_nl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Polish 的本地化字符串。
         /// </summary>
         public static string Language_pl {
@@ -183,6 +210,15 @@ namespace MbyronModsCommon {
         public static string Language_pt {
             get {
                 return ResourceManager.GetString("Language_pt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Portuguese-Brazil 的本地化字符串。
+        /// </summary>
+        public static string Language_pt_BR {
+            get {
+                return ResourceManager.GetString("Language_pt_BR", resourceCulture);
             }
         }
         
@@ -304,7 +340,7 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
-        ///   查找类似 Detected incompatible mods, please unsubscribe from the following incompatible mods. 的本地化字符串。
+        ///   查找类似 Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods: 的本地化字符串。
         /// </summary>
         public static string MessageBox_WarningPrompt {
             get {

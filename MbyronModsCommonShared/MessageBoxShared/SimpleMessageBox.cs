@@ -5,7 +5,7 @@ namespace MbyronModsCommon {
         public UILabel WarningText { get; set; }
         public override void Initialize<Mod>() {
             base.Initialize<Mod>();
-            WarningText = Card.AddUIComponent<UILabel>();
+            WarningText = MainPanel.AddUIComponent<UILabel>();
             WarningText.autoSize = false;
             WarningText.autoHeight = true;
             WarningText.width = 560f;
@@ -16,13 +16,13 @@ namespace MbyronModsCommon {
         }
     }
     public class SimpleMessageBox : MessageBoxBase {
-        public AdvancedAutoFitChildrenVerticallyPanel Card { get; private set; }
+        //public AdvancedAutoFitChildrenVerticallyPanel Card { get; private set; }
         public SimpleMessageBox() {
             AddButtons(1, 1, CommonLocale.MessageBox_OK, Close);
         }
         public virtual void Initialize<Mod>() where Mod : IMod {
             TitleText = ModMainInfo<Mod>.ModName;
-            Card = MainPanel.AddCard();
+            //Card = MainPanel.AddCard();
         }
     }
 }

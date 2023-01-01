@@ -362,10 +362,10 @@ Aggiunta la funzione Denaro iniziale.</value>
     <value>[OPT]Ottimizzata la logica per la selezione della funzione di conseguimento obiettivi per evitare riferimenti nulli in modalità editor.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Add French localization support.</value>
+    <value>[ADD]Aggiunto il supporto per la localizzazione in francese.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust initial cash adjustable range.</value>
+    <value>[ADJ]Aggiustato l'intervallo iniziale di regolazione del contante.</value>
   </data>
   <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
     <value>[FIX]Remove Fire function should now work properly.</value>

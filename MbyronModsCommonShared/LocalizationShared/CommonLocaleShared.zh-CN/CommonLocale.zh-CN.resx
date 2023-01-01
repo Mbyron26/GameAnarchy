@@ -123,6 +123,12 @@
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>已具有相同功能。</value>
   </data>
+  <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
+    <value>使用{0}替代。</value>
+  </data>
+  <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
+    <value>取消订阅</value>
+  </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>请按任意键</value>
   </data>
@@ -153,6 +159,9 @@
   <data name="Language_ko" xml:space="preserve">
     <value>韩语</value>
   </data>
+  <data name="Language_nl" xml:space="preserve">
+    <value>荷兰语</value>
+  </data>
   <data name="Language_pl" xml:space="preserve">
     <value>波兰语</value>
   </data>
@@ -160,7 +169,7 @@
     <value>葡萄牙语</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>巴西语</value>
+    <value>葡萄牙语-巴西</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>俄语</value>
@@ -189,20 +198,14 @@
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>更新</value>
   </data>
-  <data name="MessageBox_NORMAL" xml:space="preserve">
-    <value>正常</value>
-  </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>没有检测到任何不兼容模组。</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>确定</value>
   </data>
-  <data name="MessageBox_WARNING" xml:space="preserve">
-    <value>警告</value>
-  </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>检测到不兼容模组，请取消订阅以下不兼容模组。</value>
+    <value>检测到不兼容的模组，为了确保此模组正常工作，您需要取消订阅以下模组：</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>高级</value>

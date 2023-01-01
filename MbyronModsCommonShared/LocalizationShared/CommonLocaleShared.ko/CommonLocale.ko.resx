@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
-    <value>This mod is incompatible.</value>
+    <value>이 모드는 호환되지 않습니다.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
-    <value>already includes the same functionality.</value>
+    <value>이미 동일한 기능이 포함되어 있습니다.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
     <value>Use {0} instead.</value>
@@ -130,111 +130,111 @@
     <value>Unsubscribe</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
-    <value>Beliebige Taste drücken</value>
+    <value>아무 키나 누르세요</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Sprache</value>
+    <value>언어</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>Deutsch</value>
+    <value>독일어</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>Englisch</value>
+    <value>영어</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>스페인어</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>Französisch</value>
+    <value>프랑스어</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Spielsprache</value>
+    <value>게임 언어</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>이탈리아어</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanisch</value>
+    <value>일본어</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Koreanisch</value>
+    <value>한국어</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
     <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>폴란드어</value>
   </data>
   <data name="Language_pt" xml:space="preserve">
-    <value>Portugiesisch</value>
+    <value>포르투갈어</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russisch</value>
+    <value>러시아어</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
-    <value>Vereinfachtes Chinesisch</value>
+    <value>중국어 간체</value>
   </data>
   <data name="Language_zh_TW" xml:space="preserve">
-    <value>Traditionelles Chinesisch</value>
+    <value>중국어(번체)</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>추가됨</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>조정</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>고정됨</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>최적화됨</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>제거됨</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
+    <value>업데이트됨</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
-    <value>Keine inkompatiblen Mods erkannt.</value>
+    <value>호환되지 않는 모드를 감지하지 못했습니다.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
+    <value>확인</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
-    <value>Erweitert</value>
+    <value>고급 설정</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
-    <value>Eingebaute Funktionen</value>
+    <value>빌트인 기능</value>
   </data>
   <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Änderungsprotokoll</value>
+    <value>변경 기록</value>
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
-    <value>Kompatibilitätsprüfung</value>
+    <value>호환성 확인</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
-    <value>Allgemein</value>
+    <value>일반</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
-    <value>Tastenkürzel</value>
+    <value>단축키</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>Ist deaktiviert</value>
+    <value>비활성화됨</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>Ist aktiviert</value>
+    <value>활성화됨</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
-    <value>Version</value>
+    <value>버전</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
+    <value>경고! 모드가 이전 구성 데이터를 정상적으로 읽을 수 없습니다. 이제 모드에 대한 기본 구성이 로드되었습니다. 게임을 시작하기 전에 옵션 패널로 이동하여 설정을 구성하십시오.</value>
   </data>
 </root>

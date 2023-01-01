@@ -16,7 +16,7 @@ namespace MbyronModsCommon {
         }
         private static void ShowCompatibility() {
             var messageBox = MessageBox.Show<CompatibilityMessageBox>();
-            messageBox.Initialize<Mod>();
+            messageBox.Initialize(ModMainInfo<Mod>.ModName);
         }
 
     }
@@ -29,7 +29,7 @@ namespace MbyronModsCommon {
         }
 
         public static void AddLocaleDropdown<Panel>(UIComponent parent) where Panel : UIPanel {
-            var dropdown = CustomDropdown.AddDropdown(parent, CommonLocale.Language, 1f, GetLanguages().ToArray(), LanguagesIndex, 300, 32, 1f, new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0));
+            var dropdown = CustomDropdown.AddDropdown(parent, CommonLocale.Language, 1f, GetLanguages().ToArray(), LanguagesIndex, 310, 32, 1f, new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0));
             dropdown.eventSelectedIndexChanged += (c, s) => {
                 if (s == 0) {
                     SingletonMod<Mod>.Instance.ModCulture = new CultureInfo(ModLocalize.LocalizationExtension());

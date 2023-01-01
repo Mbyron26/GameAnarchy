@@ -123,14 +123,20 @@
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>already includes the same functionality.</value>
   </data>
+  <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
+    <value>Use {0} instead.</value>
+  </data>
+  <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Press any key</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Lingua</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>German</value>
+    <value>Tedesco</value>
   </data>
   <data name="Language_en" xml:space="preserve">
     <value>English</value>
@@ -145,13 +151,16 @@
     <value>Game Language</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>Italiano</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
     <value>Japanese</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
     <value>Korean</value>
+  </data>
+  <data name="Language_nl" xml:space="preserve">
+    <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polish</value>
@@ -160,7 +169,7 @@
     <value>Portuguese</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Brazilian</value>
+    <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russian</value>
@@ -189,20 +198,14 @@
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
   </data>
-  <data name="MessageBox_NORMAL" xml:space="preserve">
-    <value>NORMAL</value>
-  </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>Did not detect any incompatible mods.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="MessageBox_WARNING" xml:space="preserve">
-    <value>WARNING</value>
-  </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Detected incompatible mods, please unsubscribe from the following incompatible mods.</value>
+    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Advanced</value>

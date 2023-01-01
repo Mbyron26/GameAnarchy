@@ -118,120 +118,123 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
-    <value>This mod is incompatible.</value>
+    <value>Este Mod es incompatible.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
-    <value>already includes the same functionality.</value>
+    <value>ya incluye la misma funcionalidad.</value>
+  </data>
+  <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
+    <value>Use {0} instead.</value>
+  </data>
+  <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
+    <value>Unsubscribe</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
-    <value>Press any key</value>
+    <value>Presione cualquier tecla</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Lenguaje</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>German</value>
+    <value>Alemán</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>English</value>
+    <value>Inglés</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Español</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>French</value>
+    <value>Francés</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Game Language</value>
+    <value>Igual que el juego</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>Italiano</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanese</value>
+    <value>Japonés</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Korean</value>
+    <value>Coreano</value>
+  </data>
+  <data name="Language_nl" xml:space="preserve">
+    <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polish</value>
+    <value>Polaco</value>
   </data>
   <data name="Language_pt" xml:space="preserve">
-    <value>Portuguese</value>
+    <value>Portugués</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Brazilian</value>
+    <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russian</value>
+    <value>Ruso</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
-    <value>Simplified Chinese</value>
+    <value>Chino Simplificado</value>
   </data>
   <data name="Language_zh_TW" xml:space="preserve">
-    <value>Traditional Chinese</value>
+    <value>Chino Tradicional</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>Agregado</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>Ajustado</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>Arreglado</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>Optimizado</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>Quitado</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
-  </data>
-  <data name="MessageBox_NORMAL" xml:space="preserve">
-    <value>NORMAL</value>
+    <value>Actualizado</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
-    <value>Did not detect any incompatible mods.</value>
+    <value>No se detectaron mods incompatibles.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="MessageBox_WARNING" xml:space="preserve">
-    <value>WARNING</value>
+    <value>Aceptar</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Detected incompatible mods, please unsubscribe from the following incompatible mods.</value>
+    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
-    <value>Advanced</value>
+    <value>Avanzado</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
-    <value>Builtin Function</value>
+    <value>Función integrada</value>
   </data>
   <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Change Log</value>
+    <value>Registro de Cambios</value>
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
-    <value>Compatibility Check</value>
+    <value>Verificación de compatibilidad</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>General</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
-    <value>Hotkeys</value>
+    <value>Atajos de teclado</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>Is Disabled</value>
+    <value>esta Desactivado</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>Is Enabled</value>
+    <value>esta Activado</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
-    <value>Version</value>
+    <value>Versión</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
+    <value>¡Atención! El mod normalmente no puede leer los datos antiguos de configuración. Han sido cargadas las configuraciones por defecto del mod. Por favor ingrese al panel de opciones y configúrelo antes de empezar el juego.</value>
   </data>
 </root>

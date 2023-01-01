@@ -41,7 +41,7 @@ namespace MbyronModsCommon {
                 sw.WriteLine(@"Mods Installed are:");
                 foreach (PluginManager.PluginInfo info in Singleton<PluginManager>.instance.GetPluginsInfo()) {
                     if (info is not null && info.userModInstance is IUserMod modInstance)
-                        sw.WriteLine(@"=> " + info.name + '-' + modInstance.Name + ' ' + (info.isEnabled ? @"** Enabled **" : @"** Disabled **"));
+                        sw.WriteLine(info.name + '-' + modInstance.Name + ' ' + (info.isEnabled ? @"** Enabled **" : @"** Disabled **"));
                 }
                 sw.WriteLine(@"-------------------------------------");
             }

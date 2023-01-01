@@ -42,6 +42,14 @@
 
   <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.fr\CommonLocaleShared.fr.projitems" Label="Shared" />
 
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ko\CommonLocaleShared.ko.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.nl\CommonLocaleShared.nl.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pt-BR\CommonLocaleShared.pt-BR.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-TW\CommonLocaleShared.zh-TW.projitems" Label="Shared" />
+
   <ItemGroup>
     <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
   </ItemGroup>
@@ -66,6 +74,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5.1\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.Designer.cs">
+      <DependentUpon>CommonLocale.resx</DependentUpon>
+    </Compile>
     <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.Designer.cs">
       <DependentUpon>CommonLocale.resx</DependentUpon>
     </Compile>
@@ -78,6 +89,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.0\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
+      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5.1\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
       <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">

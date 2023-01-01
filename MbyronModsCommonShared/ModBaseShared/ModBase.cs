@@ -53,6 +53,7 @@ namespace MbyronModsCommon {
             ModLogger.GameLog($"Start initializing mod.");
             ModLogger.CreateDebugFile<Mod>();
             LoadConfig();
+            CompatibilityCheck.ModName = ModName;
         }
 
         public void OnSettingsUI(UIHelperBase helper) {
@@ -133,7 +134,7 @@ namespace MbyronModsCommon {
                     var messageBox = MessageBox.Show<LogMessageBox>();
                     messageBox.Initialize<Mod>(true);
                 }
-                if(lastVersion > nowVersion) {
+                if (lastVersion > nowVersion) {
                     SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
                     SaveConfig();
                 }
