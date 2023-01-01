@@ -9,7 +9,7 @@ using System.Text;
 namespace MbyronModsCommon {
     public class CompatibilityCheck {
         public static string ModName { get; set; }
-        public static IncompatibleModInfo[] IncompatibleMods { get; set; }
+        public static List<IncompatibleModInfo> IncompatibleMods { get; set; } = new();
         public static List<IncompatibleModInfo> DetectedIncompatibleMods { get; private set; } = new();
         public static Action RemoveConflictModsAction { get; set; }
         public static Func<List<string>> GetExtraModsInfo { get; set; }
@@ -84,9 +84,10 @@ namespace MbyronModsCommon {
 
         private static void CheckIncompatibleMods() {
             DetectedIncompatibleMods.Clear();
+            if (IncompatibleMods.Count == 0) return;
             foreach (PluginManager.PluginInfo info in Singleton<PluginManager>.instance.GetPluginsInfo()) {
                 if (info is not null && info.userModInstance is IUserMod) {
-                    for (int i = 0; i < IncompatibleMods.Length; i++) {
+                    for (int i = 0; i < IncompatibleMods.Count; i++) {
                         if (info.publishedFileID.AsUInt64 == IncompatibleMods[i].fileID) {
                             DetectedIncompatibleMods.Add(IncompatibleMods[i]);
                         }
