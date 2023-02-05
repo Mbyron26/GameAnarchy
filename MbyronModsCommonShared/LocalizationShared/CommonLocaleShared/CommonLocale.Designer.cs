@@ -304,15 +304,6 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
-        ///   查找类似 NORMAL 的本地化字符串。
-        /// </summary>
-        public static string MessageBox_NORMAL {
-            get {
-                return ResourceManager.GetString("MessageBox_NORMAL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Did not detect any incompatible mods. 的本地化字符串。
         /// </summary>
         public static string MessageBox_NormalPrompt {
@@ -327,15 +318,6 @@ namespace MbyronModsCommon {
         public static string MessageBox_OK {
             get {
                 return ResourceManager.GetString("MessageBox_OK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 WARNING 的本地化字符串。
-        /// </summary>
-        public static string MessageBox_WARNING {
-            get {
-                return ResourceManager.GetString("MessageBox_WARNING", resourceCulture);
             }
         }
         
@@ -381,6 +363,15 @@ namespace MbyronModsCommon {
         public static string OptionPanel_CompatibilityCheck {
             get {
                 return ResourceManager.GetString("OptionPanel_CompatibilityCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Debug mode 的本地化字符串。
+        /// </summary>
+        public static string OptionPanel_DebugMode {
+            get {
+                return ResourceManager.GetString("OptionPanel_DebugMode", resourceCulture);
             }
         }
         

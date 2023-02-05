@@ -124,10 +124,10 @@
     <value>既に同じ機能が含まれています。</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>代わりに {0} を使用して下さい。</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>サブスクを解除</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>何かキーを押してください</value>
@@ -160,7 +160,7 @@
     <value>韓国語</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>オランダ語</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>ポーランド語</value>
@@ -169,7 +169,7 @@
     <value>ポルトガル語</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>ポルトガル語-ブラジル</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>ロシア語</value>
@@ -205,7 +205,7 @@
     <value>OK</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>互換性のないMODを検出しました。MODを正常に動作させるためには、以下のMODはサブスクを解除して下さい。</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>詳細</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>互換性の確認</value>
+  </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>デバッグモード</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>全般</value>

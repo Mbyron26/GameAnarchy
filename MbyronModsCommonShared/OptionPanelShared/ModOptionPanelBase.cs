@@ -4,9 +4,10 @@ using System.Globalization;
 using UnityEngine;
 
 namespace MbyronModsCommon {
-    public class AdvancedBase<Mod> where Mod : IMod {
+    public class AdvancedBase<Mod, Config> where Mod : IMod where Config : ModConfigBase<Config> {
         public AdvancedBase(UIComponent parent, TypeWidth typeWidth) {
             var advanced = OptionPanelCard.AddCard(parent, typeWidth, CommonLocale.OptionPanel_Advanced, out _, false);
+            CustomCheckBox.AddCheckBox(advanced, CommonLocale.OptionPanel_DebugMode, SingletonMod<Config>.Instance.DebugMode, null, (v) => SingletonMod<Config>.Instance.DebugMode = v);
             CustomButton.AddButton(advanced, 1f, CommonLocale.OptionPanel_ChangeLog, 400f, 34f, ShowLog);
             CustomButton.AddButton(advanced, 1f, CommonLocale.OptionPanel_CompatibilityCheck, 400f, 34f, ShowCompatibility);
         }

@@ -219,6 +219,9 @@
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Проверка совместимости</value>
   </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>Debug mode</value>
+  </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>Общее</value>
   </data>

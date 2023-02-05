@@ -373,19 +373,28 @@
     <value>[OPT]Otimizada uma potencial lentidão no carregamento de texturas para melhorar a velocidade de abertura dos painéis.</value>
   </data>
   <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
+    <value>[ADD]Agora suporta colocação ilimitada de edifícios de campus e bolsas de valores.</value>
   </data>
   <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
     <value>[UPT]Suporte para a versão 1.16 do jogo</value>
   </data>
   <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]Add Brazilian localization support.</value>
+    <value>[ADD]Adicionado suporte para localização brasileira.</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Update Harmony Nuget package.</value>
+    <value>[UPT]Atualizado o pacote Harmony Nuget.</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]Update UI.</value>
+    <value>[UPT]Atualização de UI.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
+    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
+    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
+    <value>[UPT]Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Sem modificações (Vanilla)</value>

@@ -124,10 +124,10 @@
     <value>ya incluye la misma funcionalidad.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>Usar {0} en su lugar.</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>De-suscribir</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Presione cualquier tecla</value>
@@ -160,7 +160,7 @@
     <value>Coreano</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>Neerlandés</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polaco</value>
@@ -169,7 +169,7 @@
     <value>Portugués</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>Portugués de Brasil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Ruso</value>
@@ -205,7 +205,7 @@
     <value>Aceptar</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>Se han detectado mods incompatibles, para asegurar que este mod funcione correctamente, necesitas de-suscribirte a los siguientes mods:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avanzado</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Verificación de compatibilidad</value>
+  </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>Modo de depuración</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>General</value>

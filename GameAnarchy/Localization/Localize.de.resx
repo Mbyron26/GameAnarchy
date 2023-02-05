@@ -139,13 +139,13 @@
     <value>Gewerbegebiet-Einkommensmultiplikator</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Custom unlock</value>
+    <value>Individuelle Freischaltungen</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+    <value>Diese Optionen sind nicht verfügbar, wenn „Alles Freischalten“ aktiviert ist, da dadurch alle folgenden Optionen bereits freigeschaltet wurden.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>Steam-Erfolgssystem ist immer verfügbar</value>
+    <value>Steam-Erfolge sind immer freischaltbar</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
     <value>Infoansicht ist immer verfügbar</value>
@@ -169,13 +169,13 @@
     <value>Startgeld</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>Lege den Wert fest, bevor du mit dem Spielen beginnst. Wenn du nicht willst, dass das Geld bei jedem Laden des Spielstandes als Startwert festgelegt wird, deaktiviere die Funktion nach dem das Geld den Wert hat. Die Geldmenge wird sich erst ändern, nachdem die Spielsimulation gestartet wurde.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Eingebaute Mod, Game Anarchy enthält bereits die gleiche Funktionalität. Bitte deaktiviere die lokale Mod, wenn du die Game Anarchy Funktion verwenden möchtest.</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Eingebaute Mod, Game Anarchy beinhaltet bereits die gleiche Funktionalität. Bitte deaktiviere diese lokale Mod und lege den Anfangsbetrag in den Einstellungen von GA fest, falls die Stadt wegen Überziehungskrediten Konkurs geht (um einen Absturz des Spiels zu vermeiden).</value>
+    <value>Eingebaute Mod, Game Anarchy beinhaltet bereits die gleiche Funktionalität. Bitte deaktiviere diese lokale Mod und lege den Anfangsbetrag in den Einstellungen von GA fest, falls die Stadt im Minus ist und Konkurs zu gehen droht. (Um einen Absturz des Spiels zu vermeiden.)</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>Maximiert die Attraktivität, wird mehr Touristen anlocken</value>
@@ -190,49 +190,49 @@
     <value>Maximiert den Bodenrichtwert deiner Stadt</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Big City</value>
+    <value>Große Stadt</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Big Town</value>
+    <value>Große Kleinstadt</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Boom Town</value>
+    <value>Boomende Kleinstadt</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Busy Town</value>
+    <value>Geschäftigte Kleinstadt</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Capital City</value>
+    <value>Hauptstadt</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Colossal City</value>
+    <value>Kolossale Stadt</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Grand City</value>
+    <value>Großartige Stadt</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Little Hamlet</value>
+    <value>Kleiner Weiler</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
     <value>Megalopolis</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolis</value>
+    <value>Metropole</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Milestone unlock level</value>
+    <value>Meilenstein Level</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Small City</value>
+    <value>Kleine Stadt</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Tiny Town</value>
+    <value>Winzige Kleinstadt</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Vanilla (Basis-Spiel)</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Worthy Village</value>
+    <value>Würdiges Dorf</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Erweiterung und Optimierung der Spielfunktionen.</value>
@@ -241,7 +241,7 @@
     <value>Bürogebiet-Einkommensmultiplikator</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Oil depletion rate</value>
+    <value>Ölerschöpfungsrate</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimierungen</value>
@@ -253,7 +253,7 @@
     <value>Änderungen am Einstellungspanel werden wirksam, wenn die Einstellungen erneut geöffnet werden.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Ore depletion rate</value>
+    <value>Erzerschöpfungsrate</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Vollständige Rückerstattung beim Abriss</value>
@@ -292,28 +292,28 @@
     <value>Mods in der Einstellungsleiste nach Namen sortieren</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>Unbegrenzt</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Alles entsperren</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Unlock all roads</value>
+    <value>Alle Straßen freischalten</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Unlock metro track</value>
+    <value>U-Bahngleise Freischalten</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
     <value>Entsperroptionen</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Unlock policies panel</value>
+    <value>Richtlinien Freischalten</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Unlock train track</value>
+    <value>Bahngleise Freischalten</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Unlock all transports</value>
+    <value>Alle Transportmöglichkeiten entsperren</value>
   </data>
   <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
     <value>[ADD]Bargeldfunktion hinzugefügt.</value>
@@ -340,55 +340,64 @@
     <value>[UPT]Support-Framework für Mehrsprachigkeit aktualisiert.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Add custom unlock function, includes custom milestones level, all roads, policy panel, transport.</value>
+    <value>[ADD] Individuelle Freischaltungen, eigene Meilensteine, alle Straßen, Richtlinien und Transportwesen.</value>
   </data>
   <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Adjust Oil/Ore function, now can adjust depletion rate, this version update will reset this function, please go to the options panel to reset oil/ore depletion rate.</value>
+    <value>[ADJ]Öl/Erz Funktion angepasst. Jetzt kann die Erschöpfungsrate angepasst werden. Dieses Update hat die Erz Funktion zurückgesetzt. Bitte gehen Sie in die Mod-Einstellungen, um die Einstellungen für Öl/Erz zurückzusetzen.</value>
   </data>
   <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Optimize language switching speed and language list format.</value>
+    <value>[OPT]Optimierte Sprachwechselgeschwindigkeit sowie Sprachlistenformat.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]Add Spanish, Italian localization support.</value>
+    <value>[ADD]Spanisch und Italienisch hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust Unlimited Ore/Oil slider style and now have more appropriate logic hints.</value>
+    <value>[ADJ]Unbegrenzter Öl- und Ölregler-Stil wurde angepasst und hat nun passende Informationstexte.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]Optimize compatibility detection method and improve compatibility with Loading Order Tool.</value>
+    <value>[OPT]Optimierte Kompatibilitätserkennung und verbesserte Kompatibilität mit dem Loading Order Tool.</value>
   </data>
   <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]Optimize achievement feature toggling logic to avoid null references in editor mode.</value>
+    <value>[OPT]Optimierte Freischaltlevel-Umschaltlogik, um Nullreferenzen im Editormodus zu vermeiden.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Add French localization support.</value>
+    <value>[ADD]Französisch hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Adjust initial cash adjustable range.</value>
+    <value>[ADJ]Anfänglichen Bargeldbonus angepasst.</value>
   </data>
   <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]Remove Fire function should now work properly.</value>
+    <value>[FIX]Feuer-entfernen-Funktion sollte nun korrekt funktionieren.</value>
   </data>
   <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]Optimize a potential texture loading slowness issue to improve the speed of the options panel opening.</value>
+    <value>[OPT]Ein mögliches Problem das zum langsamen Laden von Texturen führen konnte, wurde behoben.</value>
   </data>
   <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]Now support unlimited placement of campus buildings and stock exchanges.</value>
+    <value>[ADD]Unterstützt jetzt die unbegrenzte Platzierung von Campusgebäuden und Börsen.</value>
   </data>
   <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]Support for game version 1.16</value>
+    <value>[UPT]Unterstützung für Spielversion 1.16</value>
   </data>
   <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]Add Brazilian localization support.</value>
+    <value>[ADD]Brasilianisch hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Update Harmony Nuget package.</value>
+    <value>[UPT]Harmony Nuget Paket aktualisiert.</value>
   </data>
   <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]Update UI.</value>
+    <value>[UPT]Aktualisierung der Benutzeroberfläche.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
+    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
+    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
+    <value>[UPT]Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Vanilla (Basis-Spiel)</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Vanilla unbegrenzter Geldmodus, dynamisches Umschalten ist möglich</value>

@@ -21,7 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)CustomSlider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomTabs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomTabStrip.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomTextfield.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomField.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomUIPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils.cs" />
   </ItemGroup>
@@ -65,5 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\EmptySprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\FieldDisabled.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\FieldFocused.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\FieldHovered.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\FieldNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ArrowDown.png" />
   </ItemGroup>
 </Project>

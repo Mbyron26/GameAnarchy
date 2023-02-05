@@ -50,7 +50,19 @@ namespace MbyronModsCommon {
             }
         }
 
-        public static void ModLog(string msg)  {
+        public static void ModLog(string msg, Exception e) {
+            Monitor.Enter(fileLock);
+            try {
+                using FileStream debugFile = new(DebugFilePath, FileMode.Append);
+                using StreamWriter sw = new(debugFile);
+                sw.WriteLine($"{new StackFrame(1, true).GetMethod().Name} ==> {msg}, details: {e}");
+            }
+            finally {
+                Monitor.Exit(fileLock);
+            }
+        }
+
+        public static void ModLog(string msg) {
             Monitor.Enter(fileLock);
             try {
                 using FileStream debugFile = new(DebugFilePath, FileMode.Append);
@@ -62,6 +74,19 @@ namespace MbyronModsCommon {
             }
         }
 
+        public static void ModLog(string msg, bool enableLog) {
+            if(enableLog) {
+                Monitor.Enter(fileLock);
+                try {
+                    using FileStream debugFile = new(DebugFilePath, FileMode.Append);
+                    using StreamWriter sw = new(debugFile);
+                    sw.WriteLine($"Debug Mode | {new StackFrame(1, true).GetMethod().Name} ==> {msg}");
+                }
+                finally {
+                    Monitor.Exit(fileLock);
+                }
+            }
+        }
 
     }
 

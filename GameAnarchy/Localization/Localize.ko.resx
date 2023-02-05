@@ -387,6 +387,15 @@
   <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
     <value>[UPT]UI 업데이트.</value>
   </data>
+  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
+    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
+    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
+  </data>
+  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
+    <value>[UPT]Updated framework.</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>

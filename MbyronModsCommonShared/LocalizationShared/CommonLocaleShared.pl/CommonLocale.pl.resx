@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
-    <value>This mod is incompatible.</value>
+    <value>Ten mod jest niekompatybilny.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
-    <value>already includes the same functionality.</value>
+    <value>już posiada tą samą funkcję.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>Użyj {0}.</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>Odsubskrybuj</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Wciśnij dowolny klawisz</value>
@@ -142,7 +142,7 @@
     <value>Angielski</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Hiszpański</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
     <value>Francuski</value>
@@ -151,7 +151,7 @@
     <value>Język gry</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>Włoski</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
     <value>Japoński</value>
@@ -160,7 +160,7 @@
     <value>Koreański</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>Holenderski</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polski</value>
@@ -169,7 +169,7 @@
     <value>Portugalski</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>Portugalski-Brazylia</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Rosyjski</value>
@@ -181,22 +181,22 @@
     <value>Tradycyjny Chiński</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>Dodano</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>Skorygowano</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>Naprawiono</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>Zoptymalizowano</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>Usunięto</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
+    <value>Zaktualizowano</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>Nie wykryto żadnych niekompatybilnych modów.</value>
@@ -205,7 +205,7 @@
     <value>OK</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>Wykryto niekompatybilne modyfikacje, aby upewnić się, że mod działa poprawnie, musisz anulować subskrypcję następujących modów:</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Zaawansowane</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Kontrola Zgodności</value>
+  </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>Debug mode</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>Ogólne</value>
@@ -235,6 +238,6 @@
     <value>Wersja</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
+    <value>Ostrzeżenie! Mod nie może normalnie odczytać starych danych konfiguracyjnych. Teraz załadowana została domyślna konfiguracja moda. Przejdź do panelu opcji i skonfiguruj ustawienia przed rozpoczęciem gry.</value>
   </data>
 </root>

@@ -1,4 +1,9 @@
 ﻿
+V0.9.6
+[UPT]Updated framework.
+[FIX]Fixed unavailable achievement panel in scene mode.
+[OPT]Optimized the range of add cash threshold and add cash amount.
+
 V0.9.5
 [UPT]Update harmony nuget package.
 [UPT]Update UI.

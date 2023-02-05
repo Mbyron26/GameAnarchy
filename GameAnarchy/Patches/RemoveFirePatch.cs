@@ -28,14 +28,22 @@ namespace GameAnarchy {
 
     [HarmonyPatch(typeof(IndustrialBuildingAI), "GetFireParameters")]
     internal static class IndustrialBuildingAIPatch {
-        public static void Postfix(ref int fireHazard, ref int fireTolerance) {
-            if (Config.Instance.RemoveFire) {
-                fireHazard = 0;
-                fireTolerance = 1000;
-            } else if (!Config.Instance.RemoveFire) {
-                fireHazard = 200;
-                fireTolerance = 10;
+        //public static void Postfix(ref int fireHazard, ref int fireTolerance) {
+        //    if (Config.Instance.RemoveFire) {
+        //        fireHazard = 0;
+        //        fireTolerance = 1000;
+        //    } else if (!Config.Instance.RemoveFire) {
+        //        fireHazard = 200;
+        //        fireTolerance = 10;
+        //    }
+        //}
+        public static bool Prefix(ref bool __result) {
+            if(Config.Instance.RemoveFire) {
+                __result = false;
+            } else {
+                __result = true;
             }
+            return false;
         }
     }
 

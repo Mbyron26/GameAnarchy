@@ -871,6 +871,33 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [FIX]Fixed unavailable achievement panel in scene mode. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_6FIX {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_6FIX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimized the range of add cash threshold and add cash amount. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_6OPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_6OPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Updated framework. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_6UPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_6UPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {

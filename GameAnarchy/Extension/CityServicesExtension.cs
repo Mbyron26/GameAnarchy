@@ -1,5 +1,6 @@
 ﻿using ColossalFramework;
 using ICities;
+using MbyronModsCommon;
 using System;
 using UnityEngine;
 
@@ -47,6 +48,20 @@ namespace GameAnarchy {
             if (handers.Length <= handlerIndex) return;
             Action handler = handers[handlerIndex];
             handler();
+            //ModLogger.ModLog($"{m_frameIndex} | {m_frame_16}");
+            //DebugUtils.TimeCalculater(SimulateAction);
+        }
+
+        private void SimulateAction() {
+            if (!InGame) return;
+            if (SimulationManager.instance.SimulationPaused) return;
+            m_frameIndex = SimulationManager.instance.m_currentFrameIndex;
+            m_frame_16 = (byte)(m_frameIndex & 15);
+            var handlerIndex = m_frame_16;
+            if (handers.Length <= handlerIndex) return;
+            Action handler = handers[handlerIndex];
+            handler();
+            ModLogger.ModLog($"{m_frameIndex} | {m_frame_16}");
         }
 
         private void RemoveNoisePollution() {
@@ -78,7 +93,7 @@ namespace GameAnarchy {
             //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireHazard, -100000);
             //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireDepartment, 100000);
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FirewatchCoverage, 100000, Vector3.zero, 100000);
-           
+
             BuildingManager bManager = Singleton<BuildingManager>.instance;
             var bBuffer = bManager.m_buildings.m_buffer;
             for (int i = 0; i < bBuffer.Length; i++) {

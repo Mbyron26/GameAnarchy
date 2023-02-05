@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)KeyBinding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KeyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionKeymapping.cs" />
   </ItemGroup>
 </Project>

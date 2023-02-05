@@ -124,10 +124,10 @@
     <value>이미 동일한 기능이 포함되어 있습니다.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>대신 {0} 의 사용을 권장합니다.</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>구독 해제</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>아무 키나 누르세요</value>
@@ -160,7 +160,7 @@
     <value>한국어</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>네덜란드어</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>폴란드어</value>
@@ -169,7 +169,7 @@
     <value>포르투갈어</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>포르투갈어-브라질</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>러시아어</value>
@@ -205,7 +205,7 @@
     <value>확인</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>비호환 모드가 발견되었습니다. 이 모드의 정상 작동을 보장하려면, 아래 모드들에 대해 구독 해제가 필요합니다.</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>고급 설정</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>호환성 확인</value>
+  </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>디버그 모드</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>일반</value>

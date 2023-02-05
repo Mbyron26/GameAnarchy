@@ -124,10 +124,10 @@
     <value>contient déjà la même fonctionnalité.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>Utiliser {0} à la place.</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>Se désabonner</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
     <value>Appuyez sur n'importe quelle touche</value>
@@ -160,7 +160,7 @@
     <value>Coréen</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>Néerlandais</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polonais</value>
@@ -169,7 +169,7 @@
     <value>Portugais</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>Portugais Brésilien</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russe</value>
@@ -181,22 +181,22 @@
     <value>Chinois traditionnel</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>Ajouté</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>Ajusté</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>Fixé</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>Optimisé</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>Retiré</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
+    <value>Mis à jour</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
     <value>N'a détecté aucun mod incompatible.</value>
@@ -205,7 +205,7 @@
     <value>Ok</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>Des mods incompatibles ont été détectés, afin de s'assurer que ce mod fonctionne correctement, vous devez vous désabonner des mods suivants :</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avancé</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Vérification de la compatibilité</value>
+  </data>
+  <data name="OptionPanel_DebugMode" xml:space="preserve">
+    <value>Mode debug</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
     <value>Général</value>

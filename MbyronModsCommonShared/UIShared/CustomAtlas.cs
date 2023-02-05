@@ -36,7 +36,12 @@ namespace MbyronModsCommon {
         public static string CornerMark => nameof(CornerMark);
         public static string ListBackground => nameof(ListBackground);
 
+        public static string FieldDisabled => nameof(FieldDisabled);
+        public static string FieldFocused => nameof(FieldFocused);
+        public static string FieldHovered => nameof(FieldHovered);
+        public static string FieldNormal => nameof(FieldNormal);
 
+        public static string ArrowDown => nameof(ArrowDown);
         static CustomAtlas() {
             SpriteParams[ButtonNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[ButtonHovered] = new RectOffset(4, 4, 4, 4);
@@ -58,6 +63,12 @@ namespace MbyronModsCommon {
             SpriteParams[CornerMark] = new RectOffset();
             SpriteParams[ListBackground] = new RectOffset(4, 4, 4, 4);
 
+            SpriteParams[FieldDisabled] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[FieldFocused] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[FieldHovered] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[FieldNormal] = new RectOffset(4, 4, 4, 4);
+
+            SpriteParams[ArrowDown] = new RectOffset(4, 4, 4, 4);
         }
 
         public static UITextureAtlas CommonAtlas {

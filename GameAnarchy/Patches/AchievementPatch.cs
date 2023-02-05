@@ -14,12 +14,12 @@ namespace GameAnarchy {
         private static bool isInGame;
         public static void InitializeAchievements(LoadMode loadMode) {
             isInGame = true;
-            if(loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame) {
-                ModLogger.ModLog("Game mode, start initalize UnlockingPanel.");
+            if (loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame || loadMode == LoadMode.NewGameFromScenario || loadMode == LoadMode.LoadScenario) {
                 unlockingPanel = UIView.Find<UIPanel>("UnlockingPanel");
                 if (unlockingPanel is null) {
                     ModLogger.ModLog("Initialize achievements failed, couldn't find UnlockingPanel.");
                 } else {
+                    ModLogger.ModLog($"{loadMode} mode, start initalize UnlockingPanel.");
                     var tabstrip = unlockingPanel.Find<UITabstrip>("Tabstrip");
                     button = tabstrip.Find<UIButton>("Achievements");
                 }
@@ -56,7 +56,7 @@ namespace GameAnarchy {
             isInGame = false;
         }
     }
-    
+
     [HarmonyPatch(typeof(LoadPanel), "OnListingSelectionChanged")]
     public static class AchievementPatch {
         static void Postfix(UIComponent comp, int sel) {

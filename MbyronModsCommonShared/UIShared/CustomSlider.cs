@@ -1,4 +1,5 @@
 ﻿using ColossalFramework.UI;
+using System.Collections;
 using UnityEngine;
 
 namespace MbyronModsCommon {
@@ -6,7 +7,7 @@ namespace MbyronModsCommon {
         public static UISlider AddCustomSliderStyleB(UIComponent parent, string text, float min, float max, float step, float defaultValue, Vector2 size, PropertyChangedEventHandler<float> callback, out UILabel labelText) {
             UIPanel panel = parent.AttachUIComponent(UITemplateManager.GetAsGameObject("OptionsSliderTemplate")) as UIPanel;
             panel.autoLayoutPadding = new RectOffset(1, 0, 2, 0);
-            panel.autoFitChildrenVertically= true;
+            panel.autoFitChildrenVertically = true;
             var label = panel.Find<UILabel>("Label");
             label.text = text;
             label.textScale = 1f;
@@ -15,7 +16,7 @@ namespace MbyronModsCommon {
             UISlider uislider = panel.Find<UISlider>("Slider");
             uislider.size = size;
             uislider.atlas = CustomAtlas.CommonAtlas;
-            uislider.backgroundSprite = CustomAtlas.GradientSlider; 
+            uislider.backgroundSprite = CustomAtlas.GradientSlider;
             UISprite sliderThumb = uislider.thumbObject as UISprite;
             sliderThumb.atlas = CustomAtlas.CommonAtlas;
             sliderThumb.spriteName = CustomAtlas.SliderThumb;
@@ -25,6 +26,7 @@ namespace MbyronModsCommon {
             uislider.stepSize = step;
             uislider.value = defaultValue;
             uislider.eventValueChanged += callback;
+            uislider.scrollWheelAmount = 0;
             return uislider;
         }
 

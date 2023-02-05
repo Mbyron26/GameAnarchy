@@ -8,7 +8,7 @@ namespace GameAnarchy {
             var panel = CustomTabs.AddCustomTabs(this);
             new OptionPanel_General(panel.AddTabs(CommonLocale.OptionPanel_General, CommonLocale.OptionPanel_General, 0, 30).MainPanel, TypeWidth.ShrinkageWidth);
             new OptionPanel_Hotkey(panel.AddTabs(CommonLocale.OptionPanel_Hotkeys, CommonLocale.OptionPanel_Hotkeys, 0, 30).MainPanel);
-            new AdvancedBase<Mod>(panel.AddTabs(CommonLocale.OptionPanel_Advanced, CommonLocale.OptionPanel_Advanced, 0, 30).MainPanel, TypeWidth.NormalWidth);
+            new AdvancedBase<Mod, Config>(panel.AddTabs(CommonLocale.OptionPanel_Advanced, CommonLocale.OptionPanel_Advanced, 0, 30).MainPanel, TypeWidth.NormalWidth);
 
         }
     }
@@ -28,6 +28,8 @@ namespace GameAnarchy {
         private UICheckBox UnlockAll { get; set; }
         private UICheckBox CustomUnlock { get; set; }
         private UIPanel CustomUnlockPanel { get; set; }
+        private UIPanel CashThresholdPanel { get; set; }
+        private UIPanel CashAmountPanel { get; set; }
         private string[] MilestoneLevelNames { get; set; } = new string[] {
             Localize.MilestonelevelName_Vanilla,
             Localize.MilestonelevelName_LittleHamlet,
@@ -133,45 +135,55 @@ namespace GameAnarchy {
             }
 
             CustomCheckBox.AddCheckBox(resourceOptions, Localize.Refund, Config.Instance.Refund, 680f, (_) => Config.Instance.Refund = _);
-            CustomCheckBox.AddCheckBox(resourceOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
-                Config.Instance.EnabledInitialCash = _;
-                InitialCashWarning.parent.isVisible = InitialCashWarning.isVisible = InitialCashAmount.parent.isVisible = InitialCashAmount.isVisible = Config.Instance.EnabledInitialCash;
-            });
-            var panel = CustomPanel.AddAutoMatchChildPanel(resourceOptions, new RectOffset(25, 0, 0, 3));
-            panel.autoLayoutDirection = LayoutDirection.Vertical;
-            InitialCashAmount = CustomTextField.AddLongTypeField(panel, Config.Instance.InitialCash, null, (c, v) => {
-                long min = 10000;
-                long max = long.MaxValue;
-                long defaultValue = Config.Instance.InitialCash;
-                if (long.TryParse(v, out var longValue)) {
-                    if (longValue < min) longValue = min;
-                    if (longValue > max) longValue = max;
-                    (c as UITextField).text = longValue.ToString();
-                    Config.Instance.InitialCash = longValue;
-                } else {
-                    (c as UITextField).text = defaultValue.ToString();
-                }
-            }, null, default, 1f);
-            InitialCashAmount.parent.isVisible = InitialCashAmount.isVisible = Config.Instance.EnabledInitialCash;
-            InitialCashWarning = CustomLabel.AddLabel(panel, Localize.InitialCashWarning, 600f, 0.8f, color: UIColor.Yellow);
-            InitialCashWarning.parent.isVisible = InitialCashWarning.isVisible = Config.Instance.EnabledInitialCash;
+
+            #region VanillaUnlimitedMoneyCheckBox
             VanillaUnlimitedMoney = CustomCheckBox.AddCheckBox(resourceOptions, Localize.VanillaUnlimitedMoney, Config.Instance.UnlimitedMoney, 680f, (_) => {
                 Config.Instance.UnlimitedMoney = _;
                 if (_) Config.Instance.CashAnarchy = CashAnarchy.isChecked = false;
             });
+            #endregion
+
+            #region CashAnarchyCheckBox
             CashAnarchy = CustomCheckBox.AddCheckBox(resourceOptions, Localize.CashAnarchy, Config.Instance.CashAnarchy, 680f, (_) => {
                 Config.Instance.CashAnarchy = _;
                 if (_) Config.Instance.UnlimitedMoney = VanillaUnlimitedMoney.isChecked = false;
-                AddCashAmount.isVisible = AddCashThreshold.isVisible = Config.Instance.CashAnarchy;
+                CashAmountPanel.isEnabled = CashThresholdPanel.isEnabled = Config.Instance.CashAnarchy;
             });
-            AddCashThreshold = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.AddCashThreshold, 10000f, 100000f, 5000f, Config.Instance.DefaultMinAmount, (_, value) => Config.Instance.DefaultMinAmount = (int)value);
-            AddCashThreshold.isVisible = Config.Instance.CashAnarchy;
-            AddCashAmount = CustomSlider.AddCustomSliderStyleA(resourceOptions, Localize.AddCashAmount, 500000f, 8000000f, 100000f, Config.Instance.DefaultGetCash, (_, value) => Config.Instance.DefaultGetCash = (int)value);
-            AddCashAmount.isVisible = Config.Instance.CashAnarchy;
+            #endregion
+
+            #region CashThresholdValueField
+            CashThresholdPanel = CustomField.AddOptionPanelValueField(resourceOptions, Localize.AddCashThreshold, Config.Instance.DefaultMinAmount, 100, 100000000, out _, out CustomIntValueField cashThresholdValueField, 100, 28);
+            CashThresholdPanel.padding = new RectOffset(25, 0, 0, 3);
+            cashThresholdValueField.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = v;
+            CashThresholdPanel.isEnabled = Config.Instance.CashAnarchy;
+            #endregion
+
+            #region CashAmountValueField
+            CashAmountPanel = CustomField.AddOptionPanelValueField(resourceOptions, Localize.AddCashAmount, Config.Instance.DefaultGetCash, 100, 100000000, out _, out CustomIntValueField cashAmountValueField, 100, 28);
+            CashAmountPanel.padding = new RectOffset(25, 0, 0, 3);
+            cashAmountValueField.OnValueChanged += (v) => Config.Instance.DefaultGetCash = v;
+            CashAmountPanel.isEnabled = Config.Instance.CashAnarchy;
+            #endregion
+
+            #region InitialCashCheckBox
+            CustomCheckBox.AddCheckBox(resourceOptions, Localize.InitialCash, Config.Instance.EnabledInitialCash, 680f, (_) => {
+                Config.Instance.EnabledInitialCash = _;
+                InitialCashAmount.isEnabled = Config.Instance.EnabledInitialCash;
+            });
+
+            InitialCashWarning = CustomLabel.AddLabel(resourceOptions, Localize.InitialCashWarning, 680, 0.8f, color: UIColor.Yellow);
+            InitialCashWarning.padding = new RectOffset(25, 0, 0, 3);
+
+            InitialCashAmount = CustomField.AddOptionPanelValueField(resourceOptions, null, Config.Instance.InitialCash, 100, 100000000, out _, out CustomLongValueField longValueField, 100, 28);
+            InitialCashAmount.padding = new RectOffset(25, 0, 0, 3);
+            longValueField.OnValueChanged += (v) => Config.Instance.InitialCash = v;
+            InitialCashAmount.isEnabled = Config.Instance.EnabledInitialCash;
+            #endregion
+
             CustomButton.AddGreenButton(cashOptionsTitle, Localize.ResetValue, 130, 28, new Vector2(594, 6), CashReset);
             void CashReset() {
-                AddCashThreshold.SliderValue = 50000;
-                AddCashAmount.SliderValue = 5000000;
+                cashThresholdValueField.Value = 50000;
+                cashAmountValueField.Value = 5000000;
                 oilDepletionRate.value = 100;
                 oreDepletionRate.value = 100;
             }
@@ -206,3 +218,6 @@ namespace GameAnarchy {
     }
 
 }
+
+# region VanillaUnlimitedMoneyCheckBox
+#endregion

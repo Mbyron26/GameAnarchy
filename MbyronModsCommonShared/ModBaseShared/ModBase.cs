@@ -21,7 +21,9 @@ namespace MbyronModsCommon {
         public abstract string ModName { get; }
         public abstract Version ModVersion { get; }
         public abstract ulong ModID { get; }
-        public string Name => ModName + " " + ModVersion;
+        public virtual ulong? BetaID { get; }
+        public bool IsBeta => BetaID.HasValue;
+        public string Name => IsBeta ? ModName + " Beta " + ModVersion : ModName + " " + ModVersion;
         public abstract string Description { get; }
 
         private string configFilePath;

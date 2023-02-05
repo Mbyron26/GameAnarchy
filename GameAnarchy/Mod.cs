@@ -10,8 +10,11 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 5);
+        public override Version ModVersion => new(0, 9, 6);
         public override ulong ModID => 2781804786;
+#if DEBUG
+        public override ulong? BetaID => 2917685008;
+#endif
         public override string Description => Localize.MOD_Description;
         private GameObject InfoViewsObject { get; set; }
         public override void SetModCulture(CultureInfo cultureInfo) {
@@ -80,6 +83,9 @@ namespace GameAnarchy {
 
         #region ModUpdateLogs
         public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
+            new ModUpdateInfo(new Version(0, 9, 6), @"2023/02/05", new List<string> {
+                "UpdateLog_V0_9_6UPT","UpdateLog_V0_9_6FIX","UpdateLog_V0_9_6OPT"
+            }),
             new ModUpdateInfo(new Version(0, 9, 5), @"2022/12/21", new List<string> {
                 "UpdateLog_V0_9_5UPT1","UpdateLog_V0_9_5UPT2","UpdateLog_V0_9_5ADD"
             }),
