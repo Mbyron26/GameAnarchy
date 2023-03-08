@@ -72,8 +72,6 @@ namespace GameAnarchy {
         public bool RemoveCampusBuildingFire { get; set; } = false;
         public bool RemoveAirportBuildingFire { get; set; } = false;
 
-
-
         public KeyBinding AddCash { get; set; } = new KeyBinding(KeyCode.M, true, true, false);
         public KeyBinding ShowControlPanelHotkey { get; set; } = new KeyBinding(KeyCode.G, true, true, false);
     }
