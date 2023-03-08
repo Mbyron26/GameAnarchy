@@ -89,7 +89,7 @@ namespace GameAnarchy {
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.PoliceDepartment, 100000);
         }
         private void RemoveFire() {
-            if (!Config.Instance.RemoveFire) return;
+            if (!Config.Instance.MaximizeFireCoverage) return;
             //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireHazard, -100000);
             //ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FireDepartment, 100000);
             ImmaterialResourceManager.instance.AddResource(ImmaterialResourceManager.Resource.FirewatchCoverage, 100000, Vector3.zero, 100000);

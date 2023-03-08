@@ -1,4 +1,12 @@
-﻿
+﻿V0.9.7
+[ADD]New control panel.
+[ADD]Place unique buildings without limit features now split and integrated into control panel.
+[ADD]Added fire spread control function.
+[ADD]Remove fire function now split into multiple options, can control fire of different building types.
+[FIX]Fixed abnormal UI component location.
+[UPT]Updated framework, performance improvement.
+[UPT]Updated Option Panel UI components.
+
 V0.9.6
 [UPT]Updated framework.
 [FIX]Fixed unavailable achievement panel in scene mode.

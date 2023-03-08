@@ -54,9 +54,6 @@ namespace GameAnarchy {
             if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockMetroTrack && Config.Instance.CustomUnlock)) {
                 milestonesManager.UnlockMilestone("Metro Track Requirements");
             }
-
-
-
             #endregion
 
             #region UnlockAll
@@ -250,39 +247,7 @@ namespace GameAnarchy {
                 });
                 }
 
-
-
-
-
-                UnlockBuildings(new List<string>
-                {
-                //Wonders
-                "Hadron Collider",
-                "Medical Center",
-                "Space Elevator",
-                "Eden Project",
-                "Fusion Power Plant",
-            });
-
-                UnlockBuildings(new List<string>
-                {
-                //European
-                "Arena",
-                "Shopping Center",
-                "Theatre",
-                "London Eye",
-                "Cinema",
-                "City Hall",
-                "Amsterdam Palace",
-                "Cathedral",
-                "Government Offices",
-                "Hypermarket",
-                "Department Store",
-                "Gherkin",
-            });
-
-                UnlockBuildings(new List<string>
-                {
+                UnlockBuildings(new List<string> {
                 //UB-I
                 "Statue of Industry",
                 "Statue of Wealth",
@@ -319,7 +284,38 @@ namespace GameAnarchy {
                 "Modern Art Museum",
                 "SeaAndSky Scraper",
                 "Theater of Wonders",
+                });
+
+
+
+                UnlockBuildings(new List<string>
+                {
+                //Wonders
+                "Hadron Collider",
+                "Medical Center",
+                "Space Elevator",
+                "Eden Project",
+                "Fusion Power Plant",
             });
+
+                UnlockBuildings(new List<string>
+                {
+                //European
+                "Arena",
+                "Shopping Center",
+                "Theatre",
+                "London Eye",
+                "Cinema",
+                "City Hall",
+                "Amsterdam Palace",
+                "Cathedral",
+                "Government Offices",
+                "Hypermarket",
+                "Department Store",
+                "Gherkin",
+            });
+
+
 
                 UnlockBuildings(new List<string> {
                 "Academic Library",
@@ -410,6 +406,34 @@ namespace GameAnarchy {
             }
             #endregion
 
+            #region Unlock Unique Building
+            if (Config.Instance.UnlockUniqueBuilding && Config.Instance.CustomUnlock) {
+                if (UnlockManager.instance.m_properties.m_ServiceMilestones[17] is not null) {
+                    UnlockManager.instance.m_properties.m_ServiceMilestones[17] = null;
+                    ModLogger.ModLog("Unlock unique building level 1 succeed.");
+                }
+                if (UnlockManager.instance.m_properties.m_FeatureMilestones[14] is not null) {
+                    UnlockManager.instance.m_properties.m_FeatureMilestones[14] = null;
+                    ModLogger.ModLog("Unlock unique building level 2 succeed.");
+                }
+                if (UnlockManager.instance.m_properties.m_FeatureMilestones[15] is not null) {
+                    UnlockManager.instance.m_properties.m_FeatureMilestones[15] = null;
+                    ModLogger.ModLog("Unlock unique building level 3 succeed.");
+                }
+                if (UnlockManager.instance.m_properties.m_FeatureMilestones[16] is not null) {
+                    UnlockManager.instance.m_properties.m_FeatureMilestones[16] = null;
+                    ModLogger.ModLog("Unlock unique building level 4 succeed.");
+                }
+                if (UnlockManager.instance.m_properties.m_FeatureMilestones[17] is not null) {
+                    UnlockManager.instance.m_properties.m_FeatureMilestones[17] = null;
+                    ModLogger.ModLog("Unlock unique building level 5 succeed.");
+                }
+                if (UnlockManager.instance.m_properties.m_FeatureMilestones[18] is not null) {
+                    UnlockManager.instance.m_properties.m_FeatureMilestones[18] = null;
+                    ModLogger.ModLog("Unlock unique building level 6 succeed.");
+                }
+            }
+            #endregion
         }
 
         private void UnlockBuildings(List<string> list, string postfix = "Requirements") {

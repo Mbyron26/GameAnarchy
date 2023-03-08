@@ -1,16 +1,18 @@
-﻿using CitiesHarmony.API;
+﻿global using MbyronModsCommon;
+using CitiesHarmony.API;
+using GameAnarchy.FireControl;
 using ICities;
-using MbyronModsCommon;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using GameAnarchy.Localization;
 
 namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 6);
+        public override Version ModVersion => new(0, 9, 7);
         public override ulong ModID => 2781804786;
 #if DEBUG
         public override ulong? BetaID => 2917685008;
@@ -64,6 +66,10 @@ namespace GameAnarchy {
             }
         }
 
+        public override void OnReleased() {
+            base.OnReleased();
+            ModLogger.ModLog($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
+        }
         public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);
 
         private List<IncompatibleModInfo> ConflictMods { get; set; } = new()  {
@@ -83,6 +89,10 @@ namespace GameAnarchy {
 
         #region ModUpdateLogs
         public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
+            new ModUpdateInfo(new Version(0, 9, 7), @"2023/03/08", new List<string> {
+                "UpdateLog_V0_9_7ADD1","UpdateLog_V0_9_7ADD2","UpdateLog_V0_9_7ADD3","UpdateLog_V0_9_7ADD4","UpdateLog_V0_9_7FIX",
+                "UpdateLog_V0_9_7UPT1","UpdateLog_V0_9_7UPT2"
+            }),
             new ModUpdateInfo(new Version(0, 9, 6), @"2023/02/05", new List<string> {
                 "UpdateLog_V0_9_6UPT","UpdateLog_V0_9_6FIX","UpdateLog_V0_9_6OPT"
             }),

@@ -5,50 +5,9 @@
 	<LangVersion>10.0</LangVersion>
 	<Product>Game Anarchy</Product>
 	<Copyright>Copyright © 2022 Mbyron26</Copyright>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<Authors>Mbyron26</Authors>
-	<Version>0.9.6</Version>
+	<Version>0.9.7</Version>
   </PropertyGroup>
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocaleShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-CN\CommonLocaleShared.zh-CN.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\KeyBindingShared\KeyBindingShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\MessageBoxShared\MessageBoxShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\ModBaseShared\ModBaseShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\ModUtilsShared\ModUtilsShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\OptionPanelShared\OptionPanelShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\UIShared\UIShared.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ja\CommonLocaleShared.ja.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.de\CommonLocaleShared.de.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pl\CommonLocaleShared.pl.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ru\CommonLocaleShared.ru.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.en\CommonLocaleShared.en.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.es-ES\CommonLocaleShared.es-ES.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.it\CommonLocaleShared.it.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.fr\CommonLocaleShared.fr.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.ko\CommonLocaleShared.ko.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.nl\CommonLocaleShared.nl.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.pt-BR\CommonLocaleShared.pt-BR.projitems" Label="Shared" />
-
-  <Import Project="..\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared.zh-TW\CommonLocaleShared.zh-TW.projitems" Label="Shared" />
 
   <ItemGroup>
     <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
@@ -74,11 +33,48 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5.1\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.Designer.cs">
-      <DependentUpon>CommonLocale.resx</DependentUpon>
-    </Compile>
-    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.Designer.cs">
-      <DependentUpon>CommonLocale.resx</DependentUpon>
+    <EmbeddedResource Update="Localization\Localize.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace></CustomToolNamespace>
+      <LastGenOutput>Localize.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\de\de.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\es-ES\es-ES.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\en\en.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\fr\fr.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\it\it.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\ja\ja.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\ko\ko.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\nl\nl.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\pl\pl.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\pt-BR\pt-BR.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\ru\ru.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\zh-CN\zh-CN.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\zh-TW\zh-TW.projitems" Label="Shared" />
+
+  <Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\tr\tr.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.7\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
+      <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
     </Compile>
     <Compile Update="Localization\Localize.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -88,19 +84,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.0\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
-      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5.1\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
-      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.5\GameAnarchy\MbyronModsCommonShared\LocalizationShared\CommonLocaleShared\CommonLocale.resx">
-      <LastGenOutput>CommonLocale.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Localize.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localize.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>GameAnarchy</CustomToolNamespace>
+    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.7\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
+      <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

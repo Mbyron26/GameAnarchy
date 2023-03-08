@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameAnarchy {
+namespace GameAnarchy.Localization {
     using System;
     
     
@@ -97,6 +97,15 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Building spread fire probability 的本地化字符串。
+        /// </summary>
+        public static string BuildingSpreadFireProbability {
+            get {
+                return ResourceManager.GetString("BuildingSpreadFireProbability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Cash anarchy mode, automatic/manual(hotkey) add cash 的本地化字符串。
         /// </summary>
         public static string CashAnarchy {
@@ -115,11 +124,11 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Commercial income multiplier factor 的本地化字符串。
+        ///   查找类似 Commercial 的本地化字符串。
         /// </summary>
-        public static string CommercialMultiplierFactor {
+        public static string Commercial {
             get {
-                return ResourceManager.GetString("CommercialMultiplierFactor", resourceCulture);
+                return ResourceManager.GetString("Commercial", resourceCulture);
             }
         }
         
@@ -169,7 +178,7 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Allow place unique buildings without limit 的本地化字符串。
+        ///   查找类似 Place unique buildings without limit 的本地化字符串。
         /// </summary>
         public static string EnabledUnlimitedUniqueBuildings {
             get {
@@ -187,20 +196,47 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Income Options 的本地化字符串。
+        ///   查找类似 Fire Control 的本地化字符串。
         /// </summary>
-        public static string IncomeOptions {
+        public static string FireControl {
             get {
-                return ResourceManager.GetString("IncomeOptions", resourceCulture);
+                return ResourceManager.GetString("FireControl", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Industrial income multiplier factor 的本地化字符串。
+        ///   查找类似 Ground pollution 的本地化字符串。
         /// </summary>
-        public static string IndustrialMultiplierFactor {
+        public static string GroundPollution {
             get {
-                return ResourceManager.GetString("IndustrialMultiplierFactor", resourceCulture);
+                return ResourceManager.GetString("GroundPollution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Income 的本地化字符串。
+        /// </summary>
+        public static string Income {
+            get {
+                return ResourceManager.GetString("Income", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Income multiplier 的本地化字符串。
+        /// </summary>
+        public static string IncomeMultiplier {
+            get {
+                return ResourceManager.GetString("IncomeMultiplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Industrial 的本地化字符串。
+        /// </summary>
+        public static string Industrial {
+            get {
+                return ResourceManager.GetString("Industrial", resourceCulture);
             }
         }
         
@@ -241,6 +277,15 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Main campus building 的本地化字符串。
+        /// </summary>
+        public static string MainCampusBuilding {
+            get {
+                return ResourceManager.GetString("MainCampusBuilding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Maximize attractiveness, will atract more tourists 的本地化字符串。
         /// </summary>
         public static string MaximizeAttractiveness {
@@ -264,6 +309,15 @@ namespace GameAnarchy {
         public static string MaximizeEntertainment {
             get {
                 return ResourceManager.GetString("MaximizeEntertainment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Maximize fire coverage 的本地化字符串。
+        /// </summary>
+        public static string MaximizeFireCoverage {
+            get {
+                return ResourceManager.GetString("MaximizeFireCoverage", resourceCulture);
             }
         }
         
@@ -421,11 +475,38 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Office income multiplier factor 的本地化字符串。
+        ///   查找类似 Monument 的本地化字符串。
         /// </summary>
-        public static string OfficeMultiplierFactor {
+        public static string Monument {
             get {
-                return ResourceManager.GetString("OfficeMultiplierFactor", resourceCulture);
+                return ResourceManager.GetString("Monument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Noise pollution 的本地化字符串。
+        /// </summary>
+        public static string NoisePollution {
+            get {
+                return ResourceManager.GetString("NoisePollution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Non-spread of fire 的本地化字符串。
+        /// </summary>
+        public static string NoSpreadFire {
+            get {
+                return ResourceManager.GetString("NoSpreadFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Office 的本地化字符串。
+        /// </summary>
+        public static string Office {
+            get {
+                return ResourceManager.GetString("Office", resourceCulture);
             }
         }
         
@@ -475,11 +556,47 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Player building 的本地化字符串。
+        /// </summary>
+        public static string PlayerBuilding {
+            get {
+                return ResourceManager.GetString("PlayerBuilding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Bulldozing building full refund 的本地化字符串。
         /// </summary>
         public static string Refund {
             get {
                 return ResourceManager.GetString("Refund", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove airport building fire 的本地化字符串。
+        /// </summary>
+        public static string RemoveAirportBuildingFire {
+            get {
+                return ResourceManager.GetString("RemoveAirportBuildingFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove campus building fire 的本地化字符串。
+        /// </summary>
+        public static string RemoveCampusBuildingFire {
+            get {
+                return ResourceManager.GetString("RemoveCampusBuildingFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove commercial building fire 的本地化字符串。
+        /// </summary>
+        public static string RemoveCommercialBuildingFire {
+            get {
+                return ResourceManager.GetString("RemoveCommercialBuildingFire", resourceCulture);
             }
         }
         
@@ -502,15 +619,6 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Remove fire hazards and maximize fire coverage 的本地化字符串。
-        /// </summary>
-        public static string RemoveFire {
-            get {
-                return ResourceManager.GetString("RemoveFire", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Remove garbage 的本地化字符串。
         /// </summary>
         public static string RemoveGarbage {
@@ -520,47 +628,74 @@ namespace GameAnarchy {
         }
         
         /// <summary>
-        ///   查找类似 Remove the source of ground pollution 的本地化字符串。
+        ///   查找类似 Remove industrial building fire 的本地化字符串。
         /// </summary>
-        public static string RemoveGroundPollution {
+        public static string RemoveIndustrialBuildingFire {
             get {
-                return ResourceManager.GetString("RemoveGroundPollution", resourceCulture);
+                return ResourceManager.GetString("RemoveIndustrialBuildingFire", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Remove the source of noise pollution 的本地化字符串。
+        ///   查找类似 Remove museum fire 的本地化字符串。
         /// </summary>
-        public static string RemoveNoisePollution {
+        public static string RemoveMuseumFire {
             get {
-                return ResourceManager.GetString("RemoveNoisePollution", resourceCulture);
+                return ResourceManager.GetString("RemoveMuseumFire", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Remove the source of water pollution 的本地化字符串。
+        ///   查找类似 Remove office building fire 的本地化字符串。
         /// </summary>
-        public static string RemoveWaterPollution {
+        public static string RemoveOfficeBuildingFire {
             get {
-                return ResourceManager.GetString("RemoveWaterPollution", resourceCulture);
+                return ResourceManager.GetString("RemoveOfficeBuildingFire", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Reset value 的本地化字符串。
+        ///   查找类似 Remove park building fire 的本地化字符串。
         /// </summary>
-        public static string ResetValue {
+        public static string RemoveParkBuildingFire {
             get {
-                return ResourceManager.GetString("ResetValue", resourceCulture);
+                return ResourceManager.GetString("RemoveParkBuildingFire", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Residential income multiplier factor 的本地化字符串。
+        ///   查找类似 Remove player building fire 的本地化字符串。
         /// </summary>
-        public static string ResidentialMultiplierFactor {
+        public static string RemovePlayerBuildingFire {
             get {
-                return ResourceManager.GetString("ResidentialMultiplierFactor", resourceCulture);
+                return ResourceManager.GetString("RemovePlayerBuildingFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove pollution 的本地化字符串。
+        /// </summary>
+        public static string RemovePollution {
+            get {
+                return ResourceManager.GetString("RemovePollution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove residential building fire 的本地化字符串。
+        /// </summary>
+        public static string RemoveResidentialBuildingFire {
+            get {
+                return ResourceManager.GetString("RemoveResidentialBuildingFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Residential 的本地化字符串。
+        /// </summary>
+        public static string Residential {
+            get {
+                return ResourceManager.GetString("Residential", resourceCulture);
             }
         }
         
@@ -574,11 +709,65 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 Service 的本地化字符串。
+        /// </summary>
+        public static string Service {
+            get {
+                return ResourceManager.GetString("Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Sort mods names in options panel 的本地化字符串。
         /// </summary>
         public static string SortSettings {
             get {
                 return ResourceManager.GetString("SortSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Space radar 的本地化字符串。
+        /// </summary>
+        public static string SpaceRadar {
+            get {
+                return ResourceManager.GetString("SpaceRadar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Stock exchange 的本地化字符串。
+        /// </summary>
+        public static string StockExchange {
+            get {
+                return ResourceManager.GetString("StockExchange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Tree spread fire probability 的本地化字符串。
+        /// </summary>
+        public static string TreeSpreadFireProbability {
+            get {
+                return ResourceManager.GetString("TreeSpreadFireProbability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unique factory 的本地化字符串。
+        /// </summary>
+        public static string UniqueFactory {
+            get {
+                return ResourceManager.GetString("UniqueFactory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unique faculty 的本地化字符串。
+        /// </summary>
+        public static string UniqueFaculty {
+            get {
+                return ResourceManager.GetString("UniqueFaculty", resourceCulture);
             }
         }
         
@@ -597,6 +786,15 @@ namespace GameAnarchy {
         public static string UnlockAll {
             get {
                 return ResourceManager.GetString("UnlockAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 This option is the same as vanilla &quot;Unlock All&quot; features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! &quot;Unlock All&quot; option. 的本地化字符串。
+        /// </summary>
+        public static string UnlockAllMinor {
+            get {
+                return ResourceManager.GetString("UnlockAllMinor", resourceCulture);
             }
         }
         
@@ -651,6 +849,24 @@ namespace GameAnarchy {
         public static string UnlockTransport {
             get {
                 return ResourceManager.GetString("UnlockTransport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock unique Building 的本地化字符串。
+        /// </summary>
+        public static string UnlockUniqueBuilding {
+            get {
+                return ResourceManager.GetString("UnlockUniqueBuilding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all. 的本地化字符串。
+        /// </summary>
+        public static string UnlockUniqueBuildingMinor {
+            get {
+                return ResourceManager.GetString("UnlockUniqueBuildingMinor", resourceCulture);
             }
         }
         
@@ -898,6 +1114,69 @@ namespace GameAnarchy {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]New control panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7ADD1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7ADD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Place unique buildings without limit features now split and integrated into control panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7ADD2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7ADD2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Added fire spread control function. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7ADD3 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7ADD3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Remove fire function now split into multiple options, can control fire of different building types. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7ADD4 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7ADD4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [FIX]Fixed abnormal UI component location. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7FIX {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7FIX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Updated framework, performance improvement. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7UPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7UPT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Updated Option Panel UI components. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7UPT2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7UPT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {
@@ -912,6 +1191,24 @@ namespace GameAnarchy {
         public static string VanillaUnlimitedMoney {
             get {
                 return ResourceManager.GetString("VanillaUnlimitedMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Water pollution 的本地化字符串。
+        /// </summary>
+        public static string WaterPollution {
+            get {
+                return ResourceManager.GetString("WaterPollution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Weather radar 的本地化字符串。
+        /// </summary>
+        public static string WeatherRadar {
+            get {
+                return ResourceManager.GetString("WeatherRadar", resourceCulture);
             }
         }
     }

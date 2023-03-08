@@ -3,7 +3,6 @@ using ColossalFramework;
 using ICities;
 using System.Collections.Generic;
 using ColossalFramework.Globalization;
-using MbyronModsCommon;
 
 namespace GameAnarchy {
     public class CompatibilityExtension {
