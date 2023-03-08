@@ -87,36 +87,12 @@ namespace GameAnarchy {
             new IncompatibleModInfo(447789816, @"Unlock All Roads", true),
         };
 
-        #region ModUpdateLogs
-        public override List<ModUpdateInfo> ModUpdateLogs { get; set; } = new List<ModUpdateInfo>() {
+        public override List<ModUpdateInfo> ChangeLog => new() {
             new ModUpdateInfo(new Version(0, 9, 7), @"2023/03/08", new List<string> {
-                "UpdateLog_V0_9_7ADD1","UpdateLog_V0_9_7ADD2","UpdateLog_V0_9_7ADD3","UpdateLog_V0_9_7ADD4","UpdateLog_V0_9_7FIX",
-                "UpdateLog_V0_9_7UPT1","UpdateLog_V0_9_7UPT2"
-            }),
-            new ModUpdateInfo(new Version(0, 9, 6), @"2023/02/05", new List<string> {
-                "UpdateLog_V0_9_6UPT","UpdateLog_V0_9_6FIX","UpdateLog_V0_9_6OPT"
-            }),
-            new ModUpdateInfo(new Version(0, 9, 5), @"2022/12/21", new List<string> {
-                "UpdateLog_V0_9_5UPT1","UpdateLog_V0_9_5UPT2","UpdateLog_V0_9_5ADD"
-            }),
-            new ModUpdateInfo(new Version(0, 9, 4), @"2022/12/13", new List<string> {
-                "UpdateLog_V0_9_4UPT","UpdateLog_V0_9_4ADD"
-            }),
-            new ModUpdateInfo(new Version(0, 9, 3), @"2022/12/08", new List<string> {
-                "UpdateLog_V0_9_3FIX","UpdateLog_V0_9_3ADJ","UpdateLog_V0_9_3OPT","UpdateLog_V0_9_3ADD",
-            }),
-            new ModUpdateInfo(new Version(0, 9, 2), @"2022/12/04", new List<string> {
-                "UpdateLog_V0_9_2OPT1","UpdateLog_V0_9_2OPT2","UpdateLog_V0_9_2ADD","UpdateLog_V0_9_2ADJ",
-            }),
-            new ModUpdateInfo(new Version(0, 9, 1), @"2022/11/19", new List<string> {
-                "UpdateLog_V0_9_1_ADJ1","UpdateLog_V0_9_1_OPT1", "UpdateLog_V0_9_1_ADD1",
-            }),
-            new ModUpdateInfo(new Version(0, 9, 0), @"2022/11/10", new List<string> {
-                "UpdateLog_V0_9_0_ADD1", "UpdateLog_V0_9_0_ADD2",  "UpdateLog_V0_9_0_ADD3", "UpdateLog_V0_9_0_ADD4",
-                "UpdateLog_V0_9_0_UPT1", "UpdateLog_V0_9_0_UPT2","UpdateLog_V0_9_0_UPT3",
-                "UpdateLog_V0_9_0_FIX1",
+                Localize.UpdateLog_V0_9_7ADD1,Localize.UpdateLog_V0_9_7ADD2,Localize.UpdateLog_V0_9_7ADD3,Localize.UpdateLog_V0_9_7ADD4,
+                Localize.UpdateLog_V0_9_7FIX,Localize.UpdateLog_V0_9_7UPT1,Localize.UpdateLog_V0_9_7UPT2
             })
         };
-        #endregion
+
     }
 }

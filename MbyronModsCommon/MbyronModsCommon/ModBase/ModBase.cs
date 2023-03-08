@@ -89,22 +89,7 @@ namespace MbyronModsCommon {
         public void LoadConfig() => XMLUtils.LoadData<Config>(ConfigFilePath);
         public void SaveConfig() => XMLUtils.SaveData<Config>(ConfigFilePath);
 
-        public abstract List<ModUpdateInfo> ModUpdateLogs { get; set; }
-        public List<ModUpdateInfo> GetUpdateLogs() {
-            if (ModUpdateLogs is null || ModUpdateLogs.Count == 0) {
-                return new();
-            }
-            List<ModUpdateInfo> list = new();
-            for (int i = 0; i < ModUpdateLogs.Count; i++) {
-                var info = ModUpdateLogs[i];
-                List<string> log = new();
-                for (int j = 0; j < info.Log.Count; j++) {
-                    log.Add(GetLocale(info.Log[j]));
-                }
-                list.Add(new ModUpdateInfo(info.ModVersion, info.Date, log));
-            }
-            return list;
-        }
+        public abstract List<ModUpdateInfo> ChangeLog { get; }
 
         public virtual void OnEnabled() {
             if (UIView.GetAView() is not null) {
@@ -180,11 +165,12 @@ namespace MbyronModsCommon {
     public interface IMod : IUserMod, ILoadingExtension {
         string SolidModName { get; }
         string ModName { get; }
+        List<ModUpdateInfo> ChangeLog { get; }
         Version ModVersion { get; }
         ulong ModID { get; }
         CultureInfo ModCulture { get; set; }
         void SaveConfig();
         void LoadConfig();
-        List<ModUpdateInfo> GetUpdateLogs();
+
     }
 }

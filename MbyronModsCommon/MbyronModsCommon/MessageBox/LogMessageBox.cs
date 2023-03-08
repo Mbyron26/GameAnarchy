@@ -11,12 +11,12 @@ namespace MbyronModsCommon {
         public void Initialize<Mod>(bool maximizeFirst = true) where Mod : IMod {
             TitleText = $"{ModMainInfo<Mod>.ModName} {CommonLocalize.ChangeLog}";
             MainPanel.autoLayoutPadding = new RectOffset(10, 10, 10, 0);
-            if (SingletonMod<Mod>.Instance.GetUpdateLogs().Count == 0) {
+            if (SingletonMod<Mod>.Instance.ChangeLog.Count == 0) {
                 CustomPanel.AddSpace(MainPanel, buttonWidth, 30);
                 return;
             }
             var first = default(VersionPanel);
-            foreach (var list in SingletonMod<Mod>.Instance.GetUpdateLogs()) {
+            foreach (var list in SingletonMod<Mod>.Instance.ChangeLog) {
                 var versionPaenl = MainPanel.AddUIComponent<VersionPanel>();
                 versionPaenl.InitValue(list.ModVersion.ToString(), list.Date, list.Log);
                 if (first == null) first = versionPaenl;
