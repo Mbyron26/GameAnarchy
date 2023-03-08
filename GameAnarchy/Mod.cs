@@ -87,8 +87,8 @@ namespace GameAnarchy {
             new IncompatibleModInfo(447789816, @"Unlock All Roads", true),
         };
 
-        public override List<ModUpdateInfo> ChangeLog => new() {
-            new ModUpdateInfo(new Version(0, 9, 7), @"2023/03/08", new List<string> {
+        public override List<ModChangeLog> ChangeLog => new() {
+            new ModChangeLog(new Version(0, 9, 7), new(2023,3,8), new List<string> {
                 Localize.UpdateLog_V0_9_7ADD1,Localize.UpdateLog_V0_9_7ADD2,Localize.UpdateLog_V0_9_7ADD3,Localize.UpdateLog_V0_9_7ADD4,
                 Localize.UpdateLog_V0_9_7FIX,Localize.UpdateLog_V0_9_7UPT1,Localize.UpdateLog_V0_9_7UPT2
             })

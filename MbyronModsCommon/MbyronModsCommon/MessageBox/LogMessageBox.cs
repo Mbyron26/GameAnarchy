@@ -18,7 +18,7 @@ namespace MbyronModsCommon {
             var first = default(VersionPanel);
             foreach (var list in SingletonMod<Mod>.Instance.ChangeLog) {
                 var versionPaenl = MainPanel.AddUIComponent<VersionPanel>();
-                versionPaenl.InitValue(list.ModVersion.ToString(), list.Date, list.Log);
+                versionPaenl.InitValue(list.ModVersion.ToString(), list.Date.ToString("yyyy/MM/dd"), list.Log);
                 if (first == null) first = versionPaenl;
             }
             if (maximizeFirst)

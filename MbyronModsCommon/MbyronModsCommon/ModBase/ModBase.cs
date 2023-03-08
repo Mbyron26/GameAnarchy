@@ -89,7 +89,7 @@ namespace MbyronModsCommon {
         public void LoadConfig() => XMLUtils.LoadData<Config>(ConfigFilePath);
         public void SaveConfig() => XMLUtils.SaveData<Config>(ConfigFilePath);
 
-        public abstract List<ModUpdateInfo> ChangeLog { get; }
+        public abstract List<ModChangeLog> ChangeLog { get; }
 
         public virtual void OnEnabled() {
             if (UIView.GetAView() is not null) {
@@ -139,22 +139,15 @@ namespace MbyronModsCommon {
 
     }
 
-    public struct ModUpdateInfo {
+    public struct ModChangeLog {
         public Version ModVersion;
-        public string Date;
-        public bool IsBeta;
+        public DateTime Date;
         public List<string> Log;
-        public ModUpdateInfo(Version version, string date, List<string> log) {
+        public ModChangeLog(Version version, DateTime date, List<string> log) {
             ModVersion = version;
             Date = date;
             Log = log;
-            IsBeta = false;
-        }
-        public ModUpdateInfo(Version version, string date, List<string> log, bool isBeta = true) {
-            ModVersion = version;
-            Date = date;
-            Log = log;
-            IsBeta = isBeta;
+
         }
     }
 
@@ -165,7 +158,7 @@ namespace MbyronModsCommon {
     public interface IMod : IUserMod, ILoadingExtension {
         string SolidModName { get; }
         string ModName { get; }
-        List<ModUpdateInfo> ChangeLog { get; }
+        List<ModChangeLog> ChangeLog { get; }
         Version ModVersion { get; }
         ulong ModID { get; }
         CultureInfo ModCulture { get; set; }
