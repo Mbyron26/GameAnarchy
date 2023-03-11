@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>更新日志</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>模组更新日志</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>检查</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>该模组不兼容。</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>模组兼容性检查</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>这个功能只检查本模组相关的兼容性问题。建议使用 [Compatibility Report] 模组来检查所有模组的兼容性。</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>已具有相同功能。</value>
@@ -175,7 +190,7 @@
     <value>俄语</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>土耳其语</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>简体中文</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>检测到不兼容的模组，为了确保此模组正常工作，您需要取消订阅以下模组：</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>否</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>高级</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>内部功能</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>变更日志</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>兼容性检测</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>高级功能，仅用于调试输出日志时使用。如果模组出错建议启用该选项，并在复现遇到的问题之后，把您的日志发送给模组开发者。</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>调试模式</value>
@@ -238,12 +256,21 @@
     <value>已启用</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>模组信息</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>版本</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>使用滚轮改变参数，按住 Shift 键 ×10，按住 Ctrl 键 ×0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>显示控制面板</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>警告！模组无法正常读取旧配置数据，现已加载默认配置，在开始游戏前，请前往模组选项面板配置设置。</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
   </data>
 </root>

@@ -1,5 +1,4 @@
 ﻿using ColossalFramework.UI;
-using MbyronModsCommon;
 using UnityEngine;
 
 namespace GameAnarchy.UI {
@@ -38,6 +37,9 @@ namespace GameAnarchy.UI {
                 Panel = PanelGameObject.AddComponent<ControlPanel>();
                 Panel.Show();
                 IsVisible = true;
+                if (UUI.UUIButton is not null) {
+                    UUI.UUIButton.IsPressed = true;
+                }
             }
         }
         public static void Close() {
@@ -48,6 +50,9 @@ namespace GameAnarchy.UI {
                 PanelGameObject = null;
                 IsVisible = false;
                 SingletonMod<Mod>.Instance.SaveConfig();
+                if (UUI.UUIButton is not null) {
+                    UUI.UUIButton.IsPressed = false;
+                }
             }
         }
     }

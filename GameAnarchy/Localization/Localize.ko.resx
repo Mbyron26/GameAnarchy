@@ -129,14 +129,17 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>현금 Anarchy 기능이 활성화되어 있는지 확인하십시오.</value>
   </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>Building spread fire probability</value>
+  </data>
   <data name="CashAnarchy" xml:space="preserve">
     <value>현금 anarchy 모드, 자동/수동(단축키) 현금 추가</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>서비스 옵션</value>
   </data>
-  <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>상업의 소득 요인</value>
+  <data name="Commercial" xml:space="preserve">
+    <value>Commercial</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>사용자 정의 잠금 해제</value>
@@ -154,16 +157,25 @@
     <value>게임 소개 인터페이스 건너뛰기</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>제한 없이 고유한 건물 배치 허용</value>
+    <value>Place unique buildings without limit</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>빠른 게임 종료</value>
   </data>
-  <data name="IncomeOptions" xml:space="preserve">
-    <value>소득 옵션</value>
+  <data name="FireControl" xml:space="preserve">
+    <value>Fire Control</value>
   </data>
-  <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>산업의 소득 요인</value>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>Ground pollution</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>Income multiplier</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>Industrial</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
     <value>게임 초기 현금</value>
@@ -177,6 +189,9 @@
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
     <value>Buildtin mod, Game Anarchy에는 이미 동일한 기능이 포함되어 있습니다.초과인출로 인해 도시가 파산할 경우를 대비하여 이 모드를 비활성화하고 GA의 설정 패널에서 초기 금액을 설정하십시오.(게임 충돌 방지).</value>
   </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>Main campus building</value>
+  </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>매력 극대화, 더 많은 관광객 유치</value>
   </data>
@@ -185,6 +200,9 @@
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
     <value>엔터테인먼트 를 극대화하여 시민의 행복을 높일 것입니다.</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>Maximize fire coverage</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>도시의 땅값을 극대화</value>
@@ -237,8 +255,17 @@
   <data name="MOD_Description" xml:space="preserve">
     <value>게임의 기능을 확장하고 최적화 합니다</value>
   </data>
-  <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>사무실 소득 요인</value>
+  <data name="Monument" xml:space="preserve">
+    <value>Monument</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>Noise pollution</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>Non-spread of fire</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Office</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
     <value>석유 고갈률</value>
@@ -255,8 +282,20 @@
   <data name="OreDepletionRate" xml:space="preserve">
     <value>광석 고갈률</value>
   </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>Player building</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>부서진 건물 전액 환불</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>Remove airport building fire</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>Remove campus building fire</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>Remove commercial building fire</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>모든 건물에서 범죄자를 제거하고 경찰 서비스 범위를 최대화합니다.</value>
@@ -264,38 +303,65 @@
   <data name="RemoveDeath" xml:space="preserve">
     <value>죽은 시민을 제거하여 장례 서비스의 유효 범위를 최대화합니다.</value>
   </data>
-  <data name="RemoveFire" xml:space="preserve">
-    <value>화재 위험을 없애고 소방 서비스를 극대화합니다.</value>
-  </data>
   <data name="RemoveGarbage" xml:space="preserve">
     <value>쓰레기 제거</value>
   </data>
-  <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>토양오염원 제거</value>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>Remove industrial building fire</value>
   </data>
-  <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>소음 오염원 제거</value>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>Remove museum fire</value>
   </data>
-  <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>수질 오염원 제거</value>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>Remove office building fire</value>
   </data>
-  <data name="ResetValue" xml:space="preserve">
-    <value>값 재설정</value>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>Remove park building fire</value>
   </data>
-  <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>주거 소득 요인</value>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>Remove player building fire</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>Remove pollution</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>Remove residential building fire</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>Residential</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>자원 옵션</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>옵션 패널에서 모드 이름 정렬</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>Space radar</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>Stock exchange</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>Tree spread fire probability</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>Unique factory</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>Unique faculty</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>무제한, 제한 없음</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>모두 잠금 해제</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>모든 도로 잠금 해제</value>
@@ -315,91 +381,46 @@
   <data name="UnlockTransport" xml:space="preserve">
     <value>모든 운송 수단 잠금 해제</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD] 초기 현금 기능을 추가합니다.</value>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>Unlock unique Building</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]옵션 패널 카테고리 바 오프셋 조정 기능을 추가합니다.</value>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]무제한 돈 기능을 추가하고 다이나믹하게 전환할 수 있습니다.</value>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]사용 가능한 기능을 추가합니다.</value>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]업적 버튼이 이제 제대로 작동합니다.</value>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]Added fire spread control function.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]더 나은 확장을 지원하기 위해 옵션 패널이 다시 작성되었습니다.</value>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]호환성 검사 기능이 업데이트되었습니다.</value>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]Added Turkish localization.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]다국어 지원 체제 가 업데이트되었습니다.</value>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]Fixed abnormal UI component location.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]사용자 지정 잠금 해제 기능 추가, 사용자 지정 도시 발전 단계(마일스톤) 수준, 모든 도로, 정책 패널, 교통이 포함됩니다.</value>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]Updated framework, performance improvement.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]석유/광석 기능 조정, 이제 고갈률을 조정할 수 있습니다. 이 버전 업데이트는 이 기능을 재설정합니다. 옵션 패널로 이동하여 석유/광석 고갈률을 재설정하십시오</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]언어 전환 속도 및 언어 목록 형식을 최적화합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]스페인어, 이탈리아어 현지화 지원을 추가합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]무제한 광석/오일 슬라이더 스타일을 조정하고 이제 더 적절한 힌트를 얻으십시오.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]호환성 탐지 방법을 최적화하고 Loading Order Tool과의 호환성을 향상시킵니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]편집기 모드에서 null 참조를 방지하기 위해 수행 기능 토글링 로직을 최적화합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]프랑스어 현지화 지원을 추가합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]초기 현금 조정 가능 범위를 조정합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]이제 화재 제거 기능이 제대로 작동합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]옵션 패널 열기 속도를 개선하기 위해 잠재적인 텍스처 로딩 속도 저하 문제를 최적화합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]이제 캠퍼스 건물과 증권 거래소의 무제한 배치를 지원합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]게임 버전 1.16에 대한 지원</value>
-  </data>
-  <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]브라질 현지화 지원을 추가합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Harmony Nuget 패키지를 업데이트합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]UI 업데이트.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
-    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
-    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
-    <value>[UPT]Updated framework.</value>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]Updated Option Panel UI components.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>바닐라 무제한 돈 모드, 동적 토글링 허용</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>Water pollution</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>Weather radar</value>
   </data>
 </root>

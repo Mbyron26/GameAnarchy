@@ -1,8 +1,9 @@
 ﻿V0.9.7
-[ADD]New control panel.
+[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.
 [ADD]Place unique buildings without limit features now split and integrated into control panel.
 [ADD]Added fire spread control function.
 [ADD]Remove fire function now split into multiple options, can control fire of different building types.
+[ADD]Added Turkish localization.
 [FIX]Fixed abnormal UI component location.
 [UPT]Updated framework, performance improvement.
 [UPT]Updated Option Panel UI components.

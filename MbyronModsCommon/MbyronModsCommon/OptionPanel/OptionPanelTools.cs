@@ -17,11 +17,19 @@ namespace MbyronModsCommon {
         public CustomListBox AddGroup(UIComponent parent, float width, string caption) {
             Group = parent.AddUIComponent<CustomListBox>();
             Group.width = width;
-            Group.Init(width, caption, new(10, 0, 0, 0), 1.125f, White, new(0, 0, 0, 2), SetMajorSprite, null);
+            Group.Init(width, caption, new(10, 0, 0, 0), 1.125f, White, new(0, 0, 0, 4), SetMajorSprite, null);
             return Group;
         }
 
         private UIPanel AddChildPanel() => Group.AddChildPanel(SetMinorSprite);
+
+        public UILabel AddMinorLabel(string text) {
+            if (Group is null) {
+                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                return null;
+            }
+            return Group.AddMinorLabel(text, new(10, 0, 0, 0), 0.8f, new Color32(200, 200, 200, 255));
+        }
 
         public UIPanel AddKeymapping(string text, KeyBinding keyBinding, string tooltip = null) {
             if (Group is null) {
@@ -91,6 +99,31 @@ namespace MbyronModsCommon {
             Group.UITool.RefreshLayout();
             Group.UITool = null;
             return panel;
+        }
+
+        public void AddSliderGamma(string majorText, string minorText, float min, float max, float step, float defaultVal, Vector2 sliderSize, PropertyChangedEventHandler<float> callback, out UILabel majorLabel, out UILabel minorLabel, out UISlider slider, RectOffset majorOffset = null, RectOffset minorOffset = null) {
+            if (Group is null) {
+                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                majorLabel = null;
+                minorLabel = null;
+                slider = null;
+                return;
+            }
+            var panel = AddChildPanel();
+            slider = CustomSlider.AddSliderGamma(panel, sliderSize, min, max, step, defaultVal, callback);
+            if (majorText is not null) {
+                majorLabel = CustomLabel.AddLabel(panel, majorText, 10, majorOffset, 1f, White);
+            } else {
+                majorLabel = null;
+            }
+            if (minorText is not null) {
+                minorLabel = CustomLabel.AddLabel(panel, minorText, 10, minorOffset, 0.8f, new Color32(200, 200, 200, 255));
+            } else {
+                minorLabel = null;
+            }
+            Group.UITool = new UIStyleGamma(panel) { Child = slider, MajorLabel = majorLabel, MinorLabel = minorLabel, Padding = new(10, 10, 10, 10), Gap = 4 };
+            Group.UITool.RefreshLayout();
+            Group.UITool = null;
         }
 
         public void AddSliderAlpha(string majorText, string minorText, string sliderText, float min, float max, float step, float defaultVal, CustomSliderBase.Size sliderSize, PropertyChangedEventHandler<float> callback, out UILabel majorLabel, out UILabel minorLabel, out CustomSliderBase slider, RectOffset majorOffset = null, RectOffset minorOffset = null) {

@@ -871,7 +871,7 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 [ADD]New control panel. 的本地化字符串。
+        ///   查找类似 [ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_7ADD1 {
             get {
@@ -903,6 +903,15 @@ namespace GameAnarchy.Localization {
         public static string UpdateLog_V0_9_7ADD4 {
             get {
                 return ResourceManager.GetString("UpdateLog_V0_9_7ADD4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [ADD]Added Turkish localization. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_7ADD5 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_7ADD5", resourceCulture);
             }
         }
         

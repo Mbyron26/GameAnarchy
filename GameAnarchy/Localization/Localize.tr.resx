@@ -118,142 +118,142 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>Dodaj gotówkę</value>
+    <value>Nakit ekle</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>Dodaj kwotę gotówki</value>
+    <value>Nakit tutarı ekle</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>Dodaj próg gotówkowy</value>
+    <value>Nakit eşiği ekle</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>Upewnij się, że funkcja jest dostępna.</value>
+    <value>Nakit Anarchy özelliğinin etkinleştirildiğinden emin olun.</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
-    <value>Building spread fire probability</value>
+    <value>Bina yayılma yangın olasılığı</value>
   </data>
   <data name="CashAnarchy" xml:space="preserve">
-    <value>Tryb dodawania pieniędzy, automatyczny(skrót) dodaj pieniądze</value>
+    <value>Nakit anarchy modu, otomatik/manuel nakit para ekleme (kısayol tuşu)</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>Opcje Obsługi Miasta</value>
+    <value>Şehir Hizmet Seçenekleri</value>
   </data>
   <data name="Commercial" xml:space="preserve">
-    <value>Commercial</value>
+    <value>Ticari</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Niestandardowe ustawienie</value>
+    <value>Özel kilit aç</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>Te opcje nie są dostępne, gdy funkcja Odblokuj Wszystko jest włączona, ponieważ Odblokuj Wszystko odblokowuje powyższe funkcje.</value>
+    <value>“Tümünün Kilidini Aç” özelliği etkinleştirildiğinde bu seçenekler kullanılamaz, çünkü Tümünün Kilidini Aç aşağıdaki seçeneklerin tümünün kilidini açmıştır.</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>Osiągnięcia są zawsze dostępne</value>
+    <value>Başarılar sistemi her zaman kullanılabilir</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>Widok informacyjny jest zawsze dostępny</value>
+    <value>Bilgi görünümü her zaman kullanılabilir</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>Pomiń intro gry</value>
+    <value>Oyun Giriş arayüzünü atla</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Place unique buildings without limit</value>
+    <value>Sınırsız benzersiz binalar yerleştirmeye izin ver</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>Szybki Powrót</value>
+    <value>Hızlı İade</value>
   </data>
   <data name="FireControl" xml:space="preserve">
-    <value>Fire Control</value>
+    <value>Yangın kontrolü</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
-    <value>Ground pollution</value>
+    <value>Zemin kirliliği</value>
   </data>
   <data name="Income" xml:space="preserve">
-    <value>Income</value>
+    <value>Gelir</value>
   </data>
   <data name="IncomeMultiplier" xml:space="preserve">
-    <value>Income multiplier</value>
+    <value>Gelir çarpanı</value>
   </data>
   <data name="Industrial" xml:space="preserve">
-    <value>Industrial</value>
+    <value>Sanayi</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
-    <value>Domyślna suma gotówki</value>
+    <value>Başlangıçtaki nakit para</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Ustaw wartość przed rozpoczęciem gry. Jeśli nie chcesz, aby pieniądze miały taką wartość za każdym razem, gdy wczytujesz zapis, wyłącz tę funkcję. Wartość gotówki zmieni się po rozpoczęciu symulacji.</value>
+    <value>Oyuna başlamadan önce değeri ayarlayın. Kaydet'i her yüklediğinizde paranın bu değer olmasını istemiyorsanız, bu özelliği bir kez etkinleştirdikten sonra devre dışı bırakın. Oyun simülasyonu başladıktan sonra nakit değişecektir.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>Wbudowany mod. Game Anarchy posiada już tę funkcję. Wyłącz podobnego moda, by korzystać z funkcji Game Anarchy.</value>
+    <value>Buildtin modu, Game Anarchy zaten aynı işlevselliği içeriyor. Game Anarchy işlevlerini kullanmak istiyorsanız lütfen bu yerel modu devre dışı bırakın.</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Wbudowany mod. Game Anarchy posiada już tę funkcję. Wyłącz podobnego moda, by włączyć tę funkcję w ustawieniach Game Anarchy, w razie, jeśli twoje miasto zbankrutuje przez bankructwo. </value>
+    <value>Buildtin modu, Game Anarchy zaten aynı işlevselliği içeriyor. Lütfen bu yerel modu devre dışı bırakın ve şehrinizin kredili mevduat nedeniyle iflas etmesi durumunda (oyunun çökmesini önlemek için) GA'nın Ayarlar panelinde başlangıç ​​miktarını ayarlayın.</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>Main campus building</value>
+    <value>Ana kampüs binası</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>Zmaksymalizowana atrakcyjność przyciągnie więcej turystów</value>
+    <value>Çekiciliği en üst düzeye çıkarın, daha fazla turist çekecek</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>Zmaksymalizowany zasięg edukacyjny, nadal wymaga szkół by edukowały uczniów</value>
+    <value>Eğitim kapsamını en üst düzeye çıkarın, eğitimli vatandaşlar elde etmek için hala okullara ihtiyacınız var</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>Zmaksymalizowana rozrywka podniesie poziom szczęścia mieszkańców</value>
+    <value>Eğlenceyi en üst düzeye çıkarın, vatandaşların mutluluğu artacak</value>
   </data>
   <data name="MaximizeFireCoverage" xml:space="preserve">
-    <value>Maximize fire coverage</value>
+    <value>Yangın kapsamını en üst düzeye çıkarın</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>Zmaksymalizuj wartość gruntu</value>
+    <value>Şehrin arazi değeri en üst düzeye çıkar</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Duże miasto</value>
+    <value>Kent</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Duże Miasteczko</value>
+    <value>Büyük Kasaba</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Rozwojowe Miasteczko</value>
+    <value>Kasaba</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Ruchliwe Miasteczko</value>
+    <value>İşlek Kasaba</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Miasto Stołeczne</value>
+    <value>Başkent</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Ogromne Miasto</value>
+    <value>Muazzam Kent</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Wielkie Miasto</value>
+    <value>Büyük Kent</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Osada</value>
+    <value>Mecra</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>Megalopolis</value>
+    <value>Megapol</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolia</value>
+    <value>Metropol</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Poziom odblokowania kamieni milowych</value>
+    <value>Dönüm noktaları seviye kilitlerini aç</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Małe Miasto</value>
+    <value>Küçük Kent</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Niewielkie Miasteczko</value>
+    <value>Küçük Kasaba</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Podstawa</value>
+    <value>Vanilla</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Wieś</value>
+    <value>Köy</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>Rozszerza i optymalizuje funkcje gry.</value>
+    <value>Oyunun işlevlerini genişletir ve optimize eder.</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>Monument</value>
@@ -268,25 +268,25 @@
     <value>Office</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Szybkość wyczerpywania się ropy</value>
+    <value>Petrol tükenme oranı</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>Optymalizuj Opcje</value>
+    <value>Optimize Seçenekleri</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>Poziome przesunięcie paska Panelu Opcji</value>
+    <value>Seçenekler paneli kategorileri çubuğu yatay kaydırma</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Poziome przesunięcie paska Panelu Opcji zacznie obowiązywać po ponownym jego otwarciu.</value>
+    <value>Seçenekler paneli kategorileri çubuğunun yatay kaydırması, seçenekler paneli yeniden açıldıktan sonra etkili olacaktır.</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Szybkość wyczerpywania się kamienia</value>
+    <value>Cevher tükenme oranı</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>Player building</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Pełny zwrot kosztów przy wyburzaniu</value>
+    <value>Buldozerle yıkılan binanın tam para iadesi</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Remove airport building fire</value>
@@ -298,13 +298,13 @@
     <value>Remove commercial building fire</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>Usuń przestępców ze wszystkich budynków i zmaksymalizuj zasięg służb policyjnych</value>
+    <value>Suçluları tüm binalardan uzaklaştırın ve polis hizmeti kapsamını en üst düzeye çıkarın</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>Usuń zmarłych obywateli i zmaksymalizuj zasięg opieki pośmiertnej</value>
+    <value>Ölü vatandaşları kaldırın ve ölüm bakım kapsamını en üst düzeye çıkarın</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>Usuń śmieci</value>
+    <value>Çöpleri kaldır</value>
   </data>
   <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
     <value>Remove industrial building fire</value>
@@ -331,13 +331,13 @@
     <value>Residential</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>Opcje surowców</value>
+    <value>Kaynak Seçenekleri</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Service</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>Sortuj nazwy modów w panelu opcji</value>
+    <value>Seçenekler panelinde mod adlarını sıralayın</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
     <value>Space radar</value>
@@ -355,31 +355,31 @@
     <value>Unique faculty</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Bez ograniczeń</value>
+    <value>Sınırsız</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
-    <value>Odblokuj Wszystko</value>
+    <value>Hepsinin Kilidini Aç</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Odblokuj wszystkie drogi</value>
+    <value>Tüm yolların kilidini aç</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Odblokuj tory metra</value>
+    <value>Metro yolunun kilidini aç</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>Odblokuj Opcje</value>
+    <value>Kilit Açma Seçenekleri</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Odblokuj panel Przepisów</value>
+    <value>Politikalar panelinin kilidini aç</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Odblokuj tory kolejowe</value>
+    <value>Tren yolunun kilidini aç</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Odblokuj wszelki transport</value>
+    <value>Tüm nakliyelerin kilidini aç</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
     <value>Unlock unique Building</value>
@@ -412,10 +412,10 @@
     <value>[UPT]Updated Option Panel UI components.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Podstawa</value>
+    <value>Vanilla</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>Domyślny tryb Nielimitowanych pieniędzy</value>
+    <value>Vanilla sınırsız para modu, dinamik geçişe izin verir</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
     <value>Water pollution</value>

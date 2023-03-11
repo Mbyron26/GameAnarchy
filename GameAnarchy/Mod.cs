@@ -45,6 +45,7 @@ namespace GameAnarchy {
             //        ModLogger.ModLog(item.Key);
             //    }
             //}
+            UI.UUI.Initialize();
         }
         public override void OnLevelUnloading() {
             base.OnLevelUnloading();
@@ -52,7 +53,8 @@ namespace GameAnarchy {
             if (InfoViewsObject != null) {
                 UnityEngine.Object.Destroy(InfoViewsObject);
             }
-            ModLogger.OutputPluginsList();
+            UI.UUI.Destory();
+
         }
         public override void OnEnabled() {
             base.OnEnabled();
@@ -90,7 +92,7 @@ namespace GameAnarchy {
         public override List<ModChangeLog> ChangeLog => new() {
             new ModChangeLog(new Version(0, 9, 7), new(2023,3,8), new List<string> {
                 Localize.UpdateLog_V0_9_7ADD1,Localize.UpdateLog_V0_9_7ADD2,Localize.UpdateLog_V0_9_7ADD3,Localize.UpdateLog_V0_9_7ADD4,
-                Localize.UpdateLog_V0_9_7FIX,Localize.UpdateLog_V0_9_7UPT1,Localize.UpdateLog_V0_9_7UPT2
+                Localize.UpdateLog_V0_9_7ADD5, Localize.UpdateLog_V0_9_7FIX,Localize.UpdateLog_V0_9_7UPT1,Localize.UpdateLog_V0_9_7UPT2
             })
         };
 

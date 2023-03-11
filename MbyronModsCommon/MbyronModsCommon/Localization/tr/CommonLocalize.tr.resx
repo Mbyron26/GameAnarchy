@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Değişiklik günlüğü</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>Mod değişiklik günlüğü</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Kontrol et</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>Bu mod uyumlu değil.</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>Mod uyumluluk kontrolü</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>Bu işlev, yalnızca bu modla ilgili uyumluluk sorunlarını algılar. Tüm modların uyumluluğunu kontrol etmek için [Uyumluluk Raporu] modu önerilir.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>zaten aynı işlevi içerir.</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>Uyumsuz modlar tespit edildi, bu modun düzgün çalışmasını sağlamak için aşağıdaki modların aboneliğinden çıkmanız gerekiyor:</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Gelişmiş</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>Yerleşik İşlev</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Değişiklik Günlüğü</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Uyumluluk Kontrolü</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>Gelişmiş işlevler. Yalnızca hata ayıklama çıktısı için kullanılır. Bir şeyler ters giderse, bu seçeneği etkinleştirmeniz ve tekrarlanan sorunlar sonrasında günlüğünüzü geliştiriciye göndermeniz önerilir.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Hata ayıklama modu</value>
@@ -238,12 +256,21 @@
     <value>Etkin</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>Mod Bilgileri</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Sürüm</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>Değiştirmek için tekerleği kaydırın, Shift X10, Ctrl X0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>Kontrol panelini göster</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>Uyarı! Mod normalde eski yapılandırma verilerini okuyamaz. Artık mod için varsayılan yapılandırma yüklendi. Lütfen oyuna başlamadan önce seçenekler paneline gidin ve Ayarlarınızı yapılandırın.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Evet</value>
   </data>
 </root>

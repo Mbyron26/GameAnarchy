@@ -14,6 +14,7 @@ namespace MbyronModsCommon {
         public static string ModName => Instance.ModName;
         public static Version ModVersion => Instance.ModVersion;
         public static ulong ModID => Instance.ModID;
+        public static string VersionType => Instance.VersionType;
     }
 
     public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : UIPanel where Config : ModConfigBase<Config>, new() {
@@ -90,6 +91,7 @@ namespace MbyronModsCommon {
         public void SaveConfig() => XMLUtils.SaveData<Config>(ConfigFilePath);
 
         public abstract List<ModChangeLog> ChangeLog { get; }
+        public string VersionType => IsBeta ? "Beta" : "Stable";
 
         public virtual void OnEnabled() {
             if (UIView.GetAView() is not null) {
@@ -156,6 +158,7 @@ namespace MbyronModsCommon {
     }
 
     public interface IMod : IUserMod, ILoadingExtension {
+        string VersionType { get; }
         string SolidModName { get; }
         string ModName { get; }
         List<ModChangeLog> ChangeLog { get; }

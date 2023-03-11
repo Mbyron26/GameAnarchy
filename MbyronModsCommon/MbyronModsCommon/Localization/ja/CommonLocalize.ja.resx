@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>更新履歴</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>MODの更新履歴</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>確認</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>このMODは互換性がありません。</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>MODの互換性を確認</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>この機能は、このMODに関する互換性の問題を検出します。 他のMODで互換性を確認する場合は、 [Compatibility Report] MODを推奨します。</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>既に同じ機能が含まれています。</value>
@@ -175,7 +190,7 @@
     <value>ロシア語</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>トルコ語</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>簡体字中国語</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>互換性のないMODを検出しました。MODを正常に動作させるためには、以下のMODはサブスクを解除して下さい。</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>詳細</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>内蔵機能</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>更新履歴</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>互換性の確認</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>高度な機能: デバッグ用の出力で使用して、問題の発生時にオプションを有効にして下さい。 そして、問題を繰り返したログを開発者へ送信することをお勧めします。</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>デバッグモード</value>
@@ -238,12 +256,21 @@
     <value>= 有効化</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>MODの情報</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>バージョン</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>ホイールをスクロールして変更: Shift x10 / Ctrl x0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>コントロールパネルを表示</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>警告！ MODは以前の設定データを正常にロード出来ず、デフォルトの設定が適用されています。 ゲームを開始する前に、オプションパネルから設定を確認して下さい。</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
   </data>
 </root>

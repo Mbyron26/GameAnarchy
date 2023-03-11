@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Change log</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>Mod change log</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>Questa mod è incompatibile.</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>Mod compatibility check</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>game Anarchy include già la stessa funzionalità.</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>Sono state rilevate mod incompatibili, al fine di garantire che questa mod funzioni correttamente, è necessario annullare la sottoscrizione seguenti mod:</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avanzate</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>Funzione incorporata</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Registro modifiche</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Verifica Compatibilità</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Modalità debug</value>
@@ -243,7 +261,16 @@
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Versione</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>Show control panel</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>Attenzione! La mod non può normalmente leggere i vecchi dati di configurazione. Ora la configurazione predefinita è stata caricata per la mod. Vai al pannello delle opzioni e configura le impostazioni prima di iniziare la partita.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

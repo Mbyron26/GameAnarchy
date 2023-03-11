@@ -129,14 +129,17 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Zorg ervoor dat de Cash Anarchy functie is ingeschakeld.</value>
   </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>Building spread fire probability</value>
+  </data>
   <data name="CashAnarchy" xml:space="preserve">
     <value>Cash anarchie modus, automatisch/handmatig(hotkey) toevoegen contant geld</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Diensten opties</value>
   </data>
-  <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>Vermenigvuldigingsfactor commercieel gebied</value>
+  <data name="Commercial" xml:space="preserve">
+    <value>Commercial</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Aangepaste ontgrendelen</value>
@@ -154,16 +157,25 @@
     <value>Sla game Intro interface over</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Sta toe om unieke gebouwen zonder limiet te plaatsen</value>
+    <value>Place unique buildings without limit</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>Snel terugverdiend</value>
   </data>
-  <data name="IncomeOptions" xml:space="preserve">
-    <value>Inkomsten opties</value>
+  <data name="FireControl" xml:space="preserve">
+    <value>Fire Control</value>
   </data>
-  <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>Vermenigvuldigingsfactor commercieel gebied</value>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>Ground pollution</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>Income multiplier</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>Industrial</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
     <value>Game Initial cash</value>
@@ -177,6 +189,9 @@
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
     <value>Buildtin mod, Game Anarchy bevat al dezelfde functionaliteit. Schakel deze lokale mod uit en stel de initiële hoeveelheid in de GA's instellingen paneel in voor het geval je stad failliet gaat door overdraft (om te voorkomen dat het spel crasht).</value>
   </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>Main campus building</value>
+  </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>Maximaliseer aantrekkelijkheid, zorgt voor meer toeristen</value>
   </data>
@@ -185,6 +200,9 @@
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
     <value>Maximaliseer entertainment, verbetert het geluk van de burgers</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>Maximize fire coverage</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>De grondwaarde in jouw stad maximaliseren.</value>
@@ -237,8 +255,17 @@
   <data name="MOD_Description" xml:space="preserve">
     <value>Vergroot en optimaliseer de functies van het spel.</value>
   </data>
-  <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>Vermenigvuldigingsfactor kantoren</value>
+  <data name="Monument" xml:space="preserve">
+    <value>Monument</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>Noise pollution</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>Non-spread of fire</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Office</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
     <value>Olieverbruik uitputting</value>
@@ -255,8 +282,20 @@
   <data name="OreDepletionRate" xml:space="preserve">
     <value>Olieverbruik uitputting</value>
   </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>Player building</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>Volledige terugbetaling van sloopkosten</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>Remove airport building fire</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>Remove campus building fire</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>Remove commercial building fire</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>Verwijder criminelen uit alle gebouwen en maximaliseer de dekking van de politie</value>
@@ -264,38 +303,65 @@
   <data name="RemoveDeath" xml:space="preserve">
     <value>Verwijder dode burgers en maximaliseer de dekking van overlijdenzorg</value>
   </data>
-  <data name="RemoveFire" xml:space="preserve">
-    <value>Verwijder brandgevaar en maximaliseer de brandveiligheidsdekking</value>
-  </data>
   <data name="RemoveGarbage" xml:space="preserve">
     <value>Verwijder afval</value>
   </data>
-  <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>Verwijder de bron van grondvervuiling</value>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>Remove industrial building fire</value>
   </data>
-  <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>Verwijder de bron van grondvervuiling</value>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>Remove museum fire</value>
   </data>
-  <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>Verwijder de bron van grondvervuiling</value>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>Remove office building fire</value>
   </data>
-  <data name="ResetValue" xml:space="preserve">
-    <value>Waarde resetten</value>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>Remove park building fire</value>
   </data>
-  <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>Vermenigvuldigingsfactor commercieel gebied</value>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>Remove player building fire</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>Remove pollution</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>Remove residential building fire</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>Residential</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>Grondstof instellingen</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>Sorteer mods namen in optiespaneel</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>Space radar</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>Stock exchange</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>Tree spread fire probability</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>Unique factory</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>Unique faculty</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Onbeperkt</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Ontgrendel alles</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Ontgrendel Alle Bots</value>
@@ -315,91 +381,46 @@
   <data name="UnlockTransport" xml:space="preserve">
     <value>Ontgrendel alle transporten</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]Voeg initiële cash functie toe.</value>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>Unlock unique Building</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]Voeg optie panel categorieën balk horizontale offset functie toe.</value>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]Onbeperkte geld-functie toevoegen, kan dynamisch worden ingeschakeld.</value>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]Voeg Info View beschikbaar functie toe.</value>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]knop Prestaties werkt nu goed.</value>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]Added fire spread control function.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]Opties paneel is volledig herschreven om betere extensies te ondersteunen.</value>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]Compatibiliteitscontrolefunctie bijgewerkt.</value>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]Added Turkish localization.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]Bijgewerkt ondersteuning voor meerdere talen</value>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]Fixed abnormal UI component location.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]Voeg een aangepaste ontgrendelfunctie toe, inclusief aangepaste mijlpalen niveau, alle wegen, beleidspaneel, vervoer.</value>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]Updated framework, performance improvement.</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]Functie van olie of Erts aanpassen en de uitputting snelheid aanpassen deze versie update zal deze functie resetten. Ga naar het optiescherm om olie-/erts uitputting te resetten.</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]Taalwissel snelheid en taallijst formaat optimaliseren.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]Voeg Spaanse, Italiaanse lokalisatieondersteuning toe.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]Onbeperkte Ore/Oil slider stijl aanpassen en hebben nu meer passende logica hints.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]Compatibiliteitsdetectiemethode optimaliseren en de compatibiliteit met het laden van de Order-tool verbeteren.</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]Optimaliseer prestatiefunctie omschakelen logica om te voorkomen dat nulverwijzingen in de bewerkingsmodus worden gebruikt.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]Voeg Spaanse, Italiaanse lokalisatieondersteuning toe.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]Pas de eerste verstelbare contant bereik aan.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]De brandfunctie verwijderen moet nu goed werken.</value>
-  </data>
-  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]Optimaliseren van mogelijke texture loading traagheid om de snelheid van het optiespaneel te verbeteren.</value>
-  </data>
-  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]Nu ondersteun je de onbeperkte plaatsing van campus gebouwen en aandelenbeurzen.</value>
-  </data>
-  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]Ondersteuning voor game versie 1.16</value>
-  </data>
-  <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]Voeg Spaanse, Italiaanse lokalisatieondersteuning toe.</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Update Harmony Nuget pakket.</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]Update UI.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
-    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
-    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
-    <value>[UPT]Updated framework.</value>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]Updated Option Panel UI components.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>Manilla onbeperkt geldmodus, sta dynamisch omschakelen toe</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>Water pollution</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>Weather radar</value>
   </data>
 </root>

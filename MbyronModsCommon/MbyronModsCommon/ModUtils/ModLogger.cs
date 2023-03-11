@@ -27,7 +27,7 @@ namespace MbyronModsCommon {
         public static void CreateDebugFile<Mod>() where Mod : IMod {
             using FileStream debugFile = new(DebugFilePath, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
             using StreamWriter sw = new(debugFile);
-            sw.WriteLine(@"--- " + ModMainInfo<Mod>.ModName + ' ' + ModMainInfo<Mod>.ModVersion + @" Debug File ---");
+            sw.WriteLine(@"--- " + ModMainInfo<Mod>.ModName + ' ' + ModMainInfo<Mod>.ModVersion + ' ' + ModMainInfo<Mod>.VersionType +  @" Debug File ---");
             sw.WriteLine(Environment.OSVersion);
             sw.WriteLine(@"C# CLR Version " + Environment.Version);
             sw.WriteLine(@"Unity Version " + Application.unityVersion);

@@ -388,7 +388,7 @@
     <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]New control panel.</value>
+    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
     <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
@@ -398,6 +398,9 @@
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
     <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]Added Turkish localization.</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
     <value>[FIX]Fixed abnormal UI component location.</value>

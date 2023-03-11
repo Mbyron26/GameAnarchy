@@ -129,14 +129,17 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Cash Anarchy機能が有効化しているか確認して下さい。</value>
   </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>建物の延焼確率</value>
+  </data>
   <data name="CashAnarchy" xml:space="preserve">
     <value>Cash Anarchyモード: 自動/手動(ホットキー) で資金を追加</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>都市サービスのオプション</value>
   </data>
-  <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>商業税収の倍率係数</value>
+  <data name="Commercial" xml:space="preserve">
+    <value>商業</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>カスタムアンロック</value>
@@ -154,16 +157,25 @@
     <value>ゲーム起動時のイントロをスキップ</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>ユニーク施設を無制限に配置可能</value>
+    <value>ユニーク施設を無制限に配置</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>ゲームの高速終了</value>
   </data>
-  <data name="IncomeOptions" xml:space="preserve">
-    <value>収入のオプション</value>
+  <data name="FireControl" xml:space="preserve">
+    <value>火災の制御</value>
   </data>
-  <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>産業税収の倍率係数</value>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>土壌汚染</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>収入</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>収入の倍率</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>産業</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
     <value>ゲームの初期資金</value>
@@ -177,6 +189,9 @@
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
     <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。債務超過の破産に備えて、設定パネルで初期資金を設定して下さい。 (ゲームのクラッシュを回避)</value>
   </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>キャンパス本館の建物</value>
+  </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>魅力度を最大化: より多くの観光客が訪れます。</value>
   </data>
@@ -185,6 +200,9 @@
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
     <value>娯楽度を最大化: 住民の幸福度を上昇させます。</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>火災範囲を最大化</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>都市の地価を最高化</value>
@@ -237,8 +255,17 @@
   <data name="MOD_Description" xml:space="preserve">
     <value>ゲームの様々な機能を拡張＆最適化します</value>
   </data>
-  <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>オフィス税収の倍率係数</value>
+  <data name="Monument" xml:space="preserve">
+    <value>モニュメント</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>騒音公害</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>火災は延焼しない</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>オフィス</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
     <value>原油の枯渇速度</value>
@@ -255,8 +282,20 @@
   <data name="OreDepletionRate" xml:space="preserve">
     <value>鉱石の枯渇速度</value>
   </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>ユーザー建物</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>建物撤去時に全額を返金</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>空港エリアの火災を除去</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>キャンパスエリアの火災を除去</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>商業区画の火災を除去</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>全ての建物から犯罪者を除去して、警察サービスの有効範囲を最大化します。</value>
@@ -264,38 +303,65 @@
   <data name="RemoveDeath" xml:space="preserve">
     <value>亡くなった市民を除去して、葬儀サービスの有効範囲を最大化します。</value>
   </data>
-  <data name="RemoveFire" xml:space="preserve">
-    <value>火災の危険を無くして、消防サービスを最大化します。</value>
-  </data>
   <data name="RemoveGarbage" xml:space="preserve">
     <value>ゴミを除去</value>
   </data>
-  <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>土壌汚染の発生源を除去</value>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>産業区画の火災を除去</value>
   </data>
-  <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>騒音公害の発生源を除去</value>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>ミュージアムの火災を除去</value>
   </data>
-  <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>水質汚染の発生源を除去</value>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>オフィス区画の火災を除去</value>
   </data>
-  <data name="ResetValue" xml:space="preserve">
-    <value>数値をリセット</value>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>パークエリアの火災を除去</value>
   </data>
-  <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>住宅税収の倍率係数</value>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>ユーザー建物の火災を除去</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>汚染の除去</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>住宅区画の火災を除去</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>住宅</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>資源のオプション</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>サービス</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>オプションパネルでMODの名前順にソート</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>近傍天体レーダー</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>証券取引所</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>樹木の延焼確率</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>ユニーク工場</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>ユニーク学部棟</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>無制限</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全てをアンロック</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>このオプションはバニラのMODにある、 「Unlock All」 と同じです。 ゲーム内で動的に切り替え可能ですが、都市のロード前に設定することをお勧めします。 オプションを無効にしても全てアンロックされる場合は、Find It！ 2のオプションから 「Unlock All」 が無効になっているか確認して下さい。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>全ての道路をアンロック</value>
@@ -315,91 +381,46 @@
   <data name="UnlockTransport" xml:space="preserve">
     <value>全ての公共交通をアンロック</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]初期資金の機能を追加</value>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>ユニーク施設をアンロック</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]オプションパネルのカテゴリバーの水平オフセットの調整機能を追加</value>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>レベル 1～6のユニーク施設を全てアンロックします。 ただし、ゲームの仕様でオプションで強制的にアンロックしても、一部の建物はアンロックされません。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]オリジナルのUnlimited Money機能を追加して、動的に切り替えが可能</value>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]情報ビューの表示機能を追加</value>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]ユニーク施設を無制限に配置する機能を分割して、コントロールパネルに統合</value>
   </data>
-  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]Steamの実績ボタンが正しく動作するようになりました</value>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]火災延焼の制御機能を追加</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]オプションパネルを刷新して、優れた拡張機能をサポート</value>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]複数のオプションに分かれた火災の機能を削除して、異なる建物タイプで火災の制御が可能</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]互換性のチェック機能を更新</value>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]Added Turkish localization.</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]多言語サポートのフレームワークを更新</value>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]UIコンポーネントが不適切な配置の問題を修正</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]カスタムアンロック機能を追加して、カスタムしたマイルストーンレベル/全ての道路/条例パネル/公共交通が含まれます。</value>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]フレームワークの更新とパフォーマンスの向上</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]原油/鉱石の調整機能で、枯渇速度が変更可能になりました。今回のバージョンアップで機能がリセットされるので、オプションパネルから枯渇速度の確認と再設定をして下さい。</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]言語の切り替え速度と言語リストのフォーマットを最適化しました。</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]スペイン語、イタリア語の翻訳のサポートを追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]無制限の鉱石/石油スライダーのスタイルを調整して、より適切なロジックヒントを表示するように変更</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]互換性の検出方法を最適化して、Loading Order Toolとの互換性が向上</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]実績機能の切り替えロジックを最適化して、エディターモードでのnull参照エラーを回避</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]フランス語の翻訳のサポートを追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]初期資金の調整可能な範囲を調整</value>
-  </data>
-  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]火災の無効機能が正常に動作するはずです</value>
-  </data>
-  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]オプションパネルの開閉速度を向上させるために、潜在的なテクスチャの問題点を最適化</value>
-  </data>
-  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]キャンパスエリアや証券取引所の無制限の配置をサポート</value>
-  </data>
-  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]ゲームバージョン 1.16に対応</value>
-  </data>
-  <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]ブラジル語の翻訳のサポートを追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]Harmony Nugetパッケージを更新</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]UIを更新</value>
-  </data>
-  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
-    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
-    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
-    <value>[UPT]Updated framework.</value>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]オプションパネルのUIコンポーネントを更新</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>バニラ</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>バニラのUnlimited Moneyモード: 動的な切り替えを許可します。</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>水質汚染</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>気象レーダー</value>
   </data>
 </root>

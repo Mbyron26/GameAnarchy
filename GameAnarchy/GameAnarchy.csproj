@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UI\UUIResource\ACME-UUI.png" />
+    <None Remove="UI\UUIResource\UUI.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UI\UUIResource\UUI.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+    <PackageReference Include="UnifiedUILib" Version="2.2.12" />
   </ItemGroup>
 
   <ItemGroup>

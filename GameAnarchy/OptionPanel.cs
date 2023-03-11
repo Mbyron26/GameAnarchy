@@ -17,7 +17,7 @@ namespace GameAnarchy {
         public OptionPanel_Hotkey(UIComponent parent, TypeWidth typeWidth) {
             OptionPanelTools.Instance.AddGroup(parent, (float)typeWidth, CommonLocalize.OptionPanel_Hotkeys);
             OptionPanelTools.Instance.AddKeymapping(Localize.AddCash, Config.Instance.AddCash, Localize.AddCashTooltip);
-            OptionPanelTools.Instance.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ShowControlPanelHotkey);
+            OptionPanelTools.Instance.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
         }
     }
 
@@ -27,7 +27,7 @@ namespace GameAnarchy {
         private ToggleButton UnlockAll;
         private ToggleButton CustomUnlock;
 
-        private string[] MilestoneLevelNames { get; set; } = new string[] {
+        private string[] MilestoneLevelNames => new string[] {
             Localize.MilestonelevelName_Vanilla,
             Localize.MilestonelevelName_LittleHamlet,
             Localize.MilestonelevelName_WorthyVillage,
@@ -131,6 +131,10 @@ namespace GameAnarchy {
                     item.isEnabled = CustomUnlock.IsChecked;
                 }
             OptionPanelTools.Instance.Reset();
+        }
+
+        private static void AddModInfoGroup(float width) {
+
         }
 
 

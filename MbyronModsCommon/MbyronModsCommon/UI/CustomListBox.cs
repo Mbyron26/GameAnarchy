@@ -10,6 +10,7 @@ namespace MbyronModsCommon.UI {
         public UILabel MinorLabel { get; set; }
         public UIPanel CardGroupPanel { get; set; }
         public List<UIPanel> ChildrenPanels { get; set; } = new();
+
         public CustomListBox() {
             name = nameof(CustomListBox);
             autoLayout = true;
@@ -17,6 +18,7 @@ namespace MbyronModsCommon.UI {
             autoLayoutDirection = LayoutDirection.Vertical;
             autoFitChildrenVertically = true;
         }
+
         public void Init(float width, string caption, RectOffset captionRectOffset, float textScale, Color32 captionColor, RectOffset groupPanelPadding, Action<UIPanel> setGroupPanelStyle = null, UIFont font = null) {
             this.width = width;
             autoLayoutPadding = groupPanelPadding;
@@ -38,6 +40,8 @@ namespace MbyronModsCommon.UI {
                 CardGroupPanel.color = new Color32(82, 101, 117, 255);
             }
         }
+
+        public UILabel AddMinorLabel(string text, RectOffset rectOffset, float textScale, Color32 color) => MinorLabel = CustomLabel.AddLabel(this, text, width, rectOffset, textScale, color);
 
         public UIPanel AddChildPanel(Action<UIPanel> setStyle = null, float height = 32f) {
             var panel = CardGroupPanel.AddUIComponent<UIPanel>();

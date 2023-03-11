@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Change log</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>Mod change log</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>Ce mod est incompatible.</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>Mod compatibility check</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>contient déjà la même fonctionnalité.</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>Des mods incompatibles ont été détectés, afin de s'assurer que ce mod fonctionne correctement, vous devez vous désabonner des mods suivants :</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avancé</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>Fonction intégrée</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>Historique des changements</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>Vérification de la compatibilité</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Mode debug</value>
@@ -243,7 +261,16 @@
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>Show control panel</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>Attention ! Le mod ne peut pas lire normalement les anciennes données de configuration. La configuration par défaut a été chargée pour le mod. Veuillez aller dans le panneau des options et configurer vos paramètres avant de commencer la partie.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

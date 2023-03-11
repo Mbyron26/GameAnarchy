@@ -24,7 +24,9 @@ namespace MbyronModsCommon {
     }
 
     public class GeneralOptionsBase<Mod, Config> where Mod : IMod where Config : ModConfigBase<Config> {
+        protected UIComponent Parent { get; set; }
         public GeneralOptionsBase(UIComponent parent, TypeWidth typeWidth) {
+            Parent = parent;
             CustomLabel.AddLabel(parent, ModMainInfo<Mod>.ModName, (float)typeWidth, CustomLabel.DefaultOffset, 2f, Color.white).font = CustomFont.SemiBold;
         }
 

@@ -129,14 +129,17 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>请确保启用了金钱无碰撞功能。</value>
   </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>建筑的火灾蔓延概率</value>
+  </data>
   <data name="CashAnarchy" xml:space="preserve">
     <value>金钱无碰撞模式, 自动/手动(快捷键)加钱</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>城市服务选项</value>
   </data>
-  <data name="CommercialMultiplierFactor" xml:space="preserve">
-    <value>商业区收入倍乘因子</value>
+  <data name="Commercial" xml:space="preserve">
+    <value>商业区</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>自定义解锁</value>
@@ -154,16 +157,25 @@
     <value>跳过游戏启动时logo显示</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>允许无限制摆放独特建筑</value>
+    <value>允许无限制放置独特建筑</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>快速退出游戏</value>
   </data>
-  <data name="IncomeOptions" xml:space="preserve">
-    <value>收入选项</value>
+  <data name="FireControl" xml:space="preserve">
+    <value>火灾控制</value>
   </data>
-  <data name="IndustrialMultiplierFactor" xml:space="preserve">
-    <value>工业区收入倍乘因子</value>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>地面污染</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>收入倍乘因子</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>工业区</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
     <value>游戏初始现金</value>
@@ -177,6 +189,9 @@
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
     <value>游戏内建模组, Game Anarchy已经包含了相同的功能。请禁用这个本地模组，并在GA的设置面板中设置初始金额，以防你的城市因透支而破产(以避免游戏崩溃)。</value>
   </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>主校园建筑</value>
+  </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>最大化吸引力, 将会吸引更多的游客</value>
   </data>
@@ -185,6 +200,9 @@
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
     <value>最大化娱乐服务, 将会提高市民的幸福度</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>最大化消防服务覆盖范围</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>最大化城市的土地价值</value>
@@ -237,8 +255,17 @@
   <data name="MOD_Description" xml:space="preserve">
     <value>扩展、优化游戏特性。</value>
   </data>
-  <data name="OfficeMultiplierFactor" xml:space="preserve">
-    <value>办公区收入倍乘因子</value>
+  <data name="Monument" xml:space="preserve">
+    <value>遗迹</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>噪音污染</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>火灾不蔓延</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>办公区</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
     <value>石油消耗速率</value>
@@ -255,8 +282,20 @@
   <data name="OreDepletionRate" xml:space="preserve">
     <value>矿石消耗速率</value>
   </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>玩家建筑</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>铲平建筑物全额退款</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>机场建筑不会着火</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>校园建筑不会着火</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>商业区建筑不会着火</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>移除所有建筑的罪犯并最大化警察服务的覆盖</value>
@@ -264,38 +303,65 @@
   <data name="RemoveDeath" xml:space="preserve">
     <value>移除死亡市民, 并最大化殉葬服务覆盖</value>
   </data>
-  <data name="RemoveFire" xml:space="preserve">
-    <value>移除火灾隐患并最大化消防覆盖范围</value>
-  </data>
   <data name="RemoveGarbage" xml:space="preserve">
     <value>移除垃圾</value>
   </data>
-  <data name="RemoveGroundPollution" xml:space="preserve">
-    <value>移除地面污染源头</value>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>工业区建筑不会着火</value>
   </data>
-  <data name="RemoveNoisePollution" xml:space="preserve">
-    <value>移除噪声污染源头</value>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>博物馆不会着火</value>
   </data>
-  <data name="RemoveWaterPollution" xml:space="preserve">
-    <value>移除水污染源头</value>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>办公区建筑不会着火</value>
   </data>
-  <data name="ResetValue" xml:space="preserve">
-    <value>重置数值</value>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>公园建筑不会着火</value>
   </data>
-  <data name="ResidentialMultiplierFactor" xml:space="preserve">
-    <value>住宅区收入倍乘因子</value>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>玩家建筑不会着火</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>移除污染</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>住宅区建筑不会着火</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>住宅区</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>资源选项</value>
   </data>
+  <data name="Service" xml:space="preserve">
+    <value>服务</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>选项菜单按名称对齐</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>空间雷达</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>证券交易</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>树木的火灾蔓延概率</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>独特工厂</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>独特学院不会着火</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>无限制</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>解锁所有</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>此选项与原版游戏的“解锁全部”功能相同，虽然您可以在游戏内动态地开关该选项，但是仍然建议在进入存档前设置好该选项。如果该选项已被禁用而游戏内仍然解锁了全部，请检查并确保您已禁用 Find it! 模组内“解锁全部”的功能。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>解锁所有道路</value>
@@ -315,91 +381,46 @@
   <data name="UnlockTransport" xml:space="preserve">
     <value>解锁所有公交运输</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD1" xml:space="preserve">
-    <value>[ADD]添加初始金钱功能。</value>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>解锁独特建筑</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD2" xml:space="preserve">
-    <value>[ADD]添加选项面板类别栏水平偏移调整功能。</value>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>解锁所有 1～6 级的独特建筑。由于游戏限制，如果此选项被强制解锁，那么少数的独特建筑将会被解锁，但是不会解锁所有独特建筑。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD3" xml:space="preserve">
-    <value>[ADD]添加游戏自带无限金钱模式，允许动态切换。</value>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]新增控制面板，按下默认快捷键  Ctrl+Shift+G 或者使用 UUI 面板来调出新的控制面板。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_ADD4" xml:space="preserve">
-    <value>[ADD]添加游戏左上角信息面板可用选项。</value>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]允许无限制放置独特建筑的功能现在已被拆分，并被整合到控制面板。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_FIX1" xml:space="preserve">
-    <value>[FIX]成就按钮现已正常工作。</value>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]增加了控制火灾蔓延的功能。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT1" xml:space="preserve">
-    <value>[UPT]选项面板完全重写，以支持更好的扩展。</value>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]移除火灾功能现在已拆分成多个选项，可以针对不同的建筑类型来控制火灾。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT2" xml:space="preserve">
-    <value>[UPT]更新兼容性检查功能。</value>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]添加了土耳其语翻译。</value>
   </data>
-  <data name="UpdateLog_V0_9_0_UPT3" xml:space="preserve">
-    <value>[UPT]更新多语言支持框架。</value>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]修复了UI组件位置异常的问题。</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADD1" xml:space="preserve">
-    <value>[ADD]增加自定义解锁功能，包括自定义里程碑级别，所有道路，政策面板，公共交通面板。</value>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]更新了框架，并优化了性能。</value>
   </data>
-  <data name="UpdateLog_V0_9_1_ADJ1" xml:space="preserve">
-    <value>[ADJ]调整石油/矿石功能，现可调整耗尽速率，该版本更新将重置该功能，请前往选项面板重新设置石油/矿石耗尽速率。</value>
-  </data>
-  <data name="UpdateLog_V0_9_1_OPT1" xml:space="preserve">
-    <value>[OPT]优化语言切换速度和语言列表格式。</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADD" xml:space="preserve">
-    <value>[ADD]增加西班牙语、意大利语本地化支持。</value>
-  </data>
-  <data name="UpdateLog_V0_9_2ADJ" xml:space="preserve">
-    <value>[ADJ]调整无限矿石/石油滑块风格，现在有更适当的逻辑提示。</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT1" xml:space="preserve">
-    <value>[OPT]优化兼容性检测方法，提高与Loading Order Tool的兼容性。</value>
-  </data>
-  <data name="UpdateLog_V0_9_2OPT2" xml:space="preserve">
-    <value>[OPT]优化成就系统特性切换逻辑，以避免在编辑器模式下的空引用异常。</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADD" xml:space="preserve">
-    <value>[ADD]添加法语本地化支持。</value>
-  </data>
-  <data name="UpdateLog_V0_9_3ADJ" xml:space="preserve">
-    <value>[ADJ]调整初始现金可调范围。</value>
-  </data>
-  <data name="UpdateLog_V0_9_3FIX" xml:space="preserve">
-    <value>[FIX]移除火灾功能现可正常工作。</value>
-  </data>
-  <data name="UpdateLog_V0_9_3OPT" xml:space="preserve">
-    <value>[OPT]优化一个潜在的纹理加载缓慢问题，提高选项面板打开速度。</value>
-  </data>
-  <data name="UpdateLog_V0_9_4ADD" xml:space="preserve">
-    <value>[ADD]现支持无限制摆放校园建筑和证券交易所。</value>
-  </data>
-  <data name="UpdateLog_V0_9_4UPT" xml:space="preserve">
-    <value>[UPT]支持游戏版本 1.16</value>
-  </data>
-  <data name="UpdateLog_V0_9_5ADD" xml:space="preserve">
-    <value>[ADD]增加巴西语本地化支持。</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT1" xml:space="preserve">
-    <value>[UPT]更新Harmony Nuget 包。</value>
-  </data>
-  <data name="UpdateLog_V0_9_5UPT2" xml:space="preserve">
-    <value>[UPT]更新UI。</value>
-  </data>
-  <data name="UpdateLog_V0_9_6FIX" xml:space="preserve">
-    <value>[FIX]Fixed unavailable achievement panel in scene mode.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6OPT" xml:space="preserve">
-    <value>[OPT]Optimized the range of add cash threshold and add cash amount.</value>
-  </data>
-  <data name="UpdateLog_V0_9_6UPT" xml:space="preserve">
-    <value>[UPT]Updated framework.</value>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]更新了选项面板的UI组件。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>
   </data>
   <data name="VanillaUnlimitedMoney" xml:space="preserve">
     <value>原版无限金钱模式, 允许动态切换</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>水污染</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>天气雷达</value>
   </data>
 </root>

@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Change log</value>
+  </data>
+  <data name="ChangeLog_Major" xml:space="preserve">
+    <value>Mod change log</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>이 모드는 호환되지 않습니다.</value>
+  </data>
+  <data name="CompatibilityCheck_Major" xml:space="preserve">
+    <value>Mod compatibility check</value>
+  </data>
+  <data name="CompatibilityCheck_Minor" xml:space="preserve">
+    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>이미 동일한 기능이 포함되어 있습니다.</value>
@@ -210,17 +225,20 @@
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
     <value>비호환 모드가 발견되었습니다. 이 모드의 정상 작동을 보장하려면, 아래 모드들에 대해 구독 해제가 필요합니다.</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>고급 설정</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
     <value>빌트인 기능</value>
   </data>
-  <data name="OptionPanel_ChangeLog" xml:space="preserve">
-    <value>변경 기록</value>
-  </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
     <value>호환성 확인</value>
+  </data>
+  <data name="OptionPanel_DebugMinor" xml:space="preserve">
+    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>디버그 모드</value>
@@ -243,7 +261,16 @@
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>버전</value>
   </data>
+  <data name="ScrollWheel" xml:space="preserve">
+    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+  </data>
+  <data name="ShowControlPanel" xml:space="preserve">
+    <value>Show control panel</value>
+  </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>경고! 모드가 이전 구성 데이터를 정상적으로 읽을 수 없습니다. 이제 모드에 대한 기본 구성이 로드되었습니다. 게임을 시작하기 전에 옵션 패널로 이동하여 설정을 구성하십시오.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>
