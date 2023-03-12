@@ -388,7 +388,7 @@
     <value>レベル 1～6のユニーク施設を全てアンロックします。 ただし、ゲームの仕様でオプションで強制的にアンロックしても、一部の建物はアンロックされません。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
+    <value>[ADD]新しいコントロールパネルを開くには、 デフォルトのホットキー Ctrl+Shift+Gで開くかUUI MODのボタンで開く</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
     <value>[ADD]ユニーク施設を無制限に配置する機能を分割して、コントロールパネルに統合</value>
@@ -400,7 +400,7 @@
     <value>[ADD]複数のオプションに分かれた火災の機能を削除して、異なる建物タイプで火災の制御が可能</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Added Turkish localization.</value>
+    <value>[ADD]トルコ語の翻訳を追加</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
     <value>[FIX]UIコンポーネントが不適切な配置の問題を修正</value>
