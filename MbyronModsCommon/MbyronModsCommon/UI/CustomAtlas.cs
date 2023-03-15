@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public static class CustomAtlas {
+        private static UITextureAtlas inGameAtlas;
         private static UITextureAtlas commonAtlas;
         public static Dictionary<string, RectOffset> SpriteParams { get; private set; } = new();
         public static string Path => $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.";
@@ -72,7 +73,7 @@ namespace MbyronModsCommon.UI {
         public static string TabHovered => nameof(TabHovered);
         public static string TabFocused => nameof(TabFocused);
         public static string TabPressed => nameof(TabPressed);
-
+        
         static CustomAtlas() {
             SpriteParams[ButtonNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[ButtonHovered] = new RectOffset(4, 4, 4, 4);
@@ -131,7 +132,7 @@ namespace MbyronModsCommon.UI {
             SpriteParams[TabHovered] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabFocused] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabPressed] = new RectOffset(4, 4, 4, 4);
-
+            
         }
 
         public static UITextureAtlas CommonAtlas {
@@ -146,7 +147,16 @@ namespace MbyronModsCommon.UI {
             }
         }
 
-        public static UITextureAtlas InGameAtlas => UIUtils.GetAtlas("Ingame");
+        public static UITextureAtlas InGameAtlas {
+            get {
+                if (inGameAtlas is null) {
+                    inGameAtlas = UIUtils.GetAtlas("Ingame");
+                    return inGameAtlas;
+                } else {
+                    return inGameAtlas;
+                }
+            }
+        }
 
     }
 }

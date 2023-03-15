@@ -49,7 +49,7 @@ namespace MbyronModsCommon.UI {
                 return null;
             }
         }
-        
+
         public static UITextureAtlas GetAtlas(string name) {
             if (UITextureAtlasBuffer.TryGetValue(name, out UITextureAtlas atlas)) {
                 ModLogger.ModLog($"Get UI texture atlas [{name}] in UITextureAtlasBuffer.");
@@ -57,8 +57,10 @@ namespace MbyronModsCommon.UI {
             }
             UITextureAtlas[] atlases = Resources.FindObjectsOfTypeAll(typeof(UITextureAtlas)) as UITextureAtlas[];
             for (int i = 0; i < atlases.Length; i++) {
-                UITextureAtlasBuffer.Add(atlases[i].name, atlases[i]);
-                ModLogger.ModLog($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
+                if (!UITextureAtlasBuffer.ContainsKey(atlases[i].name)) {
+                    UITextureAtlasBuffer.Add(atlases[i].name, atlases[i]);
+                    ModLogger.ModLog($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
+                }    
                 if (atlases[i].name == name)
                     atlas = atlases[i];
             }
