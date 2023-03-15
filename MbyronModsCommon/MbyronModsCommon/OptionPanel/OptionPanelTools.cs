@@ -220,6 +220,7 @@ namespace MbyronModsCommon {
         }
 
         private void SetMajorSprite(UIPanel panel) {
+            panel.atlas = CustomAtlas.InGameAtlas;
             panel.backgroundSprite = "ButtonWhite";
             panel.color = new(50, 60, 74, 255);
         }

@@ -44,6 +44,7 @@ namespace MbyronModsCommon.UI {
 
         public static UIButton AddGreenButton(UIComponent parent, string text, float height, float? width, OnButtonClicked eventCallback) {
             UIButton button = parent.AddUIComponent<UIButton>();
+            button.atlas = CustomAtlas.InGameAtlas;
             button.normalBgSprite = "ButtonWhite";
             button.disabledBgSprite = "ButtonWhite";
             button.hoveredBgSprite = "ButtonWhite";

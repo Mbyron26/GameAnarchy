@@ -23,6 +23,7 @@ namespace GameAnarchy.UI {
         public ControlPanel() {
             name = Name;
             autoLayout = false;
+            atlas = CustomAtlas.InGameAtlas;
             backgroundSprite = "UnlockingItemBackground";
             isVisible = true;
             canFocus = true;
