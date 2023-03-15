@@ -388,19 +388,19 @@
     <value>Déverrouillez tous les bâtiments uniques aux niveaux 1 à 6. En raison des restrictions du jeu, si cette option est forcée pour être déverrouillée, un petit nombre de bâtiments seront déverrouillés, mais pas tous.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[AJOUT] Nouveau panneau de contrôle, utilisez le raccourci clavier par défaut Ctrl + Maj + G ou utilisez le panneau UUI pour faire apparaitre le nouveau panneau de contrôle.</value>
+    <value>[ADD] Nouveau panneau de contrôle, utilisez le raccourci clavier par défaut Ctrl + Maj + G ou utilisez le panneau UUI pour faire apparaitre le nouveau panneau de contrôle.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[AJOUT] Placez des bâtiments uniques sans limite de fonctionnalités maintenant divisées et intégrées dans le panneau de contrôle.</value>
+    <value>[ADD] Placez des bâtiments uniques sans limite de fonctionnalités maintenant divisées et intégrées dans le panneau de contrôle.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[AJOUT] Ajout de la fonction de contrôle de la propagation du feu.</value>
+    <value>[ADD] Ajout de la fonction de contrôle de la propagation du feu.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[AJOUT] La fonction pour enlever le feu maintenant divisée en plusieurs options, peut contrôler le feu de différents types de bâtiments.</value>
+    <value>[ADD] La fonction pour enlever le feu maintenant divisée en plusieurs options, peut contrôler le feu de différents types de bâtiments.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[AJOUT] Support de la langue Turc.</value>
+    <value>[ADD] Support de la langue Turc.</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
     <value>[FIX] Correction de l'emplacement anormal des composants de l'interface utilisateur.</value>

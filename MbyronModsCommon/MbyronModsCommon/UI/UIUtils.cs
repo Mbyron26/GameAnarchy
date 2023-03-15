@@ -9,6 +9,8 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public class UIUtils {
+        public static Dictionary<string, UITextureAtlas> UITextureAtlasBuffer { get; private set; } = new();
+
         public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, Dictionary<string, RectOffset> spriteParams, int maxSpriteSize = 1024) {
             var keys = spriteParams.Keys.ToArray();
             var value = spriteParams.Values.ToArray();
@@ -35,8 +37,6 @@ namespace MbyronModsCommon.UI {
             return uITextureAtlas;
         }
 
-
-
         public static Texture2D LoadTextureFromAssembly(string fileName) {
             try {
                 Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
@@ -49,14 +49,25 @@ namespace MbyronModsCommon.UI {
                 return null;
             }
         }
-
+        
         public static UITextureAtlas GetAtlas(string name) {
+            if (UITextureAtlasBuffer.TryGetValue(name, out UITextureAtlas atlas)) {
+                ModLogger.ModLog($"Get UI texture atlas [{name}] in UITextureAtlasBuffer.");
+                return atlas;
+            }
             UITextureAtlas[] atlases = Resources.FindObjectsOfTypeAll(typeof(UITextureAtlas)) as UITextureAtlas[];
             for (int i = 0; i < atlases.Length; i++) {
+                UITextureAtlasBuffer.Add(atlases[i].name, atlases[i]);
+                ModLogger.ModLog($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
                 if (atlases[i].name == name)
-                    return atlases[i];
+                    atlas = atlases[i];
             }
-            return UIView.GetAView().defaultAtlas;
+            if (atlas is not null) {
+                return atlas;
+            } else {
+                ModLogger.ModLog($"Couldn't find UITextureAtlas [{name}], use default atlas [{UIView.GetAView().defaultAtlas.name}].");
+                return UIView.GetAView().defaultAtlas;
+            }
         }
     }
 }
