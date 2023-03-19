@@ -50,89 +50,85 @@ namespace GameAnarchy.UI {
         }
 
         private void FillIncomeContainer() {
-            ControlPanelTools.Instance.AddGroup(IncomeContainer, CardWidth, Localization.Localize.IncomeMultiplier, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
-            ControlPanelTools.Instance.AddLabelWithField(Localization.Localize.Residential, 80, 20, Config.Instance.ResidentialMultiplierFactor, 10, 1, 100, true, out UILabel _, out CustomIntValueField field1);
-            field1.OnValueChanged += (_) => Config.Instance.ResidentialMultiplierFactor = _;
-            ControlPanelTools.Instance.AddLabelWithField(Localization.Localize.Industrial, 80, 20, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, true, out UILabel _, out CustomIntValueField field2);
-            field2.OnValueChanged += (_) => Config.Instance.IndustrialMultiplierFactor = _;
-            ControlPanelTools.Instance.AddLabelWithField(Localization.Localize.Commercial, 80, 20, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, true, out UILabel _, out CustomIntValueField field3);
-            field3.OnValueChanged += (_) => Config.Instance.CommercialMultiplierFactor = _;
-            ControlPanelTools.Instance.AddLabelWithField(Localization.Localize.Office, 80, 20, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, true, out UILabel _, out CustomIntValueField field4);
-            field4.OnValueChanged += (_) => Config.Instance.OfficeMultiplierFactor = _;
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.AddGroup(IncomeContainer, CardWidth, Localization.Localize.IncomeMultiplier);
+            ControlPanelTool.AddField(Localization.Localize.Residential, null, 80, Config.Instance.ResidentialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.ResidentialMultiplierFactor = _, out CustomIntValueField _);
+            ControlPanelTool.AddField(Localization.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _, out CustomIntValueField _);
+            ControlPanelTool.AddField(Localization.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _, out CustomIntValueField _);
+            ControlPanelTool.AddField(Localization.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _, out CustomIntValueField _);
+            ControlPanelTool.Reset();
         }
 
         public void FillServiceContainer() {
             ServiceContainer.width -= 10;
-            ControlPanelTools.Instance.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.RemovePollution, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.NoisePollution, "I", "O", Config.Instance.RemoveNoisePollution, (v) => Config.Instance.RemoveNoisePollution = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.GroundPollution, "I", "O", Config.Instance.RemoveGroundPollution, (v) => Config.Instance.RemoveGroundPollution = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.WaterPollution, "I", "O", Config.Instance.RemoveWaterPollution, (v) => Config.Instance.RemoveWaterPollution = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.RemovePollution);
+            ControlPanelTool.AddToggleButton(Localization.Localize.NoisePollution, null, Config.Instance.RemoveNoisePollution, (v) => Config.Instance.RemoveNoisePollution = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.GroundPollution, null, Config.Instance.RemoveGroundPollution, (v) => Config.Instance.RemoveGroundPollution = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.WaterPollution, null, Config.Instance.RemoveWaterPollution, (v) => Config.Instance.RemoveWaterPollution = v, out ToggleButton _);
+            ControlPanelTool.Reset();
 
-            ControlPanelTools.Instance.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.CityServiceOptions, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveDeath, "I", "O", Config.Instance.RemoveDeath, (v) => Config.Instance.RemoveDeath = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveCrime, "I", "O", Config.Instance.RemoveCrime, (v) => Config.Instance.RemoveCrime = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveGarbage, "I", "O", Config.Instance.RemoveGarbage, (v) => Config.Instance.RemoveGarbage = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MaximizeAttractiveness, "I", "O", Config.Instance.MaximizeAttractiveness, (v) => Config.Instance.MaximizeAttractiveness = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MaximizeEntertainment, "I", "O", Config.Instance.MaximizeEntertainment, (v) => Config.Instance.MaximizeEntertainment = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MaximizeLandValue, "I", "O", Config.Instance.MaximizeLandValue, (v) => Config.Instance.MaximizeLandValue = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MaximizeEducationCoverage, "I", "O", Config.Instance.MaximizeEducationCoverage, (v) => Config.Instance.MaximizeEducationCoverage = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.CityServiceOptions);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveDeath, null, Config.Instance.RemoveDeath, (v) => Config.Instance.RemoveDeath = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCrime, null, Config.Instance.RemoveCrime, (v) => Config.Instance.RemoveCrime = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveGarbage, null, Config.Instance.RemoveGarbage, (v) => Config.Instance.RemoveGarbage = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeAttractiveness, null, Config.Instance.MaximizeAttractiveness, (v) => Config.Instance.MaximizeAttractiveness = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeEntertainment, null, Config.Instance.MaximizeEntertainment, (v) => Config.Instance.MaximizeEntertainment = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeLandValue, null, Config.Instance.MaximizeLandValue, (v) => Config.Instance.MaximizeLandValue = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeEducationCoverage, null, Config.Instance.MaximizeEducationCoverage, (v) => Config.Instance.MaximizeEducationCoverage = v, out ToggleButton _);
+            ControlPanelTool.Reset();
 
-            ControlPanelTools.Instance.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.FireControl, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MaximizeFireCoverage, "I", "O", Config.Instance.MaximizeFireCoverage, (v) => Config.Instance.MaximizeFireCoverage = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemovePlayerBuildingFire, "I", "O", Config.Instance.RemovePlayerBuildingFire, (v) => Config.Instance.RemovePlayerBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveResidentialBuildingFire, "I", "O", Config.Instance.RemoveResidentialBuildingFire, (v) => Config.Instance.RemoveResidentialBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveIndustrialBuildingFire, "I", "O", Config.Instance.RemoveIndustrialBuildingFire, (v) => Config.Instance.RemoveIndustrialBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveCommercialBuildingFire, "I", "O", Config.Instance.RemoveCommercialBuildingFire, (v) => Config.Instance.RemoveCommercialBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveOfficeBuildingFire, "I", "O", Config.Instance.RemoveOfficeBuildingFire, (v) => Config.Instance.RemoveOfficeBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveParkBuildingFire, "I", "O", Config.Instance.RemoveParkBuildingFire, (v) => Config.Instance.RemoveParkBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveMuseumFire, "I", "O", Config.Instance.RemoveMuseumFire, (v) => Config.Instance.RemoveMuseumFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveCampusBuildingFire, "I", "O", Config.Instance.RemoveCampusBuildingFire, (v) => Config.Instance.RemoveCampusBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.RemoveAirportBuildingFire, "I", "O", Config.Instance.RemoveAirportBuildingFire, (v) => Config.Instance.RemoveAirportBuildingFire = v == 0, out UILabel _, out PairButton _, 60, 20);
+            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.FireControl);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeFireCoverage, null, Config.Instance.MaximizeFireCoverage, (v) => Config.Instance.MaximizeFireCoverage = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemovePlayerBuildingFire, null, Config.Instance.RemovePlayerBuildingFire, (v) => Config.Instance.RemovePlayerBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveResidentialBuildingFire, null, Config.Instance.RemoveResidentialBuildingFire, (v) => Config.Instance.RemoveResidentialBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveIndustrialBuildingFire, null, Config.Instance.RemoveIndustrialBuildingFire, (v) => Config.Instance.RemoveIndustrialBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCommercialBuildingFire, null, Config.Instance.RemoveCommercialBuildingFire, (v) => Config.Instance.RemoveCommercialBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveOfficeBuildingFire, null, Config.Instance.RemoveOfficeBuildingFire, (v) => Config.Instance.RemoveOfficeBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveParkBuildingFire, null, Config.Instance.RemoveParkBuildingFire, (v) => Config.Instance.RemoveParkBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveMuseumFire, null, Config.Instance.RemoveMuseumFire, (v) => Config.Instance.RemoveMuseumFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCampusBuildingFire, null, Config.Instance.RemoveCampusBuildingFire, (v) => Config.Instance.RemoveCampusBuildingFire = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveAirportBuildingFire, null, Config.Instance.RemoveAirportBuildingFire, (v) => Config.Instance.RemoveAirportBuildingFire = v, out ToggleButton _);
 
             UILabel label0 = null;
-            ControlPanelTools.Instance.AddLabelWithSliderGamma(GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), new(408 - 10, 20), 0, 100, 1, Config.Instance.BuildingSpreadFireProbability, (_, value) => callback0(value), out label0, out UISlider _);
+            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, new(408 - 10, 20), 0, 100, 1, Config.Instance.BuildingSpreadFireProbability, (_, value) => callback0(value), out label0, out UILabel _, out UISlider _);
             void callback0(float value) {
                 Config.Instance.BuildingSpreadFireProbability = (uint)value;
                 label0.text = GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
             }
             UILabel label1 = null;
-            ControlPanelTools.Instance.AddLabelWithSliderGamma(GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), new(408 - 10, 20), 0, 100, 1, Config.Instance.TreeSpreadFireProbability, (_, value) => callback1(value), out label1, out UISlider _);
+            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, new(408 - 10, 20), 0, 100, 1, Config.Instance.TreeSpreadFireProbability, (_, value) => callback1(value), out label1, out UILabel _, out UISlider _);
             void callback1(float value) {
                 Config.Instance.TreeSpreadFireProbability = (uint)value;
                 label1.text = GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
             }
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.Reset();
         }
 
         public void FillGeneralContainer() {
-            ControlPanelTools.Instance.AddGroup(GeneralContainer, CardWidth, Localization.Localize.EnabledUnlimitedUniqueBuildings, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.PlayerBuilding, "I", "O", Config.Instance.UnlimitedPlayerBuilding, (v) => Config.Instance.UnlimitedPlayerBuilding = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.Monument, "I", "O", Config.Instance.UnlimitedMonument, (v) => Config.Instance.UnlimitedMonument = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.MainCampusBuilding, "I", "O", Config.Instance.UnlimitedMainCampusBuilding, (v) => Config.Instance.UnlimitedMainCampusBuilding = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.UniqueFactory, "I", "O", Config.Instance.UnlimitedUniqueFactory, (v) => Config.Instance.UnlimitedUniqueFactory = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.StockExchange, "I", "O", Config.Instance.UnlimitedStockExchange, (v) => Config.Instance.UnlimitedStockExchange = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.UniqueFaculty, "I", "O", Config.Instance.UnlimitedUniqueFaculty, (v) => Config.Instance.UnlimitedUniqueFaculty = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.WeatherRadar, "I", "O", Config.Instance.UnlimitedWeatherRadar, (v) => Config.Instance.UnlimitedWeatherRadar = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.AddLabelWithPairButton(Localization.Localize.SpaceRadar, "I", "O", Config.Instance.UnlimitedSpaceRadar, (v) => Config.Instance.UnlimitedSpaceRadar = v == 0, out UILabel _, out PairButton _, 60, 20);
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.AddGroup(GeneralContainer, CardWidth, Localization.Localize.EnabledUnlimitedUniqueBuildings);
+            ControlPanelTool.AddToggleButton(Localization.Localize.PlayerBuilding, null, Config.Instance.UnlimitedPlayerBuilding, (v) => Config.Instance.UnlimitedPlayerBuilding = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.Monument, null, Config.Instance.UnlimitedMonument, (v) => Config.Instance.UnlimitedMonument = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.MainCampusBuilding, null, Config.Instance.UnlimitedMainCampusBuilding, (v) => Config.Instance.UnlimitedMainCampusBuilding = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.UniqueFactory, null, Config.Instance.UnlimitedUniqueFactory, (v) => Config.Instance.UnlimitedUniqueFactory = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.StockExchange, null, Config.Instance.UnlimitedStockExchange, (v) => Config.Instance.UnlimitedStockExchange = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.UniqueFaculty, null, Config.Instance.UnlimitedUniqueFaculty, (v) => Config.Instance.UnlimitedUniqueFaculty = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.WeatherRadar, null, Config.Instance.UnlimitedWeatherRadar, (v) => Config.Instance.UnlimitedWeatherRadar = v, out ToggleButton _);
+            ControlPanelTool.AddToggleButton(Localization.Localize.SpaceRadar, null, Config.Instance.UnlimitedSpaceRadar, (v) => Config.Instance.UnlimitedSpaceRadar = v, out ToggleButton _);
+            ControlPanelTool.Reset();
 
-            ControlPanelTools.Instance.AddGroup(GeneralContainer, CardWidth, Localization.Localize.ResourceOptions, new RectOffset(6, 0, 0, 0), 0.9f, UIColor.White, new RectOffset(0, 0, 0, 4));
+            ControlPanelTool.AddGroup(GeneralContainer, CardWidth, Localization.Localize.ResourceOptions);
             UILabel label0 = null;
-            ControlPanelTools.Instance.AddLabelWithSliderGamma(GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), new(408, 20), 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => callback0(value), out label0, out UISlider _);
+            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, new(408, 20), 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => callback0(value), out label0, out UILabel _, out UISlider _);
             void callback0(float value) {
                 Config.Instance.OilDepletionRate = (int)value;
                 label0.text = GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
             }
             UILabel label1 = null;
-            ControlPanelTools.Instance.AddLabelWithSliderGamma(GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), new(408, 20), 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => callback1(value), out label1, out UISlider _);
+            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, new(408, 20), 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => callback1(value), out label1, out UILabel _, out UISlider _);
             void callback1(float value) {
                 Config.Instance.OreDepletionRate = (int)value;
                 label1.text = GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
             }
-            ControlPanelTools.Instance.Reset();
+            ControlPanelTool.Reset();
         }
 
         private static string GetString(string localize, uint value, string flag0, string flag1) {
