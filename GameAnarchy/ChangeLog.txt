@@ -1,4 +1,12 @@
-﻿V0.9.7
+﻿
+V0.9.8
+[OPT]Optimized control panel invoke speed.
+[OPT]Optimized control panel toggle button UI style.
+[FIX]Fixed an issue where control panel did not follow the language toggle.
+[FIX]Fixed an issue where the money option in options panel could not be changed.
+[UPT]Updated compatibility check.
+
+V0.9.7
 [ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.
 [ADD]Place unique buildings without limit features now split and integrated into control panel.
 [ADD]Added fire spread control function.

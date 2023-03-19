@@ -952,6 +952,51 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 [FIX]Fixed an issue where control panel did not follow the language toggle. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8FIX1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8FIX1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [FIX]Fixed an issue where the money option in options panel could not be changed. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8FIX2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8FIX2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimized control panel invoke speed. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8OPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8OPT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [OPT]Optimized control panel toggle button UI style. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8OPT2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8OPT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 [UPT]Updated compatibility check. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8UPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8UPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {
