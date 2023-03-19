@@ -114,7 +114,7 @@ namespace MbyronModsCommon.UI {
             var label = AddUIComponent<UILabel>();
             label.autoSize = false;
             label.size = new Vector2(sliderSize.ClampedLabelWidth, sliderSize.SliderHeight);
-            label.autoHeight = true;
+            label.autoHeight = false;
             label.wordWrap = true;
             label.atlas = CustomAtlas.CommonAtlas;
             label.backgroundSprite = backgroundSprite;

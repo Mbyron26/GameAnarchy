@@ -6,7 +6,7 @@
 	<Product>Game Anarchy</Product>
 	<Copyright>Copyright © 2022 Mbyron26</Copyright>
 	<Authors>Mbyron26</Authors>
-	<Version>0.9.7</Version>
+	<Version>0.9.8</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -86,6 +86,11 @@
     <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.7\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
       <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
     </Compile>
+    <Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.8\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CommonLocalize.resx</DependentUpon>
+    </Compile>
     <Compile Update="Localization\Localize.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -95,6 +100,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.7\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
+      <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.8\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
       <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

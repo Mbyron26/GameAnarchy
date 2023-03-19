@@ -89,7 +89,7 @@ namespace GameAnarchy {
             CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField0, majorOffset: new(20, 0, 0, 0)));
             valueField0.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = (int)v;
             CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField1, majorOffset: new(20, 0, 0, 0)));
-            valueField1.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = (int)v;
+            valueField1.OnValueChanged += (v) => Config.Instance.DefaultGetCash = (int)v;
             foreach (var item in CashAnarchyPanels) {
                 item.isEnabled = Config.Instance.CashAnarchy;
             }
