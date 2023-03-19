@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GameAnarchy.Localization;
+using GameAnarchy.UI;
 
 namespace GameAnarchy {
     public class OptionPanel : UIPanel {
@@ -52,8 +53,10 @@ namespace GameAnarchy {
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion} [{ModMainInfo<Mod>.VersionType}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.FastReturn}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.SortSettings}]", null, out UILabel _, out UILabel _);
-            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => OnLanguageSelectedIndexChanged<OptionPanel>(v)/*, new RectOffset(6, 10, 6, 0), new RectOffset(6, 6, 4, 0)*/);
-            //dropDown.eventSelectedIndexChanged += (c, v) => OnLanguageSelectedIndexChanged<OptionPanel>(v);
+            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => {
+                OnLanguageSelectedIndexChanged<OptionPanel>(v);
+                ControlPanelManager.OnLocaleChanged();
+            });
             OptionPanelTool.Reset();
             #endregion
 
