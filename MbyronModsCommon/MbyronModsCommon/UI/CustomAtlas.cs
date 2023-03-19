@@ -82,8 +82,8 @@ namespace MbyronModsCommon.UI {
             SpriteParams[TabButtonDisabled] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabButtonNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabButtonHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[SliderAlphaSprite] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[SliderAlphaMidSprite] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[SliderAlphaSprite] = new RectOffset();
+            SpriteParams[SliderAlphaMidSprite] = new RectOffset();
             SpriteParams[SliderAlphaLeftSprite] = new RectOffset(4, 4, 4, 4);
             SpriteParams[SliderAlphaRightSprite] = new RectOffset(4, 4, 4, 4);
             SpriteParams[SliderGamma] = new RectOffset(4, 4, 4, 4);
