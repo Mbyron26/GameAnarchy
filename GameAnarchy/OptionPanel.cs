@@ -48,9 +48,15 @@ namespace GameAnarchy {
 
         public OptionPanel_General(UIComponent parent, TypeWidth typeWidth) : base(parent, typeWidth) {
             var defaultWidth = (float)typeWidth;
-            #region ModInfo
-            OptionPanelTool.AddGroup(parent, (float)typeWidth, CommonLocalize.OptionPanel_ModInfo);
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion} [{ModMainInfo<Mod>.VersionType}]", null, out UILabel _, out UILabel _);
+            AddModInfoProperty(parent, defaultWidth);
+            AddOptimizeOptionsProperty(parent, defaultWidth);
+            AddUnlockOptionsProperty(parent, defaultWidth);
+            AddResourceOptionsProperty(parent, defaultWidth);
+        }
+
+        private static void AddModInfoProperty(UIComponent parent, float width) {
+            OptionPanelTool.AddGroup(parent, width, CommonLocalize.OptionPanel_ModInfo);
+            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion}({ModMainInfo<Mod>.VersionType})", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.FastReturn}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.SortSettings}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => {
@@ -58,55 +64,21 @@ namespace GameAnarchy {
                 ControlPanelManager.OnLocaleChanged();
             });
             OptionPanelTool.Reset();
-            #endregion
+        }
 
-            OptionPanelTool.AddGroup(parent, defaultWidth, Localize.OptimizeOptions);
+        private void AddOptimizeOptionsProperty(UIComponent parent, float width) {
+            OptionPanelTool.AddGroup(parent, width, Localize.OptimizeOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localize.EnableAchievements, null, _ => {
                 Config.Instance.EnabledAchievements = _;
                 AchievementsManager.UpdateAchievements(_);
             }, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledSkipIntro, Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddSliderAlpha(null, Localize.OptionsPanelHorizontalOffsetTooltip, Localize.OptionsPanelHorizontalOffset, 0, 400f, 5f, Config.Instance.OptionPanelCategoriesOffset, new SliderAlphaSize(60, 594, 30), (c, _) => Config.Instance.OptionPanelCategoriesOffset = (uint)_, out UILabel _, out UILabel _, out SliderAlpha slider0);
-            OptionPanelTool.Reset();
-
-            AddUnlockOptionsGroup(parent, defaultWidth);
-            AddResourceOptionsGroup(parent, defaultWidth);
-
-        }
-        private readonly List<UIPanel> CashAnarchyPanels = new();
-        private UIPanel InitalCashPanel;
-        private void AddResourceOptionsGroup(UIComponent parent, float width) {
-            OptionPanelTool.AddGroup(parent, width, Localize.UnlockOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localize.Refund, null, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localize.VanillaUnlimitedMoneyMode, Localize.VanillaUnlimitedMoneyModeMinor, _ => {
-                Config.Instance.UnlimitedMoney = _;
-                if (_) CashAnarchy.IsChecked = false;
-            }, out UILabel _, out UILabel _, out VanillaUnlimitedMoney);
-            OptionPanelTool.AddToggleButton(Config.Instance.CashAnarchy, Localize.MoneyAnarchyMode, Localize.MoneyAnarchyModeMinor, _ => {
-                Config.Instance.CashAnarchy = _;
-                if (_) VanillaUnlimitedMoney.IsChecked = false;
-                foreach (var item in CashAnarchyPanels) {
-                    item.isEnabled = _;
-                }
-            }, out UILabel _, out UILabel _, out CashAnarchy);
-            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField0, majorOffset: new(20, 0, 0, 0)));
-            valueField0.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = (int)v;
-            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField1, majorOffset: new(20, 0, 0, 0)));
-            valueField1.OnValueChanged += (v) => Config.Instance.DefaultGetCash = (int)v;
-            foreach (var item in CashAnarchyPanels) {
-                item.isEnabled = Config.Instance.CashAnarchy;
-            }
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledInitialCash, Localize.InitialCash, null, _ => {
-                Config.Instance.EnabledInitialCash = _;
-                InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
-            }, out UILabel _, out UILabel _, out ToggleButton _);
-            InitalCashPanel = OptionPanelTool.AddField(Localize.InitialCashWarning, null, Config.Instance.InitialCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField2, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
-            InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
+            OptionPanelTool.AddSliderAlpha(Localize.OptionsPanelHorizontalOffsetTooltip, null, Localize.OptionsPanelHorizontalOffset, 0, 400f, 5f, Config.Instance.OptionPanelCategoriesOffset, new SliderAlphaSize(60, 594, 30), (c, _) => Config.Instance.OptionPanelCategoriesOffset = (uint)_, out UILabel _, out UILabel _, out SliderAlpha slider0);
             OptionPanelTool.Reset();
         }
 
         private readonly List<UIPanel> CustomUnlockPanels = new();
-        private void AddUnlockOptionsGroup(UIComponent parent, float width) {
+        private void AddUnlockOptionsProperty(UIComponent parent, float width) {
             OptionPanelTool.AddGroup(parent, width, Localize.UnlockOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledUnlockAll, Localize.UnlockAll, Localize.UnlockAllMinor, _ => {
                 Config.Instance.EnabledUnlockAll = _;
@@ -137,10 +109,37 @@ namespace GameAnarchy {
             OptionPanelTool.Reset();
         }
 
-        private static void AddModInfoGroup(float width) {
-
+        private readonly List<UIPanel> CashAnarchyPanels = new();
+        private UIPanel InitalCashPanel;
+        private void AddResourceOptionsProperty(UIComponent parent, float width) {
+            OptionPanelTool.AddGroup(parent, width, Localize.UnlockOptions);
+            OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localize.Refund, null, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
+            OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localize.VanillaUnlimitedMoneyMode, Localize.VanillaUnlimitedMoneyModeMinor, _ => {
+                Config.Instance.UnlimitedMoney = _;
+                if (_) CashAnarchy.IsChecked = false;
+            }, out UILabel _, out UILabel _, out VanillaUnlimitedMoney);
+            OptionPanelTool.AddToggleButton(Config.Instance.CashAnarchy, Localize.MoneyAnarchyMode, Localize.MoneyAnarchyModeMinor, _ => {
+                Config.Instance.CashAnarchy = _;
+                if (_) VanillaUnlimitedMoney.IsChecked = false;
+                foreach (var item in CashAnarchyPanels) {
+                    item.isEnabled = _;
+                }
+            }, out UILabel _, out UILabel _, out CashAnarchy);
+            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField0, majorOffset: new(20, 0, 0, 0)));
+            valueField0.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = (int)v;
+            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localize.AddCashAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField1, majorOffset: new(20, 0, 0, 0)));
+            valueField1.OnValueChanged += (v) => Config.Instance.DefaultGetCash = (int)v;
+            foreach (var item in CashAnarchyPanels) {
+                item.isEnabled = Config.Instance.CashAnarchy;
+            }
+            OptionPanelTool.AddToggleButton(Config.Instance.EnabledInitialCash, Localize.InitialCash, null, _ => {
+                Config.Instance.EnabledInitialCash = _;
+                InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
+            }, out UILabel _, out UILabel _, out ToggleButton _);
+            InitalCashPanel = OptionPanelTool.AddField(Localize.InitialCashWarning, null, Config.Instance.InitialCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField2, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
+            InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
+            OptionPanelTool.Reset();
         }
-
 
     }
 
