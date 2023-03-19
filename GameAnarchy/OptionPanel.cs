@@ -52,8 +52,8 @@ namespace GameAnarchy {
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion} [{ModMainInfo<Mod>.VersionType}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.FastReturn}]", null, out UILabel _, out UILabel _);
             OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.SortSettings}]", null, out UILabel _, out UILabel _);
-            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown dropDown, new RectOffset(6, 10, 6, 0), new RectOffset(6, 6, 4, 0));
-            dropDown.eventSelectedIndexChanged += (c, v) => OnLanguageSelectedIndexChanged<OptionPanel>(v);
+            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => OnLanguageSelectedIndexChanged<OptionPanel>(v)/*, new RectOffset(6, 10, 6, 0), new RectOffset(6, 6, 4, 0)*/);
+            //dropDown.eventSelectedIndexChanged += (c, v) => OnLanguageSelectedIndexChanged<OptionPanel>(v);
             OptionPanelTool.Reset();
             #endregion
 
@@ -118,7 +118,7 @@ namespace GameAnarchy {
                     }
                 }
             }, out UILabel _, out UILabel _, out CustomUnlock);
-            CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30,  out UILabel _, out UILabel _, out UIDropDown dropDown0, /*new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0)*//*,*/ new RectOffset(20, 0, 0, 0)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, out UILabel _, out UILabel _, out UIDropDown dropDown0, /*new RectOffset(10, 10, 8, 0), new RectOffset(6, 6, 4, 0)*//*,*/majorOffset: new RectOffset(20, 0, 0, 0)));
             dropDown0.eventSelectedIndexChanged += (c, value) => Config.Instance.MilestoneLevel = value;
             CustomUnlockPanels.Add(OptionPanelTool.AddToggleButton(Config.Instance.EnabledInfoView, Localize.EnabledInfoView, null, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0)));
             CustomUnlockPanels.Add(OptionPanelTool.AddToggleButton(Config.Instance.UnlockAllRoads, Localize.UnlockAllRoads, null, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0)));
