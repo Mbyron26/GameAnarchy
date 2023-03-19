@@ -132,9 +132,6 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Probabilité de propagation du feu</value>
   </data>
-  <data name="CashAnarchy" xml:space="preserve">
-    <value>Mode anarchique en espèces, automatique/manuel(raccourci) ajouter du cash</value>
-  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Options des services de la ville</value>
   </data>
@@ -254,6 +251,12 @@
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Étend et optimise les fonctions du jeu.</value>
+  </data>
+  <data name="MoneyAnarchyMode" xml:space="preserve">
+    <value>Money anarchy mode</value>
+  </data>
+  <data name="MoneyAnarchyModeMinor" xml:space="preserve">
+    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>Monument</value>
@@ -411,11 +414,29 @@
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT] Mise à jour des composants de l'interface d'options utilisateur.</value>
   </data>
+  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
+    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
+    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
+    <value>[OPT]Optimized control panel invoke speed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
+    <value>[OPT]Optimized control panel toggle button UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
+    <value>[UPT]Updated compatibility check.</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Jeu de base</value>
   </data>
-  <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>Mode argent illimité Vanilla, permettre le basculement dynamique</value>
+  <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
+    <value>Vanilla unlimited money mode</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
+    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
     <value>Pollution de l'eau</value>

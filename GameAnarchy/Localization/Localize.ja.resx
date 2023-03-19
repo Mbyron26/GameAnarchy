@@ -132,9 +132,6 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建物の延焼確率</value>
   </data>
-  <data name="CashAnarchy" xml:space="preserve">
-    <value>Cash Anarchyモード: 自動/手動(ホットキー) で資金を追加</value>
-  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>都市サービスのオプション</value>
   </data>
@@ -254,6 +251,12 @@
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>ゲームの様々な機能を拡張＆最適化します</value>
+  </data>
+  <data name="MoneyAnarchyMode" xml:space="preserve">
+    <value>Money anarchy mode</value>
+  </data>
+  <data name="MoneyAnarchyModeMinor" xml:space="preserve">
+    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>モニュメント</value>
@@ -411,11 +414,29 @@
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]オプションパネルのUIコンポーネントを更新</value>
   </data>
+  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
+    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
+    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
+    <value>[OPT]Optimized control panel invoke speed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
+    <value>[OPT]Optimized control panel toggle button UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
+    <value>[UPT]Updated compatibility check.</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>バニラ</value>
   </data>
-  <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>バニラのUnlimited Moneyモード: 動的な切り替えを許可します。</value>
+  <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
+    <value>Vanilla unlimited money mode</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
+    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
     <value>水質汚染</value>
