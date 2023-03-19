@@ -132,9 +132,6 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
-  <data name="CashAnarchy" xml:space="preserve">
-    <value>Cash anarchy mode, automatic/manual(hotkey) add cash</value>
-  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>City Service Options</value>
   </data>
@@ -254,6 +251,12 @@
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>Extends and optimize game's functions.</value>
+  </data>
+  <data name="MoneyAnarchyMode" xml:space="preserve">
+    <value>Money anarchy mode</value>
+  </data>
+  <data name="MoneyAnarchyModeMinor" xml:space="preserve">
+    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>Monument</value>
@@ -414,8 +417,11 @@
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>
-  <data name="VanillaUnlimitedMoney" xml:space="preserve">
-    <value>Vanilla unlimited money mode, allow dynamic toggling</value>
+  <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
+    <value>Vanilla unlimited money mode</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
+    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
     <value>Water pollution</value>

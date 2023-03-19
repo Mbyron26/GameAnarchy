@@ -106,15 +106,6 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Cash anarchy mode, automatic/manual(hotkey) add cash 的本地化字符串。
-        /// </summary>
-        public static string CashAnarchy {
-            get {
-                return ResourceManager.GetString("CashAnarchy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 City Service Options 的本地化字符串。
         /// </summary>
         public static string CityServiceOptions {
@@ -471,6 +462,24 @@ namespace GameAnarchy.Localization {
         public static string MOD_Description {
             get {
                 return ResourceManager.GetString("MOD_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Money anarchy mode 的本地化字符串。
+        /// </summary>
+        public static string MoneyAnarchyMode {
+            get {
+                return ResourceManager.GetString("MoneyAnarchyMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game 的本地化字符串。
+        /// </summary>
+        public static string MoneyAnarchyModeMinor {
+            get {
+                return ResourceManager.GetString("MoneyAnarchyModeMinor", resourceCulture);
             }
         }
         
@@ -952,11 +961,20 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Vanilla unlimited money mode, allow dynamic toggling 的本地化字符串。
+        ///   查找类似 Vanilla unlimited money mode 的本地化字符串。
         /// </summary>
-        public static string VanillaUnlimitedMoney {
+        public static string VanillaUnlimitedMoneyMode {
             get {
-                return ResourceManager.GetString("VanillaUnlimitedMoney", resourceCulture);
+                return ResourceManager.GetString("VanillaUnlimitedMoneyMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Money in game only displays “∞”, this option allows dynamic toggle within game 的本地化字符串。
+        /// </summary>
+        public static string VanillaUnlimitedMoneyModeMinor {
+            get {
+                return ResourceManager.GetString("VanillaUnlimitedMoneyModeMinor", resourceCulture);
             }
         }
         
