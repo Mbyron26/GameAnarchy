@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MbyronModsCommon.UI {
-    public class CustomListBox : UIPanel {
+    public class PropertyPanel : UIPanel {
         public IUIStyle UITool { get; set; }
         public UILabel MajorLabel { get; set; }
         public UILabel MinorLabel { get; set; }
         public UIPanel CardGroupPanel { get; set; }
         public List<UIPanel> ChildrenPanels { get; set; } = new();
 
-        public CustomListBox() {
-            name = nameof(CustomListBox);
+        public PropertyPanel() {
+            name = nameof(PropertyPanel);
             autoLayout = true;
             clipChildren = true;
             autoLayoutDirection = LayoutDirection.Vertical;
@@ -21,12 +21,13 @@ namespace MbyronModsCommon.UI {
 
         public void Init(float width, string caption, RectOffset captionRectOffset, float textScale, Color32 captionColor, RectOffset groupPanelPadding, Action<UIPanel> setGroupPanelStyle = null, UIFont font = null) {
             this.width = width;
-            autoLayoutPadding = groupPanelPadding;
+            if (groupPanelPadding is not null)
+                autoLayoutPadding = groupPanelPadding;
             if (caption is not null) {
                 MajorLabel = CustomLabel.AddLabel(this, caption, width, captionRectOffset, textScale, captionColor);
-            }
-            if (font is not null) {
-                MajorLabel.font = font;
+                if (font is not null) {
+                    MajorLabel.font = font;
+                }
             }
             CardGroupPanel = AddUIComponent<UIPanel>();
             CardGroupPanel.width = width;
@@ -46,7 +47,7 @@ namespace MbyronModsCommon.UI {
 
         public UIPanel AddChildPanel(Action<UIPanel> setStyle = null, float height = 32f) {
             var panel = CardGroupPanel.AddUIComponent<UIPanel>();
-            panel.name = "PropertyCard_ChildPanel";
+            panel.name = "PropertyPanel_ChildPanel";
             panel.width = width;
             panel.height = height;
             ChildrenPanels.Add(panel);

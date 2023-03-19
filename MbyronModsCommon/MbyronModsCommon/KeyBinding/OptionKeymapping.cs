@@ -36,8 +36,8 @@ namespace MbyronModsCommon {
             Panel.width = 724;
             Panel.height = 30;
             Panel.autoLayout = false;
-            Label = CustomLabel.AddLabel(Panel, "Template", 100, color: Color.white);
-            Button = CustomButton.AddGreenButton(Panel, "Template", 30, 280, null);
+            Label = CustomLabel.AddLabel(Panel, "Template", 100, null);
+            Button = CustomButton.AddClickButton(Panel, "Template", 280, 30,  null);
             IUIStyle uiTool = new UIStyleAlpha(Panel) { Child = Button, MajorLabel = Label, Padding = new(0, 0, 10, 10) };
             uiTool.RefreshLayout();
             Button.eventKeyDown += OnBindingKeyDown;

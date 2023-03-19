@@ -2,11 +2,9 @@
 using System.ComponentModel;
 using System;
 using UnityEngine;
-using ColossalFramework;
 
 namespace MbyronModsCommon.UI {
     public class CustomField {
-
         public static TypeField AddOptionPanelValueField<TypeField, TypeValue>(UIComponent parent, TypeValue defaultValue, TypeValue minLimit, TypeValue maxLimit, Action<TypeValue> callback = null, float fieldWidth = 100, float fieldHeight = 28) where TypeField : CustomValueFieldBase<TypeValue> where TypeValue : IComparable {
             var valueField = parent.AddUIComponent<TypeField>();
             valueField.horizontalAlignment = UIHorizontalAlignment.Left;
@@ -37,43 +35,25 @@ namespace MbyronModsCommon.UI {
             return valueField;
         }
 
-        public static UIPanel AddOptionPanelStringField(UIComponent parent, string textLabel, string text, out UILabel uiLabel, out UITextField uiTextField, float fieldWidth = 704, float fieldHeight = 32) {
-            var panel = parent.AttachUIComponent(UITemplateManager.GetAsGameObject("OptionsTextfieldTemplate")) as UIPanel;
-            panel.autoFitChildrenVertically = true;
-            uiLabel = panel.Find<UILabel>("Label");
-            if (textLabel.IsNullOrWhiteSpace()) {
-                uiLabel.Hide();
+        public static UITextField AddTextField(UIComponent parent, string text, float width, float height, float textScale = 1f, Action<UITextField> setSprite = null) {
+            UITextField uiTextField = parent.AddUIComponent<UITextField>();
+            uiTextField.width = width;
+            uiTextField.height = height;
+            if (setSprite is not null) {
+                setSprite(uiTextField);
             } else {
-                uiLabel.autoSize = false;
-                uiLabel.autoHeight = true;
-                uiLabel.wordWrap = true;
-                uiLabel.textScale = 1f;
-                uiLabel.text = textLabel;
+                uiTextField.atlas = CustomAtlas.CommonAtlas;
+                uiTextField.normalBgSprite = CustomAtlas.TabButtonNormal;
+                uiTextField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
+                uiTextField.selectionSprite = CustomAtlas.EmptySprite;
             }
-            uiTextField = panel.Find<UITextField>("Text Field");
-            uiTextField.width = fieldWidth;
-            uiTextField.height = fieldHeight;
-            uiTextField.atlas = CustomAtlas.CommonAtlas;
-            uiTextField.normalBgSprite = CustomAtlas.TabButtonNormal;
-            uiTextField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
-            uiTextField.selectionSprite = CustomAtlas.EmptySprite;
             uiTextField.padding = new RectOffset(8, 6, 8, 6);
             uiTextField.textScale = 1f;
             uiTextField.text = text;
-            return panel;
+            return uiTextField;
         }
 
-        public static CustomLongValueField AddLongValueField(UIComponent parent, float width, float height, long defaultValue, long wheelStep, long minLimit, long maxLimit, int round = 1, bool useWheel = true) => AddField<CustomLongValueField, long>(parent, width, height, defaultValue, wheelStep, minLimit, maxLimit, useWheel);
-
-        public static CustomFloatValueField AddFloatValueField(UIComponent parent, float width, float height, float defaultValue, int wheelStep, int minLimit, int maxLimit, int round = 1, bool useWheel = true) {
-            var floatValueField = AddField<CustomFloatValueField, float>(parent, width, height, defaultValue, wheelStep, minLimit, maxLimit, useWheel);
-            floatValueField.Round = round;
-            return floatValueField;
-        }
-
-        public static CustomIntValueField AddIntValueField(UIComponent parent, float width, float height, int defaultValue, int wheelStep, int minLimit, int maxLimit, bool useWheel = true) => AddField<CustomIntValueField, int>(parent, width, height, defaultValue, wheelStep, minLimit, maxLimit, useWheel);
-
-        public static TypeValueField AddField<TypeValueField, TypeValue>(UIComponent parent, float width, float height, TypeValue defaultValue, TypeValue wheelStep, TypeValue minLimit, TypeValue maxLimit, bool useWheel) where TypeValueField : CustomValueFieldBase<TypeValue> where TypeValue : IComparable {
+        public static TypeValueField AddField<TypeValueField, TypeValue>(UIComponent parent, float width, float height, TypeValue defaultValue, TypeValue wheelStep, TypeValue minLimit, TypeValue maxLimit, Action<TypeValue> callback, bool useWheel = true, bool showTooltip = true) where TypeValueField : CustomValueFieldBase<TypeValue> where TypeValue : IComparable {
             TypeValueField valueField = parent.AddUIComponent<TypeValueField>();
             valueField.width = width;
             valueField.height = height;
@@ -83,10 +63,11 @@ namespace MbyronModsCommon.UI {
             valueField.Value = defaultValue;
             valueField.UseWheel = useWheel;
             valueField.WheelStep = wheelStep;
+            valueField.ShowTooltip = showTooltip;
+            valueField.OnValueChanged += (v) => callback?.Invoke(v);
             return valueField;
         }
     }
-
 
 
     public class CustomFloatValueField : CustomValueFieldBase<float> {

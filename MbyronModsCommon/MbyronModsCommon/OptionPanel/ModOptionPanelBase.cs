@@ -6,11 +6,11 @@ using UnityEngine;
 namespace MbyronModsCommon {
     public class AdvancedBase<Mod, Config> where Mod : IMod where Config : ModConfigBase<Config> {
         public AdvancedBase(UIComponent parent, TypeWidth typeWidth) {
-            OptionPanelTools.Instance.AddGroup(parent, (float)typeWidth, CommonLocalize.OptionPanel_Advanced);
-            OptionPanelTools.Instance.AddToggleButton(SingletonMod<Config>.Instance.DebugMode, CommonLocalize.OptionPanel_DebugMode, CommonLocalize.OptionPanel_DebugMinor, _ => SingletonMod<Config>.Instance.DebugMode = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTools.Instance.AddButton(CommonLocalize.ChangeLog_Major, null, CommonLocalize.ChangeLog, 250, 30, ShowLog, out UILabel _, out UILabel _, out UIButton _);
-            OptionPanelTools.Instance.AddButton(CommonLocalize.CompatibilityCheck_Major, CommonLocalize.CompatibilityCheck_Minor, CommonLocalize.Check, 250, 30, ShowCompatibility, out UILabel _, out UILabel _, out UIButton _);
-            OptionPanelTools.Instance.Reset();
+            OptionPanelTool.AddGroup(parent, (float)typeWidth, CommonLocalize.OptionPanel_Advanced);
+            OptionPanelTool.AddToggleButton(SingletonMod<Config>.Instance.DebugMode, CommonLocalize.OptionPanel_DebugMode, CommonLocalize.OptionPanel_DebugMinor, _ => SingletonMod<Config>.Instance.DebugMode = _, out UILabel _, out UILabel _, out ToggleButton _);
+            OptionPanelTool.AddButton(CommonLocalize.ChangeLog_Major, null, CommonLocalize.ChangeLog, 250, 30, ShowLog, out UILabel _, out UILabel _, out UIButton _);
+            OptionPanelTool.AddButton(CommonLocalize.CompatibilityCheck_Major, CommonLocalize.CompatibilityCheck_Minor, CommonLocalize.Check, 250, 30, ShowCompatibility, out UILabel _, out UILabel _, out UIButton _);
+            OptionPanelTool.Reset();
         }
         private static void ShowLog() {
             var messageBox = MessageBox.Show<LogMessageBox>();
@@ -27,7 +27,7 @@ namespace MbyronModsCommon {
         protected UIComponent Parent { get; set; }
         public GeneralOptionsBase(UIComponent parent, TypeWidth typeWidth) {
             Parent = parent;
-            CustomLabel.AddLabel(parent, ModMainInfo<Mod>.ModName, (float)typeWidth, CustomLabel.DefaultOffset, 2f, Color.white).font = CustomFont.SemiBold;
+            CustomLabel.AddLabel(parent, ModMainInfo<Mod>.ModName, (float)typeWidth, new(), 2f, Color.white).font = CustomFont.SemiBold;
         }
 
         protected static void OnLanguageSelectedIndexChanged<Panel>(int value) where Panel : UIPanel {
@@ -62,9 +62,8 @@ namespace MbyronModsCommon {
 
     }
 
-
     public enum TypeWidth {
         NormalWidth = 744,
-        ShrinkageWidth =734
+        ShrinkageWidth = 734
     }
 }

@@ -39,7 +39,7 @@ namespace MbyronModsCommon {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GameAnarchy.CommonLocalize", typeof(CommonLocalize).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ImageOverlayRenewal.CommonLocalize", typeof(CommonLocalize).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

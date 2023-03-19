@@ -1,19 +1,14 @@
 ﻿using UnityEngine;
 
 namespace MbyronModsCommon.UI {
-    public static class UIColor {
-        public static Color32 CardBackground => new(43, 47, 64, 255);
-
-        public static Color32 ButtonNormal => new(89, 115, 234, 255);
-        public static Color32 ButtonDisabled => new(52, 60, 92, 255);
-        public static Color32 ButtonHovered => new(111, 148, 242, 255);
-        public static Color32 ButtonPressed => new(196, 81, 68, 255);
-
+    public class CustomColor {
         public static Color32 White => new(255, 255, 255, 255);
-        public static Color32 Blue => new(89, 115, 234, 255);
-        public static Color32 Yellow => new(255, 212, 31, 255);
-        public static Color32 Green => new(109, 224, 7, 255);
-        public static Color32 Red => new(200, 0, 0, 255);
-        public static Color32 Orange => new(235, 111, 133, 255);
+        public static Color32 OffWhite => new(200, 200, 200, 255);
+        public static Color32 DisabledTextColor => new(71, 71, 71, 255);
+        public static Color32 GreenNormal => new(126, 179, 69, 255);
+        public static Color32 GreenDisabled => new(50, 60, 30, 255);
+        public static Color32 GreenHovered => new(158, 217, 94, 255);
+        public static Color32 GreenPressed => new(105, 177, 26, 255);
+        public static Color32 Orange => new(170, 93, 46, 255);
     }
 }

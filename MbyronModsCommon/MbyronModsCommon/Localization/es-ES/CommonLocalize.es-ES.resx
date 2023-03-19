@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ChangeLog" xml:space="preserve">
-    <value>Change log</value>
+    <value>Registro de cambios</value>
   </data>
   <data name="ChangeLog_Major" xml:space="preserve">
-    <value>Mod change log</value>
+    <value>Registro de cambios del mod</value>
   </data>
   <data name="Check" xml:space="preserve">
-    <value>Check</value>
+    <value>Verificar</value>
   </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>Este Mod es incompatible.</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Mod compatibility check</value>
+    <value>Verificación de compatibilidad del mod</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
-    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
+    <value>Esta función sólo detecta problemas de compatibilidad relacionados con este mod. Para comprobar la compatibilidad de todos los mods, se recomienda el mod [Compatibility Report].</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>ya incluye la misma funcionalidad.</value>
@@ -148,7 +148,7 @@
     <value>Presione cualquier tecla</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Lenguaje</value>
+    <value>Idioma</value>
   </data>
   <data name="Language_de" xml:space="preserve">
     <value>Alemán</value>
@@ -190,7 +190,7 @@
     <value>Ruso</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>Turco</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>Chino Simplificado</value>
@@ -238,7 +238,7 @@
     <value>Verificación de compatibilidad</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
+    <value>Funciones avanzadas. Sólo se utiliza para depurar los errores. Si algo sale mal, se recomienda activar esta opción y enviar tu registro de errores al autor del mod después de reproducir los problemas.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Modo de depuración</value>
@@ -247,30 +247,31 @@
     <value>General</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
-    <value>Atajos de teclado</value>
+    <value>Configuración de teclas</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>esta Desactivado</value>
+    <value>Está Desactivado</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>esta Activado</value>
+    <value>Está Activado</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>Información del Mod</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Versión</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+    <value>Desplazar la rueda del ratón para cambiar,
+Mayús x10, Ctrl x0.1</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
-    <value>Show control panel</value>
+    <value>Mostrar panel de control</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>¡Atención! El mod normalmente no puede leer los datos antiguos de configuración. Han sido cargadas las configuraciones por defecto del mod. Por favor ingrese al panel de opciones y configúrelo antes de empezar el juego.</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Si</value>
   </data>
 </root>

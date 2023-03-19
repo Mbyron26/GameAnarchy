@@ -10,13 +10,6 @@ namespace MbyronModsCommon.UI {
             space.height = height;
             return space;
         }
-        public static UIPanel AddAutoMatchChildPanel(UIComponent parent, RectOffset autoLayoutPadding = null) {
-            var panel = parent.AddUIComponent<AutoMatchChildPanel>();
-            if (autoLayoutPadding is not null) {
-                panel.autoLayoutPadding = autoLayoutPadding;
-            }
-            return panel;
-        }
     }
 
     public class AdvancedAutoFitChildrenVerticallyPanel : AutoLayoutPanel {
@@ -51,9 +44,6 @@ namespace MbyronModsCommon.UI {
             height = totalHeight;
         }
     }
-
-
-
 
     public class AutoMatchChildPanel : AutoLayoutPanel {
         public AutoMatchChildPanel() {

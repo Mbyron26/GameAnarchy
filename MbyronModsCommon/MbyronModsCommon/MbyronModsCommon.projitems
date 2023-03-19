@@ -27,24 +27,23 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\XMLUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\CustomOptionKeymapping.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\ModOptionPanelBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelTool.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomAtlas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomCheckBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomColor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomDropDown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomField.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomLabel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomListBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\PropertyPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomScrollablePanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomScrollbar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomSlider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomTabs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomTabStrip.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIPanel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UI\ControlPanelTools.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlPanel\ControlPanelTool.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\UITools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\UIUtils.cs" />
   </ItemGroup>
@@ -59,7 +58,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldFocused.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHovered.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\GradientSlider.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderGamma.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ListBackground.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneHovered.png" />
@@ -71,12 +70,11 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGOneNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGZeroDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGZeroNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderLeftSprite.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderMidSprite.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderRightSprite.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaLeftSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaMidSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaRightSprite.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderThumb.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderThumb1.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonHovered.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonNormal.png" />
@@ -106,5 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
   </ItemGroup>
 </Project>

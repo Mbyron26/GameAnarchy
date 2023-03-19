@@ -3,6 +3,7 @@ using ColossalFramework.UI;
 using ColossalFramework;
 using System;
 using UnityEngine;
+using ICities;
 
 namespace MbyronModsCommon {
     public static class MessageBox {
@@ -134,12 +135,11 @@ namespace MbyronModsCommon {
             ButtonPanel.size = new Vector2(defaultWidth, buttonPanelHeight);
         }
 
-        protected void AddButtons(uint number, uint total, string _text, Action action) {
+        protected void AddButtons(uint number, uint total, string _text, OnButtonClicked callback) {
             var spacing = (total - 1) * DefaultPadding;
             var buttonWidth = (defaultWidth - 2 * DefaultPadding - spacing) / total;
-            UIButton button = CustomButton.AddButton(ButtonPanel, 1f, _text, buttonWidth, buttonHeight);
+            UIButton button = CustomButton.AddClickButton(ButtonPanel, _text, buttonWidth, buttonHeight, callback, 1f, true);
             ArrangePosition(button, number, buttonWidth);
-            button.eventClicked += (component, eventParam) => action?.Invoke();
         }
 
         private UIButton ArrangePosition(UIButton button, uint number, float buttonWidth) {

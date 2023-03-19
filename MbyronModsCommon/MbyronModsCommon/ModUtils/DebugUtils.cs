@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Text;
 
 namespace MbyronModsCommon {
     public static class DebugUtils {
@@ -8,23 +7,6 @@ namespace MbyronModsCommon {
             new TimeCalculater().AddMethod(action).InvokeMethod(out string time, loop);
             ModLogger.ModLog(tag + time);
         }
-
-        public static void StackTrace(int frame = 1) {
-            StackTrace stackTrace = new();
-            StringBuilder stringBuilder = new();
-            stringBuilder.Append($"Frame = {frame}, ");
-            Type type = stackTrace.GetFrame(frame).GetMethod().DeclaringType;
-            string method = stackTrace.GetFrame(frame).GetMethod().ToString();
-            if (type != null) {
-                stringBuilder.Append($"class: {type}  ||  ");
-            }
-            if (method != null) {
-                stringBuilder.Append($"method: {method}");
-            }
-            ModLogger.ModLog($"{stringBuilder}");
-        }
-
-
     }
     public sealed class TimeCalculater {
         private Action action;
