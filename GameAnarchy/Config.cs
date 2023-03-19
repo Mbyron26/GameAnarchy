@@ -52,14 +52,14 @@ namespace GameAnarchy {
         public uint BuildingSpreadFireProbability { get; set; } = 0;
         public uint TreeSpreadFireProbability { get; set; } = 0;
 
-        public bool UnlimitedPlayerBuilding { get; set; } = false;
-        public bool UnlimitedMonument { get; set; } = false;
-        public bool UnlimitedMainCampusBuilding { get; set; } = false;
-        public bool UnlimitedUniqueFactory { get; set; } = false;
-        public bool UnlimitedStockExchange { get; set; } = false;
-        public bool UnlimitedUniqueFaculty { get; set; } = false;
-        public bool UnlimitedWeatherRadar { get; set; } = false;
-        public bool UnlimitedSpaceRadar { get; set; } = false;
+        public bool UnlimitedPlayerBuilding { get; set; } = true;
+        public bool UnlimitedMonument { get; set; } = true;
+        public bool UnlimitedMainCampusBuilding { get; set; } = true;
+        public bool UnlimitedUniqueFactory { get; set; } = true;
+        public bool UnlimitedStockExchange { get; set; } = true;
+        public bool UnlimitedUniqueFaculty { get; set; } = true;
+        public bool UnlimitedWeatherRadar { get; set; } = true;
+        public bool UnlimitedSpaceRadar { get; set; } = true;
 
         public bool MaximizeFireCoverage { get; set; } = false;
         public bool RemovePlayerBuildingFire { get; set; } = false;
