@@ -150,7 +150,7 @@ namespace MbyronModsCommon {
                 return null;
             }
             var panel = AddChildPanel();
-            slider = CustomSlider.AddSliderAlpha(panel, sliderText, min, max, step, defaultVal, sliderSize, callback, min.ToString(), max.ToString(), new(0, 0, 6, 0));
+            slider = CustomSlider.AddSliderAlpha(panel, sliderText, min, max, step, defaultVal, sliderSize, callback, min.ToString(), max.ToString(), new(0, 0, 4, 0));
             majorLabel = null;
             minorLabel = null;
             if (majorText is not null) {
