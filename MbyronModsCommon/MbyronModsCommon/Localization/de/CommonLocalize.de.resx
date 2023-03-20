@@ -130,7 +130,7 @@
     <value>Dieser Mod ist inkompatibel.</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Kompatibilitätsprüfung</value>
+    <value>Mod Kompatibilitätsprüfung</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
     <value>Diese Funktion erkennt nur Kompatibilitätsprobleme im Zusammenhang mit diesem Mod. Um die Kompatibilität aller Mods zu überprüfen, wird [Kompatibilitätsbericht] Mod empfohlen.</value>
@@ -184,7 +184,7 @@
     <value>Portugiesisch</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portugiesisch-Brasilianisch</value>
+    <value>Portugiesisch-Brasilien</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russisch</value>
@@ -223,7 +223,7 @@
     <value>OK</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Inkompatible Mods wurden entdeckt, um sicherzustellen, dass diese Mod ordnungsgemäß funktioniert, müssen Sie folgende Mods abbestellen:</value>
+    <value>Es wurden inkompatible Mods entdeckt, um sicherzustellen, dass diese Mod ordnungsgemäß funktioniert, musst du die folgende(n) Mod(s) abbestellen:</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>Nein</value>
@@ -238,7 +238,7 @@
     <value>Kompatibilitätsprüfung</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Erweiterte Funktionen werden nur für die Fehlersuche verwendet. Wenn etwas schief geht, wird empfohlen, diese Option zu aktivieren und Ihr Log nach Wiederholung von Problemen an Entwickler zu senden.</value>
+    <value>Fortgeschrittene Funktionen. Es wird nur zum Debuggen der Ausgabe verwendet. Wenn etwas schief geht, ist es empfehlenswert, diese Option zu aktivieren und dein Protokoll nach wiederholten Problemen an den Entwickler zu senden.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Debug-Modus</value>
@@ -256,20 +256,19 @@
     <value>Ist aktiviert</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod-Information</value>
+    <value>Mod Information</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Version</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Mausrad scrollen zum Ändern
-Shift x10, Strg x0,1</value>
+    <value>Zum Ändern das Mausrad drehen, Shift X10, Strg X0,1</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
     <value>Kontrollleiste anzeigen</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warnung! Mod kann die alten Konfigurationsdaten nicht lesen. Die Standardkonfiguration wurde für den Mod geladen. Bitte gehen Sie in die Einstellungen und konfigurieren Sie Ihre Einstellungen, bevor Sie das Spiel starten.</value>
+    <value>Warnung! Mod kann die alten Konfigurationsdaten nicht lesen. Jetzt wurde die Standardkonfiguration für den Mod geladen. Bitte gehe zu den Einstellungen und konfiguriere diese, bevor du das Spiel startest.</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
