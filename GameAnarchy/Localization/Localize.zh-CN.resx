@@ -253,10 +253,10 @@
     <value>扩展、优化游戏特性。</value>
   </data>
   <data name="MoneyAnarchyMode" xml:space="preserve">
-    <value>Money anarchy mode</value>
+    <value>金钱无限制模式</value>
   </data>
   <data name="MoneyAnarchyModeMinor" xml:space="preserve">
-    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
+    <value>此选项允许自动（设置以下两个选项）/ 手动（使用快捷键）设置金钱，允许您在游戏中动态切换。</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>遗迹</value>
@@ -415,28 +415,28 @@
     <value>[UPT]更新了选项面板的UI组件。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+    <value>[FIX]修复了控制面板显示语言不跟随语言切换的问题。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+    <value>[FIX]修复了选项面板中无法更改金钱选项的问题。</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimized control panel invoke speed.</value>
+    <value>[OPT]优化了控制面板唤起速度。</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimized control panel toggle button UI style.</value>
+    <value>[OPT]优化了控制面板开/关按钮的UI风格。</value>
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Updated compatibility check.</value>
+    <value>[UPT]更新了兼容性检查。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>Vanilla unlimited money mode</value>
+    <value>原版无限金钱模式</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
-    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
+    <value>游戏内金钱只显示 “∞”，此选项允许您在游戏中动态切换</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
     <value>水污染</value>
