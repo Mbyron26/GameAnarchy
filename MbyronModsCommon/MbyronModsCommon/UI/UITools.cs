@@ -3,6 +3,57 @@ using System.Collections;
 using UnityEngine;
 
 namespace MbyronModsCommon.UI {
+    public class UIStyleDelta : UIStyleBase {
+        private float gap = 8;
+        public float Gap {
+            get => gap;
+            set {
+                if (!value.Equals(gap)) {
+                    gap = value;
+                    RefreshLayout();
+                }
+            }
+        }
+        public UIStyleDelta(UIComponent parent, UIComponent child, UILabel major, UILabel minor, RectOffset padding) {
+            Parent = parent;
+            Child = child;
+            MajorLabel = major;
+            MinorLabel = minor;
+            Padding = padding;
+            RefreshLayout();
+        }
+
+        public override void RefreshLayout() {
+            float height0 = default;
+            float height1 = default;
+            float height2 = default;
+            if (Child is not null) {
+                Child.relativePosition = new Vector2(padding.left, padding.top);
+                height0 = Child.height;
+            }
+            if (MajorLabel is not null) {
+                var width = Parent.width - padding.horizontal - gap - (Child is null ? 0 : Child.width);
+                MajorLabel.width = width;
+                MajorLabel.padding.top = 1;
+                MajorLabel.relativePosition = new Vector2(Child.relativePosition.x + Child.size.x + gap, padding.top);
+                height1 = MajorLabel.height;
+            }
+            if (MinorLabel is not null) {
+                MinorLabel.width = Parent.width - padding.horizontal;
+                MinorLabel.relativePosition = height0 > height1 ? new Vector2(padding.left, padding.top + height0 + gap) : (height0 < height1 ? new Vector2(padding.left, padding.top + height1 + gap) : new Vector2(padding.left, height0 == 0 ? padding.top + height1 + padding.vertical : padding.top + height0 + padding.vertical));
+                height2 = MinorLabel.height;
+            }
+            if (height0 > height1) {
+                Parent.height = height0 + padding.vertical + (height2 == 0 ? 0 : height2 + gap);
+            } else if (height0 < height1) {
+                Parent.height = height1 + padding.vertical + (height2 == 0 ? 0 : height2 + gap); ;
+            } else {
+                Parent.height = height0 == 0 ? height1 + padding.vertical : height0 + padding.vertical + (height2 == 0 ? 0 : height2 + gap); ;
+            }
+
+        }
+    }
+
     public class UIStyleGamma : UIStyleBase {
         private float gap = 2;
         private UIHorizontalAlignment horizontalAlignment = UIHorizontalAlignment.Center;

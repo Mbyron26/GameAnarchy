@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,330 +118,330 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>增加現金</value>
+    <value>添加現金</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>加錢金額</value>
+    <value>添加現金金額</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>自動加錢門檻</value>
+    <value>增加現金門檻</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>Make sure Cash Anarchy feature is enabled.</value>
+    <value>確保 Cash Anarchy 功能已啟用。</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
-    <value>Building spread fire probability</value>
+    <value>建築物蔓延火災概率</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>City Service Options</value>
+    <value>城市服務選項</value>
   </data>
   <data name="Commercial" xml:space="preserve">
-    <value>Commercial</value>
+    <value>商業的</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>Custom unlock</value>
+    <value>自定義解鎖</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options.</value>
+    <value>當啟用“全部解鎖”功能時，這些選項不可用，因為全部解鎖已解鎖以下所有選項。</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>Achievements system is always available</value>
+    <value>成就係統隨時可用</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>Info view is always available</value>
+    <value>信息視圖始終可用</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>Skip game Intro interface</value>
+    <value>跳過遊戲介紹界面</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Place unique buildings without limit</value>
+    <value>放置獨特的建築不受限制</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>Fast Return</value>
+    <value>快速返回</value>
   </data>
   <data name="FireControl" xml:space="preserve">
-    <value>Fire Control</value>
+    <value>消防</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
-    <value>Ground pollution</value>
+    <value>地面污染</value>
   </data>
   <data name="Income" xml:space="preserve">
-    <value>Income</value>
+    <value>收入</value>
   </data>
   <data name="IncomeMultiplier" xml:space="preserve">
-    <value>Income multiplier</value>
+    <value>收入乘數</value>
   </data>
   <data name="Industrial" xml:space="preserve">
-    <value>Industrial</value>
+    <value>工業的</value>
   </data>
   <data name="InitialCash" xml:space="preserve">
-    <value>Game Initial cash</value>
+    <value>遊戲初始現金</value>
   </data>
   <data name="InitialCashWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts.</value>
+    <value>在開始遊戲之前設置值。如果你不想每次加載存檔時錢都是這個值，啟用一次後禁用此功能。遊戲模擬開始後，現金將發生變化。</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disabled this local mod if you wan to use Game Anarchy funcitons.</value>
+    <value>Buildtin mod，Game Anarchy 已經包含相同的功能。如果您想使用 Game Anarchy 功能，請禁用此本地模組。</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disable this local mod and set initial amount in GA's Settings panel in case your city goes bankrupt due to overdraft (to avoid the game crashing).</value>
+    <value>Buildtin mod，Game Anarchy 已經包含相同的功能。請禁用此本地模塊並在 GA 的設置面板中設置初始金額，以防您的城市因透支而破產（以避免遊戲崩潰）。</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>Main campus building</value>
+    <value>主校園大樓</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>Maximize attractiveness, will atract more tourists</value>
+    <value>吸引力最大化，會吸引更多的遊客</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>Maximize education coverage, still need schools to get educated citizens</value>
+    <value>最大限度地擴大教育覆蓋面，仍然需要學校讓受過教育的公民</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>Maximize entertainment, will improve citizens' happiness</value>
+    <value>最大限度地娛樂，將提高市民的幸福感</value>
   </data>
   <data name="MaximizeFireCoverage" xml:space="preserve">
-    <value>Maximize fire coverage</value>
+    <value>最大化火力覆蓋</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>Maximize the land value of city</value>
+    <value>城市土地價值最大化</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>Big City</value>
+    <value>大城市</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>Big Town</value>
+    <value>大城鎮</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>Boom Town</value>
+    <value>繁榮之城</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>Busy Town</value>
+    <value>繁忙的城鎮</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>Capital City</value>
+    <value>首都</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>Colossal City</value>
+    <value>巨大的城市</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>Grand City</value>
+    <value>大城市</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>Little Hamlet</value>
+    <value>小哈姆雷特</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>Megalopolis</value>
+    <value>特大城市</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>Metropolis</value>
+    <value>都會</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>Milestone unlock level</value>
+    <value>里程碑解鎖等級</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>Small City</value>
+    <value>小城市</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>Tiny Town</value>
+    <value>小鎮</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>香草</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>Worthy Village</value>
+    <value>值得村</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>Extends and optimize game's functions.</value>
+    <value>擴展和優化遊戲的功能。</value>
   </data>
   <data name="MoneyAnarchyMode" xml:space="preserve">
-    <value>Money anarchy mode</value>
+    <value>貨幣無政府狀態模式</value>
   </data>
   <data name="MoneyAnarchyModeMinor" xml:space="preserve">
-    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
+    <value>此選項允許自動（設置以下 2 個選項）/手動（使用熱鍵）設置金錢，允許在遊戲內動態切換</value>
   </data>
   <data name="Monument" xml:space="preserve">
-    <value>Monument</value>
+    <value>紀念碑</value>
   </data>
   <data name="NoisePollution" xml:space="preserve">
-    <value>Noise pollution</value>
+    <value>噪音污染</value>
   </data>
   <data name="NoSpreadFire" xml:space="preserve">
-    <value>Non-spread of fire</value>
+    <value>火勢不蔓延</value>
   </data>
   <data name="Office" xml:space="preserve">
-    <value>Office</value>
+    <value>辦公室</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>Oil depletion rate</value>
+    <value>石油枯竭率</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>Optimize Options</value>
+    <value>優化選項</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset</value>
+    <value>選項面板類別欄水平偏移</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened.</value>
+    <value>選項面板類別欄水平偏移將在選項面板重新打開後生效。</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>Ore depletion rate</value>
+    <value>礦石貧化率</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
-    <value>Player building</value>
+    <value>玩家建築</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing building full refund</value>
+    <value>推土機建築全額退款</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
-    <value>Remove airport building fire</value>
+    <value>清除機場大樓火災</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
-    <value>Remove campus building fire</value>
+    <value>消除校園建築火災</value>
   </data>
   <data name="RemoveCommercialBuildingFire" xml:space="preserve">
-    <value>Remove commercial building fire</value>
+    <value>消除商業建築火災</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>Remove criminals from all buildings and maximize police service coverage</value>
+    <value>從所有建築物中清除罪犯並最大限度地擴大警察服務範圍</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>Remove dead citizens and maximize death care coverage</value>
+    <value>移走死去的公民並最大限度地擴大殯葬服務範圍</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>Remove garbage</value>
+    <value>清除垃圾</value>
   </data>
   <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
-    <value>Remove industrial building fire</value>
+    <value>消除工業建築火災</value>
   </data>
   <data name="RemoveMuseumFire" xml:space="preserve">
-    <value>Remove museum fire</value>
+    <value>消除博物館火災</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
-    <value>Remove office building fire</value>
+    <value>清除辦公樓火災</value>
   </data>
   <data name="RemoveParkBuildingFire" xml:space="preserve">
-    <value>Remove park building fire</value>
+    <value>消除公園建築火災</value>
   </data>
   <data name="RemovePlayerBuildingFire" xml:space="preserve">
-    <value>Remove player building fire</value>
+    <value>移除玩家建築火</value>
   </data>
   <data name="RemovePollution" xml:space="preserve">
-    <value>Remove pollution</value>
+    <value>清除污染</value>
   </data>
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
-    <value>Remove residential building fire</value>
+    <value>拆除住宅樓火災</value>
   </data>
   <data name="Residential" xml:space="preserve">
-    <value>Residential</value>
+    <value>住宅</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>Resource Options</value>
+    <value>資源選項</value>
   </data>
   <data name="Service" xml:space="preserve">
-    <value>Service</value>
+    <value>服務</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>Sort mods names in options panel</value>
+    <value>在選項面板中對模組名稱進行排序</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
-    <value>Space radar</value>
+    <value>太空雷達</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
-    <value>Stock exchange</value>
+    <value>股票交易</value>
   </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
-    <value>Tree spread fire probability</value>
+    <value>樹木蔓延火災概率</value>
   </data>
   <data name="UniqueFactory" xml:space="preserve">
-    <value>Unique factory</value>
+    <value>獨一無二的工廠</value>
   </data>
   <data name="UniqueFaculty" xml:space="preserve">
-    <value>Unique faculty</value>
+    <value>獨特的教師</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>無限</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全部解鎖</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
-    <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
+    <value>此選項與原版“全部解鎖”功能相同，雖然它允許在遊戲中動態切換，但建議在進入保存之前設置它。如果禁用此選項仍然解鎖所有，請確保您已禁用查找它！ “全部解鎖”選項。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>Unlock all roads</value>
+    <value>解鎖所有道路</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>Unlock metro track</value>
+    <value>解鎖地鐵軌道</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>Unlock Options</value>
+    <value>解鎖選項</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>Unlock policies panel</value>
+    <value>解鎖策略面板</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>Unlock train track</value>
+    <value>解鎖火車軌道</value>
   </data>
   <data name="UnlockTransport" xml:space="preserve">
-    <value>Unlock all transports</value>
+    <value>解鎖所有交通工具</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
-    <value>Unlock unique Building</value>
+    <value>解鎖獨特的建築</value>
   </data>
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
-    <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
+    <value>解鎖1到6級的所有獨特建築。由於遊戲限制，如果強制解鎖此選項，將解鎖少量建築，但不是全部。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
+    <value>[ADD]新控制面板，使用默認熱鍵Ctrl+Shift+G或使用UUI面板調用新控制面板。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
+    <value>[添加]放置沒有限制功能的獨特建築物現在拆分並集成到控制面板中。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Added fire spread control function.</value>
+    <value>[ADD]增加火勢蔓延控制功能。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
+    <value>[新增]移除火災功能現在分為多個選項，可以控制不同建築類型的火災。</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Added Turkish localization.</value>
+    <value>[添加]添加了土耳其語本地化。</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Fixed abnormal UI component location.</value>
+    <value>[修復]修復異常的UI組件位置。</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Updated framework, performance improvement.</value>
+    <value>[UPT]更新框架，性能提升。</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Updated Option Panel UI components.</value>
+    <value>[UPT]更新了選項面板 UI 組件。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+    <value>[修復]修復了控制面板不跟隨語言切換的問題。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+    <value>[修復]修復了無法更改選項面板中金錢選項的問題。</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimized control panel invoke speed.</value>
+    <value>[OPT]優化控制面板調用速度。</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimized control panel toggle button UI style.</value>
+    <value>[OPT]優化控制面板切換按鈕UI樣式。</value>
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Updated compatibility check.</value>
+    <value>[UPT]更新了兼容性檢查。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>香草</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>Vanilla unlimited money mode</value>
+    <value>香草無限金錢模式</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
-    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
+    <value>遊戲內金錢只顯示“∞”，此選項允許在遊戲內動態切換</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
-    <value>Water pollution</value>
+    <value>水污染</value>
   </data>
   <data name="WeatherRadar" xml:space="preserve">
-    <value>Weather radar</value>
+    <value>天氣雷達</value>
   </data>
 </root>

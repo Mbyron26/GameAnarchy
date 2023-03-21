@@ -29,6 +29,16 @@ namespace MbyronModsCommon.UI {
         public static string SliderGamma => nameof(SliderGamma);
         public static string SliderThumb => nameof(SliderThumb);
 
+        //Check Box
+        public static string CheckBoxFGOneNormal => nameof(CheckBoxFGOneNormal);
+        public static string CheckBoxFGOneDisabled => nameof(CheckBoxFGOneDisabled);
+        public static string CheckBoxBGZeroNormal => nameof(CheckBoxBGZeroNormal);
+        public static string CheckBoxBGZeroHovered => nameof(CheckBoxBGZeroHovered);
+        public static string CheckBoxBGZeroDisabled => nameof(CheckBoxBGZeroDisabled);
+        public static string CheckBoxBGOneNormal => nameof(CheckBoxBGOneNormal);
+        public static string CheckBoxBGOneHovered => nameof(CheckBoxBGOneHovered);
+        public static string CheckBoxBGOneDisabled => nameof(CheckBoxBGOneDisabled);
+
 
         public static string EmptySprite => nameof(EmptySprite);
         public static string TextFieldNormal => nameof(TextFieldNormal);
@@ -132,7 +142,16 @@ namespace MbyronModsCommon.UI {
             SpriteParams[TabHovered] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabFocused] = new RectOffset(4, 4, 4, 4);
             SpriteParams[TabPressed] = new RectOffset(4, 4, 4, 4);
-            
+
+            SpriteParams[CheckBoxFGOneNormal] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxFGOneDisabled] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGZeroNormal] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGZeroHovered] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGZeroDisabled] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGOneNormal] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGOneHovered] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[CheckBoxBGOneDisabled] = new RectOffset(4, 4, 4, 4);
+
         }
 
         public static UITextureAtlas CommonAtlas {

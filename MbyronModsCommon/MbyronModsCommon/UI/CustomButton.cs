@@ -5,6 +5,17 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public class CustomButton {
+        public static CheckBox AddCheckBox(UIComponent parent, bool isChecked, Action<bool> callback) {
+            var button = parent.AddUIComponent<CheckBox>();
+            button.autoSize = false;
+            button.height = 20;
+            button.width = 20;
+            button.SetSprite();
+            button.IsChecked = isChecked;
+            button.EventOnCheckedChanged += callback;
+            return button;
+        }
+
         public static ToggleButton AddToggleButton(UIComponent parent, bool isChecked, Action<bool> callback) {
             var button = parent.AddUIComponent<ToggleButton>();
             button.autoSize = false;
@@ -55,6 +66,33 @@ namespace MbyronModsCommon.UI {
         }
 
     }
+
+    public class CheckBox : MultiStateButtonBase {
+        public override void SetSprite() {
+            atlas = CustomAtlas.CommonAtlas;
+            FgSpriteSet0.normal = CustomAtlas.CheckBoxBGZeroNormal;
+            FgSpriteSet0.focused = CustomAtlas.CheckBoxBGZeroNormal;
+            FgSpriteSet0.hovered = CustomAtlas.CheckBoxBGZeroHovered;
+            FgSpriteSet0.pressed = CustomAtlas.CheckBoxBGZeroNormal;
+            FgSpriteSet0.disabled = CustomAtlas.CheckBoxBGZeroDisabled;
+            BgSpriteSet0.normal = CustomAtlas.CheckBoxBGZeroNormal;
+            BgSpriteSet0.focused = CustomAtlas.CheckBoxBGZeroNormal;
+            BgSpriteSet0.hovered = CustomAtlas.CheckBoxBGZeroHovered;
+            BgSpriteSet0.pressed = CustomAtlas.CheckBoxBGZeroNormal;
+            BgSpriteSet0.disabled = CustomAtlas.CheckBoxBGZeroDisabled;
+            FgSpriteSet1.normal = CustomAtlas.CheckBoxFGOneNormal;
+            FgSpriteSet1.focused = CustomAtlas.CheckBoxFGOneNormal;
+            FgSpriteSet1.hovered = CustomAtlas.CheckBoxFGOneNormal;
+            FgSpriteSet1.pressed = CustomAtlas.CheckBoxFGOneNormal;
+            FgSpriteSet1.disabled = CustomAtlas.CheckBoxFGOneDisabled;
+            BgSpriteSet1.normal = CustomAtlas.CheckBoxBGOneNormal;
+            BgSpriteSet1.focused = CustomAtlas.CheckBoxBGOneNormal;
+            BgSpriteSet1.hovered = CustomAtlas.CheckBoxBGOneHovered;
+            BgSpriteSet1.pressed = CustomAtlas.CheckBoxBGOneNormal;
+            BgSpriteSet1.disabled = CustomAtlas.CheckBoxBGOneDisabled;
+        }
+    }
+
 
     public class ToggleButton : MultiStateButtonBase {
         public override void SetSprite() {

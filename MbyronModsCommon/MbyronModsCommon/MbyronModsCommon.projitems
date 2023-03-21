@@ -108,4 +108,14 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneDisabled.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneHovered.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneNormal.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroDisabled.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroHovered.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroNormal.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneDisabled.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneNormal.png" />
+  </ItemGroup>
 </Project>

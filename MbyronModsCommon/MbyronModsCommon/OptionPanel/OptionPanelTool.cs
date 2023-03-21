@@ -1,5 +1,6 @@
 ﻿using ColossalFramework.UI;
 using ICities;
+using MbyronModsCommon.UI;
 using System;
 using UnityEngine;
 
@@ -40,6 +41,29 @@ namespace MbyronModsCommon {
             }
             Group.UITool = new UIStyleGamma(panel) { Child = child };
             Group.UITool.RefreshLayout();
+            Group.UITool = null;
+            return panel;
+        }
+
+        public static UIPanel AddCheckBox(string majorText, string minorText, bool isChecked, Action<bool> callback, out UILabel majorLabel, out UILabel minorLabel, out CheckBox checkBox, RectOffset allOffset = null) {
+            if (Group is null) {
+                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                majorLabel = null;
+                minorLabel = null;
+                checkBox = null;
+                return null;
+            }
+            var panel = AddChildPanel();
+            checkBox = CustomButton.AddCheckBox(panel, isChecked, callback);
+            majorLabel = null;
+            minorLabel = null;
+            if (majorText is not null) {
+                majorLabel = CustomLabel.AddLabel(panel, majorText, 10, textScale: 1f);
+                if (minorText is not null) {
+                    minorLabel = CustomLabel.AddLabel(panel, minorText, 10, textScale: 0.8f, textColor: CustomColor.OffWhite);
+                }
+            }
+            Group.UITool = new UIStyleDelta(panel, checkBox, majorLabel, minorLabel, allOffset);
             Group.UITool = null;
             return panel;
         }
