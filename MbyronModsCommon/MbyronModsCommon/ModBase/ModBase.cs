@@ -28,18 +28,7 @@ namespace MbyronModsCommon {
         public abstract string Description { get; }
         public abstract List<ModChangeLog> ChangeLog { get; }
         public string VersionType => IsBeta ? "Beta" : "Stable";
-
-        private string configFilePath;
-        public string ConfigFilePath {
-            get {
-                if (configFilePath.IsNullOrWhiteSpace()) {
-                    var path = Path.Combine(DataLocation.localApplicationData, $"{SolidModName}Config.xml");
-                    configFilePath = path;
-                    return path;
-                }
-                return configFilePath;
-            }
-        }
+        public string ConfigFilePath => Path.Combine(DataLocation.localApplicationData, $"{SolidModName}Config.xml");
 
         private CultureInfo modCulture;
         public CultureInfo ModCulture {
@@ -167,6 +156,7 @@ namespace MbyronModsCommon {
         string VersionType { get; }
         string SolidModName { get; }
         string ModName { get; }
+        string ConfigFilePath { get; }
         List<ModChangeLog> ChangeLog { get; }
         Version ModVersion { get; }
         ulong ModID { get; }
