@@ -1,6 +1,6 @@
 ﻿
 namespace MbyronModsCommon {
-    public abstract class ModConfigBase<Config> : SingletonMod<Config>, IModConfig where Config : ModConfigBase<Config> {
+    public class ModConfigBase<Config> : SingletonMod<Config>, IModConfig where Config : ModConfigBase<Config> {
         public string ModVersion { get; set; } = "0.0";
         public string ModLanguage { get; set; } = "GameLanguage";
         public bool DebugMode { get; set; } = false;

@@ -52,7 +52,6 @@ namespace MbyronModsCommon {
 
         public void OnSettingsUI(UIHelperBase helper) {
             ModLogger.GameLog($"Setting UI.");
-            ModLogger.GameLog($"{Environment.StackTrace}");
             LoadLocale();
             LocaleManager.eventLocaleChanged += LoadLocale;
             OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
@@ -156,7 +155,6 @@ namespace MbyronModsCommon {
         string VersionType { get; }
         string SolidModName { get; }
         string ModName { get; }
-        string ConfigFilePath { get; }
         List<ModChangeLog> ChangeLog { get; }
         Version ModVersion { get; }
         ulong ModID { get; }
