@@ -1,5 +1,6 @@
 ﻿
 V0.9.8
+[ADD]Added advanced option for reset mod configuration.
 [OPT]Optimized control panel invoke speed.
 [OPT]Optimized control panel toggle button UI style.
 [FIX]Fixed an issue where control panel did not follow the language toggle.

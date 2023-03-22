@@ -97,6 +97,24 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 This option allows dynamic toggle within game 的本地化字符串。
+        /// </summary>
+        public static string AllowsDynamicToggling {
+            get {
+                return ResourceManager.GetString("AllowsDynamicToggling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Amount 的本地化字符串。
+        /// </summary>
+        public static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Building spread fire probability 的本地化字符串。
         /// </summary>
         public static string BuildingSpreadFireProbability {
@@ -232,20 +250,20 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Game Initial cash 的本地化字符串。
+        ///   查找类似 Game Initial money 的本地化字符串。
         /// </summary>
-        public static string InitialCash {
+        public static string InitialMoney {
             get {
-                return ResourceManager.GetString("InitialCash", resourceCulture);
+                return ResourceManager.GetString("InitialMoney", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Set value before you start gaming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once. Cash will change after game simulation starts. 的本地化字符串。
+        ///   查找类似 Set value before you start gaming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts. 的本地化字符串。
         /// </summary>
-        public static string InitialCashWarning {
+        public static string InitialMoneyWarning {
             get {
-                return ResourceManager.GetString("InitialCashWarning", resourceCulture);
+                return ResourceManager.GetString("InitialMoneyWarning", resourceCulture);
             }
         }
         

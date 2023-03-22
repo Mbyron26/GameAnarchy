@@ -73,7 +73,7 @@ namespace GameAnarchy {
 
         private void AddOptimizeOptionsProperty(UIComponent parent, float width) {
             OptionPanelTool.AddGroup(parent, width, Localize.OptimizeOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localize.EnableAchievements, null, _ => {
+            OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localize.EnableAchievements, Localize.AllowsDynamicToggling, _ => {
                 Config.Instance.EnabledAchievements = _;
                 AchievementsManager.UpdateAchievements(_);
             }, out UILabel _, out UILabel _, out ToggleButton _);
@@ -100,13 +100,13 @@ namespace GameAnarchy {
             }, out UILabel _, out UILabel _, out CustomUnlock);
             CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, out UILabel _, out UILabel _, out UIDropDown dropDown0, majorOffset: new RectOffset(20, 0, 0, 0)));
             dropDown0.eventSelectedIndexChanged += (c, value) => Config.Instance.MilestoneLevel = value;
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.EnabledInfoView, null, Config.Instance.EnabledInfoView, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10))/*OptionPanelTool.AddToggleButton(Config.Instance.EnabledInfoView, Localize.EnabledInfoView, null, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/);
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10))/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockAllRoads, Localize.UnlockAllRoads, null, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/);
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockTransport, null, Config.Instance.UnlockTransport, _ => Config.Instance.UnlockTransport = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10))/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockTransport, Localize.UnlockTransport, null, _ => Config.Instance.UnlockTransport = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/);
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockTrainTrack, null, Config.Instance.UnlockTrainTrack, _ => Config.Instance.UnlockTrainTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockTrainTrack, Localize.UnlockTrainTrack, null, _ => Config.Instance.UnlockTrainTrack = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockMetroTrack, null, Config.Instance.UnlockMetroTrack, _ => Config.Instance.UnlockMetroTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10))/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockMetroTrack, Localize.UnlockMetroTrack, null, _ => Config.Instance.UnlockMetroTrack = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/);
-            CustomUnlockPanels.Add(/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockPolicies, Localize.UnlockPolicies, null, _ => Config.Instance.UnlockPolicies = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0))*/OptionPanelTool.AddCheckBox(Localize.UnlockPolicies, null, Config.Instance.UnlockPolicies, _ => Config.Instance.UnlockPolicies = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(/*OptionPanelTool.AddToggleButton(Config.Instance.UnlockUniqueBuilding, Localize.UnlockUniqueBuilding, Localize.UnlockUniqueBuildingMinor, _ => Config.Instance.UnlockUniqueBuilding = _, out UILabel _, out UILabel _, out ToggleButton _, new RectOffset(20, 0, 0, 0), new RectOffset(20, 0, 0, 0))*/OptionPanelTool.AddCheckBox(Localize.UnlockUniqueBuilding, Localize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuilding, _ => Config.Instance.UnlockUniqueBuilding = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.EnabledInfoView, null, Config.Instance.EnabledInfoView, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockTransport, null, Config.Instance.UnlockTransport, _ => Config.Instance.UnlockTransport = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockTrainTrack, null, Config.Instance.UnlockTrainTrack, _ => Config.Instance.UnlockTrainTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockMetroTrack, null, Config.Instance.UnlockMetroTrack, _ => Config.Instance.UnlockMetroTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockPolicies, null, Config.Instance.UnlockPolicies, _ => Config.Instance.UnlockPolicies = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localize.UnlockUniqueBuilding, Localize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuilding, _ => Config.Instance.UnlockUniqueBuilding = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
             if (CustomUnlockPanels.Count > 0)
                 foreach (var item in CustomUnlockPanels) {
                     item.isEnabled = CustomUnlock.IsChecked;
@@ -118,7 +118,7 @@ namespace GameAnarchy {
         private UIPanel InitalCashPanel;
         private void AddResourceOptionsProperty(UIComponent parent, float width) {
             OptionPanelTool.AddGroup(parent, width, Localize.UnlockOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localize.Refund, null, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
+            OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localize.Refund, Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localize.VanillaUnlimitedMoneyMode, Localize.VanillaUnlimitedMoneyModeMinor, _ => {
                 Config.Instance.UnlimitedMoney = _;
                 if (_) CashAnarchy.IsChecked = false;
@@ -137,11 +137,11 @@ namespace GameAnarchy {
             foreach (var item in CashAnarchyPanels) {
                 item.isEnabled = Config.Instance.CashAnarchy;
             }
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledInitialCash, Localize.InitialCash, null, _ => {
+            OptionPanelTool.AddToggleButton(Config.Instance.EnabledInitialCash, Localize.InitialMoney, Localize.InitialMoneyWarning, _ => {
                 Config.Instance.EnabledInitialCash = _;
                 InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
             }, out UILabel _, out UILabel _, out ToggleButton _);
-            InitalCashPanel = OptionPanelTool.AddField(Localize.InitialCashWarning, null, Config.Instance.InitialCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField2, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
+            InitalCashPanel = OptionPanelTool.AddField(Localize.Amount, null, Config.Instance.InitialCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField2, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
             InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
             OptionPanelTool.Reset();
         }
