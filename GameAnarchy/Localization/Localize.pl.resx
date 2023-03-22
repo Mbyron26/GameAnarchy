@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Upewnij się, że funkcja jest dostępna.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>Industrial</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>Domyślna suma gotówki</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>Ustaw wartość przed rozpoczęciem gry. Jeśli nie chcesz, aby pieniądze miały taką wartość za każdym razem, gdy wczytujesz zapis, wyłącz tę funkcję. Wartość gotówki zmieni się po rozpoczęciu symulacji.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Wbudowany mod. Game Anarchy posiada już tę funkcję. Wyłącz podobnego moda, by korzystać z funkcji Game Anarchy.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Updated Option Panel UI components.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

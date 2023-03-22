@@ -970,6 +970,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Added advanced option for reset mod config. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_8ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_8ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 [FIX]Fixed an issue where control panel did not follow the language toggle. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_8FIX1 {

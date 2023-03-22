@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Tenha certeza de que a Anarquia de Caixa está habilitada.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Construção espalhou a probabilidade de fogo</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>Indústria</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>Dinheiro inicial em caixa</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>Coloque os valores antes de começar o jogo. Se você não quer que esta quantia de dinheiro seja a mesma sempre que carregar um jogo salvo, desabilite esta função após habilitar uma vez. O valor em caixa mudará após a simulação do jogo iniciar.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Petróleo e Minério Ilimitado (Mod original do jogo): Game Anarchy já tem a mesma função! Por favor, desabilite este mod local se você quiser usar as funções do Game Anarchy.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Componentes atualizados do Painel de UI.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

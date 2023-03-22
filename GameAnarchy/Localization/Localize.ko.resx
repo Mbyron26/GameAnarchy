@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>현금 Anarchy 기능이 활성화되어 있는지 확인하십시오.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>Industrial</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>게임 초기 현금</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>게임을 시작하기 전에 값을 설정하십시오. 로드 할 때마다 비용이 이 값이 되는 것을 원하지 않는다면, 이 기능을 한 번 활성화한 후 비활성화하십시오. 게임 이 시작된 후 현금이 변경됩니다.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Buildtin mod, Game Anarchy에는 이미 동일한 기능이 포함되어 있습니다. Game Anarchy 기능을 사용하려면 이 로컬 모드를 비활성화 하십시오.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Updated Option Panel UI components.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

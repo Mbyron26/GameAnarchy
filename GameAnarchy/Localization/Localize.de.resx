@@ -129,14 +129,20 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Stelle sicher, dass die Geld-Anarchie-Funktion aktiviert ist.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
-    <value>Building spread fire probability</value>
+    <value>Gebäude Brandausbreitungswahrscheinlichkeit</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Serviceoptionen</value>
   </data>
   <data name="Commercial" xml:space="preserve">
-    <value>Commercial</value>
+    <value>Gewerblich</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Individuelle Freischaltungen</value>
@@ -154,31 +160,31 @@
     <value>Spieleinführung überspringen</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>Place unique buildings without limit</value>
+    <value>Einzigartige Gebäude unbegrenzt platzieren</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>Schnelles Beenden</value>
   </data>
   <data name="FireControl" xml:space="preserve">
-    <value>Fire Control</value>
+    <value>Feuerkontrolle</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
-    <value>Ground pollution</value>
+    <value>Bodenverschmutzung</value>
   </data>
   <data name="Income" xml:space="preserve">
-    <value>Income</value>
+    <value>Einkommen</value>
   </data>
   <data name="IncomeMultiplier" xml:space="preserve">
-    <value>Income multiplier</value>
+    <value>Einkommensmultiplikator</value>
   </data>
   <data name="Industrial" xml:space="preserve">
-    <value>Industrial</value>
+    <value>Industrie</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>Startgeld</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>Lege den Wert fest, bevor du mit dem Spielen beginnst. Wenn du nicht willst, dass das Geld bei jedem Laden des Spielstandes als Startwert festgelegt wird, deaktiviere die Funktion nach dem das Geld den Wert hat. Die Geldmenge wird sich erst ändern, nachdem die Spielsimulation gestartet wurde.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Eingebaute Mod, Game Anarchy enthält bereits die gleiche Funktionalität. Bitte deaktiviere die lokale Mod, wenn du die Game Anarchy Funktion verwenden möchtest.</value>
@@ -187,7 +193,7 @@
     <value>Eingebaute Mod, Game Anarchy beinhaltet bereits die gleiche Funktionalität. Bitte deaktiviere diese lokale Mod und lege den Anfangsbetrag in den Einstellungen von GA fest, falls die Stadt im Minus ist und Konkurs zu gehen droht. (Um einen Absturz des Spiels zu vermeiden.)</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>Main campus building</value>
+    <value>Campus Hauptgebäude</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>Maximiert die Attraktivität, wird mehr Touristen anlocken</value>
@@ -199,7 +205,7 @@
     <value>Maximiert die Unterhaltung, das wird die Zufriedenheit der Bürger verbessern</value>
   </data>
   <data name="MaximizeFireCoverage" xml:space="preserve">
-    <value>Maximize fire coverage</value>
+    <value>Brandschutz maximieren</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
     <value>Maximiert den Bodenrichtwert deiner Stadt</value>
@@ -253,22 +259,22 @@
     <value>Erweiterung und Optimierung der Spielfunktionen.</value>
   </data>
   <data name="MoneyAnarchyMode" xml:space="preserve">
-    <value>Money anarchy mode</value>
+    <value>Geldanarchiemodus</value>
   </data>
   <data name="MoneyAnarchyModeMinor" xml:space="preserve">
-    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
+    <value>Diese Option erlaubt automatisches (setze die folgenden 2 Optionen)/manuelles (verwende Tastenkürzel) einstellen der Geldmenge, erlaubt dynamisches Umschalten innerhalb des Spiels</value>
   </data>
   <data name="Monument" xml:space="preserve">
-    <value>Monument</value>
+    <value>Denkmal</value>
   </data>
   <data name="NoisePollution" xml:space="preserve">
-    <value>Noise pollution</value>
+    <value>Lärmbelastung</value>
   </data>
   <data name="NoSpreadFire" xml:space="preserve">
-    <value>Non-spread of fire</value>
+    <value>Nicht Ausbreitung des Feuers</value>
   </data>
   <data name="Office" xml:space="preserve">
-    <value>Office</value>
+    <value>Büro</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
     <value>Ölerschöpfungsrate</value>
@@ -286,19 +292,19 @@
     <value>Erzerschöpfungsrate</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
-    <value>Player building</value>
+    <value>Spielergebäude</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Vollständige Rückerstattung beim Abriss</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
-    <value>Remove airport building fire</value>
+    <value>Flughafengebäude Feuer entfernen</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
-    <value>Remove campus building fire</value>
+    <value>Campusgebäudefeuer entfernen</value>
   </data>
   <data name="RemoveCommercialBuildingFire" xml:space="preserve">
-    <value>Remove commercial building fire</value>
+    <value>Gewerbegebäudefeuer entfernen</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>Entfernt Kriminelle aus allen Gebäuden und maximiert die Abdeckung der Polizeidienststellen</value>
@@ -310,52 +316,52 @@
     <value>Entfernt Müll</value>
   </data>
   <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
-    <value>Remove industrial building fire</value>
+    <value>Industriegebäudefeuer entfernen</value>
   </data>
   <data name="RemoveMuseumFire" xml:space="preserve">
-    <value>Remove museum fire</value>
+    <value>Museumsfeuer entfernen</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
-    <value>Remove office building fire</value>
+    <value>Bürogebäudefeuer entfernen</value>
   </data>
   <data name="RemoveParkBuildingFire" xml:space="preserve">
-    <value>Remove park building fire</value>
+    <value>Parkgebäudefeuer entfernen</value>
   </data>
   <data name="RemovePlayerBuildingFire" xml:space="preserve">
-    <value>Remove player building fire</value>
+    <value>Spielergebäudefeuer entfernen</value>
   </data>
   <data name="RemovePollution" xml:space="preserve">
-    <value>Remove pollution</value>
+    <value>Umweltbelastung entfernen</value>
   </data>
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
-    <value>Remove residential building fire</value>
+    <value>Wohngebäudefeuer entfernen</value>
   </data>
   <data name="Residential" xml:space="preserve">
-    <value>Residential</value>
+    <value>Wohngebiet</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>Rohstoff-Einstellungen</value>
+    <value>Rohstoffeinstellungen</value>
   </data>
   <data name="Service" xml:space="preserve">
-    <value>Service</value>
+    <value>Dienstleister</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
     <value>Mods in der Einstellungsleiste nach Namen sortieren</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
-    <value>Space radar</value>
+    <value>Weltraumradar</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
-    <value>Stock exchange</value>
+    <value>Börse</value>
   </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
-    <value>Tree spread fire probability</value>
+    <value>Baumbrand Ausbreitungswahrscheinlichkeit</value>
   </data>
   <data name="UniqueFactory" xml:space="preserve">
-    <value>Unique factory</value>
+    <value>Einzigartige Fabrik</value>
   </data>
   <data name="UniqueFaculty" xml:space="preserve">
-    <value>Unique faculty</value>
+    <value>Einzigartige Fakultät</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>Unbegrenzt</value>
@@ -364,7 +370,7 @@
     <value>Alles entsperren</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
-    <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
+    <value>Diese Option ist die gleiche wie die "Alles Entsperren" Funktion des Vanilla Spiels, und obwohl sie dynamisches Umschalten innerhalb des Spiels ermöglicht, wird empfohlen, sie vor dem Speichern zu setzen. Wenn diese Option deaktiviert ist, entsperrt sie immer noch alles. Stelle sicher, dass du die Find It! "Alles Entsperren" Option deaktiviert hast.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Alle Straßen freischalten</value>
@@ -385,10 +391,10 @@
     <value>Alle Transportmöglichkeiten entsperren</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
-    <value>Unlock unique Building</value>
+    <value>Einzigartiges Gebäude freischalten</value>
   </data>
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
-    <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
+    <value>Schalte alle einzigartigen Gebäude auf Stufe 1 bis 6 frei. Wenn diese Einstellung erzwungen wird, werden aufgrund von Spielbeschränkungen nur eine kleine Anzahl von Gebäuden freigeschaltet, aber nicht alle.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Updated Option Panel UI components.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

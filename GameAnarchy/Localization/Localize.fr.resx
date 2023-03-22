@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Assurez-vous que la fonctionnalité " Anarchie en espèces " est activée.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Probabilité de propagation du feu</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>Industriel</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>Argent initial du jeu</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>Réglez la valeur avant de commencer à jouer. Si vous ne voulez pas que l'argent ait cette valeur à chaque fois que vous chargez une sauvegarde, désactivez cette fonctionnalité après l'avoir activée une fois. L'argent changera après le début de la simulation de jeu.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Mod intégré, Game Anarchy inclut déjà la même fonctionnalité. Veuillez désactiver ce mod local si vous souhaitez utiliser les fonctions de Game Anarchy.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT] Mise à jour des composants de l'interface d'options utilisateur.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Nakit Anarchy özelliğinin etkinleştirildiğinden emin olun.</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Bina yayılma yangın olasılığı</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>Sanayi</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>Başlangıçtaki nakit para</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>Oyuna başlamadan önce değeri ayarlayın. Kaydet'i her yüklediğinizde paranın bu değer olmasını istemiyorsanız, bu özelliği bir kez etkinleştirdikten sonra devre dışı bırakın. Oyun simülasyonu başladıktan sonra nakit değişecektir.</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Buildtin modu, Game Anarchy zaten aynı işlevselliği içeriyor. Game Anarchy işlevlerini kullanmak istiyorsanız lütfen bu yerel modu devre dışı bırakın.</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Updated Option Panel UI components.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>

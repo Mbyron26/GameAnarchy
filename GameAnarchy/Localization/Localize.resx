@@ -420,6 +420,9 @@
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]Updated Option Panel UI components.</value>
   </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
+  </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
   </data>

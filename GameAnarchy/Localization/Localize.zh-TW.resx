@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,16 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddCash" xml:space="preserve">
-    <value>添加現金</value>
+    <value>增加現金</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>添加現金金額</value>
+    <value>加錢金額</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
-    <value>增加現金門檻</value>
+    <value>自動加錢門檻</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
     <value>確保 Cash Anarchy 功能已啟用。</value>
+  </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>此選項允許在遊戲中進行動態切換</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>數量</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建築物蔓延火災概率</value>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>工業的</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>遊戲初始現金</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>遊戲初始資金</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>在開始遊戲之前設置值。如果你不想每次加載存檔時錢都是這個值，啟用一次後禁用此功能。遊戲模擬開始後，現金將發生變化。</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>在開始遊戲之前設置值。如果你不想每次加載存檔時錢都是這個值，啟用一次後禁用此功能。遊戲模擬開始後錢會發生變化。</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Buildtin mod，Game Anarchy 已經包含相同的功能。如果您想使用 Game Anarchy 功能，請禁用此本地模組。</value>
@@ -187,7 +193,7 @@
     <value>Buildtin mod，Game Anarchy 已經包含相同的功能。請禁用此本地模塊並在 GA 的設置面板中設置初始金額，以防您的城市因透支而破產（以避免遊戲崩潰）。</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>主校園大樓</value>
+    <value>主校區大樓</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
     <value>吸引力最大化，會吸引更多的遊客</value>
@@ -364,7 +370,7 @@
     <value>全部解鎖</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
-    <value>此選項與原版“全部解鎖”功能相同，雖然它允許在遊戲中動態切換，但建議在進入保存之前設置它。如果禁用此選項仍然解鎖所有，請確保您已禁用查找它！ “全部解鎖”選項。</value>
+    <value>此選項與原版“全部解鎖”功能相同，雖然它允許在遊戲中進行動態切換，但建議在進入保存之前設置它。如果禁用此選項仍然解鎖所有，請確保您已禁用查找它！ “全部解鎖”選項。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>解鎖所有道路</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]更新了選項面板 UI 組件。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]添加了重置模組配置的高級選項。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[修復]修復了控制面板不跟隨語言切換的問題。</value>

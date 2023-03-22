@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>Cash Anarchy機能が有効化しているか確認して下さい。</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建物の延焼確率</value>
   </data>
@@ -174,11 +180,11 @@
   <data name="Industrial" xml:space="preserve">
     <value>産業</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
-    <value>ゲームの初期資金</value>
+  <data name="InitialMoney" xml:space="preserve">
+    <value>Game Initial money</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
-    <value>ゲームの開始前に資金を設定して下さい。セーブをロードする度に設定した資金で開始するので、変えたくない場合は機能を一度有効化してから無効化します。その後でゲームのシミュレーションが開始されると、資金が変更されます。</value>
+  <data name="InitialMoneyWarning" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]オプションパネルのUIコンポーネントを更新</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]コントロールパネルが言語の切り替えに追従しない問題を修正</value>

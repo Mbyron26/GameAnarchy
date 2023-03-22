@@ -129,6 +129,12 @@
   <data name="AddCashTooltip" xml:space="preserve">
     <value>请确保启用了金钱无碰撞功能。</value>
   </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>此选项允许在游戏中进行动态切换</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>数额</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建筑的火灾蔓延概率</value>
   </data>
@@ -174,10 +180,10 @@
   <data name="Industrial" xml:space="preserve">
     <value>工业区</value>
   </data>
-  <data name="InitialCash" xml:space="preserve">
+  <data name="InitialMoney" xml:space="preserve">
     <value>游戏初始现金</value>
   </data>
-  <data name="InitialCashWarning" xml:space="preserve">
+  <data name="InitialMoneyWarning" xml:space="preserve">
     <value>需在开始游戏前设定。如果不希望每次加载存档后现金都为该值, 在启用一次后禁用此功能。游戏模拟开始后现金将会变更设置的值。</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
@@ -413,6 +419,9 @@
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
     <value>[UPT]更新了选项面板的UI组件。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]添加了重置模组配置的高级选项。</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
     <value>[FIX]修复了控制面板显示语言不跟随语言切换的问题。</value>
