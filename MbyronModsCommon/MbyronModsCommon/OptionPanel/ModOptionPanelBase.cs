@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using UnityEngine;
 
 namespace MbyronModsCommon {
@@ -33,15 +32,8 @@ namespace MbyronModsCommon {
             }
         }
 
-        private static void ShowLog() {
-            var messageBox = MessageBox.Show<LogMessageBox>();
-            messageBox.Initialize<Mod>(false);
-        }
-        private static void ShowCompatibility() {
-            var messageBox = MessageBox.Show<CompatibilityMessageBox>();
-            messageBox.Initialize(ModMainInfo<Mod>.ModName);
-        }
-
+        private static void ShowLog() => MessageBox.Show<LogMessageBox>().Initialize<Mod>(false);
+        private static void ShowCompatibility() => MessageBox.Show<CompatibilityMessageBox>().Initialize(ModMainInfo<Mod>.ModName);
     }
 
     public class GeneralOptionsBase<Mod, Config> where Mod : IMod where Config : ModConfigBase<Config> {
