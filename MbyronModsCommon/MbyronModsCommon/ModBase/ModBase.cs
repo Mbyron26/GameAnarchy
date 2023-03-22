@@ -6,7 +6,6 @@ using ColossalFramework.IO;
 using System.IO;
 using System.Globalization;
 using ColossalFramework.Globalization;
-using ColossalFramework;
 
 namespace MbyronModsCommon {
     public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
