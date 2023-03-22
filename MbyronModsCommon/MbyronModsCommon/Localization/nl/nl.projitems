@@ -9,6 +9,8 @@
     <Import_RootNamespace>nl</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLocalize.nl.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLocalize.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

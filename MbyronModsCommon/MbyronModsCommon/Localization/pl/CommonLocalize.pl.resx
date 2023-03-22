@@ -261,6 +261,21 @@
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Wersja</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetModFailed" xml:space="preserve">
+    <value>Reset mod failed. It is recommended to send the log file to the developer.</value>
+  </data>
+  <data name="ResetModMajor" xml:space="preserve">
+    <value>Reset mod config</value>
+  </data>
+  <data name="ResetModMinor" xml:space="preserve">
+    <value>Attention! This option will reset all settings of this mod, and this operation is irreversible!</value>
+  </data>
+  <data name="ResetModSucceeded" xml:space="preserve">
+    <value>Reset mod succeeded.</value>
+  </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
   </data>

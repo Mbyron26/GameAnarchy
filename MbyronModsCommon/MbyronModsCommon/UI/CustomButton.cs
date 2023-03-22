@@ -39,14 +39,14 @@ namespace MbyronModsCommon.UI {
                 button.disabledColor = CustomColor.GreenDisabled;
                 button.hoveredColor = CustomColor.GreenHovered;
                 button.pressedColor = CustomColor.GreenPressed;
-                button.focusedColor = CustomColor.Orange;
-            } else {
+                button.focusedColor = CustomColor.Orange;  
+            } else { 
                 button.atlas = CustomAtlas.CommonAtlas;
                 button.normalBgSprite = CustomAtlas.ButtonNormal;
                 button.disabledBgSprite = CustomAtlas.ButtonNormal;
                 button.hoveredBgSprite = CustomAtlas.ButtonHovered;
                 button.pressedBgSprite = CustomAtlas.ButtonPressed;
-            }
+            } 
             button.disabledTextColor = CustomColor.DisabledTextColor;
             button.autoSize = false;
             button.wordWrap = true;

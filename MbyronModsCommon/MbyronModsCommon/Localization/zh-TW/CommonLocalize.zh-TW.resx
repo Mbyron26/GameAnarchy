@@ -118,79 +118,79 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ChangeLog" xml:space="preserve">
-    <value>Change log</value>
+    <value>更改日誌</value>
   </data>
   <data name="ChangeLog_Major" xml:space="preserve">
-    <value>Mod change log</value>
+    <value>修改日誌</value>
   </data>
   <data name="Check" xml:space="preserve">
-    <value>Check</value>
+    <value>查看</value>
   </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
-    <value>This mod is incompatible.</value>
+    <value>這個模組不兼容。</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Mod compatibility check</value>
+    <value>模組兼容性檢查</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
-    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
+    <value>此功能僅檢測與此 mod 相關的兼容性問題。要檢查所有模組的兼容性，建議使用 [兼容性報告] 模組。</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
-    <value>already includes the same functionality.</value>
+    <value>已經包含相同的功能。</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>請改用 {0}。</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>退訂</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
-    <value>Press any key</value>
+    <value>按任意鍵</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>語言</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>German</value>
+    <value>德語</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>English</value>
+    <value>英語</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>西班牙語</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>French</value>
+    <value>法語</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Game Language</value>
+    <value>遊戲語言</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>意大利語</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanese</value>
+    <value>日本人</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Korean</value>
+    <value>韓國人</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>荷蘭語</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polish</value>
+    <value>拋光</value>
   </data>
   <data name="Language_pt" xml:space="preserve">
-    <value>Portuguese</value>
+    <value>葡萄牙語</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>葡萄牙語-巴西</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russian</value>
+    <value>俄語</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>土耳其</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>簡體中文</value>
@@ -199,78 +199,93 @@
     <value>繁體中文</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>添加</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>調整後</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>固定的</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>優化</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>刪除</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
+    <value>更新</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
-    <value>Did not detect any incompatible mods.</value>
+    <value>沒有檢測到任何不兼容的模組。</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
-    <value>OK</value>
+    <value>好的</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>檢測到不兼容的模組，為了確保本模組正常工作，您需要退訂以下模組：</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>不</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
-    <value>Advanced</value>
+    <value>先進的</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
-    <value>Builtin Function</value>
+    <value>內置函數</value>
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
-    <value>Compatibility Check</value>
+    <value>兼容性檢查</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
+    <value>高級功能。它僅用於調試輸出。如果出現問題，建議啟用此選項並在重複問題後將您的日誌發送給開發人員。</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
-    <value>Debug mode</value>
+    <value>調試模式</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
-    <value>General</value>
+    <value>一般的</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
     <value>快捷鍵</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>Is Disabled</value>
+    <value>被禁用</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>Is Enabled</value>
+    <value>已啟用</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>模組資料</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
-    <value>Version</value>
+    <value>版本</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="ResetModFailed" xml:space="preserve">
+    <value>重置模組失敗。建議將日誌文件發送給開發人員。</value>
+  </data>
+  <data name="ResetModMajor" xml:space="preserve">
+    <value>重置模組配置</value>
+  </data>
+  <data name="ResetModMinor" xml:space="preserve">
+    <value>注意力！該選項將重置本模組的所有設置，且該操作不可逆！</value>
+  </data>
+  <data name="ResetModSucceeded" xml:space="preserve">
+    <value>重置模組成功。</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+    <value>滾動滾輪進行更改，Shift X10，Ctrl X0.1</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
-    <value>Show control panel</value>
+    <value>顯示控制面板</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
+    <value>警告！模組無法正常讀取舊的配置數據。現在已經為 mod 加載了默認配置。請在開始遊戲前進入選項面板並配置您的設置。</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>是的</value>
   </data>
 </root>

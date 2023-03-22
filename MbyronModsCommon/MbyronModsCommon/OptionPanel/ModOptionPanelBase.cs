@@ -69,7 +69,7 @@ namespace MbyronModsCommon {
                 } else {
                     result.Add(total);
                 }
-            }
+            }  
             return result;
         }
 

@@ -261,6 +261,21 @@
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>版本</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="ResetModFailed" xml:space="preserve">
+    <value>重置模组失败。建议把日志文件发送给模组开发者。</value>
+  </data>
+  <data name="ResetModMajor" xml:space="preserve">
+    <value>重置模组配置</value>
+  </data>
+  <data name="ResetModMinor" xml:space="preserve">
+    <value>注意！这个选项将会重置此模组的所有设置，并且此操作无法撤回！</value>
+  </data>
+  <data name="ResetModSucceeded" xml:space="preserve">
+    <value>重置模组成功。</value>
+  </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>使用滚轮改变参数，按住 Shift 键 ×10，按住 Ctrl 键 ×0.1</value>
   </data>

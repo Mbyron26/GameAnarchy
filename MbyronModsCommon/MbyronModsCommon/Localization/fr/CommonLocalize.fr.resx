@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ChangeLog" xml:space="preserve">
-    <value>Change log</value>
+    <value>Journal des modifications</value>
   </data>
   <data name="ChangeLog_Major" xml:space="preserve">
-    <value>Mod change log</value>
+    <value>Journal des modifications des mods</value>
   </data>
   <data name="Check" xml:space="preserve">
-    <value>Check</value>
+    <value>Vérifier</value>
   </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>Ce mod est incompatible.</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Mod compatibility check</value>
+    <value>Vérification de la compatibilité</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
-    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
+    <value>Cette fonction ne détecte que les problèmes de compatibilité liés à ce mod. Pour vérifier la compatibilité de tous les mods, le mod [Rapport de compatibilité] est recommandé.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>contient déjà la même fonctionnalité.</value>
@@ -190,7 +190,7 @@
     <value>Russe</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>Turc</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>Chinois simplifié</value>
@@ -226,7 +226,7 @@
     <value>Des mods incompatibles ont été détectés, afin de s'assurer que ce mod fonctionne correctement, vous devez vous désabonner des mods suivants :</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Non</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>Avancé</value>
@@ -238,7 +238,7 @@
     <value>Vérification de la compatibilité</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
+    <value>Fonctions avancées, il n'est utilisé que pour le débogage. Si quelque chose se passe mal, il est recommandé d'activer cette option et d'envoyer votre journal au développeur après avoir répété les problèmes.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>Mode debug</value>
@@ -256,21 +256,36 @@
     <value>Est activé</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>Information des mods</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetModFailed" xml:space="preserve">
+    <value>Reset mod failed. It is recommended to send the log file to the developer.</value>
+  </data>
+  <data name="ResetModMajor" xml:space="preserve">
+    <value>Reset mod config</value>
+  </data>
+  <data name="ResetModMinor" xml:space="preserve">
+    <value>Attention! This option will reset all settings of this mod, and this operation is irreversible!</value>
+  </data>
+  <data name="ResetModSucceeded" xml:space="preserve">
+    <value>Reset mod succeeded.</value>
+  </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+    <value>Utilisez la molette pour changer, Maj X10, Ctrl X0.1</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
-    <value>Show control panel</value>
+    <value>Afficher le panneau de configuration</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>Attention ! Le mod ne peut pas lire normalement les anciennes données de configuration. La configuration par défaut a été chargée pour le mod. Veuillez aller dans le panneau des options et configurer vos paramètres avant de commencer la partie.</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Oui</value>
   </data>
 </root>
