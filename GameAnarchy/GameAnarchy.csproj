@@ -111,6 +111,14 @@
 		<OutDir>$(LOCALAPPDATA)/Colossal Order/Cities_Skylines/Addons/Mods/$(SolutionName)/Locale</OutDir>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
 	<Target Name="DeployToLocalModDir" AfterTargets="Build">
 		<ItemGroup>
 			<DLLToMove Include="$(OutDir)\*.dll*" />

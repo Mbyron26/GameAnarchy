@@ -93,8 +93,8 @@ namespace GameAnarchy {
         };
 
         public override List<ModChangeLog> ChangeLog => new() {
-            new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 19), new List<string> {
-                Localize.UpdateLog_V0_9_8ADD, Localize.UpdateLog_V0_9_8OPT1, Localize.UpdateLog_V0_9_8OPT2, Localize.UpdateLog_V0_9_8FIX1, Localize.UpdateLog_V0_9_8FIX2, Localize.UpdateLog_V0_9_8UPT,
+            new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<string> {
+               "[UPT]Updated to support game version 1.16.1", Localize.UpdateLog_V0_9_8UPT, Localize.UpdateLog_V0_9_8ADD, Localize.UpdateLog_V0_9_8OPT1, Localize.UpdateLog_V0_9_8OPT2, Localize.UpdateLog_V0_9_8FIX1, Localize.UpdateLog_V0_9_8FIX2
             }),
             new ModChangeLog(new Version(0, 9, 7), new(2023,3,8), new List<string> {
                 Localize.UpdateLog_V0_9_7ADD1,Localize.UpdateLog_V0_9_7ADD2,Localize.UpdateLog_V0_9_7ADD3,Localize.UpdateLog_V0_9_7ADD4,
