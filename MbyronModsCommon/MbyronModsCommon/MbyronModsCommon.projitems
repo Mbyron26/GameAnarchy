@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\CompatibilityMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\LogMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\MessageBoxBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageBox\ResetModMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\SimpleMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModBase\ModBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModBase\ModConfigBase.cs" />

@@ -44,7 +44,6 @@ namespace MbyronModsCommon {
             label.wordWrap = true;
             label.textScale = 1.1f;
             label.textAlignment = UIHorizontalAlignment.Center;
-            label.textAlignment = UIHorizontalAlignment.Center;
             label.text = text;
             return label;
         }

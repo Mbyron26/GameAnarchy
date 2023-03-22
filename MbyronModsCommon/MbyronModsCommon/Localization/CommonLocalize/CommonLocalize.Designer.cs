@@ -493,6 +493,51 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Reset 的本地化字符串。
+        /// </summary>
+        public static string Reset {
+            get {
+                return ResourceManager.GetString("Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Reset mod failed. It is recommended to send the log file to the developer. 的本地化字符串。
+        /// </summary>
+        public static string ResetModFailed {
+            get {
+                return ResourceManager.GetString("ResetModFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Reset mod config 的本地化字符串。
+        /// </summary>
+        public static string ResetModMajor {
+            get {
+                return ResourceManager.GetString("ResetModMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Attention! This option will reset all settings of this mod, and this operation is irreversible! 的本地化字符串。
+        /// </summary>
+        public static string ResetModMinor {
+            get {
+                return ResourceManager.GetString("ResetModMinor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Reset mod succeeded. 的本地化字符串。
+        /// </summary>
+        public static string ResetModSucceeded {
+            get {
+                return ResourceManager.GetString("ResetModSucceeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Scroll the wheel to change, Shift X10, Ctrl X0.1 的本地化字符串。
         /// </summary>
         public static string ScrollWheel {
