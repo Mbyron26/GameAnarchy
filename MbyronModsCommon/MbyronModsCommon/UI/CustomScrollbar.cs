@@ -5,7 +5,7 @@ namespace MbyronModsCommon.UI {
     public class CustomScrollbar {
         public static UIScrollbar AddScrollbar(UIComponent parent, UIScrollablePanel scrollablePanel) {
             UIScrollbar scrollbar = parent.AddUIComponent<UIScrollbar>();
-            scrollbar.size = new Vector2(10f, parent.height - 10);
+            scrollbar.size = new Vector2(6f, parent.height - 6);
             scrollbar.orientation = UIOrientation.Vertical;
             scrollbar.pivot = UIPivotPoint.TopLeft;
             scrollbar.minValue = 0;
@@ -18,14 +18,15 @@ namespace MbyronModsCommon.UI {
             trackSprite.anchor = UIAnchorStyle.All;
             trackSprite.size = trackSprite.parent.size;
             trackSprite.fillDirection = UIFillDirection.Vertical;
-            trackSprite.spriteName = "ScrollbarTrack";
+            //trackSprite.spriteName = "ScrollbarTrack";
             scrollbar.trackObject = trackSprite;
-            UISlicedSprite thumbSprite = trackSprite.AddUIComponent<UISlicedSprite>();
+            UISlicedSprite thumbSprite = scrollbar.AddUIComponent<UISlicedSprite>();
             thumbSprite.relativePosition = Vector2.zero;
             thumbSprite.fillDirection = UIFillDirection.Vertical;
             thumbSprite.autoSize = true;
             thumbSprite.width = thumbSprite.parent.width;
-            thumbSprite.spriteName = "ScrollbarThumb";
+            thumbSprite.atlas = CustomAtlas.CommonAtlas;
+            thumbSprite.spriteName = CustomAtlas.TabNormal;/*"ScrollbarThumb";*/
             scrollbar.thumbObject = thumbSprite;
             parent.eventSizeChanged += (s, e) => scrollbar.height = parent.height - 10;
             scrollablePanel.verticalScrollbar = scrollbar;
