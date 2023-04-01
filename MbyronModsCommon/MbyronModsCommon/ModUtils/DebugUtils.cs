@@ -5,7 +5,7 @@ namespace MbyronModsCommon {
     public static class DebugUtils {
         public static void TimeCalculater(Action action, string tag = "", int loop = 1) {
             new TimeCalculater().AddMethod(action).InvokeMethod(out string time, loop);
-            ModLogger.ModLog(tag + time);
+            ExternalLogger.Log(tag + time);
         }
     }
     public sealed class TimeCalculater {

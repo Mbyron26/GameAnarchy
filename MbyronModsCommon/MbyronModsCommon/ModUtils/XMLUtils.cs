@@ -8,33 +8,33 @@ namespace MbyronModsCommon {
         public static bool DeserializationState { get; set; } = false;
         public static void LoadData<Class>(string fileNameWithPath) where Class : SingletonMod<Class>, new() {
             if (fileNameWithPath.IsNullOrWhiteSpace()) {
-                ModLogger.GameLog($"{fileNameWithPath} is null or empty.");
+                InternalLogger.Error($"{fileNameWithPath} is null or empty.");
             } else {
-                ModLogger.GameLog($"Start loading mod config data.");
+                InternalLogger.Log("Start loading mod config data.");
                 try {
                     if (File.Exists(fileNameWithPath)) {
                         using (StreamReader sr = new(fileNameWithPath)) {
                             XmlSerializer xmlSerializer = new(typeof(Class));
                             var c = xmlSerializer.Deserialize(sr);
                             if (c is not Class) {
-                                ModLogger.GameLog($"Couldn't deserialize XML file, the target path: {fileNameWithPath}.");
-                                ModLogger.GameLog($"Try to generate mod default data.");
+                                InternalLogger.Log($"Couldn't deserialize XML file, the target path: {fileNameWithPath}.");
+                                InternalLogger.Log("Try to generate mod default data.");
                                 SingletonMod<Class>.Instance = new();
-                                ModLogger.GameLog($"Generate mod default data succeeded.");
+                                InternalLogger.Log("Generate mod default data succeeded.");
                             } else {
                                 SingletonMod<Class>.Instance = c as Class;
                                 DeserializationState = true;
-                                ModLogger.GameLog($"Local config exists, deserialize XML file succeeded.");
+                                InternalLogger.Log("Local config exists, deserialize XML file succeeded.");
                             }
                         }
                     } else {
                         SingletonMod<Class>.Instance = new();
                         DeserializationState = true;
-                        ModLogger.GameLog($"No local config found, use mod default config.");
+                        InternalLogger.Warning($"No local config found, use mod default config.");
                     }
                 }
                 catch (Exception e) {
-                    ModLogger.GameLog($"Could't load data from XML file, {e}.");
+                    InternalLogger.Exception($"Could't load data from XML file.",e);
                 }
             }
         }
@@ -44,11 +44,11 @@ namespace MbyronModsCommon {
                 using (StreamWriter sw = new(fileNameWithPath)) {
                     XmlSerializer xmlSerializer = new(typeof(Class));
                     xmlSerializer.Serialize(sw, SingletonMod<Class>.Instance);
-                    ModLogger.GameLog($"Save mod config succeeded.");
+                    InternalLogger.Log($"Save mod config succeeded.");
                 }
             }
             catch (Exception e) {
-                ModLogger.GameLog($"Could't save data to XML file, {e}.");
+                InternalLogger.Exception($"Could't save data to XML file.", e);
             }
         }
 

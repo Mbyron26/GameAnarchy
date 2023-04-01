@@ -29,7 +29,7 @@ namespace GameAnarchy {
                 }
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Auto add cash fail, detial: {e}");
+                InternalLogger.Log($"Auto add cash failed.", e);
             }
         }
 
@@ -49,8 +49,8 @@ namespace GameAnarchy {
                     cashAmount.SetValue(Singleton<EconomyManager>.instance, Config.Instance.InitialCash * 100);
                 }
             }
-            catch (Exception ex) {
-                ModLogger.ModLog($"Update start cash fail, economyManager state: {Singleton<EconomyManager>.exists}, Initial Money function: {Config.Instance.EnabledInitialCash}. {ex}");
+            catch (Exception e) {
+                InternalLogger.Exception($"Update start cash fail, economyManager state: {Singleton<EconomyManager>.exists}, Initial Money function: {Config.Instance.EnabledInitialCash}.", e);
             }
         }
 

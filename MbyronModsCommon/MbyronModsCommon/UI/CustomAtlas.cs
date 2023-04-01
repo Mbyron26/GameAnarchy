@@ -158,7 +158,7 @@ namespace MbyronModsCommon.UI {
             get {
                 if (commonAtlas is null) {
                     commonAtlas = UIUtils.CreateTextureAtlas(nameof(CommonAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
-                    ModLogger.ModLog("Initialized CommonAtlas succeed.");
+                    ExternalLogger.Log("Initialized CommonAtlas succeed.");
                     return commonAtlas;
                 } else {
                     return commonAtlas;

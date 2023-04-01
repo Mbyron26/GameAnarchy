@@ -61,7 +61,7 @@ namespace GameAnarchy {
             if (handers.Length <= handlerIndex) return;
             Action handler = handers[handlerIndex];
             handler();
-            ModLogger.ModLog($"{m_frameIndex} | {m_frame_16}");
+            //ModLogger.ModLog($"{m_frameIndex} | {m_frame_16}");
         }
 
         private void RemoveNoisePollution() {

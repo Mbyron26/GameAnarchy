@@ -7,7 +7,7 @@ namespace MbyronModsCommon {
     public static class ControlPanelTool {
         public static PropertyPanel Group { get; set; }
         public static RectOffset DefaultOffset => new(6, 6, 6, 6);
-        static ControlPanelTool() => ModLogger.ModLog("Initialize control panel tool.");
+        static ControlPanelTool() => InternalLogger.Log("Initialize control panel tool.");
 
         public static UIPanel AddChildPanel() => Group.AddChildPanel();
 
@@ -19,7 +19,7 @@ namespace MbyronModsCommon {
 
         public static UIPanel AddSliderGamma(string majorText, string minorText, Vector2 siderSize, float min, float max, float step, float defaultValue, PropertyChangedEventHandler<float> callback, out UILabel majorLabel, out UILabel minorLabel, out UISlider slider, RectOffset majorOffset = null, RectOffset minorOffset = null) {
             if (Group is null) {
-                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                ExternalLogger.Error("ControlPanelTools_Group is null.");
                 slider = null;
                 majorLabel = null;
                 minorLabel = null;
@@ -43,7 +43,7 @@ namespace MbyronModsCommon {
 
         public static UIPanel AddDropDown(string majorText, string minorText, string[] options, int defaultSelection, float width, out UIDropDown dropDown, float height = 20, OnDropdownSelectionChanged eventCallback = null, RectOffset majorOffset = null, RectOffset minorOffset = null) {
             if (Group is null) {
-                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                ExternalLogger.Error("ControlPanelTools_Group is null.");
                 dropDown = null;
                 return null;
             }
@@ -65,7 +65,7 @@ namespace MbyronModsCommon {
 
         public static UIPanel AddToggleButton(string majorText, string minorText, bool defaultValue, Action<bool> callback, out ToggleButton toggleButton, RectOffset majorOffset = null, RectOffset minorOffset = null) {
             if (Group is null) {
-                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                ExternalLogger.Error("ControlPanelTools_Group is null.");
                 toggleButton = null;
                 return null;
             }
@@ -87,7 +87,7 @@ namespace MbyronModsCommon {
 
         public static UIPanel AddField<TypeValueField, TypeValue>(string majorText, string minorText, float width, TypeValue defaultValue, TypeValue wheelStep, TypeValue minLimit, TypeValue maxLimit, Action<TypeValue> callback, out TypeValueField typeValueField, float height = 20f) where TypeValueField : CustomValueFieldBase<TypeValue> where TypeValue : IComparable {
             if (Group is null) {
-                ModLogger.ModLog("ControlPanelTools_Group is null.");
+                ExternalLogger.Error("ControlPanelTools_Group is null.");
                 typeValueField = null;
                 return null;
             }

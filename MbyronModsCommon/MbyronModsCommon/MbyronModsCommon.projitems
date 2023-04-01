@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\CompatibilityCheck.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\DebugUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\ModLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModUtils\PluginManagerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\UnityHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\XMLUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\CustomOptionKeymapping.cs" />

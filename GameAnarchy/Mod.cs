@@ -30,7 +30,7 @@ namespace GameAnarchy {
             CompatibilityCheck.GetExtraModsInfo += CompatibilityExtension.GetLocalIncompatibleMods;
             CompatibilityCheck.RemoveConflictModsAction += CompatibilityExtension.RemoveConflictMods;
             CompatibilityCheck.CheckCompatibility();
-            ModLogger.OutputPluginsList();
+            ExternalLogger.OutputPluginsList();
         }
 
         public override void OnLevelLoaded(LoadMode mode) {
@@ -65,7 +65,7 @@ namespace GameAnarchy {
 
         public override void OnReleased() {
             base.OnReleased();
-            ModLogger.ModLog($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
+            ExternalLogger.DebugMode($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
         }
 
         public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);

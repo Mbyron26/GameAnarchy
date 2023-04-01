@@ -8,6 +8,7 @@ namespace GameAnarchy {
         public bool EnabledSkipIntro { get; set; } = false;
         public bool EnabledUnlimitedUniqueBuildings { get; set; } = true;
         public uint OptionPanelCategoriesOffset { get; set; } = 0;
+        public bool OptionPanelCategoriesUpdated { get; set; } = false;
 
         public bool EnabledInfoView { get; set; } = false;
         public bool EnabledUnlockAll { get; set; } = true;

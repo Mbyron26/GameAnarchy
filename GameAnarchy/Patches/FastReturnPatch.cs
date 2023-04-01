@@ -16,8 +16,9 @@ namespace GameAnarchy {
                 LoadingManager.instance.autoSaveTimer.Stop();
                 Process.GetCurrentProcess().Kill();
                 return false;
-            } catch (Exception e) {
-                ModLogger.ModLog($"Fast return patch failure, detail: {e.Message}");
+            }
+            catch (Exception e) {
+                InternalLogger.Error($"Fast return patch failure.", e);
             }
             return false;
         }

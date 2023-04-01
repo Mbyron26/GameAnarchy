@@ -19,15 +19,15 @@ namespace MbyronModsCommon {
 
         protected void ResetSettings<OptionPanel>() where OptionPanel : UIPanel {
             try {
-                ModLogger.GameLog($"Start resetting mod config.");
+                InternalLogger.Log($"Start resetting mod config.");
                 SingletonMod<Config>.Instance = null;
                 SingletonMod<Config>.Instance = new();
                 OptionPanelManager<Mod, OptionPanel>.LocaleChanged();
-                ModLogger.GameLog($"Reset mod config succeeded.");
+                InternalLogger.Log($"Reset mod config succeeded.");
                 MessageBox.Show<ResetModMessageBox>().Init<Mod>();
             }
             catch (Exception e) {
-                ModLogger.GameLog($"Reset settings failed:", e);
+                InternalLogger.Exception($"Reset settings failed:", e);
                 MessageBox.Show<ResetModMessageBox>().Init<Mod>(false);
             }
         }

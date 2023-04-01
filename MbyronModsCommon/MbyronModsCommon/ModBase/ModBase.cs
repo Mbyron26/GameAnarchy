@@ -43,14 +43,14 @@ namespace MbyronModsCommon {
 
         public ModBase() {
             SingletonMod<Mod>.Instance = (Mod)this;
-            ModLogger.GameLog($"Start initializing mod.");
-            ModLogger.CreateDebugFile<Mod>();
+            InternalLogger.Log($"Start initializing mod.");
+            ExternalLogger.CreateDebugFile<Mod>();
             LoadConfig();
             CompatibilityCheck.ModName = ModName;
         }
 
         public void OnSettingsUI(UIHelperBase helper) {
-            ModLogger.GameLog($"Setting UI.");
+            InternalLogger.Log($"Setting UI.");
             LoadLocale();
             LocaleManager.eventLocaleChanged += LoadLocale;
             OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
@@ -65,15 +65,15 @@ namespace MbyronModsCommon {
                 if (SingletonMod<Config>.Instance.ModLanguage == "GameLanguage") {
                     var culture = ModLocalize.UseGameLanguage();
                     locale = new CultureInfo(culture);
-                    ModLogger.GameLog($"Change mod locale, use game language: {locale}.");
+                    InternalLogger.Log($"Change mod locale, use game language: {locale}.");
                 } else {
                     locale = new CultureInfo(SingletonMod<Config>.Instance.ModLanguage);
-                    ModLogger.GameLog($"Change mod locale, use custom language: {locale}.");
+                    InternalLogger.Log($"Change mod locale, use custom language: {locale}.");
                 }
                 ModCulture = locale;
             }
             catch (Exception e) {
-                ModLogger.GameLog($"Could't change mod locale", e);
+                InternalLogger.Exception($"Could't change mod locale", e);
             }
         }
 
@@ -121,7 +121,7 @@ namespace MbyronModsCommon {
                 SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
                 SaveConfig();
             } else {
-                ModLogger.ModLog("Updated version failed, mod version is null or empty in config file.");
+                InternalLogger.Error("Updated version failed, mod version is null or empty in config file.");
             }
         }
 

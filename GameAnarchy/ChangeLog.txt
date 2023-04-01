@@ -1,4 +1,7 @@
 ﻿
+V0.9.9
+[ADD]Displays mods updated date for the category bar of the options panel.
+
 V0.9.8
 [ADD]Added advanced option for reset mod config.
 [OPT]Optimized control panel invoke speed.

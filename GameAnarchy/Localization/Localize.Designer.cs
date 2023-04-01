@@ -898,6 +898,24 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Today at {0:HH:mm} 的本地化字符串。
+        /// </summary>
+        public static string Updated_Today {
+            get {
+                return ResourceManager.GetString("Updated_Today", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Yesterday 的本地化字符串。
+        /// </summary>
+        public static string Updated_Yesterday {
+            get {
+                return ResourceManager.GetString("Updated_Yesterday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 [ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_7ADD1 {

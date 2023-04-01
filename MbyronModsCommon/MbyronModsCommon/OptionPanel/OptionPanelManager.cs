@@ -1,4 +1,6 @@
-﻿using ColossalFramework.Globalization;
+﻿using ColossalFramework;
+using ColossalFramework.Globalization;
+using ColossalFramework.Plugins;
 using ColossalFramework.UI;
 using ICities;
 using System;
@@ -14,30 +16,37 @@ namespace MbyronModsCommon {
         public static void OptionsEventHook() {
             Container = UIView.library.Get<UIPanel>("OptionsPanel");
             if (Container is null) {
-                ModLogger.GameLog("Couldn't find game options panel.");
+                InternalLogger.Error("Couldn't find game options panel.");
             } else {
                 Container.eventVisibilityChanged += (c, isVisible) => {
                     if (isVisible) {
 #if DEBUG
-                        DebugUtils.TimeCalculater(Create,"Option Panel invoke: ");
+                        //DebugUtils.TimeCalculater(Create,"Option Panel invoke: ");
 #else
                         Create();
 #endif
                     } else {
-                        Close();
+                        SingletonMod<Mod>.Instance.SaveConfig();
+                        //Close();
                     }
                 };
                 LocaleManager.eventLocaleChanged += LocaleChanged;
+                Singleton<PluginManager>.instance.eventPluginsChanged += LocaleChanged;
             }
         }
+
+
         public static void LocaleChanged() {
             if (Container is not null && Container.isVisible) {
                 Close();
                 Create();
             }
         }
+
+
+
         private static void Close() {
-            SingletonMod<Mod>.Instance.SaveConfig();
+            //SingletonMod<Mod>.Instance.SaveConfig();
             if (ContainerGameObject is not null) {
                 //UnityEngine.Object.Destroy(Panel.gameObject);
                 UnityEngine.Object.Destroy(Panel);
@@ -46,6 +55,7 @@ namespace MbyronModsCommon {
                 ContainerGameObject = null;
             }
         }
+
         public static void Create() {
             try {
                 if (ContainerGameObject is null) {
@@ -56,9 +66,17 @@ namespace MbyronModsCommon {
                 }
             }
             catch (Exception e) {
-                ModLogger.GameLog("Creat option panel fail", e);
+                InternalLogger.Exception("Create option panel failed.", e);
             }
         }
+
+        private static void Init() {
+            ContainerGameObject = new(typeof(OptionPanel).Name);
+            ContainerGameObject.transform.parent = BasePanel.transform;
+            Panel = ContainerGameObject.AddComponent<OptionPanel>();
+            Panel.relativePosition = Vector2.zero;
+        }
+
         public static void SettingsUI(UIHelperBase helper) {
             BaseScrollablePanel = ((UIHelper)helper).self as UIScrollablePanel;
             BaseScrollablePanel.autoLayout = false;
@@ -66,6 +84,7 @@ namespace MbyronModsCommon {
             foreach (var components in BasePanel.components)
                 components.isVisible = false;
             BasePanel.autoLayout = false;
+            Init();
         }
 
 

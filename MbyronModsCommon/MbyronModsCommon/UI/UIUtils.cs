@@ -45,21 +45,21 @@ namespace MbyronModsCommon.UI {
                 return new Image(array).CreateTexture();
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Couldn't load texture from assembly, file name:{fileName}, detial:{e.Message}");
+                ExternalLogger.Log($"Couldn't load texture from assembly, file name:{fileName}, detial:{e.Message}");
                 return null;
             }
         }
 
         public static UITextureAtlas GetAtlas(string name) {
             if (UITextureAtlasBuffer.TryGetValue(name, out UITextureAtlas atlas)) {
-                ModLogger.ModLog($"Get UI texture atlas [{name}] in UITextureAtlasBuffer.");
+                ExternalLogger.Log($"Get UI texture atlas [{name}] in UITextureAtlasBuffer.");
                 return atlas;
             }
             UITextureAtlas[] atlases = Resources.FindObjectsOfTypeAll(typeof(UITextureAtlas)) as UITextureAtlas[];
             for (int i = 0; i < atlases.Length; i++) {
                 if (!UITextureAtlasBuffer.ContainsKey(atlases[i].name)) {
                     UITextureAtlasBuffer.Add(atlases[i].name, atlases[i]);
-                    ModLogger.ModLog($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
+                    ExternalLogger.Log($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
                 }    
                 if (atlases[i].name == name)
                     atlas = atlases[i];
@@ -67,7 +67,7 @@ namespace MbyronModsCommon.UI {
             if (atlas is not null) {
                 return atlas;
             } else {
-                ModLogger.ModLog($"Couldn't find UITextureAtlas [{name}], use default atlas [{UIView.GetAView().defaultAtlas.name}].");
+                ExternalLogger.Log($"Couldn't find UITextureAtlas [{name}], use default atlas [{UIView.GetAView().defaultAtlas.name}].");
                 return UIView.GetAView().defaultAtlas;
             }
         }

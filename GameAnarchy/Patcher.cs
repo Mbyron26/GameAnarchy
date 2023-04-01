@@ -2,10 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using ColossalFramework;
-using ColossalFramework.Plugins;
 using HarmonyLib;
-using ICities;
 
 namespace GameAnarchy {
     public static class Patcher {
@@ -13,7 +10,6 @@ namespace GameAnarchy {
         public static void EnablePatches() {
             Harmony harmony = new(HARMONYID);
             harmony.PatchAll();
-            SortSettingsPatch(harmony);
             SkipIntroPatch(harmony);
         }
         public static void DisablePatches() {
@@ -52,28 +48,5 @@ namespace GameAnarchy {
             return codes;
         }
 
-
-        public static void SortSettingsPatch(Harmony harmony) {
-            var addUserModsOriginal = typeof(OptionsMainPanel).GetMethod("AddUserMods", BindingFlags.NonPublic | BindingFlags.Instance);
-            var addUserModsTranspiler = typeof(Patcher).GetMethod(nameof(AddUserModsTranspiler), BindingFlags.Public | BindingFlags.Static);
-            harmony.Patch(addUserModsOriginal, null, null, new HarmonyMethod(addUserModsTranspiler));
-        }
-        public static IEnumerable<CodeInstruction> AddUserModsTranspiler(IEnumerable<CodeInstruction> codeInstructions) {
-            var hookOpCode = OpCodes.Callvirt;
-            var hookOperand = typeof(PluginManager).GetMethod("GetPluginsInfo", BindingFlags.Public | BindingFlags.Instance);
-            var replacementMethod = typeof(Patcher).GetMethod(nameof(GetPluginsInfoInOrder), BindingFlags.Public | BindingFlags.Static);
-            var instructions = codeInstructions.ToList();
-            for (int i = 0; i < instructions.Count; i++) {
-                var instruction = instructions[i];
-                if (instruction.opcode == hookOpCode && instruction.operand == hookOperand) {
-                    instruction.opcode = OpCodes.Call;
-                    instruction.operand = replacementMethod;
-                    instructions.RemoveAt(i - 1);
-                    break;
-                }
-            }
-            return instructions;
-        }
-        public static IEnumerable<PluginManager.PluginInfo> GetPluginsInfoInOrder() => Singleton<PluginManager>.instance.GetPluginsInfo().Where(p => p?.userModInstance as IUserMod != null).OrderBy(p => ((IUserMod)p.userModInstance).Name);
     }
 }

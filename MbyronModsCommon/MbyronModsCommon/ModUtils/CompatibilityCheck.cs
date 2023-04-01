@@ -41,10 +41,10 @@ namespace MbyronModsCommon {
             if (DetectedIncompatibleMods.Count > 0) {
                 foreach (var item in DetectedIncompatibleMods) {
                     if (PlatformService.workshop.Unsubscribe(new PublishedFileId(item.fileID))) {
-                        ModLogger.ModLog($"Unsubscribed Incompatible mod succeed: {item.name}");
+                        ExternalLogger.Log($"Unsubscribed Incompatible mod succeed: {item.name}");
                         flag.Add(true);
                     } else {
-                        ModLogger.ModLog($"Unsubscribed Incompatible mod failed: {item.name}");
+                        ExternalLogger.Log($"Unsubscribed Incompatible mod failed: {item.name}");
                         flag.Add(false);
                     }
                 }
@@ -100,7 +100,7 @@ namespace MbyronModsCommon {
                 foreach (var item in DetectedIncompatibleMods) {
                     stringBuilder.Append($"[{item.name}]\n");
                 }
-                ModLogger.ModLog(stringBuilder.ToString());
+                ExternalLogger.Log(stringBuilder.ToString());
             }
         }
 

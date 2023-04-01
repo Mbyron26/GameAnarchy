@@ -15,7 +15,7 @@ namespace GameAnarchy {
                 var netCount = PrefabCollection<NetInfo>.LoadedCount();
                 var buildingCount = PrefabCollection<BuildingInfo>.LoadedCount();
                 if (netCount == 0 || buildingCount == 0) {
-                    ModLogger.ModLog("Unlock all roads fail, base net road count and building type road count is empty.");
+                    ExternalLogger.Error("Unlock all roads fail, base net road count and building type road count is empty.");
                     return;
                 }
 
@@ -26,7 +26,7 @@ namespace GameAnarchy {
                             netInfo.m_UnlockMilestone = null;
                         }
                     }
-                    ModLogger.ModLog("Unlock base net road succeed.");
+                    ExternalLogger.Error("Unlock base net road succeed.");
 
                     for (uint j = 0; j < buildingCount; j++) {
                         var buildingInfo = PrefabCollection<BuildingInfo>.GetLoaded(j);
@@ -39,10 +39,10 @@ namespace GameAnarchy {
                         }
                     }
 
-                    ModLogger.ModLog("Unlock all type roads succeed.");
+                    ExternalLogger.Log("Unlock all type roads succeed.");
                 }
                 catch (Exception e) {
-                    ModLogger.ModLog($"Unlock all road fail, detail: {e}");
+                    ExternalLogger.Exception($"Unlock all road failed.", e);
                 }
             }
             #endregion
@@ -371,10 +371,10 @@ namespace GameAnarchy {
                         }
                     }
                     catch (Exception e) {
-                        ModLogger.ModLog($"Couldn't unlock policies, detail: {e}");
+                        ExternalLogger.Exception($"Couldn't unlock policies.", e);
                     }
                 } else {
-                    ModLogger.ModLog("UnlockManager doesn't exist.");
+                    ExternalLogger.Error("UnlockManager doesn't exist.");
                 }
             }
             #endregion
@@ -395,13 +395,13 @@ namespace GameAnarchy {
                                 }
                             }
                         }
-                        ModLogger.ModLog("Unlock transport succeed.");
+                        ExternalLogger.Log("Unlock transport succeed.");
                     }
                     catch (Exception e) {
-                        ModLogger.ModLog($"Unlock transport failed, details: {e}");
+                        ExternalLogger.Exception($"Unlock transport failed.", e);
                     }
                 } else {
-                    ModLogger.ModLog($"UnlockManager doesn't exists, unlock transport failed.");
+                    ExternalLogger.Error($"UnlockManager doesn't exists, unlock transport failed.");
                 }
             }
             #endregion
@@ -410,27 +410,27 @@ namespace GameAnarchy {
             if (Config.Instance.UnlockUniqueBuilding && Config.Instance.CustomUnlock) {
                 if (UnlockManager.instance.m_properties.m_ServiceMilestones[17] is not null) {
                     UnlockManager.instance.m_properties.m_ServiceMilestones[17] = null;
-                    ModLogger.ModLog("Unlock unique building level 1 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 1 succeed.");
                 }
                 if (UnlockManager.instance.m_properties.m_FeatureMilestones[14] is not null) {
                     UnlockManager.instance.m_properties.m_FeatureMilestones[14] = null;
-                    ModLogger.ModLog("Unlock unique building level 2 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 2 succeed.");
                 }
                 if (UnlockManager.instance.m_properties.m_FeatureMilestones[15] is not null) {
                     UnlockManager.instance.m_properties.m_FeatureMilestones[15] = null;
-                    ModLogger.ModLog("Unlock unique building level 3 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 3 succeed.");
                 }
                 if (UnlockManager.instance.m_properties.m_FeatureMilestones[16] is not null) {
                     UnlockManager.instance.m_properties.m_FeatureMilestones[16] = null;
-                    ModLogger.ModLog("Unlock unique building level 4 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 4 succeed.");
                 }
                 if (UnlockManager.instance.m_properties.m_FeatureMilestones[17] is not null) {
                     UnlockManager.instance.m_properties.m_FeatureMilestones[17] = null;
-                    ModLogger.ModLog("Unlock unique building level 5 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 5 succeed.");
                 }
                 if (UnlockManager.instance.m_properties.m_FeatureMilestones[18] is not null) {
                     UnlockManager.instance.m_properties.m_FeatureMilestones[18] = null;
-                    ModLogger.ModLog("Unlock unique building level 6 succeed.");
+                    ExternalLogger.Log("Unlock unique building level 6 succeed.");
                 }
             }
             #endregion

@@ -1,11 +1,16 @@
-﻿using ColossalFramework.UI;
+﻿using ColossalFramework.Plugins;
+using ColossalFramework.UI;
 using HarmonyLib;
-using MbyronModsCommon;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Reflection.Emit;
+using System.IO;
+using GameAnarchy.Localization;
 
 namespace GameAnarchy {
-    [HarmonyPatch(typeof(OptionsMainPanel), "OnVisibilityChanged")]
+    [HarmonyPatch(typeof(OptionsMainPanel))]
     public static class OptionsMainPanelPatch {
         public static float MainPanelWidth = 1074f;
         public static float CategoriesDefaultWidth = 268;
@@ -13,7 +18,10 @@ namespace GameAnarchy {
         public static float ContainerDefaultPosX = 296;
         public static float ContainerDefaultPosY = 52;
         public static uint Offset => Config.Instance.OptionPanelCategoriesOffset;
-        static void Postfix(UIComponent comp, bool visible) {
+
+        [HarmonyPatch("OnVisibilityChanged")]
+        [HarmonyPostfix]
+        public static void Postfix0(UIComponent comp, bool visible) {
             try {
                 var categories = comp.Find<UIListBox>("Categories");
                 var optionsContainer = comp.Find<UITabContainer>("OptionsContainer");
@@ -25,10 +33,128 @@ namespace GameAnarchy {
                 optionsContainer.relativePosition = new Vector2(ContainerDefaultPosX + Offset, ContainerDefaultPosY);
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Options main panel patch failure, detail: {e.Message}");
+                ExternalLogger.Log($"Options main panel patch failure, detail: {e.Message}");
             }
-
         }
+
+        [HarmonyTranspiler]
+        [HarmonyPatch("AddUserMods")]
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {
+            MethodInfo addCategory = typeof(OptionsMainPanel).GetMethod("AddCategory", BindingFlags.NonPublic | BindingFlags.Instance);
+            MethodInfo getPluginsInfo = typeof(PluginManager).GetMethod("GetPluginsInfo", BindingFlags.Public | BindingFlags.Instance);
+            MethodInfo addCategoryExtension = AccessTools.Method(typeof(OptionsMainPanelPatch), nameof(AddCategoryExtension));
+            MethodInfo getPluginsInfoInOrder = AccessTools.Method(typeof(PluginManagerExtension), nameof(PluginManagerExtension.GetPluginsInfoSortByName));
+            FieldInfo categoriesField = AccessTools.Field(typeof(OptionsMainPanel), "m_Categories");
+            FieldInfo categoriesContainerField = AccessTools.Field(typeof(OptionsMainPanel), "m_CategoriesContainer");
+            FieldInfo dummiesField = AccessTools.Field(typeof(OptionsMainPanel), "m_Dummies");
+            IEnumerator<CodeInstruction> instructionsEnumerator = instructions.GetEnumerator();
+            while (instructionsEnumerator.MoveNext()) {
+                CodeInstruction instruction = instructionsEnumerator.Current;
+                if (instruction.Calls(getPluginsInfo)) {
+                    instruction = new CodeInstruction(OpCodes.Call, getPluginsInfoInOrder);
+                    InternalLogger.Log($"[Transpiler]: {addCategory.Name} patched by {addCategoryExtension.Name}.");
+                }
+                if (instruction.Calls(addCategory)) {
+                    yield return new CodeInstruction(OpCodes.Ldloc_0);
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldflda, categoriesField);
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldflda, categoriesContainerField);
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldflda, dummiesField);
+                    instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);
+                    InternalLogger.Log($"[Transpiler]: {getPluginsInfo.Name} patched by {getPluginsInfoInOrder.Name}.");
+                }
+                yield return instruction;
+            }
+        }
+
+        private static string GetModUpdatedDate(PluginManager.PluginInfo pluginInfo) {
+            var updatedTime = pluginInfo.updateTime;
+            ExternalLogger.Log(updatedTime.ToString());
+            if (DateTime.Equals(updatedTime, DateTime.MinValue)) {
+                updatedTime = GetModUpdatedDate(pluginInfo.modPath);
+            } else {
+                updatedTime = updatedTime.ToLocalTime();
+            }
+            var span = updatedTime - DateTime.Now;
+            var days = Math.Abs(span.Days);
+            var months = days / 30;
+            var years = months / 12;
+
+            string date;
+            if (days == 0) {
+                var newDay = new DateTime(updatedTime.Year, updatedTime.Month, updatedTime.Day).AddDays(1);
+                var flag = DateTime.Compare(newDay, DateTime.Now);
+                if (flag > 0) {
+                    date = "<color #8BBD3A>" + string.Format(Localize.Updated_Today, updatedTime) + "</color>";
+                } else {
+                    date = "<color #8BBD3A>" + string.Format("Yesterday at {0:HH:mm}", updatedTime) + "</color>";
+                }
+
+            } else if (days <= 30) {
+                if (days == 1) {
+                    date = "<color #059641>" + Localize.Updated_Yesterday + "</color>";
+                } else {
+                    if (days < 15) {
+                        date = "<color #059641>" + string.Format("{0} days ago", days) + "</color>";
+                    } else {
+                        date = "<color #009ED6>" + string.Format("{0} days ago", days) + "</color>";
+                    }
+                }
+            } else if (days > 30 && days <= 365) {
+                if (days < 60) {
+                    date = "<color #009ED6>" + string.Format("{0} month ago", months) + "</color>";
+                } else if (days < 90) {
+                    date = "<color #009ED6>" + string.Format("{0} months ago", months) + "</color>";
+                } else if (days < 180) {
+                    date = "<color #6A2A78>" + string.Format("{0} months ago", months) + "</color>";
+                } else {
+                    date = "<color #F08E2B>" + string.Format("{0} months ago", months) + "</color>";
+                }
+            } else {
+                if (days <= 730) {
+                    date = "<color #E92E32>" + $"Last year" + "</color>";
+                } else {
+                    date = "<color #E92E32>" + string.Format("{0} years ago", years) + "</color>";
+                }
+            }
+            return date;
+        }
+
+        private static void AddCategoryExtension(string name, UIComponent container, PluginManager.PluginInfo pluginInfo, ref UIListBox categories, ref UITabContainer categoriesContainer, ref List<UIComponent> dummies) {
+            if (Config.Instance.OptionPanelCategoriesUpdated)
+                name = name + " | " + GetModUpdatedDate(pluginInfo);
+            List<string> list;
+            if (categories.items != null) {
+                list = new List<string>(categories.items);
+            } else {
+                list = new List<string>();
+            }
+            list.Add(name);
+            if (container == null) {
+                container = categoriesContainer.AddUIComponent<UIPanel>();
+                dummies.Add(container);
+            }
+            container.zOrder = list.Count - 1;
+            categories.items = list.ToArray();
+        }
+
+        public static DateTime GetModUpdatedDate(string path) {
+            var dateTime = DateTime.MinValue;
+            if (Directory.Exists(path)) {
+                foreach (var filePAth in Directory.GetFiles(path, "*", SearchOption.AllDirectories)) {
+                    if (Path.GetFileName(filePAth) != ".excluded") {
+                        var lastWriteTime = File.GetLastWriteTime(filePAth);
+                        if (lastWriteTime > dateTime) {
+                            dateTime = lastWriteTime;
+                        }
+                    }
+                }
+            }
+            return dateTime;
+        }
+
     }
 
 }

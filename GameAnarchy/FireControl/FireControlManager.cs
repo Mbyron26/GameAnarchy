@@ -17,7 +17,7 @@ namespace GameAnarchy.FireControl {
                 }
                 return randomValue <= probaility;
             }
-            ModLogger.ModLog("SimulationManager does not exist.");
+            ExternalLogger.Error("SimulationManager does not exist.");
             return false;
         }
     }

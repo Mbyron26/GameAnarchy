@@ -15,7 +15,7 @@ namespace MbyronModsCommon {
                 if (File.Exists(subPath + @"\" + AssemblyUtils.CurrentAssemblyName + ".resources.dll")) {
                     supportCulture.Add(item);
                 } else {
-                    ModLogger.GameLog($"Couldn't find locale resource: {item}. Path: {subPath}");
+                    InternalLogger.Log($"Couldn't find locale resource: {item}. Path: {subPath}");
                 }
             }
             return supportCulture;
@@ -33,7 +33,7 @@ namespace MbyronModsCommon {
                             supportLocale += IDs[i] + ", ";
                         }
                     }
-                    ModLogger.ModLog($"Support localization resources: {supportLocale}.");
+                    InternalLogger.Log($"Support localization resources: {supportLocale}.");
                     modSupportLanguageIDs = IDs;
                     return IDs;
                 } else return modSupportLanguageIDs;

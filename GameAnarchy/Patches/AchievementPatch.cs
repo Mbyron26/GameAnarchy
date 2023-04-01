@@ -17,15 +17,15 @@ namespace GameAnarchy {
             if (loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame || loadMode == LoadMode.NewGameFromScenario || loadMode == LoadMode.LoadScenario) {
                 unlockingPanel = UIView.Find<UIPanel>("UnlockingPanel");
                 if (unlockingPanel is null) {
-                    ModLogger.ModLog("Initialize achievements failed, couldn't find UnlockingPanel.");
+                    ExternalLogger.Log("Initialize achievements failed, couldn't find UnlockingPanel.");
                 } else {
-                    ModLogger.ModLog($"{loadMode} mode, start initalize UnlockingPanel.");
+                    ExternalLogger.Log($"{loadMode} mode, start initalize UnlockingPanel.");
                     var tabstrip = unlockingPanel.Find<UITabstrip>("Tabstrip");
                     button = tabstrip.Find<UIButton>("Achievements");
                 }
                 UpdateAchievements(Config.Instance.EnabledAchievements);
             } else {
-                ModLogger.ModLog("Not Game mode, do not initalize UnlockingPanel.");
+                ExternalLogger.Log("Not Game mode, do not initalize UnlockingPanel.");
                 UpdateAchievements(Config.Instance.EnabledAchievements);
             }
         }
@@ -43,10 +43,10 @@ namespace GameAnarchy {
                 if (button is not null) {
                     button.isEnabled = isEnable;
                 }
-                ModLogger.ModLog($"Update achievements succeed, status: {isEnable}");
+                ExternalLogger.Log($"Update achievements succeed, status: {isEnable}");
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Update achievements status failure, detail: {e.Message}");
+                ExternalLogger.Log($"Update achievements status failure, detail: {e.Message}");
             }
         }
 
@@ -79,7 +79,7 @@ namespace GameAnarchy {
                 }
             }
             catch (Exception e) {
-                ModLogger.ModLog($"Achievement patch failure, detail: {e.Message}");
+                InternalLogger.Exception($"Achievement patch failure.", e);
             }
         }
     }
