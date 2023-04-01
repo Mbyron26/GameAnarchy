@@ -96,7 +96,7 @@ namespace MbyronModsCommon {
         public virtual void OnCreated(ILoading loading) { }
         public virtual void OnLevelLoaded(LoadMode mode) {
             ShowLogMessageBox();
-            OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
+            //OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
         }
         public virtual void OnLevelUnloading() { }
         public virtual void OnReleased() { }

@@ -17,7 +17,7 @@ namespace GameAnarchy {
         public static float ContainerDefaultWidth = 764;
         public static float ContainerDefaultPosX = 296;
         public static float ContainerDefaultPosY = 52;
-        public static uint Offset => Config.Instance.OptionPanelCategoriesOffset;
+        public static uint Offset => Config.Instance.OptionPanelCategoriesHorizontalOffset;
 
         [HarmonyPatch("OnVisibilityChanged")]
         [HarmonyPostfix]

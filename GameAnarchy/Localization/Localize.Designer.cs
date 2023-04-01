@@ -556,6 +556,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 show mod updated date in options panel categories 的本地化字符串。
+        /// </summary>
+        public static string OptionPanelCategoriesUpdated {
+            get {
+                return ResourceManager.GetString("OptionPanelCategoriesUpdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Options panel categories bar horizontal offset 的本地化字符串。
         /// </summary>
         public static string OptionsPanelHorizontalOffset {
@@ -768,6 +777,15 @@ namespace GameAnarchy.Localization {
         public static string StockExchange {
             get {
                 return ResourceManager.GetString("StockExchange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似  的本地化字符串。
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

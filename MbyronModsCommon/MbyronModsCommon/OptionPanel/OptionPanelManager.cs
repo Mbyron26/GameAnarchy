@@ -19,34 +19,22 @@ namespace MbyronModsCommon {
                 InternalLogger.Error("Couldn't find game options panel.");
             } else {
                 Container.eventVisibilityChanged += (c, isVisible) => {
-                    if (isVisible) {
-#if DEBUG
-                        //DebugUtils.TimeCalculater(Create,"Option Panel invoke: ");
-#else
-                        Create();
-#endif
-                    } else {
+                    if (!isVisible) {
                         SingletonMod<Mod>.Instance.SaveConfig();
-                        //Close();
                     }
                 };
                 LocaleManager.eventLocaleChanged += LocaleChanged;
-                Singleton<PluginManager>.instance.eventPluginsChanged += LocaleChanged;
             }
         }
 
-
         public static void LocaleChanged() {
             if (Container is not null && Container.isVisible) {
-                Close();
+                Destroy();
                 Create();
             }
         }
 
-
-
-        private static void Close() {
-            //SingletonMod<Mod>.Instance.SaveConfig();
+        private static void Destroy() {
             if (ContainerGameObject is not null) {
                 //UnityEngine.Object.Destroy(Panel.gameObject);
                 UnityEngine.Object.Destroy(Panel);
@@ -66,11 +54,12 @@ namespace MbyronModsCommon {
                 }
             }
             catch (Exception e) {
-                InternalLogger.Exception("Create option panel failed.", e);
+                InternalLogger.Exception("Create option panel object failed.", e);
             }
         }
 
         private static void Init() {
+            Destroy();
             ContainerGameObject = new(typeof(OptionPanel).Name);
             ContainerGameObject.transform.parent = BasePanel.transform;
             Panel = ContainerGameObject.AddComponent<OptionPanel>();
@@ -84,9 +73,9 @@ namespace MbyronModsCommon {
             foreach (var components in BasePanel.components)
                 components.isVisible = false;
             BasePanel.autoLayout = false;
+            Destroy();
             Init();
         }
-
 
     }
 }

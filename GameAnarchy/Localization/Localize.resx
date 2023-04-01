@@ -282,6 +282,9 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimize Options</value>
   </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>show mod updated date in options panel categories</value>
+  </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Options panel categories bar horizontal offset</value>
   </data>
@@ -354,6 +357,10 @@
   <data name="StockExchange" xml:space="preserve">
     <value>Stock exchange</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+    <comment>Show mod updated date.</comment>
+  </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
     <value>Tree spread fire probability</value>
   </data>
@@ -398,15 +405,19 @@
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
     <value>{0} days ago</value>
+    <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
     <value>Last year</value>
+    <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
     <value>{0} month ago</value>
+    <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
     <value>{0} months ago</value>
+    <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
     <value>Today at {0:HH:mm}</value>
@@ -414,6 +425,7 @@
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
     <value>{0} years ago</value>
+    <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
     <value>Yesterday</value>
