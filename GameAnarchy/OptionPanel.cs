@@ -78,7 +78,7 @@ namespace GameAnarchy {
                 AchievementsManager.UpdateAchievements(_);
             }, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledSkipIntro, Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddToggleButton(Config.Instance.OptionPanelCategoriesUpdated, Localize.OptionPanelCategoriesUpdated, null, _ => Config.Instance.OptionPanelCategoriesUpdated = _, out UILabel _, out UILabel _, out ToggleButton _);
+            OptionPanelTool.AddToggleButton(Config.Instance.OptionPanelCategoriesUpdated, Localize.OptionPanelCategoriesUpdated, Localize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddSliderAlpha(Localize.OptionsPanelHorizontalOffsetTooltip, null, Localize.OptionsPanelHorizontalOffset, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new SliderAlphaSize(60, 594, 30), (c, _) => Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_, out UILabel _, out UILabel _, out SliderAlpha slider0);
             OptionPanelTool.Reset();
         }

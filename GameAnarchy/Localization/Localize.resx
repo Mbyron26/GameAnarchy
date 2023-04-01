@@ -283,13 +283,16 @@
     <value>Optimize Options</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>show mod updated date in options panel categories</value>
+    <value>Show mod updated date in options panel categories</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Options panel categories bar horizontal offset</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened.</value>
+    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>Ore depletion rate</value>
@@ -356,10 +359,6 @@
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>Stock exchange</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-    <comment>Show mod updated date.</comment>
   </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
     <value>Tree spread fire probability</value>

@@ -397,23 +397,23 @@
     <value>解锁所有 1～6 级的独特建筑。由于游戏限制，如果此选项被强制解锁，那么少数的独特建筑将会被解锁，但是不会解锁所有独特建筑。</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0}天前</value>
+    <value>{0} 天前</value>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
     <value>去年</value>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0}个月前</value>
+    <value>{0} 个月前</value>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0}个月前</value>
+    <value>{0} 个月前</value>
   </data>
   <data name="Updated_Today" xml:space="preserve">
     <value>今天 {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0}年前</value>
+    <value>{0} 年前</value>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
     <value>昨天</value>

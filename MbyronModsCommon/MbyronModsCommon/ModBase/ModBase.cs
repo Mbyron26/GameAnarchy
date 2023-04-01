@@ -14,6 +14,7 @@ namespace MbyronModsCommon {
         public static Version ModVersion => Instance.ModVersion;
         public static ulong ModID => Instance.ModID;
         public static string VersionType => Instance.VersionType;
+        public static string Name => Instance.Name;
     }
 
     public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : UIPanel where Config : ModConfigBase<Config>, new() {

@@ -2,6 +2,7 @@
 using ColossalFramework.UI;
 using ICities;
 using System;
+using System.Diagnostics;
 using UnityEngine;
 
 namespace MbyronModsCommon {
@@ -12,13 +13,16 @@ namespace MbyronModsCommon {
         private static GameObject ContainerGameObject { get; set; }
         private static UIPanel Container { get; set; }
         public static void OptionsEventHook() {
-            Container = UIView.library.Get<UIPanel>("OptionsPanel");
+            Container = UIView.library.Get<UIPanel>("OptionsPanel").Find<UITabContainer>("OptionsContainer").Find<UIPanel>(ModMainInfo<IMod>.Name);
             if (Container is null) {
                 InternalLogger.Error("Couldn't find game options panel.");
             } else {
                 Container.eventVisibilityChanged += (c, isVisible) => {
-                    if (!isVisible) {
-                        SingletonMod<Mod>.Instance.SaveConfig();
+                    if (isVisible) {
+                        Create();
+                        //SingletonMod<Mod>.Instance.SaveConfig();
+                    } else {
+                        Destroy();
                     }
                 };
                 LocaleManager.eventLocaleChanged += LocaleChanged;
@@ -34,6 +38,7 @@ namespace MbyronModsCommon {
 
         private static void Destroy() {
             if (ContainerGameObject is not null) {
+                SingletonMod<Mod>.Instance.SaveConfig();
                 //UnityEngine.Object.Destroy(Panel.gameObject);
                 UnityEngine.Object.Destroy(Panel);
                 UnityEngine.Object.Destroy(ContainerGameObject);
@@ -56,13 +61,6 @@ namespace MbyronModsCommon {
             }
         }
 
-        private static void Init() {
-            Destroy();
-            ContainerGameObject = new(typeof(OptionPanel).Name);
-            ContainerGameObject.transform.parent = BasePanel.transform;
-            Panel = ContainerGameObject.AddComponent<OptionPanel>();
-            Panel.relativePosition = Vector2.zero;
-        }
 
         public static void SettingsUI(UIHelperBase helper) {
             BaseScrollablePanel = ((UIHelper)helper).self as UIScrollablePanel;
@@ -71,8 +69,6 @@ namespace MbyronModsCommon {
             foreach (var components in BasePanel.components)
                 components.isVisible = false;
             BasePanel.autoLayout = false;
-            Destroy();
-            Init();
         }
 
     }
