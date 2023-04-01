@@ -8,7 +8,7 @@ namespace MbyronModsCommon {
     public static class OptionPanelTool {
         public static PropertyPanel Group { get; set; }
         public static RectOffset DefaultOffset => new(10, 10, 10, 10);
-        static OptionPanelTool() => ExternalLogger.Log("Initialize option panel tool.");
+        static OptionPanelTool() => InternalLogger.Log("Initialize option panel tool.");
 
         public static PropertyPanel AddGroup(UIComponent parent, float width, string caption) {
             Group = parent.AddUIComponent<PropertyPanel>();
@@ -202,10 +202,10 @@ namespace MbyronModsCommon {
             if (majorText is not null) {
                 majorLabel = CustomLabel.AddLabel(panel, majorText, 10, majorOffset, 1f);
                 if (minorText is not null) {
-                    minorLabel = CustomLabel.AddLabel(panel, minorText, 10, minorOffset, 0.8f, CustomColor.OffWhite);
+                    minorLabel = CustomLabel.AddLabel(panel, minorText, null, minorOffset, 1f, wordWrap: false);
                 }
             }
-            Group.UITool = new UIStyleAlpha(panel, null, majorLabel, minorLabel, DefaultOffset) { LabelGap = 4 };
+            Group.UITool = new UIStyleAlpha(panel, minorLabel, majorLabel, null, DefaultOffset) { LabelGap = 4 };
             Group.UITool.RefreshLayout();
             Group.UITool = null;
             return panel;

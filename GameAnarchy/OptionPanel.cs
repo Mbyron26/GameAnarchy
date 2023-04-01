@@ -61,9 +61,9 @@ namespace GameAnarchy {
 
         private static void AddModInfoProperty(UIComponent parent, float width) {
             OptionPanelTool.AddGroup(parent, width, CommonLocalize.OptionPanel_ModInfo);
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}: {ModMainInfo<Mod>.ModVersion}({ModMainInfo<Mod>.VersionType})", null, out UILabel _, out UILabel _);
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.FastReturn}]", null, out UILabel _, out UILabel _);
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}: [{Localize.SortSettings}]", null, out UILabel _, out UILabel _);
+            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_Version}", $"{ModMainInfo<Mod>.ModVersion}({ModMainInfo<Mod>.VersionType})", out UILabel _, out UILabel _);
+            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"[{Localize.FastReturn}]", out UILabel _, out UILabel _);
+            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"[{Localize.SortSettings}]", out UILabel _, out UILabel _);
             OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => {
                 OnLanguageSelectedIndexChanged<OptionPanel>(v);
                 ControlPanelManager.OnLocaleChanged();

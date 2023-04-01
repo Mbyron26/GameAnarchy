@@ -40,7 +40,7 @@ namespace MbyronModsCommon {
         protected UIComponent Parent { get; set; }
         public GeneralOptionsBase(UIComponent parent, TypeWidth typeWidth) {
             Parent = parent;
-            CustomLabel.AddLabel(parent, ModMainInfo<Mod>.ModName, (float)typeWidth, new(), 2f, Color.white).font = CustomFont.SemiBold;
+            //CustomLabel.AddLabel(parent, ModMainInfo<Mod>.ModName, (float)typeWidth, new(), 2f, Color.white).font = CustomFont.SemiBold;
         }
 
         protected static void OnLanguageSelectedIndexChanged<Panel>(int value) where Panel : UIPanel {

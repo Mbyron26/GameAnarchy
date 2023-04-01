@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public class CustomLabel {
-        public static UILabel AddLabel(UIComponent parent, string text, float? width, RectOffset rectOffset = null, float textScale = 1.0f, Color32? textColor = null) {
+        public static UILabel AddLabel(UIComponent parent, string text, float? width, RectOffset rectOffset = null, float textScale = 1.0f, Color32? textColor = null, bool wordWrap = true) {
             var label = parent.AddUIComponent<UILabel>();
             label.autoSize = false;
             label.autoHeight = true;
             label.textScale = textScale;
-            label.wordWrap = true;
+            label.wordWrap = wordWrap;
             if (textColor.HasValue)
                 label.textColor = textColor.Value;
             label.processMarkup = true;
