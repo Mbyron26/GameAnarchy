@@ -89,7 +89,7 @@ namespace GameAnarchy {
                 if (flag > 0) {
                     date = "<color #8BBD3A>" + string.Format(Localize.Updated_Today, updatedTime) + "</color>";
                 } else {
-                    date = "<color #8BBD3A>" + string.Format("Yesterday at {0:HH:mm}", updatedTime) + "</color>";
+                    date = "<color #8BBD3A>" + string.Format(Localize.Updated_YesterdayAt, updatedTime) + "</color>";
                 }
 
             } else if (days <= 30) {
@@ -97,26 +97,26 @@ namespace GameAnarchy {
                     date = "<color #059641>" + Localize.Updated_Yesterday + "</color>";
                 } else {
                     if (days < 15) {
-                        date = "<color #059641>" + string.Format("{0} days ago", days) + "</color>";
+                        date = "<color #059641>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
                     } else {
-                        date = "<color #009ED6>" + string.Format("{0} days ago", days) + "</color>";
+                        date = "<color #009ED6>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
                     }
                 }
             } else if (days > 30 && days <= 365) {
                 if (days < 60) {
-                    date = "<color #009ED6>" + string.Format("{0} month ago", months) + "</color>";
+                    date = "<color #009ED6>" + string.Format(Localize.Updated_MonthAgo, months) + "</color>";
                 } else if (days < 90) {
-                    date = "<color #009ED6>" + string.Format("{0} months ago", months) + "</color>";
+                    date = "<color #009ED6>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
                 } else if (days < 180) {
-                    date = "<color #6A2A78>" + string.Format("{0} months ago", months) + "</color>";
+                    date = "<color #6A2A78>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
                 } else {
-                    date = "<color #F08E2B>" + string.Format("{0} months ago", months) + "</color>";
+                    date = "<color #F08E2B>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
                 }
             } else {
                 if (days <= 730) {
-                    date = "<color #E92E32>" + $"Last year" + "</color>";
+                    date = "<color #E92E32>" + Localize.Updated_LastYear + "</color>";
                 } else {
-                    date = "<color #E92E32>" + string.Format("{0} years ago", years) + "</color>";
+                    date = "<color #E92E32>" + string.Format(Updated_YearsAgo, years) + "</color>";
                 }
             }
             return date;

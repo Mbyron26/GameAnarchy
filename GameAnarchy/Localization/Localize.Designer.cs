@@ -898,6 +898,42 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 {0} days ago 的本地化字符串。
+        /// </summary>
+        public static string Updated_DaysAgo {
+            get {
+                return ResourceManager.GetString("Updated_DaysAgo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Last year 的本地化字符串。
+        /// </summary>
+        public static string Updated_LastYear {
+            get {
+                return ResourceManager.GetString("Updated_LastYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {0} month ago 的本地化字符串。
+        /// </summary>
+        public static string Updated_MonthAgo {
+            get {
+                return ResourceManager.GetString("Updated_MonthAgo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {0} months ago 的本地化字符串。
+        /// </summary>
+        public static string Updated_MonthsAgo {
+            get {
+                return ResourceManager.GetString("Updated_MonthsAgo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Today at {0:HH:mm} 的本地化字符串。
         /// </summary>
         public static string Updated_Today {
@@ -907,11 +943,29 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 {0} years ago 的本地化字符串。
+        /// </summary>
+        public static string Updated_YearsAgo {
+            get {
+                return ResourceManager.GetString("Updated_YearsAgo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Yesterday 的本地化字符串。
         /// </summary>
         public static string Updated_Yesterday {
             get {
                 return ResourceManager.GetString("Updated_Yesterday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Yesterday at {0:HH:mm} 的本地化字符串。
+        /// </summary>
+        public static string Updated_YesterdayAt {
+            get {
+                return ResourceManager.GetString("Updated_YesterdayAt", resourceCulture);
             }
         }
         
