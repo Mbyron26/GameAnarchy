@@ -1,17 +1,11 @@
 ﻿using HarmonyLib;
-using MbyronModsCommon;
 using System;
 using System.Diagnostics;
 
 namespace GameAnarchy {
-    [HarmonyPatch(typeof(LoadingManager), "QuitApplication")]
+    [HarmonyPatch(typeof(LoadingManager), nameof(LoadingManager.QuitApplication))]
     public class FastReturnPatch {
-        static bool Prefix() {
-            return FastReturn.Terminate();
-        }
-    }
-    public class FastReturn {
-        public static bool Terminate() {
+        public static bool Prefix() {
             try {
                 LoadingManager.instance.autoSaveTimer.Stop();
                 Process.GetCurrentProcess().Kill();

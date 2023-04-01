@@ -2,7 +2,6 @@
 using ColossalFramework.UI;
 using ICities;
 using System;
-using System.Diagnostics;
 using UnityEngine;
 
 namespace MbyronModsCommon {
@@ -13,16 +12,13 @@ namespace MbyronModsCommon {
         private static GameObject ContainerGameObject { get; set; }
         private static UIPanel Container { get; set; }
         public static void OptionsEventHook() {
-            Container = UIView.library.Get<UIPanel>("OptionsPanel").Find<UITabContainer>("OptionsContainer").Find<UIPanel>(ModMainInfo<IMod>.Name);
+            Container = UIView.library.Get<UIPanel>("OptionsPanel");
             if (Container is null) {
                 InternalLogger.Error("Couldn't find game options panel.");
             } else {
                 Container.eventVisibilityChanged += (c, isVisible) => {
-                    if (isVisible) {
-                        Create();
-                        //SingletonMod<Mod>.Instance.SaveConfig();
-                    } else {
-                        Destroy();
+                    if (!isVisible) {
+                        SingletonMod<Mod>.Instance.SaveConfig();
                     }
                 };
                 LocaleManager.eventLocaleChanged += LocaleChanged;
@@ -61,6 +57,13 @@ namespace MbyronModsCommon {
             }
         }
 
+        private static void Init() {
+            Destroy();
+            ContainerGameObject = new(typeof(OptionPanel).Name);
+            ContainerGameObject.transform.parent = BasePanel.transform;
+            Panel = ContainerGameObject.AddComponent<OptionPanel>();
+            Panel.relativePosition = Vector2.zero;
+        }
 
         public static void SettingsUI(UIHelperBase helper) {
             BaseScrollablePanel = ((UIHelper)helper).self as UIScrollablePanel;
@@ -69,6 +72,7 @@ namespace MbyronModsCommon {
             foreach (var components in BasePanel.components)
                 components.isVisible = false;
             BasePanel.autoLayout = false;
+            Init();
         }
 
     }
