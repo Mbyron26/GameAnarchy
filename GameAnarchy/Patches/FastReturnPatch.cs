@@ -12,7 +12,7 @@ namespace GameAnarchy {
                 return false;
             }
             catch (Exception e) {
-                InternalLogger.Error($"Fast return patch failure.", e);
+                InternalLogger.Error($"Fast return patch failed.", e);
             }
             return false;
         }
