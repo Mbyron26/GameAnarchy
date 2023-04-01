@@ -282,6 +282,12 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>优化选项</value>
   </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>在选项面板类别中显示mod更新日期</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>此选项仅在刷新插件列表或重新启动游戏后生效</value>
+  </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>选项面板类别栏水平偏移</value>
   </data>

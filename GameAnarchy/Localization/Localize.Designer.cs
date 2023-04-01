@@ -1114,6 +1114,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 [ADD]Displays mods updated date for the category bar of the options panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9ADD {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Vanilla 的本地化字符串。
         /// </summary>
         public static string Vanilla {

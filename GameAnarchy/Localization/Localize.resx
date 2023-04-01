@@ -475,6 +475,9 @@
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
     <value>[UPT]Updated compatibility check.</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD" xml:space="preserve">
+    <value>[ADD]Displays mods updated date for the category bar of the options panel.</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>

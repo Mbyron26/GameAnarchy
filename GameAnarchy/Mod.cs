@@ -14,7 +14,7 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 8);
+        public override Version ModVersion => new(0, 9, 9);
         public override ulong ModID => 2781804786;
 #if DEBUG
         public override ulong? BetaID => 2917685008;
@@ -93,6 +93,9 @@ namespace GameAnarchy {
         };
 
         public override List<ModChangeLog> ChangeLog => new() {
+            new ModChangeLog(new Version(0, 9, 9), new(2023, 4, 1), new List<string> {
+               Localize.UpdateLog_V0_9_9ADD
+            }),
             new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<string> {
                "[UPT]Updated to support game version 1.16.1", Localize.UpdateLog_V0_9_8UPT, Localize.UpdateLog_V0_9_8ADD, Localize.UpdateLog_V0_9_8OPT1, Localize.UpdateLog_V0_9_8OPT2, Localize.UpdateLog_V0_9_8FIX1, Localize.UpdateLog_V0_9_8FIX2
             }),
