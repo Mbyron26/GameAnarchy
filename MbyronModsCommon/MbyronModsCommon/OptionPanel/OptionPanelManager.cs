@@ -1,6 +1,4 @@
-﻿using ColossalFramework;
-using ColossalFramework.Globalization;
-using ColossalFramework.Plugins;
+﻿using ColossalFramework.Globalization;
 using ColossalFramework.UI;
 using ICities;
 using System;
