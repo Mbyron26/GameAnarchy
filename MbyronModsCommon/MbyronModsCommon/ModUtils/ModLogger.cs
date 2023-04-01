@@ -59,7 +59,7 @@ namespace MbyronModsCommon {
             sw.WriteLine(Environment.OSVersion);
             sw.WriteLine(@"C# CLR Version " + Environment.Version);
             sw.WriteLine(@"Unity Version " + Application.unityVersion);
-            sw.WriteLine(@"UTC Time " + DateTime.UtcNow);
+            sw.WriteLine(@"Time " + DateTime.Now);
             sw.WriteLine(@"----------------------------------------------");
         }
 
