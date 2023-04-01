@@ -412,6 +412,9 @@
     <value>Today at {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+  </data>
   <data name="Updated_Yesterday" xml:space="preserve">
     <value>Yesterday</value>
     <comment>Show mod updated date.</comment>

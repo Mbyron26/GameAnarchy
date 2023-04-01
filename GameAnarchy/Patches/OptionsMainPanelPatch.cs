@@ -116,7 +116,7 @@ namespace GameAnarchy {
                 if (days <= 730) {
                     date = "<color #E92E32>" + Localize.Updated_LastYear + "</color>";
                 } else {
-                    date = "<color #E92E32>" + string.Format(Updated_YearsAgo, years) + "</color>";
+                    date = "<color #E92E32>" + string.Format(Localize.Updated_YearsAgo, years) + "</color>";
                 }
             }
             return date;
