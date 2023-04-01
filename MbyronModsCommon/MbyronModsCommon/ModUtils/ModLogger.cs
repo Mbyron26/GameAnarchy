@@ -57,9 +57,9 @@ namespace MbyronModsCommon {
             using StreamWriter sw = new(debugFile);
             sw.WriteLine(@"--- " + ModMainInfo<Mod>.ModName + ' ' + ModMainInfo<Mod>.ModVersion + ' ' + ModMainInfo<Mod>.VersionType + @" Debug File ---");
             sw.WriteLine(Environment.OSVersion);
-            sw.WriteLine(@"C# CLR Version " + Environment.Version);
-            sw.WriteLine(@"Unity Version " + Application.unityVersion);
-            sw.WriteLine(@"Time " + DateTime.Now);
+            sw.WriteLine(@"C# CLR Version: " + Environment.Version);
+            sw.WriteLine(@"Unity Version: " + Application.unityVersion);
+            sw.WriteLine(@"Time: " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             sw.WriteLine(@"----------------------------------------------");
         }
 
