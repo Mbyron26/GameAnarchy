@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameAnarchy {
-    public class Option : OptionPanelBase<Mod, Config, Option> {
+    public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         private ToggleButton VanillaUnlimitedMoney;
         private ToggleButton CashAnarchy;
         private ToggleButton UnlockAll;

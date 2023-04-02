@@ -273,7 +273,6 @@ namespace MbyronModsCommon {
 
         public static void Reset() {
             if (Group is not null)
-                Group.RefreshLine();
             Group = null;
         }
     }
