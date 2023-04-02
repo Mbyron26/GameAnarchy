@@ -1,6 +1,5 @@
 ﻿using ColossalFramework.UI;
 using ColossalFramework;
-using MbyronModsCommon;
 using System;
 using ColossalFramework.Plugins;
 using HarmonyLib;
@@ -58,28 +57,26 @@ namespace GameAnarchy {
     }
 
     [HarmonyPatch(typeof(LoadPanel), "OnListingSelectionChanged")]
-    public static class AchievementPatch {
-        static void Postfix(UIComponent comp, int sel) {
+    public static class AchievementsPatch {
+        public static void Postfix(UIComponent comp) {
             try {
                 if (Config.Instance.EnabledAchievements) {
-                    UISprite m_AchNope = comp.parent.Find<UISprite>("AchNope");
-                    UIComponent m_Ach = comp.parent.Find("Ach");
-                    UIComponent m_AchAvLabel = comp.parent.Find("AchAvLabel");
-                    m_AchNope.isVisible = false;
-                    string tooltip = string.Empty;
-                    tooltip = Locale.Get("LOADPANEL_ACHSTATUS_ENABLED");
+                    var achLabel = comp.parent.Find("AchAvLabel");
+                    var achSprite = comp.parent.Find<UISprite>("AchNope");
+                    var spriteTooltip = comp.parent.Find("Ach");
+                    var tooltip = Locale.Get("LOADPANEL_ACHSTATUS_ENABLED");
                     tooltip += "<color #50869a>";
                     if (Singleton<PluginManager>.instance.enabledModCountNoOverride > 0) {
                         tooltip += Environment.NewLine;
                         tooltip += LocaleFormatter.FormatGeneric("LOADPANEL_ACHSTATUS_MODSACTIVE", Singleton<PluginManager>.instance.enabledModCount);
                     }
                     tooltip += "</color>";
-                    m_Ach.tooltip = tooltip;
-                    m_AchAvLabel.tooltip = tooltip;
+                    spriteTooltip.tooltip = achLabel.tooltip = tooltip;
+                    achSprite.isVisible = false;
                 }
             }
             catch (Exception e) {
-                InternalLogger.Exception($"Achievement patch failure.", e);
+                InternalLogger.Exception($"Achievements patched failed.", e);
             }
         }
     }
