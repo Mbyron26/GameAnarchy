@@ -252,7 +252,7 @@ namespace GameAnarchy {
         private readonly List<UIPanel> CashAnarchyPanels = new();
         private UIPanel InitalCashPanel;
         private void AddResourceOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, GeneralContainerWidth, Localization.Localize.UnlockOptions);
+            OptionPanelTool.AddGroup(GeneralContainer, GeneralContainerWidth, Localization.Localize.ResourceOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
                 Config.Instance.UnlimitedMoney = _;
