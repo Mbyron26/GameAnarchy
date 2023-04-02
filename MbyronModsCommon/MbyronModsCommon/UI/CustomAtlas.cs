@@ -84,7 +84,7 @@ namespace MbyronModsCommon.UI {
         public static string TabHovered => nameof(TabHovered);
         public static string TabFocused => nameof(TabFocused);
         public static string TabPressed => nameof(TabPressed);
-        
+
         static CustomAtlas() {
             SpriteParams[ButtonNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[ButtonHovered] = new RectOffset(4, 4, 4, 4);

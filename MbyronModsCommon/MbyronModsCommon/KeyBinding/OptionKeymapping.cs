@@ -38,7 +38,7 @@ namespace MbyronModsCommon {
             Panel.autoLayout = false;
             Label = CustomLabel.AddLabel(Panel, "Template", 100, null);
             Button = CustomButton.AddClickButton(Panel, "Template", 280, 30,  null);
-            IUIStyle uiTool = new UIStyleAlpha(Panel) { Child = Button, MajorLabel = Label, Padding = new(10, 10, 10, 10) };
+            IUIStyle uiTool = new UIStyleAlpha(Panel) { Child = Button, MajorLabel = Label, Padding = new(16, 16, 10, 10) };
             uiTool.RefreshLayout();
             Button.eventKeyDown += OnBindingKeyDown;
             Button.eventMouseDown += OnBindingMouseDown;

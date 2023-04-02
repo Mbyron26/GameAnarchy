@@ -7,24 +7,24 @@ using UnityEngine;
 namespace MbyronModsCommon {
     public static class OptionPanelTool {
         public static PropertyPanel Group { get; set; }
-        public static RectOffset DefaultOffset => new(10, 10, 10, 10);
+        public static RectOffset DefaultOffset => new(16, 16, 14, 14);
         static OptionPanelTool() => InternalLogger.Log("Initialize option panel tool.");
 
         public static PropertyPanel AddGroup(UIComponent parent, float width, string caption) {
             Group = parent.AddUIComponent<PropertyPanel>();
             Group.width = width;
-            Group.Init(width, caption, new(10, 0, 0, 0), 0.8f, CustomColor.OffWhite, new(0, 0, 0, 4), SetMajorSprite, null);
+            Group.Init(width, caption, new(16, 0, 0, 0), 0.8f, CustomColor.OffWhite, new(0, 0, 0, 4), SetMajorSprite, null);
             return Group;
         }
 
-        private static UIPanel AddChildPanel() => Group.AddChildPanel(true/*SetMinorSprite*/);
+        private static UIPanel AddChildPanel() => Group.AddChildPanel(SetMinorSprite);
 
         public static UILabel AddMinorLabel(string text) {
             if (Group is null) {
                 ExternalLogger.Error("ControlPanelTools_Group is null.");
                 return null;
             }
-            return Group.AddMinorLabel(text, new(10, 0, 0, 0), 0.8f, CustomColor.OffWhite);
+            return Group.AddMinorLabel(text, new(16, 0, 0, 0), 0.8f, CustomColor.OffWhite);
         }
 
         public static UIPanel AddKeymapping(string text, KeyBinding keyBinding, string tooltip = null) {
@@ -39,7 +39,7 @@ namespace MbyronModsCommon {
                 if (item is UIPanel kmPanel)
                     child = kmPanel;
             }
-            Group.UITool = new UIStyleGamma(panel) { Child = child };
+            Group.UITool = new UIStyleGamma(panel) { Child = child};
             Group.UITool.RefreshLayout();
             Group.UITool = null;
             return panel;
@@ -273,7 +273,8 @@ namespace MbyronModsCommon {
 
         public static void Reset() {
             if (Group is not null)
-                Group = null;
+                Group.RefreshLine();
+            Group = null;
         }
     }
 
