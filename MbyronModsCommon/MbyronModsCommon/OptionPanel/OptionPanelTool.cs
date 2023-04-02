@@ -17,7 +17,7 @@ namespace MbyronModsCommon {
             return Group;
         }
 
-        private static UIPanel AddChildPanel() => Group.AddChildPanel(SetMinorSprite);
+        private static UIPanel AddChildPanel() => Group.AddChildPanel(true/*SetMinorSprite*/);
 
         public static UILabel AddMinorLabel(string text) {
             if (Group is null) {
