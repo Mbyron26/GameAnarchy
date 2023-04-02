@@ -40,14 +40,14 @@ namespace GameAnarchy {
 
         protected override void FillHotkeyContainer() {
             base.FillHotkeyContainer();
-            OptionPanelTool.AddGroup(HotkeyContainer,HotkeyContainerWidth, CommonLocalize.OptionPanel_Hotkeys);
+            OptionPanelTool.AddGroup(HotkeyContainer, PropertyPanelWidth, CommonLocalize.OptionPanel_Hotkeys);
             OptionPanelTool.AddKeymapping(Localization.Localize.AddCash, Config.Instance.AddCash, Localization.Localize.AddCashTooltip);
             OptionPanelTool.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
             OptionPanelTool.Reset();
         }
 
         private void AddOptimizeOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, GeneralContainerWidth, Localization.Localize.OptimizeOptions);
+            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.OptimizeOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localization.Localize.EnableAchievements, Localization.Localize.AllowsDynamicToggling, _ => {
                 Config.Instance.EnabledAchievements = _;
                 AchievementsManager.UpdateAchievements(_);
@@ -60,7 +60,7 @@ namespace GameAnarchy {
 
         private readonly List<UIPanel> CustomUnlockPanels = new();
         private void AddUnlockOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, GeneralContainerWidth, Localization.Localize.UnlockOptions);
+            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.UnlockOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledUnlockAll, Localization.Localize.UnlockAll, Localization.Localize.UnlockAllMinor, _ => {
                 Config.Instance.EnabledUnlockAll = _;
                 if (_) CustomUnlock.IsChecked = false;
@@ -93,7 +93,7 @@ namespace GameAnarchy {
         private readonly List<UIPanel> CashAnarchyPanels = new();
         private UIPanel InitalCashPanel;
         private void AddResourceOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, GeneralContainerWidth, Localization.Localize.ResourceOptions);
+            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.ResourceOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
                 Config.Instance.UnlimitedMoney = _;
