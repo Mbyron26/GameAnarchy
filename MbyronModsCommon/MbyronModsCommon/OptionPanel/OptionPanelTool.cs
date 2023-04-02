@@ -13,7 +13,7 @@ namespace MbyronModsCommon {
         public static PropertyPanel AddGroup(UIComponent parent, float width, string caption) {
             Group = parent.AddUIComponent<PropertyPanel>();
             Group.width = width;
-            Group.Init(width, caption, new(10, 0, 0, 0), 1.125f, CustomColor.White, new(0, 0, 0, 4), SetMajorSprite, null);
+            Group.Init(width, caption, new(10, 0, 0, 0), 0.8f, CustomColor.OffWhite, new(0, 0, 0, 4), SetMajorSprite, null);
             return Group;
         }
 
