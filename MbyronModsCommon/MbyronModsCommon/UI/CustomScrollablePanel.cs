@@ -95,7 +95,7 @@ namespace MbyronModsCommon.UI {
         public OptionPanelScrollablePanel() {
             clipChildren = true;
             size = new Vector2(764, 743);
-            MainPanel.autoLayoutPadding = new RectOffset(10, 10, 0, 20);
+            MainPanel.autoLayoutPadding = new RectOffset(16, 16, 0, 20);
         }
     }
 
@@ -117,7 +117,7 @@ namespace MbyronModsCommon.UI {
         }
 
         private void SetContentSize() {
-            MainPanel.size = size - new Vector2(MainPanel.verticalScrollbar.isVisible ? MainPanel.verticalScrollbar.width : 0, 0);
+            MainPanel.size = size/* - new Vector2(MainPanel.verticalScrollbar.isVisible ? MainPanel.verticalScrollbar.width : 0, 0)*/;
             MainPanel.relativePosition = new Vector2(0, 10);
             if (MainPanel.verticalScrollbar.isVisibleSelf) {
                 MainPanel.verticalScrollbar.relativePosition = new Vector2(size.x - 10, 10);

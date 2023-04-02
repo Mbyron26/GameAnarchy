@@ -5,7 +5,7 @@ namespace MbyronModsCommon.UI {
     public class CustomScrollbar {
         public static UIScrollbar AddScrollbar(UIComponent parent, UIScrollablePanel scrollablePanel) {
             UIScrollbar scrollbar = parent.AddUIComponent<UIScrollbar>();
-            scrollbar.size = new Vector2(6f, parent.height - 6);
+            scrollbar.size = new Vector2(8f, parent.height - 10);
             scrollbar.orientation = UIOrientation.Vertical;
             scrollbar.pivot = UIPivotPoint.TopLeft;
             scrollbar.minValue = 0;

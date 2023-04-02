@@ -33,12 +33,12 @@ namespace MbyronModsCommon {
 
         public OptionKeymapping() {
             Panel = component.AddUIComponent<UIPanel>();
-            Panel.width = 724;
+            Panel.width = 732;
             Panel.height = 30;
             Panel.autoLayout = false;
             Label = CustomLabel.AddLabel(Panel, "Template", 100, null);
             Button = CustomButton.AddClickButton(Panel, "Template", 280, 30,  null);
-            IUIStyle uiTool = new UIStyleAlpha(Panel) { Child = Button, MajorLabel = Label, Padding = new(0, 0, 10, 10) };
+            IUIStyle uiTool = new UIStyleAlpha(Panel) { Child = Button, MajorLabel = Label, Padding = new(10, 10, 10, 10) };
             uiTool.RefreshLayout();
             Button.eventKeyDown += OnBindingKeyDown;
             Button.eventMouseDown += OnBindingMouseDown;

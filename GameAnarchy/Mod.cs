@@ -11,7 +11,7 @@ using ColossalFramework.Globalization;
 using GameAnarchy.UI;
 
 namespace GameAnarchy {
-    public class Mod : ModBase<Mod, OptionPanel, Config> {
+    public class Mod : ModBase<Mod, Option, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
         public override Version ModVersion => new(0, 9, 9, 4115);
