@@ -34,18 +34,16 @@ namespace MbyronModsCommon {
                     }
                 }
                 catch (Exception e) {
-                    InternalLogger.Exception($"Could't load data from XML file.",e);
+                    InternalLogger.Exception($"Could't load data from XML file.", e);
                 }
             }
         }
 
         public static void SaveData<Class>(string fileNameWithPath) where Class : SingletonMod<Class> {
             try {
-                using (StreamWriter sw = new(fileNameWithPath)) {
-                    XmlSerializer xmlSerializer = new(typeof(Class));
-                    xmlSerializer.Serialize(sw, SingletonMod<Class>.Instance);
-                    InternalLogger.Log($"Save mod config succeeded.");
-                }
+                using StreamWriter sw = new(fileNameWithPath);
+                XmlSerializer xmlSerializer = new(typeof(Class));
+                xmlSerializer.Serialize(sw, SingletonMod<Class>.Instance);
             }
             catch (Exception e) {
                 InternalLogger.Exception($"Could't save data to XML file.", e);
