@@ -228,9 +228,12 @@ namespace MbyronModsCommon {
                     minorLabel = CustomLabel.AddLabel(panel, minorText, 10, minorOffset, 0.8f, CustomColor.OffWhite);
                 }
             }
-            Group.UITool = new UIStyleAlpha(panel, dropDown, majorLabel, minorLabel, DefaultOffset) { LabelGap = 4 };
-            Group.UITool.RefreshLayout();
-            Group.UITool = null;
+            var ui = UIPool.Get<UIStyleAlpha>();
+            ui.Init(panel, dropDown, majorLabel, minorLabel, DefaultOffset, 4);
+            UIPool.Return(ui);
+            //Group.UITool = new UIStyleAlpha(panel, dropDown, majorLabel, minorLabel, DefaultOffset) { LabelGap = 4 };
+            //Group.UITool.RefreshLayout();
+            //Group.UITool = null;
             return panel;
         }
 
