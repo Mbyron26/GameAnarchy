@@ -71,9 +71,15 @@ namespace GameAnarchy {
 
         private static string GetModUpdatedDate(PluginManager.PluginInfo pluginInfo) {
             var updatedTime = pluginInfo.updateTime;
-            ExternalLogger.Log(updatedTime.ToString());
             if (DateTime.Equals(updatedTime, DateTime.MinValue)) {
                 updatedTime = GetModUpdatedDate(pluginInfo.modPath);
+                if (Config.Instance.DebugMode) {
+                    if (pluginInfo.publishedFileID.Equals(new ColossalFramework.PlatformServices.PublishedFileId(ulong.MaxValue))) {
+                        ExternalLogger.Log($"Plugin [{pluginInfo.name}] is a local mod, get last write time date: {updatedTime}");
+                    } else {
+                        ExternalLogger.Log($"Plugin [{pluginInfo.name}] updated time is not initialized yet, get last write time date: {updatedTime}");
+                    }
+                }
             } else {
                 updatedTime = updatedTime.ToLocalTime();
             }
