@@ -9,7 +9,6 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public class UIUtils {
-
         public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, Dictionary<string, RectOffset> spriteParams, int maxSpriteSize = 1024) {
             var keys = spriteParams.Keys.ToArray();
             var value = spriteParams.Values.ToArray();
@@ -49,6 +48,8 @@ namespace MbyronModsCommon.UI {
             }
         }
 
+        public static UITextureAtlas GetDefaultAtlas() => UIView.GetAView().defaultAtlas;
+
         public static UITextureAtlas GetAtlas(string name) {
             var atlas = GetAtlas();
             if (atlas is not null) {
@@ -59,8 +60,7 @@ namespace MbyronModsCommon.UI {
                     }
                 }
             }
-            ExternalLogger.Log($"Couldn't find UITextureAtlas [{name}], use default atlas.");
-            return UIView.GetAView().defaultAtlas;
+            return null;
         }
 
         public static IEnumerable<UITextureAtlas> GetAtlas() {
