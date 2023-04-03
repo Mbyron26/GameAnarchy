@@ -13,19 +13,18 @@ namespace MbyronModsCommon {
                 InternalLogger.Log("Start loading mod config data.");
                 try {
                     if (File.Exists(fileNameWithPath)) {
-                        using (StreamReader sr = new(fileNameWithPath)) {
-                            XmlSerializer xmlSerializer = new(typeof(Class));
-                            var c = xmlSerializer.Deserialize(sr);
-                            if (c is not Class) {
-                                InternalLogger.Log($"Couldn't deserialize XML file, the target path: {fileNameWithPath}.");
-                                InternalLogger.Log("Try to generate mod default data.");
-                                SingletonMod<Class>.Instance = new();
-                                InternalLogger.Log("Generate mod default data succeeded.");
-                            } else {
-                                SingletonMod<Class>.Instance = c as Class;
-                                DeserializationState = true;
-                                InternalLogger.Log("Local config exists, deserialize XML file succeeded.");
-                            }
+                        using StreamReader sr = new(fileNameWithPath);
+                        XmlSerializer xmlSerializer = new(typeof(Class));
+                        var c = xmlSerializer.Deserialize(sr);
+                        if (c is not Class) {
+                            InternalLogger.Log($"Couldn't deserialize XML file, the target path: {fileNameWithPath}.");
+                            InternalLogger.Log("Try to generate mod default data.");
+                            SingletonMod<Class>.Instance = new();
+                            InternalLogger.Log("Generate mod default data succeeded.");
+                        } else {
+                            SingletonMod<Class>.Instance = c as Class;
+                            DeserializationState = true;
+                            InternalLogger.Log("Local config exists, deserialize XML file succeeded.");
                         }
                     } else {
                         SingletonMod<Class>.Instance = new();
