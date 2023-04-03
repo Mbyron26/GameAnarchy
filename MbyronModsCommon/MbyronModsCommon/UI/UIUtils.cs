@@ -9,7 +9,6 @@ using UnityEngine;
 
 namespace MbyronModsCommon.UI {
     public class UIUtils {
-        public static Dictionary<string, UITextureAtlas> UITextureAtlasBuffer { get; private set; } = new();
 
         public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, Dictionary<string, RectOffset> spriteParams, int maxSpriteSize = 1024) {
             var keys = spriteParams.Keys.ToArray();
@@ -51,24 +50,23 @@ namespace MbyronModsCommon.UI {
         }
 
         public static UITextureAtlas GetAtlas(string name) {
-            if (UITextureAtlasBuffer.TryGetValue(name, out UITextureAtlas atlas)) {
-                ExternalLogger.Log($"Get UI texture atlas [{name}] in UITextureAtlasBuffer.");
-                return atlas;
+            var atlas = GetAtlas();
+            if (atlas is not null) {
+                foreach (var item in atlas) {
+                    if (item.name == name) {
+                        ExternalLogger.Log($"Obtained UITextureAtlas [{name}].");
+                        return item;
+                    }
+                }
             }
+            ExternalLogger.Log($"Couldn't find UITextureAtlas [{name}], use default atlas.");
+            return UIView.GetAView().defaultAtlas;
+        }
+
+        public static IEnumerable<UITextureAtlas> GetAtlas() {
             UITextureAtlas[] atlases = Resources.FindObjectsOfTypeAll(typeof(UITextureAtlas)) as UITextureAtlas[];
             for (int i = 0; i < atlases.Length; i++) {
-                if (!UITextureAtlasBuffer.ContainsKey(atlases[i].name)) {
-                    UITextureAtlasBuffer.Add(atlases[i].name, atlases[i]);
-                    ExternalLogger.Log($"Add UI texture atlas [{atlases[i].name}] into UITextureAtlasBuffer.");
-                }    
-                if (atlases[i].name == name)
-                    atlas = atlases[i];
-            }
-            if (atlas is not null) {
-                return atlas;
-            } else {
-                ExternalLogger.Log($"Couldn't find UITextureAtlas [{name}], use default atlas [{UIView.GetAView().defaultAtlas.name}].");
-                return UIView.GetAView().defaultAtlas;
+                yield return atlases[i];
             }
         }
     }
