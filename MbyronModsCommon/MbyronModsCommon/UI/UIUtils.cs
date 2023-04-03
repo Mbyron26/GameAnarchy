@@ -55,7 +55,7 @@ namespace MbyronModsCommon.UI {
             if (atlas is not null) {
                 foreach (var item in atlas) {
                     if (item.name == name) {
-                        ExternalLogger.Log($"Obtained UITextureAtlas [{name}].");
+                        ExternalLogger.Log($"Obtained {name} UITextureAtlas.");
                         return item;
                     }
                 }
