@@ -228,12 +228,9 @@ namespace MbyronModsCommon {
                     minorLabel = CustomLabel.AddLabel(panel, minorText, 10, minorOffset, 0.8f, CustomColor.OffWhite);
                 }
             }
-            var ui = UIPool.Get<UIStyleAlpha>();
-            ui.Init(panel, dropDown, majorLabel, minorLabel, DefaultOffset, 4);
-            UIPool.Return(ui);
-            //Group.UITool = new UIStyleAlpha(panel, dropDown, majorLabel, minorLabel, DefaultOffset) { LabelGap = 4 };
-            //Group.UITool.RefreshLayout();
-            //Group.UITool = null;
+            Group.UITool = new UIStyleAlpha(panel, dropDown, majorLabel, minorLabel, DefaultOffset) { LabelGap = 4 };
+            Group.UITool.RefreshLayout();
+            Group.UITool = null;
             return panel;
         }
 
@@ -275,7 +272,7 @@ namespace MbyronModsCommon {
 
         public static void Reset() {
             if (Group is not null)
-            Group = null;
+                Group = null;
         }
     }
 
