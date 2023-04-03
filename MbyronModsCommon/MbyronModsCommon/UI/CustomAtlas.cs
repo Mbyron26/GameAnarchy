@@ -157,8 +157,13 @@ namespace MbyronModsCommon.UI {
         public static UITextureAtlas CommonAtlas {
             get {
                 if (commonAtlas is null) {
-                    commonAtlas = UIUtils.CreateTextureAtlas(nameof(CommonAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
-                    ExternalLogger.Log("Initialized CommonAtlas succeed.");
+                    var atlas = UIUtils.GetAtlas(nameof(CommonAtlas));
+                    if (atlas is not null) {
+                        commonAtlas = atlas;
+                    } else {
+                        commonAtlas = UIUtils.CreateTextureAtlas(nameof(CommonAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
+                        ExternalLogger.Log("Initialized CommonAtlas.");
+                    }
                     return commonAtlas;
                 } else {
                     return commonAtlas;
@@ -170,6 +175,7 @@ namespace MbyronModsCommon.UI {
             get {
                 if (inGameAtlas is null) {
                     inGameAtlas = UIUtils.GetAtlas("Ingame");
+                    inGameAtlas ??= UIUtils.GetDefaultAtlas();
                     return inGameAtlas;
                 } else {
                     return inGameAtlas;
