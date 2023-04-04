@@ -162,7 +162,7 @@ namespace MbyronModsCommon.UI {
                         mbyronModsAtlas = atlas;
                     } else {
                         mbyronModsAtlas = UIUtils.CreateTextureAtlas(nameof(MbyronModsAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
-                        ExternalLogger.Log("Initialized CommonAtlas.");
+                        ExternalLogger.Log("Initialized MbyronModsAtlas.");
                     }
                     return mbyronModsAtlas;
                 } else {
