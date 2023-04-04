@@ -264,7 +264,7 @@ namespace MbyronModsCommon {
             panel.color = new(50, 60, 74, 255);
         }
         private static void SetMinorSprite(UIPanel panel) {
-            panel.atlas = CustomAtlas.CommonAtlas;
+            panel.atlas = CustomAtlas.MbyronModsAtlas;
             panel.backgroundSprite = CustomAtlas.EmptySprite;
             panel.color = new Color32(0, 0, 0, 70);
             panel.disabledColor = new Color32(0, 0, 0, 70);

@@ -14,7 +14,7 @@ namespace MbyronModsCommon.UI {
             dropDown.horizontalAlignment = UIHorizontalAlignment.Left;
             dropDown.textFieldPadding = dropDown.itemPadding = new RectOffset(8, 0, 4, 0);
             dropDown.textScale = 0.8f;
-            dropDown.atlas = CustomAtlas.CommonAtlas;
+            dropDown.atlas = CustomAtlas.MbyronModsAtlas;
             dropDown.normalBgSprite = CustomAtlas.FieldNormal;
             dropDown.disabledBgSprite = CustomAtlas.FieldDisabled;
             dropDown.hoveredBgSprite = CustomAtlas.FieldHovered;
@@ -28,7 +28,7 @@ namespace MbyronModsCommon.UI {
             dropDown.items = options;
             dropDown.selectedIndex = defaultSelection;
             var arrowDown = dropDown.AddUIComponent<UIPanel>();
-            arrowDown.atlas = CustomAtlas.CommonAtlas;
+            arrowDown.atlas = CustomAtlas.MbyronModsAtlas;
             arrowDown.backgroundSprite = CustomAtlas.ArrowDown1;
             arrowDown.autoSize = false;
             arrowDown.size = new Vector2(22, 22);
@@ -41,7 +41,7 @@ namespace MbyronModsCommon.UI {
 
         public static UIDropDown AddOPDropDown(UIComponent parent, string[] options, int defaultSelection, float width, float height, OnDropdownSelectionChanged eventCallback = null) {
             var dropDown = parent.AddUIComponent<UIDropDown>();
-            dropDown.atlas = CustomAtlas.CommonAtlas;
+            dropDown.atlas = CustomAtlas.MbyronModsAtlas;
             dropDown.normalBgSprite = CustomAtlas.TabButtonNormal;
             dropDown.disabledBgSprite = CustomAtlas.TabButtonDisabled;
             dropDown.hoveredBgSprite = CustomAtlas.TabButtonHovered;
@@ -62,7 +62,7 @@ namespace MbyronModsCommon.UI {
             dropDown.selectedIndex = defaultSelection;
             dropDown.disabledColor = CustomColor.DisabledTextColor;
             var arrowDown = dropDown.AddUIComponent<UIPanel>();
-            arrowDown.atlas = CustomAtlas.CommonAtlas;
+            arrowDown.atlas = CustomAtlas.MbyronModsAtlas;
             arrowDown.backgroundSprite = CustomAtlas.ArrowDown;
             arrowDown.size = new Vector2(26, 26);
             arrowDown.disabledColor = new Color32(100, 100, 100, 255);

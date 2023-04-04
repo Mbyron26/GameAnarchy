@@ -60,7 +60,7 @@ namespace MbyronModsCommon.UI {
                 if (setStyle is not null) {
                     setStyle.Invoke(underline);
                 } else {
-                    underline.atlas = CustomAtlas.CommonAtlas;
+                    underline.atlas = CustomAtlas.MbyronModsAtlas;
                     underline.backgroundSprite = CustomAtlas.EmptySprite;
                     underline.color = new Color32(0, 0, 0, 50);
                     underline.disabledColor = new Color32(0, 0, 0, 50);

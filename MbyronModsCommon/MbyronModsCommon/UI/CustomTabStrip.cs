@@ -28,7 +28,7 @@ namespace MbyronModsCommon.UI {
             }
         }
         public CustomTabStrip() {
-            atlas = CustomAtlas.CommonAtlas;
+            atlas = CustomAtlas.MbyronModsAtlas;
             backgroundSprite = CustomAtlas.TabButtonNormal;
         }
         public int Index {
@@ -54,7 +54,7 @@ namespace MbyronModsCommon.UI {
         public void AddTab(string text, float textScale = 1f, string tooltip = null, Action<TabButton> setSprite = null) {
             var tabButton = AddUIComponent<TabButton>();
             if (setSprite is null) {
-                tabButton.atlas = CustomAtlas.CommonAtlas;
+                tabButton.atlas = CustomAtlas.MbyronModsAtlas;
                 tabButton.normalBgSprite = CustomAtlas.TabButtonNormal;
                 tabButton.focusedBgSprite = CustomAtlas.ButtonNormal;
                 tabButton.hoveredBgSprite = CustomAtlas.TabButtonHovered;

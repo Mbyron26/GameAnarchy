@@ -7,12 +7,12 @@ namespace MbyronModsCommon.UI {
             UISlider slider = parent.AddUIComponent<UISlider>();
             slider.size = size;
             UISlicedSprite sliderSprite = slider.AddUIComponent<UISlicedSprite>();
-            sliderSprite.atlas = CustomAtlas.CommonAtlas;
+            sliderSprite.atlas = CustomAtlas.MbyronModsAtlas;
             sliderSprite.spriteName = CustomAtlas.SliderGamma;
             sliderSprite.size = size;
             sliderSprite.relativePosition = new Vector2(0f, 0f);
             UISlicedSprite sliderThumb = slider.AddUIComponent<UISlicedSprite>();
-            sliderThumb.atlas = CustomAtlas.CommonAtlas;
+            sliderThumb.atlas = CustomAtlas.MbyronModsAtlas;
             sliderThumb.spriteName = CustomAtlas.SliderThumb;
             //sliderThumb.size = new(size.y / 2, size.y);
             slider.thumbObject = sliderThumb;
@@ -54,11 +54,11 @@ namespace MbyronModsCommon.UI {
             LeftLabel = AddLabel(CustomAtlas.SliderAlphaLeftSprite);
             Slider = AddUIComponent<UISlider>();
             Slider.size = new Vector2(sliderSize.SliderWidth, sliderSize.SliderHeight);
-            Slider.atlas = CustomAtlas.CommonAtlas;
+            Slider.atlas = CustomAtlas.MbyronModsAtlas;
             Slider.backgroundSprite = CustomAtlas.SliderAlphaMidSprite;
             Slider.scrollWheelAmount = 0;
             UISprite fillIndicator = Slider.AddUIComponent<UISprite>();
-            fillIndicator.atlas = CustomAtlas.CommonAtlas;
+            fillIndicator.atlas = CustomAtlas.MbyronModsAtlas;
             fillIndicator.spriteName = CustomAtlas.SliderAlphaSprite;
             Slider.fillIndicatorObject = fillIndicator;
             MiddleLabel = Slider.AddUIComponent<UILabel>();
@@ -116,7 +116,7 @@ namespace MbyronModsCommon.UI {
             label.size = new Vector2(sliderSize.ClampedLabelWidth, sliderSize.SliderHeight);
             label.autoHeight = false;
             label.wordWrap = true;
-            label.atlas = CustomAtlas.CommonAtlas;
+            label.atlas = CustomAtlas.MbyronModsAtlas;
             label.backgroundSprite = backgroundSprite;
             label.textAlignment = UIHorizontalAlignment.Center;
             label.verticalAlignment = UIVerticalAlignment.Middle;

@@ -21,7 +21,7 @@ namespace MbyronModsCommon.UI {
             valueField.width = fieldWidth;
             valueField.height = fieldHeight;
             valueField.disabledTextColor = new Color32(71, 71, 71, 255);
-            valueField.atlas = CustomAtlas.CommonAtlas;
+            valueField.atlas = CustomAtlas.MbyronModsAtlas;
             valueField.normalBgSprite = CustomAtlas.TabButtonNormal;
             valueField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
             valueField.disabledBgSprite = CustomAtlas.TabButtonDisabled;
@@ -42,7 +42,7 @@ namespace MbyronModsCommon.UI {
             if (setSprite is not null) {
                 setSprite(uiTextField);
             } else {
-                uiTextField.atlas = CustomAtlas.CommonAtlas;
+                uiTextField.atlas = CustomAtlas.MbyronModsAtlas;
                 uiTextField.normalBgSprite = CustomAtlas.TabButtonNormal;
                 uiTextField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
                 uiTextField.selectionSprite = CustomAtlas.EmptySprite;
@@ -242,7 +242,7 @@ namespace MbyronModsCommon.UI {
         }
 
         public void SetStyle() {
-            atlas = CustomAtlas.CommonAtlas;
+            atlas = CustomAtlas.MbyronModsAtlas;
             selectionSprite = CustomAtlas.EmptySprite;
             normalBgSprite = CustomAtlas.FieldNormal;
             disabledBgSprite = CustomAtlas.FieldDisabled;

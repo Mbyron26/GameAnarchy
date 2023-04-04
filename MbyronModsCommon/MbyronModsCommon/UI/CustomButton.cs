@@ -41,7 +41,7 @@ namespace MbyronModsCommon.UI {
                 button.pressedColor = CustomColor.GreenPressed;
                 button.focusedColor = CustomColor.Orange;  
             } else { 
-                button.atlas = CustomAtlas.CommonAtlas;
+                button.atlas = CustomAtlas.MbyronModsAtlas;
                 button.normalBgSprite = CustomAtlas.ButtonNormal;
                 button.disabledBgSprite = CustomAtlas.ButtonNormal;
                 button.hoveredBgSprite = CustomAtlas.ButtonHovered;
@@ -69,7 +69,7 @@ namespace MbyronModsCommon.UI {
 
     public class CheckBox : MultiStateButtonBase {
         public override void SetSprite() {
-            atlas = CustomAtlas.CommonAtlas;
+            atlas = CustomAtlas.MbyronModsAtlas;
             FgSpriteSet0.normal = CustomAtlas.CheckBoxBGZeroNormal;
             FgSpriteSet0.focused = CustomAtlas.CheckBoxBGZeroNormal;
             FgSpriteSet0.hovered = CustomAtlas.CheckBoxBGZeroHovered;
@@ -96,7 +96,7 @@ namespace MbyronModsCommon.UI {
 
     public class ToggleButton : MultiStateButtonBase {
         public override void SetSprite() {
-            atlas = CustomAtlas.CommonAtlas;
+            atlas = CustomAtlas.MbyronModsAtlas;
             FgSpriteSet0.normal = CustomAtlas.ToggleButtonFGZeroNormal;
             FgSpriteSet0.focused = CustomAtlas.ToggleButtonFGZeroNormal;
             FgSpriteSet0.hovered = CustomAtlas.ToggleButtonFGZeroNormal;

@@ -144,7 +144,7 @@ namespace GameAnarchy.UI {
         private void AddTabStrip() {
             Tabs = new ControlPanelTabs(this);
             Tabs.Initialize(PanelWidth - 20, 24);
-            Tabs.TabPanel.atlas = CustomAtlas.CommonAtlas;
+            Tabs.TabPanel.atlas = CustomAtlas.MbyronModsAtlas;
             Tabs.TabPanel.backgroundSprite = CustomAtlas.TabNormal;
             Tabs.TabPanel.relativePosition = new Vector2(ElementOffset, CaptionHeight);
             Tabs.AddTab("General", CommonLocalize.OptionPanel_General, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
@@ -153,7 +153,7 @@ namespace GameAnarchy.UI {
         }
 
         private static void SetSprite(TabButton tabButton) {
-            tabButton.atlas = CustomAtlas.CommonAtlas;
+            tabButton.atlas = CustomAtlas.MbyronModsAtlas;
             tabButton.normalBgSprite = CustomAtlas.TabNormal;
             tabButton.focusedBgSprite = CustomAtlas.TabFocused;
             tabButton.hoveredBgSprite = CustomAtlas.TabHovered;
@@ -162,7 +162,7 @@ namespace GameAnarchy.UI {
 
         private void AddCaption() {
             CloseButton = AddUIComponent<UIButton>();
-            CloseButton.atlas = CustomAtlas.CommonAtlas;
+            CloseButton.atlas = CustomAtlas.MbyronModsAtlas;
             CloseButton.size = ButtonSize;
             CloseButton.normalFgSprite = CustomAtlas.CloseButtonNormal;
             CloseButton.focusedFgSprite = CustomAtlas.CloseButtonNormal;
