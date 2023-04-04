@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MbyronModsCommon.UI {
     public static class CustomAtlas {
         private static UITextureAtlas inGameAtlas;
-        private static UITextureAtlas commonAtlas;
+        private static UITextureAtlas mbyronModsAtlas;
         public static Dictionary<string, RectOffset> SpriteParams { get; private set; } = new();
 
         //------Base Button------
@@ -154,19 +154,19 @@ namespace MbyronModsCommon.UI {
 
         }
 
-        public static UITextureAtlas CommonAtlas {
+        public static UITextureAtlas MbyronModsAtlas {
             get {
-                if (commonAtlas is null) {
-                    var atlas = UIUtils.GetAtlas(nameof(CommonAtlas));
+                if (mbyronModsAtlas is null) {
+                    var atlas = UIUtils.GetAtlas(nameof(MbyronModsAtlas));
                     if (atlas is not null) {
-                        commonAtlas = atlas;
+                        mbyronModsAtlas = atlas;
                     } else {
-                        commonAtlas = UIUtils.CreateTextureAtlas(nameof(CommonAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
+                        mbyronModsAtlas = UIUtils.CreateTextureAtlas(nameof(MbyronModsAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
                         ExternalLogger.Log("Initialized CommonAtlas.");
                     }
-                    return commonAtlas;
+                    return mbyronModsAtlas;
                 } else {
-                    return commonAtlas;
+                    return mbyronModsAtlas;
                 }
             }
         }
