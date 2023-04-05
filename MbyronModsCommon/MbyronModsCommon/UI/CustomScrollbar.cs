@@ -26,7 +26,9 @@ namespace MbyronModsCommon.UI {
             thumbSprite.autoSize = true;
             thumbSprite.width = thumbSprite.parent.width;
             thumbSprite.atlas = CustomAtlas.MbyronModsAtlas;
-            thumbSprite.spriteName = CustomAtlas.TabNormal;/*"ScrollbarThumb";*/
+            thumbSprite.spriteName = CustomAtlas.RoundedRectangle1;
+            thumbSprite.color = CustomColor.PrimaryNormal;
+            /*"ScrollbarThumb";*/
             scrollbar.thumbObject = thumbSprite;
             parent.eventSizeChanged += (s, e) => scrollbar.height = parent.height - 10;
             scrollablePanel.verticalScrollbar = scrollbar;

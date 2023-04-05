@@ -29,7 +29,9 @@ namespace MbyronModsCommon.UI {
         }
         public CustomTabStrip() {
             atlas = CustomAtlas.MbyronModsAtlas;
-            backgroundSprite = CustomAtlas.TabButtonNormal;
+            backgroundSprite = CustomAtlas.RoundedRectangle2;
+            color = CustomColor.PrimaryNormal;
+            //backgroundSprite = CustomAtlas.TabButtonNormal;
         }
         public int Index {
             get => index;
@@ -54,11 +56,24 @@ namespace MbyronModsCommon.UI {
         public void AddTab(string text, float textScale = 1f, string tooltip = null, Action<TabButton> setSprite = null) {
             var tabButton = AddUIComponent<TabButton>();
             if (setSprite is null) {
+                //tabButton.atlas = CustomAtlas.MbyronModsAtlas;
+                //tabButton.normalBgSprite = CustomAtlas.TabButtonNormal;
+                //tabButton.focusedBgSprite = CustomAtlas.ButtonNormal;
+                //tabButton.hoveredBgSprite = CustomAtlas.TabButtonHovered;
+                //tabButton.pressedBgSprite = CustomAtlas.ButtonPressed;
                 tabButton.atlas = CustomAtlas.MbyronModsAtlas;
-                tabButton.normalBgSprite = CustomAtlas.TabButtonNormal;
-                tabButton.focusedBgSprite = CustomAtlas.ButtonNormal;
-                tabButton.hoveredBgSprite = CustomAtlas.TabButtonHovered;
-                tabButton.pressedBgSprite = CustomAtlas.ButtonPressed;
+                tabButton.normalBgSprite = CustomAtlas.RoundedRectangle2;
+                tabButton.focusedBgSprite = CustomAtlas.RoundedRectangle2;
+                tabButton.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
+                tabButton.pressedBgSprite = CustomAtlas.RoundedRectangle2;
+                tabButton.color = CustomColor.PrimaryNormal ;
+                tabButton.hoveredColor = CustomColor.PrimaryHovered;
+                tabButton.focusedColor = CustomColor.BlueNormal;
+                tabButton.pressedColor = CustomColor.PrimaryNormal;
+                tabButton.disabledColor = CustomColor.PrimaryNormal;
+                tabButton.disabledTextColor = CustomColor.DisabledTextColor;
+
+
             } else {
                 setSprite.Invoke(tabButton);
             }

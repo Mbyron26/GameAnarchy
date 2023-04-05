@@ -52,16 +52,12 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ArrowDown.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ArrowDown1.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ButtonHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ButtonNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ButtonPressed.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\EmptySprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldFocused.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHovered.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderGamma.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ListBackground.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneHovered.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneNormal.png" />
@@ -77,11 +73,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaRightSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderThumb.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabButtonNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TextFieldHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TextFieldNormal.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CloseButtonHovered.png" />
@@ -100,14 +91,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButtonPressed.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabFocused.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabNormal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TabPressed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
   </ItemGroup>
   <ItemGroup>
@@ -119,5 +102,10 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneDisabled.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle1.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle2.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle3.png" />
   </ItemGroup>
 </Project>

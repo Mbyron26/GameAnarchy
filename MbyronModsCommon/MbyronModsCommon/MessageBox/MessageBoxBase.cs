@@ -57,10 +57,10 @@ namespace MbyronModsCommon {
         private const int dragBarHeight = 40;
         protected const float defaultWidth = 600;
         protected const int defaultHeight = 200;
-        protected const int DefaultPadding = 10;
-        protected const float buttonHeight = 48f;
-        protected const float buttonWidth = 580;
-        protected const float buttonPanelHeight = 48f + 2 * DefaultPadding;
+        protected const int DefaultPadding = 20;
+        protected const float buttonHeight = 34f;
+        protected const float buttonWidth = 560;
+        protected const float buttonPanelHeight = 96;
         public UIPanel Background { get; protected set; }
         public string TitleText { set => Title.text = value; }
         protected UIDragHandle DragBar { get; private set; }
@@ -85,8 +85,11 @@ namespace MbyronModsCommon {
             Background = AddUIComponent<UIPanel>();
             Background.name = nameof(Background);
             Background.size = new Vector2(defaultWidth, defaultHeight);
-            Background.backgroundSprite = "TextFieldPanel";
-            Background.color = new(43, 47, 64, 240);
+            Background.atlas = CustomAtlas.MbyronModsAtlas;
+            //Background.backgroundSprite = "TextFieldPanel";
+            Background.backgroundSprite = CustomAtlas.RoundedRectangle3;
+            //Background.color = new(43, 47, 64, 240);
+            Background.color = new(36, 46, 60, 220);
             Background.relativePosition = Vector2.zero;
         }
         protected void Close() => MessageBox.Hide(this);
@@ -103,26 +106,9 @@ namespace MbyronModsCommon {
             Title.eventTextChanged += (component, text) => {
                 Title.CenterToParent();
             };
-
-        }
-        protected void AddCaptionCloseButton() {
-            CloseButton = DragBar.AddUIComponent<UIButton>();
-            CloseButton.normalBgSprite = "buttonclose";
-            CloseButton.hoveredBgSprite = "buttonclosehover";
-            CloseButton.pressedBgSprite = "buttonclosepressed";
-            CloseButton.size = new Vector2(32f, 32f);
-            CloseButton.relativePosition = new Vector2(defaultWidth - 32f - 4f, 4f);
-            CloseButton.eventClicked += CloseButtonOnClicked;
         }
 
-        private void CloseButtonOnClicked(UIComponent component, UIMouseEventParameter eventParam) => Close();
-
-        private float MaxScrollableContentHeight {
-            get {
-                var resolution = GetUIView().GetScreenResolution();
-                return resolution.y - 600f;
-            }
-        }
+        private float MaxScrollableContentHeight => GetUIView().GetScreenResolution().y - 600f;
 
         private void AddContentPanel() {
             ScrollableContentPanel = AddUIComponent<MessageBoxScrollablePanel>();
@@ -135,17 +121,18 @@ namespace MbyronModsCommon {
             ButtonPanel.size = new Vector2(defaultWidth, buttonPanelHeight);
         }
 
-        protected void AddButtons(uint number, uint total, string _text, OnButtonClicked callback) {
+        protected UIButton AddButtons(uint number, uint total, string _text, OnButtonClicked callback) {
             var spacing = (total - 1) * DefaultPadding;
             var buttonWidth = (defaultWidth - 2 * DefaultPadding - spacing) / total;
             UIButton button = CustomButton.AddClickButton(ButtonPanel, _text, buttonWidth, buttonHeight, callback, 1f, true);
             ArrangePosition(button, number, buttonWidth);
+            return button;
         }
 
         private UIButton ArrangePosition(UIButton button, uint number, float buttonWidth) {
             button.name = "Button" + number.ToString();
             var posX = DefaultPadding + (number - 1) * (buttonWidth + DefaultPadding);
-            float posY = 10f;
+            float posY = 42f;
             button.relativePosition = new Vector2(posX, posY);
             return button;
         }

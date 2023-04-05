@@ -19,8 +19,7 @@ namespace MbyronModsCommon.UI {
         public static ToggleButton AddToggleButton(UIComponent parent, bool isChecked, Action<bool> callback) {
             var button = parent.AddUIComponent<ToggleButton>();
             button.autoSize = false;
-            button.height = 20;
-            button.width = 36;
+            button.size = new Vector2(40, 24);
             button.SetSprite();
             button.IsChecked = isChecked;
             button.EventOnCheckedChanged += callback;
@@ -39,14 +38,10 @@ namespace MbyronModsCommon.UI {
                 button.disabledColor = CustomColor.GreenDisabled;
                 button.hoveredColor = CustomColor.GreenHovered;
                 button.pressedColor = CustomColor.GreenPressed;
-                button.focusedColor = CustomColor.Orange;  
-            } else { 
-                button.atlas = CustomAtlas.MbyronModsAtlas;
-                button.normalBgSprite = CustomAtlas.ButtonNormal;
-                button.disabledBgSprite = CustomAtlas.ButtonNormal;
-                button.hoveredBgSprite = CustomAtlas.ButtonHovered;
-                button.pressedBgSprite = CustomAtlas.ButtonPressed;
-            } 
+                button.focusedColor = CustomColor.Orange;
+            } else {
+                button.SetBlueStyle();
+            }
             button.disabledTextColor = CustomColor.DisabledTextColor;
             button.autoSize = false;
             button.wordWrap = true;
@@ -63,6 +58,43 @@ namespace MbyronModsCommon.UI {
             }
             button.eventClicked += (c, e) => eventCallback?.Invoke();
             return button;
+        }
+
+    }
+
+    public static class UIButtonExtension {
+        public static void SetBlueStyle(this UIButton button) {
+            button.atlas = CustomAtlas.MbyronModsAtlas;
+            button.normalBgSprite = CustomAtlas.RoundedRectangle3;
+            button.disabledBgSprite = CustomAtlas.RoundedRectangle3;
+            button.hoveredBgSprite = CustomAtlas.RoundedRectangle3;
+            button.pressedBgSprite = CustomAtlas.RoundedRectangle3;
+            button.color = CustomColor.BlueNormal;
+            button.focusedColor = CustomColor.BlueNormal;
+            button.hoveredColor = CustomColor.BlueHovered;
+            button.pressedColor = CustomColor.BluePressed;
+            button.disabledColor = CustomColor.BlueDisabled;
+        }
+
+        public static void SetGrayStyle(this UIButton button) {
+            button.atlas = CustomAtlas.MbyronModsAtlas;
+            button.normalBgSprite = CustomAtlas.RoundedRectangle3;
+            button.disabledBgSprite = CustomAtlas.RoundedRectangle3;
+            button.hoveredBgSprite = CustomAtlas.RoundedRectangle3;
+            button.pressedBgSprite = CustomAtlas.RoundedRectangle3;
+            button.color = CustomColor.GrayNormal;
+            button.focusedColor = CustomColor.GrayNormal;
+            button.hoveredColor = CustomColor.GrayHovered;
+            button.pressedColor = CustomColor.GrayPressed;
+            button.disabledColor = CustomColor.GrayDisabled;
+        }
+
+        public static void SetWarningStyle(this UIButton button) {
+            SetGrayStyle(button);
+            button.textColor = CustomColor.Red;
+            button.focusedTextColor = CustomColor.Red;
+            button.hoveredTextColor = CustomColor.Red;
+            button.pressedTextColor = CustomColor.Red;
         }
 
     }
@@ -90,6 +122,7 @@ namespace MbyronModsCommon.UI {
             BgSpriteSet1.hovered = CustomAtlas.CheckBoxBGOneHovered;
             BgSpriteSet1.pressed = CustomAtlas.CheckBoxBGOneNormal;
             BgSpriteSet1.disabled = CustomAtlas.CheckBoxBGOneDisabled;
+            
         }
     }
 

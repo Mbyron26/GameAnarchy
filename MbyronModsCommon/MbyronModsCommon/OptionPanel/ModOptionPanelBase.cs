@@ -80,18 +80,28 @@ namespace MbyronModsCommon {
             return result;
         }
 
-        protected void ResetSettings(){
+        ResetModWarningMessageBox messageBox;
+        ResetModMessageBox messageBox1;
+
+        protected void ResetSettings() {
             try {
+                messageBox = MessageBox.Show<ResetModWarningMessageBox>();
+                messageBox.Init<TypeMod>(First);  
+            }
+            catch (Exception e) {
+                InternalLogger.Exception($"Reset settings failed:", e);
+                MessageBox.Show<ResetModMessageBox>().Init<TypeMod>(false);
+            }
+
+            void First() {
                 InternalLogger.Log($"Start resetting mod config.");
                 SingletonMod<TypeConfig>.Instance = null;
                 SingletonMod<TypeConfig>.Instance = new();
                 OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
                 InternalLogger.Log($"Reset mod config succeeded.");
-                MessageBox.Show<ResetModMessageBox>().Init<TypeMod>();
-            }
-            catch (Exception e) {
-                InternalLogger.Exception($"Reset settings failed:", e);
-                MessageBox.Show<ResetModMessageBox>().Init<TypeMod>(false);
+                MessageBox.Hide(messageBox);
+                messageBox1 = MessageBox.Show<ResetModMessageBox>();
+                messageBox1.Init<TypeMod>(true);
             }
         }
 

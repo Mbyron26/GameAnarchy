@@ -8,15 +8,10 @@ namespace MbyronModsCommon.UI {
         private static UITextureAtlas mbyronModsAtlas;
         public static Dictionary<string, RectOffset> SpriteParams { get; private set; } = new();
 
-        //------Base Button------
-        public static string ButtonNormal => nameof(ButtonNormal);
-        public static string ButtonHovered => nameof(ButtonHovered);
-        public static string ButtonPressed => nameof(ButtonPressed);
-
-        // ------Tab------
-        public static string TabButtonDisabled => nameof(TabButtonDisabled);
-        public static string TabButtonNormal => nameof(TabButtonNormal);
-        public static string TabButtonHovered => nameof(TabButtonHovered);
+        //Rounded Rectangle
+        public static string RoundedRectangle1 => nameof(RoundedRectangle1);
+        public static string RoundedRectangle2 => nameof(RoundedRectangle2);
+        public static string RoundedRectangle3 => nameof(RoundedRectangle3);
 
 
         // Slider Alpha
@@ -41,10 +36,8 @@ namespace MbyronModsCommon.UI {
 
 
         public static string EmptySprite => nameof(EmptySprite);
-        public static string TextFieldNormal => nameof(TextFieldNormal);
-        public static string TextFieldHovered => nameof(TextFieldHovered);
 
-        public static string ListBackground => nameof(ListBackground);
+
 
         public static string FieldDisabled => nameof(FieldDisabled);
         public static string FieldFocused => nameof(FieldFocused);
@@ -80,18 +73,12 @@ namespace MbyronModsCommon.UI {
         public static string FieldNormalLeft => nameof(FieldNormalLeft);
         public static string FieldNormalRight => nameof(FieldNormalRight);
 
-        public static string TabNormal => nameof(TabNormal);
-        public static string TabHovered => nameof(TabHovered);
-        public static string TabFocused => nameof(TabFocused);
-        public static string TabPressed => nameof(TabPressed);
 
         static CustomAtlas() {
-            SpriteParams[ButtonNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ButtonHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ButtonPressed] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabButtonDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabButtonNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabButtonHovered] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[RoundedRectangle1] = new RectOffset(4, 4, 4, 4);
+            SpriteParams[RoundedRectangle2] = new RectOffset(6, 6, 6, 6);
+            SpriteParams[RoundedRectangle3] = new RectOffset(8, 8, 8, 8);
+
             SpriteParams[SliderAlphaSprite] = new RectOffset();
             SpriteParams[SliderAlphaMidSprite] = new RectOffset();
             SpriteParams[SliderAlphaLeftSprite] = new RectOffset(4, 4, 4, 4);
@@ -100,9 +87,6 @@ namespace MbyronModsCommon.UI {
             SpriteParams[SliderThumb] = new RectOffset(4, 4, 4, 4);
 
             SpriteParams[EmptySprite] = new RectOffset();
-            SpriteParams[TextFieldNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TextFieldHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ListBackground] = new RectOffset(4, 4, 4, 4);
 
             SpriteParams[FieldDisabled] = new RectOffset(4, 4, 4, 4);
             SpriteParams[FieldFocused] = new RectOffset(4, 4, 4, 4);
@@ -138,10 +122,6 @@ namespace MbyronModsCommon.UI {
             SpriteParams[FieldNormalLeft] = new RectOffset(4, 4, 4, 4);
             SpriteParams[FieldNormalRight] = new RectOffset(4, 4, 4, 4);
 
-            SpriteParams[TabNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabFocused] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[TabPressed] = new RectOffset(4, 4, 4, 4);
 
             SpriteParams[CheckBoxFGOneNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[CheckBoxFGOneDisabled] = new RectOffset(4, 4, 4, 4);

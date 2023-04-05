@@ -22,10 +22,11 @@ namespace MbyronModsCommon.UI {
             valueField.height = fieldHeight;
             valueField.disabledTextColor = new Color32(71, 71, 71, 255);
             valueField.atlas = CustomAtlas.MbyronModsAtlas;
-            valueField.normalBgSprite = CustomAtlas.TabButtonNormal;
-            valueField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
-            valueField.disabledBgSprite = CustomAtlas.TabButtonDisabled;
+            valueField.normalBgSprite = CustomAtlas.RoundedRectangle2;
+            valueField.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
+            valueField.disabledBgSprite = CustomAtlas.RoundedRectangle2;
             valueField.selectionSprite = CustomAtlas.EmptySprite;
+            valueField.color = CustomColor.PrimaryHovered;
             valueField.padding = new RectOffset(6, 6, 6, 6);
             valueField.textScale = 1f;
             valueField.MinValue = minLimit;
@@ -43,8 +44,8 @@ namespace MbyronModsCommon.UI {
                 setSprite(uiTextField);
             } else {
                 uiTextField.atlas = CustomAtlas.MbyronModsAtlas;
-                uiTextField.normalBgSprite = CustomAtlas.TabButtonNormal;
-                uiTextField.hoveredBgSprite = CustomAtlas.TabButtonNormal;
+                uiTextField.normalBgSprite = CustomAtlas.RoundedRectangle2;
+                uiTextField.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
                 uiTextField.selectionSprite = CustomAtlas.EmptySprite;
             }
             uiTextField.padding = new RectOffset(8, 6, 8, 6);

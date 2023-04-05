@@ -38,9 +38,12 @@ namespace MbyronModsCommon.UI {
             if (setGroupPanelStyle is not null) {
                 setGroupPanelStyle.Invoke(CardGroupPanel);
             } else {
-                CardGroupPanel.atlas = CustomAtlas.InGameAtlas;
-                CardGroupPanel.backgroundSprite = "ButtonWhite";
-                CardGroupPanel.color = new Color32(82, 101, 117, 255);
+                //CardGroupPanel.atlas = CustomAtlas.InGameAtlas;
+                //CardGroupPanel.backgroundSprite = "ButtonWhite";
+                //CardGroupPanel.color = new Color32(82, 101, 117, 255);
+                CardGroupPanel.atlas = CustomAtlas.MbyronModsAtlas;
+                CardGroupPanel.backgroundSprite = CustomAtlas.RoundedRectangle3;
+                CardGroupPanel.color = CustomColor.PrimaryNormal;
             }
         }
 

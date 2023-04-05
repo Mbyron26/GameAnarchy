@@ -145,7 +145,8 @@ namespace GameAnarchy.UI {
             Tabs = new ControlPanelTabs(this);
             Tabs.Initialize(PanelWidth - 20, 24);
             Tabs.TabPanel.atlas = CustomAtlas.MbyronModsAtlas;
-            Tabs.TabPanel.backgroundSprite = CustomAtlas.TabNormal;
+            Tabs.TabPanel.backgroundSprite = CustomAtlas.RoundedRectangle2;
+            Tabs.TabPanel.color = CustomColor.PrimaryNormal;
             Tabs.TabPanel.relativePosition = new Vector2(ElementOffset, CaptionHeight);
             Tabs.AddTab("General", CommonLocalize.OptionPanel_General, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
             Tabs.AddTab("Service", Localization.Localize.Service, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
@@ -154,10 +155,12 @@ namespace GameAnarchy.UI {
 
         private static void SetSprite(TabButton tabButton) {
             tabButton.atlas = CustomAtlas.MbyronModsAtlas;
-            tabButton.normalBgSprite = CustomAtlas.TabNormal;
-            tabButton.focusedBgSprite = CustomAtlas.TabFocused;
-            tabButton.hoveredBgSprite = CustomAtlas.TabHovered;
-            tabButton.pressedBgSprite = CustomAtlas.TabPressed;
+            tabButton.normalBgSprite = CustomAtlas.RoundedRectangle2;
+            tabButton.focusedBgSprite = CustomAtlas.RoundedRectangle2;
+            tabButton.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
+            tabButton.pressedBgSprite = CustomAtlas.RoundedRectangle2;
+            tabButton.color = CustomColor.PrimaryNormal;
+            tabButton.hoveredColor = CustomColor.PrimaryHovered;
         }
 
         private void AddCaption() {
