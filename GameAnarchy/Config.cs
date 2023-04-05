@@ -7,7 +7,7 @@ namespace GameAnarchy {
         public bool EnabledAchievements { get; set; } = true;
         public bool EnabledSkipIntro { get; set; } = false;
         public bool EnabledUnlimitedUniqueBuildings { get; set; } = true;
-        public uint OptionPanelCategoriesHorizontalOffset { get; set; } = 200;
+        public uint OptionPanelCategoriesHorizontalOffset { get; set; } = 240;
         public bool OptionPanelCategoriesUpdated { get; set; } = true;
 
         public bool EnabledInfoView { get; set; } = false;
