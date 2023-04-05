@@ -29,16 +29,17 @@ namespace MbyronModsCommon.UI {
         public static UIButton AddClickButton(UIComponent parent, string text, float? width, float height, OnButtonClicked eventCallback, float textScale = 0.9f, bool isBlueStyle = false) {
             var button = parent.AddUIComponent<UIButton>();
             if (!isBlueStyle) {
-                button.atlas = CustomAtlas.InGameAtlas;
-                button.normalBgSprite = "ButtonWhite";
-                button.disabledBgSprite = "ButtonWhite";
-                button.hoveredBgSprite = "ButtonWhite";
-                button.pressedBgSprite = "ButtonWhite";
-                button.color = CustomColor.GreenNormal;
-                button.disabledColor = CustomColor.GreenDisabled;
-                button.hoveredColor = CustomColor.GreenHovered;
-                button.pressedColor = CustomColor.GreenPressed;
-                button.focusedColor = CustomColor.Orange;
+                button.SetDefaultStyle();
+                //button.atlas = CustomAtlas.InGameAtlas;
+                //button.normalBgSprite = "ButtonWhite";
+                //button.disabledBgSprite = "ButtonWhite";
+                //button.hoveredBgSprite = "ButtonWhite";
+                //button.pressedBgSprite = "ButtonWhite";
+                //button.color = CustomColor.GreenNormal;
+                //button.disabledColor = CustomColor.GreenDisabled;
+                //button.hoveredColor = CustomColor.GreenHovered;
+                //button.pressedColor = CustomColor.GreenPressed;
+                //button.focusedColor = CustomColor.Orange;
             } else {
                 button.SetBlueStyle();
             }
@@ -97,6 +98,24 @@ namespace MbyronModsCommon.UI {
             button.pressedTextColor = CustomColor.Red;
         }
 
+        public static void SetDefaultStyle(this UIButton button) {
+            SetDefalutSprite(button);
+            button.color = CustomColor.DefaultButtonNormal;
+            button.focusedColor = CustomColor.DefaultButtonFocused;
+            button.hoveredColor = CustomColor.DefaultButtonHovered;
+            button.pressedColor = CustomColor.DefaultButtonPressed;
+            button.disabledColor = CustomColor.DefaultButtonDisabled;
+        }
+
+        private static void SetDefalutSprite(this UIButton button) {
+            button.atlas = CustomAtlas.MbyronModsAtlas;
+            button.normalBgSprite = CustomAtlas.RoundedRectangle3;
+            button.disabledBgSprite = CustomAtlas.RoundedRectangle3;
+            button.hoveredBgSprite = CustomAtlas.RoundedRectangle3;
+            button.pressedBgSprite = CustomAtlas.RoundedRectangle3;
+            button.focusedBgSprite = CustomAtlas.RoundedRectangle3;
+        }
+
     }
 
     public class CheckBox : MultiStateButtonBase {
@@ -122,7 +141,7 @@ namespace MbyronModsCommon.UI {
             BgSpriteSet1.hovered = CustomAtlas.CheckBoxBGOneHovered;
             BgSpriteSet1.pressed = CustomAtlas.CheckBoxBGOneNormal;
             BgSpriteSet1.disabled = CustomAtlas.CheckBoxBGOneDisabled;
-            
+
         }
     }
 

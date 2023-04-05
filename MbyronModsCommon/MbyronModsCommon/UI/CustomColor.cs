@@ -23,9 +23,17 @@ namespace MbyronModsCommon.UI {
 
         public static Color32 Red => new(170, 4, 4, 255);
 
-        public static Color32 PrimaryNormal => new (46, 54, 72, 255);
+        public static Color32 PrimaryNormal => new(46, 54, 72, 255);
         //public static Color32 PrimaryHovered => new(88, 106, 124, 255);
         public static Color32 PrimaryHovered => new(64, 80, 100, 255);
         public static Color32 Secondary => new(0, 0, 4, 255);
+
+
+        //Default button style
+        public static Color32 DefaultButtonNormal => PrimaryHovered;
+        public static Color32 DefaultButtonHovered => new(76, 94, 116, 255);
+        public static Color32 DefaultButtonPressed => new(90, 116, 142, 255);
+        public static Color32 DefaultButtonFocused => BlueNormal;
+        public static Color32 DefaultButtonDisabled => new(50, 62, 80, 255);
     }
 }

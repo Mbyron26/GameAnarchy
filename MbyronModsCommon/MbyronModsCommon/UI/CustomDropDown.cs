@@ -40,7 +40,7 @@ namespace MbyronModsCommon.UI {
         }
 
         public static UIDropDown AddOPDropDown(UIComponent parent, string[] options, int defaultSelection, float width, float height, OnDropdownSelectionChanged eventCallback = null) {
-            var dropDown = parent.AddUIComponent<UIDropDown>();
+            var dropDown = parent.AddUIComponent<DropDown>();
             dropDown.atlas = CustomAtlas.MbyronModsAtlas;
             dropDown.normalBgSprite = CustomAtlas.RoundedRectangle2;
             dropDown.disabledBgSprite = CustomAtlas.RoundedRectangle2;
@@ -71,8 +71,86 @@ namespace MbyronModsCommon.UI {
             arrowDown.relativePosition = new Vector2(dropDown.width - 26 - 4, 2);
             dropDown.triggerButton = dropDown;
             dropDown.eventSelectedIndexChanged += (c, v) => eventCallback?.Invoke(v);
+            dropDown.CanWheel = false;
+            dropDown.HoveredColor = CustomColor.DefaultButtonHovered;
             return dropDown;
         }
 
     }
+
+    public class DropDown : UIDropDown {
+        protected bool canWheel = true;
+        public bool CanWheel {
+            get => canWheel;
+            set {
+                if (!value.Equals(canWheel)) {
+                    canWheel = value;
+                }
+            }
+        }
+
+        protected Color32 hoveredColor;
+        public Color32 HoveredColor {
+            get => hoveredColor;
+            set {
+                hoveredColor = value;
+                Invalidate();
+            }
+        }
+
+        protected Color32 pressedColor;
+        public Color32 PressedColor {
+            get => pressedColor;
+            set {
+                pressedColor = value;
+                Invalidate();
+            }
+        }
+
+        protected Color32 focusedColor;
+        public Color32 FocusedColor {
+            get => focusedColor;
+            set {
+                FocusedColor = value;
+                Invalidate();
+            }
+        }
+
+        protected UIButton.ButtonState state;
+        public UIButton.ButtonState State {
+            get => state;
+            set {
+                if (value != state) {
+                    //this.OnButtonStateChanged(value);
+                    Invalidate();
+                }
+            }
+        }
+
+        protected override Color32 GetActiveColor() => state switch {
+            UIButton.ButtonState.Focused => focusedColor,
+            UIButton.ButtonState.Hovered => hoveredColor,
+            UIButton.ButtonState.Pressed => pressedColor,
+            UIButton.ButtonState.Disabled => disabledColor,
+            _ => color,
+        };
+
+
+        public event MouseEventHandler EventMouseWheel;
+        protected override void OnMouseWheel(UIMouseEventParameter p) {
+            if (canWheel) {
+                selectedIndex = Mathf.Max(0, selectedIndex - Mathf.RoundToInt(p.wheelDelta));
+            }
+            p.Use();
+            if (!p.used) {
+                Invoke("OnMouseWheel", new object[] { p });
+                EventMouseWheel?.Invoke(this, p);
+            }
+        }
+
+
+    }
+
+
+
 }

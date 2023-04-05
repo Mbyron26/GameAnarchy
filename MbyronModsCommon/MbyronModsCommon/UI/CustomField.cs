@@ -26,7 +26,11 @@ namespace MbyronModsCommon.UI {
             valueField.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
             valueField.disabledBgSprite = CustomAtlas.RoundedRectangle2;
             valueField.selectionSprite = CustomAtlas.EmptySprite;
-            valueField.color = CustomColor.PrimaryHovered;
+            valueField.color = CustomColor.DefaultButtonNormal;
+            valueField.HoveredColor = CustomColor.DefaultButtonHovered;
+            valueField.FocusedColor = CustomColor.DefaultButtonFocused;
+            valueField.PressedColor = CustomColor.DefaultButtonFocused;
+            valueField.disabledColor = CustomColor.DefaultButtonDisabled;
             valueField.padding = new RectOffset(6, 6, 6, 6);
             valueField.textScale = 1f;
             valueField.MinValue = minLimit;
@@ -234,12 +238,126 @@ namespace MbyronModsCommon.UI {
             }
         }
         protected override void OnMouseLeave(UIMouseEventParameter p) {
+            if (isEnabled) {
+                if (containsFocus) {
+                    m_State = UIButton.ButtonState.Focused;
+                } else {
+                    m_State = UIButton.ButtonState.Normal;
+                }
+            }
             base.OnMouseLeave(p);
             WheelAvailable = false;
         }
         protected override void OnMouseMove(UIMouseEventParameter p) {
             base.OnMouseMove(p);
             WheelAvailable = true;
+        }
+
+        protected UIButton.ButtonState m_State;
+        public UIButton.ButtonState State {
+            get {
+                return m_State;
+            }
+            set {
+                if (value != m_State) {
+                    OnButtonStateChanged(value);
+                    Invalidate();
+                }
+            }
+        }
+
+        protected Color32 m_HoveredColor = Color.white;
+        protected Color32 m_PressedColor = Color.white;
+        protected Color32 m_FocusedColor = Color.white;
+
+        public Color32 HoveredColor {
+            get => m_HoveredColor;
+            set {
+                m_HoveredColor = value;
+                Invalidate();
+            }
+        }
+
+        public Color32 PressedColor {
+            get => m_PressedColor;
+            set {
+                m_PressedColor = value;
+                Invalidate();
+            }
+        }
+
+        public Color32 FocusedColor {
+            get => m_FocusedColor;
+            set {
+                m_FocusedColor = value;
+                Invalidate();
+            }
+        }
+
+        protected override Color32 GetActiveColor() => State switch {
+            UIButton.ButtonState.Focused => m_FocusedColor,
+            UIButton.ButtonState.Hovered => m_HoveredColor,
+            UIButton.ButtonState.Pressed => m_PressedColor,
+            UIButton.ButtonState.Disabled => m_DisabledColor,
+            _ => color,
+        };
+
+        protected virtual void OnButtonStateChanged(UIButton.ButtonState value) {
+            if (!isEnabled && value != UIButton.ButtonState.Disabled) {
+                return;
+            }
+            m_State = value;
+            Invoke("OnButtonStateChanged", new object[] { value });
+            Invalidate();
+        }
+
+        protected override void OnMouseEnter(UIMouseEventParameter p) {
+            if(isEnabled) {
+                if (m_State != UIButton.ButtonState.Focused) {
+                    m_State = UIButton.ButtonState.Hovered;
+                }
+            }
+            base.OnMouseEnter(p);
+        }
+
+        protected override void OnMouseDown(UIMouseEventParameter p) {
+            if (m_State != UIButton.ButtonState.Focused) {
+                m_State = UIButton.ButtonState.Pressed;
+            }
+            base.OnMouseDown(p);
+        }
+
+        protected override void OnMouseUp(UIMouseEventParameter p) {
+            if (m_IsMouseHovering) {
+                if (containsFocus) {
+                    m_State = UIButton.ButtonState.Focused;
+                } else {
+                    m_State = UIButton.ButtonState.Hovered;
+                }
+            } else if (hasFocus) {
+                m_State = UIButton.ButtonState.Focused;
+            } else {
+                m_State = UIButton.ButtonState.Normal;
+            }
+
+            base.OnMouseUp(p);
+        }
+
+        protected override void OnIsEnabledChanged() {
+            m_State = isEnabled ? UIButton.ButtonState.Normal : UIButton.ButtonState.Disabled;
+            base.OnIsEnabledChanged();
+        }
+
+        protected override void OnEnterFocus(UIFocusEventParameter p) {
+            if (m_State != UIButton.ButtonState.Pressed) {
+                m_State = UIButton.ButtonState.Focused;
+            }
+            base.OnEnterFocus(p);
+        }
+
+        protected override void OnLeaveFocus(UIFocusEventParameter p) {
+            m_State = containsMouse ? UIButton.ButtonState.Hovered : UIButton.ButtonState.Normal;
+            base.OnLeaveFocus(p);
         }
 
         public void SetStyle() {

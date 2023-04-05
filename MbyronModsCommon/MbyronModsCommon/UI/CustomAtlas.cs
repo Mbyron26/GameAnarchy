@@ -156,10 +156,8 @@ namespace MbyronModsCommon.UI {
                 if (inGameAtlas is null) {
                     inGameAtlas = UIUtils.GetAtlas("Ingame");
                     inGameAtlas ??= UIUtils.GetDefaultAtlas();
-                    return inGameAtlas;
-                } else {
-                    return inGameAtlas;
                 }
+                return inGameAtlas;
             }
         }
 
