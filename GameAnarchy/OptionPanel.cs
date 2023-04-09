@@ -63,19 +63,19 @@ namespace GameAnarchy {
             OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.UnlockOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledUnlockAll, Localization.Localize.UnlockAll, Localization.Localize.UnlockAllMinor, _ => {
                 Config.Instance.EnabledUnlockAll = _;
-                if (_) CustomUnlock.IsChecked = false;
+                if (_) CustomUnlock.IsOn = false;
             }, out UILabel _, out UILabel _, out UnlockAll);
             OptionPanelTool.AddToggleButton(Config.Instance.CustomUnlock, Localization.Localize.CustomUnlock, Localization.Localize.CustomUnlockPanelTooltip, _ => {
                 Config.Instance.CustomUnlock = _;
-                if (_) UnlockAll.IsChecked = false;
+                if (_) UnlockAll.IsOn = false;
                 if (CustomUnlockPanels.Count > 0) {
                     foreach (var item in CustomUnlockPanels) {
                         item.isEnabled = _;
                     }
                 }
             }, out UILabel _, out UILabel _, out CustomUnlock);
-            CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localization.Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, out UILabel _, out UILabel _, out UIDropDown dropDown0, majorOffset: new RectOffset(20, 0, 0, 0)));
-            dropDown0.eventSelectedIndexChanged += (c, value) => Config.Instance.MilestoneLevel = value;
+            CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localization.Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, out UILabel _, out UILabel _, out DropDown dropDown0, majorOffset: new RectOffset(20, 0, 0, 0)));
+            dropDown0.EventSelectedIndexChanged += (value) => Config.Instance.MilestoneLevel = value;
             CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.EnabledInfoView, null, Config.Instance.EnabledInfoView, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
             CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
             CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockTransport, null, Config.Instance.UnlockTransport, _ => Config.Instance.UnlockTransport = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
@@ -85,7 +85,7 @@ namespace GameAnarchy {
             CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockUniqueBuilding, Localization.Localize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuilding, _ => Config.Instance.UnlockUniqueBuilding = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
             if (CustomUnlockPanels.Count > 0)
                 foreach (var item in CustomUnlockPanels) {
-                    item.isEnabled = CustomUnlock.IsChecked;
+                    item.isEnabled = CustomUnlock.IsOn;
                 }
             OptionPanelTool.Reset();
         }
@@ -97,11 +97,11 @@ namespace GameAnarchy {
             OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
                 Config.Instance.UnlimitedMoney = _;
-                if (_) CashAnarchy.IsChecked = false;
+                if (_) CashAnarchy.IsOn = false;
             }, out UILabel _, out UILabel _, out VanillaUnlimitedMoney);
             OptionPanelTool.AddToggleButton(Config.Instance.CashAnarchy, Localization.Localize.MoneyAnarchyMode, Localization.Localize.MoneyAnarchyModeMinor, _ => {
                 Config.Instance.CashAnarchy = _;
-                if (_) VanillaUnlimitedMoney.IsChecked = false;
+                if (_) VanillaUnlimitedMoney.IsOn = false;
                 foreach (var item in CashAnarchyPanels) {
                     item.isEnabled = _;
                 }

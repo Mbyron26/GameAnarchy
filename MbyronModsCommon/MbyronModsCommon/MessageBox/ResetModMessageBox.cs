@@ -14,7 +14,7 @@ namespace MbyronModsCommon {
             var button1 = AddButtons(1, 2, CommonLocalize.MessageBox_OK, () => callback());
             button1.SetWarningStyle();
             var button2 = AddButtons(2, 2, "Cancel", Close);
-            button2.SetGrayStyle();
+            button2.SetDefaultStyle();
         }
     }
 

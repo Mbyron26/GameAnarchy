@@ -124,7 +124,7 @@ namespace MbyronModsCommon {
         protected UIButton AddButtons(uint number, uint total, string _text, OnButtonClicked callback) {
             var spacing = (total - 1) * DefaultPadding;
             var buttonWidth = (defaultWidth - 2 * DefaultPadding - spacing) / total;
-            UIButton button = CustomButton.AddClickButton(ButtonPanel, _text, buttonWidth, buttonHeight, callback, 1f, true);
+            UIButton button = CustomButton.AddClickButton(ButtonPanel, _text, buttonWidth, buttonHeight, callback, 1f);
             ArrangePosition(button, number, buttonWidth);
             return button;
         }

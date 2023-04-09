@@ -23,7 +23,7 @@ namespace MbyronModsCommon {
             OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, CommonLocalize.OptionPanel_ModInfo);
             OptionPanelTool.AddLabel($"{ModMainInfo<TypeMod>.ModName}", $"{CommonLocalize.OptionPanel_Version}{ModMainInfo<TypeMod>.ModVersion}({ModMainInfo<TypeMod>.VersionType})", out UILabel _, out UILabel _);
             AddExtraModInfoProperty();
-            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out UIDropDown _, (v) => {
+            OptionPanelTool.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, out UILabel _, out UILabel _, out DropDown _, (v) => {
                 OnLanguageSelectedIndexChanged<TypeConfig>(v);
                 AddLanguageSelectedIndexChanged();
             });

@@ -13,6 +13,13 @@ namespace MbyronModsCommon.UI {
         public static string RoundedRectangle2 => nameof(RoundedRectangle2);
         public static string RoundedRectangle3 => nameof(RoundedRectangle3);
 
+        //Toggle
+        public static string ToggleDisabledOff => nameof(ToggleDisabledOff);
+        public static string ToggleDisabledOn => nameof(ToggleDisabledOn);
+        public static string ToggleHoveredOff => nameof(ToggleHoveredOff);
+        public static string ToggleHoveredOn => nameof(ToggleHoveredOn);
+        public static string ToggleNormalOff => nameof(ToggleNormalOff);
+        public static string ToggleNormalOn => nameof(ToggleNormalOn);
 
         // Slider Alpha
         public static string SliderAlphaSprite => nameof(SliderAlphaSprite);
@@ -25,18 +32,13 @@ namespace MbyronModsCommon.UI {
         public static string SliderThumb => nameof(SliderThumb);
 
         //Check Box
-        public static string CheckBoxFGOneNormal => nameof(CheckBoxFGOneNormal);
-        public static string CheckBoxFGOneDisabled => nameof(CheckBoxFGOneDisabled);
-        public static string CheckBoxBGZeroNormal => nameof(CheckBoxBGZeroNormal);
-        public static string CheckBoxBGZeroHovered => nameof(CheckBoxBGZeroHovered);
-        public static string CheckBoxBGZeroDisabled => nameof(CheckBoxBGZeroDisabled);
-        public static string CheckBoxBGOneNormal => nameof(CheckBoxBGOneNormal);
-        public static string CheckBoxBGOneHovered => nameof(CheckBoxBGOneHovered);
-        public static string CheckBoxBGOneDisabled => nameof(CheckBoxBGOneDisabled);
+        public static string CheckBoxOnBg => nameof(CheckBoxOnBg);
+        public static string CheckBoxOnFg => nameof(CheckBoxOnFg);
+        public static string CheckBoxOffBg => nameof(CheckBoxOffBg);
 
 
         public static string EmptySprite => nameof(EmptySprite);
-
+        public static string TransparencySprite => nameof(TransparencySprite);
 
 
         public static string FieldDisabled => nameof(FieldDisabled);
@@ -47,16 +49,6 @@ namespace MbyronModsCommon.UI {
         public static string ArrowDown => nameof(ArrowDown);
         public static string ArrowDown1 => nameof(ArrowDown1);
 
-        public static string ToggleButtonBGOneDisabled => nameof(ToggleButtonBGOneDisabled);
-        public static string ToggleButtonBGOneHovered => nameof(ToggleButtonBGOneHovered);
-        public static string ToggleButtonBGOneNormal => nameof(ToggleButtonBGOneNormal);
-        public static string ToggleButtonBGZeroDisabled => nameof(ToggleButtonBGZeroDisabled);
-        public static string ToggleButtonBGZeroHovered => nameof(ToggleButtonBGZeroHovered);
-        public static string ToggleButtonBGZeroNormal => nameof(ToggleButtonBGZeroNormal);
-        public static string ToggleButtonFGOneDisabled => nameof(ToggleButtonFGOneDisabled);
-        public static string ToggleButtonFGOneNormal => nameof(ToggleButtonFGOneNormal);
-        public static string ToggleButtonFGZeroDisabled => nameof(ToggleButtonFGZeroDisabled);
-        public static string ToggleButtonFGZeroNormal => nameof(ToggleButtonFGZeroNormal);
 
         public static string CloseButtonNormal => nameof(CloseButtonNormal);
         public static string CloseButtonHovered => nameof(CloseButtonHovered);
@@ -79,6 +71,17 @@ namespace MbyronModsCommon.UI {
             SpriteParams[RoundedRectangle2] = new RectOffset(6, 6, 6, 6);
             SpriteParams[RoundedRectangle3] = new RectOffset(8, 8, 8, 8);
 
+            SpriteParams[ToggleDisabledOff] = new RectOffset(12, 12, 12, 12);
+            SpriteParams[ToggleDisabledOn] = new RectOffset(12, 12, 12, 12);
+            SpriteParams[ToggleHoveredOff] = new RectOffset(12, 12, 12, 12);
+            SpriteParams[ToggleHoveredOn] = new RectOffset(12, 12, 12, 12);
+            SpriteParams[ToggleNormalOff] = new RectOffset(12, 12, 12, 12);
+            SpriteParams[ToggleNormalOn] = new RectOffset(12, 12, 12, 12);
+
+            SpriteParams[CheckBoxOffBg] = new RectOffset(7, 7, 7, 7);
+            SpriteParams[CheckBoxOnBg] = new RectOffset(7, 7, 7, 7);
+            SpriteParams[CheckBoxOnFg] = new RectOffset();
+
             SpriteParams[SliderAlphaSprite] = new RectOffset();
             SpriteParams[SliderAlphaMidSprite] = new RectOffset();
             SpriteParams[SliderAlphaLeftSprite] = new RectOffset(4, 4, 4, 4);
@@ -87,6 +90,7 @@ namespace MbyronModsCommon.UI {
             SpriteParams[SliderThumb] = new RectOffset(4, 4, 4, 4);
 
             SpriteParams[EmptySprite] = new RectOffset();
+            SpriteParams[TransparencySprite] = new RectOffset();
 
             SpriteParams[FieldDisabled] = new RectOffset(4, 4, 4, 4);
             SpriteParams[FieldFocused] = new RectOffset(4, 4, 4, 4);
@@ -122,15 +126,6 @@ namespace MbyronModsCommon.UI {
             SpriteParams[FieldNormalLeft] = new RectOffset(4, 4, 4, 4);
             SpriteParams[FieldNormalRight] = new RectOffset(4, 4, 4, 4);
 
-
-            SpriteParams[CheckBoxFGOneNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxFGOneDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGZeroNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGZeroHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGZeroDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGOneNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGOneHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[CheckBoxBGOneDisabled] = new RectOffset(4, 4, 4, 4);
 
         }
 

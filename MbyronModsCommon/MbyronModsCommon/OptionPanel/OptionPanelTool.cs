@@ -38,7 +38,7 @@ namespace MbyronModsCommon {
                 if (item is UIPanel kmPanel)
                     child = kmPanel;
             }
-            Group.UITool = new UIStyleGamma(panel) { Child = child};
+            Group.UITool = new UIStyleGamma(panel) { Child = child };
             Group.UITool.RefreshLayout();
             Group.UITool = null;
             return panel;
@@ -53,7 +53,7 @@ namespace MbyronModsCommon {
                 return null;
             }
             var panel = AddChildPanel();
-            checkBox = CustomButton.AddCheckBox(panel, isChecked, callback);
+            checkBox = CustomCheckBox.AddCheckBox(panel, isChecked, callback);
             majorLabel = null;
             minorLabel = null;
             if (majorText is not null) {
@@ -210,7 +210,7 @@ namespace MbyronModsCommon {
             return panel;
         }
 
-        public static UIPanel AddDropDown(string majorText, string minorText, string[] options, int defaultSelection, float dropDownWidth, float dropDownHeight, out UILabel majorLabel, out UILabel minorLabel, out UIDropDown dropDown, OnDropdownSelectionChanged eventCallback = null, RectOffset majorOffset = null, RectOffset minorOffset = null) {
+        public static UIPanel AddDropDown(string majorText, string minorText, string[] options, int defaultSelection, float dropDownWidth, float dropDownHeight, out UILabel majorLabel, out UILabel minorLabel, out DropDown dropDown, Action<int> callback = null, RectOffset majorOffset = null, RectOffset minorOffset = null) {
             if (Group is null) {
                 ExternalLogger.Error("ControlPanelTools_Group is null.");
                 majorLabel = null;
@@ -219,7 +219,7 @@ namespace MbyronModsCommon {
                 return null;
             }
             var panel = AddChildPanel();
-            dropDown = CustomDropDown.AddOPDropDown(panel, options, defaultSelection, dropDownWidth, dropDownHeight, eventCallback);
+            dropDown = CustomDropDown.AddOPDropDown(panel, options, defaultSelection, dropDownWidth, dropDownHeight, callback);
             majorLabel = null;
             minorLabel = null;
             if (majorText is not null) {
