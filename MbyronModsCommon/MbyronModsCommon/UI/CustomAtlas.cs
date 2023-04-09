@@ -12,6 +12,10 @@ namespace MbyronModsCommon.UI {
         public static string RoundedRectangle1 => nameof(RoundedRectangle1);
         public static string RoundedRectangle2 => nameof(RoundedRectangle2);
         public static string RoundedRectangle3 => nameof(RoundedRectangle3);
+        public static string RoundedRectangle4 => nameof(RoundedRectangle4);
+
+        //Circle
+        public static string Circle => nameof(Circle);
 
         //Toggle
         public static string ToggleDisabledOff => nameof(ToggleDisabledOff);
@@ -70,6 +74,9 @@ namespace MbyronModsCommon.UI {
             SpriteParams[RoundedRectangle1] = new RectOffset(4, 4, 4, 4);
             SpriteParams[RoundedRectangle2] = new RectOffset(6, 6, 6, 6);
             SpriteParams[RoundedRectangle3] = new RectOffset(8, 8, 8, 8);
+            SpriteParams[RoundedRectangle4] = new RectOffset(12, 12, 12, 12);
+
+            SpriteParams[Circle] = new RectOffset();
 
             SpriteParams[ToggleDisabledOff] = new RectOffset(12, 12, 12, 12);
             SpriteParams[ToggleDisabledOn] = new RectOffset(12, 12, 12, 12);

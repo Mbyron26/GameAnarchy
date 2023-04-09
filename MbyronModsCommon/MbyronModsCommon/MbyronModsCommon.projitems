@@ -112,4 +112,10 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\TransparencySprite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle4.png" />
+  </ItemGroup>
 </Project>

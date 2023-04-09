@@ -45,7 +45,7 @@ namespace GameAnarchy {
             OptionPanelTool.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
             OptionPanelTool.Reset();
         }
-
+        private UILabel OptionPanelCategoriesHorizontalOffsetMajor;
         private void AddOptimizeOptionsProperty() {
             OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.OptimizeOptions);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localization.Localize.EnableAchievements, Localization.Localize.AllowsDynamicToggling, _ => {
@@ -54,9 +54,14 @@ namespace GameAnarchy {
             }, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.EnabledSkipIntro, Localization.Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _, out UILabel _, out UILabel _, out ToggleButton _);
             OptionPanelTool.AddToggleButton(Config.Instance.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddSliderAlpha(Localization.Localize.OptionsPanelHorizontalOffsetTooltip, null, Localization.Localize.OptionsPanelHorizontalOffset, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new SliderAlphaSize(60, 580, 30), (c, _) => Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_, out UILabel _, out UILabel _, out SliderAlpha slider0);
+            OptionPanelTool.AddSliderAlpha(GetOPHorizontalOffsetMajorText(), Localization.Localize.OptionsPanelHorizontalOffsetTooltip, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
+                Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_;
+                OptionPanelCategoriesHorizontalOffsetMajor.text = GetOPHorizontalOffsetMajorText();
+            }, out OptionPanelCategoriesHorizontalOffsetMajor, out UILabel _, out Slider slider0);
             OptionPanelTool.Reset();
         }
+
+        string GetOPHorizontalOffsetMajorText() => Localization.Localize.OptionsPanelHorizontalOffset + ": " + Config.Instance.OptionPanelCategoriesHorizontalOffset.ToString();
 
         private readonly List<UIPanel> CustomUnlockPanels = new();
         private void AddUnlockOptionsProperty() {
