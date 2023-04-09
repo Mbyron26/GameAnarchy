@@ -423,7 +423,6 @@ namespace MbyronModsCommon.UI {
         private void OnTriggerClick(UIComponent child, UIMouseEventParameter mouseEvent) {
             if (m_Popup is null) {
                 OpenPopup();
-                ExternalLogger.Log("OnTriggerClick_m_Popup is null");
             } else {
                 ClosePopup(true);
             }
