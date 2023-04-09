@@ -49,7 +49,7 @@ namespace MbyronModsCommon {
 
     public class MessageBoxParameters {
         public const float Width = 600;
-        public const int Padding = 10;
+        public const int Padding = 20;
         public const float ComponentWidth = 580;
     }
 
@@ -89,7 +89,7 @@ namespace MbyronModsCommon {
             //Background.backgroundSprite = "TextFieldPanel";
             Background.backgroundSprite = CustomAtlas.RoundedRectangle3;
             //Background.color = new(43, 47, 64, 240);
-            Background.color = new(36, 46, 60, 220);
+            Background.color = new(46, 54, 72, 220);
             Background.relativePosition = Vector2.zero;
         }
         protected void Close() => MessageBox.Hide(this);

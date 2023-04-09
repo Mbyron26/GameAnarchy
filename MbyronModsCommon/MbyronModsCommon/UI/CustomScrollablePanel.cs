@@ -71,7 +71,7 @@ namespace MbyronModsCommon.UI {
             MainPanel.width = width;
             MainPanel.autoLayout = true;
             MainPanel.autoLayoutDirection = LayoutDirection.Vertical;
-            MainPanel.autoLayoutPadding = new RectOffset(MessageBoxParameters.Padding, MessageBoxParameters.Padding, MessageBoxParameters.Padding, 0);
+            MainPanel.autoLayoutPadding = new RectOffset(20, 20, 10, 0);
             MainPanel.builtinKeyNavigation = true;
             MainPanel.scrollWheelDirection = UIOrientation.Vertical;
             MainPanel.clipChildren = true;
