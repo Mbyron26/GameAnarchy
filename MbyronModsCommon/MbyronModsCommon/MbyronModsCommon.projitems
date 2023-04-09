@@ -64,16 +64,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHovered.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderGamma.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGOneNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGZeroDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGZeroHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonBGZeroNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGOneDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGOneNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGZeroDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ToggleButtonFGZeroNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaLeftSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaMidSprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\SliderAlphaRightSprite.png" />
@@ -98,16 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGOneNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxBGZeroNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxFGOneNormal.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\RoundedRectangle1.png" />

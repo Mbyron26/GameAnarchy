@@ -100,16 +100,6 @@ namespace MbyronModsCommon.UI {
             SpriteParams[ArrowDown] = new RectOffset(4, 4, 4, 4);
             SpriteParams[ArrowDown1] = new RectOffset(4, 4, 4, 4);
 
-            SpriteParams[ToggleButtonBGOneDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonBGOneHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonBGOneNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonBGZeroDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonBGZeroHovered] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonBGZeroNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonFGOneDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonFGOneNormal] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonFGZeroDisabled] = new RectOffset(4, 4, 4, 4);
-            SpriteParams[ToggleButtonFGZeroNormal] = new RectOffset(4, 4, 4, 4);
 
             SpriteParams[CloseButtonNormal] = new RectOffset(4, 4, 4, 4);
             SpriteParams[CloseButtonHovered] = new RectOffset(4, 4, 4, 4);
