@@ -417,10 +417,8 @@ namespace MbyronModsCommon.UI {
         protected virtual void UpdateValueIndicators(float rawValue) {
             if (ThumbObject != null) {
                 GetBoundingPoints(true, out Vector3 vector, out Vector3 a);
-                ExternalLogger.Log(vector.ToString() + a.ToString());
                 vector.x += ThumbPadding.left * PixelsToUnits();
                 a.x -= ThumbPadding.right * PixelsToUnits();
-                ExternalLogger.Log(vector.ToString() + a.ToString());
                 Vector3 vector2 = a - vector;
                 float d = (rawValue - MinValue) / (MaxValue - MinValue) * vector2.magnitude;
                 Vector3 b = ThumbOffset * PixelsToUnits();

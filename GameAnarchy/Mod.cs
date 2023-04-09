@@ -14,7 +14,7 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 9, 4917);
+        public override Version ModVersion => new(0, 9, 9, 4921);
         public override ulong ModID => 2781804786;
 #if DEBUG
         public override ulong? BetaID => 2917685008;
