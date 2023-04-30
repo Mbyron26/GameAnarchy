@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
   <data name="ChangeLog" xml:space="preserve">
     <value>Change log</value>
   </data>
@@ -153,9 +150,6 @@
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
-  <data name="Language_cs" xml:space="preserve">
-    <value>Czech</value>
-  </data>
   <data name="Language_de" xml:space="preserve">
     <value>German</value>
   </data>
@@ -180,23 +174,20 @@
   <data name="Language_ko" xml:space="preserve">
     <value>Korean</value>
   </data>
-  <data name="Language_ms" xml:space="preserve">
-    <value>Malay</value>
-  </data>
   <data name="Language_nl" xml:space="preserve">
     <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polish</value>
   </data>
+  <data name="Language_pt" xml:space="preserve">
+    <value>Portuguese</value>
+  </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russian</value>
-  </data>
-  <data name="Language_sk" xml:space="preserve">
-    <value>Slovak</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
     <value>Turkish</value>
@@ -213,9 +204,6 @@
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
     <value>Adjusted</value>
   </data>
-  <data name="LogMessageBox_Attention" xml:space="preserve">
-    <value>Attention</value>
-  </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
     <value>Fixed</value>
   </data>
@@ -224,9 +212,6 @@
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
     <value>Removed</value>
-  </data>
-  <data name="LogMessageBox_Translation" xml:space="preserve">
-    <value>Translation</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
@@ -290,9 +275,6 @@
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
     <value>Reset mod succeeded.</value>
-  </data>
-  <data name="ResetModWarning" xml:space="preserve">
-    <value>Are you sure you want to reset the configuration of the mod?</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>

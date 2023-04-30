@@ -16,6 +16,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Include="..\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>CommonLocalize.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 		<EmbeddedResource Include="UI\UUIResource\UUI.png" />
 	</ItemGroup>
 
@@ -91,11 +99,6 @@
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 			<DependentUpon>CommonLocalize.resx</DependentUpon>
-		</Compile>
-		<Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.9\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.Designer.cs">
-		  <DesignTime>True</DesignTime>
-		  <AutoGen>True</AutoGen>
-		  <DependentUpon>CommonLocalize.resx</DependentUpon>
 		</Compile>
 		<Compile Update="Localization\Localize.Designer.cs">
 			<DesignTime>True</DesignTime>

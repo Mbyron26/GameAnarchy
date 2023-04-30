@@ -61,6 +61,15 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Cancel 的本地化字符串。
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Change log 的本地化字符串。
         /// </summary>
         public static string ChangeLog {
@@ -160,6 +169,15 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Czech 的本地化字符串。
+        /// </summary>
+        public static string Language_cs {
+            get {
+                return ResourceManager.GetString("Language_cs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 German 的本地化字符串。
         /// </summary>
         public static string Language_de {
@@ -232,6 +250,15 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Malay 的本地化字符串。
+        /// </summary>
+        public static string Language_ms {
+            get {
+                return ResourceManager.GetString("Language_ms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Dutch 的本地化字符串。
         /// </summary>
         public static string Language_nl {
@@ -250,15 +277,6 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
-        ///   查找类似 Portuguese 的本地化字符串。
-        /// </summary>
-        public static string Language_pt {
-            get {
-                return ResourceManager.GetString("Language_pt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Portuguese-Brazil 的本地化字符串。
         /// </summary>
         public static string Language_pt_BR {
@@ -273,6 +291,15 @@ namespace MbyronModsCommon {
         public static string Language_ru {
             get {
                 return ResourceManager.GetString("Language_ru", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Slovak 的本地化字符串。
+        /// </summary>
+        public static string Language_sk {
+            get {
+                return ResourceManager.GetString("Language_sk", resourceCulture);
             }
         }
         
