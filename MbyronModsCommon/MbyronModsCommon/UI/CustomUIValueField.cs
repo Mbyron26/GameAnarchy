@@ -1715,3 +1715,8 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
     }
 }
 
+public enum SteppingRate {
+    Normal,
+    Fast,
+    Slow
+}

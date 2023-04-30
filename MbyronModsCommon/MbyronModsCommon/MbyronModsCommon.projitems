@@ -32,7 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIAtlas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUICheckBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIColor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UI\CustomField.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIDropDown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\CustomUIButton.cs" />
@@ -54,25 +53,11 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ArrowDown.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\EmptySprite.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldDisabled.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldFocused.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormal.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\GradientSlider.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CloseButton.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldDisabledLeft.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldDisabledRight.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldFocusedLeft.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldFocusedRight.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHoveredLeft.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldHoveredRight.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormalLeft.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\FieldNormalRight.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButtonHovered.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButtonNormal.png" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButtonPressed.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButton.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
