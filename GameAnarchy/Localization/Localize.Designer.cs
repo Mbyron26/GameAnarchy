@@ -115,6 +115,24 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Building refund 的本地化字符串。
+        /// </summary>
+        public static string BuildingRefund {
+            get {
+                return ResourceManager.GetString("BuildingRefund", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Building refund multiple factor 的本地化字符串。
+        /// </summary>
+        public static string BuildingRefundMultipleFactor {
+            get {
+                return ResourceManager.GetString("BuildingRefundMultipleFactor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Building spread fire probability 的本地化字符串。
         /// </summary>
         public static string BuildingSpreadFireProbability {
@@ -610,7 +628,7 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Bulldozing building full refund 的本地化字符串。
+        ///   查找类似 Bulldozing refund 的本地化字符串。
         /// </summary>
         public static string Refund {
             get {
@@ -624,6 +642,15 @@ namespace GameAnarchy.Localization {
         public static string RemoveAirportBuildingFire {
             get {
                 return ResourceManager.GetString("RemoveAirportBuildingFire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove building refund time limitation 的本地化字符串。
+        /// </summary>
+        public static string RemoveBuildingRefundTimeLimitation {
+            get {
+                return ResourceManager.GetString("RemoveBuildingRefundTimeLimitation", resourceCulture);
             }
         }
         
@@ -736,6 +763,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Remove Segment refund time limitation 的本地化字符串。
+        /// </summary>
+        public static string RemoveSegmentRefundTimeLimitation {
+            get {
+                return ResourceManager.GetString("RemoveSegmentRefundTimeLimitation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Residential 的本地化字符串。
         /// </summary>
         public static string Residential {
@@ -750,6 +786,24 @@ namespace GameAnarchy.Localization {
         public static string ResourceOptions {
             get {
                 return ResourceManager.GetString("ResourceOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Segment refund 的本地化字符串。
+        /// </summary>
+        public static string SegmentRefund {
+            get {
+                return ResourceManager.GetString("SegmentRefund", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Segment refund multiple factor 的本地化字符串。
+        /// </summary>
+        public static string SegmentRefundMultipleFactor {
+            get {
+                return ResourceManager.GetString("SegmentRefundMultipleFactor", resourceCulture);
             }
         }
         
@@ -1114,16 +1168,25 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Displays mods updated date for the category bar of the options panel. 的本地化字符串。
+        ///   查找类似 Added show mods updated date for the category bar of the options panel function. 的本地化字符串。
         /// </summary>
-        public static string UpdateLog_V0_9_9ADD {
+        public static string UpdateLog_V0_9_9ADD0 {
             get {
-                return ResourceManager.GetString("UpdateLog_V0_9_9ADD", resourceCulture);
+                return ResourceManager.GetString("UpdateLog_V0_9_9ADD0", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Updated UI component to improve performent. 的本地化字符串。
+        ///   查找类似 Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9ADD1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9ADD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Updated UI style. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_9UPT {
             get {

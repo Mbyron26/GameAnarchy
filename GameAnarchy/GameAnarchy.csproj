@@ -6,21 +6,13 @@
 		<Product>Game Anarchy</Product>
 		<Copyright>Copyright © 2022 Mbyron26</Copyright>
 		<Authors>Mbyron26</Authors>
-		<Version>0.9.9</Version>
+		<Version>0.9.9.43018</Version>
 		<Configurations>Stable;Beta;Debug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Remove="UI\UUIResource\ACME-UUI.png" />
 		<None Remove="UI\UUIResource\UUI.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Include="..\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>CommonLocalize.resx</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -91,6 +83,8 @@
 
 	<Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\tr\tr.projitems" Label="Shared" />
 
+	<Import Project="..\MbyronModsCommon\MbyronModsCommon\Localization\sk\sk.projitems" Label="Shared" />
+
 	<ItemGroup>
 		<Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.7\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
 			<LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
@@ -121,6 +115,18 @@
 
 	<PropertyGroup>
 		<OutDir>$(LOCALAPPDATA)/Colossal Order/Cities_Skylines/Addons/Mods/$(SolutionName)/Locale</OutDir>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable|AnyCPU'">
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta|AnyCPU'">
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<Target Name="DeployToLocalModDir" AfterTargets="Build">

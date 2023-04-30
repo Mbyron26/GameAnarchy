@@ -135,6 +135,12 @@
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
   </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>Building refund</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>Building refund multiple factor</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
@@ -301,10 +307,13 @@
     <value>Player building</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing building full refund</value>
+    <value>Bulldozing refund</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Remove airport building fire</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>Remove building refund time limitation</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>Remove campus building fire</value>
@@ -342,11 +351,20 @@
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
     <value>Remove residential building fire</value>
   </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>Remove Segment refund time limitation</value>
+  </data>
   <data name="Residential" xml:space="preserve">
     <value>Residential</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>Resource Options</value>
+  </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>Segment refund</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>Segment refund multiple factor</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Service</value>
@@ -475,11 +493,14 @@
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
     <value>[UPT]Updated compatibility check.</value>
   </data>
-  <data name="UpdateLog_V0_9_9ADD" xml:space="preserve">
-    <value>Displays mods updated date for the category bar of the options panel.</value>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI component to improve performent.</value>
+    <value>Updated UI style.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

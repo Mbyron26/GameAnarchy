@@ -9,5 +9,6 @@
     <Import_RootNamespace>cs</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLocalize.cs.resx" />
   </ItemGroup>
 </Project>

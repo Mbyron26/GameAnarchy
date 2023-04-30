@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,175 +117,193 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="ChangeLog" xml:space="preserve">
-    <value>Change log</value>
+    <value>Zoznam zmien</value>
   </data>
   <data name="ChangeLog_Major" xml:space="preserve">
-    <value>Mod change log</value>
+    <value>Zoznam zmien v mode</value>
   </data>
   <data name="Check" xml:space="preserve">
-    <value>Check</value>
+    <value>Kontrola</value>
   </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
-    <value>This mod is incompatible.</value>
+    <value>Mod je nekompatibilný.</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Mod compatibility check</value>
+    <value>Kontrola kompatibility modu</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
-    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
+    <value>Táto funkcia zisťuje iba problémy s kompatibilitou súvisiace s týmto modom. Na kontrolu kompatibility všetkých módov sa odporúča použiť mod [Compatibility Report].</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
-    <value>already includes the same functionality.</value>
+    <value>už obsahuje rovnakú funkcionalitu.</value>
   </data>
   <data name="CompatibilityCheck_UseInstead" xml:space="preserve">
-    <value>Use {0} instead.</value>
+    <value>Namiesto toho použiť {0}.</value>
   </data>
   <data name="CompatibilityMessageBox_Unsubscribe" xml:space="preserve">
-    <value>Unsubscribe</value>
+    <value>Zrušiť odber</value>
   </data>
   <data name="KeyBinding_PressAnyKey" xml:space="preserve">
-    <value>Press any key</value>
+    <value>Stlačte ľubovoľnú klávesu</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Jazyk</value>
+  </data>
+  <data name="Language_cs" xml:space="preserve">
+    <value>Czech</value>
   </data>
   <data name="Language_de" xml:space="preserve">
-    <value>German</value>
+    <value>Nemčina</value>
   </data>
   <data name="Language_en" xml:space="preserve">
-    <value>English</value>
+    <value>Angličtina</value>
   </data>
   <data name="Language_es_ES" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Španielčina</value>
   </data>
   <data name="Language_fr" xml:space="preserve">
-    <value>French</value>
+    <value>Francúzština</value>
   </data>
   <data name="Language_GameLanguage" xml:space="preserve">
-    <value>Game Language</value>
+    <value>Jazyk hry</value>
   </data>
   <data name="Language_it" xml:space="preserve">
-    <value>Italian</value>
+    <value>Taliančina</value>
   </data>
   <data name="Language_ja" xml:space="preserve">
-    <value>Japanese</value>
+    <value>Japončina</value>
   </data>
   <data name="Language_ko" xml:space="preserve">
-    <value>Korean</value>
+    <value>Kórejčina</value>
+  </data>
+  <data name="Language_ms" xml:space="preserve">
+    <value>Malay</value>
   </data>
   <data name="Language_nl" xml:space="preserve">
-    <value>Dutch</value>
+    <value>Holandčina</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
-    <value>Polish</value>
-  </data>
-  <data name="Language_pt" xml:space="preserve">
-    <value>Portuguese</value>
+    <value>Polština</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
-    <value>Portuguese-Brazil</value>
+    <value>Portugalčina (Brazília)</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
-    <value>Russian</value>
+    <value>Ruština</value>
+  </data>
+  <data name="Language_sk" xml:space="preserve">
+    <value>Slovak</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>Turečtina</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
-    <value>Simplified Chinese</value>
+    <value>Zjednodušená čínština</value>
   </data>
   <data name="Language_zh_TW" xml:space="preserve">
-    <value>Traditional Chinese</value>
+    <value>Tradičná čínština</value>
   </data>
   <data name="LogMessageBox_Added" xml:space="preserve">
-    <value>Added</value>
+    <value>Pridané</value>
   </data>
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
-    <value>Adjusted</value>
+    <value>Upravené</value>
+  </data>
+  <data name="LogMessageBox_Attention" xml:space="preserve">
+    <value>Attention</value>
   </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
-    <value>Fixed</value>
+    <value>Opravené</value>
   </data>
   <data name="LogMessageBox_Optimized" xml:space="preserve">
-    <value>Optimized</value>
+    <value>Optimalizované</value>
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
-    <value>Removed</value>
+    <value>Odstránené</value>
+  </data>
+  <data name="LogMessageBox_Translation" xml:space="preserve">
+    <value>Translation</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
-    <value>Updated</value>
+    <value>Aktualizované</value>
   </data>
   <data name="MessageBox_NormalPrompt" xml:space="preserve">
-    <value>Did not detect any incompatible mods.</value>
+    <value>Nenašli sa žiadne nekompatibilné mody.</value>
   </data>
   <data name="MessageBox_OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="MessageBox_WarningPrompt" xml:space="preserve">
-    <value>Incompatible mods have been detected, in order to ensure this mod works properly, you need to unsubscribe following mods:</value>
+    <value>Boli nájdené nekompatibilné mody, na to aby tento mod fungoval správne, je potrebné zrušiť odber u nasledujúcich modov:</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Nie</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
-    <value>Advanced</value>
+    <value>Pokročilé</value>
   </data>
   <data name="OptionPanel_BuiltinFunction" xml:space="preserve">
-    <value>Builtin Function</value>
+    <value>Vstavaná funkcia</value>
   </data>
   <data name="OptionPanel_CompatibilityCheck" xml:space="preserve">
-    <value>Compatibility Check</value>
+    <value>Kontrola kompatibility</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
+    <value>Pokročilé funkcie. Používajú sa len na ladiaci výstup. Ak sa niečo pokazí, odporúčame túto možnosť zapnúť a po opakovaných problémoch poslať log vývojárom.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
-    <value>Debug mode</value>
+    <value>Režim ladenia</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
-    <value>General</value>
+    <value>Všeobecné</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
-    <value>Hotkeys</value>
+    <value>Klávesové skratky</value>
   </data>
   <data name="OptionPanel_IsDisabled" xml:space="preserve">
-    <value>Is Disabled</value>
+    <value>Je vypnutý</value>
   </data>
   <data name="OptionPanel_IsEnabled" xml:space="preserve">
-    <value>Is Enabled</value>
+    <value>Je zapnutý</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>Informácie o mode</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
-    <value>Version</value>
+    <value>Verzia</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value>Reset</value>
+    <value>Resetovať</value>
   </data>
   <data name="ResetModFailed" xml:space="preserve">
-    <value>Reset mod failed. It is recommended to send the log file to the developer.</value>
+    <value>Obnovenie modu zlyhal. Odporúča sa poslať log vývojárom.</value>
   </data>
   <data name="ResetModMajor" xml:space="preserve">
-    <value>Reset mod config</value>
+    <value>Obnovenie konfigurácie módu</value>
   </data>
   <data name="ResetModMinor" xml:space="preserve">
-    <value>Attention! This option will reset all settings of this mod, and this operation is irreversible!</value>
+    <value>Pozor! Táto možnosť obnoví všetky nastavenia tohto módu, táto operácia je nezvratná!</value>
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
-    <value>Reset mod succeeded.</value>
+    <value>Obnova modu bola úspešná.</value>
+  </data>
+  <data name="ResetModWarning" xml:space="preserve">
+    <value>Are you sure you want to reset the configuration of the mod?</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+    <value>Použite kolieska myši pre zmenu, Shift X10, Ctrl X0.1</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
-    <value>Show control panel</value>
+    <value>Zobraziť ovladací panel</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
-    <value>Warning! Mod cannot normally read the old configuration data. Now default configuration has been loaded for the mod. Please go to options panel and configure your Settings before starting game.</value>
+    <value>Varovanie! Mod nemôže normálne čítať staré konfiguračné údaje. Teraz bola pre mod načítaná predvolená konfigurácia. Pred spustením hry prejdite na panel možností a nakonfigurujte svoje nastavenie.</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Áno</value>
   </data>
 </root>

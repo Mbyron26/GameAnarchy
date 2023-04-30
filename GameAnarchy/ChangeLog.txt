@@ -1,7 +1,9 @@
 ﻿
 V0.9.9
-Displays mods updated date for the category bar of the options panel.
-Updated UI components to improve performance.
+Added show mods updated date for the category bar of the options panel function.
+Added building segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.
+Added Slovak localization.
+Updated UI style.
 
 V0.9.8
 [ADD]Added advanced option for reset mod config.

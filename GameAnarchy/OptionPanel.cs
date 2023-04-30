@@ -1,5 +1,4 @@
 ﻿using ColossalFramework.UI;
-using GameAnarchy.UI;
 using System.Collections.Generic;
 using MbyronModsCommon.UI;
 using UnityEngine;
@@ -111,7 +110,6 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private UIComponent InitalCashPanel;
     private void AddResourceOptionsProperty() {
         OptionPanelHelper.AddGroup(GeneralContainer, Localization.Localize.ResourceOptions);
-        OptionPanelHelper.AddToggle(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _);
         VanillaUnlimitedMoney = OptionPanelHelper.AddToggle(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
             Config.Instance.UnlimitedMoney = _;
             if (_) CashAnarchy.IsOn = false;

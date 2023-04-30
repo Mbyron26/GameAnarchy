@@ -9,5 +9,6 @@
     <Import_RootNamespace>ms</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLocalize.ms.resx" />
   </ItemGroup>
 </Project>

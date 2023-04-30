@@ -135,6 +135,12 @@
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
   </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>Building refund</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>Building refund multiple factor</value>
+  </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
@@ -282,11 +288,17 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optymalizuj Opcje</value>
   </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>Show mod updated date in options panel categories</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+  </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Poziome przesunięcie paska Panelu Opcji</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Poziome przesunięcie paska Panelu Opcji zacznie obowiązywać po ponownym jego otwarciu.</value>
+    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>Szybkość wyczerpywania się kamienia</value>
@@ -295,10 +307,13 @@
     <value>Player building</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Pełny zwrot kosztów przy wyburzaniu</value>
+    <value>Bulldozing refund</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Remove airport building fire</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>Remove building refund time limitation</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>Remove campus building fire</value>
@@ -336,11 +351,20 @@
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
     <value>Remove residential building fire</value>
   </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>Remove Segment refund time limitation</value>
+  </data>
   <data name="Residential" xml:space="preserve">
     <value>Residential</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>Opcje surowców</value>
+  </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>Segment refund</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>Segment refund multiple factor</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Service</value>
@@ -396,6 +420,37 @@
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
     <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
   </data>
+  <data name="Updated_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_LastYear" xml:space="preserve">
+    <value>Last year</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthAgo" xml:space="preserve">
+    <value>{0} month ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Today" xml:space="preserve">
+    <value>Today at {0:HH:mm}</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YesterdayAt" xml:space="preserve">
+    <value>Yesterday at {0:HH:mm}</value>
+  </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
@@ -437,6 +492,15 @@
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
     <value>[UPT]Updated compatibility check.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
+    <value>Updated UI style.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Podstawa</value>

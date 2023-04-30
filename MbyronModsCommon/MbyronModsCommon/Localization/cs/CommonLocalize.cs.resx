@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="ChangeLog" xml:space="preserve">
     <value>Change log</value>
   </data>
@@ -150,6 +153,9 @@
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="Language_cs" xml:space="preserve">
+    <value>Czech</value>
+  </data>
   <data name="Language_de" xml:space="preserve">
     <value>German</value>
   </data>
@@ -174,20 +180,23 @@
   <data name="Language_ko" xml:space="preserve">
     <value>Korean</value>
   </data>
+  <data name="Language_ms" xml:space="preserve">
+    <value>Malay</value>
+  </data>
   <data name="Language_nl" xml:space="preserve">
     <value>Dutch</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>Polish</value>
   </data>
-  <data name="Language_pt" xml:space="preserve">
-    <value>Portuguese</value>
-  </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>Portuguese-Brazil</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>Russian</value>
+  </data>
+  <data name="Language_sk" xml:space="preserve">
+    <value>Slovak</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
     <value>Turkish</value>
@@ -204,6 +213,9 @@
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
     <value>Adjusted</value>
   </data>
+  <data name="LogMessageBox_Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
     <value>Fixed</value>
   </data>
@@ -212,6 +224,9 @@
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
     <value>Removed</value>
+  </data>
+  <data name="LogMessageBox_Translation" xml:space="preserve">
+    <value>Translation</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
@@ -275,6 +290,9 @@
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
     <value>Reset mod succeeded.</value>
+  </data>
+  <data name="ResetModWarning" xml:space="preserve">
+    <value>Are you sure you want to reset the configuration of the mod?</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>

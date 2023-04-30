@@ -1,5 +1,6 @@
 ﻿using ColossalFramework.UI;
 using MbyronModsCommon.UI;
+using System.Collections.Generic;
 using UnityEngine;
 namespace GameAnarchy.UI;
 
@@ -56,14 +57,59 @@ internal class ControlPanel : CustomUIPanel {
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _);
+        ControlPanelHelper.Reset();
+
+        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, Localization.Localize.Refund);
+        ControlPanelHelper.AddToggle(Config.Instance.BuildingRefund, Localization.Localize.BuildingRefund, null, (_) => {
+            Config.Instance.BuildingRefund = _;
+            foreach (var item in BuildingRefundOptions)
+                item.isEnabled = Config.Instance.BuildingRefund;
+        });
+        BuildingRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveBuildingRefundTimeLimitation, Localization.Localize.RemoveBuildingRefundTimeLimitation, null, (_) => Config.Instance.RemoveBuildingRefundTimeLimitation = _));
+        var slider0 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(Localization.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.BuildingRefundMultipleFactor, new(388, 16), (_) => {
+            Config.Instance.BuildingRefundMultipleFactor = _;
+            label4.text = GetRefundMultipleFactor(Localization.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor);
+        });
+        label4 = slider0.MajorLabel;
+        BuildingRefundOptions.Add(slider0);
+        foreach (var item in BuildingRefundOptions)
+            item.isEnabled = Config.Instance.BuildingRefund;
+
+        ControlPanelHelper.AddToggle(Config.Instance.SegmentRefund, Localization.Localize.SegmentRefund, null, (_) => {
+            Config.Instance.SegmentRefund = _;
+            foreach (var item in SegmentRefundOptions)
+                item.isEnabled = Config.Instance.SegmentRefund;
+        });
+        SegmentRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveSegmentRefundTimeLimitation, Localization.Localize.RemoveSegmentRefundTimeLimitation, null, (_) => Config.Instance.RemoveSegmentRefundTimeLimitation = _));
+        var slider1 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(Localization.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.SegmentRefundMultipleFactor, new(388, 16), (_) => {
+            Config.Instance.SegmentRefundMultipleFactor = _;
+            label5.text = GetRefundMultipleFactor(Localization.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor);
+        });
+        label5 = slider1.MajorLabel;
+        SegmentRefundOptions.Add(slider1);
+        foreach (var item in SegmentRefundOptions)
+            item.isEnabled = Config.Instance.SegmentRefund;
+
+        //BuildingRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.DisableRefundExtension, "Disables overrides of refund extensions by other mods", null, (_) => Config.Instance.DisableRefundExtension = _));
+        ControlPanelHelper.Reset();
 #if DEBUG
 
 #endif
-        ControlPanelHelper.Reset();
     }
-
-    private UILabel label0;
-    private UILabel label1;
+    string GetRefundMultipleFactor(string prefixText, float factor) {
+        var prefix = $"{prefixText}: {factor}";
+        var suffix = factor switch {
+            0.75f => $" ({Localization.Localize.Vanilla})",
+            _ => string.Empty
+        };
+        return prefix + suffix;
+    }
+    readonly List<SinglePropertyPanelBase> BuildingRefundOptions = new();
+    readonly List<SinglePropertyPanelBase> SegmentRefundOptions = new();
+    UILabel label0;
+    UILabel label1;
+    UILabel label4;
+    UILabel label5;
     public void FillServiceContainer() {
         ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.RemovePollution);
         ControlPanelHelper.AddToggle(Config.Instance.RemoveNoisePollution, Localization.Localize.NoisePollution, null, (v) => Config.Instance.RemoveNoisePollution = v);

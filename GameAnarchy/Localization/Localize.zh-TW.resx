@@ -121,19 +121,25 @@
     <value>增加現金</value>
   </data>
   <data name="AddCashAmount" xml:space="preserve">
-    <value>加錢金額</value>
+    <value>手動增加現金額度</value>
   </data>
   <data name="AddCashThreshold" xml:space="preserve">
     <value>自動加錢門檻</value>
   </data>
   <data name="AddCashTooltip" xml:space="preserve">
-    <value>確保 Cash Anarchy 功能已啟用。</value>
+    <value>確保自由增加現金模式功能已啟用。</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>此選項允許在遊戲中進行動態切換</value>
   </data>
   <data name="Amount" xml:space="preserve">
     <value>數量</value>
+  </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>Building refund</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>Building refund multiple factor</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建築物蔓延火災概率</value>
@@ -145,25 +151,25 @@
     <value>商業的</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>自定義解鎖</value>
+    <value>自訂解鎖選項</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>當啟用“全部解鎖”功能時，這些選項不可用，因為全部解鎖已解鎖以下所有選項。</value>
+    <value>當啟用「全部解鎖」時，以下選項因已解鎖而不可用</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>成就係統隨時可用</value>
+    <value>啟用成就系統</value>
   </data>
   <data name="EnabledInfoView" xml:space="preserve">
-    <value>信息視圖始終可用</value>
+    <value>資訊視圖始終可用</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>跳過遊戲介紹界面</value>
+    <value>跳過遊戲啟動畫面</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>放置獨特的建築不受限制</value>
+    <value>獨特建築數量不受限制</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>快速返回</value>
+    <value>快速退出遊戲</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>消防</value>
@@ -187,28 +193,28 @@
     <value>在開始遊戲之前設置值。如果你不想每次加載存檔時錢都是這個值，啟用一次後禁用此功能。遊戲模擬開始後錢會發生變化。</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
-    <value>Buildtin mod，Game Anarchy 已經包含相同的功能。如果您想使用 Game Anarchy 功能，請禁用此本地模組。</value>
+    <value>如想使用本模組包含之相同功能，請停用相關內建模組。</value>
   </data>
   <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Buildtin mod，Game Anarchy 已經包含相同的功能。請禁用此本地模塊並在 GA 的設置面板中設置初始金額，以防您的城市因透支而破產（以避免遊戲崩潰）。</value>
+    <value>如想使用本模組包含之相同功能，請停用相關內建模組，並於本模組中設置遊戲起始資金，以防城市因透支破產而崩潰</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>主校區大樓</value>
+    <value>校園區域行政大樓</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>吸引力最大化，會吸引更多的遊客</value>
+    <value>最大化吸引力，會吸引更多遊客</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>最大限度地擴大教育覆蓋面，仍然需要學校讓受過教育的公民</value>
+    <value>最大化校園覆蓋範圍，但仍需學校讓市民受教育</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>最大限度地娛樂，將提高市民的幸福感</value>
+    <value>最大化娛樂以提高市民的幸福感</value>
   </data>
   <data name="MaximizeFireCoverage" xml:space="preserve">
-    <value>最大化火力覆蓋</value>
+    <value>最大化消防服務範圍</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>城市土地價值最大化</value>
+    <value>最大化城市地價</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
     <value>大城市</value>
@@ -217,28 +223,28 @@
     <value>大城鎮</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>繁榮之城</value>
+    <value>快速發展的城鎮</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>繁忙的城鎮</value>
+    <value>忙碌的城鎮</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>首都</value>
+    <value>首都級城市</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>巨大的城市</value>
+    <value>超大城市</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>大城市</value>
-  </data>
-  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>小哈姆雷特</value>
-  </data>
-  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
     <value>特大城市</value>
   </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>小村莊</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>超級大都會</value>
+  </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>都會</value>
+    <value>大都會</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
     <value>里程碑解鎖等級</value>
@@ -247,7 +253,7 @@
     <value>小城市</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>小鎮</value>
+    <value>小城鎮</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
     <value>香草</value>
@@ -256,13 +262,13 @@
     <value>值得村</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>擴展和優化遊戲的功能。</value>
+    <value>擴展和優化遊戲功能</value>
   </data>
   <data name="MoneyAnarchyMode" xml:space="preserve">
-    <value>貨幣無政府狀態模式</value>
+    <value>自由增加現金模式</value>
   </data>
   <data name="MoneyAnarchyModeMinor" xml:space="preserve">
-    <value>此選項允許自動（設置以下 2 個選項）/手動（使用熱鍵）設置金錢，允許在遊戲內動態切換</value>
+    <value>開啟下列的自動或手動增加現金（使用快捷鍵）的功能，可於遊戲中動態切換</value>
   </data>
   <data name="Monument" xml:space="preserve">
     <value>紀念碑</value>
@@ -277,28 +283,37 @@
     <value>辦公室</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>石油枯竭率</value>
+    <value>原油枯竭率</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>優化選項</value>
   </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>Show mod updated date in options panel categories</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+  </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>選項面板類別欄水平偏移</value>
+    <value>選項面板標題欄寬度延伸</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>選項面板類別欄水平偏移將在選項面板重新打開後生效。</value>
+    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>礦石貧化率</value>
+    <value>礦產枯竭率</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>玩家建築</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>推土機建築全額退款</value>
+    <value>Bulldozing refund</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>清除機場大樓火災</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>Remove building refund time limitation</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>消除校園建築火災</value>
@@ -310,7 +325,7 @@
     <value>從所有建築物中清除罪犯並最大限度地擴大警察服務範圍</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>移走死去的公民並最大限度地擴大殯葬服務範圍</value>
+    <value>最大化殯葬服務範圍，並清除死亡的市民</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
     <value>清除垃圾</value>
@@ -336,17 +351,26 @@
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
     <value>拆除住宅樓火災</value>
   </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>Remove Segment refund time limitation</value>
+  </data>
   <data name="Residential" xml:space="preserve">
     <value>住宅</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>資源選項</value>
   </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>Segment refund</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>Segment refund multiple factor</value>
+  </data>
   <data name="Service" xml:space="preserve">
     <value>服務</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>在選項面板中對模組名稱進行排序</value>
+    <value>在選項面板中以模組名稱進行排序</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
     <value>太空雷達</value>
@@ -376,13 +400,13 @@
     <value>解鎖所有道路</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>解鎖地鐵軌道</value>
+    <value>解鎖捷運軌道</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>解鎖選項</value>
+    <value>解鎖選項／額外功能</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>解鎖策略面板</value>
+    <value>解鎖政策</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>解鎖火車軌道</value>
@@ -395,6 +419,37 @@
   </data>
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
     <value>解鎖1到6級的所有獨特建築。由於遊戲限制，如果強制解鎖此選項，將解鎖少量建築，但不是全部。</value>
+  </data>
+  <data name="Updated_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_LastYear" xml:space="preserve">
+    <value>Last year</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthAgo" xml:space="preserve">
+    <value>{0} month ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Today" xml:space="preserve">
+    <value>Today at {0:HH:mm}</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YesterdayAt" xml:space="preserve">
+    <value>Yesterday at {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]新控制面板，使用默認熱鍵Ctrl+Shift+G或使用UUI面板調用新控制面板。</value>
@@ -437,6 +492,15 @@
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
     <value>[UPT]更新了兼容性檢查。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
+    <value>Updated UI style.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>香草</value>

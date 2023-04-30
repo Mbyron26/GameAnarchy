@@ -15,7 +15,7 @@ public static class ControlPanelHelper {
         Group.AutoLayout = true;
         Group.AutoFitChildrenVertically = true;
         Group.MajorLabelText = caption;
-        Group.MajorLabelTextScale = 0.9f;
+        Group.MajorLabelTextScale = 0.8f;
         Group.MajorLabelColor = CustomUIColor.OffWhite;
         Group.MajorLabelOffset = new(10, 0, 0, 0);
         Group.ItemGap = 4;
@@ -34,7 +34,7 @@ public static class ControlPanelHelper {
         panel.FgSprite = CustomUIAtlas.LineBottom;
         panel.FgSpriteMode = ForegroundSpriteMode.Custom;
         panel.FgSize = new(panel.width - 20, 20);
-        panel.FgNormalColor = CustomUIColor.CPPrimaryFg;
+        panel.FgDisabledColor = panel.FgNormalColor = CustomUIColor.CPPrimaryFg;
         panel.VerticalAlignment = UIVerticalAlignment.Bottom;
         panel.RenderForegroundSprite = true;
         return panel;
@@ -45,10 +45,12 @@ public static class ControlPanelHelper {
             return null;
         }
         var panel = AddChildPanel<GammaSinglePropertyPanel>();
-        var slider = CustomUISlider.Add(panel, sliderSize, min, max, step, rawValue, callback, !gradientStyle);
+        var slider = CustomUISlider.Add(panel, sliderSize, min, max, step, rawValue, callback);
         panel.Child = slider;
         if (gradientStyle) {
             slider.SetGradientStyle();
+        } else {
+            slider.SetCPDefaultStyle();
         }
         if (majorText is not null) {
             panel.MajorLabelText = majorText;

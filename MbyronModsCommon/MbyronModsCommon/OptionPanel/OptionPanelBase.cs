@@ -49,10 +49,14 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
     private void AddGeneralContainer() {
         GeneralContainer = AddTab(CommonLocalize.OptionPanel_General);
         OptionPanelHelper.AddGroup(GeneralContainer, CommonLocalize.OptionPanel_ModInfo);
-        var flag = (ModMainInfo<TypeMod>.VersionType == VersionType.Stable) ? "STABLE" : "BETA";
+        var flag = ModMainInfo<TypeMod>.VersionType switch {
+            BuildVersion.Stable => "STABLE",
+            BuildVersion.Beta => "BETA",
+            _ => "DEBUG"
+        };
         var panel0 = OptionPanelHelper.AddLabel($"{ModMainInfo<TypeMod>.ModName}", $"{ModMainInfo<TypeMod>.ModVersion} {flag}");
         var label0 = panel0.Child as CustomUILabel;
-        label0.BgNormalColor = (ModMainInfo<TypeMod>.VersionType == VersionType.Stable) ? new Color32(76, 148, 10, 255) : new Color32(188, 120, 6, 255);
+        label0.BgNormalColor = (ModMainInfo<TypeMod>.VersionType == BuildVersion.Stable) ? new Color32(76, 148, 10, 255) : ((ModMainInfo<TypeMod>.VersionType == BuildVersion.Beta) ? new Color32(188, 120, 6, 255) : new Color32(6, 132, 138, 255));
         label0.TextPadding = new(4, 4, 4, 2);
         label0.Atlas = CustomUIAtlas.MbyronModsAtlas;
         label0.BgSprite = CustomUIAtlas.RoundedRectangle2;

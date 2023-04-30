@@ -117,23 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="ChangeLog" xml:space="preserve">
-    <value>Change log</value>
+    <value>변경된 기록</value>
   </data>
   <data name="ChangeLog_Major" xml:space="preserve">
-    <value>Mod change log</value>
+    <value>변경된 모드 기록</value>
   </data>
   <data name="Check" xml:space="preserve">
-    <value>Check</value>
+    <value>확인</value>
   </data>
   <data name="CompatibilityCheck_Incompatible" xml:space="preserve">
     <value>이 모드는 호환되지 않습니다.</value>
   </data>
   <data name="CompatibilityCheck_Major" xml:space="preserve">
-    <value>Mod compatibility check</value>
+    <value>모드 호환성 확인</value>
   </data>
   <data name="CompatibilityCheck_Minor" xml:space="preserve">
-    <value>This function only detects compatibility issues related to this mod. To check compatibility for all mods, [Compatibility Report] mod is recommended.</value>
+    <value>이 기능은 이 모드와 관련된 호환성 문제만 감지합니다. 모든 모드의 호환성을 확인하려면 [Compatibility Report] 모드를 권장합니다.</value>
   </data>
   <data name="CompatibilityCheck_SameFunctionality" xml:space="preserve">
     <value>이미 동일한 기능이 포함되어 있습니다.</value>
@@ -149,6 +152,9 @@
   </data>
   <data name="Language" xml:space="preserve">
     <value>언어</value>
+  </data>
+  <data name="Language_cs" xml:space="preserve">
+    <value>Czech</value>
   </data>
   <data name="Language_de" xml:space="preserve">
     <value>독일어</value>
@@ -174,14 +180,14 @@
   <data name="Language_ko" xml:space="preserve">
     <value>한국어</value>
   </data>
+  <data name="Language_ms" xml:space="preserve">
+    <value>Malay</value>
+  </data>
   <data name="Language_nl" xml:space="preserve">
     <value>네덜란드어</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>폴란드어</value>
-  </data>
-  <data name="Language_pt" xml:space="preserve">
-    <value>포르투갈어</value>
   </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>포르투갈어-브라질</value>
@@ -189,8 +195,11 @@
   <data name="Language_ru" xml:space="preserve">
     <value>러시아어</value>
   </data>
+  <data name="Language_sk" xml:space="preserve">
+    <value>Slovak</value>
+  </data>
   <data name="Language_tr" xml:space="preserve">
-    <value>Turkish</value>
+    <value>터키어</value>
   </data>
   <data name="Language_zh_CN" xml:space="preserve">
     <value>중국어 간체</value>
@@ -204,6 +213,9 @@
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
     <value>조정</value>
   </data>
+  <data name="LogMessageBox_Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
     <value>고정됨</value>
   </data>
@@ -212,6 +224,9 @@
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
     <value>제거됨</value>
+  </data>
+  <data name="LogMessageBox_Translation" xml:space="preserve">
+    <value>Translation</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>업데이트됨</value>
@@ -226,7 +241,7 @@
     <value>비호환 모드가 발견되었습니다. 이 모드의 정상 작동을 보장하려면, 아래 모드들에 대해 구독 해제가 필요합니다.</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>아니오</value>
   </data>
   <data name="OptionPanel_Advanced" xml:space="preserve">
     <value>고급 설정</value>
@@ -238,7 +253,7 @@
     <value>호환성 확인</value>
   </data>
   <data name="OptionPanel_DebugMinor" xml:space="preserve">
-    <value>Advanced functions. It is only used for debugging output. If something goes wrong, it is recommended to enable this option and send your log to developer after repeating issues.</value>
+    <value>고급 기능. 디버깅 출력에만 사용됩니다. 문제가 발생하면 이 옵션을 활성화하고 문제가 반복되면 개발자에게 로그를 보내는 것이 좋습니다.</value>
   </data>
   <data name="OptionPanel_DebugMode" xml:space="preserve">
     <value>디버그 모드</value>
@@ -256,36 +271,41 @@
     <value>활성화됨</value>
   </data>
   <data name="OptionPanel_ModInfo" xml:space="preserve">
-    <value>Mod Information</value>
+    <value>모드 정보</value>
   </data>
   <data name="OptionPanel_Version" xml:space="preserve">
     <value>버전</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value>Reset</value>
+    <value>초기화</value>
   </data>
   <data name="ResetModFailed" xml:space="preserve">
-    <value>Reset mod failed. It is recommended to send the log file to the developer.</value>
+    <value>
+모드 재설정에 실패했습니다. 로그 파일을 개발자에게 보내는 것이 좋습니다.</value>
   </data>
   <data name="ResetModMajor" xml:space="preserve">
-    <value>Reset mod config</value>
+    <value>모드 구성 재설정</value>
   </data>
   <data name="ResetModMinor" xml:space="preserve">
-    <value>Attention! This option will reset all settings of this mod, and this operation is irreversible!</value>
+    <value>주목! 이 옵션은 이 모드의 모든 설정을 재설정하며 이 작업은 되돌릴 수 없습니다!</value>
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
-    <value>Reset mod succeeded.</value>
+    <value>모드 재설정에 성공했습니다.</value>
+  </data>
+  <data name="ResetModWarning" xml:space="preserve">
+    <value>Are you sure you want to reset the configuration of the mod?</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
-    <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>
+    <value>마우스 휠을 돌려 변경하세요
+Shift를 눌러 10배, Ctrl을 눌러 0.1배</value>
   </data>
   <data name="ShowControlPanel" xml:space="preserve">
-    <value>Show control panel</value>
+    <value>제어판 표시</value>
   </data>
   <data name="XMLWariningMessageBox_Warning" xml:space="preserve">
     <value>경고! 모드가 이전 구성 데이터를 정상적으로 읽을 수 없습니다. 이제 모드에 대한 기본 구성이 로드되었습니다. 게임을 시작하기 전에 옵션 패널로 이동하여 설정을 구성하십시오.</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>예</value>
   </data>
 </root>

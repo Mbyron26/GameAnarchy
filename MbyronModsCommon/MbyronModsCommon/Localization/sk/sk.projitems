@@ -9,5 +9,6 @@
     <Import_RootNamespace>sk</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CommonLocalize.sk.resx" />
   </ItemGroup>
 </Project>

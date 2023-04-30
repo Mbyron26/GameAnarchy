@@ -130,10 +130,16 @@
     <value>Stelle sicher, dass die Geld-Anarchie-Funktion aktiviert ist.</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
-    <value>This option allows dynamic toggle within game</value>
+    <value>Diese Option erlaubt ein dynamisches Umschalten innerhalb des Spiels</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
+    <value>Anzahl</value>
+  </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>Building refund</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>Building refund multiple factor</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Gebäude Brandausbreitungswahrscheinlichkeit</value>
@@ -181,10 +187,10 @@
     <value>Industrie</value>
   </data>
   <data name="InitialMoney" xml:space="preserve">
-    <value>Game Initial money</value>
+    <value>Startgeld</value>
   </data>
   <data name="InitialMoneyWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
+    <value>Lege den Wert fest, bevor du mit dem Spielen beginnst. Wenn du nicht willst, dass das Geld bei jedem Laden des Spielstandes als Startwert festgelegt wird, deaktiviere die Funktion nach dem das Geld den Wert hat. Die Geldmenge wird sich erst ändern, nachdem die Spielsimulation gestartet wurde.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Eingebaute Mod, Game Anarchy enthält bereits die gleiche Funktionalität. Bitte deaktiviere die lokale Mod, wenn du die Game Anarchy Funktion verwenden möchtest.</value>
@@ -282,11 +288,17 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimierungen</value>
   </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>Show mod updated date in options panel categories</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+  </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Linkes Einstellungspanel erweitern</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Änderungen am Einstellungspanel werden wirksam, wenn die Einstellungen erneut geöffnet werden.</value>
+    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>Erzerschöpfungsrate</value>
@@ -295,10 +307,13 @@
     <value>Spielergebäude</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Vollständige Rückerstattung beim Abriss</value>
+    <value>Bulldozing refund</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Flughafengebäude Feuer entfernen</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>Remove building refund time limitation</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>Campusgebäudefeuer entfernen</value>
@@ -336,11 +351,20 @@
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
     <value>Wohngebäudefeuer entfernen</value>
   </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>Remove Segment refund time limitation</value>
+  </data>
   <data name="Residential" xml:space="preserve">
     <value>Wohngebiet</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>Rohstoffeinstellungen</value>
+  </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>Segment refund</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>Segment refund multiple factor</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Dienstleister</value>
@@ -396,61 +420,101 @@
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
     <value>Schalte alle einzigartigen Gebäude auf Stufe 1 bis 6 frei. Wenn diese Einstellung erzwungen wird, werden aufgrund von Spielbeschränkungen nur eine kleine Anzahl von Gebäuden freigeschaltet, aber nicht alle.</value>
   </data>
+  <data name="Updated_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_LastYear" xml:space="preserve">
+    <value>Last year</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthAgo" xml:space="preserve">
+    <value>{0} month ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Today" xml:space="preserve">
+    <value>Today at {0:HH:mm}</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YesterdayAt" xml:space="preserve">
+    <value>Yesterday at {0:HH:mm}</value>
+  </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
+    <value>[ADD]Neues Bedienfeld, verwende die Standard-Tastenkombination Strg+Umschalt+G oder das UI-Panel, um das neue Bedienfeld aufzurufen.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
+    <value>[ADD]Platziere einzigartige Gebäude ohne Limits, jetzt aufgeteilt und in die Bedienleiste integriert.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Added fire spread control function.</value>
+    <value>[ADD]Funktion zur Brandausbreitungskontrolle hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
+    <value>[ADD]Entferne die Feuerfunktion ist jetzt in mehrere Optionen aufgeteilt, um das Feuer bei verschiedenen Gebäudearten zu kontrollieren.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Added Turkish localization.</value>
+    <value>[ADD]Türkische Übersetzung hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Fixed abnormal UI component location.</value>
+    <value>[FIX]Falsche Position der UI Komponente wurde behoben.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Updated framework, performance improvement.</value>
+    <value>[UPT]Aktualisiertes Framework, Verbesserung der Leistung.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Updated Option Panel UI components.</value>
+    <value>[UPT]Aktualisierte Bedienfeld-UI-Komponenten.</value>
   </data>
   <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Added advanced option for reset mod config.</value>
+    <value>[ADD]Erweiterte Option zum Zurücksetzen der Mod-Konfiguration hinzugefügt.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+    <value>[FIX]Es wurde ein Fehler behoben, bei dem die Kontrollleiste dem Sprachumschalter nicht folgte.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+    <value>[FIX]Es wurde ein Fehler behoben, bei dem die Geldoption nicht geändert werden konnte.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimized control panel invoke speed.</value>
+    <value>[OPT]Optimierte Aufruf-Geschwindigkeit des Bedienfeldes.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimized control panel toggle button UI style.</value>
+    <value>[OPT]Verbessertes Design des UI Stils der Bedienfeld-Taste.</value>
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Updated compatibility check.</value>
+    <value>[UPT]Kompatibilitätsprüfung verbessert.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
+    <value>Updated UI style.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla (Basis-Spiel)</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>Vanilla unlimited money mode</value>
+    <value>Vanilla unbegrenztes Geld Modus</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
-    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
+    <value>Geld im Spiel zeigt nur "∞" an, diese Option erlaubt dynamisches Umschalten innerhalb des Spiels</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
-    <value>Water pollution</value>
+    <value>Wasserverschmutzung</value>
   </data>
   <data name="WeatherRadar" xml:space="preserve">
-    <value>Weather radar</value>
+    <value>Wetterradar</value>
   </data>
 </root>

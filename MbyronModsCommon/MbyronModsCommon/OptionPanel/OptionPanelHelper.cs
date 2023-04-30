@@ -177,10 +177,12 @@ public static class OptionPanelHelper {
             return null;
         }
         var panel = AddChildPanel<GammaSinglePropertyPanel>();
-        var slider = CustomUISlider.Add(panel, sliderSize, min, max, step, rawValue, callback, !gradientStyle);
+        var slider = CustomUISlider.Add(panel, sliderSize, min, max, step, rawValue, callback);
         panel.Child = slider;
         if (gradientStyle) {
             slider.SetGradientStyle();
+        } else {
+            slider.SetDefaultStyle();
         }
         if (majorText is not null) {
             panel.MajorLabelText = majorText;

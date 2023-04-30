@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <data name="ChangeLog" xml:space="preserve">
     <value>更新日志</value>
   </data>
@@ -150,6 +153,9 @@
   <data name="Language" xml:space="preserve">
     <value>语言</value>
   </data>
+  <data name="Language_cs" xml:space="preserve">
+    <value>捷克语</value>
+  </data>
   <data name="Language_de" xml:space="preserve">
     <value>德语</value>
   </data>
@@ -174,20 +180,23 @@
   <data name="Language_ko" xml:space="preserve">
     <value>韩语</value>
   </data>
+  <data name="Language_ms" xml:space="preserve">
+    <value>马来西亚语</value>
+  </data>
   <data name="Language_nl" xml:space="preserve">
     <value>荷兰语</value>
   </data>
   <data name="Language_pl" xml:space="preserve">
     <value>波兰语</value>
   </data>
-  <data name="Language_pt" xml:space="preserve">
-    <value>葡萄牙语</value>
-  </data>
   <data name="Language_pt_BR" xml:space="preserve">
     <value>葡萄牙语-巴西</value>
   </data>
   <data name="Language_ru" xml:space="preserve">
     <value>俄语</value>
+  </data>
+  <data name="Language_sk" xml:space="preserve">
+    <value>斯洛伐克语</value>
   </data>
   <data name="Language_tr" xml:space="preserve">
     <value>土耳其语</value>
@@ -204,6 +213,9 @@
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
     <value>调整</value>
   </data>
+  <data name="LogMessageBox_Attention" xml:space="preserve">
+    <value>注意事项</value>
+  </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
     <value>修复</value>
   </data>
@@ -212,6 +224,9 @@
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
     <value>移除</value>
+  </data>
+  <data name="LogMessageBox_Translation" xml:space="preserve">
+    <value>翻译</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>更新</value>
@@ -244,7 +259,7 @@
     <value>调试模式</value>
   </data>
   <data name="OptionPanel_General" xml:space="preserve">
-    <value>通用</value>
+    <value>常规选项</value>
   </data>
   <data name="OptionPanel_Hotkeys" xml:space="preserve">
     <value>热键</value>
@@ -275,6 +290,9 @@
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
     <value>重置模组成功。</value>
+  </data>
+  <data name="ResetModWarning" xml:space="preserve">
+    <value>您确定要重置模组的配置吗？</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>使用滚轮改变参数，按住 Shift 键 ×10，按住 Ctrl 键 ×0.1</value>
