@@ -64,7 +64,7 @@ namespace MbyronModsCommon {
             }
             Group.UITool = new UIStyleDelta(panel, checkBox, majorLabel, minorLabel, allOffset);
             Group.UITool = null;
-            return panel;
+            return panel as UIPanel;
         }
 
         public static UIPanel AddStringField(string majorText, string stringField, string minorText, out UILabel majorLabel, out UILabel minorLabel, out UITextField textField, float width = 724, float height = 30, RectOffset majorOffset = null, RectOffset minorOffset = null) {
