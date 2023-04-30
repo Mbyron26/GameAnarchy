@@ -101,8 +101,6 @@ namespace MbyronModsCommon {
             textField.size = new Vector2(width, height);
             textField.TextPadding = new RectOffset(0, 0, 6, 0);
             textField.Text = text;
-            //var textField = CustomField.AddTextField(panel, stringField, width, height);
-            //textField.horizontalAlignment = UIHorizontalAlignment.Left;
             panel.Child = textField;
             if (majorText is not null) {
                 panel.MajorLabelText = majorText;
