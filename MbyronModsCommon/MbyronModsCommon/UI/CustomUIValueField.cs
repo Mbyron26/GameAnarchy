@@ -463,10 +463,6 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
         OnCancel();
     }
     protected override void OnKeyDown(UIKeyEventParameter p) {
-        if (!builtinKeyNavigation) {
-            base.OnKeyDown(p);
-            return;
-        }
         if (ReadOnly) {
             return;
         }

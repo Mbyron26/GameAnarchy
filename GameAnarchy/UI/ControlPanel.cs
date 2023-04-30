@@ -56,6 +56,9 @@ internal class ControlPanel : CustomUIPanel {
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _);
+#if DEBUG
+
+#endif
         ControlPanelHelper.Reset();
     }
 

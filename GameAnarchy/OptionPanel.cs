@@ -3,6 +3,7 @@ using GameAnarchy.UI;
 using System.Collections.Generic;
 using MbyronModsCommon.UI;
 using UnityEngine;
+using System.Security.Policy;
 
 namespace GameAnarchy {
     public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
@@ -35,32 +36,9 @@ namespace GameAnarchy {
             DebugContainer = AddTab("Debug");
             OptionPanelHelper.AddGroup(DebugContainer, "Debug");
             OptionPanelHelper.AddButton("Control panel test", null, "Open", 250, 30, () => ControlPanelManager.HotkeyToggle());
-            OptionPanelHelper.AddButton("Test2", null, "Test2", 250, 30, null);
-            OptionPanelHelper.AddButton("Test3", null, "Test3", 250, 30, null);
-            OptionPanelHelper.AddButton("Test4", null, "Test4", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
-            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddStringField("File dirc", Application.dataPath, null);
+
             OptionPanelHelper.Reset();
-            CustomUIButton.Add(DebugContainer, "Test UIButton", null, 30, null);
-            CustomUIDropDown.AddOPDropDown(DebugContainer, new(300, 30), GetLanguages().ToArray(), 0);
-            var field = DebugContainer.AddUIComponent<UIFloatValueField>();
-            field.size = new(300, 30);
-            field.Value = 5;
-            field.Atlas = CustomUIAtlas.MbyronModsAtlas;
-            field.SelectionSprite = CustomUIAtlas.Rectangle;
-            //field.SelectionBgColor = CustomUIColor.BlueNormal;
-            field.BgSprites.SetSprites(CustomUIAtlas.RoundedRectangle3);
-            field.BgSprites.SetColors(CustomUIColor.OPButtonNormal, CustomUIColor.OPButtonHovered, CustomUIColor.OPButtonPressed, CustomUIColor.BlueNormal, CustomUIColor.OPButtonDisabled);
-            field.builtinKeyNavigation = true;
         }
 #endif
         protected override void AddExtraModInfoProperty() {

@@ -90,14 +90,19 @@ namespace MbyronModsCommon {
             panel.StartLayout();
             return panel;
         }
-        public static GammaSinglePropertyPanel AddStringField(string majorText, string stringField, string minorText, float width = 700, float height = 30, RectOffset majorOffset = null, RectOffset minorOffset = null) {
+        public static GammaSinglePropertyPanel AddStringField(string majorText, string text, string minorText, float width = 700, float height = 30, RectOffset majorOffset = null, RectOffset minorOffset = null) {
             if (Group is null) {
                 ExternalLogger.Error("OptionPanelHelper_Group is null.");
                 return null;
             }
             var panel = AddChildPanel<GammaSinglePropertyPanel>();
-            var textField = CustomField.AddTextField(panel, stringField, width, height);
-            textField.horizontalAlignment = UIHorizontalAlignment.Left;
+            var textField = panel.AddUIComponent<UIStringField>();
+            textField.SetOptionPanelStyle();
+            textField.size = new Vector2(width, height);
+            textField.TextPadding = new RectOffset(0, 0, 6, 0);
+            textField.Text = text;
+            //var textField = CustomField.AddTextField(panel, stringField, width, height);
+            //textField.horizontalAlignment = UIHorizontalAlignment.Left;
             panel.Child = textField;
             if (majorText is not null) {
                 panel.MajorLabelText = majorText;
