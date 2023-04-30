@@ -322,6 +322,15 @@ namespace MbyronModsCommon {
         }
         
         /// <summary>
+        ///   查找类似 Attention 的本地化字符串。
+        /// </summary>
+        public static string LogMessageBox_Attention {
+            get {
+                return ResourceManager.GetString("LogMessageBox_Attention", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Fixed 的本地化字符串。
         /// </summary>
         public static string LogMessageBox_Fixed {
@@ -345,6 +354,15 @@ namespace MbyronModsCommon {
         public static string LogMessageBox_Removed {
             get {
                 return ResourceManager.GetString("LogMessageBox_Removed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Translation 的本地化字符串。
+        /// </summary>
+        public static string LogMessageBox_Translation {
+            get {
+                return ResourceManager.GetString("LogMessageBox_Translation", resourceCulture);
             }
         }
         
@@ -534,6 +552,15 @@ namespace MbyronModsCommon {
         public static string ResetModSucceeded {
             get {
                 return ResourceManager.GetString("ResetModSucceeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Are you sure you want to reset the configuration of the mod? 的本地化字符串。
+        /// </summary>
+        public static string ResetModWarning {
+            get {
+                return ResourceManager.GetString("ResetModWarning", resourceCulture);
             }
         }
         

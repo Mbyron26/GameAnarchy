@@ -43,14 +43,17 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "tr", "MbyronModsCommon\Mbyr
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Beta|Any CPU = Beta|Any CPU
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Stable|Any CPU = Stable|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Beta|Any CPU.ActiveCfg = Beta|Any CPU
+		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Beta|Any CPU.Build.0 = Beta|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Stable|Any CPU.ActiveCfg = Stable|Any CPU
+		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Stable|Any CPU.Build.0 = Stable|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

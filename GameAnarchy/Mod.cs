@@ -14,9 +14,9 @@ namespace GameAnarchy {
     public class Mod : ModBase<Mod, OptionPanel, Config> {
         public override string SolidModName => "GameAnarchy";
         public override string ModName => "Game Anarchy";
-        public override Version ModVersion => new(0, 9, 9, 4921);
+        public override Version ModVersion => new(0, 9, 9, 4309);
         public override ulong ModID => 2781804786;
-#if DEBUG
+#if BETA || DEBUG
         public override ulong? BetaID => 2917685008;
 #endif
         public override string Description => Localize.MOD_Description;
@@ -93,16 +93,31 @@ namespace GameAnarchy {
         };
 
         public override List<ModChangeLog> ChangeLog => new() {
-            new ModChangeLog(new Version(0, 9, 9), new(2023, 4, 1), new List<string> {
-               Localize.UpdateLog_V0_9_9ADD
+            new ModChangeLog(new Version(0, 9, 9), new(2023, 4, 30), new List<LogString> {
+                new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD),
+                new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT)
             }),
-            new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<string> {
-               "[UPT]Updated to support game version 1.16.1", Localize.UpdateLog_V0_9_8UPT, Localize.UpdateLog_V0_9_8ADD, Localize.UpdateLog_V0_9_8OPT1, Localize.UpdateLog_V0_9_8OPT2, Localize.UpdateLog_V0_9_8FIX1, Localize.UpdateLog_V0_9_8FIX2
+            new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<LogString> {
+                new(LogFlag.Added,"[UPT]Updated to support game version 1.16.1"),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_8UPT),
+                new(LogFlag.Updated,Localize.UpdateLog_V0_9_8ADD),
+                new(LogFlag.Optimized, Localize.UpdateLog_V0_9_8OPT1),
+                new(LogFlag.Optimized, Localize.UpdateLog_V0_9_8OPT2),
+                new(LogFlag.Fixed, Localize.UpdateLog_V0_9_8FIX1),
+                new(LogFlag.Fixed, Localize.UpdateLog_V0_9_8FIX2),
             }),
-            new ModChangeLog(new Version(0, 9, 7), new(2023,3,8), new List<string> {
-                Localize.UpdateLog_V0_9_7ADD1,Localize.UpdateLog_V0_9_7ADD2,Localize.UpdateLog_V0_9_7ADD3,Localize.UpdateLog_V0_9_7ADD4,
-                Localize.UpdateLog_V0_9_7ADD5, Localize.UpdateLog_V0_9_7FIX,Localize.UpdateLog_V0_9_7UPT1,Localize.UpdateLog_V0_9_7UPT2
-            })
+            new ModChangeLog(new Version(0, 9, 7), new(2023, 3, 8), new List<LogString> {
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD1),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD3),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD4),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD5),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
+                new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
+                new(LogFlag.Updated, Localize.UpdateLog_V0_9_7UPT1),
+                new(LogFlag.Updated, Localize.UpdateLog_V0_9_7UPT2),
+                new(LogFlag.Fixed,Localize.UpdateLog_V0_9_7FIX),
+            }),
         };
 
     }

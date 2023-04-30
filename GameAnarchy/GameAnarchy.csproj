@@ -7,6 +7,7 @@
 		<Copyright>Copyright © 2022 Mbyron26</Copyright>
 		<Authors>Mbyron26</Authors>
 		<Version>0.9.8</Version>
+		<Configurations>Stable;Beta;Debug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -24,22 +25,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="Assembly-CSharp">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="ColossalManaged">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\ColossalManaged.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="ICities">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\ICities.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="UnityEngine">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\UnityEngine.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>C:\Users\SYS1\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="ColossalManaged">
+	    <HintPath>C:\Users\SYS1\Desktop\Assembly\ColossalManaged.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="ICities">
+	    <HintPath>C:\Users\SYS1\Desktop\Assembly\ICities.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>C:\Users\SYS1\Desktop\Assembly\UnityEngine.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -91,6 +92,11 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>CommonLocalize.resx</DependentUpon>
 		</Compile>
+		<Compile Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.9\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>CommonLocalize.resx</DependentUpon>
+		</Compile>
 		<Compile Update="Localization\Localize.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
@@ -105,18 +111,13 @@
 		<EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.8\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
 			<LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
+		<EmbeddedResource Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.9\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.resx">
+		  <LastGenOutput>CommonLocalize.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 	</ItemGroup>
 
 	<PropertyGroup>
 		<OutDir>$(LOCALAPPDATA)/Colossal Order/Cities_Skylines/Addons/Mods/$(SolutionName)/Locale</OutDir>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <DebugType>none</DebugType>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<Target Name="DeployToLocalModDir" AfterTargets="Build">

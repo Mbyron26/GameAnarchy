@@ -204,6 +204,9 @@
   <data name="LogMessageBox_Adjusted" xml:space="preserve">
     <value>Adjusted</value>
   </data>
+  <data name="LogMessageBox_Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="LogMessageBox_Fixed" xml:space="preserve">
     <value>Fixed</value>
   </data>
@@ -212,6 +215,9 @@
   </data>
   <data name="LogMessageBox_Removed" xml:space="preserve">
     <value>Removed</value>
+  </data>
+  <data name="LogMessageBox_Translation" xml:space="preserve">
+    <value>Translation</value>
   </data>
   <data name="LogMessageBox_Updated" xml:space="preserve">
     <value>Updated</value>
@@ -275,6 +281,9 @@
   </data>
   <data name="ResetModSucceeded" xml:space="preserve">
     <value>Reset mod succeeded.</value>
+  </data>
+  <data name="ResetModWarning" xml:space="preserve">
+    <value>Are you sure you want to reset the configuration of the mod?</value>
   </data>
   <data name="ScrollWheel" xml:space="preserve">
     <value>Scroll the wheel to change, Shift X10, Ctrl X0.1</value>

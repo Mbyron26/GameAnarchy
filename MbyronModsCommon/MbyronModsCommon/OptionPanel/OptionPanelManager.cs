@@ -1,11 +1,12 @@
 ﻿using ColossalFramework.Globalization;
 using ColossalFramework.UI;
+using MbyronModsCommon.UI;
 using ICities;
 using System;
 using UnityEngine;
 
 namespace MbyronModsCommon {
-    public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : UIPanel where Mod : IMod {
+    public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : CustomUIPanel where Mod : IMod {
         private static OptionPanel Panel { get; set; }
         private static UIScrollablePanel BaseScrollablePanel { get; set; }
         private static UIPanel BasePanel { get; set; }
@@ -19,6 +20,9 @@ namespace MbyronModsCommon {
                 Container.eventVisibilityChanged += (c, isVisible) => {
                     if (!isVisible) {
                         SingletonMod<Mod>.Instance.SaveConfig();
+                        //ContainerGameObject?.SetActive(false);
+                    } else {
+                        //ContainerGameObject?.SetActive(true);
                     }
                 };
                 LocaleManager.eventLocaleChanged += LocaleChanged;
@@ -28,7 +32,11 @@ namespace MbyronModsCommon {
         public static void LocaleChanged() {
             if (Container is not null && Container.isVisible) {
                 Destroy();
+#if DEBUG
+                DebugUtils.TimeCalculater(Create);
+#else
                 Create();
+#endif
             }
         }
 

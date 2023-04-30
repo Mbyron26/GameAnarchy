@@ -1,214 +1,194 @@
 ﻿using ColossalFramework.UI;
+using MbyronModsCommon.UI;
 using UnityEngine;
+namespace GameAnarchy.UI;
 
-namespace GameAnarchy.UI {
-    internal class ControlPanel : UIPanel {
-        private const string Name = nameof(GameAnarchy) + nameof(ControlPanel);
-        private const float PanelWidth = 440;
-        private const float PanelHeight = 600;
-        private const float ElementOffset = 10;
-        private const float CaptionHeight = 40;
-        public const float CardWidth = PanelWidth - 2 * ElementOffset;
-        public static Vector2 PanelPosition { get; set; }
-        public static Vector2 ButtonSize => new(28, 28);
+internal class ControlPanel : CustomUIPanel {
+    private const string Name = nameof(GameAnarchy) + nameof(ControlPanel);
+    private const float PanelWidth = 440;
+    private const float PanelHeight = 600;
+    private const float ElementOffset = 10;
+    private const float CaptionHeight = 40;
+    public const float PorpertyPanelWidth = PanelWidth - 2 * 16;
+    private readonly Vector2 ContainerSize = new(PorpertyPanelWidth, 514);
+    private UIDragHandle DragBar;
+    private CustomUILabel title;
+    private CustomUITabContainer tabContainer;
+    private CustomUIButton closeButton;
 
-        private UIDragHandle DragBar { get; set; }
-        private UILabel Title { get; set; }
-        private UIButton CloseButton { get; set; }
-        private UIButton ResetButton { get; set; }
-        private ControlPanelTabs Tabs { get; set; }
-        private AutoLayoutScrollablePanel GeneralContainer => Tabs.Containers[0].MainPanel;
-        private AutoLayoutScrollablePanel ServiceContainer => Tabs.Containers[1].MainPanel;
-        private AutoLayoutScrollablePanel IncomeContainer => Tabs.Containers[2].MainPanel;
-        public ControlPanel() {
-            name = Name;
-            autoLayout = false;
-            atlas = CustomAtlas.InGameAtlas;
-            backgroundSprite = "UnlockingItemBackground";
-            isVisible = true;
-            canFocus = true;
-            isInteractive = true;
-            width = PanelWidth;
-            height = PanelHeight;
+    public static Vector2 PanelPosition { get; set; }
+    public static Vector2 ButtonSize => new(28, 28);
 
-            AddCaption();
-            AddTabStrip();
-            FillGeneralContainer();
-            FillServiceContainer();
-            FillIncomeContainer();
-            SetPosition();
-            eventPositionChanged += (c, v) => PanelPosition = relativePosition;
-        }
-        private void SetPosition() {
-            if (PanelPosition == Vector2.zero) {
-                Vector2 vector = GetUIView().GetScreenResolution();
-                var x = vector.x - PanelWidth - 360;
-                PanelPosition = relativePosition = new Vector3(x, 80);
-            } else {
-                relativePosition = PanelPosition;
-            }
-        }
 
-        private void FillIncomeContainer() {
-            ControlPanelTool.AddGroup(IncomeContainer, CardWidth, Localization.Localize.IncomeMultiplier);
-            ControlPanelTool.AddField(Localization.Localize.Residential, null, 80, Config.Instance.ResidentialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.ResidentialMultiplierFactor = _, out CustomIntValueField _);
-            ControlPanelTool.AddField(Localization.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _, out CustomIntValueField _);
-            ControlPanelTool.AddField(Localization.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _, out CustomIntValueField _);
-            ControlPanelTool.AddField(Localization.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _, out CustomIntValueField _);
-            ControlPanelTool.Reset();
-        }
+    private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
+    private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];
+    private CustomUIScrollablePanel IncomeContainer => tabContainer.Containers[2];
+    public ControlPanel() {
+        name = Name;
+        atlas = CustomUIAtlas.MbyronModsAtlas;
+        bgSprite = CustomUIAtlas.CustomBackground;
+        isVisible = true;
+        canFocus = true;
+        isInteractive = true;
+        size = new Vector2(PanelWidth, PanelHeight);
 
-        public void FillServiceContainer() {
-            ServiceContainer.width -= 10;
-            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.RemovePollution);
-            ControlPanelTool.AddToggleButton(Localization.Localize.NoisePollution, null, Config.Instance.RemoveNoisePollution, (v) => Config.Instance.RemoveNoisePollution = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.GroundPollution, null, Config.Instance.RemoveGroundPollution, (v) => Config.Instance.RemoveGroundPollution = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.WaterPollution, null, Config.Instance.RemoveWaterPollution, (v) => Config.Instance.RemoveWaterPollution = v, out ToggleButton _);
-            ControlPanelTool.Reset();
-
-            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.CityServiceOptions);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveDeath, null, Config.Instance.RemoveDeath, (v) => Config.Instance.RemoveDeath = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCrime, null, Config.Instance.RemoveCrime, (v) => Config.Instance.RemoveCrime = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveGarbage, null, Config.Instance.RemoveGarbage, (v) => Config.Instance.RemoveGarbage = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeAttractiveness, null, Config.Instance.MaximizeAttractiveness, (v) => Config.Instance.MaximizeAttractiveness = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeEntertainment, null, Config.Instance.MaximizeEntertainment, (v) => Config.Instance.MaximizeEntertainment = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeLandValue, null, Config.Instance.MaximizeLandValue, (v) => Config.Instance.MaximizeLandValue = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeEducationCoverage, null, Config.Instance.MaximizeEducationCoverage, (v) => Config.Instance.MaximizeEducationCoverage = v, out ToggleButton _);
-            ControlPanelTool.Reset();
-
-            ControlPanelTool.AddGroup(ServiceContainer, CardWidth - 10, Localization.Localize.FireControl);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MaximizeFireCoverage, null, Config.Instance.MaximizeFireCoverage, (v) => Config.Instance.MaximizeFireCoverage = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemovePlayerBuildingFire, null, Config.Instance.RemovePlayerBuildingFire, (v) => Config.Instance.RemovePlayerBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveResidentialBuildingFire, null, Config.Instance.RemoveResidentialBuildingFire, (v) => Config.Instance.RemoveResidentialBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveIndustrialBuildingFire, null, Config.Instance.RemoveIndustrialBuildingFire, (v) => Config.Instance.RemoveIndustrialBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCommercialBuildingFire, null, Config.Instance.RemoveCommercialBuildingFire, (v) => Config.Instance.RemoveCommercialBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveOfficeBuildingFire, null, Config.Instance.RemoveOfficeBuildingFire, (v) => Config.Instance.RemoveOfficeBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveParkBuildingFire, null, Config.Instance.RemoveParkBuildingFire, (v) => Config.Instance.RemoveParkBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveMuseumFire, null, Config.Instance.RemoveMuseumFire, (v) => Config.Instance.RemoveMuseumFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveCampusBuildingFire, null, Config.Instance.RemoveCampusBuildingFire, (v) => Config.Instance.RemoveCampusBuildingFire = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.RemoveAirportBuildingFire, null, Config.Instance.RemoveAirportBuildingFire, (v) => Config.Instance.RemoveAirportBuildingFire = v, out ToggleButton _);
-
-            UILabel label0 = null;
-            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, new(408 - 10, 20), 0, 100, 1, Config.Instance.BuildingSpreadFireProbability, (_, value) => callback0(value), out label0, out UILabel _, out UISlider _);
-            void callback0(float value) {
-                Config.Instance.BuildingSpreadFireProbability = (uint)value;
-                label0.text = GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
-            }
-            UILabel label1 = null;
-            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, new(408 - 10, 20), 0, 100, 1, Config.Instance.TreeSpreadFireProbability, (_, value) => callback1(value), out label1, out UILabel _, out UISlider _);
-            void callback1(float value) {
-                Config.Instance.TreeSpreadFireProbability = (uint)value;
-                label1.text = GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
-            }
-            ControlPanelTool.Reset();
-        }
-
-        public void FillGeneralContainer() {
-            ControlPanelTool.AddGroup(GeneralContainer, CardWidth, Localization.Localize.EnabledUnlimitedUniqueBuildings);
-            ControlPanelTool.AddToggleButton(Localization.Localize.PlayerBuilding, null, Config.Instance.UnlimitedPlayerBuilding, (v) => Config.Instance.UnlimitedPlayerBuilding = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.Monument, null, Config.Instance.UnlimitedMonument, (v) => Config.Instance.UnlimitedMonument = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.MainCampusBuilding, null, Config.Instance.UnlimitedMainCampusBuilding, (v) => Config.Instance.UnlimitedMainCampusBuilding = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.UniqueFactory, null, Config.Instance.UnlimitedUniqueFactory, (v) => Config.Instance.UnlimitedUniqueFactory = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.StockExchange, null, Config.Instance.UnlimitedStockExchange, (v) => Config.Instance.UnlimitedStockExchange = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.UniqueFaculty, null, Config.Instance.UnlimitedUniqueFaculty, (v) => Config.Instance.UnlimitedUniqueFaculty = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.WeatherRadar, null, Config.Instance.UnlimitedWeatherRadar, (v) => Config.Instance.UnlimitedWeatherRadar = v, out ToggleButton _);
-            ControlPanelTool.AddToggleButton(Localization.Localize.SpaceRadar, null, Config.Instance.UnlimitedSpaceRadar, (v) => Config.Instance.UnlimitedSpaceRadar = v, out ToggleButton _);
-            ControlPanelTool.Reset();
-
-            ControlPanelTool.AddGroup(GeneralContainer, CardWidth, Localization.Localize.ResourceOptions);
-            UILabel label0 = null;
-            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, new(408, 20), 0, 100, 1, Config.Instance.OilDepletionRate, (_, value) => callback0(value), out label0, out UILabel _, out UISlider _);
-            void callback0(float value) {
-                Config.Instance.OilDepletionRate = (int)value;
-                label0.text = GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
-            }
-            UILabel label1 = null;
-            ControlPanelTool.AddSliderGamma(GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, new(408, 20), 0, 100, 1, Config.Instance.OreDepletionRate, (_, value) => callback1(value), out label1, out UILabel _, out UISlider _);
-            void callback1(float value) {
-                Config.Instance.OreDepletionRate = (int)value;
-                label1.text = GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
-            }
-            ControlPanelTool.Reset();
-        }
-
-        private static string GetString(string localize, uint value, string flag0, string flag1) {
-            if (value == 0) {
-                return string.Format(localize + ": {0}", flag0);
-            } else if (value == 100) {
-                return string.Format(localize + ": {0}", flag1);
-            } else {
-                return string.Format(localize + ": {0}%", value);
-            }
-        }
-
-        private void AddTabStrip() {
-            Tabs = new ControlPanelTabs(this);
-            Tabs.Initialize(PanelWidth - 20, 24);
-            Tabs.TabPanel.atlas = CustomAtlas.MbyronModsAtlas;
-            Tabs.TabPanel.backgroundSprite = CustomAtlas.RoundedRectangle2;
-            Tabs.TabPanel.color = CustomColor.PrimaryNormal;
-            Tabs.TabPanel.relativePosition = new Vector2(ElementOffset, CaptionHeight);
-            Tabs.AddTab("General", CommonLocalize.OptionPanel_General, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
-            Tabs.AddTab("Service", Localization.Localize.Service, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
-            Tabs.AddTab("Income", Localization.Localize.Income, ElementOffset, CaptionHeight + 24, setSprite: SetSprite);
-        }
-
-        private static void SetSprite(TabButton tabButton) {
-            tabButton.atlas = CustomAtlas.MbyronModsAtlas;
-            tabButton.normalBgSprite = CustomAtlas.RoundedRectangle2;
-            tabButton.focusedBgSprite = CustomAtlas.RoundedRectangle2;
-            tabButton.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
-            tabButton.pressedBgSprite = CustomAtlas.RoundedRectangle2;
-            tabButton.color = CustomColor.PrimaryNormal;
-            tabButton.hoveredColor = CustomColor.PrimaryHovered;
-        }
-
-        private void AddCaption() {
-            CloseButton = AddUIComponent<UIButton>();
-            CloseButton.atlas = CustomAtlas.MbyronModsAtlas;
-            CloseButton.size = ButtonSize;
-            CloseButton.normalFgSprite = CustomAtlas.CloseButtonNormal;
-            CloseButton.focusedFgSprite = CustomAtlas.CloseButtonNormal;
-            CloseButton.hoveredFgSprite = CustomAtlas.CloseButtonHovered;
-            CloseButton.pressedFgSprite = CustomAtlas.CloseButtonPressed;
-            CloseButton.relativePosition = new Vector2(width - 6f - 28f, 6f);
-            CloseButton.eventClicked += (c, p) => ControlPanelManager.Close();
-
-            //ResetButton = AddUIComponent<UIButton>();
-            //ResetButton.atlas = CustomAtlas.CommonAtlas;
-            //ResetButton.size = ButtonSize;
-            //ResetButton.normalFgSprite = CustomAtlas.ResetButtonNormal;
-            //ResetButton.focusedFgSprite = CustomAtlas.ResetButtonNormal;
-            //ResetButton.hoveredFgSprite = CustomAtlas.ResetButtonHovered;
-            //ResetButton.pressedFgSprite = CustomAtlas.ResetButtonPressed;
-            //ResetButton.relativePosition = new Vector2(width - 6f - 28f - 28f, 6f);
-            //ResetButton.eventClicked += (c, p) => {
-
-            //};
-            ////ResetButton.tooltip = Localization.Localize.ControlPanel_Reset;
-            //ResetButton.eventClicked += (c, v) => ResetButton.tooltipBox.Hide();
-
-            DragBar = AddUIComponent<UIDragHandle>();
-            DragBar.width = CloseButton.relativePosition.x;
-            DragBar.height = CaptionHeight;
-            DragBar.relativePosition = Vector2.zero;
-
-            Title = DragBar.AddUIComponent<UILabel>();
-            Title.textAlignment = UIHorizontalAlignment.Center;
-            Title.verticalAlignment = UIVerticalAlignment.Middle;
-            Title.text = ModMainInfo<Mod>.ModName;
-            Title.CenterToParent();
+        AddCaption();
+        AddTabContainer();
+        FillGeneralContainer();
+        FillServiceContainer();
+        FillIncomeContainer();
+        SetPosition();
+        eventPositionChanged += (c, v) => PanelPosition = relativePosition;
+    }
+    private void SetPosition() {
+        if (PanelPosition == Vector2.zero) {
+            Vector2 vector = GetUIView().GetScreenResolution();
+            var x = vector.x - PanelWidth - 360;
+            PanelPosition = relativePosition = new Vector3(x, 80);
+        } else {
+            relativePosition = PanelPosition;
         }
     }
 
-    public class ControlPanelTabs : CustomTabs<ControlPanelScrollablePanel> {
-        public ControlPanelTabs(UIComponent parent) : base(parent) { }
+    private void FillIncomeContainer() {
+        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, Localization.Localize.IncomeMultiplier);
+        ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Residential, null, 80, Config.Instance.ResidentialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.ResidentialMultiplierFactor = _);
+        ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _);
+        ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _);
+        ControlPanelHelper.AddField<UIIntValueField, int>(Localization.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _);
+        ControlPanelHelper.Reset();
     }
-    public class ControlPanelScrollablePanel : CustomScrollablePanelBase<AutoLayoutScrollablePanel> {
-        public ControlPanelScrollablePanel() {
-            clipChildren = true;
-            size = new Vector2(430, 526);
-            MainPanel.autoLayoutPadding = new RectOffset(0, 0, 0, 24);
+
+    private UILabel label0;
+    private UILabel label1;
+    public void FillServiceContainer() {
+        ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.RemovePollution);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveNoisePollution, Localization.Localize.NoisePollution, null, (v) => Config.Instance.RemoveNoisePollution = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveGroundPollution, Localization.Localize.GroundPollution, null, (v) => Config.Instance.RemoveGroundPollution = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveWaterPollution, Localization.Localize.WaterPollution, null, (v) => Config.Instance.RemoveWaterPollution = v);
+        ControlPanelHelper.Reset();
+
+        ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.CityServiceOptions);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveDeath, Localization.Localize.RemoveDeath, null, (v) => Config.Instance.RemoveDeath = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveCrime, Localization.Localize.RemoveCrime, null, (v) => Config.Instance.RemoveCrime = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveGarbage, Localization.Localize.RemoveGarbage, null, (v) => Config.Instance.RemoveGarbage = v);
+        ControlPanelHelper.AddToggle(Config.Instance.MaximizeAttractiveness, Localization.Localize.MaximizeAttractiveness, null, (v) => Config.Instance.MaximizeAttractiveness = v);
+        ControlPanelHelper.AddToggle(Config.Instance.MaximizeEntertainment, Localization.Localize.MaximizeEntertainment, null, (v) => Config.Instance.MaximizeEntertainment = v);
+        ControlPanelHelper.AddToggle(Config.Instance.MaximizeLandValue, Localization.Localize.MaximizeLandValue, null, (v) => Config.Instance.MaximizeLandValue = v);
+        ControlPanelHelper.AddToggle(Config.Instance.MaximizeEducationCoverage, Localization.Localize.MaximizeEducationCoverage, null, (v) => Config.Instance.MaximizeEducationCoverage = v);
+        ControlPanelHelper.Reset();
+
+        ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.FireControl);
+        ControlPanelHelper.AddToggle(Config.Instance.MaximizeFireCoverage, Localization.Localize.MaximizeFireCoverage, null, (v) => Config.Instance.MaximizeFireCoverage = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemovePlayerBuildingFire, Localization.Localize.RemovePlayerBuildingFire, null, (v) => Config.Instance.RemovePlayerBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveResidentialBuildingFire, Localization.Localize.RemoveResidentialBuildingFire, null, (v) => Config.Instance.RemoveResidentialBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveIndustrialBuildingFire, Localization.Localize.RemoveIndustrialBuildingFire, null, (v) => Config.Instance.RemoveIndustrialBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveCommercialBuildingFire, Localization.Localize.RemoveCommercialBuildingFire, null, (v) => Config.Instance.RemoveCommercialBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveOfficeBuildingFire, Localization.Localize.RemoveOfficeBuildingFire, null, (v) => Config.Instance.RemoveOfficeBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveParkBuildingFire, Localization.Localize.RemoveParkBuildingFire, null, (v) => Config.Instance.RemoveParkBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveMuseumFire, Localization.Localize.RemoveMuseumFire, null, (v) => Config.Instance.RemoveMuseumFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveCampusBuildingFire, Localization.Localize.RemoveCampusBuildingFire, null, (v) => Config.Instance.RemoveCampusBuildingFire = v);
+        ControlPanelHelper.AddToggle(Config.Instance.RemoveAirportBuildingFire, Localization.Localize.RemoveAirportBuildingFire, null, (v) => Config.Instance.RemoveAirportBuildingFire = v);
+
+        var panel0 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.BuildingSpreadFireProbability, new(388, 16), (value) => callback0(value), gradientStyle: true);
+        label0 = panel0.MajorLabel;
+        void callback0(float value) {
+            Config.Instance.BuildingSpreadFireProbability = (uint)value;
+            label0.text = GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
         }
+
+        var panel1 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.TreeSpreadFireProbability, new(388, 16), (value) => callback1(value), gradientStyle: true);
+        label1 = panel1.MajorLabel;
+        void callback1(float value) {
+            Config.Instance.TreeSpreadFireProbability = (uint)value;
+            label1.text = GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
+        }
+        ControlPanelHelper.Reset();
+    }
+    private UILabel label2;
+    private UILabel label3;
+    public void FillGeneralContainer() {
+        ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, Localization.Localize.EnabledUnlimitedUniqueBuildings);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedPlayerBuilding, Localization.Localize.PlayerBuilding, null, (v) => Config.Instance.UnlimitedPlayerBuilding = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedMonument, Localization.Localize.Monument, null, (v) => Config.Instance.UnlimitedMonument = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedMainCampusBuilding, Localization.Localize.MainCampusBuilding, null, (v) => Config.Instance.UnlimitedMainCampusBuilding = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedUniqueFactory, Localization.Localize.UniqueFactory, null, (v) => Config.Instance.UnlimitedUniqueFactory = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedStockExchange, Localization.Localize.StockExchange, null, (v) => Config.Instance.UnlimitedStockExchange = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedUniqueFaculty, Localization.Localize.UniqueFaculty, null, (v) => Config.Instance.UnlimitedUniqueFaculty = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedWeatherRadar, Localization.Localize.WeatherRadar, null, (v) => Config.Instance.UnlimitedWeatherRadar = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedSpaceRadar, Localization.Localize.SpaceRadar, null, (v) => Config.Instance.UnlimitedSpaceRadar = v);
+        ControlPanelHelper.Reset();
+
+        ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, Localization.Localize.ResourceOptions);
+        var panel0 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.OilDepletionRate, new(388, 16), (_) => callback0(_), gradientStyle: true);
+        label2 = panel0.MajorLabel;
+        void callback0(float value) {
+            Config.Instance.OilDepletionRate = (int)value;
+            label2.text = GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
+        }
+
+        var panel2 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.OreDepletionRate, new(388, 16), (value) => callback1(value), gradientStyle: true);
+        label3 = panel2.MajorLabel;
+        void callback1(float value) {
+            Config.Instance.OreDepletionRate = (int)value;
+            label3.text = GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
+        }
+        ControlPanelHelper.Reset();
+    }
+
+    private static string GetString(string localize, uint value, string flag0, string flag1) {
+        if (value == 0) {
+            return string.Format(localize + ": {0}", flag0);
+        } else if (value == 100) {
+            return string.Format(localize + ": {0}", flag1);
+        } else {
+            return string.Format(localize + ": {0}%", value);
+        }
+    }
+
+
+    private void AddTabContainer() {
+        tabContainer = AddUIComponent<CustomUITabContainer>();
+        tabContainer.size = new Vector2(PorpertyPanelWidth, 24);
+        tabContainer.Gap = 2;
+        tabContainer.Atlas = CustomUIAtlas.MbyronModsAtlas;
+        tabContainer.BgSprite = CustomUIAtlas.RoundedRectangle2;
+        tabContainer.BgNormalColor = CustomUIColor.CPPrimaryBg;
+        tabContainer.relativePosition = new Vector2(16, CaptionHeight);
+        tabContainer.EventTabAdded += (_) => {
+            _.TextScale = 0.9f;
+            _.SetDefaultControlPanelStyle();
+            _.TextPadding = new RectOffset(0, 0, 2, 0);
+        };
+        tabContainer.EventContainerAdded += (_) => {
+            _.size = ContainerSize;
+            _.autoLayoutPadding = new RectOffset(0, 0, 5, 10);
+            var scrollbar0 = UIScrollbarHelper.AddScrollbar(this, _, new Vector2(8, 514));
+            scrollbar0.thumbObject.color = CustomUIColor.CPPrimaryBg;
+            scrollbar0.relativePosition = new Vector2(width - 8, CaptionHeight + 30);
+            _.relativePosition = new Vector2(16, CaptionHeight + 30);
+        };
+        tabContainer.AddTab(CommonLocalize.OptionPanel_General, this);
+        tabContainer.AddTab(Localization.Localize.Service, this);
+        tabContainer.AddTab(Localization.Localize.Income, this);
+    }
+    private void AddCaption() {
+        closeButton = AddUIComponent<CustomUIButton>();
+        closeButton.Atlas = CustomUIAtlas.MbyronModsAtlas;
+        closeButton.size = ButtonSize;
+        closeButton.OnBgSprites.SetSprites(CustomUIAtlas.CloseButton);
+        closeButton.OnBgSprites.SetColors(CustomUIColor.White, CustomUIColor.OffWhite, new Color32(180, 180, 180, 255), CustomUIColor.White, CustomUIColor.White);
+        closeButton.relativePosition = new Vector2(width - 6f - 28f, 6f);
+        closeButton.eventClicked += (c, p) => ControlPanelManager.Close();
+
+        DragBar = AddUIComponent<UIDragHandle>();
+        DragBar.width = closeButton.relativePosition.x;
+        DragBar.height = CaptionHeight;
+        DragBar.relativePosition = Vector2.zero;
+
+        title = DragBar.AddUIComponent<CustomUILabel>();
+        title.Text = ModMainInfo<Mod>.ModName;
+        title.CenterToParent();
     }
 }
+

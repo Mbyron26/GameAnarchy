@@ -1,14 +1,18 @@
 ﻿using ColossalFramework.UI;
+using GameAnarchy.UI;
 using System.Collections.Generic;
+using MbyronModsCommon.UI;
 using UnityEngine;
 
 namespace GameAnarchy {
     public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
-        private ToggleButton VanillaUnlimitedMoney;
-        private ToggleButton CashAnarchy;
-        private ToggleButton UnlockAll;
-        private ToggleButton CustomUnlock;
-
+        private CustomUIToggleButton VanillaUnlimitedMoney;
+        private CustomUIToggleButton CashAnarchy;
+        private CustomUIToggleButton UnlockAll;
+        private CustomUIToggleButton CustomUnlock;
+#if DEBUG
+        protected CustomUIScrollablePanel DebugContainer { get; private set; }
+#endif
         private string[] MilestoneLevelNames => new string[] {
             Localization.Localize.MilestonelevelName_Vanilla,
             Localization.Localize.MilestonelevelName_LittleHamlet,
@@ -25,11 +29,43 @@ namespace GameAnarchy {
             Localization.Localize.MilestonelevelName_Metropolis,
             Localization.Localize.MilestonelevelName_Megalopolis
         };
-
-
+#if DEBUG
+        protected override void AddExtraContainer() {
+            base.AddExtraContainer();
+            DebugContainer = AddTab("Debug");
+            OptionPanelHelper.AddGroup(DebugContainer, "Debug");
+            OptionPanelHelper.AddButton("Control panel test", null, "Open", 250, 30, () => ControlPanelManager.HotkeyToggle());
+            OptionPanelHelper.AddButton("Test2", null, "Test2", 250, 30, null);
+            OptionPanelHelper.AddButton("Test3", null, "Test3", 250, 30, null);
+            OptionPanelHelper.AddButton("Test4", null, "Test4", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.AddButton("Test5", null, "Test5", 250, 30, null);
+            OptionPanelHelper.Reset();
+            CustomUIButton.Add(DebugContainer, "Test UIButton", null, 30, null);
+            CustomUIDropDown.AddOPDropDown(DebugContainer, new(300, 30), GetLanguages().ToArray(), 0);
+            var field = DebugContainer.AddUIComponent<UIFloatValueField>();
+            field.size = new(300, 30);
+            field.Value = 5;
+            field.Atlas = CustomUIAtlas.MbyronModsAtlas;
+            field.SelectionSprite = CustomUIAtlas.Rectangle;
+            //field.SelectionBgColor = CustomUIColor.BlueNormal;
+            field.BgSprites.SetSprites(CustomUIAtlas.RoundedRectangle3);
+            field.BgSprites.SetColors(CustomUIColor.OPButtonNormal, CustomUIColor.OPButtonHovered, CustomUIColor.OPButtonPressed, CustomUIColor.BlueNormal, CustomUIColor.OPButtonDisabled);
+            field.builtinKeyNavigation = true;
+        }
+#endif
         protected override void AddExtraModInfoProperty() {
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"[{Localization.Localize.FastReturn}]", out UILabel _, out UILabel _);
-            OptionPanelTool.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"[{Localization.Localize.SortSettings}]", out UILabel _, out UILabel _);
+            OptionPanelHelper.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"{Localization.Localize.FastReturn}");
+            OptionPanelHelper.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"{Localization.Localize.SortSettings}");
         }
 
         protected override void FillGeneralContainer() {
@@ -40,37 +76,38 @@ namespace GameAnarchy {
 
         protected override void FillHotkeyContainer() {
             base.FillHotkeyContainer();
-            OptionPanelTool.AddGroup(HotkeyContainer, PropertyPanelWidth, CommonLocalize.OptionPanel_Hotkeys);
-            OptionPanelTool.AddKeymapping(Localization.Localize.AddCash, Config.Instance.AddCash, Localization.Localize.AddCashTooltip);
-            OptionPanelTool.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
-            OptionPanelTool.Reset();
+            OptionPanelHelper.AddGroup(HotkeyContainer, CommonLocalize.OptionPanel_Hotkeys);
+            OptionPanelHelper.AddKeymapping(Localization.Localize.AddCash, Config.Instance.AddCash, Localization.Localize.AddCashTooltip);
+            OptionPanelHelper.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
+            OptionPanelHelper.Reset();
         }
         private UILabel OptionPanelCategoriesHorizontalOffsetMajor;
         private void AddOptimizeOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.OptimizeOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledAchievements, Localization.Localize.EnableAchievements, Localization.Localize.AllowsDynamicToggling, _ => {
+            OptionPanelHelper.AddGroup(GeneralContainer, Localization.Localize.OptimizeOptions);
+            OptionPanelHelper.AddToggle(Config.Instance.EnabledAchievements, Localization.Localize.EnableAchievements, Localization.Localize.AllowsDynamicToggling, _ => {
                 Config.Instance.EnabledAchievements = _;
                 AchievementsManager.UpdateAchievements(_);
-            }, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledSkipIntro, Localization.Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddToggleButton(Config.Instance.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddSliderAlpha(GetOPHorizontalOffsetMajorText(), Localization.Localize.OptionsPanelHorizontalOffsetTooltip, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
+            });
+            OptionPanelHelper.AddToggle(Config.Instance.EnabledSkipIntro, Localization.Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _);
+            OptionPanelHelper.AddToggle(Config.Instance.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _);
+            var slider = OptionPanelHelper.AddSlider(GetOPHorizontalOffsetMajorText(), Localization.Localize.OptionsPanelHorizontalOffsetTooltip, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
                 Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_;
                 OptionPanelCategoriesHorizontalOffsetMajor.text = GetOPHorizontalOffsetMajorText();
-            }, out OptionPanelCategoriesHorizontalOffsetMajor, out UILabel _, out Slider slider0);
-            OptionPanelTool.Reset();
+            });
+            OptionPanelCategoriesHorizontalOffsetMajor = slider.MajorLabel;
+            OptionPanelHelper.Reset();
         }
 
         string GetOPHorizontalOffsetMajorText() => Localization.Localize.OptionsPanelHorizontalOffset + ": " + Config.Instance.OptionPanelCategoriesHorizontalOffset.ToString();
 
-        private readonly List<UIPanel> CustomUnlockPanels = new();
+        private readonly List<UIComponent> CustomUnlockPanels = new();
         private void AddUnlockOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.UnlockOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledUnlockAll, Localization.Localize.UnlockAll, Localization.Localize.UnlockAllMinor, _ => {
+            OptionPanelHelper.AddGroup(GeneralContainer, Localization.Localize.UnlockOptions);
+            UnlockAll = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.EnabledUnlockAll, Localization.Localize.UnlockAll, Localization.Localize.UnlockAllMinor, _ => {
                 Config.Instance.EnabledUnlockAll = _;
                 if (_) CustomUnlock.IsOn = false;
-            }, out UILabel _, out UILabel _, out UnlockAll);
-            OptionPanelTool.AddToggleButton(Config.Instance.CustomUnlock, Localization.Localize.CustomUnlock, Localization.Localize.CustomUnlockPanelTooltip, _ => {
+            }).Child;
+            CustomUnlock = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.CustomUnlock, Localization.Localize.CustomUnlock, Localization.Localize.CustomUnlockPanelTooltip, _ => {
                 Config.Instance.CustomUnlock = _;
                 if (_) UnlockAll.IsOn = false;
                 if (CustomUnlockPanels.Count > 0) {
@@ -78,53 +115,50 @@ namespace GameAnarchy {
                         item.isEnabled = _;
                     }
                 }
-            }, out UILabel _, out UILabel _, out CustomUnlock);
-            CustomUnlockPanels.Add(OptionPanelTool.AddDropDown(Localization.Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, out UILabel _, out UILabel _, out DropDown dropDown0, majorOffset: new RectOffset(20, 0, 0, 0)));
-            dropDown0.EventSelectedIndexChanged += (value) => Config.Instance.MilestoneLevel = value;
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.EnabledInfoView, null, Config.Instance.EnabledInfoView, _ => Config.Instance.EnabledInfoView = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockTransport, null, Config.Instance.UnlockTransport, _ => Config.Instance.UnlockTransport = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockTrainTrack, null, Config.Instance.UnlockTrainTrack, _ => Config.Instance.UnlockTrainTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockMetroTrack, null, Config.Instance.UnlockMetroTrack, _ => Config.Instance.UnlockMetroTrack = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockPolicies, null, Config.Instance.UnlockPolicies, _ => Config.Instance.UnlockPolicies = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
-            CustomUnlockPanels.Add(OptionPanelTool.AddCheckBox(Localization.Localize.UnlockUniqueBuilding, Localization.Localize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuilding, _ => Config.Instance.UnlockUniqueBuilding = _, out UILabel _, out UILabel _, out CheckBox _, new RectOffset(30, 10, 10, 10)));
+            }).Child;
+            CustomUnlockPanels.Add(OptionPanelHelper.AddDropDown(Localization.Localize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, (_) => Config.Instance.MilestoneLevel = _, new RectOffset(20, 0, 0, 0)));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.EnabledInfoView, null, Config.Instance.EnabledInfoView, _ => Config.Instance.EnabledInfoView = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockTransport, null, Config.Instance.UnlockTransport, _ => Config.Instance.UnlockTransport = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockTrainTrack, null, Config.Instance.UnlockTrainTrack, _ => Config.Instance.UnlockTrainTrack = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockMetroTrack, null, Config.Instance.UnlockMetroTrack, _ => Config.Instance.UnlockMetroTrack = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockPolicies, null, Config.Instance.UnlockPolicies, _ => Config.Instance.UnlockPolicies = _, new RectOffset(30, 10, 10, 10), false));
+            CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(Localization.Localize.UnlockUniqueBuilding, Localization.Localize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuilding, _ => Config.Instance.UnlockUniqueBuilding = _, new RectOffset(30, 10, 10, 10), false));
             if (CustomUnlockPanels.Count > 0)
                 foreach (var item in CustomUnlockPanels) {
                     item.isEnabled = CustomUnlock.IsOn;
                 }
-            OptionPanelTool.Reset();
+            OptionPanelHelper.Reset();
         }
 
-        private readonly List<UIPanel> CashAnarchyPanels = new();
-        private UIPanel InitalCashPanel;
+        private readonly List<UIComponent> CashAnarchyPanels = new();
+        private UIComponent InitalCashPanel;
         private void AddResourceOptionsProperty() {
-            OptionPanelTool.AddGroup(GeneralContainer, PropertyPanelWidth, Localization.Localize.ResourceOptions);
-            OptionPanelTool.AddToggleButton(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _, out UILabel _, out UILabel _, out ToggleButton _);
-            OptionPanelTool.AddToggleButton(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
+            OptionPanelHelper.AddGroup(GeneralContainer, Localization.Localize.ResourceOptions);
+            OptionPanelHelper.AddToggle(Config.Instance.Refund, Localization.Localize.Refund, Localization.Localize.AllowsDynamicToggling, _ => Config.Instance.Refund = _);
+            VanillaUnlimitedMoney = OptionPanelHelper.AddToggle(Config.Instance.UnlimitedMoney, Localization.Localize.VanillaUnlimitedMoneyMode, Localization.Localize.VanillaUnlimitedMoneyModeMinor, _ => {
                 Config.Instance.UnlimitedMoney = _;
                 if (_) CashAnarchy.IsOn = false;
-            }, out UILabel _, out UILabel _, out VanillaUnlimitedMoney);
-            OptionPanelTool.AddToggleButton(Config.Instance.CashAnarchy, Localization.Localize.MoneyAnarchyMode, Localization.Localize.MoneyAnarchyModeMinor, _ => {
+            }).Child as CustomUIToggleButton;
+            CashAnarchy = OptionPanelHelper.AddToggle(Config.Instance.CashAnarchy, Localization.Localize.MoneyAnarchyMode, Localization.Localize.MoneyAnarchyModeMinor, _ => {
                 Config.Instance.CashAnarchy = _;
                 if (_) VanillaUnlimitedMoney.IsOn = false;
                 foreach (var item in CashAnarchyPanels) {
                     item.isEnabled = _;
                 }
-            }, out UILabel _, out UILabel _, out CashAnarchy);
-            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localization.Localize.AddCashThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField0, majorOffset: new(20, 0, 0, 0)));
-            valueField0.OnValueChanged += (v) => Config.Instance.DefaultMinAmount = (int)v;
-            CashAnarchyPanels.Add(OptionPanelTool.AddField<CustomLongValueField, long>(Localization.Localize.AddCashAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField1, majorOffset: new(20, 0, 0, 0)));
-            valueField1.OnValueChanged += (v) => Config.Instance.DefaultGetCash = (int)v;
+            }).Child as CustomUIToggleButton;
+            CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(Localization.Localize.AddCashThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, (v) => Config.Instance.DefaultMinAmount = (int)v, majorOffset: new(20, 0, 0, 0)));
+            CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(Localization.Localize.AddCashAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, (_) => Config.Instance.DefaultGetCash = (int)_, majorOffset: new(20, 0, 0, 0)));
             foreach (var item in CashAnarchyPanels) {
                 item.isEnabled = Config.Instance.CashAnarchy;
             }
-            OptionPanelTool.AddToggleButton(Config.Instance.EnabledInitialCash, Localization.Localize.InitialMoney, Localization.Localize.InitialMoneyWarning, _ => {
+            OptionPanelHelper.AddToggle(Config.Instance.EnabledInitialCash, Localization.Localize.InitialMoney, Localization.Localize.InitialMoneyWarning, _ => {
                 Config.Instance.EnabledInitialCash = _;
                 InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
-            }, out UILabel _, out UILabel _, out ToggleButton _);
-            InitalCashPanel = OptionPanelTool.AddField(Localization.Localize.Amount, null, Config.Instance.InitialCash, 100, 100000000, out UILabel _, out UILabel _, out CustomLongValueField valueField2, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
+            });
+            InitalCashPanel = OptionPanelHelper.AddField<UILongValueField, long>(Localization.Localize.Amount, null, Config.Instance.InitialCash, 100, 100000000, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
             InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
-            OptionPanelTool.Reset();
+            OptionPanelHelper.Reset();
         }
 
     }

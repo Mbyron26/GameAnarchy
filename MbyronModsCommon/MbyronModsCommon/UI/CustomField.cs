@@ -21,16 +21,16 @@ namespace MbyronModsCommon.UI {
             valueField.width = fieldWidth;
             valueField.height = fieldHeight;
             valueField.disabledTextColor = new Color32(71, 71, 71, 255);
-            valueField.atlas = CustomAtlas.MbyronModsAtlas;
-            valueField.normalBgSprite = CustomAtlas.RoundedRectangle2;
-            valueField.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
-            valueField.disabledBgSprite = CustomAtlas.RoundedRectangle2;
-            valueField.selectionSprite = CustomAtlas.EmptySprite;
-            valueField.color = CustomColor.DefaultButtonNormal;
-            valueField.HoveredColor = CustomColor.DefaultButtonHovered;
-            valueField.FocusedColor = CustomColor.DefaultButtonFocused;
-            valueField.PressedColor = CustomColor.DefaultButtonFocused;
-            valueField.disabledColor = CustomColor.DefaultButtonDisabled;
+            valueField.atlas = CustomUIAtlas.MbyronModsAtlas;
+            valueField.normalBgSprite = CustomUIAtlas.RoundedRectangle3;
+            valueField.hoveredBgSprite = CustomUIAtlas.RoundedRectangle3;
+            valueField.disabledBgSprite = CustomUIAtlas.RoundedRectangle3;
+            valueField.selectionSprite = CustomUIAtlas.EmptySprite;
+            valueField.color = CustomUIColor.OPButtonNormal;
+            valueField.HoveredColor = CustomUIColor.OPButtonHovered;
+            valueField.FocusedColor = CustomUIColor.OPButtonFocused;
+            valueField.PressedColor = CustomUIColor.OPButtonPressed;
+            valueField.disabledColor = CustomUIColor.OPButtonDisabled;
             valueField.padding = new RectOffset(6, 6, 6, 6);
             valueField.textScale = 1f;
             valueField.MinValue = minLimit;
@@ -47,10 +47,10 @@ namespace MbyronModsCommon.UI {
             if (setSprite is not null) {
                 setSprite(uiTextField);
             } else {
-                uiTextField.atlas = CustomAtlas.MbyronModsAtlas;
-                uiTextField.normalBgSprite = CustomAtlas.RoundedRectangle2;
-                uiTextField.hoveredBgSprite = CustomAtlas.RoundedRectangle2;
-                uiTextField.selectionSprite = CustomAtlas.EmptySprite;
+                uiTextField.atlas = CustomUIAtlas.MbyronModsAtlas;
+                uiTextField.normalBgSprite = CustomUIAtlas.RoundedRectangle2;
+                uiTextField.hoveredBgSprite = CustomUIAtlas.RoundedRectangle2;
+                uiTextField.selectionSprite = CustomUIAtlas.EmptySprite;
             }
             uiTextField.padding = new RectOffset(8, 6, 8, 6);
             uiTextField.textScale = 1f;
@@ -361,12 +361,12 @@ namespace MbyronModsCommon.UI {
         }
 
         public void SetStyle() {
-            atlas = CustomAtlas.MbyronModsAtlas;
-            selectionSprite = CustomAtlas.EmptySprite;
-            normalBgSprite = CustomAtlas.FieldNormal;
-            disabledBgSprite = CustomAtlas.FieldDisabled;
-            focusedBgSprite = CustomAtlas.FieldNormal;
-            hoveredBgSprite = CustomAtlas.FieldHovered;
+            atlas = CustomUIAtlas.MbyronModsAtlas;
+            selectionSprite = CustomUIAtlas.EmptySprite;
+            normalBgSprite = CustomUIAtlas.FieldNormal;
+            disabledBgSprite = CustomUIAtlas.FieldDisabled;
+            focusedBgSprite = CustomUIAtlas.FieldNormal;
+            hoveredBgSprite = CustomUIAtlas.FieldHovered;
 
             numericalOnly = true;
             allowFloats = true;

@@ -1,4 +1,5 @@
 ﻿using ColossalFramework.UI;
+using MbyronModsCommon.UI;
 using ICities;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using ColossalFramework.IO;
 using System.IO;
 using System.Globalization;
 using ColossalFramework.Globalization;
+using System.Linq;
 
 namespace MbyronModsCommon {
     public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
@@ -13,11 +15,11 @@ namespace MbyronModsCommon {
         public static string ModName => Instance.ModName;
         public static Version ModVersion => Instance.ModVersion;
         public static ulong ModID => Instance.ModID;
-        public static string VersionType => Instance.VersionType;
+        public static VersionType VersionType => Instance.VersionType;
         public static string Name => Instance.Name;
     }
 
-    public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : UIPanel where Config : ModConfigBase<Config>, new() {
+    public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : CustomUIPanel where Config : ModConfigBase<Config>, new() {
         public abstract string SolidModName { get; }
         public abstract string ModName { get; }
         public abstract Version ModVersion { get; }
@@ -27,7 +29,7 @@ namespace MbyronModsCommon {
         public string Name => IsBeta ? ModName + " Beta " + ModVersion : ModName + " " + ModVersion;
         public abstract string Description { get; }
         public abstract List<ModChangeLog> ChangeLog { get; }
-        public string VersionType => IsBeta ? "Beta" : "Stable";
+        public VersionType VersionType => IsBeta ? VersionType.Beta : VersionType.Stable;
         public string ConfigFilePath => Path.Combine(DataLocation.localApplicationData, $"{SolidModName}Config.xml");
 
         private CultureInfo modCulture;
@@ -135,16 +137,41 @@ namespace MbyronModsCommon {
 
     }
 
+
     public struct ModChangeLog {
         public Version ModVersion;
         public DateTime Date;
-        public List<string> Log;
-        public ModChangeLog(Version version, DateTime date, List<string> log) {
+        public List<LogString> Log;
+        public ModChangeLog(Version version, DateTime date, List<LogString> log) {
             ModVersion = version;
             Date = date;
             Log = log;
-
         }
+    }
+
+    public struct LogString {
+        public LogFlag Flag = LogFlag.None;
+        public string Content = string.Empty;
+        public LogString(LogFlag logFlag, string content) {
+            Flag = logFlag;
+            Content = content;
+        }
+    }
+    public enum LogFlag {
+        None,
+        Added,
+        Removed,
+        Updated,
+        Fixed,
+        Optimized,
+        Translation,
+        Attention,
+    }
+
+    public enum VersionType {
+        Debug,
+        Beta,
+        Stable
     }
 
     public abstract class SingletonMod<Type> {
@@ -152,7 +179,7 @@ namespace MbyronModsCommon {
     }
 
     public interface IMod : IUserMod, ILoadingExtension {
-        string VersionType { get; }
+        VersionType VersionType { get; }
         string SolidModName { get; }
         string ModName { get; }
         List<ModChangeLog> ChangeLog { get; }
