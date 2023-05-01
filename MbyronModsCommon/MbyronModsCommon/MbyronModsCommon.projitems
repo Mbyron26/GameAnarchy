@@ -9,8 +9,6 @@
     <Import_RootNamespace>MbyronModsCommon</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)KeyBinding\KeyBinding.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)KeyBinding\KeyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\CompatibilityMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\LogMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\MessageBoxBase.cs" />
@@ -22,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\AssemblyUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\CompatibilityCheck.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\DebugUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModUtils\KeyBinding.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\ModLogger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\PluginManagerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\UnityHelper.cs" />
