@@ -1,9 +1,9 @@
-﻿using ColossalFramework.UI;
+﻿namespace MbyronModsCommon;
+using ColossalFramework.UI;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using MbyronModsCommon.UI;
-namespace MbyronModsCommon;
 
 public class LogMessageBox : MessageBoxBase {
     public LogMessageBox() {
