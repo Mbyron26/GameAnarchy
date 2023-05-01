@@ -502,6 +502,12 @@
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
     <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
   </data>
+  <data name="UpdateLog_V0_9_9OPT" xml:space="preserve">
+    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
+    <value>Added Slovak localization.</value>
+  </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>Updated UI style.</value>
   </data>

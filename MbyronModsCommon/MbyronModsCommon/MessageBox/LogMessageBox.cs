@@ -179,7 +179,7 @@ public class LogMessageBox : MessageBoxBase {
             LogFlag.Updated => new Color32(58, 86, 190, 255),//Blue
             LogFlag.Fixed => new Color32(216, 136, 30, 255),//Orange
             LogFlag.Optimized => new Color32(113, 30, 160, 255),//Purple
-            LogFlag.Translation => new Color32(0, 238, 248, 255),//Cyan
+            LogFlag.Translation => new Color32(8, 150, 150, 255),//Cyan
             LogFlag.Attention => new Color32(146, 4, 10, 255),//Red
             _ => new Color32(160, 160, 160, 255)//Gray
         };

@@ -1195,6 +1195,24 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Optimized the options panel categories horizontal offset option, which now takes effect after adjustment. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9OPT {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9OPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Added Slovak localization. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9TRAN {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9TRAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Updated UI style. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_9UPT {

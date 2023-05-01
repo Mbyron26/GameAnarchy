@@ -100,10 +100,12 @@ public class Mod : ModBase<Mod, Config> {
         };
 
     public override List<ModChangeLog> ChangeLog => new() {
-            new ModChangeLog(new Version(0, 9, 9), new(2023, 4, 30), new List<LogString> {
+            new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 1), new List<LogString> {
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
-                new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT)
+                new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT),
+                new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),
+                new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),
             }),
             new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<LogString> {
                 new(LogFlag.Added,"[UPT]Updated to support game version 1.16.1"),

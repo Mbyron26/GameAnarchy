@@ -136,10 +136,10 @@
     <value>金額</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>Building refund</value>
+    <value>建物の返金</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
-    <value>Building refund multiple factor</value>
+    <value>建物の返金の係数</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建物の延焼確率</value>
@@ -288,17 +288,20 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>最適化のオプション</value>
   </data>
+  <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
+    <value>This option takes effect after adjustment</value>
+  </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>Show mod updated date in options panel categories</value>
+    <value>オプションパネルのカテゴリにMODの更新日を表示</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+    <value>オプションはプラグインリストの更新後・ゲームの再起動した後で有効化</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>オプションパネルのカテゴリーバーの水平オフセット</value>
   </data>
   <data name="OptionsPanelHorizontalOffsetTooltip" xml:space="preserve">
-    <value>Options panel categories bar horizontal offset will take effect after the options panel is reopened</value>
+    <value>オプションパネルのカテゴリーバーの水平オフセットは、オプションパネルを開き直した後に有効化</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>鉱石の枯渇速度</value>
@@ -307,13 +310,13 @@
     <value>ユーザー建物</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing refund</value>
+    <value>ブルドーザーの返金</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>空港エリアの火災を除去</value>
   </data>
   <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
-    <value>Remove building refund time limitation</value>
+    <value>建物の返金の制限時間を解除</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>キャンパスエリアの火災を除去</value>
@@ -352,7 +355,7 @@
     <value>住宅区画の火災を除去</value>
   </data>
   <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
-    <value>Remove Segment refund time limitation</value>
+    <value>セグメントの返金の制限時間を解除</value>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>住宅</value>
@@ -361,10 +364,10 @@
     <value>資源のオプション</value>
   </data>
   <data name="SegmentRefund" xml:space="preserve">
-    <value>Segment refund</value>
+    <value>セグメントの返金</value>
   </data>
   <data name="SegmentRefundMultipleFactor" xml:space="preserve">
-    <value>Segment refund multiple factor</value>
+    <value>セグメントの返金の係数</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>サービス</value>
@@ -421,35 +424,35 @@
     <value>レベル 1～6のユニーク施設を全てアンロックします。 ただし、ゲームの仕様でオプションで強制的にアンロックしても、一部の建物はアンロックされません。</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} days ago</value>
+    <value>{0} 日前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>Last year</value>
+    <value>去年</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} month ago</value>
+    <value>{0} ヶ月前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} months ago</value>
+    <value>{0} ヶ月前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>Today at {0:HH:mm}</value>
+    <value>今日 {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} years ago</value>
+    <value>{0} 年前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>Yesterday</value>
+    <value>昨日</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>Yesterday at {0:HH:mm}</value>
+    <value>昨日 {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]新しいコントロールパネルを開くには、 デフォルトのホットキー Ctrl+Shift+Gで開くかUUI MODのボタンで開く</value>
@@ -494,13 +497,19 @@
     <value>[UPT]互換性のチェック機能を更新</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
+    <value>オプションパネルのカテゴリーバーに更新日時を表示する機能を追加</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+    <value>コントロールパネルに建物やセグメントの返金機能を追加して、時間制限の解除・返金の係数調整が可能</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT" xml:space="preserve">
+    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
+    <value>Added Slovak localization.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
+    <value>UIのスタイルを更新</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>バニラ</value>
