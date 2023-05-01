@@ -1,6 +1,4 @@
-﻿using ColossalFramework.UI;
-using MbyronModsCommon.UI;
-using ICities;
+﻿using ICities;
 using System;
 using System.Collections.Generic;
 using ColossalFramework.IO;
@@ -18,7 +16,7 @@ public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
     public static string Name => Instance.Name;
 }
 
-public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBase<Mod, OptionPanel, Config> where OptionPanel : CustomUIPanel where Config : ModConfigBase<Config>, new() {
+public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : ModConfigBase<C>, new() {
     public abstract string SolidModName { get; }
     public abstract string ModName { get; }
     public abstract Version ModVersion { get; }
@@ -48,9 +46,9 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
     public abstract string GetLocale(string text);
 
     public ModBase() {
-        SingletonMod<Mod>.Instance = (Mod)this;
+        SingletonMod<M>.Instance = (M)this;
         InternalLogger.Log($"Start initializing mod.");
-        ExternalLogger.CreateDebugFile<Mod>();
+        ExternalLogger.CreateDebugFile<M>();
         LoadConfig();
         CompatibilityCheck.ModName = ModName;
     }
@@ -59,7 +57,7 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
         InternalLogger.Log($"Setting UI.");
         LoadLocale();
         LocaleManager.eventLocaleChanged += LoadLocale;
-        OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
+
         SettingsUI(helper);
     }
 
@@ -68,12 +66,12 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
     protected void LoadLocale() {
         CultureInfo locale;
         try {
-            if (SingletonMod<Config>.Instance.ModLanguage == "GameLanguage") {
+            if (SingletonMod<C>.Instance.ModLanguage == "GameLanguage") {
                 var culture = ModLocalize.UseGameLanguage();
                 locale = new CultureInfo(culture);
                 InternalLogger.Log($"Change mod locale, use game language: {locale}.");
             } else {
-                locale = new CultureInfo(SingletonMod<Config>.Instance.ModLanguage);
+                locale = new CultureInfo(SingletonMod<C>.Instance.ModLanguage);
                 InternalLogger.Log($"Change mod locale, use custom language: {locale}.");
             }
             ModCulture = locale;
@@ -83,14 +81,9 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
         }
     }
 
-    public void LoadConfig() => XMLUtils.LoadData<Config>(ConfigFilePath);
-    public void SaveConfig() => XMLUtils.SaveData<Config>(ConfigFilePath);
+    public void LoadConfig() => XMLUtils.LoadData<C>(ConfigFilePath);
+    public void SaveConfig() => XMLUtils.SaveData<C>(ConfigFilePath);
     public virtual void OnEnabled() {
-        if (UIView.GetAView() is not null) {
-            OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
-        } else {
-            LoadingManager.instance.m_introLoaded += OptionPanelManager<Mod, OptionPanel>.OptionsEventHook;
-        }
         LoadingManager.instance.m_introLoaded += IntroActions;
     }
     public virtual void IntroActions() => GetDeserializationState();
@@ -99,29 +92,28 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
     public virtual void OnCreated(ILoading loading) { }
     public virtual void OnLevelLoaded(LoadMode mode) {
         ShowLogMessageBox();
-        OptionPanelManager<Mod, OptionPanel>.OptionsEventHook();
     }
     public virtual void OnLevelUnloading() { }
     public virtual void OnReleased() { }
 
     private void ShowLogMessageBox() {
         if (VersionType != BuildVersion.Beta) {
-            SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
+            SingletonMod<C>.Instance.ModVersion = ModVersion.ToString();
             SaveConfig();
             return;
         }
-        if (!string.IsNullOrEmpty(SingletonMod<Config>.Instance.ModVersion)) {
-            var lastVersion = new Version(SingletonMod<Config>.Instance.ModVersion);
+        if (!string.IsNullOrEmpty(SingletonMod<C>.Instance.ModVersion)) {
+            var lastVersion = new Version(SingletonMod<C>.Instance.ModVersion);
             if ((lastVersion.Major == ModVersion.Major) && (lastVersion.Minor == ModVersion.Minor) && (lastVersion.Build == ModVersion.Build)) {
-                SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
+                SingletonMod<C>.Instance.ModVersion = ModVersion.ToString();
                 SaveConfig();
                 return;
             }
             if (lastVersion < ModVersion) {
                 var messageBox = MessageBox.Show<LogMessageBox>();
-                messageBox.Initialize<Mod>(true);
+                messageBox.Initialize<M>(true);
             }
-            SingletonMod<Config>.Instance.ModVersion = ModVersion.ToString();
+            SingletonMod<C>.Instance.ModVersion = ModVersion.ToString();
             SaveConfig();
         } else {
             InternalLogger.Error("Updated version failed, mod version is null or empty in config file.");
@@ -130,7 +122,7 @@ public abstract class ModBase<Mod, OptionPanel, Config> : IMod where Mod : ModBa
     private void GetDeserializationState() {
         if (!XMLUtils.DeserializationState) {
             var messageBox = MessageBox.Show<XMLWariningMessageBox>();
-            messageBox.Initialize<Mod>();
+            messageBox.Initialize<M>();
         }
     }
 }

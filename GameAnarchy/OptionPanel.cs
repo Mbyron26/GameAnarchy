@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using MbyronModsCommon.UI;
 using UnityEngine;
+using GameAnarchy.UI;
+using System.Diagnostics;
+
 namespace GameAnarchy;
 
 public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
@@ -65,8 +68,9 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         });
         OptionPanelHelper.AddToggle(Config.Instance.EnabledSkipIntro, Localization.Localize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _);
         OptionPanelHelper.AddToggle(Config.Instance.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdated, Localization.Localize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _);
-        var slider = OptionPanelHelper.AddSlider(GetOPHorizontalOffsetMajorText(), Localization.Localize.OptionsPanelHorizontalOffsetTooltip, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
+        var slider = OptionPanelHelper.AddSlider(GetOPHorizontalOffsetMajorText(), Localization.Localize.OptionPanelCategoriesHorizontalOffsetMinor, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
             Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_;
+            OptionsPanelCategoriesManager.SetCategoriesOffset();
             OptionPanelCategoriesHorizontalOffsetMajor.text = GetOPHorizontalOffsetMajorText();
         });
         OptionPanelCategoriesHorizontalOffsetMajor = slider.MajorLabel;
@@ -74,6 +78,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     }
 
     string GetOPHorizontalOffsetMajorText() => Localization.Localize.OptionsPanelHorizontalOffset + ": " + Config.Instance.OptionPanelCategoriesHorizontalOffset.ToString();
+
 
     private readonly List<UIComponent> CustomUnlockPanels = new();
     private void AddUnlockOptionsProperty() {

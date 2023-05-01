@@ -3,6 +3,7 @@ V0.9.9
 Added show mods updated date for the category bar of the options panel function.
 Added building segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.
 Added Slovak localization.
+Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.
 Updated UI style.
 
 V0.9.8

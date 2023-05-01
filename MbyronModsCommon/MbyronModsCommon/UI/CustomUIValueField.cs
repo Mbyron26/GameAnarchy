@@ -772,6 +772,7 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
         base.OnMouseWheel(p);
         tooltipBox.Hide();
         if (CanWheel) {
+            p.Use();
             var typeRate = GetSteppingRate();
             if (p.wheelDelta < 0) {
                 OnValueChanged(ValueDecrease(typeRate));

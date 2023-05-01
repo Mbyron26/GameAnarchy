@@ -28,6 +28,7 @@ namespace MbyronModsCommon {
         public static void Warning(string message) => LogBase($"[{nameof(Warning)}]" + message);
         public static void Log(string tag, string message) => LogBase($"[{nameof(Log)}]: {tag}" + message);
         public static void Log(string message) => LogBase($"[{nameof(Log)}]" + message);
+        public static void LogInvokeTime(Stopwatch stopwatch, string message = "") => LogBase($"[{nameof(Log)}]" + message + $"Invoke time: {stopwatch.Elapsed.TotalMilliseconds * 1000:n3}μs");
         public static void Exception(string tag, Exception exception) => LogBase($"[{nameof(Exception)}]: {tag}" + exception.Message);
         public static void Exception(Exception exception) => LogBase($"[{nameof(Exception)}]" + exception.Message);
         public static void DebugMode(string msg, bool enableLog) {

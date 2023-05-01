@@ -1,9 +1,9 @@
-﻿using ColossalFramework.UI;
+﻿namespace MbyronModsCommon;
+using ColossalFramework.UI;
 using ICities;
 using System;
 using UnityEngine;
 using MbyronModsCommon.UI;
-namespace MbyronModsCommon;
 
 public static class OptionPanelHelper {
     public static float PropertyPanelWidth => 732;

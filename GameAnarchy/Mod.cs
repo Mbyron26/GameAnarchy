@@ -11,7 +11,7 @@ using ColossalFramework.Globalization;
 using GameAnarchy.UI;
 namespace GameAnarchy;
 
-public class Mod : ModBase<Mod, OptionPanel, Config> {
+public class Mod : ModBase<Mod, Config> {
     public override string SolidModName => "GameAnarchy";
     public override string ModName => "Game Anarchy";
     public override Version ModVersion => new(0, 9, 9, 43018);
@@ -78,6 +78,7 @@ public class Mod : ModBase<Mod, OptionPanel, Config> {
 
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
+        OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
         LocaleManager.eventLocaleChanged += ControlPanelManager.OnLocaleChanged;
     }
 

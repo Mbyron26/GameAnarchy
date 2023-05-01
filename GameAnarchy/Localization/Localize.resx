@@ -288,6 +288,9 @@
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimize Options</value>
   </data>
+  <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
+    <value>This option takes effect after adjustment</value>
+  </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
     <value>Show mod updated date in options panel categories</value>
   </data>

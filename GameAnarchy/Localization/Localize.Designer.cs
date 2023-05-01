@@ -574,6 +574,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 This option takes effect after adjustment 的本地化字符串。
+        /// </summary>
+        public static string OptionPanelCategoriesHorizontalOffsetMinor {
+            get {
+                return ResourceManager.GetString("OptionPanelCategoriesHorizontalOffsetMinor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Show mod updated date in options panel categories 的本地化字符串。
         /// </summary>
         public static string OptionPanelCategoriesUpdated {

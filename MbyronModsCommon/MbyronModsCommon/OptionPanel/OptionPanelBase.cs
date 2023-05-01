@@ -1,9 +1,10 @@
-﻿using System;
+﻿namespace MbyronModsCommon;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using MbyronModsCommon.UI;
-namespace MbyronModsCommon;
+
 public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPanel where TypeMod : IMod where TypeConfig : ModConfigBase<TypeConfig>, new() where TypeOptionPanel : CustomUIPanel {
     public static readonly Vector2 Size = new(764, 773);
     public static readonly float MainPadding = 16;
