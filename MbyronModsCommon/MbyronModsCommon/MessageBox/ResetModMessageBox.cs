@@ -1,8 +1,8 @@
-﻿using ColossalFramework.UI;
+﻿namespace MbyronModsCommon;
+using ColossalFramework.UI;
 using MbyronModsCommon.UI;
 using System;
 using UnityEngine;
-namespace MbyronModsCommon;
 
 public class ResetModWarningMessageBox : MessageBoxBase {
     public void Init<Mod>(Action callback) where Mod : IMod {
