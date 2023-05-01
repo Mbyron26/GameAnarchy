@@ -11,7 +11,7 @@ public static class CustomUIColor {
     public static Color32 CPButtonNormal => new(92, 120, 140, 255);
     public static Color32 CPButtonHovered => new(104, 134, 156, 255);
     public static Color32 CPButtonPressed => new(86, 114, 132, 255);
-    public static Color32 CPButtonFocused => BlueNormal;
+    public static Color32 CPButtonFocused => GreenNormal;
     public static Color32 CPButtonDisabled => new(52, 70, 86, 255);
 
 

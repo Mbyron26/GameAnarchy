@@ -1,8 +1,8 @@
-﻿using MbyronModsCommon.UI;
+﻿namespace MbyronModsCommon;
+using MbyronModsCommon.UI;
 using ColossalFramework.UI;
 using System;
 using UnityEngine;
-namespace MbyronModsCommon;
 
 public static class ControlPanelHelper {
     public static float PropertyPanelWidth { get; set; }
@@ -36,7 +36,7 @@ public static class ControlPanelHelper {
         panel.FgSize = new(panel.width - 20, 20);
         panel.FgDisabledColor = panel.FgNormalColor = CustomUIColor.CPPrimaryFg;
         panel.VerticalAlignment = UIVerticalAlignment.Bottom;
-        panel.RenderForegroundSprite = true;
+        panel.RenderFg = true;
         return panel;
     }
     public static GammaSinglePropertyPanel AddSlider(string majorText, string minorText, float min, float max, float step, float rawValue, Vector2 sliderSize, Action<float> callback, RectOffset majorOffset = null, RectOffset minorOffset = null, bool gradientStyle = false) {
@@ -71,32 +71,32 @@ public static class ControlPanelHelper {
         panel.StartLayout();
         return panel;
     }
-    //public static AlphaSinglePropertyPanel AddDropDown(string majorText, string minorText, string[] options, int defaultSelection, float dropDownWidth, float dropDownHeight = 20, OnDropdownSelectionChanged eventCallback = null, RectOffset majorOffset = null, RectOffset minorOffset = null) {
-    //    if (Group is null) {
-    //        ExternalLogger.Error("ControlPanelHelper_Group is null.");
-    //        return null;
-    //    }
-    //    var panel = AddChildPanel<AlphaSinglePropertyPanel>();
-    //    panel.Child = CustomDropDown.AddCPDropDown(panel, options, defaultSelection, dropDownWidth, dropDownHeight, eventCallback);
-    //    if (majorText is not null) {
-    //        panel.MajorLabelText = majorText;
-    //        panel.MajorLabelTextScale = 0.8f;
-    //        if (majorOffset is not null) {
-    //            panel.MajorLabelOffset = majorOffset;
-    //        }
-    //        if (minorText is not null) {
-    //            panel.MinorLabelText = minorText;
-    //            panel.MinorLabelTextScale = 0.7f;
-    //            if (minorOffset is not null) {
-    //                panel.MinorLabelOffset = minorOffset;
-    //            }
-    //        }
-    //    }
-    //    panel.Padding = DefaultOffset;
-    //    panel.LabelGap = 4;
-    //    panel.StartLayout();
-    //    return panel;
-    //}
+    public static AlphaSinglePropertyPanel AddDropDown(string majorText, string minorText, string[] options, int defaultSelection, float dropDownWidth, float dropDownHeight = 24, Action<int> callback = null, RectOffset majorOffset = null, RectOffset minorOffset = null) {
+        if (Group is null) {
+            ExternalLogger.Error("ControlPanelHelper_Group is null.");
+            return null;
+        }
+        var panel = AddChildPanel<AlphaSinglePropertyPanel>();
+        panel.Child = CustomUIDropDown.AddCPDropDown(panel,new Vector2(dropDownWidth,dropDownHeight) ,options, defaultSelection, callback);
+        if (majorText is not null) {
+            panel.MajorLabelText = majorText;
+            panel.MajorLabelTextScale = 0.8f;
+            if (majorOffset is not null) {
+                panel.MajorLabelOffset = majorOffset;
+            }
+            if (minorText is not null) {
+                panel.MinorLabelText = minorText;
+                panel.MinorLabelTextScale = 0.7f;
+                if (minorOffset is not null) {
+                    panel.MinorLabelOffset = minorOffset;
+                }
+            }
+        }
+        panel.Padding = DefaultOffset;
+        panel.LabelGap = 4;
+        panel.StartLayout();
+        return panel;
+    }
 
     public static AlphaSinglePropertyPanel AddToggle(bool isOn, string majorText, string minorText, Action<bool> callback, RectOffset majorOffset = null, RectOffset minorOffset = null) {
         if (Group is null) {
@@ -162,7 +162,7 @@ public static class ControlPanelHelper {
     }
     public static void Reset() {
         if (Group is not null) {
-            Group.ItemPanels[Group.ItemPanels.Count - 1].RenderForegroundSprite = false;
+            Group.ItemPanels[Group.ItemPanels.Count - 1].RenderFg = false;
             Group = null;
         }
     }

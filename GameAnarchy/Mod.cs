@@ -103,6 +103,7 @@ public class Mod : ModBase<Mod, Config> {
             new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 1), new List<LogString> {
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
+                new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),
                 new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT),
                 new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),
                 new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),

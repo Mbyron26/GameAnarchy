@@ -1,9 +1,51 @@
-﻿using ColossalFramework;
+﻿namespace MbyronModsCommon.UI;
+using ColossalFramework;
 using ColossalFramework.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace MbyronModsCommon.UI;
+
+public class BoundSliderSinglePropertyPanel : GammaSinglePropertyPanel {
+    public CustomUISlider slider;
+    private bool isAttached;
+    public override UIComponent Child {
+        get => slider;
+        set {
+            if (!value.Equals(slider)) {
+                slider = value as CustomUISlider;          
+                AttachChild();
+            }
+        }
+    }
+    public string MajorLabelPrefix {
+        get => MajorLabel.PrefixText;
+        set {
+            AttachChild();
+            if(value !=MajorLabel.PrefixText) {
+                MajorLabel.PrefixText = value;
+            }
+        }
+    }
+    public string MajorLabelSuffix {
+        get => MajorLabel.SuffixText;
+        set {
+            AttachChild();
+            if (value != MajorLabel.SuffixText) {
+                MajorLabel.SuffixText = value;
+            }
+        }
+    }
+
+    private void AttachChild() {
+        if (isAttached)
+            return;
+        MajorLabelText = string.Empty;
+        if (majorLabel is not null) {
+            slider.EventValueChanged += (_) => majorLabel.Text = _.ToString(); ;
+            isAttached = true;
+        }
+    }
+}
 
 public class KeyMappingSinglePropertyPanel : AlphaSinglePropertyPanel {
     private KeyBinding binding;
@@ -26,7 +68,7 @@ public class KeyMappingSinglePropertyPanel : AlphaSinglePropertyPanel {
         }
     }
 
-    public KeyMappingSinglePropertyPanel() => OnChildAdded += OnButtonAdded;
+    public KeyMappingSinglePropertyPanel() => EventChildAdded += OnButtonAdded;
 
     private void OnButtonAdded(UIComponent child) {
         child.eventKeyDown += OnBindingKeyDown;
@@ -108,7 +150,7 @@ public class DeltaSinglePropertyPanel : SinglePropertyPanelBase {
         if (MajorLabel is not null) {
             var width = this.width - Padding.horizontal - gap - (Child is null ? 0 : Child.width);
             MajorLabel.width = width;
-            MajorLabel.padding.top = 1;
+            MajorLabel.TextPadding.top = 1;
             MajorLabel.relativePosition = new Vector2(Child.relativePosition.x + Child.size.x + gap, Padding.top);
             height1 = MajorLabel.height;
         }
@@ -244,170 +286,170 @@ public class AlphaSinglePropertyPanel : SinglePropertyPanelBase {
 }
 
 public abstract class SinglePropertyPanelBase : CustomUIPanel {
-    protected UILabel majorLabel;
-    protected UILabel minorLabel;
+    protected CustomUILabel majorLabel;
+    protected CustomUILabel minorLabel;
     protected UIComponent child;
 
-    public event Action<UIComponent> OnChildAdded;
+    public event Action<UIComponent> EventChildAdded;
 
-    public UILabel MajorLabel => majorLabel;
-    public UILabel MinorLabel => minorLabel;
+    public CustomUILabel MajorLabel => majorLabel;
+    public CustomUILabel MinorLabel => minorLabel;
     public virtual UIComponent Child {
         get => child;
         set {
             if (child != value) {
                 child = value;
-                OnChildAdded?.Invoke(value);
+                EventChildAdded?.Invoke(value);
             }
         }
     }
     public string MajorLabelText {
-        get => majorLabel is null ? string.Empty : majorLabel.text;
+        get => majorLabel is null ? string.Empty : majorLabel.Text;
         set {
             if (majorLabel is not null) {
-                majorLabel.text = value;
+                majorLabel.Text = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.text = value;
+                majorLabel.Text = value;
             }
         }
     }
     public string MinorLabelText {
-        get => minorLabel is null ? string.Empty : minorLabel.text;
+        get => minorLabel is null ? string.Empty : minorLabel.Text;
         set {
             if (minorLabel is not null) {
-                minorLabel.text = value;
+                minorLabel.Text = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.text = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.Text = value;
             }
         }
     }
     public float MajorLabelTextScale {
-        get => majorLabel is null ? 0f : majorLabel.textScale;
+        get => majorLabel is null ? 0f : majorLabel.TextScale;
         set {
             if (majorLabel is not null) {
-                majorLabel.textScale = value;
+                majorLabel.TextScale = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.textScale = value;
+                majorLabel.TextScale = value;
             }
         }
     }
     public float MinorLabelTextScale {
-        get => minorLabel is null ? 0f : minorLabel.textScale;
+        get => minorLabel is null ? 0f : minorLabel.TextScale;
         set {
             if (minorLabel is not null) {
-                minorLabel.textScale = value;
+                minorLabel.TextScale = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.textScale = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.TextScale = value;
             }
         }
     }
     public Color32 MajorLabelTextColor {
-        get => majorLabel is null ? CustomUIColor.White : majorLabel.textColor;
+        get => majorLabel is null ? CustomUIColor.White : majorLabel.TextNormalColor;
         set {
             if (majorLabel is not null) {
-                majorLabel.textColor = value;
+                majorLabel.TextNormalColor = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.textColor = value;
+                majorLabel.TextNormalColor = value;
             }
         }
     }
     public Color32 MinorLabelTextColor {
-        get => minorLabel is null ? CustomUIColor.White : minorLabel.textColor;
+        get => minorLabel is null ? CustomUIColor.White : minorLabel.TextNormalColor;
         set {
             if (minorLabel is not null) {
-                minorLabel.textColor = value;
+                minorLabel.TextNormalColor = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.textColor = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.TextNormalColor = value;
             }
         }
     }
     public Color32 MajorLabelDisabledColor {
-        get => majorLabel is null ? CustomUIColor.White : majorLabel.disabledTextColor;
+        get => majorLabel is null ? CustomUIColor.White : majorLabel.TextDisabledColor;
         set {
             if (majorLabel is not null) {
-                majorLabel.disabledTextColor = value;
+                majorLabel.TextDisabledColor = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.disabledTextColor = value;
+                majorLabel.TextDisabledColor = value;
             }
         }
     }
     public Color32 MinorLabelDisabledColor {
-        get => minorLabel is null ? CustomUIColor.White : minorLabel.disabledTextColor;
+        get => minorLabel is null ? CustomUIColor.White : minorLabel.TextDisabledColor;
         set {
             if (minorLabel is not null) {
-                minorLabel.disabledTextColor = value;
+                minorLabel.TextDisabledColor = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.disabledTextColor = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.TextDisabledColor = value;
             }
         }
     }
     public bool ProcessMajorLabelMarkup {
-        get => majorLabel is not null && majorLabel.processMarkup;
+        get => majorLabel is not null && majorLabel.ProcessMarkup;
         set {
             if (majorLabel is not null) {
-                majorLabel.processMarkup = value;
+                majorLabel.ProcessMarkup = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.processMarkup = value;
+                majorLabel.ProcessMarkup = value;
             }
         }
     }
     public bool ProcessMinorLabelMarkup {
-        get => minorLabel is not null && minorLabel.processMarkup;
+        get => minorLabel is not null && minorLabel.ProcessMarkup;
         set {
             if (minorLabel is not null) {
-                minorLabel.processMarkup = value;
+                minorLabel.ProcessMarkup = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.processMarkup = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.ProcessMarkup = value;
             }
         }
     }
     public RectOffset MajorLabelOffset {
-        get => majorLabel is null ? new RectOffset() : majorLabel.padding;
+        get => majorLabel is null ? new RectOffset() : majorLabel.TextPadding;
         set {
             if (majorLabel is not null) {
-                majorLabel.padding = value;
+                majorLabel.TextPadding = value;
             } else {
                 majorLabel = AddLabel();
-                majorLabel.padding = value;
+                majorLabel.TextPadding = value;
             }
         }
     }
     public RectOffset MinorLabelOffset {
-        get => minorLabel is null ? new RectOffset() : minorLabel.padding;
+        get => minorLabel is null ? new RectOffset() : minorLabel.TextPadding;
         set {
             if (minorLabel is not null) {
-                minorLabel.padding = value;
+                minorLabel.TextPadding = value;
             } else {
                 minorLabel = AddLabel();
-                minorLabel.textColor = CustomUIColor.OffWhite;
-                minorLabel.padding = value;
+                minorLabel.TextNormalColor = CustomUIColor.OffWhite;
+                minorLabel.TextPadding = value;
             }
         }
     }
 
-    protected virtual UILabel AddLabel() {
-        var label = AddUIComponent<UILabel>();
+    protected virtual CustomUILabel AddLabel() {
+        var label = AddUIComponent<CustomUILabel>();
         label.autoSize = false;
         label.width = width;
-        label.autoHeight = true;
-        label.wordWrap = true;
-        label.processMarkup = true;
-        label.disabledTextColor = CustomUIColor.DisabledTextColor;
+        label.AutoHeight = true;
+        label.WordWrap = true;
+        label.ProcessMarkup = true;
+        label.TextDisabledColor = CustomUIColor.DisabledTextColor;
         return label;
     }
     public abstract void StartLayout();

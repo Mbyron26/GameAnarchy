@@ -4,6 +4,7 @@ using ICities;
 using System;
 using UnityEngine;
 using MbyronModsCommon.UI;
+using ColossalFramework;
 
 public static class OptionPanelHelper {
     public static float PropertyPanelWidth => 732;
@@ -15,10 +16,12 @@ public static class OptionPanelHelper {
         Group.width = PropertyPanelWidth;
         Group.AutoLayout = true;
         Group.AutoFitChildrenVertically = true;
-        Group.MajorLabelText = caption;
-        Group.MajorLabelTextScale = 0.8f;
-        Group.MajorLabelColor = CustomUIColor.OffWhite;
-        Group.MajorLabelOffset = new(16, 0, 0, 0);
+        if (!caption.IsNullOrWhiteSpace()) {
+            Group.MajorLabelText = caption;
+            Group.MajorLabelTextScale = 0.8f;
+            Group.MajorLabelColor = CustomUIColor.OffWhite;
+            Group.MajorLabelOffset = new(16, 0, 0, 0);
+        }
         Group.ItemGap = 4;
         Group.EventSetGroupPropertyPanelStyle += (c) => {
             c.Atlas = CustomUIAtlas.MbyronModsAtlas;
@@ -27,7 +30,7 @@ public static class OptionPanelHelper {
         };
         Group.EventOnSinglePropertyPanelAdded += (c, v) => {
             c.Atlas = CustomUIAtlas.MbyronModsAtlas;
-            c.RenderForegroundSprite = true;
+            c.RenderFg = true;
             c.FgSprite = CustomUIAtlas.LineBottom;
             c.FgSpriteMode = ForegroundSpriteMode.Custom;
             c.FgSize = new Vector2(PropertyPanelWidth - 32, 20);
@@ -42,7 +45,7 @@ public static class OptionPanelHelper {
         panel.width = PropertyPanelWidth;
         panel.AutoFitChildrenVertically = true;
         if (!renderLine) {
-            panel.RenderForegroundSprite = false;
+            panel.RenderFg = false;
         }
         return panel;
     }
@@ -171,12 +174,12 @@ public static class OptionPanelHelper {
         panel.StartLayout();
         return panel;
     }
-    public static GammaSinglePropertyPanel AddSlider(string majorText, string minorText, float min, float max, float step, float rawValue, Vector2 sliderSize, Action<float> callback, RectOffset majorOffset = null, RectOffset minorOffset = null, bool gradientStyle = false) {
+    public static BoundSliderSinglePropertyPanel AddSlider(string majorText, string minorText, float min, float max, float step, float rawValue, Vector2 sliderSize, Action<float> callback, string majorPrefix = "", string majorSuffix = "", RectOffset majorOffset = null, RectOffset minorOffset = null, bool gradientStyle = false) {
         if (Group is null) {
             ExternalLogger.Error("OptionPanelHelper_Group is null.");
             return null;
         }
-        var panel = AddChildPanel<GammaSinglePropertyPanel>();
+        var panel = AddChildPanel<BoundSliderSinglePropertyPanel>();
         var slider = CustomUISlider.Add(panel, sliderSize, min, max, step, rawValue, callback);
         panel.Child = slider;
         if (gradientStyle) {
@@ -186,6 +189,8 @@ public static class OptionPanelHelper {
         }
         if (majorText is not null) {
             panel.MajorLabelText = majorText;
+            panel.MajorLabelPrefix = majorPrefix;
+            panel.MajorLabelSuffix = majorSuffix;
             if (majorOffset is not null) {
                 panel.MajorLabelOffset = majorOffset;
             }
@@ -300,7 +305,7 @@ public static class OptionPanelHelper {
     }
     public static void Reset() {
         if (Group is not null) {
-            Group.ItemPanels[Group.ItemPanels.Count - 1].RenderForegroundSprite = false;
+            Group.ItemPanels[Group.ItemPanels.Count - 1].RenderFg = false;
             Group = null;
         }
     }

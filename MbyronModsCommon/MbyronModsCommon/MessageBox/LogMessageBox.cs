@@ -80,7 +80,7 @@ public class LogMessageBox : MessageBoxBase {
             for (int i = 0; i < value.Log.Count; i++) {
                 var panel = logContainer.AddUIComponent<LogPanel>();
                 if (value.Log.Count - 1 != i) {
-                    panel.RenderForegroundSprite = true;
+                    panel.RenderFg = true;
                 }
                 panel.Log = value.Log[i];
                 logPanels.Add(panel);

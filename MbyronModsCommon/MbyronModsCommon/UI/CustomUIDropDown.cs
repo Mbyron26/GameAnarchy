@@ -1,11 +1,51 @@
-﻿using ColossalFramework.UI;
+﻿namespace MbyronModsCommon.UI;
+using ColossalFramework.UI;
 using System;
 using UnityEngine;
-namespace MbyronModsCommon.UI;
 
 public class CustomUIDropDown : CustomUIDropDownBase<CustomUIListBox> {
     public CustomUIDropDown() => canFocus = true;
 
+    public static CustomUIDropDown AddCPDropDown(UIComponent parent, Vector2 size, string[] items, int selectedIndex, Action<int> callback = null) {
+        var dropDown = parent.AddUIComponent<CustomUIDropDown>();
+        dropDown.size = size;
+        dropDown.TextScale = 0.8f;
+        dropDown.TextPadding = new(10, 0, 4, 0);
+        dropDown.ListHeight = (int)(size.y * items.Length + 8);
+        dropDown.TextHorizontalAlignment = UIHorizontalAlignment.Left;
+        dropDown.TriggerButton = dropDown;
+        dropDown.CanWheel = true;
+        dropDown.EventPopupAdded += (dropDwon, listBox) => {
+            listBox.canFocus = true;
+            listBox.TextScale = 0.8f;
+            listBox.Atlas = CustomUIAtlas.MbyronModsAtlas;
+            listBox.BgSprite = CustomUIAtlas.RoundedRectangle2;
+            listBox.BgNormalColor = CustomUIColor.CPButtonNormal;
+            listBox.ItemHoverSprite = CustomUIAtlas.RoundedRectangle2;
+            listBox.ItemHoverColor = CustomUIColor.CPButtonHovered;
+            listBox.ItemSelectionSprite = CustomUIAtlas.RoundedRectangle2;
+            listBox.ItemSelectionColor = CustomUIColor.GreenNormal;
+            listBox.ItemPadding = new RectOffset(6, 0, 2, 0);
+            listBox.ListPadding = new RectOffset(4, 4, 4, 0);
+            listBox.ItemHeight = (int)dropDwon.height;
+            listBox.TextHorizontalAlignment = UIHorizontalAlignment.Left;
+        };
+        dropDown.atlas = CustomUIAtlas.MbyronModsAtlas;
+        dropDown.bgSprites.SetSprites(CustomUIAtlas.RoundedRectangle2);
+        dropDown.bgSprites.SetColors(CustomUIColor.CPButtonNormal, CustomUIColor.CPButtonHovered, CustomUIColor.CPButtonPressed, CustomUIColor.CPButtonFocused, CustomUIColor.CPButtonDisabled);
+        dropDown.FgSprites.SetSprites(CustomUIAtlas.ArrowDown);
+        var fgColor = new Color32(180, 180, 180, 255);
+        dropDown.FgSprites.SetColors(fgColor, fgColor, fgColor, fgColor, new(71, 71, 71, 255));
+        dropDown.fgSpritePadding = new(0, 6, 0, 0);
+        dropDown.fgScaleFactor = 0.8f;
+        dropDown.fgSpriteMode = ForegroundSpriteMode.Scale;
+        dropDown.horizontalAlignment = UIHorizontalAlignment.Right;
+        dropDown.items = items;
+        dropDown.SelectedIndex = selectedIndex;
+        dropDown.EventSelectedIndexChanged += (c, v) => callback?.Invoke(v);
+        dropDown.RenderFg = true;
+        return dropDown;
+    }
     public static CustomUIDropDown AddOPDropDown(UIComponent parent, Vector2 size, string[] items, int selectedIndex, Action<int> callback = null) {
         var dropDown = parent.AddUIComponent<CustomUIDropDown>();
         dropDown.size = size;
@@ -39,7 +79,7 @@ public class CustomUIDropDown : CustomUIDropDownBase<CustomUIListBox> {
         dropDown.horizontalAlignment = UIHorizontalAlignment.Right;
         dropDown.items = items;
         dropDown.SelectedIndex = selectedIndex;
-        dropDown.EventSelectedIndexChanged += (c, v) => callback.Invoke(v);
+        dropDown.EventSelectedIndexChanged += (c, v) => callback?.Invoke(v);
         dropDown.RenderFg = true;
         return dropDown;
     }
@@ -311,7 +351,7 @@ public abstract class CustomUIDropDownBase<T> : CustomUITextComponent where T : 
             }
         }
     }
-    public int SelectedIndex {
+    public virtual int SelectedIndex {
         get => selectedIndex;
         set {
             value = Mathf.Max(-1, value);
@@ -321,7 +361,7 @@ public abstract class CustomUIDropDownBase<T> : CustomUITextComponent where T : 
                     popup.SelectedIndex = value;
                 }
                 selectedIndex = value;
-                OnSelectedIndexChanged();
+                EventSelectedIndexChanged?.Invoke(this, SelectedIndex);
                 Invalidate();
             }
         }
@@ -364,10 +404,6 @@ public abstract class CustomUIDropDownBase<T> : CustomUITextComponent where T : 
         EventStateChanged?.Invoke(value);
         Invalidate();
     }
-    protected virtual void OnSelectedIndexChanged() {
-        EventSelectedIndexChanged?.Invoke(this, SelectedIndex);
-        InvokeUpward("OnSelectedIndexChanged", new object[] { SelectedIndex });
-    }
     protected override void OnMouseWheel(UIMouseEventParameter p) {
         if (canWheel) {
             SelectedIndex = Mathf.Max(0, SelectedIndex - Mathf.RoundToInt(p.wheelDelta));
@@ -376,6 +412,9 @@ public abstract class CustomUIDropDownBase<T> : CustomUITextComponent where T : 
         base.OnMouseWheel(p);
     }
     protected override void OnKeyDown(UIKeyEventParameter p) {
+        if(p.keycode == KeyCode.Escape) {
+            Unfocus();
+        }
         if (builtinKeyNavigation) {
             KeyCode keycode = p.keycode;
             if (keycode != KeyCode.Space) {

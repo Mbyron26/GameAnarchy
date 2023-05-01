@@ -565,6 +565,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Open Control Panel 的本地化字符串。
+        /// </summary>
+        public static string OpenControlPanel {
+            get {
+                return ResourceManager.GetString("OpenControlPanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Optimize Options 的本地化字符串。
         /// </summary>
         public static string OptimizeOptions {
@@ -624,6 +633,24 @@ namespace GameAnarchy.Localization {
         public static string OreDepletionRate {
             get {
                 return ResourceManager.GetString("OreDepletionRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Other functions 的本地化字符串。
+        /// </summary>
+        public static string OtherFunctionsMajor {
+            get {
+                return ResourceManager.GetString("OtherFunctionsMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first. 的本地化字符串。
+        /// </summary>
+        public static string OtherFunctionsMinor {
+            get {
+                return ResourceManager.GetString("OtherFunctionsMinor", resourceCulture);
             }
         }
         
@@ -1191,6 +1218,15 @@ namespace GameAnarchy.Localization {
         public static string UpdateLog_V0_9_9ADD1 {
             get {
                 return ResourceManager.GetString("UpdateLog_V0_9_9ADD1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Option panel added a entry button option to invoke the control panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9ADD2 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9ADD2", resourceCulture);
             }
         }
         

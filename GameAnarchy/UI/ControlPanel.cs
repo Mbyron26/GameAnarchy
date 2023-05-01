@@ -68,7 +68,7 @@ internal class ControlPanel : CustomUIPanel {
         BuildingRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveBuildingRefundTimeLimitation, Localization.Localize.RemoveBuildingRefundTimeLimitation, null, (_) => Config.Instance.RemoveBuildingRefundTimeLimitation = _));
         var slider0 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(Localization.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.BuildingRefundMultipleFactor, new(388, 16), (_) => {
             Config.Instance.BuildingRefundMultipleFactor = _;
-            label4.text = GetRefundMultipleFactor(Localization.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor);
+            label4.Text = GetRefundMultipleFactor(Localization.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor);
         });
         label4 = slider0.MajorLabel;
         BuildingRefundOptions.Add(slider0);
@@ -83,7 +83,7 @@ internal class ControlPanel : CustomUIPanel {
         SegmentRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveSegmentRefundTimeLimitation, Localization.Localize.RemoveSegmentRefundTimeLimitation, null, (_) => Config.Instance.RemoveSegmentRefundTimeLimitation = _));
         var slider1 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(Localization.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.SegmentRefundMultipleFactor, new(388, 16), (_) => {
             Config.Instance.SegmentRefundMultipleFactor = _;
-            label5.text = GetRefundMultipleFactor(Localization.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor);
+            label5.Text = GetRefundMultipleFactor(Localization.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor);
         });
         label5 = slider1.MajorLabel;
         SegmentRefundOptions.Add(slider1);
@@ -104,12 +104,13 @@ internal class ControlPanel : CustomUIPanel {
         };
         return prefix + suffix;
     }
+
     readonly List<SinglePropertyPanelBase> BuildingRefundOptions = new();
     readonly List<SinglePropertyPanelBase> SegmentRefundOptions = new();
-    UILabel label0;
-    UILabel label1;
-    UILabel label4;
-    UILabel label5;
+    CustomUILabel label0;
+    CustomUILabel label1;
+    CustomUILabel label4;
+    CustomUILabel label5;
     public void FillServiceContainer() {
         ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.RemovePollution);
         ControlPanelHelper.AddToggle(Config.Instance.RemoveNoisePollution, Localization.Localize.NoisePollution, null, (v) => Config.Instance.RemoveNoisePollution = v);
@@ -143,19 +144,19 @@ internal class ControlPanel : CustomUIPanel {
         label0 = panel0.MajorLabel;
         void callback0(float value) {
             Config.Instance.BuildingSpreadFireProbability = (uint)value;
-            label0.text = GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
+            label0.Text = GetString(Localization.Localize.BuildingSpreadFireProbability, Config.Instance.BuildingSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
         }
 
         var panel1 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.TreeSpreadFireProbability, new(388, 16), (value) => callback1(value), gradientStyle: true);
         label1 = panel1.MajorLabel;
         void callback1(float value) {
             Config.Instance.TreeSpreadFireProbability = (uint)value;
-            label1.text = GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
+            label1.Text = GetString(Localization.Localize.TreeSpreadFireProbability, Config.Instance.TreeSpreadFireProbability, Localization.Localize.NoSpreadFire, Localization.Localize.Vanilla);
         }
         ControlPanelHelper.Reset();
     }
-    private UILabel label2;
-    private UILabel label3;
+    private CustomUILabel label2;
+    private CustomUILabel label3;
     public void FillGeneralContainer() {
         ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, Localization.Localize.EnabledUnlimitedUniqueBuildings);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedPlayerBuilding, Localization.Localize.PlayerBuilding, null, (v) => Config.Instance.UnlimitedPlayerBuilding = v);
@@ -173,14 +174,14 @@ internal class ControlPanel : CustomUIPanel {
         label2 = panel0.MajorLabel;
         void callback0(float value) {
             Config.Instance.OilDepletionRate = (int)value;
-            label2.text = GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
+            label2.Text = GetString(Localization.Localize.OilDepletionRate, (uint)Config.Instance.OilDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
         }
 
         var panel2 = ControlPanelHelper.AddSlider(GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla), null, 0, 100, 1, Config.Instance.OreDepletionRate, new(388, 16), (value) => callback1(value), gradientStyle: true);
         label3 = panel2.MajorLabel;
         void callback1(float value) {
             Config.Instance.OreDepletionRate = (int)value;
-            label3.text = GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
+            label3.Text = GetString(Localization.Localize.OreDepletionRate, (uint)Config.Instance.OreDepletionRate, Localization.Localize.Unlimited, Localization.Localize.Vanilla);
         }
         ControlPanelHelper.Reset();
     }
