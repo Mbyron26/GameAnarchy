@@ -34,7 +34,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         base.AddExtraContainer();
         DebugContainer = AddTab("Debug");
         OptionPanelHelper.AddGroup(DebugContainer, "Debug");
-        OptionPanelHelper.AddButton("Control panel test", null, "Open", 250, 30, () => ControlPanelManager.HotkeyToggle());
+        OptionPanelHelper.AddButton("Control panel", null, "Open", 250, 30, () => ControlPanelManager.HotkeyToggle());
         OptionPanelHelper.AddStringField("File dirc", Application.dataPath, null);
         OptionPanelHelper.Reset();
     }
@@ -124,7 +124,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         foreach (var item in CashAnarchyPanels) {
             item.isEnabled = Config.Instance.CashAnarchy;
         }
-        OptionPanelHelper.AddToggle(Config.Instance.EnabledInitialCash, Localization.Localize.InitialMoney, Localization.Localize.InitialMoneyWarning, _ => {
+        OptionPanelHelper.AddToggle(Config.Instance.EnabledInitialCash, Localization.Localize.StartMoneyMajor, Localization.Localize.StartMoneyMinor, _ => {
             Config.Instance.EnabledInitialCash = _;
             InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
         });

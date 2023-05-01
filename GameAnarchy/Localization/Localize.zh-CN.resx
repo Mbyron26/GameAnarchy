@@ -285,11 +285,14 @@
   <data name="OilDepletionRate" xml:space="preserve">
     <value>石油消耗速率</value>
   </data>
+  <data name="OpenControlPanel" xml:space="preserve">
+    <value>Open Control Panel</value>
+  </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>优化选项</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>此选项在调整后立即生效</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
     <value>在选项面板的模组列表旁边，显示模组的更新日期</value>
@@ -305,6 +308,12 @@
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>矿石消耗速率</value>
+  </data>
+  <data name="OtherFunctionsMajor" xml:space="preserve">
+    <value>Other functions</value>
+  </data>
+  <data name="OtherFunctionsMinor" xml:space="preserve">
+    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>玩家建筑</value>
@@ -502,11 +511,14 @@
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
     <value>新增了铲除建筑/网络段落退款的相关调整功能，包括：解除铲除物品时的退款期限限制、调整退款数额倍乘因子。您可以在 GA 的控制面板中找到这些选项。</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
+    <value>Option panel added a entry button option to invoke the control panel.</value>
+  </data>
   <data name="UpdateLog_V0_9_9OPT" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+    <value>优化了选项面板类别栏水平偏移的功能，此选项在调整后立即生效。</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>添加了斯洛伐克语翻译。</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>更新了用户界面的风格。</value>

@@ -285,6 +285,9 @@
   <data name="OilDepletionRate" xml:space="preserve">
     <value>Tasa de agotamiento de petróleo</value>
   </data>
+  <data name="OpenControlPanel" xml:space="preserve">
+    <value>Open Control Panel</value>
+  </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Opciones de optimización</value>
   </data>
@@ -305,6 +308,12 @@
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
     <value>Tasa de agotamiento de minerales</value>
+  </data>
+  <data name="OtherFunctionsMajor" xml:space="preserve">
+    <value>Other functions</value>
+  </data>
+  <data name="OtherFunctionsMinor" xml:space="preserve">
+    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>Edificio del jugador</value>
@@ -501,6 +510,9 @@
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
     <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
+    <value>Option panel added a entry button option to invoke the control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT" xml:space="preserve">
     <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>

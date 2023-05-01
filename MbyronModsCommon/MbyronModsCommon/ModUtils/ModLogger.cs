@@ -90,6 +90,7 @@ namespace MbyronModsCommon {
         public static void Warning(object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{message}");
         public static void Warning(string tag, object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{tag} | {message}");
         public static void Log(string tag, object message) => UnityEngine.Debug.logger.Log($"[{AssemblyUtils.CurrentAssemblyName}{nameof(LogType.Log)}]", $"{tag} | {message}");
+        public static void LogPatch(PatchType patchType, string raw, string patch) => UnityEngine.Debug.logger.Log($"[{AssemblyUtils.CurrentAssemblyName}{LogType.Log}{patchType}]", $"{raw} patched by {patch}.");
         public static void Log(object message) => UnityEngine.Debug.logger.Log($"[{Name}{nameof(LogType.Log)}]", $"{message}");
         public static void Exception(string tag, Exception exception) => UnityEngine.Debug.logger.Log($"[{Name}{nameof(LogType.Exception)}]", $"{tag} | {exception}");
     }

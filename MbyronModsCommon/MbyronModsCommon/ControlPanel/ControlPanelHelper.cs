@@ -67,7 +67,7 @@ public static class ControlPanelHelper {
             }
         }
         panel.Padding = DefaultOffset;
-        panel.Gap = 4;
+        panel.Gap = 6;
         panel.StartLayout();
         return panel;
     }

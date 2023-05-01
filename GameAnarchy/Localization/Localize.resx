@@ -150,6 +150,9 @@
   <data name="Commercial" xml:space="preserve">
     <value>Commercial</value>
   </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Custom unlock</value>
   </data>
@@ -174,6 +177,9 @@
   <data name="FireControl" xml:space="preserve">
     <value>Fire Control</value>
   </data>
+  <data name="Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>Ground pollution</value>
   </data>
@@ -185,12 +191,6 @@
   </data>
   <data name="Industrial" xml:space="preserve">
     <value>Industrial</value>
-  </data>
-  <data name="InitialMoney" xml:space="preserve">
-    <value>Game Initial money</value>
-  </data>
-  <data name="InitialMoneyWarning" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts.</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>Buildtin mod, Game Anarchy already includes the same functionality. Please disabled this local mod if you wan to use Game Anarchy funcitons.</value>
@@ -321,6 +321,12 @@
   <data name="Refund" xml:space="preserve">
     <value>Bulldozing refund</value>
   </data>
+  <data name="RelocateBuilding" xml:space="preserve">
+    <value>Relocate building</value>
+  </data>
+  <data name="RelocateBuildingMinor" xml:space="preserve">
+    <value>Construction cost * Multiplier factor = Cost</value>
+  </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Remove airport building fire</value>
   </data>
@@ -386,6 +392,12 @@
   </data>
   <data name="SpaceRadar" xml:space="preserve">
     <value>Space radar</value>
+  </data>
+  <data name="StartMoneyMajor" xml:space="preserve">
+    <value>Game start money</value>
+  </data>
+  <data name="StartMoneyMinor" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>Stock exchange</value>
@@ -514,8 +526,14 @@
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
     <value>Option panel added a entry button option to invoke the control panel.</value>
   </data>
-  <data name="UpdateLog_V0_9_9OPT" xml:space="preserve">
+  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
+    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
     <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
+    <value>Optimize the start money setting logic so that the start money is the value you set when you start a new game.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
     <value>Added Slovak localization.</value>

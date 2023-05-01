@@ -160,6 +160,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Cost 的本地化字符串。
+        /// </summary>
+        public static string Cost {
+            get {
+                return ResourceManager.GetString("Cost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Custom unlock 的本地化字符串。
         /// </summary>
         public static string CustomUnlock {
@@ -232,6 +241,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Free 的本地化字符串。
+        /// </summary>
+        public static string Free {
+            get {
+                return ResourceManager.GetString("Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Ground pollution 的本地化字符串。
         /// </summary>
         public static string GroundPollution {
@@ -264,24 +282,6 @@ namespace GameAnarchy.Localization {
         public static string Industrial {
             get {
                 return ResourceManager.GetString("Industrial", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Game Initial money 的本地化字符串。
-        /// </summary>
-        public static string InitialMoney {
-            get {
-                return ResourceManager.GetString("InitialMoney", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Set value before you start gaming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once. money will change after game simulation starts. 的本地化字符串。
-        /// </summary>
-        public static string InitialMoneyWarning {
-            get {
-                return ResourceManager.GetString("InitialMoneyWarning", resourceCulture);
             }
         }
         
@@ -673,6 +673,24 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Relocate building 的本地化字符串。
+        /// </summary>
+        public static string RelocateBuilding {
+            get {
+                return ResourceManager.GetString("RelocateBuilding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Construction cost * Multiplier factor = Cost 的本地化字符串。
+        /// </summary>
+        public static string RelocateBuildingMinor {
+            get {
+                return ResourceManager.GetString("RelocateBuildingMinor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Remove airport building fire 的本地化字符串。
         /// </summary>
         public static string RemoveAirportBuildingFire {
@@ -867,6 +885,24 @@ namespace GameAnarchy.Localization {
         public static string SpaceRadar {
             get {
                 return ResourceManager.GetString("SpaceRadar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Game start money 的本地化字符串。
+        /// </summary>
+        public static string StartMoneyMajor {
+            get {
+                return ResourceManager.GetString("StartMoneyMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Set value before you start gaming. If you don&apos;t want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts. 的本地化字符串。
+        /// </summary>
+        public static string StartMoneyMinor {
+            get {
+                return ResourceManager.GetString("StartMoneyMinor", resourceCulture);
             }
         }
         
@@ -1231,11 +1267,29 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Added the ability to adjust the cost of relocate building, included in the control panel. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9ADD3 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9ADD3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Optimized the options panel categories horizontal offset option, which now takes effect after adjustment. 的本地化字符串。
         /// </summary>
-        public static string UpdateLog_V0_9_9OPT {
+        public static string UpdateLog_V0_9_9OPT0 {
             get {
-                return ResourceManager.GetString("UpdateLog_V0_9_9OPT", resourceCulture);
+                return ResourceManager.GetString("UpdateLog_V0_9_9OPT0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Optimize the start money setting logic so that the start money is the value you set when you start a new game. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9OPT1 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9OPT1", resourceCulture);
             }
         }
         

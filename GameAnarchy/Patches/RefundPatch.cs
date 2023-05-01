@@ -1,7 +1,7 @@
-﻿using ColossalFramework;
+﻿namespace GameAnarchy.Patches;
+using ColossalFramework;
 using HarmonyLib;
 using UnityEngine;
-namespace GameAnarchy.Patches;
 
 [HarmonyPatch(typeof(BuildingAI))]
 public static class BuildingAIPatch {
@@ -11,6 +11,18 @@ public static class BuildingAIPatch {
         if (Config.Instance.BuildingRefund) {
             var constructionCost = __instance.GetConstructionCost();
             var result = (int)(constructionCost * Config.Instance.BuildingRefundMultipleFactor);
+            __result = result;
+            return false;
+        }
+        return true;
+    }
+
+    [HarmonyPatch(nameof(BuildingAI.GetRelocationCost))]
+    [HarmonyPrefix]
+    public static bool Prefix1(BuildingAI __instance, ref int __result) {
+        if (Config.Instance.BuildingRelocationCostFactor != 0.2) {
+            var constructionCost = __instance.GetConstructionCost();
+            var result = (int)(constructionCost * Config.Instance.BuildingRelocationCostFactor);
             __result = result;
             return false;
         }
@@ -33,7 +45,7 @@ public static class BulldozeToolPatch {
 
     [HarmonyPatch("GetSegmentRefundAmount")]
     [HarmonyPrefix]
-    public static bool Prefix1(ushort segment, ref int __result) { 
+    public static bool Prefix1(ushort segment, ref int __result) {
         if (Config.Instance.SegmentRefund) {
             NetManager instance = Singleton<NetManager>.instance;
             NetInfo info = instance.m_segments.m_buffer[segment].Info;

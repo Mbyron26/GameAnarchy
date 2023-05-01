@@ -9,12 +9,14 @@ using UnityEngine;
 using GameAnarchy.Localization;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
+using ColossalFramework;
+
 namespace GameAnarchy;
 
 public class Mod : ModBase<Mod, Config> {
     public override string SolidModName => "GameAnarchy";
     public override string ModName => "Game Anarchy";
-    public override Version ModVersion => new(0, 9, 9, 43018);
+    public override Version ModVersion => new(0, 9, 9, 5115);
     public override ulong StableID => 2781804786;
     public override ulong? BetaID => 2917685008;
     public override string Description => Localize.MOD_Description;
@@ -41,7 +43,7 @@ public class Mod : ModBase<Mod, Config> {
 
     public override void OnLevelLoaded(LoadMode mode) {
         base.OnLevelLoaded(mode);
-        EconomyExtension.UpdateStartCash();
+        EconomyExtension.SetStartMoney();
         AchievementsManager.InitializeAchievements(mode);
         InfoViewsObject = new GameObject("InfoViewsExtension");
         InfoViewsObject.AddComponent<InfoViewsExtension>();
@@ -104,7 +106,9 @@ public class Mod : ModBase<Mod, Config> {
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
                 new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),
-                new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT),
+                new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD3),
+                new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT0),
+                new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT1),
                 new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),
                 new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),
             }),

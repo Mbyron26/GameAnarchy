@@ -47,6 +47,7 @@ namespace GameAnarchy {
         public bool BuildingRefund { get; set; } = true;
         public bool RemoveBuildingRefundTimeLimitation { get; set; } = true;
         public float BuildingRefundMultipleFactor { get; set; } = 1;
+        public float BuildingRelocationCostFactor { get; set; } = 0.2f;
         public bool SegmentRefund { get; set; } = true;
         public bool RemoveSegmentRefundTimeLimitation { get; set; } = true;
         public float SegmentRefundMultipleFactor { get; set; } = 1;

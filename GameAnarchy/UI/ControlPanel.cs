@@ -89,12 +89,24 @@ internal class ControlPanel : CustomUIPanel {
         SegmentRefundOptions.Add(slider1);
         foreach (var item in SegmentRefundOptions)
             item.isEnabled = Config.Instance.SegmentRefund;
-
-        //BuildingRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.DisableRefundExtension, "Disables overrides of refund extensions by other mods", null, (_) => Config.Instance.DisableRefundExtension = _));
         ControlPanelHelper.Reset();
-#if DEBUG
 
-#endif
+        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, "Relocate building");
+        var slider2 = ControlPanelHelper.AddSlider(GetRelocateCost(), Localization.Localize.RelocateBuildingMinor, 0, 1, 0.05f, Config.Instance.BuildingRelocationCostFactor, new(388, 16), (_) => {
+            Config.Instance.BuildingRelocationCostFactor = _;
+            label6.Text = GetRelocateCost();
+        });
+        label6 = slider2.MajorLabel;
+        ControlPanelHelper.Reset();
+    }
+    string GetRelocateCost() {
+        var factor = Config.Instance.BuildingRelocationCostFactor;
+        var prefix = Localization.Localize.Cost + ": ";
+        return prefix + factor switch {
+            0 => $"{factor} ({Localization.Localize.Free})",
+            0.2f => $"{factor} ({Localization.Localize.Vanilla})",
+            _ => factor.ToString(),
+        };
     }
     string GetRefundMultipleFactor(string prefixText, float factor) {
         var prefix = $"{prefixText}: {factor}";
@@ -111,6 +123,7 @@ internal class ControlPanel : CustomUIPanel {
     CustomUILabel label1;
     CustomUILabel label4;
     CustomUILabel label5;
+    CustomUILabel label6;
     public void FillServiceContainer() {
         ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, Localization.Localize.RemovePollution);
         ControlPanelHelper.AddToggle(Config.Instance.RemoveNoisePollution, Localization.Localize.NoisePollution, null, (v) => Config.Instance.RemoveNoisePollution = v);
