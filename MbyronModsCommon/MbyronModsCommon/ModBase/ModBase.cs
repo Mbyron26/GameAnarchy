@@ -1,11 +1,11 @@
-﻿using ICities;
+﻿namespace MbyronModsCommon;
+using ICities;
 using System;
 using System.Collections.Generic;
 using ColossalFramework.IO;
 using System.IO;
 using System.Globalization;
 using ColossalFramework.Globalization;
-namespace MbyronModsCommon;
 
 public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
     public static string SolidModName => Instance.SolidModName;
@@ -161,6 +161,30 @@ public enum BuildVersion {
     Debug,
     Beta,
     Stable
+}
+
+public class ModThreadExtensionBase : ThreadingExtensionBase {
+    public void AddCallOnceInvoke(bool target, ref bool flag, Action action) {
+        if (target) {
+            if (!flag) {
+                flag = true;
+                action.Invoke();
+            }
+        } else {
+            flag = false;
+        }
+    }
+}
+
+public class ModConfigBase<Config> : SingletonMod<Config>, IModConfig where Config : ModConfigBase<Config> {
+    public string ModVersion { get; set; } = "0.0";
+    public string ModLanguage { get; set; } = "GameLanguage";
+    public bool DebugMode { get; set; } = false;
+}
+
+public interface IModConfig {
+    string ModVersion { get; set; }
+    string ModLanguage { get; set; }
 }
 
 public abstract class SingletonMod<Type> {
