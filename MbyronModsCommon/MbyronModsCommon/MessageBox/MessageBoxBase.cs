@@ -1,9 +1,9 @@
-﻿using MbyronModsCommon.UI;
+﻿namespace MbyronModsCommon;
+using MbyronModsCommon.UI;
 using ColossalFramework.UI;
 using ColossalFramework;
 using UnityEngine;
 using ICities;
-namespace MbyronModsCommon;
 
 public static class MessageBox {
     public static T Show<T>() where T : MessageBoxBase {
