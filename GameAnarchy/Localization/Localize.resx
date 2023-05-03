@@ -418,7 +418,7 @@
     <value>Unlock all</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
-    <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
+    <value>It is recommended to set this before you start the game. If disabled this option still unlocks something, make sure you have disabled Find It! "Unlock All" option. The "Unlock all" option in Find It! only unlocks all assets in the Find it! menu, but do not unlock milestones.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Unlock all roads</value>

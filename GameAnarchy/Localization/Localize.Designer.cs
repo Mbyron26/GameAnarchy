@@ -961,7 +961,7 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 This option is the same as vanilla &quot;Unlock All&quot; features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! &quot;Unlock All&quot; option. 的本地化字符串。
+        ///   查找类似 It is recommended to set this before you start the game. If disabled this option still unlocks something, make sure you have disabled Find It! &quot;Unlock All&quot; option. The &quot;Unlock all&quot; option in Find It! only unlocks all assets in the Find it! menu, but do not unlock milestones. 的本地化字符串。
         /// </summary>
         public static string UnlockAllMinor {
             get {
