@@ -50,7 +50,7 @@ public static class OptionsMainPanelPatch {
                 yield return new CodeInstruction(OpCodes.Ldarg_0);
                 yield return new CodeInstruction(OpCodes.Ldflda, dummiesField);
                 instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);
-                InternalLogger.LogPatch(PatchType.Transpiler, "PluginManager.GetPluginsInfo", "PluginManagerExtension.GetPluginsInfoSortByName");
+                InternalLogger.LogPatch(PatchType.Transpiler, "OptionsMainPanel.AddUserMods", "OptionsMainPanelPatch.Transpiler");
             }
             yield return instruction;
         }
