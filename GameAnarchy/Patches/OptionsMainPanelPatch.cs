@@ -39,7 +39,6 @@ public static class OptionsMainPanelPatch {
             CodeInstruction instruction = instructionsEnumerator.Current;
             if (instruction.Calls(getPluginsInfo)) {
                 instruction = new CodeInstruction(OpCodes.Call, getPluginsInfoInOrder);
-                InternalLogger.LogPatch(PatchType.Transpiler, addCategory.Name, addCategoryExtension.Name);
             }
             if (instruction.Calls(addCategory)) {
                 yield return new CodeInstruction(OpCodes.Ldloc_0);
@@ -49,11 +48,11 @@ public static class OptionsMainPanelPatch {
                 yield return new CodeInstruction(OpCodes.Ldflda, categoriesContainerField);
                 yield return new CodeInstruction(OpCodes.Ldarg_0);
                 yield return new CodeInstruction(OpCodes.Ldflda, dummiesField);
-                instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);
-                InternalLogger.LogPatch(PatchType.Transpiler, "OptionsMainPanel.AddUserMods", "OptionsMainPanelPatch.Transpiler");
+                instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);               
             }
             yield return instruction;
         }
+        InternalLogger.LogPatch(PatchType.Transpiler, "OptionsMainPanel.AddUserMods", "OptionsMainPanelPatch.Transpiler");
     }
 
     private static string GetModUpdatedDate(PluginManager.PluginInfo pluginInfo) {
