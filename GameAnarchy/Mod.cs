@@ -1,6 +1,6 @@
 ﻿global using MbyronModsCommon;
+namespace GameAnarchy;
 using CitiesHarmony.API;
-using GameAnarchy.FireControl;
 using ICities;
 using System;
 using System.Collections.Generic;
@@ -9,14 +9,9 @@ using UnityEngine;
 using GameAnarchy.Localization;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
-using ColossalFramework;
-
-namespace GameAnarchy;
 
 public class Mod : ModBase<Mod, Config> {
-    public override string SolidModName => "GameAnarchy";
     public override string ModName => "Game Anarchy";
-    public override Version ModVersion => new(0, 9, 9, 5115);
     public override ulong StableID => 2781804786;
     public override ulong? BetaID => 2917685008;
     public override string Description => Localize.MOD_Description;

@@ -1,5 +1,4 @@
-﻿using GameAnarchy.FireControl;
-using HarmonyLib;
+﻿using HarmonyLib;
 
 namespace GameAnarchy {
 

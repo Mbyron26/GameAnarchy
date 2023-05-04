@@ -1,4 +1,5 @@
-﻿using ColossalFramework.Plugins;
+﻿namespace GameAnarchy;
+using ColossalFramework.Plugins;
 using ColossalFramework.UI;
 using HarmonyLib;
 using System;
@@ -7,7 +8,6 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.IO;
 using GameAnarchy.Localization;
-namespace GameAnarchy;
 
 [HarmonyPatch(typeof(OptionsMainPanel))]
 public static class OptionsMainPanelPatch {
@@ -17,8 +17,7 @@ public static class OptionsMainPanelPatch {
         if (visible) {
             try {
                 OptionsPanelCategoriesManager.SetCategoriesOffset(comp);
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 ExternalLogger.Exception($"Options main panel OnVisibilityChanged patch failed.", e);
             }
         }
@@ -48,7 +47,7 @@ public static class OptionsMainPanelPatch {
                 yield return new CodeInstruction(OpCodes.Ldflda, categoriesContainerField);
                 yield return new CodeInstruction(OpCodes.Ldarg_0);
                 yield return new CodeInstruction(OpCodes.Ldflda, dummiesField);
-                instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);               
+                instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);
             }
             yield return instruction;
         }
@@ -83,23 +82,18 @@ public static class OptionsMainPanelPatch {
             } else {
                 date = "<color #8BBD3A>" + string.Format(Localize.Updated_YesterdayAt, updatedTime) + "</color>";
             }
-
         } else if (days <= 30) {
             if (days == 1) {
                 date = "<color #059641>" + Localize.Updated_Yesterday + "</color>";
             } else {
-                if (days < 15) {
-                    date = "<color #059641>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
-                } else {
-                    date = "<color #009ED6>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
-                }
+                date = "<color #059641>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
             }
         } else if (days > 30 && days <= 365) {
-            if (days < 60) {
+            if (days <= 60) {
                 date = "<color #009ED6>" + string.Format(Localize.Updated_MonthAgo, months) + "</color>";
-            } else if (days < 90) {
+            } else if (days <= 90) {
                 date = "<color #009ED6>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
-            } else if (days < 180) {
+            } else if (days <= 180) {
                 date = "<color #6A2A78>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
             } else {
                 date = "<color #F08E2B>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
@@ -114,8 +108,12 @@ public static class OptionsMainPanelPatch {
         return date;
     }
     private static void AddCategoryExtension(string name, UIComponent container, PluginManager.PluginInfo pluginInfo, ref UIListBox categories, ref UITabContainer categoriesContainer, ref List<UIComponent> dummies) {
-        if (Config.Instance.OptionPanelCategoriesUpdated)
+        if (Config.Instance.OptionPanelCategoriesUpdated) {
+            if (pluginInfo.publishedFileID.Equals(new ColossalFramework.PlatformServices.PublishedFileId(ulong.MaxValue))) {
+                name += $" | <color #FEF011>Local</color>";
+            }
             name = name + " | " + GetModUpdatedDate(pluginInfo);
+        }
         List<string> list;
         if (categories.items != null) {
             list = new List<string>(categories.items);

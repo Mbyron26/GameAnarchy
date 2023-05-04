@@ -355,7 +355,7 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
             this.value = value;
         }
         RefreshText();
-        EventValueChanged?.Invoke(value);
+        EventValueChanged?.Invoke(this.value);
     }
     protected virtual void OnStateChanged(SpriteState value) {
         if (!isEnabled && value != SpriteState.Disabled) {
