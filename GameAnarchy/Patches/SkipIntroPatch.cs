@@ -8,9 +8,13 @@ using System.Reflection.Emit;
 public static class SkipIntroPatch {
     public static void Patch(Harmony harmony) {
         if (!Config.Instance.EnabledSkipIntro) return;
-        harmony.Patch(typeof(LoadingManager).GetNestedTypes(BindingFlags.NonPublic).Single(x => x.FullName == "LoadingManager+<LoadIntroCoroutine>c__Iterator0").GetMethod("MoveNext"), null, null, new HarmonyMethod(AccessTools.Method(typeof(SkipIntroPatch), nameof(SkipIntroPatch.LoadIntroCoroutineTranspiler))));
+        var original = typeof(LoadingManager).GetNestedTypes(BindingFlags.NonPublic).Single(x => x.FullName == "LoadingManager+<LoadIntroCoroutine>c__Iterator0").GetMethod("MoveNext");
+        if (original is null) return;
+        var patch = AccessTools.Method(typeof(SkipIntroPatch), nameof(SkipIntroPatch.LoadIntroCoroutineTranspiler));
+        if (patch is null) return;
+        harmony.Patch(original, null, null, new HarmonyMethod(patch));
+        InternalLogger.LogPatch(PatcherType.Transpiler, original, original.Name, patch, patch.Name);
     }
-
     public static IEnumerable<CodeInstruction> LoadIntroCoroutineTranspiler(IEnumerable<CodeInstruction> codeInstructions) {
         var instructionsEnumerator = codeInstructions.GetEnumerator();
         while (instructionsEnumerator.MoveNext()) {
@@ -22,7 +26,6 @@ public static class SkipIntroPatch {
             }
             yield return instruction;
         }
-        InternalLogger.LogPatch(PatchType.Transpiler, "LoadingManager.LoadIntroCoroutine", nameof(SkipIntroPatch.LoadIntroCoroutineTranspiler));
     }
 }
 

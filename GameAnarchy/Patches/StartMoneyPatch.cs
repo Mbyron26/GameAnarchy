@@ -1,16 +1,16 @@
 ﻿namespace GameAnarchy.Patches;
 using ColossalFramework;
 using HarmonyLib;
+using System.Reflection;
 
-[HarmonyPatch(typeof(EconomyManager), nameof(EconomyManager.UpdateData))]
 public static class UpdateDataStartMoneyPatch {
-    public static void Prefix(EconomyManager __instance) {
-        if (Config.Instance.EnabledInitialCash) {
-            var updateMode = Singleton<SimulationManager>.instance.m_metaData.m_updateMode;
-            if (updateMode == SimulationManager.UpdateMode.NewMap || updateMode == SimulationManager.UpdateMode.NewGameFromMap || updateMode == SimulationManager.UpdateMode.NewScenarioFromMap || updateMode == SimulationManager.UpdateMode.UpdateScenarioFromMap || updateMode == SimulationManager.UpdateMode.NewAsset || updateMode == SimulationManager.UpdateMode.NewGameFromScenario) {
-                __instance.StartMoney = Config.Instance.InitialCash * 100;
-                InternalLogger.LogPatch(PatchType.Prefix, "EconomyManager.UpdateData", nameof(UpdateDataStartMoneyPatch));
-            }
+    public static MethodInfo GetOriginalUpdateData() => AccessTools.Method(typeof(EconomyManager), nameof(EconomyManager.UpdateData));
+    public static MethodInfo GetUpdateDataPrefix() => AccessTools.Method(typeof(UpdateDataStartMoneyPatch), nameof(UpdateDataStartMoneyPatch.UpdateDataPrefix));
+    public static void UpdateDataPrefix(EconomyManager __instance) {
+        if (!Config.Instance.EnabledInitialCash) return;
+        var updateMode = Singleton<SimulationManager>.instance.m_metaData.m_updateMode;
+        if (updateMode == SimulationManager.UpdateMode.NewMap || updateMode == SimulationManager.UpdateMode.NewGameFromMap || updateMode == SimulationManager.UpdateMode.NewScenarioFromMap || updateMode == SimulationManager.UpdateMode.UpdateScenarioFromMap || updateMode == SimulationManager.UpdateMode.NewAsset || updateMode == SimulationManager.UpdateMode.NewGameFromScenario) {
+            __instance.StartMoney = Config.Instance.InitialCash * 100;
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using UnityEngine;
+using System.Reflection;
 
 namespace MbyronModsCommon {
     public static class ExternalLogger {
@@ -47,8 +48,7 @@ namespace MbyronModsCommon {
                 } else {
                     sw.WriteLine($"{tag}: {new StackFrame(2, true).GetMethod().Name} ==> {message}");
                 }
-            }
-            finally {
+            } finally {
                 Monitor.Exit(fileLock);
             }
         }
@@ -75,8 +75,7 @@ namespace MbyronModsCommon {
                         sw.WriteLine($"{info.name} - {modInstance.Name} " + (info.isEnabled ? @"** Enabled **" : @"** Disabled **"));
                 }
                 sw.WriteLine(@"----------------------------------------------");
-            }
-            finally {
+            } finally {
                 Monitor.Exit(fileLock);
             }
         }
@@ -89,9 +88,8 @@ namespace MbyronModsCommon {
         public static void Error(object message) => UnityEngine.Debug.logger.LogError($"[{Name}{nameof(LogType.Error)}]", $" {message}");
         public static void Warning(object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{message}");
         public static void Warning(string tag, object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{tag} | {message}");
-        public static void Log(string tag, object message) => UnityEngine.Debug.logger.Log($"[{AssemblyUtils.CurrentAssemblyName}{nameof(LogType.Log)}]", $"{tag} | {message}");
-        public static void LogPatch(PatchType patchType, string raw, string patch) => UnityEngine.Debug.logger.Log($"[{AssemblyUtils.CurrentAssemblyName}{LogType.Log}{patchType}]", $"{raw} patched by {patch}.");
-        public static void Log(object message) => UnityEngine.Debug.logger.Log($"[{Name}{nameof(LogType.Log)}]", $"{message}");
+        public static void LogPatch(PatcherType patchType, MethodBase original, string originalMethod, MethodInfo patch, string patchMethod) => UnityEngine.Debug.logger.Log($"{Name} | [{patchType}]", $"[{original.DeclaringType.FullName}.{originalMethod}] patched by [{patch.DeclaringType.FullName}.{patchMethod}]");
+        public static void Log(object message) => UnityEngine.Debug.logger.Log($"{Name} | [{LogType.Log}]", $"{message}");
         public static void Exception(string tag, Exception exception) => UnityEngine.Debug.logger.Log($"[{Name}{nameof(LogType.Exception)}]", $"{tag} | {exception}");
     }
 

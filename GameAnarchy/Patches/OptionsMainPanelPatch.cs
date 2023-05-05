@@ -1,4 +1,4 @@
-﻿namespace GameAnarchy;
+﻿namespace GameAnarchy.Patches;
 using ColossalFramework.Plugins;
 using ColossalFramework.UI;
 using HarmonyLib;
@@ -9,11 +9,13 @@ using System.Reflection.Emit;
 using System.IO;
 using GameAnarchy.Localization;
 
-[HarmonyPatch(typeof(OptionsMainPanel))]
 public static class OptionsMainPanelPatch {
-    [HarmonyPatch("OnVisibilityChanged")]
-    [HarmonyPostfix]
-    public static void Postfix0(UIComponent comp, bool visible) {
+    public static MethodInfo GetOriginalOnVisibilityChanged() => AccessTools.Method(typeof(OptionsMainPanel), "OnVisibilityChanged");
+    public static MethodInfo GetOnVisibilityChangedPostfix() => AccessTools.Method(typeof(OptionsMainPanelPatch), "OnVisibilityChangedPostfix");
+    public static MethodInfo GetOriginalAddUserMods()=> AccessTools.Method(typeof(OptionsMainPanel), "AddUserMods");
+    public static MethodInfo GetAddUserModsTranspiler() => AccessTools.Method(typeof(OptionsMainPanelPatch), "AddUserModsTranspiler");
+
+    public static void OnVisibilityChangedPostfix(UIComponent comp, bool visible) {
         if (visible) {
             try {
                 OptionsPanelCategoriesManager.SetCategoriesOffset(comp);
@@ -22,10 +24,7 @@ public static class OptionsMainPanelPatch {
             }
         }
     }
-
-    [HarmonyTranspiler]
-    [HarmonyPatch("AddUserMods")]
-    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {
+    public static IEnumerable<CodeInstruction> AddUserModsTranspiler(IEnumerable<CodeInstruction> instructions) {
         MethodInfo addCategory = typeof(OptionsMainPanel).GetMethod("AddCategory", BindingFlags.NonPublic | BindingFlags.Instance);
         MethodInfo getPluginsInfo = typeof(PluginManager).GetMethod("GetPluginsInfo", BindingFlags.Public | BindingFlags.Instance);
         MethodInfo addCategoryExtension = AccessTools.Method(typeof(OptionsMainPanelPatch), nameof(AddCategoryExtension));
@@ -51,7 +50,7 @@ public static class OptionsMainPanelPatch {
             }
             yield return instruction;
         }
-        InternalLogger.LogPatch(PatchType.Transpiler, "OptionsMainPanel.AddUserMods", "OptionsMainPanelPatch.Transpiler");
+
     }
 
     private static string GetModUpdatedDate(PluginManager.PluginInfo pluginInfo) {

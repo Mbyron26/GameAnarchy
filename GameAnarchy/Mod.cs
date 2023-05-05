@@ -1,6 +1,5 @@
 ﻿global using MbyronModsCommon;
 namespace GameAnarchy;
-using CitiesHarmony.API;
 using ICities;
 using System;
 using System.Collections.Generic;
@@ -9,8 +8,9 @@ using UnityEngine;
 using GameAnarchy.Localization;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
+using GameAnarchy.Patches;
 
-public class Mod : ModBase<Mod, Config> {
+public class Mod : ModPatcherBase<Mod, Config> {
     public override string ModName => "Game Anarchy";
     public override ulong StableID => 2781804786;
     public override ulong? BetaID => 2917685008;
@@ -54,18 +54,6 @@ public class Mod : ModBase<Mod, Config> {
         UUI.Destory();
     }
 
-    public override void OnEnabled() {
-        base.OnEnabled();
-        HarmonyHelper.DoOnHarmonyReady(Patcher.EnablePatches);
-    }
-
-    public override void OnDisabled() {
-        base.OnDisabled();
-        if (HarmonyHelper.IsHarmonyInstalled) {
-            Patcher.DisablePatches();
-        }
-    }
-
     public override void OnReleased() {
         base.OnReleased();
         ExternalLogger.DebugMode($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
@@ -77,6 +65,15 @@ public class Mod : ModBase<Mod, Config> {
         base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
         LocaleManager.eventLocaleChanged += ControlPanelManager.OnLocaleChanged;
+    }
+
+    protected override void PatchAction() {
+        AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());
+        AddTranspiler(OptionsMainPanelPatch.GetOriginalAddUserMods(), OptionsMainPanelPatch.GetAddUserModsTranspiler());
+        AddPrefix(FastReturnPatch.GetOriginalQuitApplication(), FastReturnPatch.GetQuitApplicationPrefix());
+        AddPrefix(UpdateDataStartMoneyPatch.GetOriginalUpdateData(), UpdateDataStartMoneyPatch.GetUpdateDataPrefix());
+        AddPostfix(AchievementsPatch.GetOriginalOnListingSelectionChanged(), AchievementsPatch.GetOnListingSelectionChangedPostfix());
+        SkipIntroPatch.Patch(Harmony);
     }
 
     private List<IncompatibleModInfo> ConflictMods { get; set; } = new()  {

@@ -13,7 +13,7 @@ public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
     public static BuildVersion VersionType => Instance.VersionType;
 }
 
-public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : ModConfig<C>, new() {
+public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBase<TypeMod, TypeConfig> where TypeConfig : ModConfig<TypeConfig>, new() {
     private CultureInfo modCulture;
 
     public virtual string RawName => AssemblyUtils.CurrentAssemblyName;
@@ -39,9 +39,9 @@ public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : Mod
     }
 
     public ModBase() {
-        SingletonMod<M>.Instance = (M)this;
+        SingletonMod<TypeMod>.Instance = (TypeMod)this;
         InternalLogger.Log($"Start initializing mod.");
-        ExternalLogger.CreateDebugFile<M>();
+        ExternalLogger.CreateDebugFile<TypeMod>();
         LoadConfig();
         CompatibilityCheck.ModName = ModName;
     }
@@ -59,12 +59,12 @@ public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : Mod
     protected void LoadLocale() {
         CultureInfo locale;
         try {
-            if (SingletonItem<C>.Instance.ModLanguage == "GameLanguage") {
+            if (SingletonItem<TypeConfig>.Instance.ModLanguage == "GameLanguage") {
                 var culture = ModLocalize.UseGameLanguage();
                 locale = new CultureInfo(culture);
                 InternalLogger.Log($"Change mod locale, use game language: {locale}.");
             } else {
-                locale = new CultureInfo(SingletonItem<C>.Instance.ModLanguage);
+                locale = new CultureInfo(SingletonItem<TypeConfig>.Instance.ModLanguage);
                 InternalLogger.Log($"Change mod locale, use custom language: {locale}.");
             }
             ModCulture = locale;
@@ -72,8 +72,8 @@ public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : Mod
             InternalLogger.Exception($"Could't change mod locale", e);
         }
     }
-    public void LoadConfig() => ModConfig<C>.Load();
-    public void SaveConfig() => ModConfig<C>.Save();
+    public void LoadConfig() => ModConfig<TypeConfig>.Load();
+    public void SaveConfig() => ModConfig<TypeConfig>.Save();
     public virtual void OnEnabled() {
         LoadingManager.instance.m_introLoaded += IntroActions;
     }
@@ -88,22 +88,22 @@ public abstract class ModBase<M, C> : IMod where M : ModBase<M, C> where C : Mod
 
     private void ShowLogMessageBox() {
         if (VersionType != BuildVersion.Beta) {
-            SingletonItem<C>.Instance.ModVersion = ModVersion.ToString();
+            SingletonItem<TypeConfig>.Instance.ModVersion = ModVersion.ToString();
             SaveConfig();
             return;
         }
-        if (!string.IsNullOrEmpty(SingletonItem<C>.Instance.ModVersion)) {
-            var lastVersion = new Version(SingletonItem<C>.Instance.ModVersion);
+        if (!string.IsNullOrEmpty(SingletonItem<TypeConfig>.Instance.ModVersion)) {
+            var lastVersion = new Version(SingletonItem<TypeConfig>.Instance.ModVersion);
             if ((lastVersion.Major == ModVersion.Major) && (lastVersion.Minor == ModVersion.Minor) && (lastVersion.Build == ModVersion.Build)) {
-                SingletonItem<C>.Instance.ModVersion = ModVersion.ToString();
+                SingletonItem<TypeConfig>.Instance.ModVersion = ModVersion.ToString();
                 SaveConfig();
                 return;
             }
             if (lastVersion < ModVersion) {
                 var messageBox = MessageBox.Show<LogMessageBox>();
-                messageBox.Initialize<M>(true);
+                messageBox.Initialize<TypeMod>(true);
             }
-            SingletonItem<C>.Instance.ModVersion = ModVersion.ToString();
+            SingletonItem<TypeConfig>.Instance.ModVersion = ModVersion.ToString();
             SaveConfig();
         } else {
             InternalLogger.Error("Updated version failed, mod version is null or empty in config file.");
