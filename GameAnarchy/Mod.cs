@@ -73,6 +73,10 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPrefix(FastReturnPatch.GetOriginalQuitApplication(), FastReturnPatch.GetQuitApplicationPrefix());
         AddPrefix(UpdateDataStartMoneyPatch.GetOriginalUpdateData(), UpdateDataStartMoneyPatch.GetUpdateDataPrefix());
         AddPostfix(AchievementsPatch.GetOriginalOnListingSelectionChanged(), AchievementsPatch.GetOnListingSelectionChangedPostfix());
+        AddPrefix(BulldozeToolPatch.GetOriginalGetBuildingRefundAmount(), BulldozeToolPatch.GetGetBuildingRefundAmountPrefix());
+        AddPrefix(BulldozeToolPatch.GetOriginalGetSegmentRefundAmount(), BulldozeToolPatch.GetGetSegmentRefundAmountPrefix());
+        AddPrefix(BuildingAIPatch.GetOriginalGetRefundAmount(), BuildingAIPatch.GetGetRefundAmountPrefix());
+        AddPrefix(BuildingAIPatch.GetOriginalGetRelocationCost(), BuildingAIPatch.GetGetRelocationCostPrefix());
         SkipIntroPatch.Patch(Harmony);
     }
 

@@ -20,18 +20,18 @@ public abstract class ModPatcherBase<TypeMod, TypeConfig> : ModBase<TypeMod, Typ
     protected virtual void PatchAll() {
         if (IsPatched) return;
         if (HarmonyHelper.IsHarmonyInstalled) {
-            InternalLogger.Log("Starting Harmony patches.");
+            InternalLogger.Log("Starting Harmony patches");
             Harmony.PatchAll();
             PatchAction();
             IsPatched = true;
-            InternalLogger.Log("Harmony patches completed.");
+            InternalLogger.Log("Harmony patches completed");
         } else {
-            InternalLogger.Error("Harmony is not installed correctly.");
+            InternalLogger.Error("Harmony is not installed correctly");
         }
     }
     protected virtual void UnpatchAll() {
         if (!IsPatched || !HarmonyHelper.IsHarmonyInstalled) return;
-        InternalLogger.Log("Reverting Harmony patches.");
+        InternalLogger.Log("Reverting Harmony patches");
         Harmony.UnpatchAll(HarmonyID);
         IsPatched = false;
     }
