@@ -77,6 +77,13 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPrefix(BulldozeToolPatch.GetOriginalGetSegmentRefundAmount(), BulldozeToolPatch.GetGetSegmentRefundAmountPrefix());
         AddPrefix(BuildingAIPatch.GetOriginalGetRefundAmount(), BuildingAIPatch.GetGetRefundAmountPrefix());
         AddPrefix(BuildingAIPatch.GetOriginalGetRelocationCost(), BuildingAIPatch.GetGetRelocationCostPrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalPlayerBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetPlayerBuildingAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalStockExchangeAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetStockExchangeAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFacultyAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFacultyAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalWeatherRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetWeatherRadarAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix());
         SkipIntroPatch.Patch(Harmony);
     }
 
