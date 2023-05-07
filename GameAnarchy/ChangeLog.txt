@@ -6,7 +6,8 @@ Added the ability to adjust the cost of relocate building, included in the contr
 Option panel added a entry button option to invoke the control panel.
 Added Slovak localization.
 Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.
-Optimize the start money setting logic so that the start money is the value you set when you start a new game.
+Optimized the start money setting logic so that the start money is the value you set when you start a new game.
+Fixed an issue where still catch fire after remove fires.
 Updated UI style.
 
 V0.9.8

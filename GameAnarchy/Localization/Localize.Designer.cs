@@ -1276,6 +1276,15 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
+        ///   查找类似 Fixed an issue where still catch fire after remove fires. 的本地化字符串。
+        /// </summary>
+        public static string UpdateLog_V0_9_9FIX0 {
+            get {
+                return ResourceManager.GetString("UpdateLog_V0_9_9FIX0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Optimized the options panel categories horizontal offset option, which now takes effect after adjustment. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_9OPT0 {
@@ -1285,7 +1294,7 @@ namespace GameAnarchy.Localization {
         }
         
         /// <summary>
-        ///   查找类似 Optimize the start money setting logic so that the start money is the value you set when you start a new game. 的本地化字符串。
+        ///   查找类似 Optimized the start money setting logic so that the start money is the value you set when you start a new game. 的本地化字符串。
         /// </summary>
         public static string UpdateLog_V0_9_9OPT1 {
             get {

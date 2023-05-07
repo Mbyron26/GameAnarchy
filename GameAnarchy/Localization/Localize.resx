@@ -529,11 +529,14 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
   </data>
+  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
+    <value>Fixed an issue where still catch fire after remove fires.</value>
+  </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
     <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimize the start money setting logic so that the start money is the value you set when you start a new game.</value>
+    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
     <value>Added Slovak localization.</value>
