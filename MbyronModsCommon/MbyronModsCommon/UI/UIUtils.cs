@@ -1,4 +1,5 @@
-﻿using ColossalFramework.Importers;
+﻿namespace MbyronModsCommon.UI;
+using ColossalFramework.Importers;
 using ColossalFramework.UI;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
-namespace MbyronModsCommon.UI;
 
 public class UIUtils {
     public static UITextureAtlas CreateTextureAtlas(string atlasName, string path, Dictionary<string, RectOffset> spriteParams, int maxSpriteSize = 1024) {
