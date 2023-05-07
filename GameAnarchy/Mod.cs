@@ -84,6 +84,23 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePrefix());
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePrefix());
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAITrySpreadFire(), RemoveFirePatch.GetCommonBuildingAITrySpreadFirePrefix());
+        AddPrefix(RemoveFirePatch.GetOriginalTreeManagerTrySpreadFire(), RemoveFirePatch.GetTreeManagerTrySpreadFirePrefix());
+        AddPrefix(RemoveFirePatch.GetOriginalTreeManagerBurnTree(), RemoveFirePatch.GetTreeManagerBurnTreePrefix());
+        AddPostfix(RemoveFirePatch.GetOriginalPlayerBuildingAIGetFireParameters(), RemoveFirePatch.GetPlayerBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalResidentialBuildingAIGetFireParameters(), RemoveFirePatch.GetResidentialBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalIndustrialBuildingAIGetFireParameters(), RemoveFirePatch.GetIndustrialBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalCommercialBuildingAIGetFireParameters(), RemoveFirePatch.GetCommercialBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalOfficeBuildingAIGetFireParameters(), RemoveFirePatch.GetOfficeBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalIndustrialExtractorAIGetFireParameters(), RemoveFirePatch.GetIndustrialExtractorAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalParkBuildingAIGetFireParameters(), RemoveFirePatch.GetParkBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalMuseumAIGetFireParameters(), RemoveFirePatch.GetMuseumAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalDummyBuildingAIGetFireParameters(), RemoveFirePatch.GetDummyBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalCampusBuildingAIGetFireParameters(), RemoveFirePatch.GetCampusBuildingAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalAirportGateAIGetFireParameters(), RemoveFirePatch.GetAirportGateAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalAirportCargoGateAIGetFireParameters(), RemoveFirePatch.GetAirportCargoGateAIGetFireParametersPostfix());
+        AddPostfix(RemoveFirePatch.GetOriginalAirportBuildingAIGetFireParameters(), RemoveFirePatch.GetAirportBuildingAIGetFireParametersPostfix());
+        AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAIHandleFire(), RemoveFirePatch.GetHandleFirePrefix());
         SkipIntroPatch.Patch(Harmony);
     }
 
