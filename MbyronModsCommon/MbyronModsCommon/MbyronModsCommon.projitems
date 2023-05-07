@@ -24,7 +24,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\ModLogger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\PluginManagerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModUtils\UnityHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ModUtils\XMLUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OptionPanel\OptionPanelManager.cs" />
