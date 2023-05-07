@@ -1,8 +1,8 @@
-﻿using ColossalFramework;
+﻿namespace MbyronModsCommon.UI;
+using ColossalFramework;
 using ColossalFramework.UI;
 using System;
 using UnityEngine;
-namespace MbyronModsCommon.UI;
 
 public class UISlicedSpriteRender : UISpriteRender {
     public new static void RenderSprite(UIRenderData renderData, RenderOptions options) {
