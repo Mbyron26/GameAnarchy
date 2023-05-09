@@ -46,7 +46,6 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     }
 
     public virtual void SetModCulture(CultureInfo cultureInfo) { }
-    public virtual IEnumerable<string> GetSupportLocales() => CommonLocalize.LocaleManager.GetSupportLocales();
     public abstract string GetLocale(string text);
     public void OnSettingsUI(UIHelperBase helper) {
         InternalLogger.Log($"Setting UI.");
@@ -188,5 +187,4 @@ public interface IMod : IUserMod, ILoadingExtension {
     CultureInfo ModCulture { get; set; }
     void SaveConfig();
     void LoadConfig();
-    IEnumerable<string> GetSupportLocales();
 }

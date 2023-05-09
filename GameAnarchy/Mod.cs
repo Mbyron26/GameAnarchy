@@ -27,7 +27,6 @@ public class Mod : ModPatcherBase<Mod, Config> {
 #endif
 
     public override void SetModCulture(CultureInfo cultureInfo) => Localize.Culture = cultureInfo;
-    public override IEnumerable<string> GetSupportLocales() => Localize.LocaleManager.GetSupportLocales();
     public override void IntroActions() {
         base.IntroActions();
         CompatibilityCheck.IncompatibleMods = ConflictMods;
