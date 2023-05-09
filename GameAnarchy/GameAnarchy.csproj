@@ -158,6 +158,14 @@
 	<Import Project="..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
 
 	<ItemGroup>
+	  <Compile Update="Properties\Localize.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localize.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.9\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Locale\Common\CommonLocalize.resx">
 			<LastGenOutput>CommonLocalize.cs</LastGenOutput>
 		</None>

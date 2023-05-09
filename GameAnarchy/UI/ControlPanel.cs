@@ -91,7 +91,7 @@ internal class ControlPanel : CustomUIPanel {
             item.isEnabled = Config.Instance.SegmentRefund;
         ControlPanelHelper.Reset();
 
-        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, "Relocate building");
+        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, GameAnarchy.Localize.RelocateBuilding);
         var slider2 = ControlPanelHelper.AddSlider(GetRelocateCost(), GameAnarchy.Localize.RelocateBuildingMinor, 0, 1, 0.05f, Config.Instance.BuildingRelocationCostFactor, new(388, 16), (_) => {
             Config.Instance.BuildingRelocationCostFactor = _;
             label6.Text = GetRelocateCost();
