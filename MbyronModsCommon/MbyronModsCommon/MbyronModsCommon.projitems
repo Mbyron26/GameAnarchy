@@ -9,6 +9,10 @@
     <Import_RootNamespace>MbyronModsCommon</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Locale\Language.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Locale\LocalizeManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Locale\ResxReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\CompatibilityMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\LogMessageBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageBox\MessageBoxBase.cs" />
@@ -49,6 +53,60 @@
     <Compile Include="$(MSBuildThisFileDirectory)UI\UIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.cs.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.de.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.es-ES.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.fr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.it.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.ja.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.ko.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.ms.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.nl.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.pl.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.pt-BR.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.ru.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.sk.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.th.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.tr.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.zh-CN.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.zh-TW.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ArrowDown.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\EmptySprite.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\GradientSlider.png" />

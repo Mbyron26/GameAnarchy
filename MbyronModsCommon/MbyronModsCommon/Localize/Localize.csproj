@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="CommonLocalize.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="CommonLocalize.resx">
+      <Generator>LocalizeGenerator</Generator>
+      <LastGenOutput>CommonLocalize.cs</LastGenOutput>
+      <CustomToolNamespace>MbyronModsCommon</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CommonLocalize.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CommonLocalize.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <Import Project="..\..\MbyronModsCommon.projitems" Label="Shared" />
+
+</Project>

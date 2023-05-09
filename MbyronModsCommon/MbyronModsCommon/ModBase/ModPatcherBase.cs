@@ -9,14 +9,12 @@ public abstract class ModPatcherBase<TypeMod, TypeConfig> : ModBase<TypeMod, Typ
     public Harmony Harmony => new(HarmonyID);
     public bool IsPatched { get; private set; }
 
-    public override void OnEnabled() {
+    protected override void Enable() {
         PatchAll();
-        base.OnEnabled();
+        base.Enable();
     }
-    public override void OnDisabled() {
-        UnpatchAll();
-        base.OnDisabled();
-    }
+    protected override void Disable() => UnpatchAll();
+
     protected virtual void PatchAll() {
         if (IsPatched) return;
         if (HarmonyHelper.IsHarmonyInstalled) {
@@ -46,11 +44,11 @@ public abstract class ModPatcherBase<TypeMod, TypeConfig> : ModBase<TypeMod, Typ
         if (originalMethodInfo is null) {
             InternalLogger.Error($"Original method not found");
             return;
-        }            
+        }
         if (patchMethodInfo is null) {
             InternalLogger.Error($"Patch method not found");
             return;
-        }          
+        }
         switch (patcherType) {
             case PatcherType.Prefix: Harmony.Patch(originalMethodInfo, prefix: new HarmonyMethod(patchMethodInfo)); break;
             case PatcherType.Postfix: Harmony.Patch(originalMethodInfo, postfix: new HarmonyMethod(patchMethodInfo)); break;
@@ -74,7 +72,7 @@ public abstract class ModPatcherBase<TypeMod, TypeConfig> : ModBase<TypeMod, Typ
             case PatcherType.Postfix: Harmony.Patch(original, postfix: new HarmonyMethod(patch)); break;
             case PatcherType.Transpiler: Harmony.Patch(original, transpiler: new HarmonyMethod(patch)); break;
         };
-        InternalLogger.LogPatch(patcherType, original, originalMethod,patch, patchMethod);
+        InternalLogger.LogPatch(patcherType, original, originalMethod, patch, patchMethod);
     }
 }
 

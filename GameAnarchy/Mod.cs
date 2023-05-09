@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
-using GameAnarchy.Localization;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
 using GameAnarchy.Patches;
@@ -16,15 +15,19 @@ public class Mod : ModPatcherBase<Mod, Config> {
     public override ulong? BetaID => 2917685008;
     public override string Description => Localize.MOD_Description;
     private GameObject InfoViewsObject { get; set; }
-#if DEBUG
-    public override BuildVersion VersionType => BuildVersion.Debug;
-#elif BETA
-        public override BuildVersion VersionType => BuildVersion.Beta;
+
+#if BETA_DEBUG
+    public override BuildVersion VersionType => BuildVersion.BetaDebug;
+#elif BETA_RELEASE
+    public override BuildVersion VersionType => BuildVersion.BetaRelease;
+#elif STABLE_DEBUG
+    public override BuildVersion VersionType => BuildVersion.StableDebug;
 #else
-        public override BuildVersion VersionType => BuildVersion.Stable;
+    public override BuildVersion VersionType => BuildVersion.StableRelease;
 #endif
 
     public override void SetModCulture(CultureInfo cultureInfo) => Localize.Culture = cultureInfo;
+    public override IEnumerable<string> GetSupportLocales() => Localize.LocaleManager.GetSupportLocales();
     public override void IntroActions() {
         base.IntroActions();
         CompatibilityCheck.IncompatibleMods = ConflictMods;
@@ -53,7 +56,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
         base.OnReleased();
         ExternalLogger.DebugMode($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
     }
-    public override string GetLocale(string text) => Localize.ResourceManager.GetString(text, ModCulture);
+    public override string GetLocale(string text) => string.Empty;
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);

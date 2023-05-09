@@ -5,78 +5,38 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MbyronModsCommon", "MbyronModsCommon\MbyronModsCommon.shproj", "{6C5E0FC8-FBAA-4FA1-AF55-FD675486E4E7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "Localization", "{9EAF5808-9E0C-4F8E-8969-46FEE5895F37}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CommonLocalize", "MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.shproj", "{B4F0E367-596B-482A-B7F0-B3055CC917DD}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "en", "MbyronModsCommon\Localization\en\en.shproj", "{2DEB6591-ACD7-4FEC-9A69-04AD7224DA50}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "de", "MbyronModsCommon\Localization\de\de.shproj", "{A03CE623-1E67-4E2C-A03B-AD885B96DD4E}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "es-ES", "MbyronModsCommon\Localization\es-ES\es-ES.shproj", "{2012DFD6-B0E1-46E3-823E-2EED0C4AEC3E}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "fr", "MbyronModsCommon\Localization\fr\fr.shproj", "{90C69788-AE0B-4529-B9D9-8D9AE0A9EFA5}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "it", "MbyronModsCommon\Localization\it\it.shproj", "{058F43CE-168B-4C4C-9DC1-D7F948ADE7ED}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ja", "MbyronModsCommon\Localization\ja\ja.shproj", "{0AEF4550-7271-4A66-8845-788AC8FFAFDF}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ko", "MbyronModsCommon\Localization\ko\ko.shproj", "{B979166D-EF87-4B19-8165-BF1DFE13B2E3}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "nl", "MbyronModsCommon\Localization\nl\nl.shproj", "{2A08BB50-DE91-492E-80DF-868326D95838}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "pl", "MbyronModsCommon\Localization\pl\pl.shproj", "{1DDEB72E-5D7C-4C13-B231-7059C3F8878B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "pt-BR", "MbyronModsCommon\Localization\pt-BR\pt-BR.shproj", "{BABB4DB8-38DC-4D37-AF69-7CDFD9B680A3}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ru", "MbyronModsCommon\Localization\ru\ru.shproj", "{CFEB145D-7234-477C-8CE9-3D351B7F508C}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "zh-CN", "MbyronModsCommon\Localization\zh-CN\zh-CN.shproj", "{197E5C9D-8C50-4D59-90D3-95E3A06F6623}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "zh-TW", "MbyronModsCommon\Localization\zh-TW\zh-TW.shproj", "{4AED5791-3998-443D-A69B-0893B528A755}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "tr", "MbyronModsCommon\Localization\tr\tr.shproj", "{1854AB1F-6BA1-4CC6-B94D-3BBC1029C7E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localize", "MbyronModsCommon\Localize\Localize.csproj", "{195BA8C1-6759-409D-9E81-D6E547990170}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|arm64 = Debug|arm64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|arm64 = Release|arm64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|arm64.Build.0 = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Debug|x86.Build.0 = Debug|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|arm64.ActiveCfg = Release|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|arm64.Build.0 = Release|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|x86.ActiveCfg = Release|Any CPU
+		{195BA8C1-6759-409D-9E81-D6E547990170}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B4F0E367-596B-482A-B7F0-B3055CC917DD} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{2DEB6591-ACD7-4FEC-9A69-04AD7224DA50} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{A03CE623-1E67-4E2C-A03B-AD885B96DD4E} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{2012DFD6-B0E1-46E3-823E-2EED0C4AEC3E} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{90C69788-AE0B-4529-B9D9-8D9AE0A9EFA5} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{058F43CE-168B-4C4C-9DC1-D7F948ADE7ED} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{0AEF4550-7271-4A66-8845-788AC8FFAFDF} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{B979166D-EF87-4B19-8165-BF1DFE13B2E3} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{2A08BB50-DE91-492E-80DF-868326D95838} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{1DDEB72E-5D7C-4C13-B231-7059C3F8878B} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{BABB4DB8-38DC-4D37-AF69-7CDFD9B680A3} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{CFEB145D-7234-477C-8CE9-3D351B7F508C} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{197E5C9D-8C50-4D59-90D3-95E3A06F6623} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{4AED5791-3998-443D-A69B-0893B528A755} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
-		{1854AB1F-6BA1-4CC6-B94D-3BBC1029C7E6} = {9EAF5808-9E0C-4F8E-8969-46FEE5895F37}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A88849CF-D37B-44B8-AF6D-37B9C5789ACB}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		MbyronModsCommon\Localization\it\it.projitems*{058f43ce-168b-4c4c-9dc1-d7f948ade7ed}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\ja\ja.projitems*{0aef4550-7271-4a66-8845-788ac8ffafdf}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\tr\tr.projitems*{1854ab1f-6ba1-4cc6-b94d-3bbc1029c7e6}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\zh-CN\zh-CN.projitems*{197e5c9d-8c50-4d59-90d3-95e3a06f6623}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\pl\pl.projitems*{1ddeb72e-5d7c-4c13-b231-7059c3f8878b}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\es-ES\es-ES.projitems*{2012dfd6-b0e1-46e3-823e-2eed0c4aec3e}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\nl\nl.projitems*{2a08bb50-de91-492e-80df-868326d95838}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\en\en.projitems*{2deb6591-acd7-4fec-9a69-04ad7224da50}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\zh-TW\zh-TW.projitems*{4aed5791-3998-443d-a69b-0893b528a755}*SharedItemsImports = 13
 		MbyronModsCommon\MbyronModsCommon.projitems*{6c5e0fc8-fbaa-4fa1-af55-fd675486e4e7}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\fr\fr.projitems*{90c69788-ae0b-4529-b9d9-8d9ae0a9efa5}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\de\de.projitems*{a03ce623-1e67-4e2c-a03b-ad885b96dd4e}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\CommonLocalize\CommonLocalize.projitems*{b4f0e367-596b-482a-b7f0-b3055cc917dd}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\ko\ko.projitems*{b979166d-ef87-4b19-8165-bf1dfe13b2e3}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\pt-BR\pt-BR.projitems*{babb4db8-38dc-4d37-af69-7cdfd9b680a3}*SharedItemsImports = 13
-		MbyronModsCommon\Localization\ru\ru.projitems*{cfeb145d-7234-477c-8ce9-3d351b7f508c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

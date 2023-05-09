@@ -6,10 +6,9 @@ using System.Globalization;
 using ColossalFramework.Globalization;
 
 public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
-    public static string SolidModName => Instance.RawName;
+    public static string RawName => Instance.RawName;
     public static string ModName => Instance.ModName;
     public static Version ModVersion => Instance.ModVersion;
-    public static ulong StableID => Instance.StableID;
     public static BuildVersion VersionType => Instance.VersionType;
 }
 
@@ -23,11 +22,11 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     public virtual ulong? BetaID { get; }
     public abstract BuildVersion VersionType { get; }
     public string Name => VersionType switch {
-        BuildVersion.Debug => ModName + " [DEBUG] " + ModVersion,
-        BuildVersion.Beta => ModName + " [BETA] " + ModVersion,
+        BuildVersion.BetaDebug or BuildVersion.BetaRelease => ModName + " [BETA] " + ModVersion,
         _ => ModName + ' ' + ModVersion,
     };
     public virtual string Description => string.Empty;
+    public bool IsEnabled { get; private set; }
     public abstract List<ModChangeLog> ChangeLog { get; }
     public CultureInfo ModCulture {
         get => modCulture;
@@ -39,20 +38,20 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     }
 
     public ModBase() {
-        SingletonMod<TypeMod>.Instance = (TypeMod)this;
         InternalLogger.Log($"Start initializing mod.");
+        SingletonMod<TypeMod>.Instance = (TypeMod)this;
         ExternalLogger.CreateDebugFile<TypeMod>();
         LoadConfig();
         CompatibilityCheck.ModName = ModName;
     }
 
     public virtual void SetModCulture(CultureInfo cultureInfo) { }
+    public virtual IEnumerable<string> GetSupportLocales() => CommonLocalize.LocaleManager.GetSupportLocales();
     public abstract string GetLocale(string text);
     public void OnSettingsUI(UIHelperBase helper) {
         InternalLogger.Log($"Setting UI.");
         LoadLocale();
         LocaleManager.eventLocaleChanged += LoadLocale;
-
         SettingsUI(helper);
     }
     protected virtual void SettingsUI(UIHelperBase helper) { }
@@ -60,12 +59,12 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
         CultureInfo locale;
         try {
             if (SingletonItem<TypeConfig>.Instance.ModLanguage == "GameLanguage") {
-                var culture = ModLocalize.UseGameLanguage();
+                var culture = Language.GetGameLanguage();
                 locale = new CultureInfo(culture);
-                InternalLogger.Log($"Change mod locale, use game language: {locale}.");
+                InternalLogger.Log($"Change mod locale, use game language: {locale}");
             } else {
                 locale = new CultureInfo(SingletonItem<TypeConfig>.Instance.ModLanguage);
-                InternalLogger.Log($"Change mod locale, use custom language: {locale}.");
+                InternalLogger.Log($"Change mod locale, use custom language: {locale}");
             }
             ModCulture = locale;
         } catch (Exception e) {
@@ -74,11 +73,21 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     }
     public void LoadConfig() => ModConfig<TypeConfig>.Load();
     public void SaveConfig() => ModConfig<TypeConfig>.Save();
-    public virtual void OnEnabled() {
-        LoadingManager.instance.m_introLoaded += IntroActions;
+    public void OnEnabled() {
+        InternalLogger.Log("Enabled");
+        IsEnabled = true;
+        Enable();
     }
+    public void OnDisabled() {
+        InternalLogger.Log("Disabled");
+        IsEnabled = false;
+        Disable();
+    }
+
+    protected virtual void Enable() => LoadingManager.instance.m_introLoaded += IntroActions;
+    protected virtual void Disable() { }
     public virtual void IntroActions() { }
-    public virtual void OnDisabled() { }
+
     public virtual void OnCreated(ILoading loading) { }
     public virtual void OnLevelLoaded(LoadMode mode) {
         ShowLogMessageBox();
@@ -87,7 +96,7 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     public virtual void OnReleased() { }
 
     private void ShowLogMessageBox() {
-        if (VersionType != BuildVersion.Beta) {
+        if (VersionType != BuildVersion.StableRelease) {
             SingletonItem<TypeConfig>.Instance.ModVersion = ModVersion.ToString();
             SaveConfig();
             return;
@@ -142,9 +151,10 @@ public enum LogFlag {
 }
 
 public enum BuildVersion {
-    Debug,
-    Beta,
-    Stable
+    BetaDebug,
+    BetaRelease,
+    StableDebug,
+    StableRelease
 }
 
 public class ModThreadExtensionBase : ThreadingExtensionBase {
@@ -178,4 +188,5 @@ public interface IMod : IUserMod, ILoadingExtension {
     CultureInfo ModCulture { get; set; }
     void SaveConfig();
     void LoadConfig();
+    IEnumerable<string> GetSupportLocales();
 }

@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.IO;
-using GameAnarchy.Localization;
 
 public static class OptionsMainPanelPatch {
     public static MethodInfo GetOriginalOnVisibilityChanged() => AccessTools.Method(typeof(OptionsMainPanel), "OnVisibilityChanged");
