@@ -10,7 +10,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private CustomUIToggleButton CashAnarchy;
     private CustomUIToggleButton UnlockAll;
     private CustomUIToggleButton CustomUnlock;
-#if DEBUG
+#if BETA_DEBUG
     protected CustomUIScrollablePanel DebugContainer { get; private set; }
 #endif
     private string[] MilestoneLevelNames => new string[] {
@@ -29,7 +29,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
             GameAnarchy.Localize.MilestonelevelName_Metropolis,
             GameAnarchy.Localize.MilestonelevelName_Megalopolis
         };
-#if DEBUG
+#if BETA_DEBUG
     protected override void AddExtraContainer() {
         base.AddExtraContainer();
         DebugContainer = AddTab("Debug");

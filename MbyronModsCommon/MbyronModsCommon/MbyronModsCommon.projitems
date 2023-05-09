@@ -55,6 +55,7 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.cs.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.de.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -64,6 +65,7 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.fr.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.it.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

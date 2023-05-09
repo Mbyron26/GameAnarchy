@@ -12,7 +12,7 @@ public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : CustomUIPa
     public static void LocaleChanged() {
         if (BasePanel is not null && BasePanel.isVisible) {
             Destroy();
-#if DEBUG
+#if BETA_DEBUG
             DebugUtils.TimeCalculater(Create, "OptionPanelManager LocaleChanged Create");
 #else
                 Create();
@@ -51,13 +51,13 @@ public class OptionPanelManager<Mod, OptionPanel> where OptionPanel : CustomUIPa
         BasePanel.autoLayout = false;
         BasePanel.eventVisibilityChanged += (c, v) => {
             if (v) {
-#if DEBUG
+#if BETA_DEBUG
                 DebugUtils.TimeCalculater(Create, "OptionPanelManager Create");
 #else
                 Create();
 #endif
             } else {
-#if DEBUG
+#if BETA_DEBUG
                 DebugUtils.TimeCalculater(Destroy, "OptionPanelManager Destroy");
 #else
                 Destroy();

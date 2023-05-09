@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>資金の追加</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>Add money amount</value>
+    <value>資金を指定して追加</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>Add money threshold</value>
+    <value>資金が閾値以下で追加</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Make sure Money Anarchy feature is enabled</value>
+    <value>Money Anarchy機能が有効化しているか確認して下さい。</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>オプションはゲーム内で動的な切り替えを許可します。</value>
@@ -151,7 +151,7 @@
     <value>商業</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>コスト</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>カスタムアンロック</value>
@@ -178,7 +178,7 @@
     <value>火災の制御</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>Free</value>
+    <value>無料</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>土壌汚染</value>
@@ -286,13 +286,13 @@
     <value>原油の枯渇速度</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>コントロールパネルを開く</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>最適化のオプション</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>オプションは調整後に有効化</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
     <value>オプションパネルのカテゴリにMODの更新日を表示</value>
@@ -307,10 +307,10 @@
     <value>鉱石の枯渇速度</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>その他の機能</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+    <value>コントロールパネルの呼び出しは、ショートカットキー・UUIボタンを使用します。コントロールパネルでオプションを調整したい場合は、事前にオプションパネルを閉じて下さい。</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>ユーザー建物</value>
@@ -319,10 +319,10 @@
     <value>ブルドーザーの返金</value>
   </data>
   <data name="RelocateBuilding" xml:space="preserve">
-    <value>Relocate building</value>
+    <value>建物の移転</value>
   </data>
   <data name="RelocateBuildingMinor" xml:space="preserve">
-    <value>Construction cost * Multiplier factor = Cost</value>
+    <value>建設費 × 係数 = コスト</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>空港エリアの火災を除去</value>
@@ -391,10 +391,10 @@
     <value>近傍天体レーダー</value>
   </data>
   <data name="StartMoneyMajor" xml:space="preserve">
-    <value>Game start money</value>
+    <value>ゲーム開始時の資金</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+    <value>ゲーム開始前に資金を設定して下さい。 セーブゲームをロードする度に設定した資金で開始するので、 変えたくない場合は機能を一度有効にしてから再び無効化します。 その後、ゲームのシミュレーションが開始されると、資金が変更されます。</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>証券取引所</value>
@@ -521,22 +521,22 @@
     <value>コントロールパネルに建物やセグメントの返金機能を追加して、時間制限の解除・返金の係数調整が可能</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
+    <value>オプションパネルからコントロールパネルを起動するためのエントリーボタンのオプションを追加</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+    <value>コントロールパネルに建物の移転費用を調整する機能を追加</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
+    <value>火災を除去した後でも発火する問題を修正</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+    <value>オプションパネルのカテゴリを区切る水平オフセットのオプションを最適化して調整後に即反映</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
+    <value>ゲーム開始時の資金設定のロジックを最適化して、設定した資金で新規ゲームを開始するように改善</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>スロバキア語の翻訳を追加</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>UIのスタイルを更新</value>
