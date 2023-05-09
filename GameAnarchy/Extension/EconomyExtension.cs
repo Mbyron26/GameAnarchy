@@ -32,7 +32,8 @@ public class EconomyExtension : EconomyExtensionBase {
         }
     }
     public static void SetStartMoney() {
-        if (Config.Instance.EnabledInitialCash && Singleton<EconomyManager>.exists) {
+        if (Config.Instance.EnabledInitialCash) return;
+        if (Singleton<EconomyManager>.exists) {
             typeof(EconomyManager).GetField("m_cashAmount", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(Singleton<EconomyManager>.instance, Config.Instance.InitialCash * 100);
             InternalLogger.Log($"Start money enabled, set start money to {Config.Instance.InitialCash}.");
         } else {
