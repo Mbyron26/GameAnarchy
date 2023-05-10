@@ -124,6 +124,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
             new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT0),
             new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT1),
             new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),
+            new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT1),
             new(LogFlag.Fixed,Localize.UpdateLog_V0_9_9FIX0),
             new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),
         }),

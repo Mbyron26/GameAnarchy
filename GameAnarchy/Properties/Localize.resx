@@ -541,6 +541,9 @@
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>Updated UI style.</value>
   </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
+  </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
   </data>

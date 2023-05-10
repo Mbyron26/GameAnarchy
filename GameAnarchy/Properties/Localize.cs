@@ -701,6 +701,11 @@ namespace GameAnarchy
 		public static string UpdateLog_V0_9_9UPT => LocaleManager.GetString("UpdateLog_V0_9_9UPT", Culture);
 
 		/// <summary>
+		/// Updated framework.
+		/// </summary>
+		public static string UpdateLog_V0_9_9UPT1 => LocaleManager.GetString("UpdateLog_V0_9_9UPT1", Culture);
+
+		/// <summary>
 		/// Vanilla
 		/// </summary>
 		public static string Vanilla => LocaleManager.GetString("Vanilla", Culture);
