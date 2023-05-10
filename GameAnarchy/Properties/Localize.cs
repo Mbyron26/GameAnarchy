@@ -76,6 +76,11 @@ namespace GameAnarchy
 		public static string CustomUnlockPanelTooltip => LocaleManager.GetString("CustomUnlockPanelTooltip", Culture);
 
 		/// <summary>
+		/// Economy
+		/// </summary>
+		public static string Economy => LocaleManager.GetString("Economy", Culture);
+
+		/// <summary>
 		/// Achievements system is always available
 		/// </summary>
 		public static string EnableAchievements => LocaleManager.GetString("EnableAchievements", Culture);
@@ -396,6 +401,16 @@ namespace GameAnarchy
 		public static string RemoveMuseumFire => LocaleManager.GetString("RemoveMuseumFire", Culture);
 
 		/// <summary>
+		/// Remove not enough money warning
+		/// </summary>
+		public static string RemoveNotEnoughMoney => LocaleManager.GetString("RemoveNotEnoughMoney", Culture);
+
+		/// <summary>
+		/// When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.
+		/// </summary>
+		public static string RemoveNotEnoughMoneyMinor => LocaleManager.GetString("RemoveNotEnoughMoneyMinor", Culture);
+
+		/// <summary>
 		/// Remove office building fire
 		/// </summary>
 		public static string RemoveOfficeBuildingFire => LocaleManager.GetString("RemoveOfficeBuildingFire", Culture);
@@ -674,6 +689,11 @@ namespace GameAnarchy
 		/// Added the ability to adjust the cost of relocate building, included in the control panel.
 		/// </summary>
 		public static string UpdateLog_V0_9_9ADD3 => LocaleManager.GetString("UpdateLog_V0_9_9ADD3", Culture);
+
+		/// <summary>
+		/// Added Remove not enough money warning function.
+		/// </summary>
+		public static string UpdateLog_V0_9_9ADD4 => LocaleManager.GetString("UpdateLog_V0_9_9ADD4", Culture);
 
 		/// <summary>
 		/// Fixed an issue where still catch fire after remove fires.

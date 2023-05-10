@@ -11,7 +11,8 @@ public class EconomyExtension : EconomyExtensionBase {
         managers.threading.QueueMainThread(() => AutoAddMoney(() => managers.economy.internalMoneyAmount));
         return internalMoneyAmount;
     }
-    public override bool OverrideDefaultPeekResource => Config.Instance.UnlimitedMoney;
+    public override bool OverrideDefaultPeekResource => Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy || Config.Instance.RemoveNotEnoughMoney;
+    public override int OnPeekResource(EconomyResource resource, int amount) => amount;
     public override int OnAddResource(EconomyResource resource, int amount, Service service, SubService subService, Level level) => service switch {
         Service.Residential => amount * Config.Instance.ResidentialMultiplierFactor,
         Service.Industrial => amount * Config.Instance.IndustrialMultiplierFactor,
@@ -32,10 +33,10 @@ public class EconomyExtension : EconomyExtensionBase {
         }
     }
     public static void SetStartMoney() {
-        if (Config.Instance.EnabledInitialCash) return;
+        if (!Config.Instance.EnableStartMoney) return;
         if (Singleton<EconomyManager>.exists) {
-            typeof(EconomyManager).GetField("m_cashAmount", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(Singleton<EconomyManager>.instance, Config.Instance.InitialCash * 100);
-            InternalLogger.Log($"Start money enabled, set start money to {Config.Instance.InitialCash}.");
+            typeof(EconomyManager).GetField("m_cashAmount", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(Singleton<EconomyManager>.instance, Config.Instance.StartMoneyAmount * 100);
+            InternalLogger.Log($"Start money enabled, set start money to {Config.Instance.StartMoneyAmount}.");
         } else {
             InternalLogger.Log($"Set start money failed, EconomyManager doesn't exist.");
         }

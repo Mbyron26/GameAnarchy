@@ -77,6 +77,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalWeatherRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetWeatherRadarAICanBeBuiltOnlyOncePrefix());
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePrefix());
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePrefix());
+        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMonumentAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMonumentAICanBeBuiltOnlyOncePrefix());
         AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAITrySpreadFire(), RemoveFirePatch.GetCommonBuildingAITrySpreadFirePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalTreeManagerTrySpreadFire(), RemoveFirePatch.GetTreeManagerTrySpreadFirePrefix());
@@ -116,11 +117,12 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
-        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 9), new List<LogString> {
+        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 10), new List<LogString> {
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD3),
+            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD4),
             new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT0),
             new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT1),
             new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),

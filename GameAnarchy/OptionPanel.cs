@@ -124,12 +124,12 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         foreach (var item in CashAnarchyPanels) {
             item.isEnabled = Config.Instance.CashAnarchy;
         }
-        OptionPanelHelper.AddToggle(Config.Instance.EnabledInitialCash, GameAnarchy.Localize.StartMoneyMajor, GameAnarchy.Localize.StartMoneyMinor, _ => {
-            Config.Instance.EnabledInitialCash = _;
-            InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
+        OptionPanelHelper.AddToggle(Config.Instance.EnableStartMoney, GameAnarchy.Localize.StartMoneyMajor, GameAnarchy.Localize.StartMoneyMinor, _ => {
+            Config.Instance.EnableStartMoney = _;
+            InitalCashPanel.isEnabled = Config.Instance.EnableStartMoney;
         });
-        InitalCashPanel = OptionPanelHelper.AddField<UILongValueField, long>(GameAnarchy.Localize.Amount, null, Config.Instance.InitialCash, 100, 100000000, (v) => Config.Instance.InitialCash = v, majorOffset: new(20, 0, 0, 0));
-        InitalCashPanel.isEnabled = Config.Instance.EnabledInitialCash;
+        InitalCashPanel = OptionPanelHelper.AddField<UILongValueField, long>(GameAnarchy.Localize.Amount, null, Config.Instance.StartMoneyAmount, 100, 100000000, (v) => Config.Instance.StartMoneyAmount = v, majorOffset: new(20, 0, 0, 0));
+        InitalCashPanel.isEnabled = Config.Instance.EnableStartMoney;
         OptionPanelHelper.Reset();
     }
     private void AddOtherFunctionProperty() {

@@ -23,7 +23,7 @@ internal class ControlPanel : CustomUIPanel {
 
     private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
     private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];
-    private CustomUIScrollablePanel IncomeContainer => tabContainer.Containers[2];
+    private CustomUIScrollablePanel EconomyContainer => tabContainer.Containers[2];
     public ControlPanel() {
         name = Name;
         atlas = CustomUIAtlas.MbyronModsAtlas;
@@ -37,7 +37,7 @@ internal class ControlPanel : CustomUIPanel {
         AddTabContainer();
         FillGeneralContainer();
         FillServiceContainer();
-        FillIncomeContainer();
+        FillEconomyContainer();
         SetPosition();
         eventPositionChanged += (c, v) => PanelPosition = relativePosition;
     }
@@ -51,19 +51,24 @@ internal class ControlPanel : CustomUIPanel {
         }
     }
 
-    private void FillIncomeContainer() {
-        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, GameAnarchy.Localize.IncomeMultiplier);
+    private void FillEconomyContainer() {
+        ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.Economy);
+        var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, GameAnarchy.Localize.RemoveNotEnoughMoney, GameAnarchy.Localize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.BuildingRefund = _);
+        itemPanel0.Child.isEnabled = !Config.Instance.UnlimitedMoney && !Config.Instance.CashAnarchy;
+        ControlPanelHelper.Reset();
+
+        ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.IncomeMultiplier);
         ControlPanelHelper.AddField<UIIntValueField, int>(GameAnarchy.Localize.Residential, null, 80, Config.Instance.ResidentialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.ResidentialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(GameAnarchy.Localize.Industrial, null, 80, Config.Instance.IndustrialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.IndustrialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(GameAnarchy.Localize.Commercial, null, 80, Config.Instance.CommercialMultiplierFactor, 10, 1, 100, (_) => Config.Instance.CommercialMultiplierFactor = _);
         ControlPanelHelper.AddField<UIIntValueField, int>(GameAnarchy.Localize.Office, null, 80, Config.Instance.OfficeMultiplierFactor, 10, 1, 100, (_) => Config.Instance.OfficeMultiplierFactor = _);
         ControlPanelHelper.Reset();
 
-        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, GameAnarchy.Localize.Refund);
+        ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.Refund);
         ControlPanelHelper.AddToggle(Config.Instance.BuildingRefund, GameAnarchy.Localize.BuildingRefund, null, (_) => {
             Config.Instance.BuildingRefund = _;
             foreach (var item in BuildingRefundOptions)
-                item.isEnabled = Config.Instance.BuildingRefund;
+                item.Child.isEnabled = Config.Instance.BuildingRefund;
         });
         BuildingRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveBuildingRefundTimeLimitation, GameAnarchy.Localize.RemoveBuildingRefundTimeLimitation, null, (_) => Config.Instance.RemoveBuildingRefundTimeLimitation = _));
         var slider0 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(GameAnarchy.Localize.BuildingRefundMultipleFactor, Config.Instance.BuildingRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.BuildingRefundMultipleFactor, new(388, 16), (_) => {
@@ -73,25 +78,25 @@ internal class ControlPanel : CustomUIPanel {
         label4 = slider0.MajorLabel;
         BuildingRefundOptions.Add(slider0);
         foreach (var item in BuildingRefundOptions)
-            item.isEnabled = Config.Instance.BuildingRefund;
+            item.Child.isEnabled = Config.Instance.BuildingRefund;
 
         ControlPanelHelper.AddToggle(Config.Instance.SegmentRefund, GameAnarchy.Localize.SegmentRefund, null, (_) => {
             Config.Instance.SegmentRefund = _;
             foreach (var item in SegmentRefundOptions)
-                item.isEnabled = Config.Instance.SegmentRefund;
+                item.Child.isEnabled = Config.Instance.SegmentRefund;
         });
         SegmentRefundOptions.Add(ControlPanelHelper.AddToggle(Config.Instance.RemoveSegmentRefundTimeLimitation, GameAnarchy.Localize.RemoveSegmentRefundTimeLimitation, null, (_) => Config.Instance.RemoveSegmentRefundTimeLimitation = _));
-        var slider1 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(GameAnarchy. Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.SegmentRefundMultipleFactor, new(388, 16), (_) => {
+        var slider1 = ControlPanelHelper.AddSlider(GetRefundMultipleFactor(GameAnarchy.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor), null, 0, 2, 0.25f, Config.Instance.SegmentRefundMultipleFactor, new(388, 16), (_) => {
             Config.Instance.SegmentRefundMultipleFactor = _;
             label5.Text = GetRefundMultipleFactor(GameAnarchy.Localize.SegmentRefundMultipleFactor, Config.Instance.SegmentRefundMultipleFactor);
         });
         label5 = slider1.MajorLabel;
         SegmentRefundOptions.Add(slider1);
         foreach (var item in SegmentRefundOptions)
-            item.isEnabled = Config.Instance.SegmentRefund;
+            item.Child.isEnabled = Config.Instance.SegmentRefund;
         ControlPanelHelper.Reset();
 
-        ControlPanelHelper.AddGroup(IncomeContainer, PorpertyPanelWidth, GameAnarchy.Localize.RelocateBuilding);
+        ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.RelocateBuilding);
         var slider2 = ControlPanelHelper.AddSlider(GetRelocateCost(), GameAnarchy.Localize.RelocateBuildingMinor, 0, 1, 0.05f, Config.Instance.BuildingRelocationCostFactor, new(388, 16), (_) => {
             Config.Instance.BuildingRelocationCostFactor = _;
             label6.Text = GetRelocateCost();
@@ -233,7 +238,7 @@ internal class ControlPanel : CustomUIPanel {
         };
         tabContainer.AddTab(CommonLocalize.OptionPanel_General, this);
         tabContainer.AddTab(GameAnarchy.Localize.Service, this);
-        tabContainer.AddTab(GameAnarchy.Localize.Income, this);
+        tabContainer.AddTab(GameAnarchy.Localize.Economy, this);
     }
     private void AddCaption() {
         closeButton = AddUIComponent<CustomUIButton>();

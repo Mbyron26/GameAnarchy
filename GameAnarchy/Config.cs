@@ -37,9 +37,9 @@ public class Config : ModConfig<Config> {
     public int OreDepletionRate { get; set; } = 100;
     public bool CashAnarchy { get; set; } = false;
     public bool UnlimitedMoney { get; set; } = false;
-    public bool EnabledInitialCash { get; set; } = false;
-    public long InitialCash { get; set; } = 715000;
-
+    public bool EnableStartMoney { get; set; } = false;
+    public bool RemoveNotEnoughMoney { get; set; } = false;
+    public long StartMoneyAmount { get; set; } = 715000;
     public int DefaultMinAmount { get; set; } = 50000;
     public int DefaultGetCash { get; set; } = 5000000;
     public bool Refund { get; set; } = true;

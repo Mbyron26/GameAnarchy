@@ -15,6 +15,8 @@ public static class UnlimitedUniqueBuildingsPatch {
     public static MethodInfo GetUniqueFactoryAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.UniqueFactoryAICanBeBuiltOnlyOncePrefix));
     public static MethodInfo GetOriginalSpaceRadarAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(SpaceRadarAI), nameof(SpaceRadarAI.CanBeBuiltOnlyOnce));
     public static MethodInfo GetSpaceRadarAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.SpaceRadarAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetOriginalMonumentAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(MonumentAI), nameof(MonumentAI.CanBeBuiltOnlyOnce));
+    public static MethodInfo GetMonumentAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MonumentAICanBeBuiltOnlyOncePrefix));
     public static MethodInfo GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(MainCampusBuildingAI), nameof(MainCampusBuildingAI.CanBeBuiltOnlyOnce));
     public static MethodInfo GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MainCampusBuildingAICanBeBuiltOnlyOncePrefix));
 
