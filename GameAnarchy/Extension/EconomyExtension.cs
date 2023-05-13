@@ -7,7 +7,10 @@ using System.Reflection;
 
 public class EconomyExtension : EconomyExtensionBase {
     public override long OnUpdateMoneyAmount(long internalMoneyAmount) {
-        if (Config.Instance.UnlimitedMoney) return long.MaxValue;
+        if (Singleton<EconomyManager>.exists && Singleton<EconomyManager>.instance.m_properties is not null)
+            Singleton<EconomyManager>.instance.m_properties.m_bailoutLimit = Config.Instance.CityBankruptcyWarningThreshold * 100;
+        if (Config.Instance.UnlimitedMoney)
+            return long.MaxValue;
         managers.threading.QueueMainThread(() => AutoAddMoney(() => managers.economy.internalMoneyAmount));
         return internalMoneyAmount;
     }

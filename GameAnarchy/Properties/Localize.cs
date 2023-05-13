@@ -51,6 +51,16 @@ namespace GameAnarchy
 		public static string BuildingSpreadFireProbability => LocaleManager.GetString("BuildingSpreadFireProbability", Culture);
 
 		/// <summary>
+		/// City bankruptcy warning threshold
+		/// </summary>
+		public static string CityBankruptcyWarningThreshold => LocaleManager.GetString("CityBankruptcyWarningThreshold", Culture);
+
+		/// <summary>
+		/// Game default value is -10000
+		/// </summary>
+		public static string CityBankruptcyWarningThresholdMinor => LocaleManager.GetString("CityBankruptcyWarningThresholdMinor", Culture);
+
+		/// <summary>
 		/// City Service Options
 		/// </summary>
 		public static string CityServiceOptions => LocaleManager.GetString("CityServiceOptions", Culture);
@@ -401,7 +411,7 @@ namespace GameAnarchy
 		public static string RemoveMuseumFire => LocaleManager.GetString("RemoveMuseumFire", Culture);
 
 		/// <summary>
-		/// Remove not enough money warning
+		/// Remove not enough money limitation
 		/// </summary>
 		public static string RemoveNotEnoughMoney => LocaleManager.GetString("RemoveNotEnoughMoney", Culture);
 

@@ -1,4 +1,6 @@
 ﻿namespace GameAnarchy.Patches;
+
+using GameAnarchy.Manager;
 using HarmonyLib;
 using System.Reflection;
 

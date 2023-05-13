@@ -55,6 +55,7 @@ internal class ControlPanel : CustomUIPanel {
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.Economy);
         var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, GameAnarchy.Localize.RemoveNotEnoughMoney, GameAnarchy.Localize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.BuildingRefund = _);
         itemPanel0.Child.isEnabled = !Config.Instance.UnlimitedMoney && !Config.Instance.CashAnarchy;
+        ControlPanelHelper.AddField<UIIntValueField, int>(GameAnarchy.Localize.CityBankruptcyWarningThreshold, GameAnarchy.Localize.CityBankruptcyWarningThresholdMinor, 80, Config.Instance.CityBankruptcyWarningThreshold, 100, int.MinValue / 100, 0, (_) => Config.Instance.CityBankruptcyWarningThreshold = _);
         ControlPanelHelper.Reset();
 
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.IncomeMultiplier);

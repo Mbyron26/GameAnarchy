@@ -39,6 +39,7 @@ public class Config : ModConfig<Config> {
     public bool UnlimitedMoney { get; set; } = false;
     public bool EnableStartMoney { get; set; } = false;
     public bool RemoveNotEnoughMoney { get; set; } = false;
+    public int CityBankruptcyWarningThreshold { get; set; } = -10000;
     public long StartMoneyAmount { get; set; } = 715000;
     public int DefaultMinAmount { get; set; } = 50000;
     public int DefaultGetCash { get; set; } = 5000000;

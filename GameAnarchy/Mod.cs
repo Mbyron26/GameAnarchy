@@ -4,17 +4,16 @@ using ICities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using UnityEngine;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
 using GameAnarchy.Patches;
+using GameAnarchy.Manager;
 
 public class Mod : ModPatcherBase<Mod, Config> {
     public override string ModName => "Game Anarchy";
     public override ulong StableID => 2781804786;
     public override ulong? BetaID => 2917685008;
     public override string Description => Localize.MOD_Description;
-    private GameObject InfoViewsObject { get; set; }
 
 #if BETA_DEBUG
     public override BuildVersion VersionType => BuildVersion.BetaDebug;
@@ -39,16 +38,13 @@ public class Mod : ModPatcherBase<Mod, Config> {
         base.OnLevelLoaded(mode);
         EconomyExtension.SetStartMoney();
         AchievementsManager.InitializeAchievements(mode);
-        InfoViewsObject = new GameObject("InfoViewsExtension");
-        InfoViewsObject.AddComponent<InfoViewsExtension>();
+        Manager.InfoViewsManager.Deploy(mode);
         UUI.Initialize();
     }
     public override void OnLevelUnloading() {
         base.OnLevelUnloading();
         AchievementsManager.Destroy();
-        if (InfoViewsObject != null) {
-            UnityEngine.Object.Destroy(InfoViewsObject);
-        }
+        Manager.InfoViewsManager.Destroy();
         UUI.Destory();
     }
     public override void OnReleased() {
@@ -117,7 +113,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
-        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 10), new List<LogString> {
+        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 13), new List<LogString> {
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),

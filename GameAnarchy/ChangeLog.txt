@@ -1,16 +1,16 @@
 ﻿
 V0.9.9
-Added show mods updated date for the category bar of the options panel function.
-Added building segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.
-Added the ability to adjust the cost of relocate building, included in the control panel.
-Option panel added a entry button option to invoke the control panel.
-Added Slovak localization.
-Added Remove not enough money warning function.
-Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.
-Optimized the start money setting logic so that the start money is the value you set when you start a new game.
-Fixed an issue where still catch fire after remove fires.
-Updated framework.
-Updated UI style.
+[*]Added show mods updated date for the category bar of the options panel function.
+[*]Added building segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.
+[*]Added the ability to adjust the cost of relocate building, included in the control panel.
+[*]Option panel added a entry button option to invoke the control panel.
+[*]Added Slovak localization.
+[*]Added Remove not enough money warning function.
+[*]Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.
+[*]Optimized the start money setting logic so that the start money is the value you set when you start a new game.
+[*]Fixed an issue where still catch fire after remove fires.
+[*]Updated framework.
+[*]Updated UI style.
 
 V0.9.8
 [ADD]Added advanced option for reset mod config.

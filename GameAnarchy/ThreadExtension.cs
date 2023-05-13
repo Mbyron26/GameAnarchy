@@ -1,5 +1,4 @@
 ﻿using GameAnarchy.UI;
-using MbyronModsCommon;
 
 namespace GameAnarchy {
     public class ThreadExtension : ModThreadExtensionBase {

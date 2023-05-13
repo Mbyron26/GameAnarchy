@@ -1,4 +1,5 @@
 ﻿namespace GameAnarchy;
+using GameAnarchy.Manager;
 using ICities;
 
 public class CityServicesExtension : ThreadingExtensionBase {

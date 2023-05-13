@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using MbyronModsCommon.UI;
 using UnityEngine;
 using GameAnarchy.UI;
+using GameAnarchy.Manager;
 
 public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private CustomUIToggleButton VanillaUnlimitedMoney;

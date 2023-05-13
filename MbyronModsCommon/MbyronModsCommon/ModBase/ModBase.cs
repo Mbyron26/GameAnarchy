@@ -38,7 +38,7 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     }
 
     public ModBase() {
-        InternalLogger.Log($"Start initializing mod.");
+        InternalLogger.Log($"Start initializing mod");
         SingletonMod<TypeMod>.Instance = (TypeMod)this;
         ExternalLogger.CreateDebugFile<TypeMod>();
         LoadConfig();
@@ -87,10 +87,8 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
     protected virtual void Disable() { }
     public virtual void IntroActions() { }
 
-    public virtual void OnCreated(ILoading loading) { }
-    public virtual void OnLevelLoaded(LoadMode mode) {
-        ShowLogMessageBox();
-    }
+    public void OnCreated(ILoading loading) { }
+    public virtual void OnLevelLoaded(LoadMode mode) => ShowLogMessageBox();
     public virtual void OnLevelUnloading() { }
     public virtual void OnReleased() { }
 
