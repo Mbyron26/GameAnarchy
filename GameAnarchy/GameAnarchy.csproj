@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net35</TargetFramework>
-		<LangVersion>10.0</LangVersion>
+		<LangVersion>10</LangVersion>
 		<Product>Game Anarchy</Product>
 		<Copyright>Copyright © 2022 Mbyron26</Copyright>
 		<Authors>Mbyron26</Authors>

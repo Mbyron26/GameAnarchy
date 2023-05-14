@@ -20,7 +20,7 @@ public static class OptionPanelHelper {
             Group.MajorLabelText = caption;
             Group.MajorLabelTextScale = 0.8f;
             Group.MajorLabelColor = CustomUIColor.OffWhite;
-            Group.MajorLabelOffset = new(16, 0, 0, 0);
+            Group.MajorLabelOffset = new(16, 16, 0, 0);
         }
         Group.ItemGap = 4;
         Group.EventSetGroupPropertyPanelStyle += (c) => {
@@ -49,13 +49,13 @@ public static class OptionPanelHelper {
         }
         return panel;
     }
-    public static UILabel AddMinorLabel(string text) {
+    public static CustomUILabel AddMinorLabel(string text) {
         if (Group is null) {
             ExternalLogger.Error("OptionPanelHelper_Group is null.");
             return null;
         }
         Group.MinorLabelText = text;
-        Group.MinorLabelOffset = new(16, 0, 0, 0);
+        Group.MinorLabelOffset = new(16, 16, 0, 0);
         Group.MinorLabelTextScale = 0.8f;
         Group.MinorLabelColor = CustomUIColor.OffWhite;
         return Group.MinorLabel;
