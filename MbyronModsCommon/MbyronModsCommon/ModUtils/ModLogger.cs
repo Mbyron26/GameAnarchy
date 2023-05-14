@@ -80,11 +80,13 @@ public static class ExternalLogger {
 
 public static class InternalLogger {
     private static string Name => AssemblyUtils.CurrentAssemblyName;
-    public static void Error(string tag, object message) => UnityEngine.Debug.logger.LogError($"[{Name}{nameof(LogType.Error)}]", $"{tag} | {message}");
-    public static void Error(object message) => UnityEngine.Debug.logger.LogError($"[{Name}{nameof(LogType.Error)}]", $" {message}");
-    public static void Warning(object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{message}");
-    public static void Warning(string tag, object message) => UnityEngine.Debug.logger.LogWarning($"[{Name}{nameof(LogType.Warning)}]", $"{tag} | {message}");
+
+    public static void Error(string tag, object message) => UnityEngine.Debug.logger.LogError(GetTag(LogType.Error), $"{tag} | {message}");
+    public static void Error(object message) => UnityEngine.Debug.logger.LogError(GetTag(LogType.Error), $" {message}");
+    public static void Warning(object message) => UnityEngine.Debug.logger.LogWarning(GetTag(LogType.Warning), $"{message}");
+    public static void Warning(string tag, object message) => UnityEngine.Debug.logger.LogWarning(GetTag(LogType.Warning), $"{tag} | {message}");
     public static void LogPatch(PatcherType patchType, MethodBase original, string originalMethod, MethodInfo patch, string patchMethod) => UnityEngine.Debug.logger.Log($"{Name} | [{patchType}]", $"[{original.DeclaringType.FullName}.{originalMethod}] patched by [{patch.DeclaringType.FullName}.{patchMethod}]");
-    public static void Log(object message) => UnityEngine.Debug.logger.Log($"{Name} | [{LogType.Log}]", $"{message}");
-    public static void Exception(string tag, Exception exception) => UnityEngine.Debug.logger.Log($"[{Name}{nameof(LogType.Exception)}]", $"{tag} | {exception}");
+    public static void Log(object message) => UnityEngine.Debug.logger.Log(GetTag(LogType.Log), $"{message}");
+    public static void Exception(string tag, Exception exception) => UnityEngine.Debug.logger.Log(GetTag(LogType.Exception), $"{tag} | {exception}");
+    private static string GetTag(LogType logType) => $"{Name} | [{logType}]";
 }
