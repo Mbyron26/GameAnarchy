@@ -117,7 +117,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
-        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 13), new List<LogString> {
+        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 14), new List<LogString> {
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),
