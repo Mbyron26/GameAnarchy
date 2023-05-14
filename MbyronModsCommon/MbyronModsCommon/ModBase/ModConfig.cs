@@ -6,7 +6,8 @@ using ColossalFramework.IO;
 
 public class ModConfig<T> : SingletonItem<T> where T : ModConfig<T>, new() {
     public string ModVersion { get; set; } = "0.0.0";
-    public string ModLanguage { get; set; } = "GameLanguage";
+    public LanguageType LocaleType { get; set; } = LanguageType.Default;
+    public string LocaleID { get; set; } = string.Empty;
     public bool DebugMode { get; set; }
     [XmlIgnore]
     public static string ConfigFilePath => Path.Combine(DataLocation.localApplicationData, $"{AssemblyUtils.CurrentAssemblyName}Config.xml");

@@ -1,56 +1,24 @@
-﻿using ColossalFramework.UI;
+﻿namespace GameAnarchy.UI;
 using MbyronModsCommon.UI;
 using System.Collections.Generic;
 using UnityEngine;
-namespace GameAnarchy.UI;
 
-internal class ControlPanel : CustomUIPanel {
-    private const string Name = nameof(GameAnarchy) + nameof(ControlPanel);
-    private const float PanelWidth = 440;
-    private const float PanelHeight = 600;
-    private const float ElementOffset = 10;
-    private const float CaptionHeight = 40;
-    public const float PorpertyPanelWidth = PanelWidth - 2 * 16;
-    private readonly Vector2 ContainerSize = new(PorpertyPanelWidth, 514);
-    private UIDragHandle DragBar;
-    private CustomUILabel title;
+internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUITabContainer tabContainer;
-    private CustomUIButton closeButton;
 
-    public static Vector2 PanelPosition { get; set; }
-    public static Vector2 ButtonSize => new(28, 28);
-
-
+    private float PorpertyPanelWidth => PanelWidth - 2 * 16;
+    private Vector2 ContainerSize => new(PorpertyPanelWidth, 514);    
     private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
     private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];
     private CustomUIScrollablePanel EconomyContainer => tabContainer.Containers[2];
-    public ControlPanel() {
-        name = Name;
-        atlas = CustomUIAtlas.MbyronModsAtlas;
-        bgSprite = CustomUIAtlas.CustomBackground;
-        isVisible = true;
-        canFocus = true;
-        isInteractive = true;
-        size = new Vector2(PanelWidth, PanelHeight);
 
-        AddCaption();
+    protected override void InitComponents() {
+        base.InitComponents();
         AddTabContainer();
         FillGeneralContainer();
         FillServiceContainer();
         FillEconomyContainer();
-        SetPosition();
-        eventPositionChanged += (c, v) => PanelPosition = relativePosition;
     }
-    private void SetPosition() {
-        if (PanelPosition == Vector2.zero) {
-            Vector2 vector = GetUIView().GetScreenResolution();
-            var x = vector.x - PanelWidth - 360;
-            PanelPosition = relativePosition = new Vector3(x, 80);
-        } else {
-            relativePosition = PanelPosition;
-        }
-    }
-
     private void FillEconomyContainer() {
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.Economy);
         var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, GameAnarchy.Localize.RemoveNotEnoughMoney, GameAnarchy.Localize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.BuildingRefund = _);
@@ -240,24 +208,6 @@ internal class ControlPanel : CustomUIPanel {
         tabContainer.AddTab(CommonLocalize.OptionPanel_General, this);
         tabContainer.AddTab(GameAnarchy.Localize.Service, this);
         tabContainer.AddTab(GameAnarchy.Localize.Economy, this);
-    }
-    private void AddCaption() {
-        closeButton = AddUIComponent<CustomUIButton>();
-        closeButton.Atlas = CustomUIAtlas.MbyronModsAtlas;
-        closeButton.size = ButtonSize;
-        closeButton.OnBgSprites.SetSprites(CustomUIAtlas.CloseButton);
-        closeButton.OnBgSprites.SetColors(CustomUIColor.White, CustomUIColor.OffWhite, new Color32(180, 180, 180, 255), CustomUIColor.White, CustomUIColor.White);
-        closeButton.relativePosition = new Vector2(width - 6f - 28f, 6f);
-        closeButton.eventClicked += (c, p) => ControlPanelManager.Close();
-
-        DragBar = AddUIComponent<UIDragHandle>();
-        DragBar.width = closeButton.relativePosition.x;
-        DragBar.height = CaptionHeight;
-        DragBar.relativePosition = Vector2.zero;
-
-        title = DragBar.AddUIComponent<CustomUILabel>();
-        title.Text = ModMainInfo<Mod>.ModName;
-        title.CenterToParent();
     }
 }
 

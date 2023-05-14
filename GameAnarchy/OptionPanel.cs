@@ -35,7 +35,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         base.AddExtraContainer();
         DebugContainer = AddTab("Debug");
         OptionPanelHelper.AddGroup(DebugContainer, "Debug");
-        OptionPanelHelper.AddButton("Control panel", null, "Open", 250, 30, () => ControlPanelManager.HotkeyToggle());
+        OptionPanelHelper.AddButton("Control panel", null, "Open", 250, 30, () => ControlPanelManager<ControlPanel>.CallPanel());
         OptionPanelHelper.AddStringField("File dirc", Application.dataPath, null);
         OptionPanelHelper.Reset();
     }
@@ -136,7 +136,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private void AddOtherFunctionProperty() {
         OptionPanelHelper.AddGroup(GeneralContainer, null);
         OptionPanelHelper.AddButton(GameAnarchy.Localize.OtherFunctionsMajor, GameAnarchy.Localize.OtherFunctionsMinor, GameAnarchy.Localize.OpenControlPanel, null, 30, () => {
-            ControlPanelManager.HotkeyToggle();
+            ControlPanelManager<ControlPanel>.CallPanel();
         });
         OptionPanelHelper.Reset();
     }

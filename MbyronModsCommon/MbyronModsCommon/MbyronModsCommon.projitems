@@ -9,6 +9,8 @@
     <Import_RootNamespace>MbyronModsCommon</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)controlpanel\ControlPanelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlPanel\ControlPanelManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Locale\Common\CommonLocalize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Locale\Language.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Locale\LocalizeManager.cs" />
@@ -116,9 +118,6 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CloseButton.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\ResetButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)ControlPanel\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resources\CheckBoxOffBg.png" />

@@ -13,11 +13,11 @@ public class AssemblyUtils {
     private static List<string> folderNamesUnderCurrentAssembly;
     private static List<string> foldersNameUnderLocalePath;
 
-    public static string CurrentAssemblyName => currentAssemblyName ??= Assembly.GetExecutingAssembly().GetName().Name;
-    public static Version CurrentAssemblyVersion => currentAssemblyVersion ??= Assembly.GetExecutingAssembly().GetName().Version;
-    public static string CurrentAssemblyPath => currentAssemblyPath ??= GetCuttentAssemblyPath();
-    public static List<string> FoldersNameUnderLocalePath => foldersNameUnderLocalePath ??= GetFoldersNameByPath(Path.Combine(CurrentAssemblyPath, "Locale")).ToList();
-    public static List<string> FoldersNameUnderCurrentAssembly => folderNamesUnderCurrentAssembly ??= GetFoldersNameByPath(CurrentAssemblyPath).ToList();
+    public static string CurrentAssemblyName { get; } = currentAssemblyName ??= Assembly.GetExecutingAssembly().GetName().Name;
+    public static Version CurrentAssemblyVersion { get; } = currentAssemblyVersion ??= Assembly.GetExecutingAssembly().GetName().Version;
+    public static string CurrentAssemblyPath { get; } = currentAssemblyPath ??= GetCuttentAssemblyPath();
+    public static List<string> FoldersNameUnderLocalePath { get; } = foldersNameUnderLocalePath ??= GetFoldersNameByPath(Path.Combine(CurrentAssemblyPath, "Locale")).ToList();
+    public static List<string> FoldersNameUnderCurrentAssembly { get; } = folderNamesUnderCurrentAssembly ??= GetFoldersNameByPath(CurrentAssemblyPath).ToList();
 
     private static string GetCuttentAssemblyPath() {
         foreach (var item in PluginManager.instance.GetPluginsInfo()) {

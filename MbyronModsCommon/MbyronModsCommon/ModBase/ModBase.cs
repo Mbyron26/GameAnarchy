@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using ColossalFramework.Globalization;
+using ColossalFramework;
 
 public class ModMainInfo<Mod> : SingletonMod<Mod> where Mod : IMod {
     public static string RawName => Instance.RawName;
@@ -42,39 +43,42 @@ public abstract class ModBase<TypeMod, TypeConfig> : IMod where TypeMod : ModBas
         SingletonMod<TypeMod>.Instance = (TypeMod)this;
         ExternalLogger.CreateDebugFile<TypeMod>();
         LoadConfig();
+        LoadLocale();
+        LocaleManager.eventLocaleChanged += LoadLocale;
         CompatibilityCheck.ModName = ModName;
     }
 
     public virtual void SetModCulture(CultureInfo cultureInfo) { }
-    public abstract string GetLocale(string text);
     public void OnSettingsUI(UIHelperBase helper) {
         InternalLogger.Log($"Setting UI.");
-        LoadLocale();
-        LocaleManager.eventLocaleChanged += LoadLocale;
         SettingsUI(helper);
     }
     protected virtual void SettingsUI(UIHelperBase helper) { }
-    protected void LoadLocale() {
-        CultureInfo locale;
+    private void LoadLocale() {
         try {
-            if (SingletonItem<TypeConfig>.Instance.ModLanguage == "GameLanguage") {
-                var culture = Language.GetGameLanguage();
-                locale = new CultureInfo(culture);
-                InternalLogger.Log($"Change mod locale, use game language: {locale}");
+            string localeID;
+            if (SingletonItem<TypeConfig>.Instance.LocaleType == LanguageType.Default) {
+                localeID = GetLocale();
             } else {
-                locale = new CultureInfo(SingletonItem<TypeConfig>.Instance.ModLanguage);
-                InternalLogger.Log($"Change mod locale, use custom language: {locale}");
+                localeID = SingletonItem<TypeConfig>.Instance.LocaleID;
+                if (localeID.IsNullOrWhiteSpace()) {
+                    localeID = GetLocale();
+                }
             }
-            ModCulture = locale;
+            ModCulture = new CultureInfo(localeID);
+            InternalLogger.Log($"Change mod locale: {ModCulture.Name}({SingletonItem<TypeConfig>.Instance.LocaleType})");
         } catch (Exception e) {
             InternalLogger.Exception($"Could't change mod locale", e);
         }
     }
+    private string GetLocale() => LocaleManager.exists ? Language.LocaleExtension(LocaleManager.instance.language) : Language.LocaleExtension(new SavedString(Settings.localeID, Settings.gameSettingsFile, DefaultSettings.localeID).value);
+
     public void LoadConfig() => ModConfig<TypeConfig>.Load();
     public void SaveConfig() => ModConfig<TypeConfig>.Save();
     public void OnEnabled() {
         InternalLogger.Log("Enabled");
         IsEnabled = true;
+
         Enable();
     }
     public void OnDisabled() {

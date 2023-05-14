@@ -10,7 +10,7 @@ using GameAnarchy.Patches;
 using GameAnarchy.Manager;
 
 public class Mod : ModPatcherBase<Mod, Config> {
-    public override string ModName => "Game Anarchy";
+    public override string ModName { get; } = "Game Anarchy";
     public override ulong StableID => 2781804786;
     public override ulong? BetaID => 2917685008;
     public override string Description => Localize.MOD_Description;
@@ -38,24 +38,28 @@ public class Mod : ModPatcherBase<Mod, Config> {
         base.OnLevelLoaded(mode);
         EconomyExtension.SetStartMoney();
         AchievementsManager.InitializeAchievements(mode);
-        Manager.InfoViewsManager.Deploy(mode);
+        InfoViewsManager.Deploy(mode);
+        ControlPanelManager<ControlPanel>.EventOnVisibleChanged += (_) => {
+            if (UUI.UUIButton is not null) {
+                UUI.UUIButton.IsPressed = _;
+            }
+        };
         UUI.Initialize();
     }
     public override void OnLevelUnloading() {
         base.OnLevelUnloading();
         AchievementsManager.Destroy();
-        Manager.InfoViewsManager.Destroy();
+        InfoViewsManager.Destroy();
         UUI.Destory();
     }
     public override void OnReleased() {
         base.OnReleased();
         ExternalLogger.DebugMode($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
     }
-    public override string GetLocale(string text) => string.Empty;
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
-        LocaleManager.eventLocaleChanged += ControlPanelManager.OnLocaleChanged;
+        LocaleManager.eventLocaleChanged += ControlPanelManager<ControlPanel>.OnLocaleChanged;
     }
     protected override void PatchAction() {
         AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());

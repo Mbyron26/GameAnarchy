@@ -23,28 +23,32 @@ public class Language {
         return raw;
     }
 
-    public static string LocaleExtension() {
-        if (!LocaleManager.exists) return "en";
-        string locale = LocaleManager.instance.language;
-        if (locale == "zh") {
+    public static string LocaleExtension() => LocaleExtension(LocaleManager.instance.language);
+    public static string LocaleExtension(string locale) {
+        //if (!LocaleManager.exists)
+        //    return "en";
+        //string locale = LocaleManager.instance.language;
+        if (locale == "en") {
+            locale = "en-US";
+        } else if (locale == "zh") {
             var culture = CultureInfo.InstalledUICulture.Name;
             if (culture == "zh-TW" || culture == "zh-HK") {
                 locale = "zh-TW";
             } else {
                 locale = "zh-CN";
             }
-        }
-        if (locale == "es") {
+        } else if (locale == "es") {
             locale = "es-ES";
+        } else if (locale == "pt") {
+            locale = "pt-BR";
         }
         return locale;
     }
 
-
     private static List<string> GetSupportLocales() {
         var locales = new List<string> { "en" };
         if (!string.IsNullOrEmpty(AssemblyUtils.CurrentAssemblyPath)) {
-            var localeFolder = Path.Combine(AssemblyUtils.CurrentAssemblyPath, "Locale");         
+            var localeFolder = Path.Combine(AssemblyUtils.CurrentAssemblyPath, "Locale");
             if (Directory.Exists(localeFolder)) {
                 foreach (var file in Directory.GetFiles(localeFolder)) {
                     var id = Path.GetFileNameWithoutExtension(file).Split('.').Last();
@@ -56,4 +60,9 @@ public class Language {
         locales.Sort();
         return locales;
     }
+}
+
+public enum LanguageType {
+    Default,
+    Custom
 }

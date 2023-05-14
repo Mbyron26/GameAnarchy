@@ -67,7 +67,7 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
         label0.width += 8;
         panel0.StartLayout();
         AddExtraModInfoProperty();
-        OptionPanelHelper.AddDropDown(CommonLocalize.Language, null, GetSupportLocales(), LanguagesIndex, 310, 30, (v) => {
+        OptionPanelHelper.AddDropDown(CommonLocalize.Language, null, GetSupportLocales(), LocaleIndex, 310, 30, (v) => {
             OnLanguageSelectedIndexChanged(v);
             AddLanguageSelectedIndexChanged();
         });
@@ -93,18 +93,34 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
     }
     protected CustomUIScrollablePanel AddTab(string text) => tabContainer.AddContainer(text, this);
 
-    protected static void OnLanguageSelectedIndexChanged(int value) {
+    //protected static void OnLanguageSelectedIndexChanged(int value) {
+    //    if (value == 0) {
+    //        SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.LocaleExtension());
+    //        SingletonItem<TypeConfig>.Instance.ModLanguage = "GameLanguage";
+    //    } else {
+    //        SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.SupportedLocaleIDs[value - 1]);
+    //        SingletonItem<TypeConfig>.Instance.ModLanguage = Language.SupportedLocaleIDs[value - 1];
+    //    }
+    //    OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
+    //}
+
+    //protected static int LanguagesIndex => Language.LanguagesList.FindIndex(x => x == SingletonItem<TypeConfig>.Instance.ModLanguage);
+
+    private int LocaleIndex => (SingletonItem<TypeConfig>.Instance.LocaleType == LanguageType.Default) ? 0 : Language.LanguagesList.FindIndex(x => x == SingletonItem<TypeConfig>.Instance.LocaleID);
+    private void OnLanguageSelectedIndexChanged(int value) {
         if (value == 0) {
-            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.LocaleExtension());
-            SingletonItem<TypeConfig>.Instance.ModLanguage = "GameLanguage";
+            var locale = Language.LocaleExtension();
+            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(locale);
+            SingletonItem<TypeConfig>.Instance.LocaleID = locale;
+            SingletonItem<TypeConfig>.Instance.LocaleType = LanguageType.Default;
         } else {
             SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.SupportedLocaleIDs[value - 1]);
-            SingletonItem<TypeConfig>.Instance.ModLanguage = Language.SupportedLocaleIDs[value - 1];
+            SingletonItem<TypeConfig>.Instance.LocaleID = Language.SupportedLocaleIDs[value - 1];
+            SingletonItem<TypeConfig>.Instance.LocaleType = LanguageType.Custom;
         }
         OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
     }
 
-    protected static int LanguagesIndex => Language.LanguagesList.FindIndex(x => x == SingletonItem<TypeConfig>.Instance.ModLanguage);
 
     protected string[] GetSupportLocales() {
         var locales = new string[Language.LanguagesList.Count];
