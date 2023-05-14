@@ -144,6 +144,12 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>건물 화재 확산 가능성</value>
   </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>City bankruptcy warning threshold</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>Game default value is -10000</value>
+  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>도시 서비스 옵션</value>
   </data>
@@ -158,6 +164,9 @@
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>모두 잠금 해제 기능이 활성화된 경우 다음 옵션을 모두 잠금 해제했기 때문에 이러한 옵션을 사용할 수 없습니다.</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>업적 시스템은 항상 사용 가능합니다.</value>
@@ -351,6 +360,12 @@
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>박물관 화재 위험 제거</value>
   </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>Remove not enough money limitation</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+  </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>사무 건물 화재 위험 제거</value>
   </data>
@@ -526,6 +541,9 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>제어판에 포함된 건물 이전 비용 조정 기능이 추가되었습니다.</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>Added Remove not enough money warning function.</value>
+  </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>화재를 제거한 후에도 여전히 화재가 발생하는 문제를 해결했습니다.</value>
   </data>
@@ -540,6 +558,9 @@
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>UI 스타일이 업데이트되었습니다.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>바닐라</value>

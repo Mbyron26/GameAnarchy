@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>Geld toevoegen</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
     <value>Add money amount</value>
@@ -144,6 +144,12 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>City bankruptcy warning threshold</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>Game default value is -10000</value>
+  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Diensten opties</value>
   </data>
@@ -151,13 +157,16 @@
     <value>Commercieel</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>Kosten</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Aangepaste ontgrendelen</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>Deze opties zijn niet beschikbaar wanneer de "Ontgrendel Alle" functie is ingeschakeld omdat Ontgrendel Alle opties ontgrendeld zijn.</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Prestaties systeem is altijd beschikbaar</value>
@@ -178,7 +187,7 @@
     <value>Fire Control</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>Free</value>
+    <value>Gratis</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>Bodemverontreiniging</value>
@@ -286,7 +295,7 @@
     <value>Olieverbruik uitputting</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>Bedieningspaneel openen</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Optimaliseer opties</value>
@@ -307,7 +316,7 @@
     <value>Olieverbruik uitputting</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>Overige functies</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
@@ -350,6 +359,12 @@
   </data>
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>Brand van museum verwijderen</value>
+  </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>Remove not enough money limitation</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>Brand van kantoorgebouw verwijderen</value>
@@ -442,35 +457,35 @@
     <value>Ontgrendel alle unieke gebouwen van niveau 1 tot 6. Vanwege spelbeperkingen, als deze optie wordt geforceerd, zal slechts een klein aantal gebouwen worden vrijgespeeld, maar niet allemaal.</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} days ago</value>
+    <value>{0} dagen geleden</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>Last year</value>
+    <value>Vorig jaar</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} month ago</value>
+    <value>{0} maand geleden</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} months ago</value>
+    <value>{0} maanden geleden</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>Today at {0:HH:mm}</value>
+    <value>Vandaag om {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} years ago</value>
+    <value>{0} jaar geleden</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>Yesterday</value>
+    <value>Gisteren</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>Yesterday at {0:HH:mm}</value>
+    <value>Gisteren om {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]Nieuw bedieningspaneel, gebruik de standaard sneltoets Ctrl+Shift+G of het UUI-paneel om het nieuwe bedieningspaneel te openen.</value>
@@ -526,6 +541,9 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>Added Remove not enough money warning function.</value>
+  </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>Fixed an issue where still catch fire after remove fires.</value>
   </data>
@@ -536,10 +554,13 @@
     <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>Slowaakse vertaling toegevoegd.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>Updated UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

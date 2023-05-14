@@ -144,6 +144,12 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建物の延焼確率</value>
   </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>都市破綻の警告閾値</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>ゲームのデフォルト値は-10000</value>
+  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>都市サービスのオプション</value>
   </data>
@@ -158,6 +164,9 @@
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>「Unlock All」機能を有効化するとマイルストーンを全てアンロックするため、このオプションは使用できません。</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>経済</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Steamの実績システムを有効化</value>
@@ -351,6 +360,12 @@
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>ミュージアムの火災を除去</value>
   </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>資金不足の制限を解除</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>「資金のAnarchy」または「資金の無制限」が有効の場合は、このオプションを自動的に適用します。</value>
+  </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>オフィス区画の火災を除去</value>
   </data>
@@ -526,6 +541,9 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>コントロールパネルに建物の移転費用を調整する機能を追加</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>資金不足の警告機能を追加</value>
+  </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>火災を除去した後でも発火する問題を修正</value>
   </data>
@@ -540,6 +558,9 @@
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>UIのスタイルを更新</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>フレームワークを更新</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>バニラ</value>

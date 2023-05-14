@@ -144,6 +144,12 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Bina yayılma yangın olasılığı</value>
   </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>City bankruptcy warning threshold</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>Game default value is -10000</value>
+  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Şehir Hizmet Seçenekleri</value>
   </data>
@@ -158,6 +164,9 @@
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>“Tümünün Kilidini Aç” özelliği etkinleştirildiğinde bu seçenekler kullanılamaz, çünkü Tümünün Kilidini Aç aşağıdaki seçeneklerin tümünün kilidini açmıştır.</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Başarılar sistemi her zaman kullanılabilir</value>
@@ -351,6 +360,12 @@
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>Remove museum fire</value>
   </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>Remove not enough money limitation</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+  </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>Remove office building fire</value>
   </data>
@@ -526,6 +541,9 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>Added Remove not enough money warning function.</value>
+  </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>Fixed an issue where still catch fire after remove fires.</value>
   </data>
@@ -540,6 +558,9 @@
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>Updated UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

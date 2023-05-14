@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>Añadir dinero</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>Add money amount</value>
+    <value>Añadir monto de dinero</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>Add money threshold</value>
+    <value>Añadir límite de dinero</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Make sure Money Anarchy feature is enabled</value>
+    <value>Asegúrate que la función Anarquía de Dinero esté activada</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>Esta opción permite activación dinámica dentro del juego</value>
@@ -136,13 +136,19 @@
     <value>Monto</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>Building refund</value>
+    <value>Reembolso de edificio</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
-    <value>Building refund multiple factor</value>
+    <value>Factor de multiplicación de reembolso de dinero</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Probabilidad de propagación de incendio en edificios</value>
+  </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>City bankruptcy warning threshold</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>Game default value is -10000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Opciones de Servicios de la ciudad</value>
@@ -151,13 +157,16 @@
     <value>Comercial</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>Costo</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Desbloqueo personalizado</value>
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>Estas opciones no están disponibles cuando "Desbloquear Todo" está activado, porque "Desbloquear Todo" ha desbloqueado todas las funciones siguientes.</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>El sistema de Logros está siempre disponible</value>
@@ -178,7 +187,7 @@
     <value>Control de Incendios</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>Free</value>
+    <value>Gratis</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>Contaminación del suelo</value>
@@ -286,19 +295,19 @@
     <value>Tasa de agotamiento de petróleo</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>Abrir panel de control</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Opciones de optimización</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>Esta opción tiene efecto después del ajuste</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>Show mod updated date in options panel categories</value>
+    <value>Mostrar fecha de actualización del mod en las categorías del panel de opciones</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+    <value>Esta opción sólo tendrá efecto después de actualizar la lista de plugins o reiniciar el juego</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Desplazamiento horizontal de la barra de categorías del panel de opciones</value>
@@ -307,28 +316,28 @@
     <value>Tasa de agotamiento de minerales</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>Otras funciones</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+    <value>Utilice las teclas de acceso directo o el botón UUI para invocar el panel de control, si deseas ajustar las opciones en el panel de control, ciérralo primero.</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>Edificio del jugador</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing refund</value>
+    <value>Reembolso de demolición</value>
   </data>
   <data name="RelocateBuilding" xml:space="preserve">
-    <value>Relocate building</value>
+    <value>Reubicar edificio</value>
   </data>
   <data name="RelocateBuildingMinor" xml:space="preserve">
-    <value>Construction cost * Multiplier factor = Cost</value>
+    <value>Coste de construcción * Factor de multiplicación = Costo</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>Eliminar incendio de edificios de aeropuerto</value>
   </data>
   <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
-    <value>Remove building refund time limitation</value>
+    <value>Eliminar límite de tiempo de reembolso de construcción</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>Eliminar incendio de edificios de Campus</value>
@@ -351,6 +360,12 @@
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>Eliminar incendio de museos</value>
   </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>Remove not enough money limitation</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+  </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>Eliminar incendio de oficinas</value>
   </data>
@@ -367,7 +382,7 @@
     <value>Eliminar incendio de edificios residenciales</value>
   </data>
   <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
-    <value>Remove Segment refund time limitation</value>
+    <value>Eliminar límite de tiempo de reembolso del segmento</value>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>Residencial</value>
@@ -376,10 +391,10 @@
     <value>Restablecer opciones</value>
   </data>
   <data name="SegmentRefund" xml:space="preserve">
-    <value>Segment refund</value>
+    <value>Reembolso del segmento</value>
   </data>
   <data name="SegmentRefundMultipleFactor" xml:space="preserve">
-    <value>Segment refund multiple factor</value>
+    <value>Factor de multiplicación de reembolso de dinero de segmentos</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Servicio</value>
@@ -391,10 +406,10 @@
     <value>Radar de espacio</value>
   </data>
   <data name="StartMoneyMajor" xml:space="preserve">
-    <value>Game start money</value>
+    <value>Dinero inicial del juego</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+    <value>Establece el valor antes de jugar. Si no quieres este monto de dinero cada vez que inicies un juego salvado, deshabilita esta función después de habilitarla por primera vez. El monto de dinero cambiará cuando comience la simulación.</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>Mercado de valores</value>
@@ -442,35 +457,35 @@
     <value>Desbloquear todos los edificios únicos desde el nivel 1 al 6. Debido a las restricciones del juego, si esta opción es forzada a ser desbloqueada, un número pequeño de edificios serán desbloqueados, pero no todos.</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} days ago</value>
+    <value>hace {0} días</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>Last year</value>
+    <value>Año pasado</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} month ago</value>
+    <value>hace {0} mes</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} months ago</value>
+    <value>{0} meses atrás</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>Today at {0:HH:mm}</value>
+    <value>Hoy a las {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} years ago</value>
+    <value>hace {0} años</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>Yesterday</value>
+    <value>Ayer</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>Yesterday at {0:HH:mm}</value>
+    <value>Ayer a las {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]Nuevo panel de control, utilice la tecla de acceso directo predeterminada Ctrl+Shift+G o utilice el botón en UUI para mostrar el panel de control.</value>
@@ -515,31 +530,37 @@
     <value>[UPT]Actualizada la comprobación de compatibilidad.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
+    <value>Agregado, mostrar fecha actualizada de mods para la barra de categorías de la función del panel de opciones.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+    <value>Agregado, funciones de reembolso para edificios y segmentos. Incluyendo la opción de eliminar la limitación, ajuste de factor de multiplicación en el panel de control</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
+    <value>Agregado una opción para mostrar el panel de control.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+    <value>Agregada la habilidad de ajustar el costo de reubicación de edificios. </value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>Added Remove not enough money warning function.</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
+    <value>Arreglado problema que aún habia incendios después de deshabilitar la función.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+    <value>Optimizado el desplazamiento de las categorías del panel de control.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
+    <value>Optimizado la lógica de dinero inicial.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>Idioma eslovaco añadido.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
+    <value>Interfaz de usuario actualizada.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

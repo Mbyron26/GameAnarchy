@@ -144,6 +144,12 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建筑的火灾蔓延概率</value>
   </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>城市破产警告阈值</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>游戏默认值为 -10000</value>
+  </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>城市服务选项</value>
   </data>
@@ -158,6 +164,9 @@
   </data>
   <data name="CustomUnlockPanelTooltip" xml:space="preserve">
     <value>这些选项在启用“解锁所有”特性时不可用，因为解锁所有已解锁以下所有选项。</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>经济</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>成就系统总是可用</value>
@@ -351,6 +360,12 @@
   <data name="RemoveMuseumFire" xml:space="preserve">
     <value>博物馆不会着火</value>
   </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>解除金钱不足的限制</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>当启用“金钱无限制模式”或“原版无限金钱模组”时，此选项将自动强制执行。</value>
+  </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>办公区建筑不会着火</value>
   </data>
@@ -526,6 +541,9 @@
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
     <value>增加了调整搬迁建筑物费用的功能，控制项仅在控制面板中可用。</value>
   </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>新增了移除金钱不足警告的功能。</value>
+  </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>修复了移除火灾后仍然发生火灾的问题。</value>
   </data>
@@ -540,6 +558,9 @@
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
     <value>更新了用户界面的风格。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>更新了框架。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>
