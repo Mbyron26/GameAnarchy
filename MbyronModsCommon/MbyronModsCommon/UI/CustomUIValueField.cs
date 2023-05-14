@@ -355,7 +355,7 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
             this.value = value;
         }
         RefreshText();
-        EventValueChanged?.Invoke(value);
+        EventValueChanged?.Invoke(this.value);
     }
     protected virtual void OnStateChanged(SpriteState value) {
         if (!isEnabled && value != SpriteState.Disabled) {
@@ -463,10 +463,6 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
         OnCancel();
     }
     protected override void OnKeyDown(UIKeyEventParameter p) {
-        if (!builtinKeyNavigation) {
-            base.OnKeyDown(p);
-            return;
-        }
         if (ReadOnly) {
             return;
         }
@@ -776,6 +772,7 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
         base.OnMouseWheel(p);
         tooltipBox.Hide();
         if (CanWheel) {
+            p.Use();
             var typeRate = GetSteppingRate();
             if (p.wheelDelta < 0) {
                 OnValueChanged(ValueDecrease(typeRate));
@@ -1719,3 +1716,8 @@ public abstract class CustomUIValueFieldBase<T> : CustomUITextComponent where T 
     }
 }
 
+public enum SteppingRate {
+    Normal,
+    Fast,
+    Slow
+}

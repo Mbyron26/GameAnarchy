@@ -1,5 +1,4 @@
 ﻿using GameAnarchy.UI;
-using MbyronModsCommon;
 
 namespace GameAnarchy {
     public class ThreadExtension : ModThreadExtensionBase {
@@ -8,8 +7,8 @@ namespace GameAnarchy {
         public override void OnUpdate(float realTimeDelta, float simulationTimeDelta) {
             base.OnUpdate(realTimeDelta, simulationTimeDelta);
 
-            AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, EconomyExtension.ManuallyAddCash);
-            AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager.HotkeyToggle);
+            AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, EconomyExtension.AddMoneyManually);
+            AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<ControlPanel>.CallPanel);
         }
 
     }

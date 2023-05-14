@@ -1,10 +1,13 @@
-﻿using System;
+﻿namespace MbyronModsCommon;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using MbyronModsCommon.UI;
-namespace MbyronModsCommon;
-public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPanel where TypeMod : IMod where TypeConfig : ModConfigBase<TypeConfig>, new() where TypeOptionPanel : CustomUIPanel {
+using System.Linq;
+using HarmonyLib;
+
+public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPanel where TypeMod : IMod where TypeConfig : ModConfig<TypeConfig>, new() where TypeOptionPanel : CustomUIPanel {
     public static readonly Vector2 Size = new(764, 773);
     public static readonly float MainPadding = 16;
     public static readonly float MainWidth = Size.x - 2 * MainPadding;
@@ -49,18 +52,23 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
     private void AddGeneralContainer() {
         GeneralContainer = AddTab(CommonLocalize.OptionPanel_General);
         OptionPanelHelper.AddGroup(GeneralContainer, CommonLocalize.OptionPanel_ModInfo);
-        var flag = (ModMainInfo<TypeMod>.VersionType == VersionType.Stable) ? "STABLE" : "BETA";
+        var flag = ModMainInfo<TypeMod>.VersionType switch {
+            BuildVersion.BetaDebug => "BETA DEBUG",
+            BuildVersion.BetaRelease => "BETA",
+            BuildVersion.StableDebug => "STABLE DEBUG",
+            _ => "STABLE",
+        };
         var panel0 = OptionPanelHelper.AddLabel($"{ModMainInfo<TypeMod>.ModName}", $"{ModMainInfo<TypeMod>.ModVersion} {flag}");
         var label0 = panel0.Child as CustomUILabel;
-        label0.BgNormalColor = (ModMainInfo<TypeMod>.VersionType == VersionType.Stable) ? new Color32(76, 148, 10, 255) : new Color32(188, 120, 6, 255);
+        label0.BgNormalColor = (ModMainInfo<TypeMod>.VersionType == BuildVersion.StableRelease) ? new Color32(76, 148, 10, 255) : ((ModMainInfo<TypeMod>.VersionType == BuildVersion.BetaRelease) ? new Color32(188, 120, 6, 255) : new Color32(6, 132, 138, 255));
         label0.TextPadding = new(4, 4, 4, 2);
         label0.Atlas = CustomUIAtlas.MbyronModsAtlas;
         label0.BgSprite = CustomUIAtlas.RoundedRectangle2;
         label0.width += 8;
         panel0.StartLayout();
         AddExtraModInfoProperty();
-        OptionPanelHelper.AddDropDown(CommonLocalize.Language, null, GetLanguages().ToArray(), LanguagesIndex, 310, 30, (v) => {
-            OnLanguageSelectedIndexChanged<TypeConfig>(v);
+        OptionPanelHelper.AddDropDown(CommonLocalize.Language, null, GetSupportLocales(), LocaleIndex, 310, 30, (v) => {
+            OnLanguageSelectedIndexChanged(v);
             AddLanguageSelectedIndexChanged();
         });
         OptionPanelHelper.Reset();
@@ -77,7 +85,7 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
     private void AddAdvancedContainer() {
         AdvancedContainer = AddTab(CommonLocalize.OptionPanel_Advanced);
         OptionPanelHelper.AddGroup(AdvancedContainer, CommonLocalize.OptionPanel_Advanced);
-        OptionPanelHelper.AddToggle(SingletonMod<TypeConfig>.Instance.DebugMode, CommonLocalize.OptionPanel_DebugMode, CommonLocalize.OptionPanel_DebugMinor, _ => SingletonMod<TypeConfig>.Instance.DebugMode = _);
+        OptionPanelHelper.AddToggle(SingletonItem<TypeConfig>.Instance.DebugMode, CommonLocalize.OptionPanel_DebugMode, CommonLocalize.OptionPanel_DebugMinor, _ => SingletonItem<TypeConfig>.Instance.DebugMode = _);
         OptionPanelHelper.AddButton(CommonLocalize.ChangeLog_Major, null, CommonLocalize.ChangeLog, 250, 30, ShowLog);
         OptionPanelHelper.AddButton(CommonLocalize.CompatibilityCheck_Major, CommonLocalize.CompatibilityCheck_Minor, CommonLocalize.Check, 250, 30, ShowCompatibility);
         OptionPanelHelper.AddButton(CommonLocalize.ResetModMajor, CommonLocalize.ResetModMinor, CommonLocalize.Reset, 250, 30, ResetSettings);
@@ -85,34 +93,47 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
     }
     protected CustomUIScrollablePanel AddTab(string text) => tabContainer.AddContainer(text, this);
 
-    protected static void OnLanguageSelectedIndexChanged<Panel>(int value) {
+    //protected static void OnLanguageSelectedIndexChanged(int value) {
+    //    if (value == 0) {
+    //        SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.LocaleExtension());
+    //        SingletonItem<TypeConfig>.Instance.ModLanguage = "GameLanguage";
+    //    } else {
+    //        SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.SupportedLocaleIDs[value - 1]);
+    //        SingletonItem<TypeConfig>.Instance.ModLanguage = Language.SupportedLocaleIDs[value - 1];
+    //    }
+    //    OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
+    //}
+
+    //protected static int LanguagesIndex => Language.LanguagesList.FindIndex(x => x == SingletonItem<TypeConfig>.Instance.ModLanguage);
+
+    private int LocaleIndex => (SingletonItem<TypeConfig>.Instance.LocaleType == LanguageType.Default) ? 0 : Language.LanguagesList.FindIndex(x => x == SingletonItem<TypeConfig>.Instance.LocaleID);
+    private void OnLanguageSelectedIndexChanged(int value) {
         if (value == 0) {
-            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(ModLocalize.LocalizationExtension());
-            SingletonMod<TypeConfig>.Instance.ModLanguage = "GameLanguage";
+            var locale = Language.LocaleExtension();
+            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(locale);
+            SingletonItem<TypeConfig>.Instance.LocaleID = locale;
+            SingletonItem<TypeConfig>.Instance.LocaleType = LanguageType.Default;
         } else {
-            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(ModLocalize.ModLanguageOptionIDList[value]);
-            SingletonMod<TypeConfig>.Instance.ModLanguage = ModLocalize.ModLanguageOptionIDList[value];
+            SingletonMod<TypeMod>.Instance.ModCulture = new CultureInfo(Language.SupportedLocaleIDs[value - 1]);
+            SingletonItem<TypeConfig>.Instance.LocaleID = Language.SupportedLocaleIDs[value - 1];
+            SingletonItem<TypeConfig>.Instance.LocaleType = LanguageType.Custom;
         }
         OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
     }
 
-    protected static int LanguagesIndex => ModLocalize.ModLanguageOptionIDList.FindIndex(x => x == SingletonMod<TypeConfig>.Instance.ModLanguage);
-    protected static List<string> GetLanguages() {
-        List<string> result = new();
-        var IDs = ModLocalize.ModLanguageOptionIDList;
+
+    protected string[] GetSupportLocales() {
+        var locales = new string[Language.LanguagesList.Count];
         var currentCulture = SingletonMod<TypeMod>.Instance.ModCulture;
-        result.Add(CommonLocalize.ResourceManager.GetString($"Language_GameLanguage", currentCulture));
-        for (int i = 1; i < IDs.Count; i++) {
-            var prefix = CommonLocalize.ResourceManager.GetString($"Language_{IDs[i].Replace('-', '_')}", new CultureInfo(IDs[i]));
-            string suffix = "(" + CommonLocalize.ResourceManager.GetString($"Language_{IDs[i].Replace('-', '_')}", currentCulture) + ")";
+        locales[0] = CommonLocalize.LocaleManager.GetString("Language_GameLanguage", currentCulture);
+        for (int i = 1; i < Language.LanguagesList.Count; i++) {
+            var locale = Language.LanguagesList[i];
+            var prefix = CommonLocalize.LocaleManager.GetString($"Language_{locale.Replace('-', '_')}", new CultureInfo(locale));
+            string suffix = "(" + CommonLocalize.LocaleManager.GetString($"Language_{locale.Replace('-', '_')}", currentCulture) + ")";
             var total = prefix + suffix;
-            if (IDs[i] == currentCulture.Name) {
-                result.Add(prefix);
-            } else {
-                result.Add(total);
-            }
+            locales[i] = (locale == currentCulture.Name) ? prefix : total;
         }
-        return result;
+        return locales;
     }
 
     ResetModWarningMessageBox messageBox;
@@ -122,16 +143,15 @@ public class OptionPanelBase<TypeMod, TypeConfig, TypeOptionPanel> : CustomUIPan
         try {
             messageBox = MessageBox.Show<ResetModWarningMessageBox>();
             messageBox.Init<TypeMod>(First);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             InternalLogger.Exception($"Reset settings failed:", e);
             MessageBox.Show<ResetModMessageBox>().Init<TypeMod>(false);
         }
 
         void First() {
             InternalLogger.Log($"Start resetting mod config.");
-            SingletonMod<TypeConfig>.Instance = null;
-            SingletonMod<TypeConfig>.Instance = new();
+            SingletonItem<TypeConfig>.Instance = null;
+            SingletonItem<TypeConfig>.Instance = new();
             OptionPanelManager<TypeMod, TypeOptionPanel>.LocaleChanged();
             InternalLogger.Log($"Reset mod config succeeded.");
             MessageBox.Hide(messageBox);

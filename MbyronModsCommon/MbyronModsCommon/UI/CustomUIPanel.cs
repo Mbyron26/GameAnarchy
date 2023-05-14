@@ -7,7 +7,7 @@ public class CustomUIPanel : UIComponent {
     protected UIRenderData bgRenderData;
     protected UIRenderData fgRenderData;
     protected string bgSprite = string.Empty;
-    protected bool renderFgSprite;
+    protected bool renderFg;
     protected string fgSprite = string.Empty;
     protected RectOffset fgSpritePadding;
     protected ForegroundSpriteMode fgSpriteMode;
@@ -53,11 +53,11 @@ public class CustomUIPanel : UIComponent {
             }
         }
     }
-    public bool RenderForegroundSprite {
-        get => renderFgSprite;
+    public bool RenderFg {
+        get => renderFg;
         set {
-            if (value != renderFgSprite) {
-                renderFgSprite = value;
+            if (value != renderFg) {
+                renderFg = value;
                 Invalidate();
             }
         }
@@ -411,7 +411,7 @@ public class CustomUIPanel : UIComponent {
         RenderForeground();
     }
     protected virtual void RenderForeground() {
-        if (!renderFgSprite) {
+        if (!renderFg) {
             return;
         }
         if (Atlas is null) {

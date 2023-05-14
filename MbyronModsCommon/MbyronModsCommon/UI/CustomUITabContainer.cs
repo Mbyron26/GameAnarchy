@@ -229,6 +229,7 @@ public abstract class UITabContainerBase<TypeTab, TypeContainer> : UIComponent w
         for (int i = 0; i < ContainersCount; i++) {
             var container = containers[i];
             if (container is not null) {
+                container.isVisible = true;
                 container.isVisible = false;
             }
         }

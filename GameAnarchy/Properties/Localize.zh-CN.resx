@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddMoney" xml:space="preserve">
+    <value>添加金钱</value>
+  </data>
+  <data name="AddMoneyAmount" xml:space="preserve">
+    <value>添加金钱数额</value>
+  </data>
+  <data name="AddMoneyThreshold" xml:space="preserve">
+    <value>添加金钱门限</value>
+  </data>
+  <data name="AddMoneyTooltip" xml:space="preserve">
+    <value>请确保启用了金钱无碰撞功能。</value>
+  </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>此选项允许在游戏中进行动态切换</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>数额</value>
+  </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>铲除建筑物退款选项</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>铲除建筑退款数额倍乘因子</value>
+  </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>建筑的火灾蔓延概率</value>
+  </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>城市破产警告阈值</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>游戏默认值为 -10000</value>
+  </data>
+  <data name="CityServiceOptions" xml:space="preserve">
+    <value>城市服务选项</value>
+  </data>
+  <data name="Commercial" xml:space="preserve">
+    <value>商业区</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>费用</value>
+  </data>
+  <data name="CustomUnlock" xml:space="preserve">
+    <value>自定义解锁</value>
+  </data>
+  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
+    <value>这些选项在启用“解锁所有”特性时不可用，因为解锁所有已解锁以下所有选项。</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>经济</value>
+  </data>
+  <data name="EnableAchievements" xml:space="preserve">
+    <value>成就系统总是可用</value>
+  </data>
+  <data name="EnabledInfoView" xml:space="preserve">
+    <value>游戏内左上角信息面板总是可用</value>
+  </data>
+  <data name="EnabledSkipIntro" xml:space="preserve">
+    <value>跳过游戏启动时logo显示</value>
+  </data>
+  <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
+    <value>允许无限制放置独特建筑</value>
+  </data>
+  <data name="FastReturn" xml:space="preserve">
+    <value>快速退出游戏</value>
+  </data>
+  <data name="FireControl" xml:space="preserve">
+    <value>火灾控制</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>免费</value>
+  </data>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>地面污染</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>收入倍乘因子</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>工业区</value>
+  </data>
+  <data name="LocalModWarning" xml:space="preserve">
+    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。如果你想使用Game Anarchy功能，请禁用这个本地模组。</value>
+  </data>
+  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
+    <value>游戏内建模组, Game Anarchy已经包含了相同的功能。请禁用这个本地模组，并在GA的设置面板中设置初始金额，以防你的城市因透支而破产(以避免游戏崩溃)。</value>
+  </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>主校园建筑</value>
+  </data>
+  <data name="MaximizeAttractiveness" xml:space="preserve">
+    <value>最大化吸引力, 将会吸引更多的游客</value>
+  </data>
+  <data name="MaximizeEducationCoverage" xml:space="preserve">
+    <value>最大化教育服务覆盖范围, 仍然需要学校获得受教育的市民</value>
+  </data>
+  <data name="MaximizeEntertainment" xml:space="preserve">
+    <value>最大化娱乐服务, 将会提高市民的幸福度</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>最大化消防服务覆盖范围</value>
+  </data>
+  <data name="MaximizeLandValue" xml:space="preserve">
+    <value>最大化城市的土地价值</value>
+  </data>
+  <data name="MilestonelevelName_BigCity" xml:space="preserve">
+    <value>大型城市</value>
+  </data>
+  <data name="MilestonelevelName_BigTown" xml:space="preserve">
+    <value>大型城镇</value>
+  </data>
+  <data name="MilestonelevelName_BoomTown" xml:space="preserve">
+    <value>快速发展的城镇</value>
+  </data>
+  <data name="MilestonelevelName_BusyTown" xml:space="preserve">
+    <value>忙碌的城镇</value>
+  </data>
+  <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
+    <value>首都级城市</value>
+  </data>
+  <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
+    <value>超大城市</value>
+  </data>
+  <data name="MilestonelevelName_GrandCity" xml:space="preserve">
+    <value>特大城市</value>
+  </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>小村庄</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>超级大都会</value>
+  </data>
+  <data name="MilestonelevelName_Metropolis" xml:space="preserve">
+    <value>大都会</value>
+  </data>
+  <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
+    <value>里程碑解锁等级</value>
+  </data>
+  <data name="MilestonelevelName_SmallCity" xml:space="preserve">
+    <value>小型城市</value>
+  </data>
+  <data name="MilestonelevelName_TinyTown" xml:space="preserve">
+    <value>小城镇</value>
+  </data>
+  <data name="MilestonelevelName_Vanilla" xml:space="preserve">
+    <value>原版</value>
+  </data>
+  <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
+    <value>富有的村庄</value>
+  </data>
+  <data name="MOD_Description" xml:space="preserve">
+    <value>扩展、优化游戏特性。</value>
+  </data>
+  <data name="MoneyAnarchyMode" xml:space="preserve">
+    <value>金钱无限制模式</value>
+  </data>
+  <data name="MoneyAnarchyModeMinor" xml:space="preserve">
+    <value>此选项允许自动（设置以下两个选项）/ 手动（使用快捷键）设置金钱，允许您在游戏中动态切换。</value>
+  </data>
+  <data name="Monument" xml:space="preserve">
+    <value>遗迹</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>噪音污染</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>火灾不蔓延</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>办公区</value>
+  </data>
+  <data name="OilDepletionRate" xml:space="preserve">
+    <value>石油消耗速率</value>
+  </data>
+  <data name="OpenControlPanel" xml:space="preserve">
+    <value>打开控制面板</value>
+  </data>
+  <data name="OptimizeOptions" xml:space="preserve">
+    <value>优化选项</value>
+  </data>
+  <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
+    <value>此选项在调整后立即生效</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>在选项面板的模组列表旁边，显示模组的更新日期</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>此选项仅在刷新插件列表或重新启动游戏后生效</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
+    <value>选项面板类别栏水平偏移</value>
+  </data>
+  <data name="OreDepletionRate" xml:space="preserve">
+    <value>矿石消耗速率</value>
+  </data>
+  <data name="OtherFunctionsMajor" xml:space="preserve">
+    <value>其他功能</value>
+  </data>
+  <data name="OtherFunctionsMinor" xml:space="preserve">
+    <value>请使用键盘快捷键或 UUI 按钮打开 GA 的控制面板。如果你想要使用控制面板中的功能，请先关闭选项面板。</value>
+  </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>玩家建筑</value>
+  </data>
+  <data name="Refund" xml:space="preserve">
+    <value>铲除物品退款选项</value>
+  </data>
+  <data name="RelocateBuilding" xml:space="preserve">
+    <value>搬迁建筑</value>
+  </data>
+  <data name="RelocateBuildingMinor" xml:space="preserve">
+    <value>建造费用 * 倍乘因子 = 费用</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>机场建筑不会着火</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>解除铲除建筑物的退款期限限制</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>校园建筑不会着火</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>商业区建筑不会着火</value>
+  </data>
+  <data name="RemoveCrime" xml:space="preserve">
+    <value>移除所有建筑的罪犯并最大化警察服务的覆盖</value>
+  </data>
+  <data name="RemoveDeath" xml:space="preserve">
+    <value>移除死亡市民, 并最大化殉葬服务覆盖</value>
+  </data>
+  <data name="RemoveGarbage" xml:space="preserve">
+    <value>移除垃圾</value>
+  </data>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>工业区建筑不会着火</value>
+  </data>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>博物馆不会着火</value>
+  </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>解除金钱不足的限制</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>当启用“金钱无限制模式”或“原版无限金钱模组”时，此选项将自动强制执行。</value>
+  </data>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>办公区建筑不会着火</value>
+  </data>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>公园建筑不会着火</value>
+  </data>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>玩家建筑不会着火</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>移除污染</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>住宅区建筑不会着火</value>
+  </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>解除网络段落的退款期限限制</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>住宅区</value>
+  </data>
+  <data name="ResourceOptions" xml:space="preserve">
+    <value>资源选项</value>
+  </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>网络段落(道路/轨道等)的退款选项</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>网络段落退款数额倍乘因子</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>服务</value>
+  </data>
+  <data name="SortSettings" xml:space="preserve">
+    <value>选项菜单按名称对齐</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>空间雷达</value>
+  </data>
+  <data name="StartMoneyMajor" xml:space="preserve">
+    <value>游戏开始金钱</value>
+  </data>
+  <data name="StartMoneyMinor" xml:space="preserve">
+    <value>需在开始游戏前设定。如果不希望每次加载存档后金钱都为该值, 在启用一次后禁用此功能。游戏模拟开始后现金将会变更设置的值。</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>证券交易</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>树木的火灾蔓延概率</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>独特工厂</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>独特学院不会着火</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>无限制</value>
+  </data>
+  <data name="UnlockAll" xml:space="preserve">
+    <value>解锁所有</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>此选项与原版游戏的“解锁全部”功能相同，虽然您可以在游戏内动态地开关该选项，但是仍然建议在进入存档前设置好该选项。如果该选项已被禁用而游戏内仍然解锁了全部，请检查并确保您已禁用 Find it! 模组内“解锁全部”的功能。</value>
+  </data>
+  <data name="UnlockAllRoads" xml:space="preserve">
+    <value>解锁所有道路</value>
+  </data>
+  <data name="UnlockMetroTrack" xml:space="preserve">
+    <value>解锁地铁轨道</value>
+  </data>
+  <data name="UnlockOptions" xml:space="preserve">
+    <value>解锁选项</value>
+  </data>
+  <data name="UnlockPolicies" xml:space="preserve">
+    <value>解锁政策面板</value>
+  </data>
+  <data name="UnlockTrainTrack" xml:space="preserve">
+    <value>解锁火车轨道</value>
+  </data>
+  <data name="UnlockTransport" xml:space="preserve">
+    <value>解锁所有公交运输</value>
+  </data>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>解锁独特建筑</value>
+  </data>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>解锁所有 1～6 级的独特建筑。由于游戏限制，如果此选项被强制解锁，那么少数的独特建筑将会被解锁，但是不会解锁所有独特建筑。</value>
+  </data>
+  <data name="Updated_DaysAgo" xml:space="preserve">
+    <value>{0} 天前</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_LastYear" xml:space="preserve">
+    <value>去年</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthAgo" xml:space="preserve">
+    <value>{0} 个月前</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthsAgo" xml:space="preserve">
+    <value>{0} 个月前</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Today" xml:space="preserve">
+    <value>今天 {0:HH:mm}</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} 年前</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Yesterday" xml:space="preserve">
+    <value>昨天</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YesterdayAt" xml:space="preserve">
+    <value>昨天 {0:HH:mm}</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]新增控制面板，按下默认快捷键  Ctrl+Shift+G 或者使用 UUI 面板来调出新的控制面板。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]允许无限制放置独特建筑的功能现在已被拆分，并被整合到控制面板。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]增加了控制火灾蔓延的功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]移除火灾功能现在已拆分成多个选项，可以针对不同的建筑类型来控制火灾。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]添加了土耳其语翻译。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]修复了UI组件位置异常的问题。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]更新了框架，并优化了性能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]更新了选项面板的UI组件。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]添加了重置模组配置的高级选项。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
+    <value>[FIX]修复了控制面板显示语言不跟随语言切换的问题。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
+    <value>[FIX]修复了选项面板中无法更改金钱选项的问题。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
+    <value>[OPT]优化了控制面板唤起速度。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
+    <value>[OPT]优化了控制面板开/关按钮的UI风格。</value>
+  </data>
+  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
+    <value>[UPT]更新了兼容性检查。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>新增了在选项面板的模组名称列表旁边，显示模组更新日期的功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>新增了铲除建筑/网络段落退款的相关调整功能，包括：解除铲除物品时的退款期限限制、调整退款数额倍乘因子。您可以在 GA 的控制面板中找到这些选项。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
+    <value>在选项面板中，新增了一个打开控制面板的入口。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
+    <value>增加了调整搬迁建筑物费用的功能，控制项仅在控制面板中可用。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>新增了移除金钱不足警告的功能。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
+    <value>修复了移除火灾后仍然发生火灾的问题。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
+    <value>优化了选项面板类别栏水平偏移功能，此选项在调整后立即生效。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
+    <value>优化了开始金钱设定逻辑，以便进入游戏后即在开始新游戏时设置的值。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
+    <value>添加了斯洛伐克语翻译。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
+    <value>更新了用户界面的风格。</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>更新了框架。</value>
+  </data>
+  <data name="Vanilla" xml:space="preserve">
+    <value>原版</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
+    <value>原版无限金钱模式</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
+    <value>游戏内金钱只显示 “∞”，此选项允许您在游戏中动态切换</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>水污染</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>天气雷达</value>
+  </data>
+</root>

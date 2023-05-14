@@ -192,7 +192,7 @@ public class CustomUISlider : UIComponent {
     }
     public override bool canFocus => (isEnabled && isVisible) || base.canFocus;
 
-    public static CustomUISlider Add(UIComponent parent, Vector2 size, float minValue, float maxValue, float stepSize, float rawValue, Action<float> callback = null, bool defaultStyle = true) {
+    public static CustomUISlider Add(UIComponent parent, Vector2 size, float minValue, float maxValue, float stepSize, float rawValue, Action<float> callback = null) {
         var slider = parent.AddUIComponent<CustomUISlider>();
         slider.size = size;
         slider.MinValue = minValue;
@@ -200,8 +200,6 @@ public class CustomUISlider : UIComponent {
         slider.StepSize = stepSize;
         slider.RawValue = rawValue;
         slider.EventValueChanged += callback;
-        if (defaultStyle)
-            slider.SetDefaultStyle();
         return slider;
     }
     protected virtual void OnRawValueChanged() {
@@ -238,12 +236,34 @@ public class CustomUISlider : UIComponent {
         thumbObject.atlas = CustomUIAtlas.MbyronModsAtlas;
         thumbObject.spriteName = CustomUIAtlas.Circle;
         thumbObject.color = new(220, 220, 220, 255);
-        thumbObject.disabledColor = new Color32(72, 80, 96, 255);
+        thumbObject.disabledColor = new Color32(110, 110, 110, 255);
         thumbObject.size = new Vector2(size.y + 4, size.y + 4);
         ThumbObject = thumbObject;
         ThumbPadding = new RectOffset((int)thumbObject.size.y / 2, (int)thumbObject.size.y / 2, 0, 0);
         FillIndicatorObject = fillIndicator;
     }
+    public void SetCPDefaultStyle() {
+        atlas = CustomUIAtlas.MbyronModsAtlas;
+        bgSprite = CustomUIAtlas.RoundedRectangle3;
+        color = CustomUIColor.CPButtonNormal;
+        disabledColor = CustomUIColor.CPButtonDisabled;
+        var fillIndicator = AddUIComponent<UISlicedSprite>();
+        fillIndicator.atlas = CustomUIAtlas.MbyronModsAtlas;
+        fillIndicator.spriteName = CustomUIAtlas.RoundedRectangle3;
+        fillIndicator.color = CustomUIColor.GreenNormal;
+        fillIndicator.disabledColor = CustomUIColor.GreenDisabled;
+        fillIndicator.size = size;
+        var thumbObject = AddUIComponent<UISprite>();
+        thumbObject.atlas = CustomUIAtlas.MbyronModsAtlas;
+        thumbObject.spriteName = CustomUIAtlas.Circle;
+        thumbObject.color = new(220, 220, 220, 255);
+        thumbObject.disabledColor = new Color32(110, 110, 110, 255);
+        thumbObject.size = new Vector2(size.y + 4, size.y + 4);
+        ThumbObject = thumbObject;
+        ThumbPadding = new RectOffset((int)thumbObject.size.y / 2, (int)thumbObject.size.y / 2, 0, 0);
+        FillIndicatorObject = fillIndicator;
+    }
+
 
     private SteppingRate GetSteppingRate() {
         if (KeyHelper.IsShiftDown()) return SteppingRate.Fast;

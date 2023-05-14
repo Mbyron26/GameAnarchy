@@ -1,9 +1,8 @@
-﻿using ColossalFramework;
+﻿namespace MbyronModsCommon.UI;
 using ColossalFramework.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace MbyronModsCommon.UI;
 
 public class CustomUILabel : CustomUITextComponent {
     protected UIRenderData bgRenderData;
@@ -20,6 +19,8 @@ public class CustomUILabel : CustomUITextComponent {
 
     public event PropertyChangedEventHandler<string> EventTextChanged;
     public event Action<Color32> EventColorChanged;
+
+    public CustomUILabel() => textHorizontalAlignment = UIHorizontalAlignment.Left;
 
     public string BgSprite {
         get => bgSprite;
@@ -242,7 +243,7 @@ public class CustomUILabel : CustomUITextComponent {
         uifontRenderer.processMarkup = processMarkup;
         uifontRenderer.defaultColor = (isEnabled ? TextNormalColor : textDisabledColor);
         uifontRenderer.colorizeSprites = colorizeSprites;
-        uifontRenderer.bottomColor = useTextGradient ? GradientBottomNormalColor : GradientBottomDisabledColor;
+        uifontRenderer.bottomColor = useTextGradient ? new Color32?(GetGradientBottomColorForState()) : default;
         uifontRenderer.overrideMarkupColors = !isEnabled;
         uifontRenderer.opacity = CalculateOpacity();
         uifontRenderer.outline = useOutline;

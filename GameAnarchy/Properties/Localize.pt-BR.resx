@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddMoney" xml:space="preserve">
+    <value>Add money</value>
+  </data>
+  <data name="AddMoneyAmount" xml:space="preserve">
+    <value>Add money amount</value>
+  </data>
+  <data name="AddMoneyThreshold" xml:space="preserve">
+    <value>Add money threshold</value>
+  </data>
+  <data name="AddMoneyTooltip" xml:space="preserve">
+    <value>Make sure Money Anarchy feature is enabled</value>
+  </data>
+  <data name="AllowsDynamicToggling" xml:space="preserve">
+    <value>This option allows dynamic toggle within game</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="BuildingRefund" xml:space="preserve">
+    <value>Building refund</value>
+  </data>
+  <data name="BuildingRefundMultipleFactor" xml:space="preserve">
+    <value>Building refund multiple factor</value>
+  </data>
+  <data name="BuildingSpreadFireProbability" xml:space="preserve">
+    <value>Construção espalhou a probabilidade de fogo</value>
+  </data>
+  <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
+    <value>City bankruptcy warning threshold</value>
+  </data>
+  <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
+    <value>Game default value is -10000</value>
+  </data>
+  <data name="CityServiceOptions" xml:space="preserve">
+    <value>Opções dos Serviços da Cidade</value>
+  </data>
+  <data name="Commercial" xml:space="preserve">
+    <value>Comercial</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CustomUnlock" xml:space="preserve">
+    <value>Desbloqueio personalizado</value>
+  </data>
+  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
+    <value>Estas opções não estão disponíveis quando a função "Habilitar Tudo" está habilitada, porque "Habilitar tudo" já liberou todas as opções a seguir.</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy</value>
+  </data>
+  <data name="EnableAchievements" xml:space="preserve">
+    <value>Sistema de Conquistas está sempre disponível</value>
+  </data>
+  <data name="EnabledInfoView" xml:space="preserve">
+    <value>Ver Informações está sempre disponível</value>
+  </data>
+  <data name="EnabledSkipIntro" xml:space="preserve">
+    <value>Pular introdução</value>
+  </data>
+  <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
+    <value>Colocar edifícios únicos sem limite</value>
+  </data>
+  <data name="FastReturn" xml:space="preserve">
+    <value>Fechar rápido o jogo</value>
+  </data>
+  <data name="FireControl" xml:space="preserve">
+    <value>Controle de Fogo</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="GroundPollution" xml:space="preserve">
+    <value>Poluição no solo</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Renda</value>
+  </data>
+  <data name="IncomeMultiplier" xml:space="preserve">
+    <value>Multiplicador de rendimento</value>
+  </data>
+  <data name="Industrial" xml:space="preserve">
+    <value>Indústria</value>
+  </data>
+  <data name="LocalModWarning" xml:space="preserve">
+    <value>Petróleo e Minério Ilimitado (Mod original do jogo): Game Anarchy já tem a mesma função! Por favor, desabilite este mod local se você quiser usar as funções do Game Anarchy.</value>
+  </data>
+  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
+    <value>Buildtin mod: Game Anarchy já tem a mesma função! Por favor, desabilite este mod local e defina um valor de caixa inicial nas configurações no painel do Game Anarchy (GA) caso sua cidade vá à falência devido ao "saldo negativo". (Isso pode causar falha crítica, crash, no jogo).</value>
+  </data>
+  <data name="MainCampusBuilding" xml:space="preserve">
+    <value>Edifício do campus principal</value>
+  </data>
+  <data name="MaximizeAttractiveness" xml:space="preserve">
+    <value>Maximizar atratividade, o que vai trazer mais turistas</value>
+  </data>
+  <data name="MaximizeEducationCoverage" xml:space="preserve">
+    <value>Maximizar cobertura para Educação. Ainda será necessário ter escolas para cidadãos serem educados</value>
+  </data>
+  <data name="MaximizeEntertainment" xml:space="preserve">
+    <value>Maximizar Entretenimento. Melhorará a felicidade dos cidadãos</value>
+  </data>
+  <data name="MaximizeFireCoverage" xml:space="preserve">
+    <value>Maximizar cobertura de fogo</value>
+  </data>
+  <data name="MaximizeLandValue" xml:space="preserve">
+    <value>Valor do terreno no máximo em toda a cidade</value>
+  </data>
+  <data name="MilestonelevelName_BigCity" xml:space="preserve">
+    <value>Cidade Enorme</value>
+  </data>
+  <data name="MilestonelevelName_BigTown" xml:space="preserve">
+    <value>Cidade Grande</value>
+  </data>
+  <data name="MilestonelevelName_BoomTown" xml:space="preserve">
+    <value>Cidade em Crescimento</value>
+  </data>
+  <data name="MilestonelevelName_BusyTown" xml:space="preserve">
+    <value>Cidade Movimentada</value>
+  </data>
+  <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
+    <value>Capital</value>
+  </data>
+  <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
+    <value>Cidade Gigantesca</value>
+  </data>
+  <data name="MilestonelevelName_GrandCity" xml:space="preserve">
+    <value>Cidade Grandiosa</value>
+  </data>
+  <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
+    <value>Vilarejo</value>
+  </data>
+  <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
+    <value>Megalópole</value>
+  </data>
+  <data name="MilestonelevelName_Metropolis" xml:space="preserve">
+    <value>Metrópole</value>
+  </data>
+  <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
+    <value>Nível de desbloqueio</value>
+  </data>
+  <data name="MilestonelevelName_SmallCity" xml:space="preserve">
+    <value>Cidade Pequena</value>
+  </data>
+  <data name="MilestonelevelName_TinyTown" xml:space="preserve">
+    <value>Cidadezinha</value>
+  </data>
+  <data name="MilestonelevelName_Vanilla" xml:space="preserve">
+    <value>Sem modificações (Vanilla)</value>
+  </data>
+  <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
+    <value>Vila de Valor</value>
+  </data>
+  <data name="MOD_Description" xml:space="preserve">
+    <value>Extende e otimiza as funções do jogo.</value>
+  </data>
+  <data name="MoneyAnarchyMode" xml:space="preserve">
+    <value>Money anarchy mode</value>
+  </data>
+  <data name="MoneyAnarchyModeMinor" xml:space="preserve">
+    <value>This option allows automatic (set the following 2 options)/manual (use hotkey) set money, allows dynamic toggle within game</value>
+  </data>
+  <data name="Monument" xml:space="preserve">
+    <value>Monumentos</value>
+  </data>
+  <data name="NoisePollution" xml:space="preserve">
+    <value>Poluição pelo ruído</value>
+  </data>
+  <data name="NoSpreadFire" xml:space="preserve">
+    <value>Não-dispersão do fogo</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Escritório</value>
+  </data>
+  <data name="OilDepletionRate" xml:space="preserve">
+    <value>Taxa de esgotamento de petróleo</value>
+  </data>
+  <data name="OpenControlPanel" xml:space="preserve">
+    <value>Open Control Panel</value>
+  </data>
+  <data name="OptimizeOptions" xml:space="preserve">
+    <value>Opções de Otimização</value>
+  </data>
+  <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
+    <value>This option takes effect after adjustment</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
+    <value>Show mod updated date in options panel categories</value>
+  </data>
+  <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+  </data>
+  <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
+    <value>Deslocamento do painel horizontal de categorias</value>
+  </data>
+  <data name="OreDepletionRate" xml:space="preserve">
+    <value>Taxa de esgotamento dos minérios</value>
+  </data>
+  <data name="OtherFunctionsMajor" xml:space="preserve">
+    <value>Other functions</value>
+  </data>
+  <data name="OtherFunctionsMinor" xml:space="preserve">
+    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+  </data>
+  <data name="PlayerBuilding" xml:space="preserve">
+    <value>Edifício do jogador</value>
+  </data>
+  <data name="Refund" xml:space="preserve">
+    <value>Bulldozing refund</value>
+  </data>
+  <data name="RelocateBuilding" xml:space="preserve">
+    <value>Relocate building</value>
+  </data>
+  <data name="RelocateBuildingMinor" xml:space="preserve">
+    <value>Construction cost * Multiplier factor = Cost</value>
+  </data>
+  <data name="RemoveAirportBuildingFire" xml:space="preserve">
+    <value>Remover fogo de construção aeroportuária</value>
+  </data>
+  <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
+    <value>Remove building refund time limitation</value>
+  </data>
+  <data name="RemoveCampusBuildingFire" xml:space="preserve">
+    <value>Remover fogueira ao construir campus</value>
+  </data>
+  <data name="RemoveCommercialBuildingFire" xml:space="preserve">
+    <value>Remover fogueira ao construir campus</value>
+  </data>
+  <data name="RemoveCrime" xml:space="preserve">
+    <value>Remover criminosos de todas as construções e maximizar a cobertura da polícia</value>
+  </data>
+  <data name="RemoveDeath" xml:space="preserve">
+    <value>Remover todos os cidadãos mortos e maximizar a cobertura funerária</value>
+  </data>
+  <data name="RemoveGarbage" xml:space="preserve">
+    <value>Remover lixo</value>
+  </data>
+  <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
+    <value>Remover fogueira ao construir campus</value>
+  </data>
+  <data name="RemoveMuseumFire" xml:space="preserve">
+    <value>Remover fogo do museu</value>
+  </data>
+  <data name="RemoveNotEnoughMoney" xml:space="preserve">
+    <value>Remove not enough money limitation</value>
+  </data>
+  <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
+    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+  </data>
+  <data name="RemoveOfficeBuildingFire" xml:space="preserve">
+    <value>Remover fogueira ao construir campus</value>
+  </data>
+  <data name="RemoveParkBuildingFire" xml:space="preserve">
+    <value>Remover fogo de construção aeroportuária</value>
+  </data>
+  <data name="RemovePlayerBuildingFire" xml:space="preserve">
+    <value>Remover fogo de construção aeroportuária</value>
+  </data>
+  <data name="RemovePollution" xml:space="preserve">
+    <value>Poluição por receita</value>
+  </data>
+  <data name="RemoveResidentialBuildingFire" xml:space="preserve">
+    <value>Remover fogueira ao construir campus</value>
+  </data>
+  <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
+    <value>Remove Segment refund time limitation</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>Residencial</value>
+  </data>
+  <data name="ResourceOptions" xml:space="preserve">
+    <value>Opções de recursos</value>
+  </data>
+  <data name="SegmentRefund" xml:space="preserve">
+    <value>Segment refund</value>
+  </data>
+  <data name="SegmentRefundMultipleFactor" xml:space="preserve">
+    <value>Segment refund multiple factor</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Serviço</value>
+  </data>
+  <data name="SortSettings" xml:space="preserve">
+    <value>Ordenar nomes dos mods no painel de opções</value>
+  </data>
+  <data name="SpaceRadar" xml:space="preserve">
+    <value>Radar espacial</value>
+  </data>
+  <data name="StartMoneyMajor" xml:space="preserve">
+    <value>Game start money</value>
+  </data>
+  <data name="StartMoneyMinor" xml:space="preserve">
+    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+  </data>
+  <data name="StockExchange" xml:space="preserve">
+    <value>Bolsa de valores</value>
+  </data>
+  <data name="TreeSpreadFireProbability" xml:space="preserve">
+    <value>Construção espalhou a probabilidade de fogo</value>
+  </data>
+  <data name="UniqueFactory" xml:space="preserve">
+    <value>Fábrica única</value>
+  </data>
+  <data name="UniqueFaculty" xml:space="preserve">
+    <value>Fábrica única</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Ilimitado</value>
+  </data>
+  <data name="UnlockAll" xml:space="preserve">
+    <value>Desbloquear tudo</value>
+  </data>
+  <data name="UnlockAllMinor" xml:space="preserve">
+    <value>Esta opção é o mesmo que os recursos "Desbloquear tudo", e enquanto ele permite uma alternância dinâmica dentro do jogo, é recomendado configurá-lo antes de entrar salvar. Se desativada, esta opção ainda desbloqueia tudo, certifique-se de ter desabilitado o Encontrar Isto! opção "Desbloquear tudo".</value>
+  </data>
+  <data name="UnlockAllRoads" xml:space="preserve">
+    <value>Desbloquerar todas as estradas</value>
+  </data>
+  <data name="UnlockMetroTrack" xml:space="preserve">
+    <value>Desbloquear trilhos de metrô</value>
+  </data>
+  <data name="UnlockOptions" xml:space="preserve">
+    <value>Opções de Desbloqueio</value>
+  </data>
+  <data name="UnlockPolicies" xml:space="preserve">
+    <value>Desbloquear painel de políticas</value>
+  </data>
+  <data name="UnlockTrainTrack" xml:space="preserve">
+    <value>Desbloquear trilhos de trem</value>
+  </data>
+  <data name="UnlockTransport" xml:space="preserve">
+    <value>Desbloquear todos os transportes</value>
+  </data>
+  <data name="UnlockUniqueBuilding" xml:space="preserve">
+    <value>Desbloqueie o Edifício único</value>
+  </data>
+  <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
+    <value>Desbloquear todos os edifícios únicos em níveis 1 até 6. Devido a restrições do jogo, se esta opção for forçada a ser desbloqueada, um pequeno número de edifícios será desbloqueado, mas não todos.</value>
+  </data>
+  <data name="Updated_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_LastYear" xml:space="preserve">
+    <value>Last year</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthAgo" xml:space="preserve">
+    <value>{0} month ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Today" xml:space="preserve">
+    <value>Today at {0:HH:mm}</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+    <comment>Show mod updated date.</comment>
+  </data>
+  <data name="Updated_YesterdayAt" xml:space="preserve">
+    <value>Yesterday at {0:HH:mm}</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
+    <value>[ADD]Um novo painel de controle, use a tecla de atalho padrão Ctrl+Shift+G ou use o painel UUI para invocar o novo painel de controle.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
+    <value>[ADD]Coloque construções únicas sem limitar funcionalidades agora divididas e integradas no painel de controle.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
+    <value>[ADD]Funcionalidade de controle adicional de disseminação de incêndio.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
+    <value>[ADD]A função Remover fogo agora dividida em várias opções, pode controlar o fogo de diferentes tipos de edifícios.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
+    <value>[ADD]Adicionada localização do Turco.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
+    <value>[FIX]Fixo local anormal do componente da interface de usuário.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
+    <value>[UPT]Quadro atualizado, melhoria de desempenho.</value>
+  </data>
+  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
+    <value>[UPT]Componentes atualizados do Painel de UI.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
+    <value>[ADD]Added advanced option for reset mod config.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
+    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
+    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
+    <value>[OPT]Optimized control panel invoke speed.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
+    <value>[OPT]Optimized control panel toggle button UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
+    <value>[UPT]Updated compatibility check.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
+    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
+    <value>Option panel added a entry button option to invoke the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
+    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
+    <value>Added Remove not enough money warning function.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
+    <value>Fixed an issue where still catch fire after remove fires.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
+    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
+    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
+    <value>Added Slovak localization.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
+    <value>Updated UI style.</value>
+  </data>
+  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
+    <value>Updated framework.</value>
+  </data>
+  <data name="Vanilla" xml:space="preserve">
+    <value>Sem modificações (Vanilla)</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
+    <value>Vanilla unlimited money mode</value>
+  </data>
+  <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
+    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
+  </data>
+  <data name="WaterPollution" xml:space="preserve">
+    <value>Poluição severa</value>
+  </data>
+  <data name="WeatherRadar" xml:space="preserve">
+    <value>Radar meteorológico</value>
+  </data>
+</root>
