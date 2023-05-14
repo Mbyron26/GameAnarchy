@@ -154,6 +154,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedUniqueFaculty, GameAnarchy.Localize.UniqueFaculty, null, (v) => Config.Instance.UnlimitedUniqueFaculty = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedWeatherRadar, GameAnarchy.Localize.WeatherRadar, null, (v) => Config.Instance.UnlimitedWeatherRadar = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedSpaceRadar, GameAnarchy.Localize.SpaceRadar, null, (v) => Config.Instance.UnlimitedSpaceRadar = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedFestivalArea, GameAnarchy.Localize.FestivalArea, null, (v) => Config.Instance.UnlimitedFestivalArea = v);
         ControlPanelHelper.Reset();
 
         ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, GameAnarchy.Localize.ResourceOptions);

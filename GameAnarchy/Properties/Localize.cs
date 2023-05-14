@@ -116,6 +116,11 @@ namespace GameAnarchy
 		public static string FastReturn => LocaleManager.GetString("FastReturn", Culture);
 
 		/// <summary>
+		/// Festival area
+		/// </summary>
+		public static string FestivalArea => LocaleManager.GetString("FestivalArea", Culture);
+
+		/// <summary>
 		/// Fire Control
 		/// </summary>
 		public static string FireControl => LocaleManager.GetString("FireControl", Culture);

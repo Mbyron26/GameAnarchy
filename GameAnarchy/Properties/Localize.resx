@@ -183,6 +183,9 @@
   <data name="FastReturn" xml:space="preserve">
     <value>Fast Return</value>
   </data>
+  <data name="FestivalArea" xml:space="preserve">
+    <value>Festival area</value>
+  </data>
   <data name="FireControl" xml:space="preserve">
     <value>Fire Control</value>
   </data>
