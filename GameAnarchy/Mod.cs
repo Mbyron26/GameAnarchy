@@ -39,7 +39,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
         EconomyExtension.SetStartMoney();
         AchievementsManager.InitializeAchievements(mode);
         InfoViewsManager.Deploy(mode);
-        ControlPanelManager<ControlPanel>.EventOnVisibleChanged += (_) => {
+        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => {
             if (UUI.UUIButton is not null) {
                 UUI.UUIButton.IsPressed = _;
             }
@@ -59,7 +59,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
-        LocaleManager.eventLocaleChanged += ControlPanelManager<ControlPanel>.OnLocaleChanged;
+        LocaleManager.eventLocaleChanged += ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged;
     }
     protected override void PatchAction() {
         AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());

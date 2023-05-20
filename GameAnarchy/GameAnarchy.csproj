@@ -4,13 +4,13 @@
 		<TargetFramework>net35</TargetFramework>
 		<LangVersion>10</LangVersion>
 		<Product>Game Anarchy</Product>
-		<Copyright>Copyright © 2022 Mbyron26</Copyright>
 		<Authors>Mbyron26</Authors>
+		<Copyright>Copyright © 2022 Mbyron26</Copyright>
 		<Configurations>Beta Debug;Beta Release;Stable Debug;Stable Release</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>0.9.9.51421</Version>
+		<Version>0.9.9.52019</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
@@ -18,19 +18,19 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Debug|AnyCPU'">
-	  <DebugType>none</DebugType>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Release|AnyCPU'">
-	  <DebugType>none</DebugType>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable Debug|AnyCPU'">
-	  <DebugType>none</DebugType>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Stable Release|AnyCPU'">
-	  <DebugType>none</DebugType>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -145,7 +145,7 @@
 			<CommonLocalizeToMove Include="$(OutDir)*.resx" />
 		</ItemGroup>
 	</Target>
-	
+
 	<Target Name="DeployToLocal" AfterTargets="PdbToMdb">
 		<Message Text="Deploy to local $(LocalDir)" Importance="high" />
 		<RemoveDir Directories="$(LocalDir)" />
@@ -155,20 +155,14 @@
 		<Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(LocalDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
 	</Target>
 
-	<Import Project="..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
-
 	<ItemGroup>
-	  <Compile Update="Properties\Localize.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localize.resx</DependentUpon>
-	  </Compile>
+		<Compile Update="Properties\Localize.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Localize.resx</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
-	<ItemGroup>
-		<None Update="D:\CitiesSkylines\MyMods\GameAnarchy\GameAnarchy0.9.9\GameAnarchy\MbyronModsCommon\MbyronModsCommon\Locale\Common\CommonLocalize.resx">
-			<LastGenOutput>CommonLocalize.cs</LastGenOutput>
-		</None>
-	</ItemGroup>
+	<Import Project="..\..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
 
 </Project>
