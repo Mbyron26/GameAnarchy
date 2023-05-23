@@ -1,5 +1,7 @@
-﻿V0.9.9.1
+﻿V1.0.0
+[*]Updated to support game version 1.17.0
 [*]Added unlimited placement of festival area buildings.
+[*]Fixed control panel settings sometimes not automatically save.
 
 V0.9.9
 [*]Added show mods updated date for the category bar of the options panel function.

@@ -741,6 +741,16 @@ namespace GameAnarchy
 		public static string UpdateLog_V0_9_9UPT1 => LocaleManager.GetString("UpdateLog_V0_9_9UPT1", Culture);
 
 		/// <summary>
+		/// Added unlimited placement of festival area buildings.
+		/// </summary>
+		public static string UpdateLog_V1_0_0ADD0 => LocaleManager.GetString("UpdateLog_V1_0_0ADD0", Culture);
+
+		/// <summary>
+		/// Fixed control panel settings sometimes not automatically save.
+		/// </summary>
+		public static string UpdateLog_V1_0_0FIX0 => LocaleManager.GetString("UpdateLog_V1_0_0FIX0", Culture);
+
+		/// <summary>
 		/// Vanilla
 		/// </summary>
 		public static string Vanilla => LocaleManager.GetString("Vanilla", Culture);

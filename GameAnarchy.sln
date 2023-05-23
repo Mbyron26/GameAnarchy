@@ -11,8 +11,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Beta Debug|Any CPU = Beta Debug|Any CPU
 		Beta Release|Any CPU = Beta Release|Any CPU
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 		Stable Debug|Any CPU = Stable Debug|Any CPU
 		Stable Release|Any CPU = Stable Release|Any CPU
 	EndGlobalSection
@@ -21,10 +19,6 @@ Global
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Beta Debug|Any CPU.Build.0 = Beta Debug|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Beta Release|Any CPU.ActiveCfg = Beta Release|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Beta Release|Any CPU.Build.0 = Beta Release|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Debug|Any CPU.ActiveCfg = Stable Debug|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Debug|Any CPU.Build.0 = Stable Debug|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Release|Any CPU.ActiveCfg = Stable Release|Any CPU
-		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Release|Any CPU.Build.0 = Stable Release|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Stable Debug|Any CPU.ActiveCfg = Stable Debug|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Stable Debug|Any CPU.Build.0 = Stable Debug|Any CPU
 		{E13A5CC5-CCD1-4616-AF1A-ECD45911CA96}.Stable Release|Any CPU.ActiveCfg = Stable Release|Any CPU

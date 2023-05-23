@@ -6,7 +6,6 @@ using UnityEngine;
 internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUITabContainer tabContainer;
 
-    private float PorpertyPanelWidth => PanelWidth - 2 * 16;
     private Vector2 ContainerSize => new(PorpertyPanelWidth, 514);    
     private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
     private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];

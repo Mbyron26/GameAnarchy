@@ -145,10 +145,10 @@
     <value>Probabilidad de propagación de incendio en edificios</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>City bankruptcy warning threshold</value>
+    <value>Umbral de advertencia de bancarrota de la ciudad</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>El valor por defecto del juego es -10000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Opciones de Servicios de la ciudad</value>
@@ -166,7 +166,7 @@
     <value>Estas opciones no están disponibles cuando "Desbloquear Todo" está activado, porque "Desbloquear Todo" ha desbloqueado todas las funciones siguientes.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>Economía</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>El sistema de Logros está siempre disponible</value>
@@ -182,6 +182,9 @@
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>Retorno rápido</value>
+  </data>
+  <data name="FestivalArea" xml:space="preserve">
+    <value>Festival area</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>Control de Incendios</value>
@@ -361,10 +364,10 @@
     <value>Eliminar incendio de museos</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>Remove not enough money limitation</value>
+    <value>Eliminar la limitación de dinero insuficiente</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+    <value>Cuando "Anarquía del dinero" o "Dinero ilimitado" está habilitado, esta opción se activa automáticamente.</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>Eliminar incendio de oficinas</value>
@@ -542,7 +545,7 @@
     <value>Agregada la habilidad de ajustar el costo de reubicación de edificios. </value>
   </data>
   <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
+    <value>Agregada la función de remover la advertencia de dinero insuficiente.</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>Arreglado problema que aún habia incendios después de deshabilitar la función.</value>
@@ -560,7 +563,13 @@
     <value>Interfaz de usuario actualizada.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
+    <value>Marco actualizado.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
+    <value>Added unlimited placement of festival area buildings.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
+    <value>Fixed control panel settings sometimes not automatically save.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>
