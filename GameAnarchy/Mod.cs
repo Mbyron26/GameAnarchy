@@ -39,7 +39,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
         EconomyExtension.SetStartMoney();
         AchievementsManager.InitializeAchievements(mode);
         InfoViewsManager.Deploy(mode);
-        ControlPanelManager<ControlPanel>.EventOnVisibleChanged += (_) => {
+        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => {
             if (UUI.UUIButton is not null) {
                 UUI.UUIButton.IsPressed = _;
             }
@@ -59,7 +59,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
-        LocaleManager.eventLocaleChanged += ControlPanelManager<ControlPanel>.OnLocaleChanged;
+        LocaleManager.eventLocaleChanged += ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged;
     }
     protected override void PatchAction() {
         AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());
@@ -71,14 +71,15 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPrefix(BulldozeToolPatch.GetOriginalGetSegmentRefundAmount(), BulldozeToolPatch.GetGetSegmentRefundAmountPrefix());
         AddPrefix(BuildingAIPatch.GetOriginalGetRefundAmount(), BuildingAIPatch.GetGetRefundAmountPrefix());
         AddPrefix(BuildingAIPatch.GetOriginalGetRelocationCost(), BuildingAIPatch.GetGetRelocationCostPrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalPlayerBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetPlayerBuildingAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalStockExchangeAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetStockExchangeAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFacultyAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFacultyAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalWeatherRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetWeatherRadarAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMonumentAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMonumentAICanBeBuiltOnlyOncePrefix());
-        AddPrefix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalPlayerBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetPlayerBuildingAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalStockExchangeAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetStockExchangeAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFacultyAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFacultyAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalWeatherRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetWeatherRadarAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMonumentAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMonumentAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalFestivalAreaAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetFestivalAreaAICanBeBuiltOnlyOncePostfix());
         AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAITrySpreadFire(), RemoveFirePatch.GetCommonBuildingAITrySpreadFirePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalTreeManagerTrySpreadFire(), RemoveFirePatch.GetTreeManagerTrySpreadFirePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalTreeManagerBurnTree(), RemoveFirePatch.GetTreeManagerBurnTreePrefix());
@@ -114,9 +115,16 @@ public class Mod : ModPatcherBase<Mod, Config> {
         new IncompatibleModInfo(447789816, @"Unlock All Roads", true),
         new IncompatibleModInfo(552324460, @"No Fires", true),
         new IncompatibleModInfo(1718245521, @"No Park Building Fires", true),
+        new IncompatibleModInfo(1595663918, @"InfoPanelOnLoad", true),
+        new IncompatibleModInfo(409809475, @"Info View Button Enabler", true),
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 0, 0), new(2023, 5, 23), new List<LogString> {
+            new(LogFlag.Updated,"Updated to support game version 1.17.0"),
+            new(LogFlag.Added,Localize.UpdateLog_V1_0_0ADD0),
+            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_0FIX0),
+        }),
         new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 14), new List<LogString> {
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
             new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
@@ -131,7 +139,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
             new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),
         }),
         new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<LogString> {
-            new(LogFlag.Added,"[UPT]Updated to support game version 1.16.1"),
+            new(LogFlag.Updated,"Updated to support game version 1.16.1"),
             new(LogFlag.Added, Localize.UpdateLog_V0_9_8UPT),
             new(LogFlag.Updated,Localize.UpdateLog_V0_9_8ADD),
             new(LogFlag.Optimized, Localize.UpdateLog_V0_9_8OPT1),

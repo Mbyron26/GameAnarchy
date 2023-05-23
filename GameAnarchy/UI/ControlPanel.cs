@@ -6,7 +6,6 @@ using UnityEngine;
 internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUITabContainer tabContainer;
 
-    private float PorpertyPanelWidth => PanelWidth - 2 * 16;
     private Vector2 ContainerSize => new(PorpertyPanelWidth, 514);    
     private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
     private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];
@@ -154,6 +153,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedUniqueFaculty, GameAnarchy.Localize.UniqueFaculty, null, (v) => Config.Instance.UnlimitedUniqueFaculty = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedWeatherRadar, GameAnarchy.Localize.WeatherRadar, null, (v) => Config.Instance.UnlimitedWeatherRadar = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedSpaceRadar, GameAnarchy.Localize.SpaceRadar, null, (v) => Config.Instance.UnlimitedSpaceRadar = v);
+        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedFestivalArea, GameAnarchy.Localize.FestivalArea, null, (v) => Config.Instance.UnlimitedFestivalArea = v);
         ControlPanelHelper.Reset();
 
         ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, GameAnarchy.Localize.ResourceOptions);

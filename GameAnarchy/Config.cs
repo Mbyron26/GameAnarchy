@@ -69,6 +69,7 @@ public class Config : ModConfig<Config> {
     public bool UnlimitedUniqueFaculty { get; set; } = true;
     public bool UnlimitedWeatherRadar { get; set; } = true;
     public bool UnlimitedSpaceRadar { get; set; } = true;
+    public bool UnlimitedFestivalArea { get; set; } = true;
 
     public bool MaximizeFireCoverage { get; set; } = false;
     public bool RemovePlayerBuildingFire { get; set; } = false;

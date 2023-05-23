@@ -20,6 +20,6 @@ internal class UUI {
             InternalLogger.Log("Reset UUI button.");
         }
     }
-    private static void OnToggleButton(bool isToggled) => ControlPanelManager<ControlPanel>.CallPanel();
+    private static void OnToggleButton(bool isToggled) => ControlPanelManager<Mod, ControlPanel>.CallPanel();
 
 }

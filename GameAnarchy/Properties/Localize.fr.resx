@@ -183,6 +183,9 @@
   <data name="FastReturn" xml:space="preserve">
     <value>Retour rapide</value>
   </data>
+  <data name="FestivalArea" xml:space="preserve">
+    <value>Festival area</value>
+  </data>
   <data name="FireControl" xml:space="preserve">
     <value>Contrôle Incendie</value>
   </data>
@@ -561,6 +564,12 @@
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
     <value>Updated framework.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
+    <value>Added unlimited placement of festival area buildings.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
+    <value>Fixed control panel settings sometimes not automatically save.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Jeu de base</value>

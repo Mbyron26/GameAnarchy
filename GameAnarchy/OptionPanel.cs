@@ -136,7 +136,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private void AddOtherFunctionProperty() {
         OptionPanelHelper.AddGroup(GeneralContainer, null);
         OptionPanelHelper.AddButton(GameAnarchy.Localize.OtherFunctionsMajor, GameAnarchy.Localize.OtherFunctionsMinor, GameAnarchy.Localize.OpenControlPanel, null, 30, () => {
-            ControlPanelManager<ControlPanel>.CallPanel();
+            ControlPanelManager<Mod, ControlPanel>.CallPanel();
         });
         OptionPanelHelper.Reset();
     }

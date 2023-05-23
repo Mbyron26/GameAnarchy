@@ -8,7 +8,7 @@ namespace GameAnarchy {
             base.OnUpdate(realTimeDelta, simulationTimeDelta);
 
             AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, EconomyExtension.AddMoneyManually);
-            AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<ControlPanel>.CallPanel);
+            AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<Mod, ControlPanel>.CallPanel);
         }
 
     }

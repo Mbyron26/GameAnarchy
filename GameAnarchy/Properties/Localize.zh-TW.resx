@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>添加金錢</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>Add money amount</value>
+    <value>添加金錢數額</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>Add money threshold</value>
+    <value>添加金錢門檻</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Make sure Money Anarchy feature is enabled</value>
+    <value>請確保已啟用了無限金錢功能</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>此選項允許在遊戲中進行動態切換</value>
@@ -136,19 +136,19 @@
     <value>數量</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>Building refund</value>
+    <value>剷除建築退款選項</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
-    <value>Building refund multiple factor</value>
+    <value>剷除建築退款數額乘數</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建築物蔓延火災概率</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>City bankruptcy warning threshold</value>
+    <value>城市破產警告閾值</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>遊戲預設值為 -10000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>城市服務選項</value>
@@ -157,7 +157,7 @@
     <value>商業的</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>費用</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>自訂解鎖選項</value>
@@ -166,7 +166,7 @@
     <value>當啟用「全部解鎖」時，以下選項因已解鎖而不可用</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>經濟</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>啟用成就系統</value>
@@ -183,11 +183,14 @@
   <data name="FastReturn" xml:space="preserve">
     <value>快速退出遊戲</value>
   </data>
+  <data name="FestivalArea" xml:space="preserve">
+    <value>Festival area</value>
+  </data>
   <data name="FireControl" xml:space="preserve">
     <value>消防</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>Free</value>
+    <value>免費</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>地面污染</value>
@@ -295,19 +298,19 @@
     <value>原油枯竭率</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>打開控制面板</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>優化選項</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>此選項在調整後立即生效</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>Show mod updated date in options panel categories</value>
+    <value>在選項面板的模組列表旁，顯示模組的更新日期</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+    <value>此選項僅在刷新外掛列表或重新啟動遊戲後生效</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>選項面板標題欄寬度延伸</value>
@@ -316,28 +319,28 @@
     <value>礦產枯竭率</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>其他功能</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+    <value>請使用鍵盤快速鍵或 UUI 按鈕打開 GA 的控制面板。如果你想要使用控制面板中的功能，請先關閉選項面板。</value>
   </data>
   <data name="PlayerBuilding" xml:space="preserve">
     <value>玩家建築</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing refund</value>
+    <value>剷除物品退款選項</value>
   </data>
   <data name="RelocateBuilding" xml:space="preserve">
-    <value>Relocate building</value>
+    <value>搬遷建築</value>
   </data>
   <data name="RelocateBuildingMinor" xml:space="preserve">
-    <value>Construction cost * Multiplier factor = Cost</value>
+    <value>建造費用 * 乘數 = 費用</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
     <value>清除機場大樓火災</value>
   </data>
   <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
-    <value>Remove building refund time limitation</value>
+    <value>解除剷除建築物的退款期限限制</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
     <value>消除校園建築火災</value>
@@ -361,10 +364,10 @@
     <value>消除博物館火災</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>Remove not enough money limitation</value>
+    <value>解除金錢不足的限制</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+    <value>當啟用「金錢無限制模式」或「原版無限金錢模組」時，此選項將自動強制執行</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>清除辦公樓火災</value>
@@ -382,7 +385,7 @@
     <value>拆除住宅樓火災</value>
   </data>
   <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
-    <value>Remove Segment refund time limitation</value>
+    <value>解除網路段落的退款期限限制</value>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>住宅</value>
@@ -391,10 +394,10 @@
     <value>資源選項</value>
   </data>
   <data name="SegmentRefund" xml:space="preserve">
-    <value>Segment refund</value>
+    <value>網路段落（道路/軌道等）的退款選項</value>
   </data>
   <data name="SegmentRefundMultipleFactor" xml:space="preserve">
-    <value>Segment refund multiple factor</value>
+    <value>網路段落退款數額乘數</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>服務</value>
@@ -406,10 +409,10 @@
     <value>太空雷達</value>
   </data>
   <data name="StartMoneyMajor" xml:space="preserve">
-    <value>Game start money</value>
+    <value>遊戲起始資金</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+    <value>需在開始遊戲前設定。如不希望每次載入存檔後金錢都為該值，啟用一次後須停用此功能。遊戲模擬開始後現金將會變更為設定的值。</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>股票交易</value>
@@ -457,35 +460,35 @@
     <value>解鎖1到6級的所有獨特建築。由於遊戲限制，如果強制解鎖此選項，將解鎖少量建築，但不是全部。</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} days ago</value>
+    <value>{0} 天前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>Last year</value>
+    <value>去年</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} month ago</value>
+    <value>{0} 個月前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} months ago</value>
+    <value>{0} 個月前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>Today at {0:HH:mm}</value>
+    <value>今天 {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} years ago</value>
+    <value>{0} 年前</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>Yesterday</value>
+    <value>昨天</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>Yesterday at {0:HH:mm}</value>
+    <value>昨天 {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]新控制面板，使用默認熱鍵Ctrl+Shift+G或使用UUI面板調用新控制面板。</value>
@@ -530,37 +533,43 @@
     <value>[UPT]更新了兼容性檢查。</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
+    <value>新增了在選項面板的模組名稱列表旁，顯示模組更新日期的功能。</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+    <value>新增了剷除建築/網路段落退款的相關調整功能，包括：解除剷除物品時的退款期限限制、調整退款數額乘數。您可以在 GA 的控制面板中找到這些選項。</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
+    <value>在選項面板中，新增了一個打開控制面板的入口。</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+    <value>增加了調整搬遷建築物費用的功能，控制項僅在控制面板中可用。</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
+    <value>新增了移除金錢不足警告的功能。</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
+    <value>修復了移除火災後仍然發生火災的問題。</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+    <value>最佳化了選項面板類別欄水平偏移功能，此選項在調整後立即生效。</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
+    <value>最佳化了開始金錢設定邏輯，以便進入遊戲後即在開始新遊戲時設定的值。</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>新增了斯洛伐克語翻譯。</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
+    <value>更新了使用者介面的風格。</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
+    <value>更新了框架。</value>
+  </data>
+  <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
+    <value>Added unlimited placement of festival area buildings.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
+    <value>Fixed control panel settings sometimes not automatically save.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>香草</value>

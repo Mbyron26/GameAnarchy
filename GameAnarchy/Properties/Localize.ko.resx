@@ -145,10 +145,10 @@
     <value>건물 화재 확산 가능성</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>City bankruptcy warning threshold</value>
+    <value>도시 파산 경고 임계값</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>게임 기본값은 -10000입니다.</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>도시 서비스 옵션</value>
@@ -166,7 +166,7 @@
     <value>모두 잠금 해제 기능이 활성화된 경우 다음 옵션을 모두 잠금 해제했기 때문에 이러한 옵션을 사용할 수 없습니다.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>경제</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>업적 시스템은 항상 사용 가능합니다.</value>
@@ -182,6 +182,9 @@
   </data>
   <data name="FastReturn" xml:space="preserve">
     <value>빠른 게임 종료</value>
+  </data>
+  <data name="FestivalArea" xml:space="preserve">
+    <value>Festival area</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>화재 제어</value>
@@ -361,10 +364,10 @@
     <value>박물관 화재 위험 제거</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>Remove not enough money limitation</value>
+    <value>부족한 금액 제한 제거</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+    <value>"Money Ancharge" 또는 "Unlimited Money"가 활성화되면 이 옵션이 자동으로 활성화됩니다.</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>사무 건물 화재 위험 제거</value>
@@ -542,7 +545,7 @@
     <value>제어판에 포함된 건물 이전 비용 조정 기능이 추가되었습니다.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
+    <value>돈이 부족하다는 경고 기능을 추가했습니다.</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
     <value>화재를 제거한 후에도 여전히 화재가 발생하는 문제를 해결했습니다.</value>
@@ -560,7 +563,13 @@
     <value>UI 스타일이 업데이트되었습니다.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
+    <value>업데이트된 프레임워크.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
+    <value>Added unlimited placement of festival area buildings.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
+    <value>Fixed control panel settings sometimes not automatically save.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>바닐라</value>

@@ -116,6 +116,11 @@ namespace GameAnarchy
 		public static string FastReturn => LocaleManager.GetString("FastReturn", Culture);
 
 		/// <summary>
+		/// Festival area
+		/// </summary>
+		public static string FestivalArea => LocaleManager.GetString("FestivalArea", Culture);
+
+		/// <summary>
 		/// Fire Control
 		/// </summary>
 		public static string FireControl => LocaleManager.GetString("FireControl", Culture);
@@ -734,6 +739,16 @@ namespace GameAnarchy
 		/// Updated framework.
 		/// </summary>
 		public static string UpdateLog_V0_9_9UPT1 => LocaleManager.GetString("UpdateLog_V0_9_9UPT1", Culture);
+
+		/// <summary>
+		/// Added unlimited placement of festival area buildings.
+		/// </summary>
+		public static string UpdateLog_V1_0_0ADD0 => LocaleManager.GetString("UpdateLog_V1_0_0ADD0", Culture);
+
+		/// <summary>
+		/// Fixed control panel settings sometimes not automatically save.
+		/// </summary>
+		public static string UpdateLog_V1_0_0FIX0 => LocaleManager.GetString("UpdateLog_V1_0_0FIX0", Culture);
 
 		/// <summary>
 		/// Vanilla

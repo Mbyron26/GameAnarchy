@@ -4,98 +4,31 @@ using System.Reflection;
 
 public static class UnlimitedUniqueBuildingsPatch {
     public static MethodInfo GetOriginalPlayerBuildingAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(PlayerBuildingAI), nameof(PlayerBuildingAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetPlayerBuildingAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.PlayerBuildingAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetPlayerBuildingAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.PlayerBuildingAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalStockExchangeAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(StockExchangeAI), nameof(StockExchangeAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetStockExchangeAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.StockExchangeAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetStockExchangeAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.StockExchangeAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalUniqueFacultyAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(UniqueFacultyAI), nameof(UniqueFacultyAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetUniqueFacultyAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.UniqueFacultyAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetUniqueFacultyAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.UniqueFacultyAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalWeatherRadarAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(WeatherRadarAI), nameof(WeatherRadarAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetWeatherRadarAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.WeatherRadarAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetWeatherRadarAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.WeatherRadarAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(UniqueFactoryAI), nameof(UniqueFactoryAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetUniqueFactoryAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.UniqueFactoryAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetUniqueFactoryAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.UniqueFactoryAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalSpaceRadarAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(SpaceRadarAI), nameof(SpaceRadarAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetSpaceRadarAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.SpaceRadarAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetSpaceRadarAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.SpaceRadarAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalMonumentAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(MonumentAI), nameof(MonumentAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetMonumentAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MonumentAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetMonumentAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MonumentAICanBeBuiltOnlyOncePostfix));
     public static MethodInfo GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(MainCampusBuildingAI), nameof(MainCampusBuildingAI.CanBeBuiltOnlyOnce));
-    public static MethodInfo GetMainCampusBuildingAICanBeBuiltOnlyOncePrefix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MainCampusBuildingAICanBeBuiltOnlyOncePrefix));
+    public static MethodInfo GetMainCampusBuildingAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.MainCampusBuildingAICanBeBuiltOnlyOncePostfix));
+    public static MethodInfo GetOriginalFestivalAreaAICanBeBuiltOnlyOnce() => AccessTools.Method(typeof(FestivalAreaAI), nameof(FestivalAreaAI.CanBeBuiltOnlyOnce));
+    public static MethodInfo GetFestivalAreaAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.FestivalAreaAICanBeBuiltOnlyOncePostfix));
 
-    public static bool PlayerBuildingAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedPlayerBuilding) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool StockExchangeAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedStockExchange) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool UniqueFacultyAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedUniqueFaculty) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool WeatherRadarAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedWeatherRadar) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool UniqueFactoryAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedUniqueFactory) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool SpaceRadarAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedSpaceRadar) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool MonumentAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedMonument) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
-    public static bool MainCampusBuildingAICanBeBuiltOnlyOncePrefix(ref bool __result) {
-        if (Config.Instance.UnlimitedMainCampusBuilding) {
-            __result = false;
-            return false;
-        }
-        return true;
-    }
+    public static void FestivalAreaAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedFestivalArea;
+    public static void PlayerBuildingAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedPlayerBuilding; 
+    public static void StockExchangeAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedStockExchange; 
+    public static void UniqueFacultyAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedUniqueFaculty;
+    public static void WeatherRadarAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedWeatherRadar;
+    public static void UniqueFactoryAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedUniqueFactory;
+    public static void SpaceRadarAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedSpaceRadar;
+    public static void MonumentAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedMonument;
+    public static void MainCampusBuildingAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedMainCampusBuilding;
 }
-
-#if TEST
-    [HarmonyPatch]
-    public class UnlimitedUniqueBuildingsPatch {
-        public static IEnumerable<MethodBase> TargetMethods() {
-            yield return AccessTools.Method(typeof(PlayerBuildingAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(StockExchangeAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(UniqueFacultyAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(WeatherRadarAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(UniqueFactoryAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(SpaceRadarAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(MonumentAI), "CanBeBuiltOnlyOnce");
-            yield return AccessTools.Method(typeof(MainCampusBuildingAI), "CanBeBuiltOnlyOnce");
-        }
-        public static bool Prefix(ref bool __result) {
-            if (Config.Instance.EnabledUnlimitedUniqueBuildings) {
-                __result = false;
-                return false;
-            } else return true;
-        }
-    }
-#endif
