@@ -184,7 +184,7 @@
     <value>快速退出遊戲</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>節日區域</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>消防</value>
@@ -202,7 +202,7 @@
     <value>收入乘數</value>
   </data>
   <data name="Industrial" xml:space="preserve">
-    <value>工業的</value>
+    <value>工業區</value>
   </data>
   <data name="LocalModWarning" xml:space="preserve">
     <value>如想使用本模組包含之相同功能，請停用相關內建模組。</value>
@@ -323,9 +323,6 @@
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>請使用鍵盤快速鍵或 UUI 按鈕打開 GA 的控制面板。如果你想要使用控制面板中的功能，請先關閉選項面板。</value>
-  </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>玩家建築</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>剷除物品退款選項</value>
@@ -566,10 +563,16 @@
     <value>更新了框架。</value>
   </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
-    <value>Added unlimited placement of festival area buildings.</value>
+    <value>新增了無限制擺放節日區域建築的功能。</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
-    <value>Fixed control panel settings sometimes not automatically save.</value>
+    <value>修復了控制面板設定有時不會自動保存的問題。</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where normal buildings could only be placed once.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>香草</value>

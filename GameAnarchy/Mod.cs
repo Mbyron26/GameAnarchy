@@ -120,6 +120,10 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 0, 1), new(2023, 5, 24), new List<LogString> {
+            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX0),
+            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX1),
+        }),
         new ModChangeLog(new Version(1, 0, 0), new(2023, 5, 23), new List<LogString> {
             new(LogFlag.Updated,"Updated to support game version 1.17.0"),
             new(LogFlag.Added,Localize.UpdateLog_V1_0_0ADD0),

@@ -6,10 +6,10 @@ using UnityEngine;
 internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUITabContainer tabContainer;
 
-    private Vector2 ContainerSize => new(PorpertyPanelWidth, 514);    
-    private CustomUIScrollablePanel GeneralContainer => tabContainer.Containers[0];
-    private CustomUIScrollablePanel ServiceContainer => tabContainer.Containers[1];
-    private CustomUIScrollablePanel EconomyContainer => tabContainer.Containers[2];
+    private Vector2 ContainerSize => new(PorpertyPanelWidth, 514);
+    private CustomUIScrollablePanel GeneralContainer { get; set; }
+    private CustomUIScrollablePanel ServiceContainer { get; set; }
+    private CustomUIScrollablePanel EconomyContainer { get; set; }
 
     protected override void InitComponents() {
         base.InitComponents();
@@ -19,6 +19,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
         FillEconomyContainer();
     }
     private void FillEconomyContainer() {
+        EconomyContainer = AddTab(GameAnarchy.Localize.Economy);
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, GameAnarchy.Localize.Economy);
         var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, GameAnarchy.Localize.RemoveNotEnoughMoney, GameAnarchy.Localize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.BuildingRefund = _);
         itemPanel0.Child.isEnabled = !Config.Instance.UnlimitedMoney && !Config.Instance.CashAnarchy;
@@ -98,6 +99,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     CustomUILabel label5;
     CustomUILabel label6;
     public void FillServiceContainer() {
+        ServiceContainer = AddTab(GameAnarchy.Localize.Service);
         ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, GameAnarchy.Localize.RemovePollution);
         ControlPanelHelper.AddToggle(Config.Instance.RemoveNoisePollution, GameAnarchy.Localize.NoisePollution, null, (v) => Config.Instance.RemoveNoisePollution = v);
         ControlPanelHelper.AddToggle(Config.Instance.RemoveGroundPollution, GameAnarchy.Localize.GroundPollution, null, (v) => Config.Instance.RemoveGroundPollution = v);
@@ -144,8 +146,8 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUILabel label2;
     private CustomUILabel label3;
     public void FillGeneralContainer() {
+        GeneralContainer = AddTab(CommonLocalize.OptionPanel_General);
         ControlPanelHelper.AddGroup(GeneralContainer, PorpertyPanelWidth, GameAnarchy.Localize.EnabledUnlimitedUniqueBuildings);
-        ControlPanelHelper.AddToggle(Config.Instance.UnlimitedPlayerBuilding, GameAnarchy.Localize.PlayerBuilding, null, (v) => Config.Instance.UnlimitedPlayerBuilding = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedMonument, GameAnarchy.Localize.Monument, null, (v) => Config.Instance.UnlimitedMonument = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedMainCampusBuilding, GameAnarchy.Localize.MainCampusBuilding, null, (v) => Config.Instance.UnlimitedMainCampusBuilding = v);
         ControlPanelHelper.AddToggle(Config.Instance.UnlimitedUniqueFactory, GameAnarchy.Localize.UniqueFactory, null, (v) => Config.Instance.UnlimitedUniqueFactory = v);
@@ -183,6 +185,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
         }
     }
 
+    private CustomUIScrollablePanel AddTab(string text) => tabContainer.AddContainer(text, this);
 
     private void AddTabContainer() {
         tabContainer = AddUIComponent<CustomUITabContainer>();
@@ -205,9 +208,6 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
             scrollbar0.relativePosition = new Vector2(width - 8, CaptionHeight + 30);
             _.relativePosition = new Vector2(16, CaptionHeight + 30);
         };
-        tabContainer.AddTab(CommonLocalize.OptionPanel_General, this);
-        tabContainer.AddTab(GameAnarchy.Localize.Service, this);
-        tabContainer.AddTab(GameAnarchy.Localize.Economy, this);
     }
 }
 

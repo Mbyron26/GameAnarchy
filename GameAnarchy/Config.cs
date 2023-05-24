@@ -6,7 +6,6 @@ using UnityEngine;
 public class Config : ModConfig<Config> {
     public bool EnabledAchievements { get; set; } = true;
     public bool EnabledSkipIntro { get; set; } = false;
-    public bool EnabledUnlimitedUniqueBuildings { get; set; } = true;
     public uint OptionPanelCategoriesHorizontalOffset { get; set; } = 240;
     public bool OptionPanelCategoriesUpdated { get; set; } = true;
 
@@ -27,14 +26,13 @@ public class Config : ModConfig<Config> {
     public bool RemoveDeath { get; set; } = false;
     public bool RemoveGarbage { get; set; } = false;
     public bool RemoveCrime { get; set; } = false;
-    public bool RemoveFire { get; set; } = false;
     public bool MaximizeAttractiveness { get; set; } = false;
     public bool MaximizeEntertainment { get; set; } = false;
     public bool MaximizeLandValue { get; set; } = false;
     public bool MaximizeEducationCoverage { get; set; } = false;
 
-    public int OilDepletionRate { get; set; } = 100;
-    public int OreDepletionRate { get; set; } = 100;
+    public int OilDepletionRate { get; set; } = 0;
+    public int OreDepletionRate { get; set; } = 0;
     public bool CashAnarchy { get; set; } = false;
     public bool UnlimitedMoney { get; set; } = false;
     public bool EnableStartMoney { get; set; } = false;
@@ -43,7 +41,6 @@ public class Config : ModConfig<Config> {
     public long StartMoneyAmount { get; set; } = 715000;
     public int DefaultMinAmount { get; set; } = 50000;
     public int DefaultGetCash { get; set; } = 5000000;
-    public bool Refund { get; set; } = true;
 
     public bool BuildingRefund { get; set; } = true;
     public bool RemoveBuildingRefundTimeLimitation { get; set; } = true;
@@ -61,7 +58,6 @@ public class Config : ModConfig<Config> {
     public uint BuildingSpreadFireProbability { get; set; } = 0;
     public uint TreeSpreadFireProbability { get; set; } = 0;
 
-    public bool UnlimitedPlayerBuilding { get; set; } = true;
     public bool UnlimitedMonument { get; set; } = true;
     public bool UnlimitedMainCampusBuilding { get; set; } = true;
     public bool UnlimitedUniqueFactory { get; set; } = true;

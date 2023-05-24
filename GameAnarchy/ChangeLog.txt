@@ -1,4 +1,8 @@
-﻿V1.0.0
+﻿V1.0.1
+[*]Fixed an issue where normal buildings could only be placed once.
+[*]Fixed an issue where the mod would not work at all when loading the config file incorrectly.
+
+V1.0.0
 [*]Updated to support game version 1.17.0
 [*]Added unlimited placement of festival area buildings.
 [*]Fixed control panel settings sometimes not automatically save.
