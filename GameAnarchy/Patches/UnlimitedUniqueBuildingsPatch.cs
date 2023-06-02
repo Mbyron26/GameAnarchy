@@ -23,8 +23,12 @@ public static class UnlimitedUniqueBuildingsPatch {
     public static MethodInfo GetFestivalAreaAICanBeBuiltOnlyOncePostfix() => AccessTools.Method(typeof(UnlimitedUniqueBuildingsPatch), nameof(UnlimitedUniqueBuildingsPatch.FestivalAreaAICanBeBuiltOnlyOncePostfix));
 
     public static void FestivalAreaAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedFestivalArea;
-    public static void PlayerBuildingAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedPlayerBuilding; 
-    public static void StockExchangeAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedStockExchange; 
+    public static void PlayerBuildingAICanBeBuiltOnlyOncePostfix(ref bool __result) {
+        if (Config.Instance.UnlimitedMonument) {
+            __result = false;
+        }
+    }
+    public static void StockExchangeAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedStockExchange;
     public static void UniqueFacultyAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedUniqueFaculty;
     public static void WeatherRadarAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedWeatherRadar;
     public static void UniqueFactoryAICanBeBuiltOnlyOncePostfix(ref bool __result) => __result = !Config.Instance.UnlimitedUniqueFactory;

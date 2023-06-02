@@ -351,11 +351,6 @@ namespace GameAnarchy
 		public static string OtherFunctionsMinor => LocaleManager.GetString("OtherFunctionsMinor", Culture);
 
 		/// <summary>
-		/// Player building
-		/// </summary>
-		public static string PlayerBuilding => LocaleManager.GetString("PlayerBuilding", Culture);
-
-		/// <summary>
 		/// Bulldozing refund
 		/// </summary>
 		public static string Refund => LocaleManager.GetString("Refund", Culture);
@@ -749,6 +744,16 @@ namespace GameAnarchy
 		/// Fixed control panel settings sometimes not automatically save.
 		/// </summary>
 		public static string UpdateLog_V1_0_0FIX0 => LocaleManager.GetString("UpdateLog_V1_0_0FIX0", Culture);
+
+		/// <summary>
+		/// Fixed an issue where normal buildings could only be placed once.
+		/// </summary>
+		public static string UpdateLog_V1_0_1FIX0 => LocaleManager.GetString("UpdateLog_V1_0_1FIX0", Culture);
+
+		/// <summary>
+		/// Fixed an issue where the mod would not work at all when loading the config file incorrectly.
+		/// </summary>
+		public static string UpdateLog_V1_0_1FIX1 => LocaleManager.GetString("UpdateLog_V1_0_1FIX1", Culture);
 
 		/// <summary>
 		/// Vanilla

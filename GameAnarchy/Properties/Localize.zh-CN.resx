@@ -324,9 +324,6 @@
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>请使用键盘快捷键或 UUI 按钮打开 GA 的控制面板。如果你想要使用控制面板中的功能，请先关闭选项面板。</value>
   </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>玩家建筑</value>
-  </data>
   <data name="Refund" xml:space="preserve">
     <value>铲除物品退款选项</value>
   </data>
@@ -424,7 +421,7 @@
     <value>独特工厂</value>
   </data>
   <data name="UniqueFaculty" xml:space="preserve">
-    <value>独特学院不会着火</value>
+    <value>独特学院</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
     <value>无限制</value>
@@ -570,6 +567,12 @@
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>修复了控制面板设置有时不会自动保存的问题。</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>修复了正常建筑只能放置一次的问题。</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>修复了当配置文件加载错误时模组无法工作的问题。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>

@@ -184,7 +184,7 @@
     <value>Retorno rápido</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>Área de festivales</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>Control de Incendios</value>
@@ -323,9 +323,6 @@
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>Utilice las teclas de acceso directo o el botón UUI para invocar el panel de control, si deseas ajustar las opciones en el panel de control, ciérralo primero.</value>
-  </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>Edificio del jugador</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Reembolso de demolición</value>
@@ -566,10 +563,16 @@
     <value>Marco actualizado.</value>
   </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
-    <value>Added unlimited placement of festival area buildings.</value>
+    <value>Se agregó la capacidad de situar áreas de festivales sin límites.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
-    <value>Fixed control panel settings sometimes not automatically save.</value>
+    <value>Arreglado que las configuraciones del panel de control a veces no se guardaran automáticamente.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where normal buildings could only be placed once.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

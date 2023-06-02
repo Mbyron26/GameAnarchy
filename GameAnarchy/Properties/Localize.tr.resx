@@ -324,9 +324,6 @@
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
   </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>Player building</value>
-  </data>
   <data name="Refund" xml:space="preserve">
     <value>Bulldozing refund</value>
   </data>
@@ -570,6 +567,12 @@
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Fixed control panel settings sometimes not automatically save.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where normal buildings could only be placed once.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

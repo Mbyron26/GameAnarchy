@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>Добавить деньги</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>Add money amount</value>
+    <value>Добавить количество денег</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>Add money threshold</value>
+    <value>Добавить порог денег</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Make sure Money Anarchy feature is enabled</value>
+    <value>Убедитесь, что опция Money Anarchy включена</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>Эта опция позволяет динамически переключаться внутри игры</value>
@@ -136,19 +136,19 @@
     <value>Кол-во</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>Building refund</value>
+    <value>Возврат денег за здание</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
-    <value>Building refund multiple factor</value>
+    <value>Множитель возврата денег за здание</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Вероятность распространения пожара</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>City bankruptcy warning threshold</value>
+    <value>Порог предупреждения банкротства города</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>Значение по умолчанию: -10000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Настройки Городских Служб</value>
@@ -157,7 +157,7 @@
     <value>Коммерческий</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>Цена</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Собственная разблокировка</value>
@@ -166,7 +166,7 @@
     <value>Эти параметры недоступны, когда включена функция «Разблокировать все», потому что она разблокирует все следующие параметры.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>Экономика</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Система достижений всегда доступна</value>
@@ -184,13 +184,13 @@
     <value>Быстрый возврат</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>Фестивальная площадка</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>Контроль пожаров</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>Free</value>
+    <value>Бесплатно</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
     <value>Загрязнение земли</value>
@@ -298,19 +298,19 @@
     <value>Процент истощения нефти</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>Открыть Панель Управления</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Настройки Оптимизации</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>Эта опция вступает в силу после изменения</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>Show mod updated date in options panel categories</value>
+    <value>Показывать дату обновления модов в категориях панели настроек</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+    <value>Эта опция вступает в силу только после обновления списка плагинов или перезапуска игры</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Горизонтальное смещение панели категорий панели параметров</value>
@@ -319,34 +319,31 @@
     <value>Процент истощения руды</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>Прочие опции</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
-  </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>Здание игрока</value>
+    <value>Используйте горячие клавиши или кнопку для вызова Панели Управления. Если вы хотите изменить значения в Панели Управления, сначала закройте Панель Настроек.</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>Bulldozing refund</value>
+    <value>Возврат денег за снос</value>
   </data>
   <data name="RelocateBuilding" xml:space="preserve">
-    <value>Relocate building</value>
+    <value>Переместить здание</value>
   </data>
   <data name="RelocateBuildingMinor" xml:space="preserve">
-    <value>Construction cost * Multiplier factor = Cost</value>
+    <value>Цена строительства * Множитель = Стоимость</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
-    <value>Remove airport building fire</value>
+    <value>Убрать пожар в здании аэропорта</value>
   </data>
   <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
-    <value>Remove building refund time limitation</value>
+    <value>Убрать ограничение времени на возврат денег за постройку</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
-    <value>Remove campus building fire</value>
+    <value>Убрать пожар в здании кампуса</value>
   </data>
   <data name="RemoveCommercialBuildingFire" xml:space="preserve">
-    <value>Remove commercial building fire</value>
+    <value>Убрать пожар в коммерческих постройках</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
     <value>Убрать преступников из всех зданий и обеспечить максимальный охват полицейской службой</value>
@@ -358,46 +355,46 @@
     <value>Удалить мусор</value>
   </data>
   <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
-    <value>Remove industrial building fire</value>
+    <value>Убрать пожар в промышленных постройках</value>
   </data>
   <data name="RemoveMuseumFire" xml:space="preserve">
-    <value>Remove museum fire</value>
+    <value>Убрать пожар в музее</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>Remove not enough money limitation</value>
+    <value>Убрать лимит нехватки денег</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+    <value>Если опции «Денежная анархия» или «Неограниченные деньги» включены, эта опция активируется автоматически.</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
-    <value>Remove office building fire</value>
+    <value>Убрать пожар в здании офиса</value>
   </data>
   <data name="RemoveParkBuildingFire" xml:space="preserve">
-    <value>Remove park building fire</value>
+    <value>Убрать пожар в парке</value>
   </data>
   <data name="RemovePlayerBuildingFire" xml:space="preserve">
-    <value>Remove player building fire</value>
+    <value>Убрать пожар в зданиях игрока</value>
   </data>
   <data name="RemovePollution" xml:space="preserve">
-    <value>Remove pollution</value>
+    <value>Убрать загрязнение</value>
   </data>
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
-    <value>Remove residential building fire</value>
+    <value>Убрать пожар в жилых зданиях</value>
   </data>
   <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
-    <value>Remove Segment refund time limitation</value>
+    <value>Убрать ограничение времени на возврат денег за сегмент</value>
   </data>
   <data name="Residential" xml:space="preserve">
-    <value>Residential</value>
+    <value>Жилые</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
     <value>Параметры Ресурсов</value>
   </data>
   <data name="SegmentRefund" xml:space="preserve">
-    <value>Segment refund</value>
+    <value>Возврат денег за сегмент</value>
   </data>
   <data name="SegmentRefundMultipleFactor" xml:space="preserve">
-    <value>Segment refund multiple factor</value>
+    <value>Множитель возврата денег за сегмент</value>
   </data>
   <data name="Service" xml:space="preserve">
     <value>Сервис</value>
@@ -406,28 +403,28 @@
     <value>Сортировать имена модов на панели опций</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
-    <value>Space radar</value>
+    <value>Космический радар</value>
   </data>
   <data name="StartMoneyMajor" xml:space="preserve">
-    <value>Game start money</value>
+    <value>Начальные деньги</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+    <value>Установите значение, прежде чем начать игру. Если вы не хотите, чтобы количество денег равнялось этому значению при загрузке сохранения, отключите эту опцию после использования, тогда при загрузке количество денег изменится.</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
-    <value>Stock exchange</value>
+    <value>Биржа</value>
   </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
-    <value>Tree spread fire probability</value>
+    <value>Вероятность распределения пожара на деревьях</value>
   </data>
   <data name="UniqueFactory" xml:space="preserve">
-    <value>Unique factory</value>
+    <value>Уникальная фабрика</value>
   </data>
   <data name="UniqueFaculty" xml:space="preserve">
-    <value>Unique faculty</value>
+    <value>Уникальный факультет</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>Безлимитный</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Разблокировать всё</value>
@@ -454,136 +451,142 @@
     <value>Разблокировать весь транспорт</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
-    <value>Unlock unique Building</value>
+    <value>Разблокировать уникальные постройки</value>
   </data>
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
-    <value>Unlock all unique buildings at levels 1 through 6. Due to game restrictions, if this option is forced to be unlocked, a small number of buildings will be unlocked, but not all.</value>
+    <value>Разблокировать все уникальные постройки с 1 по 6 уровень. Из-за ограничений игры, если эта опция было принужденно разблокирована, малое количество построек будет разблокировано, но не все.</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} days ago</value>
+    <value>{0} дней назад</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>Last year</value>
+    <value>В прошлом году</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} month ago</value>
+    <value>{0} месяц назад</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} months ago</value>
+    <value>{0} месяцев назад</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>Today at {0:HH:mm}</value>
+    <value>Сегодня в {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} years ago</value>
+    <value>{0} лет назад</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>Yesterday</value>
+    <value>Вчера</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>Yesterday at {0:HH:mm}</value>
+    <value>Вчера в {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
     <value>[ADD]Новая панель управления, используйте горячую клавишу Ctrl+Shift+G или используйте UUI панель для вызова новой панели управления.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
+    <value>[ADD]Добавление уникальных построек без ограничений теперь разделено и интегрировано в панель управления.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Added fire spread control function.</value>
+    <value>[ADD]Добавлена опция управления распределением огня.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
+    <value>[ADD]Опция отключения огня теперь разделена на несколько опций, позволяющих контролировать огонь в постройках разного типа.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Added Turkish localization.</value>
+    <value>[ADD]Добавлена локализация для турецкого языка.</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Fixed abnormal UI component location.</value>
+    <value>[FIX]Исправлено некорректное положение интерфейса.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Updated framework, performance improvement.</value>
+    <value>[UPT]Обновлен фреймворк, улучшена производительность.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Updated Option Panel UI components.</value>
+    <value>[UPT]Обновлен внешний вид компонентов Панели Настроек.</value>
   </data>
   <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Added advanced option for reset mod config.</value>
+    <value>[ADD]Добавлена расширенная опция для сброса конфигурации мода.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
+    <value>[FIX]Исправлена проблема, при которой панель управления не соответствовала языку.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
+    <value>[FIX]Исправлена проблема, при которой значение денег в панели настроек не могло быть изменено.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimized control panel invoke speed.</value>
+    <value>[OPT]Оптимизирована скорость появления панели управления.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimized control panel toggle button UI style.</value>
+    <value>[OPT]Оптимизирован внешний вид кнопки в панели управления.</value>
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Updated compatibility check.</value>
+    <value>[UPT]Обновлена проверка совместимости.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
+    <value>Добавлено отображения даты обновления модов для категории панели настроек.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
+    <value>Добавлена опция возврата денег за сегменты и постройки, включая снятие ограничения на время и изменение множителя, включенного в панель управления.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
+    <value>В панель настроек добавлена кнопка вызова панели управления.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
+    <value>Добавлена возможность изменение цены перемещения здания, включенного в панель управления.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
+    <value>Добавлена опция, убирающая предупреждение о нехватке денег.</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
+    <value>Исправлена проблема, при которой пожар возобновлялся после удаления.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
+    <value>Оптимизирована опция горизонтального смещения в панели настроек, теперь значение вступает в силу после изменения.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
+    <value>Оптимизирована логика начальных денег, теперь это значение которое вы устанавливаете при начале новой игры.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
+    <value>Добавлена локализация для словацкого языка.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
+    <value>Обновлен интерфейс.</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
+    <value>Обновлен фреймворк.</value>
   </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
-    <value>Added unlimited placement of festival area buildings.</value>
+    <value>Добавлено неограниченное размещение фестивальных площадок.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
-    <value>Fixed control panel settings sometimes not automatically save.</value>
+    <value>Исправлена проблема, при которой значения в панели управлений не сохранялись автоматически.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>Исправлена проблема, при которой обычные здания могли быть размещены только один раз.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>Исправлен баг, при котором мод не работал, если файл конфигурации был загружен неправильно.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>Vanilla</value>
+    <value>Обычный</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>Vanilla unlimited money mode</value>
+    <value>Обычный режим с бесконечными деньгами</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
-    <value>Money in game only displays “∞”, this option allows dynamic toggle within game</value>
+    <value>Деньги в игре отображаются только как “∞”, эта опция переключаема в игре</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
-    <value>Water pollution</value>
+    <value>Загрязнение воды</value>
   </data>
   <data name="WeatherRadar" xml:space="preserve">
-    <value>Weather radar</value>
+    <value>Метеорадар</value>
   </data>
 </root>

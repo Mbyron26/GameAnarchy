@@ -324,9 +324,6 @@
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>Utilizzare i tasti di scelta rapida o il pulsante UUI per richiamare il Pannello di Controllo; se si desidera regolare le opzioni del Pannello di Controllo, chiudere prima il Pannello Opzioni.</value>
   </data>
-  <data name="PlayerBuilding" xml:space="preserve">
-    <value>Edificio giocatore</value>
-  </data>
   <data name="Refund" xml:space="preserve">
     <value>Rimborso demolizione</value>
   </data>
@@ -570,6 +567,12 @@
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Corretto il problema delle impostazioni del pannello di controllo che a volte non vengono salvate automaticamente.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where normal buildings could only be placed once.</value>
+  </data>
+  <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Base</value>
