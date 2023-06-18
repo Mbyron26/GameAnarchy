@@ -1,4 +1,17 @@
-﻿V1.0.1
+﻿
+V1.1
+[*]Updated to support game version 1.17.1
+[*]Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.
+[*]UUI button and separate tool button are now optional.
+[*]Added unlock landscaping feature.
+[*]Added put out burning buildings feature.
+[*]Added unlimited place treasure hunt buildings feature.
+[*]Integrated [You Can Build It] mod functions.
+[*]Optimize unlock info view performance issues.
+[*]Fixed an issue where unlock public transport was not fully unlocked.
+[*]Fixed an issue where unlimited oil, unlimited ore is not working properly.
+
+V1.0.1
 [*]Fixed an issue where normal buildings could only be placed once.
 [*]Fixed an issue where the mod would not work at all when loading the config file incorrectly.
 

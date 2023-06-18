@@ -135,6 +135,12 @@
   <data name="Amount" xml:space="preserve">
     <value>金額</value>
   </data>
+  <data name="AnnualInterestRate" xml:space="preserve">
+    <value>Annual interest rate</value>
+  </data>
+  <data name="AnnualInterestRateMinor" xml:space="preserve">
+    <value>The default value is 3%</value>
+  </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>建物の返金</value>
   </data>
@@ -143,6 +149,15 @@
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建物の延焼確率</value>
+  </data>
+  <data name="BuiltinModCheck" xml:space="preserve">
+    <value>内蔵MODのチェック</value>
+  </data>
+  <data name="BuiltinModWarning" xml:space="preserve">
+    <value>Game Anarchyは、該当MODの全機能が既にあります。 正常な動作を保証するため、これらのMODは強制的に無効化します。</value>
+  </data>
+  <data name="ChargeInterest" xml:space="preserve">
+    <value>Charge interest on negative balances</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>都市破綻の警告閾値</value>
@@ -162,17 +177,14 @@
   <data name="CustomUnlock" xml:space="preserve">
     <value>カスタムアンロック</value>
   </data>
-  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>「Unlock All」機能を有効化するとマイルストーンを全てアンロックするため、このオプションは使用できません。</value>
+  <data name="CustomUnlockMinor" xml:space="preserve">
+    <value>「Unlock All」機能を有効化すると、以下のオプションが全てアンロックされるためオプションは使用できません。 このオプションはゲームがマイルストーンのリフレッシュ処理で有効となりますが、ゲームプレイ前に設定することをお勧めします。</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>経済</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Steamの実績システムを有効化</value>
-  </data>
-  <data name="EnabledInfoView" xml:space="preserve">
-    <value>情報ビューを全てアンロック</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>ゲーム起動時のイントロをスキップ</value>
@@ -184,7 +196,7 @@
     <value>ゲームの高速終了</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>フェスティバルエリア</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>火災の制御</value>
@@ -203,12 +215,6 @@
   </data>
   <data name="Industrial" xml:space="preserve">
     <value>産業</value>
-  </data>
-  <data name="LocalModWarning" xml:space="preserve">
-    <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。</value>
-  </data>
-  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>内蔵MOD: Game Anarchyに同じ機能があります。Game Anarchy側の機能を使う場合は、該当するローカルMODを無効化して下さい。債務超過の破産に備えて、設定パネルで初期資金を設定して下さい。 (ゲームのクラッシュを回避)</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
     <value>キャンパス本館の建物</value>
@@ -324,6 +330,15 @@
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>コントロールパネルの呼び出しは、ショートカットキー・UUIボタンを使用します。コントロールパネルでオプションを調整したい場合は、事前にオプションパネルを閉じて下さい。</value>
   </data>
+  <data name="PutOut" xml:space="preserve">
+    <value>消火</value>
+  </data>
+  <data name="PutOutBurningBuildings" xml:space="preserve">
+    <value>建物火災を消火</value>
+  </data>
+  <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
+    <value>この機能は火災を無効化する訳では無く、既に発生中の建物火災を全て除去するために一度だけ呼び出します。 現在、火災が起きている全ての建物を消火しますか?</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>ブルドーザーの返金</value>
   </data>
@@ -399,6 +414,9 @@
   <data name="Service" xml:space="preserve">
     <value>サービス</value>
   </data>
+  <data name="SetBefore" xml:space="preserve">
+    <value>ゲーム/セーブをプレイする前に設定することをお勧めします。</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>オプションパネルでMODの名前順にソート</value>
   </data>
@@ -426,14 +444,47 @@
   <data name="Unlimited" xml:space="preserve">
     <value>無制限</value>
   </data>
+  <data name="UnlimitedLibraryAI" xml:space="preserve">
+    <value>ライブラリ</value>
+  </data>
+  <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
+    <value>クリエイターの殿堂</value>
+  </data>
+  <data name="UnlimitedMoneyConflict" xml:space="preserve">
+    <value>Game Anarchyでは資金の無制限機能を拡張して、手動や自動で資金の追加が任意で可能です。 この機能はオプションパネルから確認や設定が出来ます。</value>
+  </data>
+  <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
+    <value>Game Anarchyでは資源の減少速度が調整可能です。 ゲーム内のコントロールパネルから確認して下さい。</value>
+  </data>
+  <data name="UnlimitedParkAI" xml:space="preserve">
+    <value>パーク</value>
+  </data>
+  <data name="UnlimitedParkAIMinor" xml:space="preserve">
+    <value>未来の広場</value>
+  </data>
+  <data name="UnlimitedSpaceElevator" xml:space="preserve">
+    <value>軌道エレベーター</value>
+  </data>
+  <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
+    <value>転移の広場</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全てをアンロック</value>
+  </data>
+  <data name="UnlockAllConflict" xml:space="preserve">
+    <value>Game Anarchyではカスタム可能な拡張されたアンロック機能があります。 この機能はオプションパネルで確認して下さい。</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>このオプションはバニラのMODにある、 「Unlock All」 と同じです。 ゲーム内で動的に切り替え可能ですが、都市のロード前に設定することをお勧めします。 オプションを無効にしても全てアンロックされる場合は、Find It！ 2のオプションから 「Unlock All」 が無効になっているか確認して下さい。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>全ての道路をアンロック</value>
+  </data>
+  <data name="UnlockInfoViews" xml:space="preserve">
+    <value>情報ビューパネルをアンロック</value>
+  </data>
+  <data name="UnlockLandscaping" xml:space="preserve">
+    <value>造園機能をアンロック</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>地下鉄の軌道をアンロック</value>
@@ -444,11 +495,11 @@
   <data name="UnlockPolicies" xml:space="preserve">
     <value>条例パネルをアンロック</value>
   </data>
+  <data name="UnlockPublicTransport" xml:space="preserve">
+    <value>公共交通をアンロック</value>
+  </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>鉄道の線路をアンロック</value>
-  </data>
-  <data name="UnlockTransport" xml:space="preserve">
-    <value>全ての公共交通をアンロック</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
     <value>ユニーク施設をアンロック</value>
@@ -563,16 +614,49 @@
     <value>フレームワークを更新</value>
   </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
-    <value>Added unlimited placement of festival area buildings.</value>
+    <value>フェスティバルエリアの建物を無制限の配置に追加</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
-    <value>Fixed control panel settings sometimes not automatically save.</value>
+    <value>コントロールパネルの設定が自動的に保存されない問題を修正</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where normal buildings could only be placed once.</value>
+    <value>通常の建物が一回しか置けない問題を修正</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
+    <value>設定ファイルのロード時に誤りがあると、MODが全く動作しない問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
+    <value>造園機能のアンロックを追加</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
+    <value>建物火災の消火機能を追加</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
+    <value>Treasure Huntアップデートで追加された建物の無制限の配置を追加</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
+    <value>Integrated [You Can Build It] mod functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
+    <value>公共交通のアンロックが完全に解除されない問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
+    <value>原油と鉱石が無制限で正常に動作しない問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
+    <value>情報ビューのアンロックでパフォーマンスの問題を最適化</value>
+  </data>
+  <data name="UpdateLog_V1_1TRA" xml:space="preserve">
+    <value>Thai localization support</value>
+  </data>
+  <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
+    <value>UUIボタンと個別のツールボタンをオプション化</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
+    <value>ゲームバージョン 1.17.1をサポートするように更新</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
+    <value>互換性チェックを更新して、3つのゲーム内蔵MODが有効状態を検出した場合は、互換性を確保するために自動的に無効化</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>バニラ</value>

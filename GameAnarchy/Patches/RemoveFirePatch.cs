@@ -1,6 +1,4 @@
 ﻿namespace GameAnarchy.Patches;
-
-using GameAnarchy.Manager;
 using HarmonyLib;
 using System.Reflection;
 
@@ -40,9 +38,9 @@ public static class RemoveFirePatch {
     public static MethodInfo GetOriginalCommonBuildingAIHandleFire() => AccessTools.Method(typeof(CommonBuildingAI), "HandleFire");
     public static MethodInfo GetHandleFirePrefix() => AccessTools.Method(typeof(RemoveFirePatch), nameof(RemoveFirePatch.HandleFirePrefix));
 
-    public static bool CommonBuildingAITrySpreadFirePrefix() => FireControlManager.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref FireControlManager.buildingFireSpreadCount, ref FireControlManager.buildingFireSpreadAllowed);
-    public static bool TreeManagerTrySpreadFirePrefix() => FireControlManager.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref FireControlManager.buildingFireSpreadCount, ref FireControlManager.buildingFireSpreadAllowed);
-    public static bool TreeManagerBurnTreePrefix() => FireControlManager.GetFireProbability(Config.Instance.TreeSpreadFireProbability, ref FireControlManager.treeFireSpreadCount, ref FireControlManager.treeFireSpreadAllowed);
+    public static bool CommonBuildingAITrySpreadFirePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref SingletonManager<Manager>.Instance.buildingFireSpreadCount, ref SingletonManager<Manager>.Instance.buildingFireSpreadAllowed);
+    public static bool TreeManagerTrySpreadFirePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref SingletonManager<Manager>.Instance.buildingFireSpreadCount, ref SingletonManager<Manager>.Instance.buildingFireSpreadAllowed);
+    public static bool TreeManagerBurnTreePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.TreeSpreadFireProbability, ref SingletonManager<Manager>.Instance.treeFireSpreadCount, ref SingletonManager<Manager>.Instance.treeFireSpreadAllowed);
     public static void PlayerBuildingAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemovePlayerBuildingFire;
     public static void ResidentialBuildingAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemoveResidentialBuildingFire;
     public static void IndustrialBuildingAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemoveIndustrialBuildingFire;
@@ -56,8 +54,8 @@ public static class RemoveFirePatch {
     public static void AirportGateAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemoveAirportBuildingFire;
     public static void AirportCargoGateAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemoveAirportBuildingFire;
     public static void AirportBuildingAIGetFireParametersPostfix(ref bool __result) => __result = !Config.Instance.RemoveAirportBuildingFire;
-    public static bool HandleFirePrefix(ushort buildingID, ref Building data, ref Building.Frame frameData, DistrictPolicies.Services policies) {
-        if (Config.Instance.RemovePlayerBuildingFire || Config.Instance.RemoveResidentialBuildingFire || Config.Instance.RemoveIndustrialBuildingFire || Config.Instance.RemoveCommercialBuildingFire || Config.Instance.RemoveCommercialBuildingFire || Config.Instance.RemoveOfficeBuildingFire || Config.Instance.RemoveParkBuildingFire || Config.Instance.RemoveMuseumFire || Config.Instance.RemovePlayerBuildingFire || Config.Instance.RemoveCampusBuildingFire || Config.Instance.RemoveAirportBuildingFire) {
+    public static bool HandleFirePrefix() {
+        if (Config.Instance.RemovePlayerBuildingFire || Config.Instance.RemoveResidentialBuildingFire || Config.Instance.RemoveIndustrialBuildingFire || Config.Instance.RemoveCommercialBuildingFire || Config.Instance.RemoveOfficeBuildingFire || Config.Instance.RemoveParkBuildingFire || Config.Instance.RemoveMuseumFire || Config.Instance.RemoveCampusBuildingFire || Config.Instance.RemoveAirportBuildingFire) {
             return false;
         }
         return true;

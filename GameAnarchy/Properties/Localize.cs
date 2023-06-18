@@ -36,6 +36,16 @@ namespace GameAnarchy
 		public static string Amount => LocaleManager.GetString("Amount", Culture);
 
 		/// <summary>
+		/// Annual interest rate
+		/// </summary>
+		public static string AnnualInterestRate => LocaleManager.GetString("AnnualInterestRate", Culture);
+
+		/// <summary>
+		/// The default value is 3%
+		/// </summary>
+		public static string AnnualInterestRateMinor => LocaleManager.GetString("AnnualInterestRateMinor", Culture);
+
+		/// <summary>
 		/// Building refund
 		/// </summary>
 		public static string BuildingRefund => LocaleManager.GetString("BuildingRefund", Culture);
@@ -49,6 +59,21 @@ namespace GameAnarchy
 		/// Building spread fire probability
 		/// </summary>
 		public static string BuildingSpreadFireProbability => LocaleManager.GetString("BuildingSpreadFireProbability", Culture);
+
+		/// <summary>
+		/// Builtin Mod Check
+		/// </summary>
+		public static string BuiltinModCheck => LocaleManager.GetString("BuiltinModCheck", Culture);
+
+		/// <summary>
+		/// Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game 
+		/// </summary>
+		public static string BuiltinModWarning => LocaleManager.GetString("BuiltinModWarning", Culture);
+
+		/// <summary>
+		/// Charge interest on negative balances
+		/// </summary>
+		public static string ChargeInterest => LocaleManager.GetString("ChargeInterest", Culture);
 
 		/// <summary>
 		/// City bankruptcy warning threshold
@@ -83,7 +108,7 @@ namespace GameAnarchy
 		/// <summary>
 		/// These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked
 		/// </summary>
-		public static string CustomUnlockPanelTooltip => LocaleManager.GetString("CustomUnlockPanelTooltip", Culture);
+		public static string CustomUnlockMinor => LocaleManager.GetString("CustomUnlockMinor", Culture);
 
 		/// <summary>
 		/// Economy
@@ -94,11 +119,6 @@ namespace GameAnarchy
 		/// Achievements system is always available
 		/// </summary>
 		public static string EnableAchievements => LocaleManager.GetString("EnableAchievements", Culture);
-
-		/// <summary>
-		/// Info view is always available
-		/// </summary>
-		public static string EnabledInfoView => LocaleManager.GetString("EnabledInfoView", Culture);
 
 		/// <summary>
 		/// Skip game Intro interface
@@ -149,16 +169,6 @@ namespace GameAnarchy
 		/// Industrial
 		/// </summary>
 		public static string Industrial => LocaleManager.GetString("Industrial", Culture);
-
-		/// <summary>
-		/// Buildtin mod, Game Anarchy already includes the same functionality. Please disabled this local mod i
-		/// </summary>
-		public static string LocalModWarning => LocaleManager.GetString("LocalModWarning", Culture);
-
-		/// <summary>
-		/// Buildtin mod, Game Anarchy already includes the same functionality. Please disable this local mod an
-		/// </summary>
-		public static string LocalUnlimitedMoneyWarning => LocaleManager.GetString("LocalUnlimitedMoneyWarning", Culture);
 
 		/// <summary>
 		/// Main campus building
@@ -351,6 +361,21 @@ namespace GameAnarchy
 		public static string OtherFunctionsMinor => LocaleManager.GetString("OtherFunctionsMinor", Culture);
 
 		/// <summary>
+		/// Put out
+		/// </summary>
+		public static string PutOut => LocaleManager.GetString("PutOut", Culture);
+
+		/// <summary>
+		/// Put out burning buildings
+		/// </summary>
+		public static string PutOutBurningBuildings => LocaleManager.GetString("PutOutBurningBuildings", Culture);
+
+		/// <summary>
+		/// This is not a permanent fire removal feature and will only be called once to remove all buildings th
+		/// </summary>
+		public static string PutOutBurningBuildingsDescription => LocaleManager.GetString("PutOutBurningBuildingsDescription", Culture);
+
+		/// <summary>
 		/// Bulldozing refund
 		/// </summary>
 		public static string Refund => LocaleManager.GetString("Refund", Culture);
@@ -476,6 +501,11 @@ namespace GameAnarchy
 		public static string Service => LocaleManager.GetString("Service", Culture);
 
 		/// <summary>
+		/// It is recommended to set this before entering the game/save
+		/// </summary>
+		public static string SetBefore => LocaleManager.GetString("SetBefore", Culture);
+
+		/// <summary>
 		/// Sort mods names in options panel
 		/// </summary>
 		public static string SortSettings => LocaleManager.GetString("SortSettings", Culture);
@@ -521,9 +551,54 @@ namespace GameAnarchy
 		public static string Unlimited => LocaleManager.GetString("Unlimited", Culture);
 
 		/// <summary>
+		/// Library
+		/// </summary>
+		public static string UnlimitedLibraryAI => LocaleManager.GetString("UnlimitedLibraryAI", Culture);
+
+		/// <summary>
+		/// The Creator's Library
+		/// </summary>
+		public static string UnlimitedLibraryAIMinor => LocaleManager.GetString("UnlimitedLibraryAIMinor", Culture);
+
+		/// <summary>
+		/// Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, c
+		/// </summary>
+		public static string UnlimitedMoneyConflict => LocaleManager.GetString("UnlimitedMoneyConflict", Culture);
+
+		/// <summary>
+		/// Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.
+		/// </summary>
+		public static string UnlimitedOilAndOreConflict => LocaleManager.GetString("UnlimitedOilAndOreConflict", Culture);
+
+		/// <summary>
+		/// Park
+		/// </summary>
+		public static string UnlimitedParkAI => LocaleManager.GetString("UnlimitedParkAI", Culture);
+
+		/// <summary>
+		/// Plaza of the Future
+		/// </summary>
+		public static string UnlimitedParkAIMinor => LocaleManager.GetString("UnlimitedParkAIMinor", Culture);
+
+		/// <summary>
+		/// Space elevator
+		/// </summary>
+		public static string UnlimitedSpaceElevator => LocaleManager.GetString("UnlimitedSpaceElevator", Culture);
+
+		/// <summary>
+		/// Plaza of Transference
+		/// </summary>
+		public static string UnlimitedSpaceElevatorMinor => LocaleManager.GetString("UnlimitedSpaceElevatorMinor", Culture);
+
+		/// <summary>
 		/// Unlock all
 		/// </summary>
 		public static string UnlockAll => LocaleManager.GetString("UnlockAll", Culture);
+
+		/// <summary>
+		/// Game Anarchy also extend the custom unlock, check Game Anarchy option panel.
+		/// </summary>
+		public static string UnlockAllConflict => LocaleManager.GetString("UnlockAllConflict", Culture);
 
 		/// <summary>
 		/// It is recommended to set this before you start the game. If disabled this option still unlocks somet
@@ -534,6 +609,16 @@ namespace GameAnarchy
 		/// Unlock all roads
 		/// </summary>
 		public static string UnlockAllRoads => LocaleManager.GetString("UnlockAllRoads", Culture);
+
+		/// <summary>
+		/// Unlock info views panel
+		/// </summary>
+		public static string UnlockInfoViews => LocaleManager.GetString("UnlockInfoViews", Culture);
+
+		/// <summary>
+		/// Unlock landscaping
+		/// </summary>
+		public static string UnlockLandscaping => LocaleManager.GetString("UnlockLandscaping", Culture);
 
 		/// <summary>
 		/// Unlock metro track
@@ -551,14 +636,14 @@ namespace GameAnarchy
 		public static string UnlockPolicies => LocaleManager.GetString("UnlockPolicies", Culture);
 
 		/// <summary>
+		/// Unlock public transport
+		/// </summary>
+		public static string UnlockPublicTransport => LocaleManager.GetString("UnlockPublicTransport", Culture);
+
+		/// <summary>
 		/// Unlock train track
 		/// </summary>
 		public static string UnlockTrainTrack => LocaleManager.GetString("UnlockTrainTrack", Culture);
-
-		/// <summary>
-		/// Unlock all transports
-		/// </summary>
-		public static string UnlockTransport => LocaleManager.GetString("UnlockTransport", Culture);
 
 		/// <summary>
 		/// Unlock unique Building
@@ -754,6 +839,61 @@ namespace GameAnarchy
 		/// Fixed an issue where the mod would not work at all when loading the config file incorrectly.
 		/// </summary>
 		public static string UpdateLog_V1_0_1FIX1 => LocaleManager.GetString("UpdateLog_V1_0_1FIX1", Culture);
+
+		/// <summary>
+		/// Added unlock landscaping feature.
+		/// </summary>
+		public static string UpdateLog_V1_1ADD0 => LocaleManager.GetString("UpdateLog_V1_1ADD0", Culture);
+
+		/// <summary>
+		/// Added put out burning buildings feature.
+		/// </summary>
+		public static string UpdateLog_V1_1ADD1 => LocaleManager.GetString("UpdateLog_V1_1ADD1", Culture);
+
+		/// <summary>
+		/// Added unlimited place treasure hunt buildings feature.
+		/// </summary>
+		public static string UpdateLog_V1_1ADD2 => LocaleManager.GetString("UpdateLog_V1_1ADD2", Culture);
+
+		/// <summary>
+		/// Integrated [You Can Build It] mod functions.
+		/// </summary>
+		public static string UpdateLog_V1_1ADD3 => LocaleManager.GetString("UpdateLog_V1_1ADD3", Culture);
+
+		/// <summary>
+		/// Fixed an issue where unlock public transport was not fully unlocked.
+		/// </summary>
+		public static string UpdateLog_V1_1FIX0 => LocaleManager.GetString("UpdateLog_V1_1FIX0", Culture);
+
+		/// <summary>
+		/// Fixed an issue where unlimited oil, unlimited ore is not working properly.
+		/// </summary>
+		public static string UpdateLog_V1_1FIX1 => LocaleManager.GetString("UpdateLog_V1_1FIX1", Culture);
+
+		/// <summary>
+		/// Optimize unlock info view performance issues.
+		/// </summary>
+		public static string UpdateLog_V1_1OPT0 => LocaleManager.GetString("UpdateLog_V1_1OPT0", Culture);
+
+		/// <summary>
+		/// Thai localization support
+		/// </summary>
+		public static string UpdateLog_V1_1TRA => LocaleManager.GetString("UpdateLog_V1_1TRA", Culture);
+
+		/// <summary>
+		/// UUI button and separate tool button are now optional.
+		/// </summary>
+		public static string UpdateLog_V1_1UPT2 => LocaleManager.GetString("UpdateLog_V1_1UPT2", Culture);
+
+		/// <summary>
+		/// Updated to support game version 1.17.1
+		/// </summary>
+		public static string UpdateLog_V1_1_UPT0 => LocaleManager.GetString("UpdateLog_V1_1_UPT0", Culture);
+
+		/// <summary>
+		/// Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are
+		/// </summary>
+		public static string UpdateLog_V1_1_UPT1 => LocaleManager.GetString("UpdateLog_V1_1_UPT1", Culture);
 
 		/// <summary>
 		/// Vanilla

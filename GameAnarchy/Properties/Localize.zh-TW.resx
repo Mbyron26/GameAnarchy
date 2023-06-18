@@ -135,6 +135,12 @@
   <data name="Amount" xml:space="preserve">
     <value>數量</value>
   </data>
+  <data name="AnnualInterestRate" xml:space="preserve">
+    <value>Annual interest rate</value>
+  </data>
+  <data name="AnnualInterestRateMinor" xml:space="preserve">
+    <value>The default value is 3%</value>
+  </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>剷除建築退款選項</value>
   </data>
@@ -143,6 +149,15 @@
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>建築物蔓延火災概率</value>
+  </data>
+  <data name="BuiltinModCheck" xml:space="preserve">
+    <value>Builtin Mod Check</value>
+  </data>
+  <data name="BuiltinModWarning" xml:space="preserve">
+    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+  </data>
+  <data name="ChargeInterest" xml:space="preserve">
+    <value>Charge interest on negative balances</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>城市破產警告閾值</value>
@@ -162,17 +177,14 @@
   <data name="CustomUnlock" xml:space="preserve">
     <value>自訂解鎖選項</value>
   </data>
-  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>當啟用「全部解鎖」時，以下選項因已解鎖而不可用</value>
+  <data name="CustomUnlockMinor" xml:space="preserve">
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>經濟</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>啟用成就系統</value>
-  </data>
-  <data name="EnabledInfoView" xml:space="preserve">
-    <value>資訊視圖始終可用</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>跳過遊戲啟動畫面</value>
@@ -203,12 +215,6 @@
   </data>
   <data name="Industrial" xml:space="preserve">
     <value>工業區</value>
-  </data>
-  <data name="LocalModWarning" xml:space="preserve">
-    <value>如想使用本模組包含之相同功能，請停用相關內建模組。</value>
-  </data>
-  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>如想使用本模組包含之相同功能，請停用相關內建模組，並於本模組中設置遊戲起始資金，以防城市因透支破產而崩潰</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
     <value>校園區域行政大樓</value>
@@ -268,10 +274,10 @@
     <value>小城鎮</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>香草</value>
+    <value>原版</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>值得村</value>
+    <value>富有的村莊</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
     <value>擴展和優化遊戲功能</value>
@@ -323,6 +329,15 @@
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>請使用鍵盤快速鍵或 UUI 按鈕打開 GA 的控制面板。如果你想要使用控制面板中的功能，請先關閉選項面板。</value>
+  </data>
+  <data name="PutOut" xml:space="preserve">
+    <value>Put out</value>
+  </data>
+  <data name="PutOutBurningBuildings" xml:space="preserve">
+    <value>Put out burning buildings</value>
+  </data>
+  <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
+    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>剷除物品退款選項</value>
@@ -399,6 +414,9 @@
   <data name="Service" xml:space="preserve">
     <value>服務</value>
   </data>
+  <data name="SetBefore" xml:space="preserve">
+    <value>It is recommended to set this before entering the game/save</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>在選項面板中以模組名稱進行排序</value>
   </data>
@@ -426,14 +444,47 @@
   <data name="Unlimited" xml:space="preserve">
     <value>無限</value>
   </data>
+  <data name="UnlimitedLibraryAI" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
+    <value>The Creator's Library</value>
+  </data>
+  <data name="UnlimitedMoneyConflict" xml:space="preserve">
+    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+  </data>
+  <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
+    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+  </data>
+  <data name="UnlimitedParkAI" xml:space="preserve">
+    <value>Park</value>
+  </data>
+  <data name="UnlimitedParkAIMinor" xml:space="preserve">
+    <value>Plaza of the Future</value>
+  </data>
+  <data name="UnlimitedSpaceElevator" xml:space="preserve">
+    <value>Space elevator</value>
+  </data>
+  <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
+    <value>Plaza of Transference</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全部解鎖</value>
+  </data>
+  <data name="UnlockAllConflict" xml:space="preserve">
+    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>此選項與原版“全部解鎖”功能相同，雖然它允許在遊戲中進行動態切換，但建議在進入保存之前設置它。如果禁用此選項仍然解鎖所有，請確保您已禁用查找它！ “全部解鎖”選項。</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>解鎖所有道路</value>
+  </data>
+  <data name="UnlockInfoViews" xml:space="preserve">
+    <value>Unlock info views panel</value>
+  </data>
+  <data name="UnlockLandscaping" xml:space="preserve">
+    <value>Unlock landscaping</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>解鎖捷運軌道</value>
@@ -444,11 +495,11 @@
   <data name="UnlockPolicies" xml:space="preserve">
     <value>解鎖政策</value>
   </data>
+  <data name="UnlockPublicTransport" xml:space="preserve">
+    <value>Unlock public transport</value>
+  </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>解鎖火車軌道</value>
-  </data>
-  <data name="UnlockTransport" xml:space="preserve">
-    <value>解鎖所有交通工具</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
     <value>解鎖獨特的建築</value>
@@ -569,10 +620,43 @@
     <value>修復了控制面板設定有時不會自動保存的問題。</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where normal buildings could only be placed once.</value>
+    <value>修復了正常建築只能放置一次的問題。</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
+    <value>修復了當組態檔案載入錯誤時模組無法工作的問題。</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
+    <value>Added unlock landscaping feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
+    <value>Added put out burning buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
+    <value>Added unlimited place treasure hunt buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
+    <value>Integrated [You Can Build It] mod functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
+    <value>Optimize unlock info view performance issues.</value>
+  </data>
+  <data name="UpdateLog_V1_1TRA" xml:space="preserve">
+    <value>Thai localization support</value>
+  </data>
+  <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
+    <value>UUI button and separate tool button are now optional.</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
+    <value>Updated to support game version 1.17.1</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
+    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>香草</value>

@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>금액 추가</value>
+    <value>เพิ่มเงิน</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>총금액 추가</value>
+    <value>เพิ่มจำนวนเงิน</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>금액 기준값 추가</value>
+    <value>เพิ่มเงินตั้งต้น</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Money Anarchy 기능이 활성화되어 있는지 확인</value>
+    <value>ตรวจสอบให้แน่ใจว่าฟีเจอร์ อิสระภาพทางกางเงิน เปิดใช้งานอยู่</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
-    <value>이 옵션은 게임 내에서 동적 전환을 허용합니다</value>
+    <value>ตัวเลือกนี้ช่วยให้สามารถปรับการตั้งค่าได้ระหว่างเล่นเกม</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>양</value>
+    <value>จำนวน</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
     <value>Annual interest rate</value>
@@ -142,13 +142,13 @@
     <value>The default value is 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>건물 환불</value>
+    <value>เงินคืนจากค่าก่อสร้าง</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
-    <value>건물 환불 여러 가지 요인</value>
+    <value>ตัวคูณของ เงินคืนจากค่าก่อสร้าง</value>
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
-    <value>건물 화재 확산 가능성</value>
+    <value>ความเป็นไปได้ในการลุกลามของไฟที่มีต่อสิ่งก่อสร้าง</value>
   </data>
   <data name="BuiltinModCheck" xml:space="preserve">
     <value>Builtin Mod Check</value>
@@ -160,178 +160,178 @@
     <value>Charge interest on negative balances</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>도시 파산 경고 임계값</value>
+    <value>เกณฑ์คำเตือนการล้มละลายของเมือง</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>게임 기본값은 -10000입니다.</value>
+    <value>ค่าเริ่มต้นของเกมคือ -10,000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
-    <value>도시 서비스 옵션</value>
+    <value>ตัวเลือกการบริการของเมือง</value>
   </data>
   <data name="Commercial" xml:space="preserve">
-    <value>상업</value>
+    <value>พาณิชย์</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>비용</value>
+    <value>ค่าใช้จ่าย</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
-    <value>사용자 정의 잠금 해제</value>
+    <value>ปรับแต่งการปลดล็อก</value>
   </data>
   <data name="CustomUnlockMinor" xml:space="preserve">
     <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>경제</value>
+    <value>เศรษฐกิจ</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
-    <value>업적 시스템은 항상 사용 가능합니다.</value>
+    <value>ระบบรางวัลความสำเร็จพร้อมใช้งานอยู่เสมอ</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
-    <value>게임 소개 인터페이스 건너뛰기</value>
+    <value>ข้ามหน้าอินโทรของเกม</value>
   </data>
   <data name="EnabledUnlimitedUniqueBuildings" xml:space="preserve">
-    <value>제한 없이 고유 건물 배치</value>
+    <value>วาง 'สิ่งก่อสร้างที่ไม่ซ้ำใคร' ได้แบบไม่จำกัดจำนวน</value>
   </data>
   <data name="FastReturn" xml:space="preserve">
-    <value>빠른 게임 종료</value>
+    <value>เกมออกอย่างรวดเร็ว</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>ลานเทศกาลดนตรี</value>
   </data>
   <data name="FireControl" xml:space="preserve">
-    <value>화재 제어</value>
+    <value>ควบคุมอัคคีภัย</value>
   </data>
   <data name="Free" xml:space="preserve">
-    <value>무료</value>
+    <value>ฟรี</value>
   </data>
   <data name="GroundPollution" xml:space="preserve">
-    <value>토양 오염</value>
+    <value>มลภาวะบนดิน</value>
   </data>
   <data name="Income" xml:space="preserve">
-    <value>수입</value>
+    <value>รายได้</value>
   </data>
   <data name="IncomeMultiplier" xml:space="preserve">
-    <value>수입 배율</value>
+    <value>ตัวคุณรายได้</value>
   </data>
   <data name="Industrial" xml:space="preserve">
-    <value>산업</value>
+    <value>อุตสาหกรรม</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
-    <value>메인 캠퍼스 건물</value>
+    <value>อาคารหลักของวิทยาเขต</value>
   </data>
   <data name="MaximizeAttractiveness" xml:space="preserve">
-    <value>매력 극대화, 더 많은 관광객 유치</value>
+    <value>เพิ่มความน่าดึงดูดใจให้สูงสุด อาจจะดึงดูดนักท่องเที่ยวใด้มากขึ้น</value>
   </data>
   <data name="MaximizeEducationCoverage" xml:space="preserve">
-    <value>교육 범위를 최대화하지만 교육 받은 시민을 확보하려면 여전히 학교가 필요합니다.</value>
+    <value>เพิ่มความครอบคลุมทางการศึกษาให้สูงสุด แต่ยังต้องการโรงเรียนเพื่อให้พลเมืองได้รับการศึกษา</value>
   </data>
   <data name="MaximizeEntertainment" xml:space="preserve">
-    <value>엔터테인먼트 를 극대화하여 시민의 행복을 높일 것입니다.</value>
+    <value>เพิ่มความบันเทิงให้สูงสุด จะเพิ่มความสุขให้กับพลเมือง</value>
   </data>
   <data name="MaximizeFireCoverage" xml:space="preserve">
-    <value>화재 범위 최대화</value>
+    <value>เพิ่มความครอบคลุมของหน่วยดับเพลิงให้สูงสุด</value>
   </data>
   <data name="MaximizeLandValue" xml:space="preserve">
-    <value>도시의 땅값을 극대화</value>
+    <value>เพิ่มมูลค่าที่ดินของเมืองให้สูงสุด</value>
   </data>
   <data name="MilestonelevelName_BigCity" xml:space="preserve">
-    <value>대도시</value>
+    <value>เมืองใหญ่</value>
   </data>
   <data name="MilestonelevelName_BigTown" xml:space="preserve">
-    <value>큰 마을</value>
+    <value>เทศบาลขนาดใหญ่</value>
   </data>
   <data name="MilestonelevelName_BoomTown" xml:space="preserve">
-    <value>신흥 도시</value>
+    <value>เทศบาลที่เจริญรุ่งเรือง</value>
   </data>
   <data name="MilestonelevelName_BusyTown" xml:space="preserve">
-    <value>번화가</value>
+    <value>เทศบาลที่วุ่นวาย</value>
   </data>
   <data name="MilestonelevelName_CapitalCity" xml:space="preserve">
-    <value>수도</value>
+    <value>เมืองหลวง</value>
   </data>
   <data name="MilestonelevelName_ColossalCity" xml:space="preserve">
-    <value>대도시</value>
+    <value>เมืองมหึมา</value>
   </data>
   <data name="MilestonelevelName_GrandCity" xml:space="preserve">
-    <value>웅장한도시</value>
+    <value>เมืองใหญ่โต</value>
   </data>
   <data name="MilestonelevelName_LittleHamlet" xml:space="preserve">
-    <value>아주 작은 마을</value>
+    <value>หมู่บ้านชนบทขนาดเล็ก</value>
   </data>
   <data name="MilestonelevelName_Megalopolis" xml:space="preserve">
-    <value>거대 도시군(메갈로폴리스)</value>
+    <value>อภิมหานคร</value>
   </data>
   <data name="MilestonelevelName_Metropolis" xml:space="preserve">
-    <value>중요 도시 중심지(메트로폴리스)</value>
+    <value>มหานคร</value>
   </data>
   <data name="MilestonelevelName_MilestoneUnlockLevel" xml:space="preserve">
-    <value>도시 발전 단계 잠금 해제 레벨</value>
+    <value>ปลดล็อกระดับเหตุการณ์สำคัญ</value>
   </data>
   <data name="MilestonelevelName_SmallCity" xml:space="preserve">
-    <value>작은 도시</value>
+    <value>เมืองขนาดเล็ก</value>
   </data>
   <data name="MilestonelevelName_TinyTown" xml:space="preserve">
-    <value>작은 마을</value>
+    <value>เทศบาลขนาดเล็ก</value>
   </data>
   <data name="MilestonelevelName_Vanilla" xml:space="preserve">
-    <value>바닐라</value>
+    <value>วานิลลา</value>
   </data>
   <data name="MilestonelevelName_WorthyVillage" xml:space="preserve">
-    <value>가치 있는 마을</value>
+    <value>หมู่บ้านที่น่าอยู่</value>
   </data>
   <data name="MOD_Description" xml:space="preserve">
-    <value>게임의 기능을 확장하고 최적화 합니다</value>
+    <value>ขยายและเพิ่มประสิทธิภาพการทำงานของเกม</value>
   </data>
   <data name="MoneyAnarchyMode" xml:space="preserve">
-    <value>자유로운 자금 설정</value>
+    <value>โหมดอิสระทางการเงิน</value>
   </data>
   <data name="MoneyAnarchyModeMinor" xml:space="preserve">
-    <value>이 옵션은 자동(다음 두 가지 옵션 사용) 또는 수동(단축키 사용)으로 자금 양을 설정할 수 있고, 게임 플레이 중에도 설정할 수 있습니다</value>
+    <value>ตัวเลือกนี้อนุญาตให้ตั้งค่าเงินอัตโนมัติ (ตั้งค่า 2 ตัวเลือกต่อไปนี้)/ตั้งค่าเอง(ใช้ปุ่มลัด) ปรับจำนวนเงิน สามารถปรับได้ระหว่างเล่นเกม</value>
   </data>
   <data name="Monument" xml:space="preserve">
-    <value>기념비적 건물</value>
+    <value>อนุสรณ์สถาน</value>
   </data>
   <data name="NoisePollution" xml:space="preserve">
-    <value>소음 공해</value>
+    <value>มลภาวะทางเสียง</value>
   </data>
   <data name="NoSpreadFire" xml:space="preserve">
-    <value>화재가 확산되지 않음</value>
+    <value>ปิดการลามของอัคคีภัย</value>
   </data>
   <data name="Office" xml:space="preserve">
-    <value>사무</value>
+    <value>สำนักงาน</value>
   </data>
   <data name="OilDepletionRate" xml:space="preserve">
-    <value>석유 고갈률</value>
+    <value>อัตราการสูญสิ้นของน้ำมัน</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>제어판 열기</value>
+    <value>เปิดแผงควบคุม</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
-    <value>최적화 옵션</value>
+    <value>ตัวเลือกการปรับเพิ่มประสิทธิภาพ</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>이 옵션은 조정 후 적용됩니다.</value>
+    <value>This option takes effect after adjustment</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
-    <value>옵션 패널 카테고리에 모드 업데이트 날짜 표시</value>
+    <value>Show mod updated date in options panel categories</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>이 옵션은 플러그인 목록을 새로 고치거나 게임을 다시 시작한 후에만 적용됩니다.</value>
+    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
-    <value>옵션 패널 카테고리 바 가로 오프셋</value>
+    <value>Options panel categories bar horizontal offset</value>
   </data>
   <data name="OreDepletionRate" xml:space="preserve">
-    <value>광석 고갈률</value>
+    <value>อัตราการสูญสิ้นของสินแร่</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>기타 기능</value>
+    <value>ฟังก์ชันเพิ่มเติม</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>바로 가기 키 또는 UUI 버튼을 사용하여 제어판을 불러오십시오. 제어판에서 옵션을 조정하려면 먼저 옵션 패널을 닫으십시오.</value>
+    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
   </data>
   <data name="PutOut" xml:space="preserve">
-    <value>Put out</value>
+    <value>ดับไฟ</value>
   </data>
   <data name="PutOutBurningBuildings" xml:space="preserve">
     <value>Put out burning buildings</value>
@@ -340,109 +340,109 @@
     <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
   </data>
   <data name="Refund" xml:space="preserve">
-    <value>불도저 환불</value>
+    <value>เงินคืนจากทำลาย</value>
   </data>
   <data name="RelocateBuilding" xml:space="preserve">
-    <value>건물 이전</value>
+    <value>เคลื่อนย้ายสิ่งก่อสร้าง</value>
   </data>
   <data name="RelocateBuildingMinor" xml:space="preserve">
-    <value>건설비용 * 승수 = 원가</value>
+    <value>งบประมาณการก่อสร้าง * ตัวคูณ = ค่าใช้จ่าย</value>
   </data>
   <data name="RemoveAirportBuildingFire" xml:space="preserve">
-    <value>공항 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารท่าอากาศยาน</value>
   </data>
   <data name="RemoveBuildingRefundTimeLimitation" xml:space="preserve">
-    <value>건물 환불 시간 제한 제거</value>
+    <value>ลบการจำกัดเวลาในการคืนเงินค่าก่อสร้าง</value>
   </data>
   <data name="RemoveCampusBuildingFire" xml:space="preserve">
-    <value>캠퍼스 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารวิทยาเขต</value>
   </data>
   <data name="RemoveCommercialBuildingFire" xml:space="preserve">
-    <value>상업 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารพาณิชย์</value>
   </data>
   <data name="RemoveCrime" xml:space="preserve">
-    <value>모든 건물에서 범죄자를 제거하고 경찰 서비스 범위를 최대화합니다.</value>
+    <value>ลบอาชญากรรมบนอาคารทั้งหมด และเพิ่มพื้นที่ให้บริการของตำรวจให้สูงสุด</value>
   </data>
   <data name="RemoveDeath" xml:space="preserve">
-    <value>죽은 시민을 제거하여 장례 서비스의 유효 범위를 최대화합니다.</value>
+    <value>ลบการตายของพลเมือง และเพิ่มพื้นที่ให้บริการเก็บศพให้สูงสุด</value>
   </data>
   <data name="RemoveGarbage" xml:space="preserve">
-    <value>쓰레기 제거</value>
+    <value>ลบถังขยะ</value>
   </data>
   <data name="RemoveIndustrialBuildingFire" xml:space="preserve">
-    <value>산업 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารอุตสาหกรรม</value>
   </data>
   <data name="RemoveMuseumFire" xml:space="preserve">
-    <value>박물관 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอนุสรณ์สถาน</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>부족한 금액 제한 제거</value>
+    <value>ลบข้อจำกัดกรณีมีเงินไม่เพียงพอ</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>"Money Ancharge" 또는 "Unlimited Money"가 활성화되면 이 옵션이 자동으로 활성화됩니다.</value>
+    <value>เมื่อเปิดใช้งาน "อิสระทางการเงิน" หรือ "เงินไม่จำกัด" ตัวเลือกนี้จะเปิดขึ้นตามโดยอัตโนมัติ</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
-    <value>사무 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารสำนักงาน</value>
   </data>
   <data name="RemoveParkBuildingFire" xml:space="preserve">
-    <value>공원 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารสวนสาธารณะ</value>
   </data>
   <data name="RemovePlayerBuildingFire" xml:space="preserve">
-    <value>사용자 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารผู้เล่น</value>
   </data>
   <data name="RemovePollution" xml:space="preserve">
-    <value>공해 제거</value>
+    <value>ลบมลภาวะ</value>
   </data>
   <data name="RemoveResidentialBuildingFire" xml:space="preserve">
-    <value>거주지 건물 화재 위험 제거</value>
+    <value>ลบอัคคีภัยบนอาคารที่พักอาศัย</value>
   </data>
   <data name="RemoveSegmentRefundTimeLimitation" xml:space="preserve">
-    <value>세그먼트 환불 시간 제한 제거</value>
+    <value>ลบการจำกัดเวลาในการคืนเงินค่าสร้างถนน</value>
   </data>
   <data name="Residential" xml:space="preserve">
-    <value>거주지</value>
+    <value>ที่พักอาศัย</value>
   </data>
   <data name="ResourceOptions" xml:space="preserve">
-    <value>자원 옵션</value>
+    <value>ตัวเลือกทรัพยากร</value>
   </data>
   <data name="SegmentRefund" xml:space="preserve">
-    <value>세그먼트 환불</value>
+    <value>เงินคืนจากถนน</value>
   </data>
   <data name="SegmentRefundMultipleFactor" xml:space="preserve">
-    <value>세그먼트 환불 다중 요소</value>
+    <value>ตัวคูณของ เงินคืนจากค่าสร้างถนน</value>
   </data>
   <data name="Service" xml:space="preserve">
-    <value>서비스</value>
+    <value>บริการ</value>
   </data>
   <data name="SetBefore" xml:space="preserve">
-    <value>It is recommended to set this before entering the game/save</value>
+    <value>แนะนำให้ตั้งค่านี้ก่อนเข้าเกมหรือบันทึกเกม</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
-    <value>옵션 패널에서 모드 이름 정렬</value>
+    <value>เรียงชื่อม็อดในหน้าตัวเลือกการตั้งค่า</value>
   </data>
   <data name="SpaceRadar" xml:space="preserve">
-    <value>심우주 레이더</value>
+    <value>เรดาร์อวกาศ</value>
   </data>
   <data name="StartMoneyMajor" xml:space="preserve">
-    <value>게임 시작 금액</value>
+    <value>เงินเริ่มต้นของเกม</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>게임을 시작하기 전에 값을 설정하십시오. 저장된 게임을 불러올 때마다 자금이 설정한 값으로 되는 것을 원하지 않으면 이 기능을 한 번 활성화한 후 비활성화하십시오. 저장된 게임을 로드하면 게임이 시작된 후 자금이 변경됩니다.</value>
+    <value>ปรับค่าก่อนเริ่มต้นเกม ถ้าหากคุณไม่ต้องการให้เงินเริ่มต้นของเกมเป็นค่านี้ทุกครั้งที่คุณโหลดเซฟเกม ให้ปิดฟีเจอร์นี้หลังจากเปิดการใช้งานไปแล้วครั้งหนึ่ง เงินจะเปลี่ยนไปหลังจากเกมเริ่มต้นการจำลอง</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
-    <value>증권 거래소</value>
+    <value>ตลาดหลักทรัพย์</value>
   </data>
   <data name="TreeSpreadFireProbability" xml:space="preserve">
-    <value>나무 화재 확산 가능성</value>
+    <value>ความเป็นไปได้ในการลุกลามของไฟที่มีต่อต้นไม้</value>
   </data>
   <data name="UniqueFactory" xml:space="preserve">
-    <value>고유 산업 건물</value>
+    <value>โรงงานไม่ซ้ำใคร</value>
   </data>
   <data name="UniqueFaculty" xml:space="preserve">
-    <value>고유 학부 건물</value>
+    <value>สิ่งอำนวยความสะดวกไม่ซ้ำใคร</value>
   </data>
   <data name="Unlimited" xml:space="preserve">
-    <value>무제한, 제한 없음</value>
+    <value>ไม่จำกัด</value>
   </data>
   <data name="UnlimitedLibraryAI" xml:space="preserve">
     <value>Library</value>
@@ -469,161 +469,161 @@
     <value>Plaza of Transference</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
-    <value>모두 잠금 해제</value>
+    <value>ปลดล็อกทั้งหมด</value>
   </data>
   <data name="UnlockAllConflict" xml:space="preserve">
     <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
-    <value>이 옵션은 바닐라의 "모두 잠금 해제" 기능과 동일합니다. 저장된 게임을 플레이하는 중에도 전환할 수 있지만 그 전에 설정하는 것이 좋습니다. 이 옵션을 비활성화했는데도 여전히 모든 잠금이 해제되어있다면 Find It! 모드의 "모두 잠금 해제" 옵션을 해제했는지 확인해주세요.</value>
+    <value>แนะนำให้ตั้งค่านี้ก่อนเริ่มเกม หากปิดใช้งานตัวเลือกนี้แล้ว แต่ยังคงมีการปลดล็อกบางอย่างอยู่ ให้ตรวจสอบว่าคุณได้ปิดใช้งานตัวเลือก "ปลดล็อกทั้งหมด" ของ Find It! แล้วหรือยัง สำหรับตัวเลือก "ปลดล็อกทั้งหมด" ใน Find It! นั้น จะปลดล็อกแอสเซททั้งหมดให้แสดงในเมนู Find it! แต่จะไม่ปลดล็อกเหตุการณ์สำคัญ</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
-    <value>모든 도로 잠금 해제</value>
+    <value>ปลดล็อกถนนทั้งหมด</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Unlock info views panel</value>
   </data>
   <data name="UnlockLandscaping" xml:space="preserve">
-    <value>Unlock landscaping</value>
+    <value>ปลดล็อกการปรับภูมิประเทศ</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
-    <value>지하철 트랙 잠금 해제</value>
+    <value>ปลดล็อกรางรถไฟฟ้า</value>
   </data>
   <data name="UnlockOptions" xml:space="preserve">
-    <value>잠금 해제 옵션</value>
+    <value>ตัวเลือกการปลดล็อก</value>
   </data>
   <data name="UnlockPolicies" xml:space="preserve">
-    <value>정책 패널 잠금 해제</value>
+    <value>ปลดล็อกแผงนโยบาย</value>
   </data>
   <data name="UnlockPublicTransport" xml:space="preserve">
     <value>Unlock public transport</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
-    <value>기차 트랙 잠금 해제</value>
+    <value>ปลดล็อกรางรถไฟ</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
-    <value>고유 건물 잠금 해제</value>
+    <value>ปลดล็อกอาคารไม่ซ้ำใคร</value>
   </data>
   <data name="UnlockUniqueBuildingMinor" xml:space="preserve">
-    <value>레벨 1 부터 6 까지의 모든 고유 건물 잠금을 해제합니다. 그러나 게임 제한으로 인해 일부 해제되지 않는 고유 건물이 있을 수 있습니다.</value>
+    <value>การปลดล็อกสิ่งก่อสร้างที่ไม่ซ้ำใครทั้งหมดตั้งแต่ระดับ 1 ถึง 6 นั้น หากคุณบังคับตัวเลือกนี้ให้ปลดล็อค อาจจะปลดล็อกได้แค่บางส่วนเท่านั้น ไม่ใช่ทั้งหมด เนื่องจากเป็นข้อจำกัดของเกม</value>
   </data>
   <data name="Updated_DaysAgo" xml:space="preserve">
-    <value>{0} 일 전</value>
+    <value>{0} วันที่ผ่านมา</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_LastYear" xml:space="preserve">
-    <value>작년</value>
+    <value>ปีที่แล้ว</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthAgo" xml:space="preserve">
-    <value>{0} 개월 전</value>
+    <value>{0} เดือนที่แล้ว</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_MonthsAgo" xml:space="preserve">
-    <value>{0} 개월 전</value>
+    <value>{0} เดือนที่แล้ว</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Today" xml:space="preserve">
-    <value>오늘 {0:HH:mm}</value>
+    <value>วันนี้ตอน {0:HH:mm}</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YearsAgo" xml:space="preserve">
-    <value>{0} 년 전</value>
+    <value>{0} ปีที่แล้ว</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_Yesterday" xml:space="preserve">
-    <value>어제</value>
+    <value>เมื่อวาน</value>
     <comment>Show mod updated date.</comment>
   </data>
   <data name="Updated_YesterdayAt" xml:space="preserve">
-    <value>어제 {0:HH:mm}</value>
+    <value>เมื่อวานตอน {0:HH:mm}</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]새로운 제어판과 이를 사용하기 위한 단축키 Ctrl+Shift+G 또는 UUI 패널 버튼 추가.</value>
+    <value>[ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]제한 없는 고유 건물 배치 기능이 세분화되어 제어판에 통합되었습니다.</value>
+    <value>[ADD]Place unique buildings without limit features now split and integrated into control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]화재 범위 조절 기능 추가.</value>
+    <value>[ADD]Added fire spread control function.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]화재 위험 제거 기능이 세분화되어 제어판에 통합되었습니다.</value>
+    <value>[ADD]Remove fire function now split into multiple options, can control fire of different building types.</value>
   </data>
   <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]터키어 지원 추가.</value>
+    <value>[ADD]Added Turkish localization.</value>
   </data>
   <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]비정상적인 UI 컴포넌트 위치 수정.</value>
+    <value>[FIX]Fixed abnormal UI component location.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]프레임워크 업데이트 및 성능 개선.</value>
+    <value>[UPT]Updated framework, performance improvement.</value>
   </data>
   <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]옵션 패널 UI 컴포넌트 개선.</value>
+    <value>[UPT]Updated Option Panel UI components.</value>
   </data>
   <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]모드 재설정에 대한 고급 옵션 추가.</value>
+    <value>[ADD]Added advanced option for reset mod config.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]제어판이 언어 설정을 따르지 않는 문제 수정.</value>
+    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
   </data>
   <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]옵션 패널에서 자금 옵션을 변경할 수 없는 문제를 해결했습니다.</value>
+    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]최적화된 제어판 호출 속도.</value>
+    <value>[OPT]Optimized control panel invoke speed.</value>
   </data>
   <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]최적화된 제어판 토글 버튼 UI 스타일.</value>
+    <value>[OPT]Optimized control panel toggle button UI style.</value>
   </data>
   <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]호환성 확인 업데이트.</value>
+    <value>[UPT]Updated compatibility check.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>옵션 패널 기능의 카테고리 표시줄에 show mods 업데이트 날짜 추가.</value>
+    <value>Added show mods updated date for the category bar of the options panel function.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>제어판에 포함된 건물, 시간 제한 제거, 승수 조정을 포함한 세그먼트 환불 기능 추가.</value>
+    <value>เพิ่ม สามารถขอเงินคืนได้จากค่าก่อสร้างอาคาร และถนน โดยสามารถยกเลิกข้อจำกัดของเวลาในการขอคืนเงิน รวมทั้งการปรับตัวคูณจำนวนเงินที่จะขอคืนได้ที่แผงควบคุม</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>옵션 패널에 제어판을 호출하는 입력 버튼 옵션이 추가되었습니다.</value>
+    <value>Option panel added a entry button option to invoke the control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>제어판에 포함된 건물 이전 비용 조정 기능이 추가되었습니다.</value>
+    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
   </data>
   <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>돈이 부족하다는 경고 기능을 추가했습니다.</value>
+    <value>Added Remove not enough money warning function.</value>
   </data>
   <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>화재를 제거한 후에도 여전히 화재가 발생하는 문제를 해결했습니다.</value>
+    <value>Fixed an issue where still catch fire after remove fires.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>옵션 패널 범주 수평 오프셋 옵션을 최적화했습니다. 이제 조정 후 적용됩니다.</value>
+    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
   </data>
   <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>시작 머니 설정 로직을 최적화하여 시작 머니가 새로운 게임을 시작할 때 설정한 값이 되도록 합니다.</value>
+    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
   </data>
   <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>슬로바키아 현지화 추가</value>
+    <value>เพิ่ม ภาษาสโลวะเกีย</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>UI 스타일이 업데이트되었습니다.</value>
+    <value>อัปเดตรูปแบบ UI</value>
   </data>
   <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>업데이트된 프레임워크.</value>
+    <value>อัปเดตเฟรมเวิร์ก</value>
   </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
-    <value>Added unlimited placement of festival area buildings.</value>
+    <value>เพิ่ม การวางพื้นที่จัดงานเทศกาลดนตรีได้แบบไม่จำกัด</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
-    <value>Fixed control panel settings sometimes not automatically save.</value>
+    <value>แก้ไข แผงควบคุมการตั้งค่าที่ไม่สามารถบันทึกได้อัตโนมัติ</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where normal buildings could only be placed once.</value>
+    <value>แก้ไข ปัญหาการวางสิ่งก่อสร้างปกติทั่วไปได้เพียงครั้งเดียว</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
+    <value>แก้ไข ปัญหาการทีม็อดจะไม่ทำงาน หากการโหลดไฟล์ config ไม่ถูกต้อง</value>
   </data>
   <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
     <value>Added unlock landscaping feature.</value>
@@ -659,18 +659,18 @@
     <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>바닐라</value>
+    <value>วานิลลา</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>바닐라 자금 무제한 모드</value>
+    <value>โหมดเงินไม่จำกัดแบบวานิลลา</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
-    <value>게임 내 자금은 "∞"로만 표시되며, 이 옵션은 게임 내에서도 켜고 끌 수 있습니다.</value>
+    <value>จำนวนเงินภายในเกมจะแสดงเป็น “∞” ตัวเลือกนี้สามารถปรับการตั้งค่าได้ระหว่างกำลังเล่นเกม</value>
   </data>
   <data name="WaterPollution" xml:space="preserve">
-    <value>수질 오염</value>
+    <value>มลภาวะทางน้ำ</value>
   </data>
   <data name="WeatherRadar" xml:space="preserve">
-    <value>기상 레이더</value>
+    <value>เรดาร์สภาพอากาศ</value>
   </data>
 </root>

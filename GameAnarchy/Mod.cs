@@ -7,7 +7,6 @@ using System.Globalization;
 using ColossalFramework.Globalization;
 using GameAnarchy.UI;
 using GameAnarchy.Patches;
-using GameAnarchy.Manager;
 
 public class Mod : ModPatcherBase<Mod, Config> {
     public override string ModName { get; } = "Game Anarchy";
@@ -28,33 +27,27 @@ public class Mod : ModPatcherBase<Mod, Config> {
     public override void SetModCulture(CultureInfo cultureInfo) => Localize.Culture = cultureInfo;
     public override void IntroActions() {
         base.IntroActions();
-        CompatibilityCheck.IncompatibleMods = ConflictMods;
-        CompatibilityCheck.GetExtraModsInfo += CompatibilityExtension.GetLocalIncompatibleMods;
-        CompatibilityCheck.RemoveConflictModsAction += CompatibilityExtension.RemoveConflictMods;
-        CompatibilityCheck.CheckCompatibility();
+        SingletonManager<Manager>.Instance.InitBuildinModChecker();
         ExternalLogger.OutputPluginsList();
     }
     public override void OnLevelLoaded(LoadMode mode) {
         base.OnLevelLoaded(mode);
-        EconomyExtension.SetStartMoney();
-        AchievementsManager.InitializeAchievements(mode);
-        InfoViewsManager.Deploy(mode);
-        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => {
-            if (UUI.UUIButton is not null) {
-                UUI.UUIButton.IsPressed = _;
-            }
-        };
-        UUI.Initialize();
+        SingletonManager<Manager>.Instance.SetStartMoney();
+        SingletonManager<Manager>.Instance.InitAchievements(mode);
+        if (mode == LoadMode.NewGame || mode == LoadMode.LoadGame || mode == LoadMode.NewMap || mode == LoadMode.LoadMap || mode == LoadMode.NewAsset || mode == LoadMode.LoadAsset) {
+            SingletonManager<ToolButtonManager>.Instance.Init();
+            ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
+        }
     }
     public override void OnLevelUnloading() {
         base.OnLevelUnloading();
-        AchievementsManager.Destroy();
-        InfoViewsManager.Destroy();
-        UUI.Destory();
+        SingletonManager<Manager>.Instance.DeInitAchievements();
+        SingletonManager<ToolButtonManager>.Instance.DeInit();
+        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged -= (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
     }
     public override void OnReleased() {
         base.OnReleased();
-        ExternalLogger.DebugMode($"Building fire spread count: {FireControlManager.buildingFireSpreadCount}, building fire spread allowed: {FireControlManager.buildingFireSpreadAllowed}, tree fire spread count: {FireControlManager.treeFireSpreadCount}, tree fire spread allowed: {FireControlManager.treeFireSpreadAllowed}.", Config.Instance.DebugMode);
+        SingletonManager<Manager>.Instance.OutputFireSpreadCount();
     }
     protected override void SettingsUI(UIHelperBase helper) {
         base.SettingsUI(helper);
@@ -80,6 +73,9 @@ public class Mod : ModPatcherBase<Mod, Config> {
         AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMonumentAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMonumentAICanBeBuiltOnlyOncePostfix());
         AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePostfix());
         AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalFestivalAreaAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetFestivalAreaAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalLibraryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetLibraryAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceElevatorAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceElevatorAICanBeBuiltOnlyOncePostfix());
+        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalParkAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetParkAICanBeBuiltOnlyOncePostfix());
         AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAITrySpreadFire(), RemoveFirePatch.GetCommonBuildingAITrySpreadFirePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalTreeManagerTrySpreadFire(), RemoveFirePatch.GetTreeManagerTrySpreadFirePrefix());
         AddPrefix(RemoveFirePatch.GetOriginalTreeManagerBurnTree(), RemoveFirePatch.GetTreeManagerBurnTreePrefix());
@@ -100,26 +96,43 @@ public class Mod : ModPatcherBase<Mod, Config> {
         SkipIntroPatch.Patch(Harmony);
     }
 
-    private List<IncompatibleModInfo> ConflictMods { get; set; } = new()  {
-        new IncompatibleModInfo(1567569285, @"Achieve It!", true),
-        new IncompatibleModInfo(2037888659, @"Instant Return To Desktop", true),
-        new IncompatibleModInfo(466834228, @"Not So Unqiue Buildings", true),
-        new IncompatibleModInfo(1263262833, @"Pollution Solution", true),
-        new IncompatibleModInfo(973512634, @"Sort Mod Settings", true),
-        new IncompatibleModInfo(1665106193, @"Skip Intro", true),
-        new IncompatibleModInfo(458519223, @"Unlock All + Wonders & Landmarks", true),
-        new IncompatibleModInfo(769744928, @"Pollution, Death, Garbage and Crime Remover Mod", true),
-        new IncompatibleModInfo(1237383751, @"Extended Game Options", true),
-        new IncompatibleModInfo(1498036881, @"UltimateMod 2.10.2 [STABLE]", true),
-        new IncompatibleModInfo(2506369356, @"UltimateMod v2.12.11 [BETA]", true),
-        new IncompatibleModInfo(447789816, @"Unlock All Roads", true),
-        new IncompatibleModInfo(552324460, @"No Fires", true),
-        new IncompatibleModInfo(1718245521, @"No Park Building Fires", true),
-        new IncompatibleModInfo(1595663918, @"InfoPanelOnLoad", true),
-        new IncompatibleModInfo(409809475, @"Info View Button Enabler", true),
+    public override List<ConflictModInfo> ConflictMods { get; set; } = new()  {
+        new ConflictModInfo(1567569285, @"Achieve It!", true),
+        new ConflictModInfo(2037888659, @"Instant Return To Desktop", true),
+        new ConflictModInfo(466834228, @"Not So Unqiue Buildings", true),
+        new ConflictModInfo(1263262833, @"Pollution Solution", true),
+        new ConflictModInfo(973512634, @"Sort Mod Settings", true),
+        new ConflictModInfo(1665106193, @"Skip Intro", true),
+        new ConflictModInfo(458519223, @"Unlock All + Wonders & Landmarks", true),
+        new ConflictModInfo(769744928, @"Pollution, Death, Garbage and Crime Remover Mod", true),
+        new ConflictModInfo(1237383751, @"Extended Game Options", true),
+        new ConflictModInfo(1498036881, @"UltimateMod 2.10.2 [STABLE]", true),
+        new ConflictModInfo(2506369356, @"UltimateMod v2.12.11 [BETA]", true),
+        new ConflictModInfo(447789816, @"Unlock All Roads", true),
+        new ConflictModInfo(552324460, @"No Fires", true),
+        new ConflictModInfo(1718245521, @"No Park Building Fires", true),
+        new ConflictModInfo(1595663918, @"InfoPanelOnLoad", true),
+        new ConflictModInfo(409809475, @"Info View Button Enabler", true),
+        new ConflictModInfo(1614062928, @"Unlock LandScaping", true),
+        new ConflictModInfo(635093438, @"Unlock Public Transport", true),
+        new ConflictModInfo(635093438, @"Unlock All Roads", true),
+        new ConflictModInfo(2962363030, @"You Can Build It", true),
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 1, 0), new(2023, 6, 18), new List<LogString> {
+            new(LogFlag.Updated, Localize.UpdateLog_V1_1_UPT0),
+            new(LogFlag.Updated, Localize.UpdateLog_V1_1_UPT1),
+            new(LogFlag.Updated, Localize.UpdateLog_V1_1UPT2),
+            new(LogFlag.Added, Localize.UpdateLog_V1_1ADD0),
+            new(LogFlag.Added, Localize.UpdateLog_V1_1ADD1),
+            new(LogFlag.Added, Localize.UpdateLog_V1_1ADD2),
+            new(LogFlag.Added, Localize.UpdateLog_V1_1ADD3),
+            new(LogFlag.Optimized, Localize.UpdateLog_V1_1OPT0),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1FIX0),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1FIX1),
+            new(LogFlag.Translation, Localize.UpdateLog_V1_1TRA),
+        }),
         new ModChangeLog(new Version(1, 0, 1), new(2023, 5, 24), new List<LogString> {
             new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX0),
             new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX1),

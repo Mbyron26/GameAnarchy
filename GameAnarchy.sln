@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameAnarchy", "GameAnarchy\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MbyronModsCommon", "..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.shproj", "{6C5E0FC8-FBAA-4FA1-AF55-FD675486E4E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{967B34A1-E6FE-412C-A18E-B3DF3799D46C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ToolButtonShared", "..\..\..\MbyronModsCommon\ToolButtonShared\ToolButtonShared.shproj", "{9645319F-436A-46F3-B8F1-F9A4BBADA080}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Beta Debug|Any CPU = Beta Debug|Any CPU
@@ -27,11 +31,17 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C5E0FC8-FBAA-4FA1-AF55-FD675486E4E7} = {967B34A1-E6FE-412C-A18E-B3DF3799D46C}
+		{9645319F-436A-46F3-B8F1-F9A4BBADA080} = {967B34A1-E6FE-412C-A18E-B3DF3799D46C}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {039F761E-9CCF-415C-B080-D4A25DE4C905}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems*{6c5e0fc8-fbaa-4fa1-af55-fd675486e4e7}*SharedItemsImports = 13
+		..\..\..\MbyronModsCommon\ToolButtonShared\ToolButtonShared.projitems*{9645319f-436a-46f3-b8f1-f9a4bbada080}*SharedItemsImports = 13
 		..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
+		..\..\..\MbyronModsCommon\ToolButtonShared\ToolButtonShared.projitems*{e13a5cc5-ccd1-4616-af1a-ecd45911ca96}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

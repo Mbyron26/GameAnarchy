@@ -7,18 +7,17 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.IO;
-using GameAnarchy.Manager;
 
 public static class OptionsMainPanelPatch {
     public static MethodInfo GetOriginalOnVisibilityChanged() => AccessTools.Method(typeof(OptionsMainPanel), "OnVisibilityChanged");
     public static MethodInfo GetOnVisibilityChangedPostfix() => AccessTools.Method(typeof(OptionsMainPanelPatch), "OnVisibilityChangedPostfix");
-    public static MethodInfo GetOriginalAddUserMods()=> AccessTools.Method(typeof(OptionsMainPanel), "AddUserMods");
+    public static MethodInfo GetOriginalAddUserMods() => AccessTools.Method(typeof(OptionsMainPanel), "AddUserMods");
     public static MethodInfo GetAddUserModsTranspiler() => AccessTools.Method(typeof(OptionsMainPanelPatch), "AddUserModsTranspiler");
 
     public static void OnVisibilityChangedPostfix(UIComponent comp, bool visible) {
         if (visible) {
             try {
-                OptionsPanelCategoriesManager.SetCategoriesOffset(comp);
+                SingletonManager<Manager>.Instance.SetCategoriesOffset(comp);
             } catch (Exception e) {
                 ExternalLogger.Exception($"Options main panel OnVisibilityChanged patch failed.", e);
             }
