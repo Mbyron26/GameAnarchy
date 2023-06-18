@@ -135,6 +135,12 @@
   <data name="Amount" xml:space="preserve">
     <value>Quantità</value>
   </data>
+  <data name="AnnualInterestRate" xml:space="preserve">
+    <value>Annual interest rate</value>
+  </data>
+  <data name="AnnualInterestRateMinor" xml:space="preserve">
+    <value>The default value is 3%</value>
+  </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>Rimborso dell'edificio</value>
   </data>
@@ -143,6 +149,15 @@
   </data>
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Probabilità di propagazione dell'incendio nell'edificio</value>
+  </data>
+  <data name="BuiltinModCheck" xml:space="preserve">
+    <value>Builtin Mod Check</value>
+  </data>
+  <data name="BuiltinModWarning" xml:space="preserve">
+    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+  </data>
+  <data name="ChargeInterest" xml:space="preserve">
+    <value>Charge interest on negative balances</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>Soglia di allarme per il fallimento della città</value>
@@ -162,17 +177,14 @@
   <data name="CustomUnlock" xml:space="preserve">
     <value>Sblocco personalizzato</value>
   </data>
-  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>Queste opzioni non sono disponibili quando è attivata la funzionalità “Sblocca Tutto” perché Sblocca Tutto ha sbloccato tutte le opzioni seguenti.</value>
+  <data name="CustomUnlockMinor" xml:space="preserve">
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>Economia</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Il sistema di obiettivi è sempre disponibile</value>
-  </data>
-  <data name="EnabledInfoView" xml:space="preserve">
-    <value>Vista Informazioni è sempre disponibile</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>Salta interfaccia introduttiva del gioco</value>
@@ -203,12 +215,6 @@
   </data>
   <data name="Industrial" xml:space="preserve">
     <value>Industriale</value>
-  </data>
-  <data name="LocalModWarning" xml:space="preserve">
-    <value>Mod integrata, Game Anarchy include già la stessa funzionalità. Disattivare la mod locale se si desidera utilizzare le funzioni di Game Anarchy.</value>
-  </data>
-  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Mod integrata, Game Anarchy include già la stessa funzionalità. Si prega di disabilitare la mod locale e di impostare l'importo iniziale nel pannello Impostazioni di GA nel caso in cui la città vada in bancarotta a causa di uno scoperto (per evitare che il gioco si blocchi).</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
     <value>Edificio principale del campus</value>
@@ -324,6 +330,15 @@
   <data name="OtherFunctionsMinor" xml:space="preserve">
     <value>Utilizzare i tasti di scelta rapida o il pulsante UUI per richiamare il Pannello di Controllo; se si desidera regolare le opzioni del Pannello di Controllo, chiudere prima il Pannello Opzioni.</value>
   </data>
+  <data name="PutOut" xml:space="preserve">
+    <value>Put out</value>
+  </data>
+  <data name="PutOutBurningBuildings" xml:space="preserve">
+    <value>Put out burning buildings</value>
+  </data>
+  <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
+    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
+  </data>
   <data name="Refund" xml:space="preserve">
     <value>Rimborso demolizione</value>
   </data>
@@ -399,6 +414,9 @@
   <data name="Service" xml:space="preserve">
     <value>Servizio</value>
   </data>
+  <data name="SetBefore" xml:space="preserve">
+    <value>It is recommended to set this before entering the game/save</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>Ordina i nomi delle mod nel pannello opzioni</value>
   </data>
@@ -426,14 +444,47 @@
   <data name="Unlimited" xml:space="preserve">
     <value>Illimitato</value>
   </data>
+  <data name="UnlimitedLibraryAI" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
+    <value>The Creator's Library</value>
+  </data>
+  <data name="UnlimitedMoneyConflict" xml:space="preserve">
+    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+  </data>
+  <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
+    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+  </data>
+  <data name="UnlimitedParkAI" xml:space="preserve">
+    <value>Park</value>
+  </data>
+  <data name="UnlimitedParkAIMinor" xml:space="preserve">
+    <value>Plaza of the Future</value>
+  </data>
+  <data name="UnlimitedSpaceElevator" xml:space="preserve">
+    <value>Space elevator</value>
+  </data>
+  <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
+    <value>Plaza of Transference</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Sblocca tutto</value>
+  </data>
+  <data name="UnlockAllConflict" xml:space="preserve">
+    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>This option is the same as vanilla "Unlock All" features, and while it allows dynamic toggling within game, it is recommended to set it before entering save. If disabled this option still unlocks all, make sure you have disabled Find It! "Unlock All" option.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Sbloccare tutte le strade</value>
+  </data>
+  <data name="UnlockInfoViews" xml:space="preserve">
+    <value>Unlock info views panel</value>
+  </data>
+  <data name="UnlockLandscaping" xml:space="preserve">
+    <value>Unlock landscaping</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>Sblocca il binario della metropolitana</value>
@@ -444,11 +495,11 @@
   <data name="UnlockPolicies" xml:space="preserve">
     <value>Sblocca pannello delle politiche</value>
   </data>
+  <data name="UnlockPublicTransport" xml:space="preserve">
+    <value>Unlock public transport</value>
+  </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>Sblocca binario del treno</value>
-  </data>
-  <data name="UnlockTransport" xml:space="preserve">
-    <value>Sblocca tutti i trasporti</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
     <value>Sblocca Edificio unico</value>
@@ -569,10 +620,43 @@
     <value>Corretto il problema delle impostazioni del pannello di controllo che a volte non vengono salvate automaticamente.</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where normal buildings could only be placed once.</value>
+    <value>Risolto un problema per cui gli edifici normali potevano essere posizionati solo una volta.</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
+    <value>Risolto un problema per cui la mod non funzionava affatto durante il caricamento errato del file di configurazione.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
+    <value>Added unlock landscaping feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
+    <value>Added put out burning buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
+    <value>Added unlimited place treasure hunt buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
+    <value>Integrated [You Can Build It] mod functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
+    <value>Optimize unlock info view performance issues.</value>
+  </data>
+  <data name="UpdateLog_V1_1TRA" xml:space="preserve">
+    <value>Thai localization support</value>
+  </data>
+  <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
+    <value>UUI button and separate tool button are now optional.</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
+    <value>Updated to support game version 1.17.1</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
+    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Base</value>

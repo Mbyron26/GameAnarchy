@@ -127,13 +127,19 @@
     <value>Add money threshold</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
-    <value>Make sure Money Anarchy feature is enabled</value>
+    <value>Zorg ervoor dat de functie Geld Anarchie is geactiveerd</value>
   </data>
   <data name="AllowsDynamicToggling" xml:space="preserve">
     <value>Deze optie maakt dynamisch schakelen in het spel mogelijk</value>
   </data>
   <data name="Amount" xml:space="preserve">
     <value>Aantal</value>
+  </data>
+  <data name="AnnualInterestRate" xml:space="preserve">
+    <value>Annual interest rate</value>
+  </data>
+  <data name="AnnualInterestRateMinor" xml:space="preserve">
+    <value>The default value is 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>Building refund</value>
@@ -144,11 +150,20 @@
   <data name="BuildingSpreadFireProbability" xml:space="preserve">
     <value>Building spread fire probability</value>
   </data>
+  <data name="BuiltinModCheck" xml:space="preserve">
+    <value>Builtin Mod Check</value>
+  </data>
+  <data name="BuiltinModWarning" xml:space="preserve">
+    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+  </data>
+  <data name="ChargeInterest" xml:space="preserve">
+    <value>Charge interest on negative balances</value>
+  </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>City bankruptcy warning threshold</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>De standaardwaarde van het spel is -10000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Diensten opties</value>
@@ -162,17 +177,14 @@
   <data name="CustomUnlock" xml:space="preserve">
     <value>Aangepaste ontgrendelen</value>
   </data>
-  <data name="CustomUnlockPanelTooltip" xml:space="preserve">
-    <value>Deze opties zijn niet beschikbaar wanneer de "Ontgrendel Alle" functie is ingeschakeld omdat Ontgrendel Alle opties ontgrendeld zijn.</value>
+  <data name="CustomUnlockMinor" xml:space="preserve">
+    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>Economie</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Prestaties systeem is altijd beschikbaar</value>
-  </data>
-  <data name="EnabledInfoView" xml:space="preserve">
-    <value>Info weergave is altijd beschikbaar</value>
   </data>
   <data name="EnabledSkipIntro" xml:space="preserve">
     <value>Sla game Intro interface over</value>
@@ -203,12 +215,6 @@
   </data>
   <data name="Industrial" xml:space="preserve">
     <value>Industrieel</value>
-  </data>
-  <data name="LocalModWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy heeft al dezelfde functionaliteit. Schakel deze lokale mod uit als je wilt om Game Anarchy functies te gebruiken.</value>
-  </data>
-  <data name="LocalUnlimitedMoneyWarning" xml:space="preserve">
-    <value>Buildtin mod, Game Anarchy bevat al dezelfde functionaliteit. Schakel deze lokale mod uit en stel de initiële hoeveelheid in de GA's instellingen paneel in voor het geval je stad failliet gaat door overdraft (om te voorkomen dat het spel crasht).</value>
   </data>
   <data name="MainCampusBuilding" xml:space="preserve">
     <value>Campus hoofdgebouw</value>
@@ -310,7 +316,7 @@
     <value>Show mod updated date in options panel categories</value>
   </data>
   <data name="OptionPanelCategoriesUpdatedMinor" xml:space="preserve">
-    <value>This option only takes effect after refreshing the plugins list or restarting the game</value>
+    <value>Deze optie werkt alleen na het bijwerken van de plugin-lijst of het herstarten van het spel</value>
   </data>
   <data name="OptionsPanelHorizontalOffset" xml:space="preserve">
     <value>Opties paneel categorieën balk horizontale verschuiving</value>
@@ -322,7 +328,16 @@
     <value>Overige functies</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+    <value>Gebruik de sneltoetsen of de UUI-knop om het optiepaneel te openen. Als je de opties in de spelopties wilt aanpassen, sluit dan eerst het optiepaneel.</value>
+  </data>
+  <data name="PutOut" xml:space="preserve">
+    <value>Put out</value>
+  </data>
+  <data name="PutOutBurningBuildings" xml:space="preserve">
+    <value>Put out burning buildings</value>
+  </data>
+  <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
+    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Bulldozing refund</value>
@@ -364,7 +379,7 @@
     <value>Remove not enough money limitation</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
-    <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
+    <value>Als "Geld Anarchie" of "Onbeperkt Geld" is ingeschakeld, wordt deze optie automatisch afgedwongen.</value>
   </data>
   <data name="RemoveOfficeBuildingFire" xml:space="preserve">
     <value>Brand van kantoorgebouw verwijderen</value>
@@ -399,6 +414,9 @@
   <data name="Service" xml:space="preserve">
     <value>Dienstverlening</value>
   </data>
+  <data name="SetBefore" xml:space="preserve">
+    <value>It is recommended to set this before entering the game/save</value>
+  </data>
   <data name="SortSettings" xml:space="preserve">
     <value>Sorteer mods namen in optiespaneel</value>
   </data>
@@ -409,7 +427,7 @@
     <value>Game start money</value>
   </data>
   <data name="StartMoneyMinor" xml:space="preserve">
-    <value>Set value before you start gaming. If you don't want money to be this value every time you load save, disable this feature after enabling it once, if you load save, the money will change after the game simulation starts.</value>
+    <value>Stel de waarde in voordat je begint te spelen. Als je niet wilt dat het geld elke keer als je het spel laadt als beginwaarde wordt ingesteld, schakel dan de functie uit nadat het geld de waarde heeft. Het geldbedrag zal pas veranderen nadat de spelsimulatie is gestart.</value>
   </data>
   <data name="StockExchange" xml:space="preserve">
     <value>Beurs</value>
@@ -426,14 +444,47 @@
   <data name="Unlimited" xml:space="preserve">
     <value>Onbeperkt</value>
   </data>
+  <data name="UnlimitedLibraryAI" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
+    <value>The Creator's Library</value>
+  </data>
+  <data name="UnlimitedMoneyConflict" xml:space="preserve">
+    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+  </data>
+  <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
+    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+  </data>
+  <data name="UnlimitedParkAI" xml:space="preserve">
+    <value>Park</value>
+  </data>
+  <data name="UnlimitedParkAIMinor" xml:space="preserve">
+    <value>Plaza of the Future</value>
+  </data>
+  <data name="UnlimitedSpaceElevator" xml:space="preserve">
+    <value>Space elevator</value>
+  </data>
+  <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
+    <value>Plaza of Transference</value>
+  </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Ontgrendel alles</value>
+  </data>
+  <data name="UnlockAllConflict" xml:space="preserve">
+    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>Deze optie is hetzelfde als de "Alles ontgrendelen" functie van het spel, en hoewel het dynamisch schakelen in het spel mogelijk maakt, is het aan te raden om het in te stellen voordat je je opgeslagen spel laadt. Indien uitgeschakeld, wordt nog steeds alles ontgrendeld, zorg ervoor dat je in Find It! de "Unlock All" optie hebt uitgeschakeld.</value>
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Ontgrendel Alle Bots</value>
+  </data>
+  <data name="UnlockInfoViews" xml:space="preserve">
+    <value>Unlock info views panel</value>
+  </data>
+  <data name="UnlockLandscaping" xml:space="preserve">
+    <value>Unlock landscaping</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>Ontgrendel metro track</value>
@@ -444,11 +495,11 @@
   <data name="UnlockPolicies" xml:space="preserve">
     <value>Ontgrendel beleidspaneel</value>
   </data>
+  <data name="UnlockPublicTransport" xml:space="preserve">
+    <value>Unlock public transport</value>
+  </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>Ontgrendel metro track</value>
-  </data>
-  <data name="UnlockTransport" xml:space="preserve">
-    <value>Ontgrendel alle transporten</value>
   </data>
   <data name="UnlockUniqueBuilding" xml:space="preserve">
     <value>Ontgrendel uniek gebouw</value>
@@ -573,6 +624,39 @@
   </data>
   <data name="UpdateLog_V1_0_1FIX1" xml:space="preserve">
     <value>Fixed an issue where the mod would not work at all when loading the config file incorrectly.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
+    <value>Added unlock landscaping feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
+    <value>Added put out burning buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
+    <value>Added unlimited place treasure hunt buildings feature.</value>
+  </data>
+  <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
+    <value>Integrated [You Can Build It] mod functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+  </data>
+  <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
+    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
+    <value>Optimize unlock info view performance issues.</value>
+  </data>
+  <data name="UpdateLog_V1_1TRA" xml:space="preserve">
+    <value>Thai localization support</value>
+  </data>
+  <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
+    <value>UUI button and separate tool button are now optional.</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
+    <value>Updated to support game version 1.17.1</value>
+  </data>
+  <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
+    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

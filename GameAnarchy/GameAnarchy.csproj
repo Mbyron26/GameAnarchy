@@ -10,7 +10,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.0.1.52422</Version>
+		<Version>1.1.0.1811</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
@@ -46,13 +46,18 @@
 		<EmbeddedResource Remove="Properties\Localize.resx" />
 		<EmbeddedResource Remove="Properties\Localize.ru.resx" />
 		<EmbeddedResource Remove="Properties\Localize.sk.resx" />
+		<EmbeddedResource Remove="Properties\Localize.th.resx" />
 		<EmbeddedResource Remove="Properties\Localize.tr.resx" />
 		<EmbeddedResource Remove="Properties\Localize.zh-CN.resx" />
 		<EmbeddedResource Remove="Properties\Localize.zh-TW.resx" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="UI\UUIResource\UUI.png" />
+	  <None Remove="UI\Resources\InGameButton.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="UI\Resources\InGameButton.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,6 +100,9 @@
 		<None Include="Properties\Localize.sk.resx">
 			<SubType>Designer</SubType>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="Properties\Localize.th.resx">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 		<None Include="Properties\Localize.tr.resx">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -164,5 +172,7 @@
 	</ItemGroup>
 
 	<Import Project="..\..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
+
+	<Import Project="..\..\..\..\MbyronModsCommon\ToolButtonShared\ToolButtonShared.projitems" Label="Shared" />
 
 </Project>

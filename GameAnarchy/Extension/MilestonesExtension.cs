@@ -1,49 +1,10 @@
 ﻿namespace GameAnarchy;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using ICities;
 
 public class MilestonesExtension : MilestonesExtensionBase {
     public override void OnRefreshMilestones() {
-
-        #region UnlockAllRoads
-        if (Config.Instance.UnlockAllRoads && Config.Instance.CustomUnlock) {
-            milestonesManager.UnlockMilestone("Basic Road Created");
-            var netCount = PrefabCollection<NetInfo>.LoadedCount();
-            var buildingCount = PrefabCollection<BuildingInfo>.LoadedCount();
-            if (netCount == 0 || buildingCount == 0) {
-                ExternalLogger.Error("Unlock all roads fail, base net road count and building type road count is empty.");
-                return;
-            }
-
-            try {
-                for (uint i = 0; i < netCount; i++) {
-                    var netInfo = PrefabCollection<NetInfo>.GetLoaded(i);
-                    if (netInfo is not null && netInfo.m_class is not null && netInfo.m_class.m_service == ItemClass.Service.Road) {
-                        netInfo.m_UnlockMilestone = null;
-                    }
-                }
-                ExternalLogger.Error("Unlock base net road succeed.");
-
-                for (uint j = 0; j < buildingCount; j++) {
-                    var buildingInfo = PrefabCollection<BuildingInfo>.GetLoaded(j);
-                    if (buildingInfo is not null && buildingInfo.m_class is not null && buildingInfo.m_class.m_service == ItemClass.Service.Road) {
-                        buildingInfo.m_UnlockMilestone = null;
-                        var intersectionAI = buildingInfo.m_buildingAI as IntersectionAI;
-                        if (intersectionAI is not null) {
-                            UnityHelper.SetFieldValue<MilestoneInfo>(intersectionAI, "m_cachedUnlockMilestone", BindingFlags.NonPublic | BindingFlags.Instance, null);
-                        }
-                    }
-                }
-
-                ExternalLogger.Log("Unlock all type roads succeed.");
-            } catch (Exception e) {
-                ExternalLogger.Exception($"Unlock all road failed.", e);
-            }
-        }
-        #endregion
 
         #region UnlockCommon
         if (Config.Instance.EnabledUnlockAll || (Config.Instance.UnlockTrainTrack && Config.Instance.CustomUnlock)) {
@@ -64,13 +25,13 @@ public class MilestonesExtension : MilestonesExtensionBase {
                 milestonesManager.UnlockMilestone("2-Star Hotel Pofit");
                 milestonesManager.UnlockMilestone("3-Star Average Popularity");
                 milestonesManager.UnlockMilestone("3-Star Hotel");
-                milestonesManager.UnlockMilestone("3-Star Hotel Pofit");
+                //milestonesManager.UnlockMilestone("3-Star Hotel Pofit");
                 milestonesManager.UnlockMilestone("4-Star Average Popularity");
                 milestonesManager.UnlockMilestone("4-Star Hotel");
-                milestonesManager.UnlockMilestone("4-Star Hotel Pofit");
+                //milestonesManager.UnlockMilestone("4-Star Hotel Pofit");
                 milestonesManager.UnlockMilestone("5-Star Average Popularity");
                 milestonesManager.UnlockMilestone("5-Star Hotel");
-                milestonesManager.UnlockMilestone("5-Star Hotel Pofit");
+                //milestonesManager.UnlockMilestone("5-Star Hotel Pofit");
             }
 
             if (managers.application.SupportsExpansion(Expansion.FinanceExpansion)) {
@@ -356,96 +317,15 @@ public class MilestonesExtension : MilestonesExtensionBase {
         }
         #endregion
 
-        #region CustomUnlock
-        if (Config.Instance.CustomUnlock && Config.Instance.MilestoneLevel != 0) {
-            milestonesManager.UnlockMilestone("Milestone" + Config.Instance.MilestoneLevel.ToString());
+        if (Config.Instance.CustomUnlock) {
+            SingletonManager<Manager>.Instance.UnlockMilestone(milestonesManager);
+            SingletonManager<Manager>.Instance.UnlockAllRoads();
+            SingletonManager<Manager>.Instance.UnlockPublicTransport();
+            SingletonManager<Manager>.Instance.UnlockUniqueBuildings();
+            SingletonManager<Manager>.Instance.UnlockLandscaping();
+            SingletonManager<Manager>.Instance.UnlockPolicies();
+            SingletonManager<Manager>.Instance.UnlockInfoViews();
         }
-        #endregion
-
-        #region Unlock Policies
-        if (Config.Instance.CustomUnlock && Config.Instance.UnlockPolicies) {
-            if (UnlockManager.exists) {
-                try {
-                    UnlockManager.instance.m_properties.m_FeatureMilestones[2] = null;
-                    var icon = UnlockManager.instance.m_properties.m_PolicyTypeMilestones;
-                    for (int i = 1; i < 4; i++) {
-                        icon[i] = null;
-                    }
-                    var servicePanel = UnlockManager.instance.m_properties.m_ServicePolicyMilestones;
-                    for (int i = 0; i < servicePanel.Length - 2; i++) {
-                        servicePanel[i] = null;
-                    }
-                    var taxationPanel = UnlockManager.instance.m_properties.m_TaxationPolicyMilestones;
-                    for (int i = 0; i < taxationPanel.Length; i++) {
-                        taxationPanel[i] = null;
-                    }
-                    var cityPlanningPanel = UnlockManager.instance.m_properties.m_CityPlanningPolicyMilestones;
-                    for (int i = 0; i < cityPlanningPanel.Length; i++) {
-                        cityPlanningPanel[i] = null;
-                    }
-                } catch (Exception e) {
-                    ExternalLogger.Exception($"Couldn't unlock policies.", e);
-                }
-            } else {
-                ExternalLogger.Error("UnlockManager doesn't exist.");
-            }
-        }
-        #endregion
-
-        #region Unlock Transport
-        if (Config.Instance.CustomUnlock && Config.Instance.UnlockTransport) {
-            if (UnlockManager.exists) {
-                try {
-                    var subService = UnlockManager.instance.m_properties.m_SubServiceMilestones;
-                    if (subService is not null) {
-                        for (int i = 0; i < subService.Length; i++) {
-                            if (subService[i] is not null) {
-                                var cm = subService[i] as CombinedMilestone;
-                                if (cm != null && (cm.name == "Milestone4" || cm.name == "Milestone5" || cm.name == "Milestone6" || cm.name == "Milestone7")) {
-                                    cm.m_openUnlockPanel = false;
-                                    cm.m_requirePassedLimit = 0;
-                                }
-                            }
-                        }
-                    }
-                    ExternalLogger.Log("Unlock transport succeed.");
-                } catch (Exception e) {
-                    ExternalLogger.Exception($"Unlock transport failed.", e);
-                }
-            } else {
-                ExternalLogger.Error($"UnlockManager doesn't exists, unlock transport failed.");
-            }
-        }
-        #endregion
-
-        #region Unlock Unique Building
-        if (Config.Instance.UnlockUniqueBuilding && Config.Instance.CustomUnlock) {
-            if (UnlockManager.instance.m_properties.m_ServiceMilestones[17] is not null) {
-                UnlockManager.instance.m_properties.m_ServiceMilestones[17] = null;
-                ExternalLogger.Log("Unlock unique building level 1 succeed.");
-            }
-            if (UnlockManager.instance.m_properties.m_FeatureMilestones[14] is not null) {
-                UnlockManager.instance.m_properties.m_FeatureMilestones[14] = null;
-                ExternalLogger.Log("Unlock unique building level 2 succeed.");
-            }
-            if (UnlockManager.instance.m_properties.m_FeatureMilestones[15] is not null) {
-                UnlockManager.instance.m_properties.m_FeatureMilestones[15] = null;
-                ExternalLogger.Log("Unlock unique building level 3 succeed.");
-            }
-            if (UnlockManager.instance.m_properties.m_FeatureMilestones[16] is not null) {
-                UnlockManager.instance.m_properties.m_FeatureMilestones[16] = null;
-                ExternalLogger.Log("Unlock unique building level 4 succeed.");
-            }
-            if (UnlockManager.instance.m_properties.m_FeatureMilestones[17] is not null) {
-                UnlockManager.instance.m_properties.m_FeatureMilestones[17] = null;
-                ExternalLogger.Log("Unlock unique building level 5 succeed.");
-            }
-            if (UnlockManager.instance.m_properties.m_FeatureMilestones[18] is not null) {
-                UnlockManager.instance.m_properties.m_FeatureMilestones[18] = null;
-                ExternalLogger.Log("Unlock unique building level 6 succeed.");
-            }
-        }
-        #endregion
     }
 
     private void UnlockBuildings(List<string> list, string postfix = "Requirements") {

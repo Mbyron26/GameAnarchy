@@ -1,15 +1,19 @@
-﻿using GameAnarchy.UI;
+﻿namespace GameAnarchy;
+using GameAnarchy.UI;
 
-namespace GameAnarchy {
-    public class ThreadExtension : ModThreadExtensionBase {
-        private bool addCashFlag;
-        private bool toggleControlPanel;
-        public override void OnUpdate(float realTimeDelta, float simulationTimeDelta) {
-            base.OnUpdate(realTimeDelta, simulationTimeDelta);
+public class ThreadExtension : ModThreadExtensionBase {
+    private bool addCashFlag;
+    private bool toggleControlPanel;
+    public override void OnUpdate(float realTimeDelta, float simulationTimeDelta) {
+        base.OnUpdate(realTimeDelta, simulationTimeDelta);
 
-            AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, EconomyExtension.AddMoneyManually);
-            AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<Mod, ControlPanel>.CallPanel);
-        }
-
+        AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, SingletonManager<Manager>.Instance.AddMoneyManually);
+        AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<Mod, ControlPanel>.CallPanel);
     }
+
+    public override void OnBeforeSimulationFrame() {
+        SingletonManager<Manager>.Instance.ChargeInterest();
+        base.OnBeforeSimulationFrame();
+    }
+
 }
