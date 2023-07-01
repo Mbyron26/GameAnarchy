@@ -136,10 +136,10 @@
     <value>數量</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
-    <value>Annual interest rate</value>
+    <value>年利率</value>
   </data>
   <data name="AnnualInterestRateMinor" xml:space="preserve">
-    <value>The default value is 3%</value>
+    <value>預設值為 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>剷除建築退款選項</value>
@@ -151,13 +151,13 @@
     <value>建築物蔓延火災概率</value>
   </data>
   <data name="BuiltinModCheck" xml:space="preserve">
-    <value>Builtin Mod Check</value>
+    <value>內建模組檢查</value>
   </data>
   <data name="BuiltinModWarning" xml:space="preserve">
-    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+    <value>Game Anarchy 已包含本模組的所有功能，為保證 Game Anarchy 的正常運行，以下模組已被強制停用，請取消訂閱已被整合的模組。</value>
   </data>
   <data name="ChargeInterest" xml:space="preserve">
-    <value>Charge interest on negative balances</value>
+    <value>負債時支付利息</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>城市破產警告閾值</value>
@@ -169,7 +169,7 @@
     <value>城市服務選項</value>
   </data>
   <data name="Commercial" xml:space="preserve">
-    <value>商業的</value>
+    <value>商業區</value>
   </data>
   <data name="Cost" xml:space="preserve">
     <value>費用</value>
@@ -178,7 +178,7 @@
     <value>自訂解鎖選項</value>
   </data>
   <data name="CustomUnlockMinor" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
+    <value>當啟用「全部解鎖」功能時，這些選項會自動停用，因為「全部解鎖」已解鎖以下所有選項。雖然以下選項會在遊戲刷新里程碑時生效，但還是建議在進入存檔前進行設定。</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>經濟</value>
@@ -331,13 +331,13 @@
     <value>請使用鍵盤快速鍵或 UUI 按鈕打開 GA 的控制面板。如果你想要使用控制面板中的功能，請先關閉選項面板。</value>
   </data>
   <data name="PutOut" xml:space="preserve">
-    <value>Put out</value>
+    <value>撲滅</value>
   </data>
   <data name="PutOutBurningBuildings" xml:space="preserve">
-    <value>Put out burning buildings</value>
+    <value>撲滅建築物的火災</value>
   </data>
   <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
-    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
+    <value>此功能不會永久移除火災，只會一次撲滅所有著火的建築物。您確定要撲滅著火的建築物嗎？</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>剷除物品退款選項</value>
@@ -415,7 +415,7 @@
     <value>服務</value>
   </data>
   <data name="SetBefore" xml:space="preserve">
-    <value>It is recommended to set this before entering the game/save</value>
+    <value>建議在進入存檔前設定好該選項</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
     <value>在選項面板中以模組名稱進行排序</value>
@@ -445,34 +445,34 @@
     <value>無限</value>
   </data>
   <data name="UnlimitedLibraryAI" xml:space="preserve">
-    <value>Library</value>
+    <value>圖書館</value>
   </data>
   <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
-    <value>The Creator's Library</value>
+    <value>創造者圖書館</value>
   </data>
   <data name="UnlimitedMoneyConflict" xml:space="preserve">
-    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+    <value>Game Anarchy 還擴展了無限金錢功能，允許手動加錢，自動加錢等。您可以在 Game Anarchy 的選項面板裡勾選使用這些功能。</value>
   </data>
   <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
-    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+    <value>Game Anarchy 還可以調節負債利率，您可以在 Game Anarchy 的選項面板裡勾選使用這些功能。</value>
   </data>
   <data name="UnlimitedParkAI" xml:space="preserve">
-    <value>Park</value>
+    <value>公園</value>
   </data>
   <data name="UnlimitedParkAIMinor" xml:space="preserve">
-    <value>Plaza of the Future</value>
+    <value>未來廣場</value>
   </data>
   <data name="UnlimitedSpaceElevator" xml:space="preserve">
-    <value>Space elevator</value>
+    <value>太空電梯</value>
   </data>
   <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
-    <value>Plaza of Transference</value>
+    <value>遷移廣場</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>全部解鎖</value>
   </data>
   <data name="UnlockAllConflict" xml:space="preserve">
-    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
+    <value>Game Anarchy 還擴展了自訂解鎖的功能，您可以在 Game Anarchy 的選項面板裡勾選使用這些功能。</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>此選項與原版“全部解鎖”功能相同，雖然它允許在遊戲中進行動態切換，但建議在進入保存之前設置它。如果禁用此選項仍然解鎖所有，請確保您已禁用查找它！ “全部解鎖”選項。</value>
@@ -481,10 +481,10 @@
     <value>解鎖所有道路</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
-    <value>Unlock info views panel</value>
+    <value>解鎖資訊檢視面板</value>
   </data>
   <data name="UnlockLandscaping" xml:space="preserve">
-    <value>Unlock landscaping</value>
+    <value>解鎖環境美化</value>
   </data>
   <data name="UnlockMetroTrack" xml:space="preserve">
     <value>解鎖捷運軌道</value>
@@ -496,7 +496,7 @@
     <value>解鎖政策</value>
   </data>
   <data name="UnlockPublicTransport" xml:space="preserve">
-    <value>Unlock public transport</value>
+    <value>解鎖公共運輸</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>解鎖火車軌道</value>
@@ -626,43 +626,49 @@
     <value>修復了當組態檔案載入錯誤時模組無法工作的問題。</value>
   </data>
   <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
-    <value>Added unlock landscaping feature.</value>
+    <value>新增瞭解鎖環境美化面板的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
-    <value>Added put out burning buildings feature.</value>
+    <value>新增了撲滅建築物火災的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
-    <value>Added unlimited place treasure hunt buildings feature.</value>
+    <value>新增了尋寶遊戲選項裡獨特建築無限放置的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
-    <value>Integrated [You Can Build It] mod functions.</value>
+    <value>整合了 You Can Build It 這個模組的功能。</value>
   </data>
   <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+    <value>修復了公共交通未完全解鎖的問題。</value>
   </data>
   <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+    <value>修復了無限石油、無限礦石功能不能正常運行的問題。</value>
   </data>
   <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
-    <value>Optimize unlock info view performance issues.</value>
+    <value>最佳化了解鎖資訊檢視面板的性能問題。</value>
   </data>
   <data name="UpdateLog_V1_1TRA" xml:space="preserve">
-    <value>Thai localization support</value>
+    <value>新增了泰語翻譯</value>
   </data>
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
-    <value>UUI button and separate tool button are now optional.</value>
+    <value>現在可以選擇模組面板按鈕的顯示位置：僅在 UUI 內顯示 / 僅在遊戲內單獨顯示 / 同時在 UUI 和遊戲內顯示。</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
+    <value>Fixed some issues with the control panel.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
-    <value>Updated to support game version 1.17.1</value>
+    <value>更新支援遊戲版本 1.17.1</value>
   </data>
   <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
-    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
+    <value>更新了相容性檢查功能。 當檢測到遊戲內建的三個無限制模組啟用時，會將其自動停用，以確保 Game Anarchy 能正常使用。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
-    <value>香草</value>
+    <value>原版</value>
   </data>
   <data name="VanillaUnlimitedMoneyMode" xml:space="preserve">
-    <value>香草無限金錢模式</value>
+    <value>原版無限金錢模式</value>
   </data>
   <data name="VanillaUnlimitedMoneyModeMinor" xml:space="preserve">
     <value>遊戲內金錢只顯示“∞”，此選項允許在遊戲內動態切換</value>

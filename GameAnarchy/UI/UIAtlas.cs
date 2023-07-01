@@ -12,7 +12,7 @@ internal static class UIAtlas {
         get {
             if (gameAnarchyAtlas is null) {
                 gameAnarchyAtlas = MbyronModsCommon.UI.UIUtils.CreateTextureAtlas(nameof(GameAnarchyAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
-                InternalLogger.Log("Initialized GameAnarchyAtlas.");
+                InternalLogger.Log("Initialized GameAnarchyAtlas");
             }
             return gameAnarchyAtlas;
         }

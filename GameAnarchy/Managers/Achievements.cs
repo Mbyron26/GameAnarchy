@@ -9,7 +9,7 @@ public partial class Manager {
     private UIButton button;
 
     public void InitAchievements(LoadMode loadMode) {
-        if (!SingletonMod<Mod>.Instance.LevelLoaded) {
+        if (!SingletonMod<Mod>.Instance.IsLevelLoaded) {
             return;
         }
         if (loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame || loadMode == LoadMode.NewGameFromScenario || loadMode == LoadMode.LoadScenario) {
@@ -29,7 +29,7 @@ public partial class Manager {
     }
 
     public void UpdateAchievements() {
-        if (!SingletonMod<Mod>.Instance.LevelLoaded) {
+        if (!SingletonMod<Mod>.Instance.IsLevelLoaded) {
             return;
         }
         try {

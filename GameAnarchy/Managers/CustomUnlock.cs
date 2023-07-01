@@ -71,6 +71,24 @@ public partial class Manager {
         InfoManager.InfoMode.Hotel,
     };
 
+    public void CustomUnlock(IMilestones milestones) {
+        if (!Config.Instance.CustomUnlock)
+            return;
+        UnlockMilestone(milestones);
+        UnlockAllRoads();
+        UnlockTrainTrack(milestones);
+        UnlockMetroTrack(milestones);
+        UnlockPublicTransport();
+        UnlockUniqueBuildings();
+        UnlockLandscaping();
+        UnlockPolicies();
+        UnlockInfoViews();
+    }
+
+    public void UnlockTrainTrack(IMilestones milestones) =>  milestones.UnlockMilestone("Train Track Requirements");
+
+    public void UnlockMetroTrack(IMilestones milestones) => milestones.UnlockMilestone("Metro Track Requirements");
+
     public void UnlockInfoViews() {
         if (!Config.Instance.UnlockInfoViews) {
             return;

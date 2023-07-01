@@ -26,34 +26,15 @@ public class Mod : ModPatcherBase<Mod, Config> {
 
     public override void SetModCulture(CultureInfo cultureInfo) => Localize.Culture = cultureInfo;
     public override void IntroActions() {
-        base.IntroActions();
         SingletonManager<Manager>.Instance.InitBuildinModChecker();
         ExternalLogger.OutputPluginsList();
     }
-    public override void OnLevelLoaded(LoadMode mode) {
-        base.OnLevelLoaded(mode);
-        SingletonManager<Manager>.Instance.SetStartMoney();
-        SingletonManager<Manager>.Instance.InitAchievements(mode);
-        if (mode == LoadMode.NewGame || mode == LoadMode.LoadGame || mode == LoadMode.NewMap || mode == LoadMode.LoadMap || mode == LoadMode.NewAsset || mode == LoadMode.LoadAsset) {
-            SingletonManager<ToolButtonManager>.Instance.Init();
-            ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
-        }
-    }
-    public override void OnLevelUnloading() {
-        base.OnLevelUnloading();
-        SingletonManager<Manager>.Instance.DeInitAchievements();
-        SingletonManager<ToolButtonManager>.Instance.DeInit();
-        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged -= (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
-    }
-    public override void OnReleased() {
-        base.OnReleased();
-        SingletonManager<Manager>.Instance.OutputFireSpreadCount();
-    }
+    
     protected override void SettingsUI(UIHelperBase helper) {
-        base.SettingsUI(helper);
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
         LocaleManager.eventLocaleChanged += ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged;
     }
+
     protected override void PatchAction() {
         AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());
         AddTranspiler(OptionsMainPanelPatch.GetOriginalAddUserMods(), OptionsMainPanelPatch.GetAddUserModsTranspiler());
@@ -120,6 +101,10 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 1, 1), new(2023, 7, 1), new List<LogString> {
+            new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX0),
+            new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX1),
+        }),
         new ModChangeLog(new Version(1, 1, 0), new(2023, 6, 18), new List<LogString> {
             new(LogFlag.Updated, Localize.UpdateLog_V1_1_UPT0),
             new(LogFlag.Updated, Localize.UpdateLog_V1_1_UPT1),
