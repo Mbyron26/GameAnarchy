@@ -652,6 +652,12 @@
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
     <value>UUI button and separate tool button are now optional.</value>
   </data>
+  <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
+    <value>Fixed some issues with the control panel.</value>
+  </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>
   </data>

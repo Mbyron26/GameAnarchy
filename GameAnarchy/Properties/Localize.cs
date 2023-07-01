@@ -886,6 +886,16 @@ namespace GameAnarchy
 		public static string UpdateLog_V1_1UPT2 => LocaleManager.GetString("UpdateLog_V1_1UPT2", Culture);
 
 		/// <summary>
+		/// Fixed an issue where the remove not enough money limitation function could not take effect.
+		/// </summary>
+		public static string UpdateLog_V1_1_1FIX0 => LocaleManager.GetString("UpdateLog_V1_1_1FIX0", Culture);
+
+		/// <summary>
+		/// Fixed some issues with the control panel.
+		/// </summary>
+		public static string UpdateLog_V1_1_1FIX1 => LocaleManager.GetString("UpdateLog_V1_1_1FIX1", Culture);
+
+		/// <summary>
 		/// Updated to support game version 1.17.1
 		/// </summary>
 		public static string UpdateLog_V1_1_UPT0 => LocaleManager.GetString("UpdateLog_V1_1_UPT0", Culture);

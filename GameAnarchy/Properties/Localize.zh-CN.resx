@@ -136,10 +136,10 @@
     <value>数额</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
-    <value>Annual interest rate</value>
+    <value>年利率</value>
   </data>
   <data name="AnnualInterestRateMinor" xml:space="preserve">
-    <value>The default value is 3%</value>
+    <value>默认值为 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>铲除建筑物退款选项</value>
@@ -151,13 +151,13 @@
     <value>建筑的火灾蔓延概率</value>
   </data>
   <data name="BuiltinModCheck" xml:space="preserve">
-    <value>Builtin Mod Check</value>
+    <value>内置模组检查</value>
   </data>
   <data name="BuiltinModWarning" xml:space="preserve">
-    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+    <value>Game Anarchy 已包含本模组的所有功能，为保证 Game Anarchy 的正常运行，以下模组已被强制禁用，请取消订阅已被整合的模组。</value>
   </data>
   <data name="ChargeInterest" xml:space="preserve">
-    <value>Charge interest on negative balances</value>
+    <value>负债时支付利息</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>城市破产警告阈值</value>
@@ -178,7 +178,7 @@
     <value>自定义解锁</value>
   </data>
   <data name="CustomUnlockMinor" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
+    <value>当启用“全部解锁”功能时，这些选项会自动禁用，因为“全部解锁”已解锁以下所有选项。虽然以下选项会在游戏刷新里程碑时生效，但还是建议在进入存档前进行设置。</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>经济</value>
@@ -334,10 +334,10 @@
     <value>扑灭</value>
   </data>
   <data name="PutOutBurningBuildings" xml:space="preserve">
-    <value>Put out burning buildings</value>
+    <value>扑灭建筑物的火灾</value>
   </data>
   <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
-    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
+    <value>此功能无法永久移除火灾，每次使用只能扑灭当前所有着火的建筑物。您确定要扑灭着火的建筑物吗？</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>铲除物品退款选项</value>
@@ -445,34 +445,34 @@
     <value>无限制</value>
   </data>
   <data name="UnlimitedLibraryAI" xml:space="preserve">
-    <value>Library</value>
+    <value>图书馆</value>
   </data>
   <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
-    <value>The Creator's Library</value>
+    <value>创造者图书馆</value>
   </data>
   <data name="UnlimitedMoneyConflict" xml:space="preserve">
-    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+    <value>Game Anarchy 还扩展了无限金钱功能，允许手动加钱，自动加钱等。您可以在 Game Anarchy 的选项面板里勾选使用这些功能。</value>
   </data>
   <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
-    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+    <value>Game Anarchy 还可以调节负债利率，您可以在 Game Anarchy 的选项面板里勾选使用这些功能。</value>
   </data>
   <data name="UnlimitedParkAI" xml:space="preserve">
-    <value>Park</value>
+    <value>公园</value>
   </data>
   <data name="UnlimitedParkAIMinor" xml:space="preserve">
-    <value>Plaza of the Future</value>
+    <value>未来广场</value>
   </data>
   <data name="UnlimitedSpaceElevator" xml:space="preserve">
-    <value>Space elevator</value>
+    <value>轨道电梯</value>
   </data>
   <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
-    <value>Plaza of Transference</value>
+    <value>迁移广场</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>解锁所有</value>
   </data>
   <data name="UnlockAllConflict" xml:space="preserve">
-    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
+    <value>Game Anarchy 还扩展了自定义解锁的功能，您可以在 Game Anarchy 的选项面板里勾选使用这些功能。</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>此选项与原版游戏的“解锁全部”功能相同，虽然您可以在游戏内动态地开关该选项，但是仍然建议在进入存档前设置好该选项。如果该选项已被禁用而游戏内仍然解锁了全部，请检查并确保您已禁用 Find it! 模组内“解锁全部”的功能。</value>
@@ -481,7 +481,7 @@
     <value>解锁所有道路</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
-    <value>Unlock info views panel</value>
+    <value>解锁信息视图面板</value>
   </data>
   <data name="UnlockLandscaping" xml:space="preserve">
     <value>解锁环境美化</value>
@@ -496,7 +496,7 @@
     <value>解锁政策面板</value>
   </data>
   <data name="UnlockPublicTransport" xml:space="preserve">
-    <value>Unlock public transport</value>
+    <value>解锁公共交通</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>解锁火车轨道</value>
@@ -626,37 +626,43 @@
     <value>修复了当配置文件加载错误时模组无法工作的问题。</value>
   </data>
   <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
-    <value>Added unlock landscaping feature.</value>
+    <value>新增了解锁环境美化面板的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
-    <value>Added put out burning buildings feature.</value>
+    <value>新增了扑灭建筑物火灾的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
-    <value>Added unlimited place treasure hunt buildings feature.</value>
+    <value>新增了无限放置 Treasure Hunt 更新中新增的独特建筑的功能。</value>
   </data>
   <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
-    <value>Integrated [You Can Build It] mod functions.</value>
+    <value>整合了 You Can Build It 这个模组的功能。</value>
   </data>
   <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+    <value>修复了无法完全解锁公共交通的问题。</value>
   </data>
   <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+    <value>修复了无限石油、无限矿石功能不能正常运行的问题。</value>
   </data>
   <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
-    <value>Optimize unlock info view performance issues.</value>
+    <value>优化了解锁信息视图面板的性能问题。</value>
   </data>
   <data name="UpdateLog_V1_1TRA" xml:space="preserve">
-    <value>Thai localization support</value>
+    <value>新增了泰语翻译</value>
   </data>
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
-    <value>UUI button and separate tool button are now optional.</value>
+    <value>现在可以选择模组面板按钮的显示位置：仅在 UUI 内显示 / 仅在游戏内单独显示 / 同时在 UUI 和游戏内显示。</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
+    <value>Fixed some issues with the control panel.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
-    <value>Updated to support game version 1.17.1</value>
+    <value>更新并适配游戏版本 1.17.1</value>
   </data>
   <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
-    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
+    <value>更新了兼容性检查功能。 当检测到游戏内置的三个无限制模组启用时，会将其自动禁用，以确保 Game Anarchy 能正常使用。</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>原版</value>

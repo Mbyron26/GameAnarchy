@@ -136,10 +136,10 @@
     <value>Monto</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
-    <value>Annual interest rate</value>
+    <value>Tasa de interés anual</value>
   </data>
   <data name="AnnualInterestRateMinor" xml:space="preserve">
-    <value>The default value is 3%</value>
+    <value>El valor predeterminado es 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>Reembolso de edificio</value>
@@ -151,13 +151,13 @@
     <value>Probabilidad de propagación de incendio en edificios</value>
   </data>
   <data name="BuiltinModCheck" xml:space="preserve">
-    <value>Builtin Mod Check</value>
+    <value>Revisión de Mod incorporada</value>
   </data>
   <data name="BuiltinModWarning" xml:space="preserve">
-    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+    <value>Game Anarchy ya incluye todas las características de este mod, para asegurar el funcionamiento normal de Game Anarchy, los siguientes mods han sido desactivados por la fuerza.</value>
   </data>
   <data name="ChargeInterest" xml:space="preserve">
-    <value>Charge interest on negative balances</value>
+    <value>Cobrar intereses sobre saldos negativos</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>Umbral de advertencia de bancarrota de la ciudad</value>
@@ -178,7 +178,7 @@
     <value>Desbloqueo personalizado</value>
   </data>
   <data name="CustomUnlockMinor" xml:space="preserve">
-    <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
+    <value>Estas opciones no están disponibles cuando la función “Desbloquear todo” está activada porque desbloquea todas las siguientes opciones. Aunque las siguientes opciones surtirán efecto cuando el juego actualice el hito, se recomienda establecerlos antes de entrar en el juego.</value>
   </data>
   <data name="Economy" xml:space="preserve">
     <value>Economía</value>
@@ -334,10 +334,10 @@
     <value>Apagar</value>
   </data>
   <data name="PutOutBurningBuildings" xml:space="preserve">
-    <value>Put out burning buildings</value>
+    <value>Apagar incendios en los edificios en llamas</value>
   </data>
   <data name="PutOutBurningBuildingsDescription" xml:space="preserve">
-    <value>This is not a permanent fire removal feature and will only be called once to remove all buildings that are on fire. Are you sure you want to put out burning buildings?</value>
+    <value>Esto no elimina de forma permanente los incendios y solo se ejecutará una vez para eliminar todos los edificios que están en llamas. ¿Estás seguro de que quieres apagar los incendios?</value>
   </data>
   <data name="Refund" xml:space="preserve">
     <value>Reembolso de demolición</value>
@@ -445,34 +445,34 @@
     <value>Ilimitado</value>
   </data>
   <data name="UnlimitedLibraryAI" xml:space="preserve">
-    <value>Library</value>
+    <value>Biblioteca</value>
   </data>
   <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
-    <value>The Creator's Library</value>
+    <value>Biblioteca de los Creadores</value>
   </data>
   <data name="UnlimitedMoneyConflict" xml:space="preserve">
-    <value>Game Anarchy also extended money anarchy function, allowing manual add money, automatic add money, check Game Anarchy option panel.</value>
+    <value>Game Anarchy también amplió la función de anarquía de dinero, permitiendo añadir dinero manual, añadir dinero automático, revisar el panel de opciones de Game Anarchy.</value>
   </data>
   <data name="UnlimitedOilAndOreConflict" xml:space="preserve">
-    <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
+    <value>Game Anarchy también puede ajustar la tasa de consumo, compruebe el panel de control de Game Anarchy en el juego.</value>
   </data>
   <data name="UnlimitedParkAI" xml:space="preserve">
-    <value>Park</value>
+    <value>Parque</value>
   </data>
   <data name="UnlimitedParkAIMinor" xml:space="preserve">
-    <value>Plaza of the Future</value>
+    <value>Plaza del Futuro</value>
   </data>
   <data name="UnlimitedSpaceElevator" xml:space="preserve">
-    <value>Space elevator</value>
+    <value>Ascensor espacial</value>
   </data>
   <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
-    <value>Plaza of Transference</value>
+    <value>Plaza de la Transferencia</value>
   </data>
   <data name="UnlockAll" xml:space="preserve">
     <value>Desbloquear todo</value>
   </data>
   <data name="UnlockAllConflict" xml:space="preserve">
-    <value>Game Anarchy also extend the custom unlock, check Game Anarchy option panel.</value>
+    <value>Game Anarchy también extiende el desbloqueo personalizado, comprueba el panel de opciones de Game Anarchy.</value>
   </data>
   <data name="UnlockAllMinor" xml:space="preserve">
     <value>Esta opción es la misma que la característica "Desbloquear todo", en vanilla y mientras permite alternar dinámicamente en el juego, se recomienda configurarlo antes de entrar a la partida. Si se desactiva esta opción, todavía desbloquea todo si la opción de "Desbloquear todo" está activada en "Find It" .</value>
@@ -481,7 +481,7 @@
     <value>Desbloquear todas las carreteras</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
-    <value>Unlock info views panel</value>
+    <value>Desbloquear el panel de vistas de información</value>
   </data>
   <data name="UnlockLandscaping" xml:space="preserve">
     <value>Desbloquear diseño de paisaje</value>
@@ -496,7 +496,7 @@
     <value>Desbloquear panel de leyes municipales</value>
   </data>
   <data name="UnlockPublicTransport" xml:space="preserve">
-    <value>Unlock public transport</value>
+    <value>Desbloquear transporte público</value>
   </data>
   <data name="UnlockTrainTrack" xml:space="preserve">
     <value>Desbloquear vías de tren</value>
@@ -626,22 +626,22 @@
     <value>Se arregló un problema donde el mod no funcionaba del todo bien cuando se cargaba incorrectamente el archivo config.</value>
   </data>
   <data name="UpdateLog_V1_1ADD0" xml:space="preserve">
-    <value>Added unlock landscaping feature.</value>
+    <value>Añadida función de desbloqueo de diseño de paisaje.</value>
   </data>
   <data name="UpdateLog_V1_1ADD1" xml:space="preserve">
-    <value>Added put out burning buildings feature.</value>
+    <value>Añadida función para apagar incendios en edificios.</value>
   </data>
   <data name="UpdateLog_V1_1ADD2" xml:space="preserve">
-    <value>Added unlimited place treasure hunt buildings feature.</value>
+    <value>Añadida una función ilimitada de edificios de cacería de tesoros.</value>
   </data>
   <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
-    <value>Integrated [You Can Build It] mod functions.</value>
+    <value>Funciones de mod integradas [You Can Build It].</value>
   </data>
   <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where unlock public transport was not fully unlocked.</value>
+    <value>Se ha corregido un problema en el que no se desbloqueaba completamente el transporte público.</value>
   </data>
   <data name="UpdateLog_V1_1FIX1" xml:space="preserve">
-    <value>Fixed an issue where unlimited oil, unlimited ore is not working properly.</value>
+    <value>Corregido un problema en el que el petróleo ilimitado, los minerales ilimitados no funcionan correctamente.</value>
   </data>
   <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
     <value>Optimize unlock info view performance issues.</value>
@@ -650,13 +650,19 @@
     <value>Thai localization support</value>
   </data>
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
-    <value>UUI button and separate tool button are now optional.</value>
+    <value>Los botones de UUI y el botón de herramienta separada son ahora opcionales.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
+    <value>Fixed some issues with the control panel.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
-    <value>Updated to support game version 1.17.1</value>
+    <value>Actualizado para soportar la versión 1.17.1 del juego</value>
   </data>
   <data name="UpdateLog_V1_1_UPT1" xml:space="preserve">
-    <value>Updated compatibility check. When three built-in unlimited mods are detected to be enabled, they are automatically disabled to ensure mod compatibility.</value>
+    <value>Comprobación de compatibilidad actualizada. Cuando se detectan tres mods ilimitados integrados, se deshabilitan automáticamente para asegurar la compatibilidad de mods.</value>
   </data>
   <data name="Vanilla" xml:space="preserve">
     <value>Vanilla</value>

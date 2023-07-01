@@ -11,6 +11,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private CustomUIScrollablePanel GeneralContainer { get; set; }
     private CustomUIScrollablePanel ServiceContainer { get; set; }
     private CustomUIScrollablePanel EconomyContainer { get; set; }
+    private static int SelectedIndex { get; set; }
 
     protected override void InitComponents() {
         base.InitComponents();
@@ -23,14 +24,17 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
                 SingletonManager<ToolButtonManager>.Instance.InGameToolButton.IsOn = false;
             }
         };
+        tabContainer.EventSelectedIndexChanged += (_) => SelectedIndex = _;
+        tabContainer.SelectedIndex = SelectedIndex;
     }
+
     string GetAnnualInterestRate() => ModLocalize.AnnualInterestRate + $": {Config.Instance.AnnualInterestRate:P2}";
     CustomUILabel annualInterestRateLable;
     CustomUISlider annualInterestRateSlider;
     private void FillEconomyContainer() {
         EconomyContainer = AddTab(ModLocalize.Economy);
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, ModLocalize.Economy);
-        var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, ModLocalize.RemoveNotEnoughMoney, ModLocalize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.BuildingRefund = _);
+        var itemPanel0 = ControlPanelHelper.AddToggle(Config.Instance.RemoveNotEnoughMoney || Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy, ModLocalize.RemoveNotEnoughMoney, ModLocalize.RemoveNotEnoughMoneyMinor, (_) => Config.Instance.RemoveNotEnoughMoney = _);
         itemPanel0.Child.isEnabled = !Config.Instance.UnlimitedMoney && !Config.Instance.CashAnarchy;
         ControlPanelHelper.AddField<UIIntValueField, int>(ModLocalize.CityBankruptcyWarningThreshold, ModLocalize.CityBankruptcyWarningThresholdMinor, 80, Config.Instance.CityBankruptcyWarningThreshold, 100, int.MinValue / 100, 0, (_) => Config.Instance.CityBankruptcyWarningThreshold = _);
         ControlPanelHelper.AddToggle(Config.Instance.ChargeInterest, ModLocalize.ChargeInterest, null, (_) => {
@@ -138,7 +142,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
 
         ControlPanelHelper.AddGroup(ServiceContainer, PorpertyPanelWidth, ModLocalize.FireControl);
         ControlPanelHelper.AddButton(ModLocalize.PutOutBurningBuildings, null, ModLocalize.PutOut, null, 24, () => {
-            if (SingletonMod<Mod>.Instance.LevelLoaded) {
+            if (SingletonMod<Mod>.Instance.IsLevelLoaded) {
                 SingletonManager<Manager>.Instance.PutOutBuringBuildingsButtonClicked();
             }
         });

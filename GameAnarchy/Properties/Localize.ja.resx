@@ -136,10 +136,10 @@
     <value>金額</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
-    <value>Annual interest rate</value>
+    <value>年間の利率</value>
   </data>
   <data name="AnnualInterestRateMinor" xml:space="preserve">
-    <value>The default value is 3%</value>
+    <value>デフォルト値は3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
     <value>建物の返金</value>
@@ -157,7 +157,7 @@
     <value>Game Anarchyは、該当MODの全機能が既にあります。 正常な動作を保証するため、これらのMODは強制的に無効化します。</value>
   </data>
   <data name="ChargeInterest" xml:space="preserve">
-    <value>Charge interest on negative balances</value>
+    <value>マイナス残高に利息を課税</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
     <value>都市破綻の警告閾値</value>
@@ -635,7 +635,7 @@
     <value>Treasure Huntアップデートで追加された建物の無制限の配置を追加</value>
   </data>
   <data name="UpdateLog_V1_1ADD3" xml:space="preserve">
-    <value>Integrated [You Can Build It] mod functions.</value>
+    <value>[You Can Build It] MODの機能を統合</value>
   </data>
   <data name="UpdateLog_V1_1FIX0" xml:space="preserve">
     <value>公共交通のアンロックが完全に解除されない問題を修正</value>
@@ -647,10 +647,16 @@
     <value>情報ビューのアンロックでパフォーマンスの問題を最適化</value>
   </data>
   <data name="UpdateLog_V1_1TRA" xml:space="preserve">
-    <value>Thai localization support</value>
+    <value>タイ語の翻訳を追加</value>
   </data>
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
     <value>UUIボタンと個別のツールボタンをオプション化</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
+    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+  </data>
+  <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
+    <value>Fixed some issues with the control panel.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>ゲームバージョン 1.17.1をサポートするように更新</value>

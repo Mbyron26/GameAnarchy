@@ -49,24 +49,17 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         AddOptimizeOptionsProperty();
         AddUnlockOptionsProperty();
         AddResourceOptionsProperty();
-        AddToolButtonOptions();
+        AddToolButtonOptions<ToolButtonManager>();
         AddOtherFunctionProperty();
     }
 
-    protected override void AddToolButtonOptions() {
-        if (SingletonManager<ToolButtonManager>.Instance.UUISupport) {
-            base.AddToolButtonOptions();
-        }
-    }
     protected override void ToolButtonDropDownCallBack(int value) {
         base.ToolButtonDropDownCallBack(value);
-        if (!SingletonMod<Mod>.Instance.LevelLoaded) {
+        if (!SingletonMod<Mod>.Instance.IsLevelLoaded) {
             return;
         }
-        if (SingletonManager<ToolButtonManager>.Instance.UUISupport) {
-            SingletonManager<ToolButtonManager>.Instance.Disable();
-            SingletonManager<ToolButtonManager>.Instance.Enable();
-        }
+        SingletonTool<ToolButtonManager>.Instance.Disable();
+        SingletonTool<ToolButtonManager>.Instance.Enable();
     }
 
     protected override void FillHotkeyContainer() {
@@ -107,19 +100,19 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
                 }
             }
         }).Child;
+
         CustomUnlockPanels.Add(OptionPanelHelper.AddDropDown(ModLocalize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, (_) => Config.Instance.MilestoneLevel = _, new RectOffset(20, 0, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockInfoViews, null, Config.Instance.UnlockInfoViews, _ => Config.Instance.UnlockInfoViews = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockAllRoads, null, Config.Instance.UnlockAllRoads, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockPublicTransport, null, Config.Instance.UnlockPublicTransport, _ => Config.Instance.UnlockPublicTransport = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockTrainTrack, null, Config.Instance.UnlockTrainTrack, _ => Config.Instance.UnlockTrainTrack = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockMetroTrack, null, Config.Instance.UnlockMetroTrack, _ => Config.Instance.UnlockMetroTrack = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockPolicies, null, Config.Instance.UnlockPolicies, _ => Config.Instance.UnlockPolicies = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockUniqueBuilding, ModLocalize.UnlockUniqueBuildingMinor, Config.Instance.UnlockUniqueBuildings, _ => Config.Instance.UnlockUniqueBuildings = _, new RectOffset(30, 10, 10, 10), false));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddCheckBox(ModLocalize.UnlockLandscaping, null, Config.Instance.UnlockLandscaping, _ => Config.Instance.UnlockLandscaping = _, new RectOffset(30, 10, 10, 10), false));
+
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockInfoViews, ModLocalize.UnlockInfoViews, null, _ => Config.Instance.UnlockInfoViews = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockAllRoads, ModLocalize.UnlockAllRoads, null, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPublicTransport, ModLocalize.UnlockPublicTransport, null, _ => Config.Instance.UnlockPublicTransport = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockTrainTrack, ModLocalize.UnlockTrainTrack, null, _ => Config.Instance.UnlockTrainTrack = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockMetroTrack, ModLocalize.UnlockMetroTrack, null, _ => Config.Instance.UnlockMetroTrack = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPolicies, ModLocalize.UnlockPolicies, null, _ => Config.Instance.UnlockPolicies = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockUniqueBuildings, ModLocalize.UnlockUniqueBuilding, ModLocalize.UnlockUniqueBuildingMinor, _ => Config.Instance.UnlockUniqueBuildings = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockLandscaping, ModLocalize.UnlockLandscaping, null, _ => Config.Instance.UnlockLandscaping = _, new RectOffset(20, 10, 0, 0)));
         if (CustomUnlockPanels.Count > 0)
-            foreach (var item in CustomUnlockPanels) {
-                item.isEnabled = CustomUnlock.IsOn;
-            }
+            CustomUnlockPanels.ForEach(_ => _.isEnabled = CustomUnlock.IsOn);
         OptionPanelHelper.Reset();
     }
 
@@ -158,5 +151,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         });
         OptionPanelHelper.Reset();
     }
+
+    protected override void OnModLocaleChanged() => ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged();
 
 }

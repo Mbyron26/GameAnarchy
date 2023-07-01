@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.1.0.1811</Version>
+		<Version>1.1.1.0109</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
-		<Version>1.0.1</Version>
+		<Version>1.1.1</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Debug|AnyCPU'">
@@ -120,25 +120,6 @@
 		<PackageReference Include="UnifiedUILib" Version="2.2.12" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Reference Include="Assembly-CSharp">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="ColossalManaged">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\ColossalManaged.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="ICities">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\ICities.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="UnityEngine">
-			<HintPath>C:\Users\SYS1\Desktop\Assembly\UnityEngine.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-	</ItemGroup>
-
 	<Target Name="PdbToMdb" AfterTargets="Build">
 		<PropertyGroup>
 			<LocalDir>$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Addons\Mods\$(MSBuildProjectName)</LocalDir>
@@ -162,6 +143,25 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(LocalDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
 	</Target>
+
+	<ItemGroup>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>C:\Users\SYS\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="ColossalManaged">
+	    <HintPath>C:\Users\SYS\Desktop\Assembly\ColossalManaged.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="ICities">
+	    <HintPath>C:\Users\SYS\Desktop\Assembly\ICities.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>C:\Users\SYS\Desktop\Assembly\UnityEngine.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Localize.cs">
