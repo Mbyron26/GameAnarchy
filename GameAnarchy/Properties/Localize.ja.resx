@@ -653,10 +653,10 @@
     <value>UUIボタンと個別のツールボタンをオプション化</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+    <value>資金不足の制限を解除する機能が有効にならない問題を修正</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
-    <value>Fixed some issues with the control panel.</value>
+    <value>コントロールパネルに関する問題を修正</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>ゲームバージョン 1.17.1をサポートするように更新</value>

@@ -1,4 +1,8 @@
 ﻿
+V1.1.2
+[*]Fixed an issue where achievements didn't work properly.
+[*]Updated localization.
+
 V1.1.1
 [*]Fixed an issue where the remove not enough money limitation function could not take effect.
 [*]Fixed some issues with the control panel.

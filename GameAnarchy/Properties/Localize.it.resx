@@ -653,10 +653,10 @@
     <value>Il pulsante UUI e il pulsante dello strumento separato sono ora opzionali.</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+    <value>Corretto un problema per cui la funzione di limitazione della rimozione di denaro non sufficiente non poteva avere effetto.</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
-    <value>Fixed some issues with the control panel.</value>
+    <value>Corretti alcuni problemi con il pannello di controllo.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Aggiornato per supportare la versione del gioco 1.17.1</value>
