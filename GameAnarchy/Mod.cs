@@ -101,6 +101,10 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 1, 2), new(2023, 7, 3), new List<LogString> {
+            new(LogFlag.Fixed, "Fixed an issue where achievements didn't work properly."),
+            new(LogFlag.Updated, "Updated localization."),
+        }),
         new ModChangeLog(new Version(1, 1, 1), new(2023, 7, 1), new List<LogString> {
             new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX0),
             new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX1),
