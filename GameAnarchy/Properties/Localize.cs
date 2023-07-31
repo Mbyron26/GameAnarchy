@@ -611,6 +611,16 @@ namespace GameAnarchy
 		public static string UnlockAllRoads => LocaleManager.GetString("UnlockAllRoads", Culture);
 
 		/// <summary>
+		/// Unlock basic roads
+		/// </summary>
+		public static string UnlockBasicRoads => LocaleManager.GetString("UnlockBasicRoads", Culture);
+
+		/// <summary>
+		/// Unlock some basic roads, including some multi-lane roads
+		/// </summary>
+		public static string UnlockBasicRoadsMinor => LocaleManager.GetString("UnlockBasicRoadsMinor", Culture);
+
+		/// <summary>
 		/// Unlock info views panel
 		/// </summary>
 		public static string UnlockInfoViews => LocaleManager.GetString("UnlockInfoViews", Culture);
@@ -894,6 +904,26 @@ namespace GameAnarchy
 		/// Fixed some issues with the control panel.
 		/// </summary>
 		public static string UpdateLog_V1_1_1FIX1 => LocaleManager.GetString("UpdateLog_V1_1_1FIX1", Culture);
+
+		/// <summary>
+		/// Fixed an issue where achievements didn't work properly.
+		/// </summary>
+		public static string UpdateLog_V1_1_2FIX => LocaleManager.GetString("UpdateLog_V1_1_2FIX", Culture);
+
+		/// <summary>
+		/// Updated localization.
+		/// </summary>
+		public static string UpdateLog_V1_1_2UPT => LocaleManager.GetString("UpdateLog_V1_1_2UPT", Culture);
+
+		/// <summary>
+		/// Added custom unlock - Basic Road.
+		/// </summary>
+		public static string UpdateLog_V1_1_3ADD => LocaleManager.GetString("UpdateLog_V1_1_3ADD", Culture);
+
+		/// <summary>
+		/// Optimize some functions.
+		/// </summary>
+		public static string UpdateLog_V1_1_3OPT => LocaleManager.GetString("UpdateLog_V1_1_3OPT", Culture);
 
 		/// <summary>
 		/// Updated to support game version 1.17.1

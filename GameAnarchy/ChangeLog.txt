@@ -1,4 +1,8 @@
 ﻿
+V1.1.3
+[*]Added custom unlock - Basic Road.
+[*]Optimize some functions.
+
 V1.1.2
 [*]Fixed an issue where achievements didn't work properly.
 [*]Updated localization.

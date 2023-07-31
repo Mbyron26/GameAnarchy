@@ -12,6 +12,7 @@ public class Config : SingletonConfig<Config> {
     public bool UnlockInfoViews { get; set; } = false;
     public bool EnabledUnlockAll { get; set; } = true;
     public bool CustomUnlock { get; set; } = false;
+    public bool UnlockBasicRoads { get; set; } = false;
     public bool UnlockAllRoads { get; set; } = false;
     public bool UnlockTrainTrack { get; set; } = false;
     public bool UnlockMetroTrack { get; set; } = false;

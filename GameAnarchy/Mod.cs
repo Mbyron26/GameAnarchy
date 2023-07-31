@@ -29,7 +29,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
         SingletonManager<Manager>.Instance.InitBuildinModChecker();
         ExternalLogger.OutputPluginsList();
     }
-    
+
     protected override void SettingsUI(UIHelperBase helper) {
         OptionPanelManager<Mod, OptionPanel>.SettingsUI(helper);
         LocaleManager.eventLocaleChanged += ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged;
@@ -101,9 +101,13 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 1, 3), new(2023, 7, 31), new List<LogString> {
+            new(LogFlag.Added, Localize.UpdateLog_V1_1_3ADD),
+            new(LogFlag.Optimized, Localize.UpdateLog_V1_1_3OPT),
+        }),
         new ModChangeLog(new Version(1, 1, 2), new(2023, 7, 3), new List<LogString> {
-            new(LogFlag.Fixed, "Fixed an issue where achievements didn't work properly."),
-            new(LogFlag.Updated, "Updated localization."),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1_2FIX),
+            new(LogFlag.Updated, Localize.UpdateLog_V1_1_2UPT),
         }),
         new ModChangeLog(new Version(1, 1, 1), new(2023, 7, 1), new List<LogString> {
             new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX0),

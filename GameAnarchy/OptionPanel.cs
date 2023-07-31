@@ -102,7 +102,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         }).Child;
 
         CustomUnlockPanels.Add(OptionPanelHelper.AddDropDown(ModLocalize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, (_) => Config.Instance.MilestoneLevel = _, new RectOffset(20, 0, 0, 0)));
-
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockBasicRoads, ModLocalize.UnlockBasicRoads, ModLocalize.UnlockBasicRoadsMinor, _ => Config.Instance.UnlockBasicRoads = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
         CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockInfoViews, ModLocalize.UnlockInfoViews, null, _ => Config.Instance.UnlockInfoViews = _, new RectOffset(20, 10, 0, 0)));
         CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockAllRoads, ModLocalize.UnlockAllRoads, null, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(20, 10, 0, 0)));
         CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPublicTransport, ModLocalize.UnlockPublicTransport, null, _ => Config.Instance.UnlockPublicTransport = _, new RectOffset(20, 10, 0, 0)));
