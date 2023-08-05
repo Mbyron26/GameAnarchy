@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.1.2.7311</Version>
+		<Version>1.1.3.8516</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
-		<Version>1.1.2</Version>
+		<Version>1.1.3</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Debug|AnyCPU'">
@@ -116,7 +116,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+		<PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
 		<PackageReference Include="UnifiedUILib" Version="2.2.12" />
 	</ItemGroup>
 
@@ -146,19 +146,19 @@
 
 	<ItemGroup>
 	  <Reference Include="Assembly-CSharp">
-	    <HintPath>C:\Users\SYS\Desktop\Assembly\Assembly-CSharp.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="ColossalManaged">
-	    <HintPath>C:\Users\SYS\Desktop\Assembly\ColossalManaged.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="ICities">
-	    <HintPath>C:\Users\SYS\Desktop\Assembly\ICities.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="UnityEngine">
-	    <HintPath>C:\Users\SYS\Desktop\Assembly\UnityEngine.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	</ItemGroup>

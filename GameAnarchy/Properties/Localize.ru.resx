@@ -457,13 +457,13 @@
     <value>Game Anarchy also can adjuster consumption rate, check Game Anarchy control panel in game.</value>
   </data>
   <data name="UnlimitedParkAI" xml:space="preserve">
-    <value>Park</value>
+    <value>Парк</value>
   </data>
   <data name="UnlimitedParkAIMinor" xml:space="preserve">
     <value>Plaza of the Future</value>
   </data>
   <data name="UnlimitedSpaceElevator" xml:space="preserve">
-    <value>Space elevator</value>
+    <value>Космический лифт</value>
   </data>
   <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
     <value>Plaza of Transference</value>
@@ -479,6 +479,12 @@
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Разблокировать все дороги</value>
+  </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Unlock info views panel</value>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>Вчера в {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]Новая панель управления, используйте горячую клавишу Ctrl+Shift+G или используйте UUI панель для вызова новой панели управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Добавление уникальных построек без ограничений теперь разделено и интегрировано в панель управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Добавлена опция управления распределением огня.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]Опция отключения огня теперь разделена на несколько опций, позволяющих контролировать огонь в постройках разного типа.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Добавлена локализация для турецкого языка.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Исправлено некорректное положение интерфейса.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Обновлен фреймворк, улучшена производительность.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Обновлен внешний вид компонентов Панели Настроек.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Добавлена расширенная опция для сброса конфигурации мода.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Исправлена проблема, при которой панель управления не соответствовала языку.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Исправлена проблема, при которой значение денег в панели настроек не могло быть изменено.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Оптимизирована скорость появления панели управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Оптимизирован внешний вид кнопки в панели управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Обновлена проверка совместимости.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Добавлено отображения даты обновления модов для категории панели настроек.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Добавлена опция возврата денег за сегменты и постройки, включая снятие ограничения на время и изменение множителя, включенного в панель управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>В панель настроек добавлена кнопка вызова панели управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Добавлена возможность изменение цены перемещения здания, включенного в панель управления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Добавлена опция, убирающая предупреждение о нехватке денег.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Исправлена проблема, при которой пожар возобновлялся после удаления.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Оптимизирована опция горизонтального смещения в панели настроек, теперь значение вступает в силу после изменения.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Оптимизирована логика начальных денег, теперь это значение которое вы устанавливаете при начале новой игры.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Добавлена локализация для словацкого языка.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Обновлен интерфейс.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Обновлен фреймворк.</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>Добавлено неограниченное размещение фестивальных площадок.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Исправлена проблема, при которой значения в панели управлений не сохранялись автоматически.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>Исправлена проблема, при которой обычные здания могли быть размещены только один раз.</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>

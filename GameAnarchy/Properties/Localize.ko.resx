@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>모든 도로 잠금 해제</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Unlock info views panel</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>어제 {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]새로운 제어판과 이를 사용하기 위한 단축키 Ctrl+Shift+G 또는 UUI 패널 버튼 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]제한 없는 고유 건물 배치 기능이 세분화되어 제어판에 통합되었습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]화재 범위 조절 기능 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]화재 위험 제거 기능이 세분화되어 제어판에 통합되었습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]터키어 지원 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]비정상적인 UI 컴포넌트 위치 수정.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]프레임워크 업데이트 및 성능 개선.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]옵션 패널 UI 컴포넌트 개선.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]모드 재설정에 대한 고급 옵션 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]제어판이 언어 설정을 따르지 않는 문제 수정.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]옵션 패널에서 자금 옵션을 변경할 수 없는 문제를 해결했습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]최적화된 제어판 호출 속도.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]최적화된 제어판 토글 버튼 UI 스타일.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]호환성 확인 업데이트.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>옵션 패널 기능의 카테고리 표시줄에 show mods 업데이트 날짜 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>제어판에 포함된 건물, 시간 제한 제거, 승수 조정을 포함한 세그먼트 환불 기능 추가.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>옵션 패널에 제어판을 호출하는 입력 버튼 옵션이 추가되었습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>제어판에 포함된 건물 이전 비용 조정 기능이 추가되었습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>돈이 부족하다는 경고 기능을 추가했습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>화재를 제거한 후에도 여전히 화재가 발생하는 문제를 해결했습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>옵션 패널 범주 수평 오프셋 옵션을 최적화했습니다. 이제 조정 후 적용됩니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>시작 머니 설정 로직을 최적화하여 시작 머니가 새로운 게임을 시작할 때 설정한 값이 되도록 합니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>슬로바키아 현지화 추가</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>UI 스타일이 업데이트되었습니다.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>업데이트된 프레임워크.</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>Added unlimited placement of festival area buildings.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Fixed control panel settings sometimes not automatically save.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>Fixed an issue where normal buildings could only be placed once.</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>

@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>ปลดล็อกถนนทั้งหมด</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>ปลดล็อกแผงมุมมองข้อมูล</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>เมื่อวานตอน {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]แผงควบคุมใหม่ ใช้ปุ่มลัด Ctrl+Shift+G เป็นค่าเริ่มต้น หรือจะกดปุ่มบนแผง UUI เพื่อเรียกใช้แผงควบคุมใหม่ก็ได้</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]แยกเอาฟีเจอร์การวางสิ่งปลูกสร้างไม่ซ้ำใครได้แบบไม่จำกัด เอาไปไว้บนแผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]เพิ่ม ฟังก์ชั่นการควบคุมการลุกลามของไฟ</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]ลบ ฟังก์ชันอัคคีภัย ตอนนี้ถูกแบ่งออกเป็นหลายตัวเลือก สามารถควบคุมไฟได้ตามประเภทต่าง ๆ ของอาคาร</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]เพิ่ม ภาษาตุรกี</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]แก้ไข ตำแหน่งส่วนประกอบของ UI ที่ผิดปกติ</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]อัปเดต เฟรมเวิร์ก ปรับปรุงประสิทธิภาพ</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]อัปเดต ส่วนประกอบของ UI บนแผงตัวเลือก</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]เพิ่ม ตัวเลือกขั้นสูงสำหรับการรีเซ็ตการกำหนดค่าของม็อด</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]แก้ไข ปัญหาที่แผงควบคุมไม่เป็นไปตามการสลับภาษา</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]แก้ไข ปัญหาที่ตัวเลือกเงินในแผงตัวเลือกไม่สามารถเปลี่ยนแปลงได้</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]เพิ่มประสิทธิภาพ ความเร็วในการเรียกแผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]เพิ่มประสิทธิภาพ รูปแบบ UI ของปุ่มสลับบนแผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]อัปเดตการตรวจสอบความเข้ากันได้</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>เพิ่ม แสดงวันที่ที่ม็อดอัปเดต ให้กับแถบหมวดหมู่ของ ฟังก์ชันแผงตัวเลือก</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>เพิ่ม สามารถขอเงินคืนได้จากค่าก่อสร้างอาคาร และถนน โดยสามารถยกเลิกข้อจำกัดของเวลาในการขอคืนเงิน รวมทั้งการปรับตัวคูณจำนวนเงินที่จะขอคืนได้ที่แผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>แผงตัวเลือก เพิ่มตัวเลือกปุ่มรายการ เพื่อเรียกใช้แผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>เพิ่ม ความสามารถในการปรับค่าใช้จ่าย ในการย้ายอาคาร โดยถูกวางไว้ในแผงควบคุม</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>เพิ่ม ฟังก์ชันลบการแจ้งเตือน เงินไม่พอสร้าง!</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>แก้ไข ปัญหาที่สิ่งก่อสร้างยังคงติดไฟหลังจากนําไฟออก</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>เพิ่มประสิทธิภาพหมวดหมู่แผงตัวเลือก ปรับค่าการชดเชยแนวนอนให้เหมาะสม ซึ่งตอนนี้จะมีผลเมื่อมีการปรับแต่ง</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>ปรับกระบวนการในการตั้งค่าเงินเริ่มต้นให้เหมาะสม เพื่อให้เงินเริ่มต้นเป็นค่าที่คุณตั้งไว้เมื่อคุณเริ่มเกมใหม่</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>เพิ่ม ภาษาสโลวะเกีย</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>อัปเดตรูปแบบ UI</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>อัปเดตเฟรมเวิร์ก</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>เพิ่ม การวางพื้นที่จัดงานเทศกาลดนตรีได้แบบไม่จำกัด</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>แก้ไข แผงควบคุมการตั้งค่าที่ไม่สามารถบันทึกได้อัตโนมัติ</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>แก้ไข ปัญหาการวางสิ่งก่อสร้างปกติทั่วไปได้เพียงครั้งเดียว</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>อัปเดตเพื่อรองรับเกมเวอร์ชัน 1.17.1</value>

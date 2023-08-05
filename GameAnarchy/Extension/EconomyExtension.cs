@@ -4,6 +4,13 @@ using ICities;
 using MbyronModsCommon;
 
 public class EconomyExtension : EconomyExtensionBase {
+    public override void OnCreated(IEconomy economy) {
+        base.OnCreated(economy);
+        InternalLogger.Log("Call economy extension OnCreated");
+    }
+
+    public override void OnReleased() =>InternalLogger.Log("Call economy extension OnReleased");
+
     public override long OnUpdateMoneyAmount(long internalMoneyAmount) {
         if (Singleton<EconomyManager>.exists && Singleton<EconomyManager>.instance.m_properties is not null)
             Singleton<EconomyManager>.instance.m_properties.m_bailoutLimit = Config.Instance.CityBankruptcyWarningThreshold * 100;

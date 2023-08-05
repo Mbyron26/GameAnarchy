@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>全ての道路をアンロック</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>基本的な道路をアンロック</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>多車線の道路を含めて、基本的な道路をアンロック</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>情報ビューパネルをアンロック</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>昨日 {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]新しいコントロールパネルを開くには、 デフォルトのホットキー Ctrl+Shift+Gで開くかUUI MODのボタンで開く</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]ユニーク施設を無制限に配置する機能を分割して、コントロールパネルに統合</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]火災延焼の制御機能を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]複数のオプションに分かれた火災の機能を削除して、異なる建物タイプで火災の制御が可能</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]トルコ語の翻訳を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]UIコンポーネントが不適切な配置の問題を修正</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]フレームワークの更新とパフォーマンスの向上</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]オプションパネルのUIコンポーネントを更新</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Modの設定をリセットする拡張オプションを追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]コントロールパネルが言語の切り替えに追従しない問題を修正</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]オプションパネルで資金のオプションが変更できない問題を修正</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]コントロールパネルの応答速度を最適化</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]コントロールパネルの切り替えボタンのスタイルを最適化</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]互換性のチェック機能を更新</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>オプションパネルのカテゴリーバーに更新日時を表示する機能を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>コントロールパネルに建物やセグメントの返金機能を追加して、時間制限の解除・返金の係数調整が可能</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>オプションパネルからコントロールパネルを起動するためのエントリーボタンのオプションを追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>コントロールパネルに建物の移転費用を調整する機能を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>資金不足の警告機能を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>火災を除去した後でも発火する問題を修正</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>オプションパネルのカテゴリを区切る水平オフセットのオプションを最適化して調整後に即反映</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>ゲーム開始時の資金設定のロジックを最適化して、設定した資金で新規ゲームを開始するように改善</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>スロバキア語の翻訳を追加</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>UIのスタイルを更新</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>フレームワークを更新</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>フェスティバルエリアの建物を無制限の配置に追加</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>コントロールパネルの設定が自動的に保存されない問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>通常の建物が一回しか置けない問題を修正</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>コントロールパネルに関する問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>実績の有効化が正しく動作しない問題を修正</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>翻訳情報を更新</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>カスタムアンロックを追加 - 基本的な道路</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>一部の機能を最適化</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>ゲームバージョン 1.17.1をサポートするように更新</value>

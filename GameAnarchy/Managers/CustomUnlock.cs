@@ -75,6 +75,7 @@ public partial class Manager {
         if (!Config.Instance.CustomUnlock)
             return;
         UnlockMilestone(milestones);
+        UnlockBasicRoad(milestones);
         UnlockAllRoads();
         UnlockTrainTrack(milestones);
         UnlockMetroTrack(milestones);
@@ -85,9 +86,23 @@ public partial class Manager {
         UnlockInfoViews();
     }
 
-    public void UnlockTrainTrack(IMilestones milestones) =>  milestones.UnlockMilestone("Train Track Requirements");
+    public void UnlockBasicRoad(IMilestones milestones) {
+        if (!Config.Instance.UnlockBasicRoads)
+            return;
+        milestones.UnlockMilestone("Basic Road Created");
+    }
 
-    public void UnlockMetroTrack(IMilestones milestones) => milestones.UnlockMilestone("Metro Track Requirements");
+    public void UnlockTrainTrack(IMilestones milestones) {
+        if (!Config.Instance.UnlockTrainTrack)
+            return;
+        milestones.UnlockMilestone("Train Track Requirements");
+    }
+
+    public void UnlockMetroTrack(IMilestones milestones) {
+        if (!Config.Instance.UnlockMetroTrack)
+            return;
+        milestones.UnlockMilestone("Metro Track Requirements");
+    }
 
     public void UnlockInfoViews() {
         if (!Config.Instance.UnlockInfoViews) {
