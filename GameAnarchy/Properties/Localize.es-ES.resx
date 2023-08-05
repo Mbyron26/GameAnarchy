@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Desbloquear todas las carreteras</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Desbloquear el panel de vistas de información</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>Ayer a las {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]Nuevo panel de control, utilice la tecla de acceso directo predeterminada Ctrl+Shift+G o utilice el botón en UUI para mostrar el panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Las opciones para colocar edificios únicos sin límites, ahora están divididas e integradas en el panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Función de control de dispersión de incendios.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]La función de eliminar incendios, está dividida en múltiples opciones. Se puede controlar los incendios por tipo de edificios.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Idioma turco añadido.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Ubicación de interfaz de usuario.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Framework actualizado, mejoras de rendimiento.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Interfaz de usuario del panel de configuración.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Opción avanzada para restablecer la configuración del mod.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Arreglado un fallo donde el panel de control no seguía el cambio de idioma.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Arreglado un fallo donde la opción de dinero en el panel de opciones no se podía cambiar.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimizada la velocidad de invocación del panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimizado el estilo de la interfaz del botón para alternar el panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Actualizada la comprobación de compatibilidad.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Agregado, mostrar fecha actualizada de mods para la barra de categorías de la función del panel de opciones.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Agregado, funciones de reembolso para edificios y segmentos. Incluyendo la opción de eliminar la limitación, ajuste de factor de multiplicación en el panel de control</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Agregado una opción para mostrar el panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Agregada la habilidad de ajustar el costo de reubicación de edificios. </value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Agregada la función de remover la advertencia de dinero insuficiente.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Arreglado problema que aún habia incendios después de deshabilitar la función.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimizado el desplazamiento de las categorías del panel de control.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimizado la lógica de dinero inicial.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Idioma eslovaco añadido.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Interfaz de usuario actualizada.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Marco actualizado.</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>Se agregó la capacidad de situar áreas de festivales sin límites.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Arreglado que las configuraciones del panel de control a veces no se guardaran automáticamente.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>Se arregló un problema donde los edificios normales solo se podían colocar una vez.</value>
@@ -644,19 +578,34 @@
     <value>Corregido un problema en el que el petróleo ilimitado, los minerales ilimitados no funcionan correctamente.</value>
   </data>
   <data name="UpdateLog_V1_1OPT0" xml:space="preserve">
-    <value>Optimize unlock info view performance issues.</value>
+    <value>Optimizados los problemas de rendimiento de la vista de información de desbloqueo.</value>
   </data>
   <data name="UpdateLog_V1_1TRA" xml:space="preserve">
-    <value>Thai localization support</value>
+    <value>Soporte de idioma tailandés</value>
   </data>
   <data name="UpdateLog_V1_1UPT2" xml:space="preserve">
     <value>Los botones de UUI y el botón de herramienta separada son ahora opcionales.</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX0" xml:space="preserve">
-    <value>Fixed an issue where the remove not enough money limitation function could not take effect.</value>
+    <value>Se arregló un problema por el que la función de limitación de eliminar dinero insuficiente no podía surtir efecto.</value>
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
-    <value>Fixed some issues with the control panel.</value>
+    <value>Se arreglaron algunos problemas con el panel de control.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Actualizado para soportar la versión 1.17.1 del juego</value>

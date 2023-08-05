@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>解鎖所有道路</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>解鎖資訊檢視面板</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>昨天 {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]新控制面板，使用默認熱鍵Ctrl+Shift+G或使用UUI面板調用新控制面板。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[添加]放置沒有限制功能的獨特建築物現在拆分並集成到控制面板中。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]增加火勢蔓延控制功能。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[新增]移除火災功能現在分為多個選項，可以控制不同建築類型的火災。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[添加]添加了土耳其語本地化。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[修復]修復異常的UI組件位置。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]更新框架，性能提升。</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]更新了選項面板 UI 組件。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]添加了重置模組配置的高級選項。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[修復]修復了控制面板不跟隨語言切換的問題。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[修復]修復了無法更改選項面板中金錢選項的問題。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]優化控制面板調用速度。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]優化控制面板切換按鈕UI樣式。</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]更新了兼容性檢查。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>新增了在選項面板的模組名稱列表旁，顯示模組更新日期的功能。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>新增了剷除建築/網路段落退款的相關調整功能，包括：解除剷除物品時的退款期限限制、調整退款數額乘數。您可以在 GA 的控制面板中找到這些選項。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>在選項面板中，新增了一個打開控制面板的入口。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>增加了調整搬遷建築物費用的功能，控制項僅在控制面板中可用。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>新增了移除金錢不足警告的功能。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>修復了移除火災後仍然發生火災的問題。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>最佳化了選項面板類別欄水平偏移功能，此選項在調整後立即生效。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>最佳化了開始金錢設定邏輯，以便進入遊戲後即在開始新遊戲時設定的值。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>新增了斯洛伐克語翻譯。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>更新了使用者介面的風格。</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>更新了框架。</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>新增了無限制擺放節日區域建築的功能。</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>修復了控制面板設定有時不會自動保存的問題。</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>修復了正常建築只能放置一次的問題。</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>更新支援遊戲版本 1.17.1</value>

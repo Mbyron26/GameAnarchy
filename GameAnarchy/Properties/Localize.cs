@@ -706,131 +706,6 @@ namespace GameAnarchy
 		public static string Updated_YesterdayAt => LocaleManager.GetString("Updated_YesterdayAt", Culture);
 
 		/// <summary>
-		/// [ADD]New control panel, use default hotkey Ctrl+Shift+G or use UUI panel to invoke new control panel
-		/// </summary>
-		public static string UpdateLog_V0_9_7ADD1 => LocaleManager.GetString("UpdateLog_V0_9_7ADD1", Culture);
-
-		/// <summary>
-		/// [ADD]Place unique buildings without limit features now split and integrated into control panel.
-		/// </summary>
-		public static string UpdateLog_V0_9_7ADD2 => LocaleManager.GetString("UpdateLog_V0_9_7ADD2", Culture);
-
-		/// <summary>
-		/// [ADD]Added fire spread control function.
-		/// </summary>
-		public static string UpdateLog_V0_9_7ADD3 => LocaleManager.GetString("UpdateLog_V0_9_7ADD3", Culture);
-
-		/// <summary>
-		/// [ADD]Remove fire function now split into multiple options, can control fire of different building ty
-		/// </summary>
-		public static string UpdateLog_V0_9_7ADD4 => LocaleManager.GetString("UpdateLog_V0_9_7ADD4", Culture);
-
-		/// <summary>
-		/// [ADD]Added Turkish localization.
-		/// </summary>
-		public static string UpdateLog_V0_9_7ADD5 => LocaleManager.GetString("UpdateLog_V0_9_7ADD5", Culture);
-
-		/// <summary>
-		/// [FIX]Fixed abnormal UI component location.
-		/// </summary>
-		public static string UpdateLog_V0_9_7FIX => LocaleManager.GetString("UpdateLog_V0_9_7FIX", Culture);
-
-		/// <summary>
-		/// [UPT]Updated framework, performance improvement.
-		/// </summary>
-		public static string UpdateLog_V0_9_7UPT1 => LocaleManager.GetString("UpdateLog_V0_9_7UPT1", Culture);
-
-		/// <summary>
-		/// [UPT]Updated Option Panel UI components.
-		/// </summary>
-		public static string UpdateLog_V0_9_7UPT2 => LocaleManager.GetString("UpdateLog_V0_9_7UPT2", Culture);
-
-		/// <summary>
-		/// [ADD]Added advanced option for reset mod config.
-		/// </summary>
-		public static string UpdateLog_V0_9_8ADD => LocaleManager.GetString("UpdateLog_V0_9_8ADD", Culture);
-
-		/// <summary>
-		/// [FIX]Fixed an issue where control panel did not follow the language toggle.
-		/// </summary>
-		public static string UpdateLog_V0_9_8FIX1 => LocaleManager.GetString("UpdateLog_V0_9_8FIX1", Culture);
-
-		/// <summary>
-		/// [FIX]Fixed an issue where the money option in options panel could not be changed.
-		/// </summary>
-		public static string UpdateLog_V0_9_8FIX2 => LocaleManager.GetString("UpdateLog_V0_9_8FIX2", Culture);
-
-		/// <summary>
-		/// [OPT]Optimized control panel invoke speed.
-		/// </summary>
-		public static string UpdateLog_V0_9_8OPT1 => LocaleManager.GetString("UpdateLog_V0_9_8OPT1", Culture);
-
-		/// <summary>
-		/// [OPT]Optimized control panel toggle button UI style.
-		/// </summary>
-		public static string UpdateLog_V0_9_8OPT2 => LocaleManager.GetString("UpdateLog_V0_9_8OPT2", Culture);
-
-		/// <summary>
-		/// [UPT]Updated compatibility check.
-		/// </summary>
-		public static string UpdateLog_V0_9_8UPT => LocaleManager.GetString("UpdateLog_V0_9_8UPT", Culture);
-
-		/// <summary>
-		/// Added show mods updated date for the category bar of the options panel function.
-		/// </summary>
-		public static string UpdateLog_V0_9_9ADD0 => LocaleManager.GetString("UpdateLog_V0_9_9ADD0", Culture);
-
-		/// <summary>
-		/// Added building, segment refund function, including remove time limitation, multiplier factor adjustm
-		/// </summary>
-		public static string UpdateLog_V0_9_9ADD1 => LocaleManager.GetString("UpdateLog_V0_9_9ADD1", Culture);
-
-		/// <summary>
-		/// Option panel added a entry button option to invoke the control panel.
-		/// </summary>
-		public static string UpdateLog_V0_9_9ADD2 => LocaleManager.GetString("UpdateLog_V0_9_9ADD2", Culture);
-
-		/// <summary>
-		/// Added the ability to adjust the cost of relocate building, included in the control panel.
-		/// </summary>
-		public static string UpdateLog_V0_9_9ADD3 => LocaleManager.GetString("UpdateLog_V0_9_9ADD3", Culture);
-
-		/// <summary>
-		/// Added Remove not enough money warning function.
-		/// </summary>
-		public static string UpdateLog_V0_9_9ADD4 => LocaleManager.GetString("UpdateLog_V0_9_9ADD4", Culture);
-
-		/// <summary>
-		/// Fixed an issue where still catch fire after remove fires.
-		/// </summary>
-		public static string UpdateLog_V0_9_9FIX0 => LocaleManager.GetString("UpdateLog_V0_9_9FIX0", Culture);
-
-		/// <summary>
-		/// Optimized the options panel categories horizontal offset option, which now takes effect after adjust
-		/// </summary>
-		public static string UpdateLog_V0_9_9OPT0 => LocaleManager.GetString("UpdateLog_V0_9_9OPT0", Culture);
-
-		/// <summary>
-		/// Optimized the start money setting logic so that the start money is the value you set when you start 
-		/// </summary>
-		public static string UpdateLog_V0_9_9OPT1 => LocaleManager.GetString("UpdateLog_V0_9_9OPT1", Culture);
-
-		/// <summary>
-		/// Added Slovak localization.
-		/// </summary>
-		public static string UpdateLog_V0_9_9TRAN => LocaleManager.GetString("UpdateLog_V0_9_9TRAN", Culture);
-
-		/// <summary>
-		/// Updated UI style.
-		/// </summary>
-		public static string UpdateLog_V0_9_9UPT => LocaleManager.GetString("UpdateLog_V0_9_9UPT", Culture);
-
-		/// <summary>
-		/// Updated framework.
-		/// </summary>
-		public static string UpdateLog_V0_9_9UPT1 => LocaleManager.GetString("UpdateLog_V0_9_9UPT1", Culture);
-
-		/// <summary>
 		/// Added unlimited placement of festival area buildings.
 		/// </summary>
 		public static string UpdateLog_V1_0_0ADD0 => LocaleManager.GetString("UpdateLog_V1_0_0ADD0", Culture);
@@ -839,6 +714,11 @@ namespace GameAnarchy
 		/// Fixed control panel settings sometimes not automatically save.
 		/// </summary>
 		public static string UpdateLog_V1_0_0FIX0 => LocaleManager.GetString("UpdateLog_V1_0_0FIX0", Culture);
+
+		/// <summary>
+		/// Updated to support game version 1.17.0
+		/// </summary>
+		public static string UpdateLog_V1_0_0UPT => LocaleManager.GetString("UpdateLog_V1_0_0UPT", Culture);
 
 		/// <summary>
 		/// Fixed an issue where normal buildings could only be placed once.
@@ -924,6 +804,11 @@ namespace GameAnarchy
 		/// Optimize some functions.
 		/// </summary>
 		public static string UpdateLog_V1_1_3OPT => LocaleManager.GetString("UpdateLog_V1_1_3OPT", Culture);
+
+		/// <summary>
+		/// Updated NuGet CitiesHarmony.API to 2.2
+		/// </summary>
+		public static string UpdateLog_V1_1_3UPT => LocaleManager.GetString("UpdateLog_V1_1_3UPT", Culture);
 
 		/// <summary>
 		/// Updated to support game version 1.17.1

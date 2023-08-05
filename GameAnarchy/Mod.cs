@@ -101,8 +101,9 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
-        new ModChangeLog(new Version(1, 1, 3), new(2023, 7, 31), new List<LogString> {
+        new ModChangeLog(new Version(1, 1, 3), new(2023, 8, 5), new List<LogString> {
             new(LogFlag.Added, Localize.UpdateLog_V1_1_3ADD),
+            new(LogFlag.Updated, Localize.UpdateLog_V1_1_3UPT),
             new(LogFlag.Optimized, Localize.UpdateLog_V1_1_3OPT),
         }),
         new ModChangeLog(new Version(1, 1, 2), new(2023, 7, 3), new List<LogString> {
@@ -110,8 +111,8 @@ public class Mod : ModPatcherBase<Mod, Config> {
             new(LogFlag.Updated, Localize.UpdateLog_V1_1_2UPT),
         }),
         new ModChangeLog(new Version(1, 1, 1), new(2023, 7, 1), new List<LogString> {
-            new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX0),
-            new(LogFlag.Fixed,Localize.UpdateLog_V1_1_1FIX1),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1_1FIX0),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1_1FIX1),
         }),
         new ModChangeLog(new Version(1, 1, 0), new(2023, 6, 18), new List<LogString> {
             new(LogFlag.Updated, Localize.UpdateLog_V1_1_UPT0),
@@ -127,47 +128,13 @@ public class Mod : ModPatcherBase<Mod, Config> {
             new(LogFlag.Translation, Localize.UpdateLog_V1_1TRA),
         }),
         new ModChangeLog(new Version(1, 0, 1), new(2023, 5, 24), new List<LogString> {
-            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX0),
-            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_1FIX1),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_0_1FIX0),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_0_1FIX1),
         }),
         new ModChangeLog(new Version(1, 0, 0), new(2023, 5, 23), new List<LogString> {
-            new(LogFlag.Updated,"Updated to support game version 1.17.0"),
-            new(LogFlag.Added,Localize.UpdateLog_V1_0_0ADD0),
-            new(LogFlag.Fixed,Localize.UpdateLog_V1_0_0FIX0),
-        }),
-        new ModChangeLog(new Version(0, 9, 9), new(2023, 5, 14), new List<LogString> {
-            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD0),
-            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD1),
-            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD2),
-            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD3),
-            new(LogFlag.Added,Localize.UpdateLog_V0_9_9ADD4),
-            new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT0),
-            new(LogFlag.Optimized,Localize.UpdateLog_V0_9_9OPT1),
-            new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT),
-            new(LogFlag.Updated,Localize.UpdateLog_V0_9_9UPT1),
-            new(LogFlag.Fixed,Localize.UpdateLog_V0_9_9FIX0),
-            new(LogFlag.Translation,Localize.UpdateLog_V0_9_9TRAN),
-        }),
-        new ModChangeLog(new Version(0, 9, 8), new(2023, 3, 22), new List<LogString> {
-            new(LogFlag.Updated,"Updated to support game version 1.16.1"),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_8UPT),
-            new(LogFlag.Updated,Localize.UpdateLog_V0_9_8ADD),
-            new(LogFlag.Optimized, Localize.UpdateLog_V0_9_8OPT1),
-            new(LogFlag.Optimized, Localize.UpdateLog_V0_9_8OPT2),
-            new(LogFlag.Fixed, Localize.UpdateLog_V0_9_8FIX1),
-            new(LogFlag.Fixed, Localize.UpdateLog_V0_9_8FIX2),
-        }),
-        new ModChangeLog(new Version(0, 9, 7), new(2023, 3, 8), new List<LogString> {
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD1),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD3),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD4),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD5),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
-            new(LogFlag.Added, Localize.UpdateLog_V0_9_7ADD2),
-            new(LogFlag.Updated, Localize.UpdateLog_V0_9_7UPT1),
-            new(LogFlag.Updated, Localize.UpdateLog_V0_9_7UPT2),
-            new(LogFlag.Fixed,Localize.UpdateLog_V0_9_7FIX),
+            new(LogFlag.Updated, Localize.UpdateLog_V1_0_0UPT),
+            new(LogFlag.Added, Localize.UpdateLog_V1_0_0ADD0),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_0_0FIX0),
         }),
     };
 

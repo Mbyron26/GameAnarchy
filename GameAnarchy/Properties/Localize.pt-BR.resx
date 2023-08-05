@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMoney" xml:space="preserve">
-    <value>Add money</value>
+    <value>Adicionar dinheiro</value>
   </data>
   <data name="AddMoneyAmount" xml:space="preserve">
-    <value>Add money amount</value>
+    <value>Adicionar uma quantia de dinheiro</value>
   </data>
   <data name="AddMoneyThreshold" xml:space="preserve">
-    <value>Add money threshold</value>
+    <value>Adicionar limite de dinheiro</value>
   </data>
   <data name="AddMoneyTooltip" xml:space="preserve">
     <value>Make sure Money Anarchy feature is enabled</value>
@@ -133,16 +133,16 @@
     <value>This option allows dynamic toggle within game</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
+    <value>Quantia</value>
   </data>
   <data name="AnnualInterestRate" xml:space="preserve">
     <value>Annual interest rate</value>
   </data>
   <data name="AnnualInterestRateMinor" xml:space="preserve">
-    <value>The default value is 3%</value>
+    <value>O valor padrão é 3%</value>
   </data>
   <data name="BuildingRefund" xml:space="preserve">
-    <value>Building refund</value>
+    <value>Reembolso da construção</value>
   </data>
   <data name="BuildingRefundMultipleFactor" xml:space="preserve">
     <value>Building refund multiple factor</value>
@@ -154,16 +154,16 @@
     <value>Builtin Mod Check</value>
   </data>
   <data name="BuiltinModWarning" xml:space="preserve">
-    <value>Game Anarchy already includes all the features of this mods, to ensure the normal operation of Game Anarchy, the following mods have been forcibly disabled.</value>
+    <value>'Game Anarchy' já inclui todas as funções desses 'mods', para garantir a funcionalidade normal de 'Game Anarchy', os seguintes 'mods' foram desativados à força.</value>
   </data>
   <data name="ChargeInterest" xml:space="preserve">
     <value>Charge interest on negative balances</value>
   </data>
   <data name="CityBankruptcyWarningThreshold" xml:space="preserve">
-    <value>City bankruptcy warning threshold</value>
+    <value>Limite de aviso de falência cidade</value>
   </data>
   <data name="CityBankruptcyWarningThresholdMinor" xml:space="preserve">
-    <value>Game default value is -10000</value>
+    <value>O valor padrão do jogo é -10 000</value>
   </data>
   <data name="CityServiceOptions" xml:space="preserve">
     <value>Opções dos Serviços da Cidade</value>
@@ -172,7 +172,7 @@
     <value>Comercial</value>
   </data>
   <data name="Cost" xml:space="preserve">
-    <value>Cost</value>
+    <value>Custo</value>
   </data>
   <data name="CustomUnlock" xml:space="preserve">
     <value>Desbloqueio personalizado</value>
@@ -181,7 +181,7 @@
     <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
   <data name="Economy" xml:space="preserve">
-    <value>Economy</value>
+    <value>Economia</value>
   </data>
   <data name="EnableAchievements" xml:space="preserve">
     <value>Sistema de Conquistas está sempre disponível</value>
@@ -304,13 +304,13 @@
     <value>Taxa de esgotamento de petróleo</value>
   </data>
   <data name="OpenControlPanel" xml:space="preserve">
-    <value>Open Control Panel</value>
+    <value>Abrir Painel de Controle</value>
   </data>
   <data name="OptimizeOptions" xml:space="preserve">
     <value>Opções de Otimização</value>
   </data>
   <data name="OptionPanelCategoriesHorizontalOffsetMinor" xml:space="preserve">
-    <value>This option takes effect after adjustment</value>
+    <value>Esta opção tem efeito após ajuste</value>
   </data>
   <data name="OptionPanelCategoriesUpdated" xml:space="preserve">
     <value>Show mod updated date in options panel categories</value>
@@ -325,10 +325,10 @@
     <value>Taxa de esgotamento dos minérios</value>
   </data>
   <data name="OtherFunctionsMajor" xml:space="preserve">
-    <value>Other functions</value>
+    <value>Outras funções</value>
   </data>
   <data name="OtherFunctionsMinor" xml:space="preserve">
-    <value>Use the shortcut keys or the UUI button to invoke the Control Panel, if you want to adjust the options in the Control Panel, close the Options Panel first.</value>
+    <value>Use as teclas de atalho ou o botão UUI para invocar o Painel de Controle, se você quiser ajustar as opções no Painel de Controle, feche o Painel de Opções primeiro.</value>
   </data>
   <data name="PutOut" xml:space="preserve">
     <value>Put out</value>
@@ -376,7 +376,7 @@
     <value>Remover fogo do museu</value>
   </data>
   <data name="RemoveNotEnoughMoney" xml:space="preserve">
-    <value>Remove not enough money limitation</value>
+    <value>Remover a limitação de dinheiro insuficiente</value>
   </data>
   <data name="RemoveNotEnoughMoneyMinor" xml:space="preserve">
     <value>When “Money Anarchy” or "Unlimited Money" is enabled, this option is enabled automatically enforced.</value>
@@ -415,7 +415,7 @@
     <value>Serviço</value>
   </data>
   <data name="SetBefore" xml:space="preserve">
-    <value>It is recommended to set this before entering the game/save</value>
+    <value>É recomendado definir isso antes de entrar no jogo/'save'</value>
   </data>
   <data name="SortSettings" xml:space="preserve">
     <value>Ordenar nomes dos mods no painel de opções</value>
@@ -480,6 +480,12 @@
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Desbloquerar todas as estradas</value>
   </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
+  </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Unlock info views panel</value>
   </data>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>Yesterday at {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]Um novo painel de controle, use a tecla de atalho padrão Ctrl+Shift+G ou use o painel UUI para invocar o novo painel de controle.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Coloque construções únicas sem limitar funcionalidades agora divididas e integradas no painel de controle.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Funcionalidade de controle adicional de disseminação de incêndio.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]A função Remover fogo agora dividida em várias opções, pode controlar o fogo de diferentes tipos de edifícios.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Adicionada localização do Turco.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Fixo local anormal do componente da interface de usuário.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Quadro atualizado, melhoria de desempenho.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]Componentes atualizados do Painel de UI.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Added advanced option for reset mod config.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Fixed an issue where control panel did not follow the language toggle.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Fixed an issue where the money option in options panel could not be changed.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Optimized control panel invoke speed.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Optimized control panel toggle button UI style.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Updated compatibility check.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Added Slovak localization.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>Added unlimited placement of festival area buildings.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Fixed control panel settings sometimes not automatically save.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>Fixed an issue where normal buildings could only be placed once.</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>

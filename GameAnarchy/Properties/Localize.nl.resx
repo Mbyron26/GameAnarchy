@@ -196,7 +196,7 @@
     <value>Snel terugverdiend</value>
   </data>
   <data name="FestivalArea" xml:space="preserve">
-    <value>Festival area</value>
+    <value>Festivalterrein</value>
   </data>
   <data name="FireControl" xml:space="preserve">
     <value>Fire damper controls</value>
@@ -445,7 +445,7 @@
     <value>Onbeperkt</value>
   </data>
   <data name="UnlimitedLibraryAI" xml:space="preserve">
-    <value>Library</value>
+    <value>Bibliotheek</value>
   </data>
   <data name="UnlimitedLibraryAIMinor" xml:space="preserve">
     <value>The Creator's Library</value>
@@ -460,10 +460,10 @@
     <value>Park</value>
   </data>
   <data name="UnlimitedParkAIMinor" xml:space="preserve">
-    <value>Plaza of the Future</value>
+    <value>Plein van de toekomst</value>
   </data>
   <data name="UnlimitedSpaceElevator" xml:space="preserve">
-    <value>Space elevator</value>
+    <value>Ruimtelift</value>
   </data>
   <data name="UnlimitedSpaceElevatorMinor" xml:space="preserve">
     <value>Plaza of Transference</value>
@@ -479,6 +479,12 @@
   </data>
   <data name="UnlockAllRoads" xml:space="preserve">
     <value>Ontgrendel Alle Bots</value>
+  </data>
+  <data name="UnlockBasicRoads" xml:space="preserve">
+    <value>Unlock basic roads</value>
+  </data>
+  <data name="UnlockBasicRoadsMinor" xml:space="preserve">
+    <value>Unlock some basic roads, including some multi-lane roads</value>
   </data>
   <data name="UnlockInfoViews" xml:space="preserve">
     <value>Unlock info views panel</value>
@@ -538,86 +544,14 @@
   <data name="Updated_YesterdayAt" xml:space="preserve">
     <value>Gisteren om {0:HH:mm}</value>
   </data>
-  <data name="UpdateLog_V0_9_7ADD1" xml:space="preserve">
-    <value>[ADD]Nieuw bedieningspaneel, gebruik de standaard sneltoets Ctrl+Shift+G of het UUI-paneel om het nieuwe bedieningspaneel te openen.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD2" xml:space="preserve">
-    <value>[ADD]Plaats unieke gebouwen zonder beperkingen, nu gesplitst en geïntegreerd in het bedieningspaneel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD3" xml:space="preserve">
-    <value>[ADD]Added fire spread control function.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD4" xml:space="preserve">
-    <value>[ADD]De "brand verwijderen" functie is nu opgesplitst in verschillende opties om brand in verschillende soorten gebouwen te controleren.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7ADD5" xml:space="preserve">
-    <value>[ADD]Turkse vertaling toegevoegd.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7FIX" xml:space="preserve">
-    <value>[FIX]Verkeerde positie van het UI-component is opgelost.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT1" xml:space="preserve">
-    <value>[UPT]Framework bijgewerkt, verbeterde prestaties.</value>
-  </data>
-  <data name="UpdateLog_V0_9_7UPT2" xml:space="preserve">
-    <value>[UPT]UI-componenten van het bedieningspaneel bijgewerkt.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8ADD" xml:space="preserve">
-    <value>[ADD]Geavanceerde optie toegevoegd om de mod-configuratie te resetten.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX1" xml:space="preserve">
-    <value>[FIX]Probleem opgelost waarbij het bedieningspaneel de taalkeuze niet volgde.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8FIX2" xml:space="preserve">
-    <value>[FIX]Probleem opgelost waarbij de geldoptie in de instellingen niet kon worden gewijzigd.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT1" xml:space="preserve">
-    <value>[OPT]Geoptimaliseerde snelheid van het bedieningspaneel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8OPT2" xml:space="preserve">
-    <value>[OPT]Geoptimaliseerde UI-stijl van de knoppen op het bedieningspaneel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_8UPT" xml:space="preserve">
-    <value>[UPT]Compatibiliteitscontrole verbeterd.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD0" xml:space="preserve">
-    <value>Added show mods updated date for the category bar of the options panel function.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD1" xml:space="preserve">
-    <value>Added building, segment refund function, including remove time limitation, multiplier factor adjustment, included in the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD2" xml:space="preserve">
-    <value>Option panel added a entry button option to invoke the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD3" xml:space="preserve">
-    <value>Added the ability to adjust the cost of relocate building, included in the control panel.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9ADD4" xml:space="preserve">
-    <value>Added Remove not enough money warning function.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9FIX0" xml:space="preserve">
-    <value>Fixed an issue where still catch fire after remove fires.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT0" xml:space="preserve">
-    <value>Optimized the options panel categories horizontal offset option, which now takes effect after adjustment.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9OPT1" xml:space="preserve">
-    <value>Optimized the start money setting logic so that the start money is the value you set when you start a new game.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9TRAN" xml:space="preserve">
-    <value>Slowaakse vertaling toegevoegd.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT" xml:space="preserve">
-    <value>Updated UI style.</value>
-  </data>
-  <data name="UpdateLog_V0_9_9UPT1" xml:space="preserve">
-    <value>Updated framework.</value>
-  </data>
   <data name="UpdateLog_V1_0_0ADD0" xml:space="preserve">
     <value>Added unlimited placement of festival area buildings.</value>
   </data>
   <data name="UpdateLog_V1_0_0FIX0" xml:space="preserve">
     <value>Fixed control panel settings sometimes not automatically save.</value>
+  </data>
+  <data name="UpdateLog_V1_0_0UPT" xml:space="preserve">
+    <value>Updated to support game version 1.17.0</value>
   </data>
   <data name="UpdateLog_V1_0_1FIX0" xml:space="preserve">
     <value>Fixed an issue where normal buildings could only be placed once.</value>
@@ -657,6 +591,21 @@
   </data>
   <data name="UpdateLog_V1_1_1FIX1" xml:space="preserve">
     <value>Fixed some issues with the control panel.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2FIX" xml:space="preserve">
+    <value>Fixed an issue where achievements didn't work properly.</value>
+  </data>
+  <data name="UpdateLog_V1_1_2UPT" xml:space="preserve">
+    <value>Updated localization.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3ADD" xml:space="preserve">
+    <value>Added custom unlock - Basic Road.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3OPT" xml:space="preserve">
+    <value>Optimize some functions.</value>
+  </data>
+  <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
+    <value>Updated NuGet CitiesHarmony.API to 2.2</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>
