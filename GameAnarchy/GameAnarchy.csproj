@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.1.3.8516</Version>
+		<Version>1.1.4.1756</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
-		<Version>1.1.3</Version>
+		<Version>1.1.4</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Debug|AnyCPU'">
@@ -91,8 +91,8 @@
 		<None Include="Properties\Localize.resx">
 			<Generator>LocalizeGenerator</Generator>
 			<CustomToolNamespace>GameAnarchy</CustomToolNamespace>
-			<LastGenOutput>Localize.cs</LastGenOutput>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<LastGenOutput>Localize.cs</LastGenOutput>
 		</None>
 		<None Include="Properties\Localize.ru.resx">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -146,29 +146,29 @@
 
 	<ItemGroup>
 	  <Reference Include="Assembly-CSharp">
-	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="ColossalManaged">
-	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="ICities">
-	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	  <Reference Include="UnityEngine">
-	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
 	    <Private>False</Private>
 	  </Reference>
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Properties\Localize.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Localize.resx</DependentUpon>
-		</Compile>
+	  <Compile Update="Properties\Localize.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localize.resx</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<Import Project="..\..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />

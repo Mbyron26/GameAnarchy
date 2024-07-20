@@ -6,10 +6,10 @@ using MbyronModsCommon;
 public class EconomyExtension : EconomyExtensionBase {
     public override void OnCreated(IEconomy economy) {
         base.OnCreated(economy);
-        InternalLogger.Log("Call economy extension OnCreated");
+        Mod.Log.Info("Call economy extension OnCreated");
     }
 
-    public override void OnReleased() =>InternalLogger.Log("Call economy extension OnReleased");
+    public override void OnReleased() => Mod.Log.Info("Call economy extension OnReleased");
 
     public override long OnUpdateMoneyAmount(long internalMoneyAmount) {
         if (Singleton<EconomyManager>.exists && Singleton<EconomyManager>.instance.m_properties is not null)
@@ -22,13 +22,29 @@ public class EconomyExtension : EconomyExtensionBase {
 
     public override bool OverrideDefaultPeekResource => Config.Instance.UnlimitedMoney || Config.Instance.CashAnarchy || Config.Instance.RemoveNotEnoughMoney;
 
-    public override int OnPeekResource(EconomyResource resource, int amount) => amount;
+    public override int OnPeekResource(EconomyResource resource, int amount) {
+        if (resource == EconomyResource.PolicyCost && Config.Instance.NoPoliciesCosts) {
+            return 0;
+        }
+        return amount;
+    }
 
-    public override int OnAddResource(EconomyResource resource, int amount, Service service, SubService subService, Level level) => service switch {
-        Service.Residential => amount * Config.Instance.ResidentialMultiplierFactor,
-        Service.Industrial => amount * Config.Instance.IndustrialMultiplierFactor,
-        Service.Commercial => amount * Config.Instance.CommercialMultiplierFactor,
-        Service.Office => amount * Config.Instance.OfficeMultiplierFactor,
-        _ => amount
-    };
+    public override int OnAddResource(EconomyResource resource, int amount, Service service, SubService subService, Level level) {
+        if (resource == EconomyResource.PolicyCost && Config.Instance.NoPoliciesCosts) {
+            return 0;
+        }
+        return service switch {
+            Service.Residential => amount * Config.Instance.ResidentialMultiplierFactor,
+            Service.Industrial => amount * Config.Instance.IndustrialMultiplierFactor,
+            Service.Commercial => amount * Config.Instance.CommercialMultiplierFactor,
+            Service.Office => amount * Config.Instance.OfficeMultiplierFactor,
+            _ => amount
+        };
+    }
+    public override int OnFetchResource(EconomyResource resource, int amount, Service service, SubService subService, Level level) {
+        if (resource == EconomyResource.PolicyCost && Config.Instance.NoPoliciesCosts) {
+            return 0;
+        }
+        return amount;
+    }
 }

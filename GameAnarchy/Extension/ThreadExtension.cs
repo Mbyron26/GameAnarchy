@@ -4,6 +4,7 @@ using ICities;
 
 public class ThreadExtension : ModThreadExtensionBase {
     private bool addCashFlag;
+    private bool substrateMoneyFlag;
     private bool toggleControlPanel;
     private byte frameIndex;
 
@@ -11,6 +12,7 @@ public class ThreadExtension : ModThreadExtensionBase {
         base.OnUpdate(realTimeDelta, simulationTimeDelta);
 
         AddCallOnceInvoke(Config.Instance.AddCash.IsPressed(), ref addCashFlag, SingletonManager<Manager>.Instance.AddMoneyManually);
+        AddCallOnceInvoke(Config.Instance.DecreaseMoney.IsPressed(), ref substrateMoneyFlag, SingletonManager<Manager>.Instance.SubstrateMoneyManually);
         AddCallOnceInvoke(Config.Instance.ControlPanelHotkey.IsPressed(), ref toggleControlPanel, ControlPanelManager<Mod, ControlPanel>.CallPanel);
     }
 

@@ -9,17 +9,19 @@ using System.Reflection.Emit;
 using System.IO;
 
 public static class OptionsMainPanelPatch {
-    public static MethodInfo GetOriginalOnVisibilityChanged() => AccessTools.Method(typeof(OptionsMainPanel), "OnVisibilityChanged");
-    public static MethodInfo GetOnVisibilityChangedPostfix() => AccessTools.Method(typeof(OptionsMainPanelPatch), "OnVisibilityChangedPostfix");
-    public static MethodInfo GetOriginalAddUserMods() => AccessTools.Method(typeof(OptionsMainPanel), "AddUserMods");
-    public static MethodInfo GetAddUserModsTranspiler() => AccessTools.Method(typeof(OptionsMainPanelPatch), "AddUserModsTranspiler");
+
+    public static void Patch(HarmonyPatcher harmonyPatcher) {
+        harmonyPatcher.PostfixPatching(AccessTools.Method(typeof(OptionsMainPanel), "OnVisibilityChanged"), AccessTools.Method(typeof(OptionsMainPanelPatch), "OnVisibilityChangedPostfix"));
+        harmonyPatcher.TranspilerPatching(AccessTools.Method(typeof(OptionsMainPanel), "AddUserMods"), AccessTools.Method(typeof(OptionsMainPanelPatch), "AddUserModsTranspiler"));
+    }
 
     public static void OnVisibilityChangedPostfix(UIComponent comp, bool visible) {
         if (visible) {
             try {
                 SingletonManager<Manager>.Instance.SetCategoriesOffset(comp);
-            } catch (Exception e) {
-                ExternalLogger.Exception($"Options main panel OnVisibilityChanged patch failed.", e);
+            }
+            catch (Exception e) {
+                Mod.Log.Error(e, $"Options main panel OnVisibilityChanged patch failed");
             }
         }
     }
@@ -56,14 +58,15 @@ public static class OptionsMainPanelPatch {
         var updatedTime = pluginInfo.updateTime;
         if (DateTime.Equals(updatedTime, DateTime.MinValue)) {
             updatedTime = GetModUpdatedDate(pluginInfo.modPath);
-            if (Config.Instance.DebugMode) {
-                if (pluginInfo.publishedFileID.Equals(new ColossalFramework.PlatformServices.PublishedFileId(ulong.MaxValue))) {
-                    ExternalLogger.Log($"Plugin [{pluginInfo.name}] is a local mod, get last write time date: {updatedTime}");
-                } else {
-                    ExternalLogger.Log($"Plugin [{pluginInfo.name}] updated time is not initialized yet, get last write time date: {updatedTime}");
-                }
+            if (pluginInfo.publishedFileID.Equals(new ColossalFramework.PlatformServices.PublishedFileId(ulong.MaxValue))) {
+                Mod.Log.Info($"Plugin [{pluginInfo.name}] is a local mod, get last write time date: {updatedTime}");
             }
-        } else {
+            else {
+                Mod.Log.Info($"Plugin [{pluginInfo.name}] updated time is not initialized yet, get last write time date: {updatedTime}");
+            }
+
+        }
+        else {
             updatedTime = updatedTime.ToLocalTime();
         }
         var span = updatedTime - DateTime.Now;
@@ -77,29 +80,38 @@ public static class OptionsMainPanelPatch {
             var flag = DateTime.Compare(newDay, DateTime.Now);
             if (flag > 0) {
                 date = "<color #8BBD3A>" + string.Format(Localize.Updated_Today, updatedTime) + "</color>";
-            } else {
+            }
+            else {
                 date = "<color #8BBD3A>" + string.Format(Localize.Updated_YesterdayAt, updatedTime) + "</color>";
             }
-        } else if (days <= 30) {
+        }
+        else if (days <= 30) {
             if (days == 1) {
                 date = "<color #059641>" + Localize.Updated_Yesterday + "</color>";
-            } else {
+            }
+            else {
                 date = "<color #059641>" + string.Format(Localize.Updated_DaysAgo, days) + "</color>";
             }
-        } else if (days > 30 && days <= 365) {
+        }
+        else if (days > 30 && days <= 365) {
             if (days <= 60) {
                 date = "<color #009ED6>" + string.Format(Localize.Updated_MonthAgo, months) + "</color>";
-            } else if (days <= 90) {
+            }
+            else if (days <= 90) {
                 date = "<color #009ED6>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
-            } else if (days <= 180) {
+            }
+            else if (days <= 180) {
                 date = "<color #6A2A78>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
-            } else {
+            }
+            else {
                 date = "<color #F08E2B>" + string.Format(Localize.Updated_MonthsAgo, months) + "</color>";
             }
-        } else {
+        }
+        else {
             if (days <= 730) {
                 date = "<color #E92E32>" + Localize.Updated_LastYear + "</color>";
-            } else {
+            }
+            else {
                 date = "<color #E92E32>" + string.Format(Localize.Updated_YearsAgo, years) + "</color>";
             }
         }
@@ -115,7 +127,8 @@ public static class OptionsMainPanelPatch {
         List<string> list;
         if (categories.items != null) {
             list = new List<string>(categories.items);
-        } else {
+        }
+        else {
             list = new List<string>();
         }
         list.Add(name);

@@ -180,6 +180,9 @@
   <data name="CustomUnlockMinor" xml:space="preserve">
     <value>These options are not available when “Unlock All” feature is enabled because Unlock All has unlocked all of the following options. Although the following options will take effect when the game refreshes the milestone, it is recommended to set them before entering the game.</value>
   </data>
+  <data name="DecreaseMoney" xml:space="preserve">
+    <value>Decrease Money</value>
+  </data>
   <data name="Economy" xml:space="preserve">
     <value>Economy</value>
   </data>
@@ -293,6 +296,12 @@
   </data>
   <data name="NoisePollution" xml:space="preserve">
     <value>Noise pollution</value>
+  </data>
+  <data name="NoPoliciesCosts" xml:space="preserve">
+    <value>No policies costs</value>
+  </data>
+  <data name="NoPoliciesCostsMinor" xml:space="preserve">
+    <value>Policies does not cost money.</value>
   </data>
   <data name="NoSpreadFire" xml:space="preserve">
     <value>Non-spread of fire</value>
@@ -606,6 +615,15 @@
   </data>
   <data name="UpdateLog_V1_1_3UPT" xml:space="preserve">
     <value>Updated NuGet CitiesHarmony.API to 2.2</value>
+  </data>
+  <data name="UpdateLog_V1_1_4ADD0" xml:space="preserve">
+    <value>Added decrease money function.</value>
+  </data>
+  <data name="UpdateLog_V1_1_4ADD1" xml:space="preserve">
+    <value>Integrate No Policy Costs functionality.</value>
+  </data>
+  <data name="UpdateLog_V1_1_4FIX0" xml:space="preserve">
+    <value>Fixed an issue where the fire station would not send out vehicles after remove fire was enabled.</value>
   </data>
   <data name="UpdateLog_V1_1_UPT0" xml:space="preserve">
     <value>Updated to support game version 1.17.1</value>

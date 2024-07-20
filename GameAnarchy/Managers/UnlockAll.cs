@@ -1,8 +1,6 @@
 ﻿namespace GameAnarchy;
 using ColossalFramework.UI;
 using ICities;
-using MbyronModsCommon;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -296,13 +294,13 @@ public partial class Manager {
         }
     }
 
-    [Obsolete]
-    public void UnlockAll(UnlockManager unlockManager, IMilestones milestones) {
-        if (!Config.Instance.EnabledUnlockAll)
-            return;
-        unlockManager.m_allMilestones.ForEach(_ => {
-            InternalLogger.Log(_.Key);
-            milestones.UnlockMilestone(_.Key);
-        });
-    }
+    //[Obsolete]
+    //public void UnlockAll(UnlockManager unlockManager, IMilestones milestones) {
+    //    if (!Config.Instance.EnabledUnlockAll)
+    //        return;
+    //    unlockManager.m_allMilestones.ForEach(_ => {
+    //        InternalLogger.Log(_.Key);
+    //        milestones.UnlockMilestone(_.Key);
+    //    });
+    //}
 }

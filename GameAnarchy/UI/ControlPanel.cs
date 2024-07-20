@@ -48,6 +48,7 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
         annualInterestRateLable = itemPanel2.MajorLabel;
         annualInterestRateSlider = itemPanel2.Child as CustomUISlider;
         annualInterestRateSlider.isEnabled = Config.Instance.ChargeInterest;
+        ControlPanelHelper.AddToggle(Config.Instance.NoPoliciesCosts, ModLocalize.NoPoliciesCosts, ModLocalize.NoPoliciesCostsMinor, (_) => Config.Instance.NoPoliciesCosts = _);
         ControlPanelHelper.Reset();
 
         ControlPanelHelper.AddGroup(EconomyContainer, PorpertyPanelWidth, ModLocalize.IncomeMultiplier);
@@ -210,9 +211,11 @@ internal class ControlPanel : ControlPanelBase<Mod, ControlPanel> {
     private static string GetString(string localize, uint value, string flag0, string flag1) {
         if (value == 0) {
             return string.Format(localize + ": {0}", flag0);
-        } else if (value == 100) {
+        }
+        else if (value == 100) {
             return string.Format(localize + ": {0}", flag1);
-        } else {
+        }
+        else {
             return string.Format(localize + ": {0}%", value);
         }
     }

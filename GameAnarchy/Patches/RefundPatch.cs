@@ -5,10 +5,11 @@ using System.Reflection;
 using UnityEngine;
 
 public static class BuildingAIPatch {
-    public static MethodInfo GetOriginalGetRefundAmount() => AccessTools.Method(typeof(BuildingAI), nameof(BuildingAI.GetRefundAmount));
-    public static MethodInfo GetGetRefundAmountPrefix() => AccessTools.Method(typeof(BuildingAIPatch), nameof(BuildingAIPatch.GetRefundAmountPrefix));
-    public static MethodInfo GetOriginalGetRelocationCost() => AccessTools.Method(typeof(BuildingAI), nameof(BuildingAI.GetRelocationCost));
-    public static MethodInfo GetGetRelocationCostPrefix() => AccessTools.Method(typeof(BuildingAIPatch), nameof(BuildingAIPatch.GetRelocationCostPrefix));
+    public static void Patch(HarmonyPatcher harmonyPatcher) {
+        harmonyPatcher.PrefixPatching(AccessTools.Method(typeof(BuildingAI), nameof(BuildingAI.GetRefundAmount)), AccessTools.Method(typeof(BuildingAIPatch), nameof(GetRefundAmountPrefix)));
+        harmonyPatcher.PrefixPatching(AccessTools.Method(typeof(BuildingAI), nameof(BuildingAI.GetRelocationCost)), AccessTools.Method(typeof(BuildingAIPatch), nameof(GetRelocationCostPrefix)));
+    }
+
     public static bool GetRefundAmountPrefix(BuildingAI __instance, ref int __result) {
         if (Config.Instance.BuildingRefund) {
             var constructionCost = __instance.GetConstructionCost();
@@ -30,10 +31,12 @@ public static class BuildingAIPatch {
 }
 
 public static class BulldozeToolPatch {
-    public static MethodInfo GetOriginalGetBuildingRefundAmount() => AccessTools.Method(typeof(BulldozeTool), "GetBuildingRefundAmount");
-    public static MethodInfo GetGetBuildingRefundAmountPrefix() => AccessTools.Method(typeof(BulldozeToolPatch), nameof(BulldozeToolPatch.GetBuildingRefundAmountPrefix));
-    public static MethodInfo GetOriginalGetSegmentRefundAmount() => AccessTools.Method(typeof(BulldozeTool), "GetSegmentRefundAmount");
-    public static MethodInfo GetGetSegmentRefundAmountPrefix() => AccessTools.Method(typeof(BulldozeToolPatch), nameof(BulldozeToolPatch.GetSegmentRefundAmountPrefix));
+    public static void Patch(HarmonyPatcher harmonyPatcher) {
+        harmonyPatcher.PrefixPatching(AccessTools.Method(typeof(BulldozeTool), "GetBuildingRefundAmount"), AccessTools.Method(typeof(BulldozeToolPatch), nameof(GetBuildingRefundAmountPrefix)));
+        harmonyPatcher.PrefixPatching(AccessTools.Method(typeof(BulldozeTool), "GetSegmentRefundAmount"), AccessTools.Method(typeof(BulldozeToolPatch), nameof(BulldozeToolPatch.GetSegmentRefundAmountPrefix)));
+    }
+
+    
     public static bool GetBuildingRefundAmountPrefix(ushort building, ref int __result) {
         if (Config.Instance.BuildingRefund && Config.Instance.RemoveBuildingRefundTimeLimitation) {
             var b = Singleton<BuildingManager>.instance.m_buildings.m_buffer[building];
@@ -59,7 +62,8 @@ public static class BulldozeToolPatch {
             var reslut = (int)(info.m_netAI.GetConstructionCost(position, position2, num, num2) * Config.Instance.SegmentRefundMultipleFactor);
             if (Config.Instance.RemoveSegmentRefundTimeLimitation) {
                 __result = reslut;
-            } else {
+            }
+            else {
                 __result = (Singleton<SimulationManager>.instance.IsRecentBuildIndex(instance.m_segments.m_buffer[segment].m_buildIndex)) ? reslut : 0;
             }
             return false;

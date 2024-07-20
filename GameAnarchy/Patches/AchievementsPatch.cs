@@ -8,8 +8,10 @@ using ColossalFramework.Globalization;
 using System.Reflection;
 
 public static class AchievementsPatch {
-    public static MethodInfo GetOriginalOnListingSelectionChanged() => AccessTools.Method(typeof(LoadPanel), "OnListingSelectionChanged");
-    public static MethodInfo GetOnListingSelectionChangedPostfix() => AccessTools.Method(typeof(AchievementsPatch), nameof(AchievementsPatch.OnListingSelectionChangedPostfix));
+    public static void Patch(HarmonyPatcher harmonyPatcher) {
+        harmonyPatcher.PostfixPatching(AccessTools.Method(typeof(LoadPanel), "OnListingSelectionChanged"), AccessTools.Method(typeof(AchievementsPatch), nameof(OnListingSelectionChangedPostfix)));
+    }
+
     public static void OnListingSelectionChangedPostfix(UIComponent comp) {
         try {
             if (Config.Instance.EnabledAchievements) {
@@ -26,8 +28,9 @@ public static class AchievementsPatch {
                 spriteTooltip.tooltip = achLabel.tooltip = tooltip;
                 achSprite.isVisible = false;
             }
-        } catch (Exception e) {
-            InternalLogger.Exception($"Achievements patched failed.", e);
+        }
+        catch (Exception e) {
+            Mod.Log.Error(e, $"Achievements patched failed");
         }
     }
 }

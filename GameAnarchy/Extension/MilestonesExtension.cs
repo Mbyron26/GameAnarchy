@@ -4,10 +4,10 @@ using ICities;
 public class MilestonesExtension : MilestonesExtensionBase {
     public override void OnCreated(IMilestones milestones) {
         base.OnCreated(milestones);
-        InternalLogger.Log("Call milestones extension OnCreated");
+        Mod.Log.Info("Call milestones extension OnCreated");
     }
 
-    public override void OnReleased() => InternalLogger.Log("Call milestones extension OnReleased");
+    public override void OnReleased() => Mod.Log.Info("Call milestones extension OnReleased");
 
     public override void OnRefreshMilestones() {
         SingletonManager<Manager>.Instance.UnlockAll(managers, milestonesManager);
