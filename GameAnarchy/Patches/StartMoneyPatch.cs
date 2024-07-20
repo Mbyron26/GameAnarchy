@@ -1,11 +1,11 @@
 ﻿namespace GameAnarchy.Patches;
 using ColossalFramework;
 using HarmonyLib;
-using System.Reflection;
 
 public static class UpdateDataStartMoneyPatch {
-    public static MethodInfo GetOriginalUpdateData() => AccessTools.Method(typeof(EconomyManager), nameof(EconomyManager.UpdateData));
-    public static MethodInfo GetUpdateDataPrefix() => AccessTools.Method(typeof(UpdateDataStartMoneyPatch), nameof(UpdateDataStartMoneyPatch.UpdateDataPrefix));
+    public static void Patch(HarmonyPatcher harmonyPatcher) =>
+        harmonyPatcher.PrefixPatching(AccessTools.Method(typeof(EconomyManager), nameof(EconomyManager.UpdateData)), AccessTools.Method(typeof(UpdateDataStartMoneyPatch), nameof(UpdateDataPrefix)));
+
     public static void UpdateDataPrefix(EconomyManager __instance) {
         if (!Config.Instance.EnableStartMoney) return;
         var updateMode = Singleton<SimulationManager>.instance.m_metaData.m_updateMode;

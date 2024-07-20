@@ -1,6 +1,7 @@
 ﻿namespace GameAnarchy;
 using System.Xml.Serialization;
 using UnityEngine;
+using static DistrictPolicies;
 
 [XmlRoot("ModConfig")]
 public class Config : SingletonConfig<Config> {
@@ -45,6 +46,7 @@ public class Config : SingletonConfig<Config> {
     public int DefaultGetCash { get; set; } = 5000000;
     public bool ChargeInterest { get; set; } = false;
     public float AnnualInterestRate { get; set; } = 0.03f;
+    public bool NoPoliciesCosts { get; set; } = false;
 
     public bool BuildingRefund { get; set; } = true;
     public bool RemoveBuildingRefundTimeLimitation { get; set; } = true;
@@ -86,5 +88,6 @@ public class Config : SingletonConfig<Config> {
     public bool RemoveAirportBuildingFire { get; set; } = false;
 
     public KeyBinding AddCash { get; set; } = new KeyBinding(KeyCode.M, true, true, false);
+    public KeyBinding DecreaseMoney { get; set; } = new KeyBinding(KeyCode.N, true, true, false);
     public KeyBinding ControlPanelHotkey { get; set; } = new KeyBinding(KeyCode.G, true, true, false);
 }

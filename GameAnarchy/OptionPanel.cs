@@ -66,6 +66,7 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         base.FillHotkeyContainer();
         OptionPanelHelper.AddGroup(HotkeyContainer, CommonLocalize.OptionPanel_Hotkeys);
         OptionPanelHelper.AddKeymapping(ModLocalize.AddMoney, Config.Instance.AddCash, ModLocalize.AddMoneyTooltip);
+        OptionPanelHelper.AddKeymapping(ModLocalize.DecreaseMoney, Config.Instance.DecreaseMoney, ModLocalize.AddMoneyTooltip);
         OptionPanelHelper.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
         OptionPanelHelper.Reset();
     }

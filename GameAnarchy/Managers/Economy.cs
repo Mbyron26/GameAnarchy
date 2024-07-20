@@ -22,16 +22,17 @@ public partial class Manager {
     }
 
     public void AutoAddMoney(Func<long> getCurrentMoney = null) {
-        if (!Config.Instance.CashAnarchy) 
+        if (!Config.Instance.CashAnarchy)
             return;
         if (Singleton<EconomyManager>.exists) {
             EconomyManager economyManager = Singleton<EconomyManager>.instance;
             getCurrentMoney ??= (() => economyManager.LastCashAmount);
             if (getCurrentMoney() >= Config.Instance.DefaultMinAmount * 100) return;
             AddLoanAmount(economyManager, Config.Instance.DefaultGetCash);
-            InternalLogger.DebugMode<Config>($"AutoAddMoney | GetMoney: {Config.Instance.DefaultGetCash * 100}, LastCashAmount: {economyManager.LastCashAmount}");
-        } else {
-            InternalLogger.Log($"Auto add money failed, EconomyManager doesn't exist.");
+            Mod.Log.Info($"AutoAddMoney | GetMoney: {Config.Instance.DefaultGetCash * 100}, LastCashAmount: {economyManager.LastCashAmount}");
+        }
+        else {
+            Mod.Log.Info($"Auto add money failed, EconomyManager doesn't exist.");
         }
     }
 
@@ -40,22 +41,27 @@ public partial class Manager {
             return;
         if (Singleton<EconomyManager>.exists) {
             typeof(EconomyManager).GetField("m_cashAmount", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(Singleton<EconomyManager>.instance, Config.Instance.StartMoneyAmount * 100);
-            InternalLogger.Log($"Start money enabled, set start money to {Config.Instance.StartMoneyAmount}");
-        } else {
-            InternalLogger.Log($"Set start money failed, EconomyManager doesn't exist.");
+            Mod.Log.Info($"Start money enabled, set start money to {Config.Instance.StartMoneyAmount}");
+        }
+        else {
+            Mod.Log.Info($"Set start money failed, EconomyManager doesn't exist.");
         }
     }
 
-    public void AddMoneyManually() {
+    public void AddMoneyManually() => ModifyMoney(Config.Instance.DefaultGetCash);
+
+    public void SubstrateMoneyManually() => ModifyMoney(-Config.Instance.DefaultGetCash);
+
+    private void ModifyMoney(int amount) {
         if (!Config.Instance.CashAnarchy)
             return;
-        if (Singleton<EconomyManager>.exists) {
-            var economyManager = Singleton<EconomyManager>.instance;
-            AddLoanAmount(economyManager, Config.Instance.DefaultGetCash);
-            InternalLogger.DebugMode<Config>($"AddMoneyManually | GetMoney: {Config.Instance.DefaultGetCash * 100}, LastCashAmount: {economyManager.LastCashAmount}");
-        } else {
-            InternalLogger.Error("Couldn't add money manually, EconomyManager doesn't exist");
+        if (!Singleton<EconomyManager>.exists) {
+            Mod.Log.Error("Couldn't modify manually, EconomyManager doesn't exist");
+            return;
         }
+        var economyManager = Singleton<EconomyManager>.instance;
+        AddLoanAmount(economyManager, amount);
+        Mod.Log.Info($"ModifyMoney: {amount * 100}, LastCashAmount: {economyManager.LastCashAmount}");
     }
 
     private void AddLoanAmount(EconomyManager economyManager, int amount) => economyManager.AddResource(EconomyManager.Resource.LoanAmount, amount * 100, ItemClass.Service.None, ItemClass.SubService.None, ItemClass.Level.None);

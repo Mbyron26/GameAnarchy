@@ -5,10 +5,10 @@ using ICities;
 public class OilAndOreResourceExtension : ResourceExtensionBase {
     public override void OnCreated(IResource resource) {
         base.OnCreated(resource);
-        InternalLogger.Log("Call resource extension OnCreated");
+        Mod.Log.Info("Call resource extension OnCreated");
     }
 
-    public override void OnReleased() => InternalLogger.Log("Call resource extension OnReleased");
+    public override void OnReleased() => Mod.Log.Info("Call resource extension OnReleased");
 
     public override void OnAfterResourcesModified(int x, int z, NaturalResource type, int amount) {
         if (amount < 0) {

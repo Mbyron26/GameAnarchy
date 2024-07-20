@@ -1,4 +1,9 @@
 ﻿
+V1.1.4
+[*]Added decrease money function.
+[*]Integrate No Policy Costs functionality.
+[*]Fixed an issue where the fire station would not send out vehicles after remove fire was enabled.
+
 V1.1.3
 [*]Added custom unlock - Basic Road.
 [*]Updated NuGet CitiesHarmony.API to 2.2

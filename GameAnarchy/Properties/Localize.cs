@@ -111,6 +111,11 @@ namespace GameAnarchy
 		public static string CustomUnlockMinor => LocaleManager.GetString("CustomUnlockMinor", Culture);
 
 		/// <summary>
+		/// Decrease Money
+		/// </summary>
+		public static string DecreaseMoney => LocaleManager.GetString("DecreaseMoney", Culture);
+
+		/// <summary>
 		/// Economy
 		/// </summary>
 		public static string Economy => LocaleManager.GetString("Economy", Culture);
@@ -299,6 +304,16 @@ namespace GameAnarchy
 		/// Noise pollution
 		/// </summary>
 		public static string NoisePollution => LocaleManager.GetString("NoisePollution", Culture);
+
+		/// <summary>
+		/// No policies costs
+		/// </summary>
+		public static string NoPoliciesCosts => LocaleManager.GetString("NoPoliciesCosts", Culture);
+
+		/// <summary>
+		/// Policies does not cost money.
+		/// </summary>
+		public static string NoPoliciesCostsMinor => LocaleManager.GetString("NoPoliciesCostsMinor", Culture);
 
 		/// <summary>
 		/// Non-spread of fire
@@ -809,6 +824,21 @@ namespace GameAnarchy
 		/// Updated NuGet CitiesHarmony.API to 2.2
 		/// </summary>
 		public static string UpdateLog_V1_1_3UPT => LocaleManager.GetString("UpdateLog_V1_1_3UPT", Culture);
+
+		/// <summary>
+		/// Added decrease money function.
+		/// </summary>
+		public static string UpdateLog_V1_1_4ADD0 => LocaleManager.GetString("UpdateLog_V1_1_4ADD0", Culture);
+
+		/// <summary>
+		/// Integrate No Policy Costs functionality.
+		/// </summary>
+		public static string UpdateLog_V1_1_4ADD1 => LocaleManager.GetString("UpdateLog_V1_1_4ADD1", Culture);
+
+		/// <summary>
+		/// Fixed an issue where the fire station would not send out vehicles after remove fire was enabled.
+		/// </summary>
+		public static string UpdateLog_V1_1_4FIX0 => LocaleManager.GetString("UpdateLog_V1_1_4FIX0", Culture);
 
 		/// <summary>
 		/// Updated to support game version 1.17.1

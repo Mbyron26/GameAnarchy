@@ -24,17 +24,17 @@ public partial class Manager {
                     case "UnlockAll":
                         list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlock All"), Localize.UnlockAllConflict));
                         info.isEnabled = false;
-                        InternalLogger.Log("Disabled builtin mod: UnlockAll");
+                        Mod.Log.Info("Disabled builtin mod: UnlockAll");
                         break;
                     case "UnlimitedOilAndOre":
                         list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Oil And Ore"), Localize.UnlimitedOilAndOreConflict));
                         info.isEnabled = false;
-                        InternalLogger.Log("Disabled builtin mod: UnlimitedOilAndOre");
+                        Mod.Log.Info("Disabled builtin mod: UnlimitedOilAndOre");
                         break;
                     case "UnlimitedMoney":
                         list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Money"), Localize.UnlimitedMoneyConflict));
                         info.isEnabled = false;
-                        InternalLogger.Log("Disabled builtin mod: UnlimitedMoney");
+                        Mod.Log.Info("Disabled builtin mod: UnlimitedMoney");
                         break;
                 }
             }

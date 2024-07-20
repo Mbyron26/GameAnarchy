@@ -116,7 +116,7 @@ public partial class Manager {
                 UnlockManager.instance.m_properties.m_InfoModeMilestones[(int)item] = null;
             }
         }
-        InternalLogger.Log("Custom unlock: Info Views");
+        Mod.Log.Info("Custom unlock: Info Views");
     }
 
     public void UnlockPolicies() {
@@ -150,7 +150,7 @@ public partial class Manager {
                 cityPlanningPanel[i] = null;
             }
         }
-        InternalLogger.Log("Custom unlock: Policies");
+        Mod.Log.Info("Custom unlock: Policies");
     }
 
     public void UnlockUniqueBuildings() {
@@ -165,7 +165,7 @@ public partial class Manager {
                 UnlockManager.instance.m_properties.m_FeatureMilestones[(int)feature] = null;
             };
         }
-        InternalLogger.Log("Custom unlock: Unique Buildings");
+        Mod.Log.Info("Custom unlock: Unique Buildings");
     }
 
     public void UnlockAllRoads() {
@@ -188,13 +188,13 @@ public partial class Manager {
                 }
             }
         }
-        InternalLogger.Log("Custom unlock: All Roads");
+        Mod.Log.Info("Custom unlock: All Roads");
     }
 
     public void UnlockMilestone(IMilestones milestones) {
         if (Config.Instance.MilestoneLevel != 0) {
             milestones.UnlockMilestone($"Milestone{Config.Instance.MilestoneLevel}");
-            InternalLogger.Log($"Custom unlock milestone: {Config.Instance.MilestoneLevel}");
+            Mod.Log.Info($"Custom unlock milestone: {Config.Instance.MilestoneLevel}");
         }
     }
 
@@ -204,7 +204,7 @@ public partial class Manager {
         }
         if (!UnlockManager.instance.Unlocked(UnlockManager.Feature.Landscaping) && UnlockManager.instance.m_properties.m_FeatureMilestones is not null) {
             UnlockManager.instance.m_properties.m_FeatureMilestones[(int)UnlockManager.Feature.Landscaping] = null;
-            InternalLogger.Log("Custom unlock: Landscaping");
+            Mod.Log.Info("Custom unlock: Landscaping");
         };
     }
 
@@ -217,7 +217,7 @@ public partial class Manager {
         UnlockPublicTransportSubService();
         UnlockPublicTransportBuildings();
         UnlockPublicTransportNet();
-        InternalLogger.Log("Custom unlock: Public Transport");
+        Mod.Log.Info("Custom unlock: Public Transport");
     }
 
     private void UnlockPublicTransportService() {

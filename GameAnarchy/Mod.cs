@@ -27,7 +27,6 @@ public class Mod : ModPatcherBase<Mod, Config> {
     public override void SetModCulture(CultureInfo cultureInfo) => Localize.Culture = cultureInfo;
     public override void IntroActions() {
         SingletonManager<Manager>.Instance.InitBuildinModChecker();
-        ExternalLogger.OutputPluginsList();
     }
 
     protected override void SettingsUI(UIHelperBase helper) {
@@ -35,46 +34,16 @@ public class Mod : ModPatcherBase<Mod, Config> {
         LocaleManager.eventLocaleChanged += ControlPanelManager<Mod, ControlPanel>.OnLocaleChanged;
     }
 
-    protected override void PatchAction() {
-        AddPostfix(OptionsMainPanelPatch.GetOriginalOnVisibilityChanged(), OptionsMainPanelPatch.GetOnVisibilityChangedPostfix());
-        AddTranspiler(OptionsMainPanelPatch.GetOriginalAddUserMods(), OptionsMainPanelPatch.GetAddUserModsTranspiler());
-        AddPrefix(FastReturnPatch.GetOriginalQuitApplication(), FastReturnPatch.GetQuitApplicationPrefix());
-        AddPrefix(UpdateDataStartMoneyPatch.GetOriginalUpdateData(), UpdateDataStartMoneyPatch.GetUpdateDataPrefix());
-        AddPostfix(AchievementsPatch.GetOriginalOnListingSelectionChanged(), AchievementsPatch.GetOnListingSelectionChangedPostfix());
-        AddPrefix(BulldozeToolPatch.GetOriginalGetBuildingRefundAmount(), BulldozeToolPatch.GetGetBuildingRefundAmountPrefix());
-        AddPrefix(BulldozeToolPatch.GetOriginalGetSegmentRefundAmount(), BulldozeToolPatch.GetGetSegmentRefundAmountPrefix());
-        AddPrefix(BuildingAIPatch.GetOriginalGetRefundAmount(), BuildingAIPatch.GetGetRefundAmountPrefix());
-        AddPrefix(BuildingAIPatch.GetOriginalGetRelocationCost(), BuildingAIPatch.GetGetRelocationCostPrefix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalPlayerBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetPlayerBuildingAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalStockExchangeAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetStockExchangeAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFacultyAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFacultyAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalWeatherRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetWeatherRadarAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalUniqueFactoryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetUniqueFactoryAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceRadarAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceRadarAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMonumentAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMonumentAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalMainCampusBuildingAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetMainCampusBuildingAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalFestivalAreaAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetFestivalAreaAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalLibraryAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetLibraryAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalSpaceElevatorAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetSpaceElevatorAICanBeBuiltOnlyOncePostfix());
-        AddPostfix(UnlimitedUniqueBuildingsPatch.GetOriginalParkAICanBeBuiltOnlyOnce(), UnlimitedUniqueBuildingsPatch.GetParkAICanBeBuiltOnlyOncePostfix());
-        AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAITrySpreadFire(), RemoveFirePatch.GetCommonBuildingAITrySpreadFirePrefix());
-        AddPrefix(RemoveFirePatch.GetOriginalTreeManagerTrySpreadFire(), RemoveFirePatch.GetTreeManagerTrySpreadFirePrefix());
-        AddPrefix(RemoveFirePatch.GetOriginalTreeManagerBurnTree(), RemoveFirePatch.GetTreeManagerBurnTreePrefix());
-        AddPostfix(RemoveFirePatch.GetOriginalPlayerBuildingAIGetFireParameters(), RemoveFirePatch.GetPlayerBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalResidentialBuildingAIGetFireParameters(), RemoveFirePatch.GetResidentialBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalIndustrialBuildingAIGetFireParameters(), RemoveFirePatch.GetIndustrialBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalCommercialBuildingAIGetFireParameters(), RemoveFirePatch.GetCommercialBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalOfficeBuildingAIGetFireParameters(), RemoveFirePatch.GetOfficeBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalIndustrialExtractorAIGetFireParameters(), RemoveFirePatch.GetIndustrialExtractorAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalParkBuildingAIGetFireParameters(), RemoveFirePatch.GetParkBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalMuseumAIGetFireParameters(), RemoveFirePatch.GetMuseumAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalDummyBuildingAIGetFireParameters(), RemoveFirePatch.GetDummyBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalCampusBuildingAIGetFireParameters(), RemoveFirePatch.GetCampusBuildingAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalAirportGateAIGetFireParameters(), RemoveFirePatch.GetAirportGateAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalAirportCargoGateAIGetFireParameters(), RemoveFirePatch.GetAirportCargoGateAIGetFireParametersPostfix());
-        AddPostfix(RemoveFirePatch.GetOriginalAirportBuildingAIGetFireParameters(), RemoveFirePatch.GetAirportBuildingAIGetFireParametersPostfix());
-        AddPrefix(RemoveFirePatch.GetOriginalCommonBuildingAIHandleFire(), RemoveFirePatch.GetHandleFirePrefix());
-        SkipIntroPatch.Patch(Harmony);
+    protected override void PatchAction(HarmonyPatcher harmonyPatcher) {
+        AchievementsPatch.Patch(harmonyPatcher);
+        FastReturnPatch.Patch(harmonyPatcher);
+        OptionsMainPanelPatch.Patch(harmonyPatcher);
+        UpdateDataStartMoneyPatch.Patch(harmonyPatcher);
+        BuildingAIPatch.Patch(harmonyPatcher);
+        BulldozeToolPatch.Patch(harmonyPatcher);
+        UnlimitedUniqueBuildingsPatch.Patch(harmonyPatcher);
+        RemoveFirePatch.Patch(harmonyPatcher);
+        SkipIntroPatch.Patch(harmonyPatcher);
     }
 
     public override List<ConflictModInfo> ConflictMods { get; set; } = new()  {
@@ -98,9 +67,15 @@ public class Mod : ModPatcherBase<Mod, Config> {
         new ConflictModInfo(635093438, @"Unlock Public Transport", true),
         new ConflictModInfo(635093438, @"Unlock All Roads", true),
         new ConflictModInfo(2962363030, @"You Can Build It", true),
+        new ConflictModInfo(413483125, @"No Policies Costs", true),
     };
 
     public override List<ModChangeLog> ChangeLog => new() {
+        new ModChangeLog(new Version(1, 1, 4), new(2024, 7, 20), new List<LogString> {
+            new(LogFlag.Added, Localize.UpdateLog_V1_1_4ADD0),
+            new(LogFlag.Added, Localize.UpdateLog_V1_1_4ADD1),
+            new(LogFlag.Fixed, Localize.UpdateLog_V1_1_4FIX0),
+        }),
         new ModChangeLog(new Version(1, 1, 3), new(2023, 8, 5), new List<LogString> {
             new(LogFlag.Added, Localize.UpdateLog_V1_1_3ADD),
             new(LogFlag.Updated, Localize.UpdateLog_V1_1_3UPT),
