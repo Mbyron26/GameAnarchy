@@ -1,7 +1,10 @@
-﻿namespace GameAnarchy.UI;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
+using CSShared.Debug;
+using CSShared.Tools;
 using System.Collections.Generic;
 using UnityEngine;
+
+namespace GameAnarchy.UI;
 
 internal static class UIAtlas {
     private static UITextureAtlas gameAnarchyAtlas;
@@ -11,8 +14,8 @@ internal static class UIAtlas {
     public static UITextureAtlas GameAnarchyAtlas {
         get {
             if (gameAnarchyAtlas is null) {
-                gameAnarchyAtlas = MbyronModsCommon.UI.UIUtils.CreateTextureAtlas(nameof(GameAnarchyAtlas), $"{AssemblyUtils.CurrentAssemblyName}.UI.Resources.", SpriteParams);
-                MbyronModsCommon.Logger.GetLogger(AssemblyUtils.CurrentAssemblyName).Info("Initialized GameAnarchyAtlas");
+                gameAnarchyAtlas = CSShared.UI.UIUtils.CreateTextureAtlas(nameof(GameAnarchyAtlas), $"{AssemblyTools.CurrentAssemblyName}.UI.Resources.", SpriteParams);
+                LogManager.GetLogger().Info("Initialized GameAnarchyAtlas");
             }
             return gameAnarchyAtlas;
         }

@@ -1,8 +1,11 @@
-﻿namespace GameAnarchy;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
 using ColossalFramework;
 using ICities;
 using System;
+using CSShared.Debug;
+using CSShared.Common;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     private UIPanel unlockingPanel;
@@ -15,17 +18,17 @@ public partial class Manager {
         if (loadMode == LoadMode.NewGame || loadMode == LoadMode.LoadGame || loadMode == LoadMode.NewGameFromScenario || loadMode == LoadMode.LoadScenario) {
             unlockingPanel = UIView.Find<UIPanel>("UnlockingPanel");
             if (unlockingPanel is null) {
-                Mod.Log.Info("Init achievements failed, couldn't find UnlockingPanel");
+                LogManager.GetLogger().Info("Init achievements failed, couldn't find UnlockingPanel");
             }
             else {
-                Mod.Log.Info($"{loadMode} mode, init UnlockingPanel");
+                LogManager.GetLogger().Info($"{loadMode} mode, init UnlockingPanel");
                 var tabstrip = unlockingPanel.Find<UITabstrip>("Tabstrip");
                 button = tabstrip.Find<UIButton>("Achievements");
             }
             UpdateAchievements();
         }
         else {
-            Mod.Log.Info("Not Game mode, do not init UnlockingPanel");
+            LogManager.GetLogger().Info("Not Game mode, do not init UnlockingPanel");
             UpdateAchievements();
         }
     }
@@ -45,10 +48,10 @@ public partial class Manager {
             if (button is not null) {
                 button.isEnabled = isEnabled;
             }
-            Mod.Log.Info($"Update achievements, status: {isEnabled}");
+            LogManager.GetLogger().Info($"Update achievements, status: {isEnabled}");
         }
         catch (Exception e) {
-            Mod.Log.Error(e, $"Update achievements status failed");
+            LogManager.GetLogger().Error(e, $"Update achievements status failed");
         }
     }
 

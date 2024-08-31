@@ -10,11 +10,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.1.4.1756</Version>
+		<Version>1.2.0.1057</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
-		<Version>1.1.4</Version>
+		<Version>1.2.0</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Beta Debug|AnyCPU'">
@@ -34,145 +34,69 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Remove="Properties\Localize.de.resx" />
-		<EmbeddedResource Remove="Properties\Localize.es-ES.resx" />
-		<EmbeddedResource Remove="Properties\Localize.fr.resx" />
-		<EmbeddedResource Remove="Properties\Localize.it.resx" />
-		<EmbeddedResource Remove="Properties\Localize.ja.resx" />
-		<EmbeddedResource Remove="Properties\Localize.ko.resx" />
-		<EmbeddedResource Remove="Properties\Localize.nl.resx" />
-		<EmbeddedResource Remove="Properties\Localize.pl.resx" />
-		<EmbeddedResource Remove="Properties\Localize.pt-BR.resx" />
-		<EmbeddedResource Remove="Properties\Localize.resx" />
-		<EmbeddedResource Remove="Properties\Localize.ru.resx" />
-		<EmbeddedResource Remove="Properties\Localize.sk.resx" />
-		<EmbeddedResource Remove="Properties\Localize.th.resx" />
-		<EmbeddedResource Remove="Properties\Localize.tr.resx" />
-		<EmbeddedResource Remove="Properties\Localize.zh-CN.resx" />
-		<EmbeddedResource Remove="Properties\Localize.zh-TW.resx" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="UI\Resources\InGameButton.png" />
+		<None Remove="UI\Resources\InGameButton.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<EmbeddedResource Include="UI\Resources\InGameButton.png" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<None Include="Properties\Localize.de.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.es-ES.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.fr.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.it.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.ja.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.ko.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.nl.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.pl.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.pt-BR.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.resx">
-			<Generator>LocalizeGenerator</Generator>
-			<CustomToolNamespace>GameAnarchy</CustomToolNamespace>
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-			<LastGenOutput>Localize.cs</LastGenOutput>
-		</None>
-		<None Include="Properties\Localize.ru.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.sk.resx">
-			<SubType>Designer</SubType>
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.th.resx">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.tr.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.zh-CN.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Include="Properties\Localize.zh-TW.resx">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
-
+	<Import Project="..\..\..\..\CSShared\CSShared.Patch\CSShared.Patch.projitems" Label="Shared" />
+	<Import Project="..\..\..\..\CSShared\CSShared\CSShared.projitems" Label="Shared" />
+	<Import Project="..\..\..\..\CSShared\CSShared.ToolButton\CSShared.ToolButton.projitems" Label="Shared" />
+	
 	<ItemGroup>
 		<PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
+		<PackageReference Include="JsonFx" Version="2.0.1209.2802" />
 		<PackageReference Include="UnifiedUILib" Version="2.2.12" />
 	</ItemGroup>
 
-	<Target Name="PdbToMdb" AfterTargets="Build">
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="ColossalManaged">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="ICities">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Localization\**\*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="PreviewImage.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<Target Name="DeployToLocal" AfterTargets="Build">
 		<PropertyGroup>
 			<LocalDir>$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Addons\Mods\$(MSBuildProjectName)</LocalDir>
-			<RootNamespace>GameAnarchy</RootNamespace>
 		</PropertyGroup>
-		<ItemGroup>
-			<LocalizeToMove Include="$(OutDir)Properties\*.resx" />
-		</ItemGroup>
-		<Move SourceFiles="@(LocalizeToMove)" DestinationFiles="@(LocalizeToMove->'$(OutDir)Locale\%(Filename)%(Extension)')" />
-		<RemoveDir Directories="$(OutDir)Properties" />
-		<ItemGroup>
-			<CommonLocalizeToMove Include="$(OutDir)*.resx" />
-		</ItemGroup>
-	</Target>
-
-	<Target Name="DeployToLocal" AfterTargets="PdbToMdb">
-		<Message Text="Deploy to local $(LocalDir)" Importance="high" />
-		<RemoveDir Directories="$(LocalDir)" />
+		<Message Text="Clear the target directory: $(LocalDir)" Importance="high" />
+		<RemoveDir Directories="$(LocalDir)"></RemoveDir>
 		<ItemGroup>
 			<FilesToCopy Include="$(OutDir)\**\*.*" />
 		</ItemGroup>
+		<Message Text="Deploy to local $(LocalDir)" Importance="high" />
 		<Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(LocalDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
 	</Target>
-
-	<ItemGroup>
-	  <Reference Include="Assembly-CSharp">
-	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="ColossalManaged">
-	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="ICities">
-	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="UnityEngine">
-	    <HintPath>..\..\..\..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="Properties\Localize.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localize.resx</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<Import Project="..\..\..\..\MbyronModsCommon\MbyronModsCommon\MbyronModsCommon.projitems" Label="Shared" />
-
-	<Import Project="..\..\..\..\MbyronModsCommon\ToolButtonShared\ToolButtonShared.projitems" Label="Shared" />
 
 </Project>

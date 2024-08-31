@@ -1,9 +1,10 @@
-﻿namespace GameAnarchy;
+﻿using CSShared.Manager;
 
-public partial class Manager : SingletonManager<Manager> {
-    public override bool IsInit { get; set; }
+namespace GameAnarchy.Managers;
 
-    public override void DeInit() { }
-
-    public override void Init() { }
+public partial class Manager : IManager {
+    public void OnCreated() { }
+    public void OnReleased() { }
+    public void Reset() { }
+    public void Update() { }
 }

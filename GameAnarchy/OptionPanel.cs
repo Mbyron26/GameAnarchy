@@ -1,10 +1,15 @@
-﻿namespace GameAnarchy;
-using ColossalFramework.UI;
-using System.Collections.Generic;
-using MbyronModsCommon.UI;
-using UnityEngine;
+﻿using ColossalFramework.UI;
+using CSShared.Common;
+using CSShared.Manager;
+using CSShared.UI;
+using CSShared.UI.ControlPanel;
+using CSShared.UI.OptionPanel;
+using GameAnarchy.Managers;
 using GameAnarchy.UI;
-using ModLocalize = Localize;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace GameAnarchy;
 
 public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private CustomUIToggleButton VanillaUnlimitedMoney;
@@ -15,20 +20,20 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     protected CustomUIScrollablePanel DebugContainer { get; private set; }
 #endif
     private string[] MilestoneLevelNames => new string[] {
-            ModLocalize.MilestonelevelName_Vanilla,
-            ModLocalize.MilestonelevelName_LittleHamlet,
-            ModLocalize.MilestonelevelName_WorthyVillage,
-            ModLocalize.MilestonelevelName_TinyTown,
-            ModLocalize.MilestonelevelName_BoomTown,
-            ModLocalize.MilestonelevelName_BusyTown,
-            ModLocalize.MilestonelevelName_BigTown,
-            ModLocalize.MilestonelevelName_SmallCity,
-            ModLocalize.MilestonelevelName_BigCity,
-            ModLocalize.MilestonelevelName_GrandCity,
-            ModLocalize.MilestonelevelName_CapitalCity,
-            ModLocalize.MilestonelevelName_ColossalCity,
-            ModLocalize.MilestonelevelName_Metropolis,
-            ModLocalize.MilestonelevelName_Megalopolis
+            Localize("MilestonelevelName_Vanilla"),
+            Localize("MilestonelevelName_LittleHamlet"),
+            Localize("MilestonelevelName_WorthyVillage"),
+            Localize("MilestonelevelName_TinyTown"),
+            Localize("MilestonelevelName_BoomTown"),
+            Localize("MilestonelevelName_BusyTown"),
+            Localize("MilestonelevelName_BigTown"),
+            Localize("MilestonelevelName_SmallCity"),
+            Localize("MilestonelevelName_BigCity"),
+            Localize("MilestonelevelName_GrandCity"),
+            Localize("MilestonelevelName_CapitalCity"),
+            Localize("MilestonelevelName_ColossalCity"),
+            Localize("MilestonelevelName_Metropolis"),
+            Localize("MilestonelevelName_Megalopolis")
         };
 #if BETA_DEBUG
     protected override void AddExtraContainer() {
@@ -41,8 +46,8 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     }
 #endif
     protected override void AddExtraModInfoProperty() {
-        OptionPanelHelper.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"{ModLocalize.FastReturn}");
-        OptionPanelHelper.AddLabel($"{CommonLocalize.OptionPanel_BuiltinFunction}", $"{ModLocalize.SortSettings}");
+        OptionPanelHelper.AddLabel($"{Localize("OptionPanel_BuiltinFunction")}", $"{Localize("FastReturn")}");
+        OptionPanelHelper.AddLabel($"{Localize("OptionPanel_BuiltinFunction")}", $"{Localize("SortSettings")}");
     }
 
     protected override void FillGeneralContainer() {
@@ -58,41 +63,41 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
         if (!SingletonMod<Mod>.Instance.IsLevelLoaded) {
             return;
         }
-        SingletonTool<ToolButtonManager>.Instance.Disable();
-        SingletonTool<ToolButtonManager>.Instance.Enable();
+        ManagerPool.GetOrCreateManager<ToolButtonManager>().Disable();
+        ManagerPool.GetOrCreateManager<ToolButtonManager>().Enable();
     }
 
     protected override void FillHotkeyContainer() {
         base.FillHotkeyContainer();
-        OptionPanelHelper.AddGroup(HotkeyContainer, CommonLocalize.OptionPanel_Hotkeys);
-        OptionPanelHelper.AddKeymapping(ModLocalize.AddMoney, Config.Instance.AddCash, ModLocalize.AddMoneyTooltip);
-        OptionPanelHelper.AddKeymapping(ModLocalize.DecreaseMoney, Config.Instance.DecreaseMoney, ModLocalize.AddMoneyTooltip);
-        OptionPanelHelper.AddKeymapping(CommonLocalize.ShowControlPanel, Config.Instance.ControlPanelHotkey);
+        OptionPanelHelper.AddGroup(HotkeyContainer, Localize("OptionPanel_Hotkeys"));
+        OptionPanelHelper.AddKeymapping(Localize("AddMoney"), Config.Instance.AddCash, Localize("AddMoneyTooltip"));
+        OptionPanelHelper.AddKeymapping(Localize("DecreaseMoney"), Config.Instance.DecreaseMoney, Localize("AddMoneyTooltip"));
+        OptionPanelHelper.AddKeymapping(Localize("ShowControlPanel"), Config.Instance.ControlPanelHotkey);
         OptionPanelHelper.Reset();
     }
     private void AddOptimizeOptionsProperty() {
-        OptionPanelHelper.AddGroup(GeneralContainer, ModLocalize.OptimizeOptions);
-        OptionPanelHelper.AddToggle(Config.Instance.EnabledAchievements, ModLocalize.EnableAchievements, ModLocalize.AllowsDynamicToggling, _ => {
+        OptionPanelHelper.AddGroup(GeneralContainer, Localize("OptimizeOptions"));
+        OptionPanelHelper.AddToggle(Config.Instance.EnabledAchievements, Localize("EnableAchievements"), Localize("AllowsDynamicToggling"), _ => {
             Config.Instance.EnabledAchievements = _;
-            SingletonManager<Manager>.Instance.UpdateAchievements();
+            ManagerPool.GetOrCreateManager<Manager>().UpdateAchievements();
         });
-        OptionPanelHelper.AddToggle(Config.Instance.EnabledSkipIntro, ModLocalize.EnabledSkipIntro, null, _ => Config.Instance.EnabledSkipIntro = _);
-        OptionPanelHelper.AddToggle(Config.Instance.OptionPanelCategoriesUpdated, ModLocalize.OptionPanelCategoriesUpdated, ModLocalize.OptionPanelCategoriesUpdatedMinor, _ => Config.Instance.OptionPanelCategoriesUpdated = _);
-        OptionPanelHelper.AddSlider(Config.Instance.OptionPanelCategoriesHorizontalOffset.ToString(), ModLocalize.OptionPanelCategoriesHorizontalOffsetMinor, 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
+        OptionPanelHelper.AddToggle(Config.Instance.EnabledSkipIntro, Localize("EnabledSkipIntro"), null, _ => Config.Instance.EnabledSkipIntro = _);
+        OptionPanelHelper.AddToggle(Config.Instance.OptionPanelCategoriesUpdated, Localize("OptionPanelCategoriesUpdated"), Localize("OptionPanelCategoriesUpdatedMinor"), _ => Config.Instance.OptionPanelCategoriesUpdated = _);
+        OptionPanelHelper.AddSlider(Config.Instance.OptionPanelCategoriesHorizontalOffset.ToString(), Localize("OptionPanelCategoriesHorizontalOffsetMinor"), 0, 600f, 5f, Config.Instance.OptionPanelCategoriesHorizontalOffset, new Vector2(700, 16), (_) => {
             Config.Instance.OptionPanelCategoriesHorizontalOffset = (uint)_;
-            SingletonManager<Manager>.Instance.SetCategoriesOffset();
-        }, ModLocalize.OptionsPanelHorizontalOffset + ": ");
+            ManagerPool.GetOrCreateManager<Manager>().SetCategoriesOffset();
+        }, Localize("OptionsPanelHorizontalOffset") + ": ");
         OptionPanelHelper.Reset();
     }
 
     private readonly List<UIComponent> CustomUnlockPanels = new();
     private void AddUnlockOptionsProperty() {
-        OptionPanelHelper.AddGroup(GeneralContainer, ModLocalize.UnlockOptions);
-        UnlockAll = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.EnabledUnlockAll, ModLocalize.UnlockAll, ModLocalize.UnlockAllMinor, _ => {
+        OptionPanelHelper.AddGroup(GeneralContainer, Localize("UnlockOptions"));
+        UnlockAll = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.EnabledUnlockAll, Localize("UnlockAll"), Localize("UnlockAllMinor"), _ => {
             Config.Instance.EnabledUnlockAll = _;
             if (_) CustomUnlock.IsOn = false;
         }).Child;
-        CustomUnlock = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.CustomUnlock, ModLocalize.CustomUnlock, ModLocalize.CustomUnlockMinor, _ => {
+        CustomUnlock = (CustomUIToggleButton)OptionPanelHelper.AddToggle(Config.Instance.CustomUnlock, Localize("CustomUnlock"), Localize("CustomUnlockMinor"), _ => {
             Config.Instance.CustomUnlock = _;
             if (_) UnlockAll.IsOn = false;
             if (CustomUnlockPanels.Count > 0) {
@@ -102,16 +107,16 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
             }
         }).Child;
 
-        CustomUnlockPanels.Add(OptionPanelHelper.AddDropDown(ModLocalize.MilestonelevelName_MilestoneUnlockLevel, null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, (_) => Config.Instance.MilestoneLevel = _, new RectOffset(20, 0, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockBasicRoads, ModLocalize.UnlockBasicRoads, ModLocalize.UnlockBasicRoadsMinor, _ => Config.Instance.UnlockBasicRoads = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockInfoViews, ModLocalize.UnlockInfoViews, null, _ => Config.Instance.UnlockInfoViews = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockAllRoads, ModLocalize.UnlockAllRoads, null, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPublicTransport, ModLocalize.UnlockPublicTransport, null, _ => Config.Instance.UnlockPublicTransport = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockTrainTrack, ModLocalize.UnlockTrainTrack, null, _ => Config.Instance.UnlockTrainTrack = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockMetroTrack, ModLocalize.UnlockMetroTrack, null, _ => Config.Instance.UnlockMetroTrack = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPolicies, ModLocalize.UnlockPolicies, null, _ => Config.Instance.UnlockPolicies = _, new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockUniqueBuildings, ModLocalize.UnlockUniqueBuilding, ModLocalize.UnlockUniqueBuildingMinor, _ => Config.Instance.UnlockUniqueBuildings = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
-        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockLandscaping, ModLocalize.UnlockLandscaping, null, _ => Config.Instance.UnlockLandscaping = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddDropDown(Localize("MilestonelevelName_MilestoneUnlockLevel"), null, MilestoneLevelNames, Config.Instance.MilestoneLevel, 250, 30, (_) => Config.Instance.MilestoneLevel = _, new RectOffset(20, 0, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockBasicRoads, Localize("UnlockBasicRoads"), Localize("UnlockBasicRoadsMinor"), _ => Config.Instance.UnlockBasicRoads = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockInfoViews, Localize("UnlockInfoViews"), null, _ => Config.Instance.UnlockInfoViews = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockAllRoads, Localize("UnlockAllRoads"), null, _ => Config.Instance.UnlockAllRoads = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPublicTransport, Localize("UnlockPublicTransport"), null, _ => Config.Instance.UnlockPublicTransport = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockTrainTrack, Localize("UnlockTrainTrack"), null, _ => Config.Instance.UnlockTrainTrack = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockMetroTrack, Localize("UnlockMetroTrack"), null, _ => Config.Instance.UnlockMetroTrack = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockPolicies, Localize("UnlockPolicies"), null, _ => Config.Instance.UnlockPolicies = _, new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockUniqueBuildings, Localize("UnlockUniqueBuilding"), Localize("UnlockUniqueBuildingMinor"), _ => Config.Instance.UnlockUniqueBuildings = _, new RectOffset(20, 10, 0, 0), new RectOffset(20, 10, 0, 0)));
+        CustomUnlockPanels.Add(OptionPanelHelper.AddToggle(Config.Instance.UnlockLandscaping, Localize("UnlockLandscaping"), null, _ => Config.Instance.UnlockLandscaping = _, new RectOffset(20, 10, 0, 0)));
         if (CustomUnlockPanels.Count > 0)
             CustomUnlockPanels.ForEach(_ => _.isEnabled = CustomUnlock.IsOn);
         OptionPanelHelper.Reset();
@@ -120,34 +125,34 @@ public class OptionPanel : OptionPanelBase<Mod, Config, OptionPanel> {
     private readonly List<UIComponent> CashAnarchyPanels = new();
     private UIComponent InitalCashPanel;
     private void AddResourceOptionsProperty() {
-        OptionPanelHelper.AddGroup(GeneralContainer, ModLocalize.ResourceOptions);
-        VanillaUnlimitedMoney = OptionPanelHelper.AddToggle(Config.Instance.UnlimitedMoney, ModLocalize.VanillaUnlimitedMoneyMode, ModLocalize.VanillaUnlimitedMoneyModeMinor, _ => {
+        OptionPanelHelper.AddGroup(GeneralContainer, Localize("ResourceOptions"));
+        VanillaUnlimitedMoney = OptionPanelHelper.AddToggle(Config.Instance.UnlimitedMoney, Localize("VanillaUnlimitedMoneyMode"), Localize("VanillaUnlimitedMoneyModeMinor"), _ => {
             Config.Instance.UnlimitedMoney = _;
             if (_) CashAnarchy.IsOn = false;
         }).Child as CustomUIToggleButton;
-        CashAnarchy = OptionPanelHelper.AddToggle(Config.Instance.CashAnarchy, ModLocalize.MoneyAnarchyMode, ModLocalize.MoneyAnarchyModeMinor, _ => {
+        CashAnarchy = OptionPanelHelper.AddToggle(Config.Instance.CashAnarchy, Localize("MoneyAnarchyMode"), Localize("MoneyAnarchyModeMinor"), _ => {
             Config.Instance.CashAnarchy = _;
             if (_) VanillaUnlimitedMoney.IsOn = false;
             foreach (var item in CashAnarchyPanels) {
                 item.isEnabled = _;
             }
         }).Child as CustomUIToggleButton;
-        CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(ModLocalize.AddMoneyThreshold, null, Config.Instance.DefaultMinAmount, 100, 100000000, (v) => Config.Instance.DefaultMinAmount = (int)v, majorOffset: new(20, 0, 0, 0)));
-        CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(ModLocalize.AddMoneyAmount, null, Config.Instance.DefaultGetCash, 100, 100000000, (_) => Config.Instance.DefaultGetCash = (int)_, majorOffset: new(20, 0, 0, 0)));
+        CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(Localize("AddMoneyThreshold"), null, Config.Instance.DefaultMinAmount, 100, 100000000, (v) => Config.Instance.DefaultMinAmount = (int)v, majorOffset: new(20, 0, 0, 0)));
+        CashAnarchyPanels.Add(OptionPanelHelper.AddField<UILongValueField, long>(Localize("AddMoneyAmount"), null, Config.Instance.DefaultGetCash, 100, 100000000, (_) => Config.Instance.DefaultGetCash = (int)_, majorOffset: new(20, 0, 0, 0)));
         foreach (var item in CashAnarchyPanels) {
             item.isEnabled = Config.Instance.CashAnarchy;
         }
-        OptionPanelHelper.AddToggle(Config.Instance.EnableStartMoney, ModLocalize.StartMoneyMajor, ModLocalize.StartMoneyMinor, _ => {
+        OptionPanelHelper.AddToggle(Config.Instance.EnableStartMoney, Localize("StartMoneyMajor"), Localize("StartMoneyMinor"), _ => {
             Config.Instance.EnableStartMoney = _;
             InitalCashPanel.isEnabled = Config.Instance.EnableStartMoney;
         });
-        InitalCashPanel = OptionPanelHelper.AddField<UILongValueField, long>(ModLocalize.Amount, null, Config.Instance.StartMoneyAmount, 100, 100000000, (v) => Config.Instance.StartMoneyAmount = v, majorOffset: new(20, 0, 0, 0));
+        InitalCashPanel = OptionPanelHelper.AddField<UILongValueField, long>(Localize("Amount"), null, Config.Instance.StartMoneyAmount, 100, 100000000, (v) => Config.Instance.StartMoneyAmount = v, majorOffset: new(20, 0, 0, 0));
         InitalCashPanel.isEnabled = Config.Instance.EnableStartMoney;
         OptionPanelHelper.Reset();
     }
     private void AddOtherFunctionProperty() {
         OptionPanelHelper.AddGroup(GeneralContainer, null);
-        OptionPanelHelper.AddButton(ModLocalize.OtherFunctionsMajor, ModLocalize.OtherFunctionsMinor, ModLocalize.OpenControlPanel, null, 30, () => {
+        OptionPanelHelper.AddButton(Localize("OtherFunctionsMajor"), Localize("OtherFunctionsMinor"), Localize("OpenControlPanel"), null, 30, () => {
             ControlPanelManager<Mod, ControlPanel>.CallPanel();
         });
         OptionPanelHelper.Reset();

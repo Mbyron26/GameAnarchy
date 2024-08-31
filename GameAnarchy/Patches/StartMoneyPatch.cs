@@ -1,5 +1,6 @@
 ﻿namespace GameAnarchy.Patches;
 using ColossalFramework;
+using CSShared.Patch;
 using HarmonyLib;
 
 public static class UpdateDataStartMoneyPatch {

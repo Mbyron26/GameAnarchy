@@ -1,14 +1,15 @@
 ﻿namespace GameAnarchy;
 using ColossalFramework;
+using CSShared.Debug;
 using ICities;
 
 public class OilAndOreResourceExtension : ResourceExtensionBase {
     public override void OnCreated(IResource resource) {
         base.OnCreated(resource);
-        Mod.Log.Info("Call resource extension OnCreated");
+        LogManager.GetLogger().Info("Call resource extension OnCreated");
     }
 
-    public override void OnReleased() => Mod.Log.Info("Call resource extension OnReleased");
+    public override void OnReleased() => LogManager.GetLogger().Info("Call resource extension OnReleased");
 
     public override void OnAfterResourcesModified(int x, int z, NaturalResource type, int amount) {
         if (amount < 0) {

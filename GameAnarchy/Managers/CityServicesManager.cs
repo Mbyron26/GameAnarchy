@@ -1,7 +1,8 @@
-﻿namespace GameAnarchy;
-using ColossalFramework;
+﻿using ColossalFramework;
 using System;
 using UnityEngine;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     private static readonly ushort numBuildingChunks = 32;

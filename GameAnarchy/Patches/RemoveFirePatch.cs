@@ -1,5 +1,9 @@
-﻿namespace GameAnarchy.Patches;
+﻿using CSShared.Manager;
+using CSShared.Patch;
+using GameAnarchy.Managers;
 using HarmonyLib;
+
+namespace GameAnarchy.Patches;
 
 public static class RemoveFirePatch {
     public static void Patch(HarmonyPatcher harmonyPatcher) {
@@ -21,9 +25,9 @@ public static class RemoveFirePatch {
         harmonyPatcher.PostfixPatching(AccessTools.Method(typeof(AirportBuildingAI), "GetFireParameters"), AccessTools.Method(typeof(RemoveFirePatch), nameof(AirportBuildingAIGetFireParametersPostfix)));
     }
 
-    public static bool CommonBuildingAITrySpreadFirePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref SingletonManager<Manager>.Instance.buildingFireSpreadCount, ref SingletonManager<Manager>.Instance.buildingFireSpreadAllowed);
-    public static bool TreeManagerTrySpreadFirePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref SingletonManager<Manager>.Instance.buildingFireSpreadCount, ref SingletonManager<Manager>.Instance.buildingFireSpreadAllowed);
-    public static bool TreeManagerBurnTreePrefix() => SingletonManager<Manager>.Instance.GetFireProbability(Config.Instance.TreeSpreadFireProbability, ref SingletonManager<Manager>.Instance.treeFireSpreadCount, ref SingletonManager<Manager>.Instance.treeFireSpreadAllowed);
+    public static bool CommonBuildingAITrySpreadFirePrefix() => ManagerPool.GetOrCreateManager<Manager>().GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref ManagerPool.GetOrCreateManager<Manager>().buildingFireSpreadCount, ref ManagerPool.GetOrCreateManager<Manager>().buildingFireSpreadAllowed);
+    public static bool TreeManagerTrySpreadFirePrefix() => ManagerPool.GetOrCreateManager<Manager>().GetFireProbability(Config.Instance.BuildingSpreadFireProbability, ref ManagerPool.GetOrCreateManager<Manager>().buildingFireSpreadCount, ref ManagerPool.GetOrCreateManager<Manager>().buildingFireSpreadAllowed);
+    public static bool TreeManagerBurnTreePrefix() => ManagerPool.GetOrCreateManager<Manager>().GetFireProbability(Config.Instance.TreeSpreadFireProbability, ref ManagerPool.GetOrCreateManager<Manager>().treeFireSpreadCount, ref ManagerPool.GetOrCreateManager<Manager>().treeFireSpreadAllowed);
 
     public static void PlayerBuildingAIGetFireParametersPostfix(ref int fireHazard, ref int fireSize, ref int fireTolerance, ref bool __result) {
         if (Config.Instance.RemovePlayerBuildingFire) {

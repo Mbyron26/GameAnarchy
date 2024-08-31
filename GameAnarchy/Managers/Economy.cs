@@ -1,8 +1,9 @@
-﻿namespace GameAnarchy;
-using ColossalFramework;
+﻿using ColossalFramework;
+using CSShared.Debug;
 using System;
 using System.Reflection;
 
+namespace GameAnarchy.Managers;
 public partial class Manager {
     private DateTime NextPayment { get; set; } = DateTime.MinValue;
 
@@ -29,10 +30,10 @@ public partial class Manager {
             getCurrentMoney ??= (() => economyManager.LastCashAmount);
             if (getCurrentMoney() >= Config.Instance.DefaultMinAmount * 100) return;
             AddLoanAmount(economyManager, Config.Instance.DefaultGetCash);
-            Mod.Log.Info($"AutoAddMoney | GetMoney: {Config.Instance.DefaultGetCash * 100}, LastCashAmount: {economyManager.LastCashAmount}");
+            LogManager.GetLogger().Info($"AutoAddMoney | GetMoney: {Config.Instance.DefaultGetCash * 100}, LastCashAmount: {economyManager.LastCashAmount}");
         }
         else {
-            Mod.Log.Info($"Auto add money failed, EconomyManager doesn't exist.");
+            LogManager.GetLogger().Info($"Auto add money failed, EconomyManager doesn't exist.");
         }
     }
 
@@ -41,10 +42,10 @@ public partial class Manager {
             return;
         if (Singleton<EconomyManager>.exists) {
             typeof(EconomyManager).GetField("m_cashAmount", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(Singleton<EconomyManager>.instance, Config.Instance.StartMoneyAmount * 100);
-            Mod.Log.Info($"Start money enabled, set start money to {Config.Instance.StartMoneyAmount}");
+            LogManager.GetLogger().Info($"Start money enabled, set start money to {Config.Instance.StartMoneyAmount}");
         }
         else {
-            Mod.Log.Info($"Set start money failed, EconomyManager doesn't exist.");
+            LogManager.GetLogger().Info($"Set start money failed, EconomyManager doesn't exist.");
         }
     }
 
@@ -56,12 +57,12 @@ public partial class Manager {
         if (!Config.Instance.CashAnarchy)
             return;
         if (!Singleton<EconomyManager>.exists) {
-            Mod.Log.Error("Couldn't modify manually, EconomyManager doesn't exist");
+            LogManager.GetLogger().Error("Couldn't modify manually, EconomyManager doesn't exist");
             return;
         }
         var economyManager = Singleton<EconomyManager>.instance;
         AddLoanAmount(economyManager, amount);
-        Mod.Log.Info($"ModifyMoney: {amount * 100}, LastCashAmount: {economyManager.LastCashAmount}");
+        LogManager.GetLogger().Info($"ModifyMoney: {amount * 100}, LastCashAmount: {economyManager.LastCashAmount}");
     }
 
     private void AddLoanAmount(EconomyManager economyManager, int amount) => economyManager.AddResource(EconomyManager.Resource.LoanAmount, amount * 100, ItemClass.Service.None, ItemClass.SubService.None, ItemClass.Level.None);
