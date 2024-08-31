@@ -1,23 +1,28 @@
-﻿namespace GameAnarchy;
+﻿using CSShared.Extension;
+using CSShared.Manager;
+using CSShared.UI.ControlPanel;
+using GameAnarchy.Managers;
 using GameAnarchy.UI;
 using ICities;
 
+namespace GameAnarchy;
+
 public class LoadingExtension : ModLoadingExtension<Mod> {
     public override void LevelLoaded(LoadMode mode) {
-        SingletonManager<Manager>.Instance.SetStartMoney();
-        SingletonManager<Manager>.Instance.InitAchievements(mode);
+        ManagerPool.GetOrCreateManager<Manager>().SetStartMoney();
+        ManagerPool.GetOrCreateManager<Manager>().InitAchievements(mode);
         if (mode == LoadMode.NewGame || mode == LoadMode.LoadGame || mode == LoadMode.NewMap || mode == LoadMode.LoadMap || mode == LoadMode.NewAsset || mode == LoadMode.LoadAsset) {
-            SingletonManager<ToolButtonManager>.Instance.Init();
-            ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
+            ManagerPool.GetOrCreateManager<ToolButtonManager>().Enable();
+            ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged += (_) => ManagerPool.GetOrCreateManager<ToolButtonManager>().UUIButtonIsPressed = _;
         }
     }
 
     public override void LevelUnloading() {
-        SingletonManager<Manager>.Instance.DeInitAchievements();
-        SingletonManager<ToolButtonManager>.Instance.DeInit();
-        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged -= (_) => SingletonManager<ToolButtonManager>.Instance.UUIButtonIsPressed = _;
+        ManagerPool.GetOrCreateManager<Manager>().DeInitAchievements();
+        ManagerPool.GetOrCreateManager<ToolButtonManager>().Disable();
+        ControlPanelManager<Mod, ControlPanel>.EventOnVisibleChanged -= (_) => ManagerPool.GetOrCreateManager<ToolButtonManager>().UUIButtonIsPressed = _;
     }
 
-    public override void Released() => SingletonManager<Manager>.Instance.OutputFireSpreadCount();
+    public override void Released() => ManagerPool.GetOrCreateManager<Manager>().OutputFireSpreadCount();
 
 }

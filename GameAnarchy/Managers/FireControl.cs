@@ -1,5 +1,9 @@
-﻿namespace GameAnarchy;
-using ColossalFramework;
+﻿using ColossalFramework;
+using CSShared.Debug;
+using CSShared.Localization;
+using CSShared.UI.MessageBoxes;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     public uint buildingFireSpreadCount;
@@ -7,11 +11,11 @@ public partial class Manager {
     public uint treeFireSpreadCount;
     public uint treeFireSpreadAllowed;
 
-    public void PutOutBuringBuildingsButtonClicked() => MessageBox.Show<TwoButtonMessageBox>().Init(Localize.PutOutBurningBuildings, Localize.PutOutBurningBuildingsDescription, PutOutBuringBuildings);
+    public void PutOutBuringBuildingsButtonClicked() => MessageBox.Show<TwoButtonMessageBox>().Init(ModLocalizationManager.Localize("PutOutBurningBuildings"), ModLocalizationManager.Localize("PutOutBurningBuildingsDescription"), PutOutBuringBuildings);
 
     public void PutOutBuringBuildings() {
         if (!Singleton<BuildingManager>.exists) {
-            Mod.Log.Error("BuildingManager does not exist, unable to call PutOutBuringBuildings");
+            LogManager.GetLogger().Error("BuildingManager does not exist, unable to call PutOutBuringBuildings");
             return;
         }
         var buffer = Singleton<BuildingManager>.instance.m_buildings.m_buffer;
@@ -21,11 +25,11 @@ public partial class Manager {
                 continue;
             }
             buffer[i].m_fireIntensity = 0;
-            Mod.Log.Debug($"Put out buring buildings, ID: {buffer[i].m_buildIndex}, raw fireIntensity: {temp}");
+            LogManager.GetLogger().Debug($"Put out buring buildings, ID: {buffer[i].m_buildIndex}, raw fireIntensity: {temp}");
         }
     }
 
-    public void OutputFireSpreadCount() => Mod.Log.Debug($"Building fire spread count: {buildingFireSpreadCount}, building fire spread allowed: {buildingFireSpreadAllowed}, tree fire spread count: {treeFireSpreadCount}, tree fire spread allowed: {treeFireSpreadAllowed}");
+    public void OutputFireSpreadCount() => LogManager.GetLogger().Debug($"Building fire spread count: {buildingFireSpreadCount}, building fire spread allowed: {buildingFireSpreadAllowed}, tree fire spread count: {treeFireSpreadCount}, tree fire spread allowed: {treeFireSpreadAllowed}");
 
     public bool GetFireProbability(uint probaility, ref uint count, ref uint allowed) {
         if (Singleton<SimulationManager>.exists) {
@@ -36,7 +40,7 @@ public partial class Manager {
             }
             return randomValue <= probaility;
         }
-        Mod.Log.Error("SimulationManager does not exist.");
+        LogManager.GetLogger().Error("SimulationManager does not exist.");
         return false;
     }
 }

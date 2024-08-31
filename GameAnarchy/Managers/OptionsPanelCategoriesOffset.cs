@@ -1,6 +1,7 @@
-﻿namespace GameAnarchy;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
 using UnityEngine;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     public float MainPanelWidth { get; set; } = 1074f;

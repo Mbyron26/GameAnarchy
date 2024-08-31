@@ -1,40 +1,48 @@
-﻿namespace GameAnarchy;
-using ColossalFramework.Plugins;
-using ColossalFramework;
+﻿using ColossalFramework.Globalization;
+using CSShared.Common;
+using CSShared.Debug;
+using CSShared.Localization;
+using CSShared.Manager;
+using CSShared.Tools;
+using CSShared.UI;
+using CSShared.UI.MessageBoxes;
 using ICities;
 using System.Collections.Generic;
-using ColossalFramework.Globalization;
-using MbyronModsCommon;
-using MbyronModsCommon.UI;
 using System.Linq;
 
-public partial class Manager {
-    public void InitBuildinModChecker() {
-        var result = HandleBuiltinConflictMods();
+namespace GameAnarchy.Managers;
+
+public class BuiltInModManager : IManager {
+    public void OnCreated() {
+        var result = HandleBuiltInConflictMods();
         if (result.Any()) {
-            MessageBox.Show<BuiltinCompatibilityMessageBox>().Init(result);
+            MessageBox.Show<BuiltInCompatibilityMessageBox>().Init(result);
         }
     }
 
-    private List<BuiltinConflictModInfo> HandleBuiltinConflictMods() {
+    public void OnReleased() { }
+    public void Reset() { }
+    public void Update() { }
+
+    private List<BuiltinConflictModInfo> HandleBuiltInConflictMods() {
         var list = new List<BuiltinConflictModInfo>();
-        foreach (var info in Singleton<PluginManager>.instance.GetPluginsInfoSortByName()) {
+        foreach (var info in PluginTools.GetPluginsInfoSortByName()) {
             if (info is not null && info.userModInstance is IUserMod && info.isBuiltin && info.isEnabled) {
                 switch (info.name) {
                     case "UnlockAll":
-                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlock All"), Localize.UnlockAllConflict));
+                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlock All"), ModLocalizationManager.Localize("UnlockAllConflict")));
                         info.isEnabled = false;
-                        Mod.Log.Info("Disabled builtin mod: UnlockAll");
+                        LogManager.GetLogger().Info("Disabled builtIn mod: UnlockAll");
                         break;
                     case "UnlimitedOilAndOre":
-                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Oil And Ore"), Localize.UnlimitedOilAndOreConflict));
+                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Oil And Ore"), ModLocalizationManager.Localize("UnlimitedOilAndOreConflict")));
                         info.isEnabled = false;
-                        Mod.Log.Info("Disabled builtin mod: UnlimitedOilAndOre");
+                        LogManager.GetLogger().Info("Disabled builtIn mod: UnlimitedOilAndOre");
                         break;
                     case "UnlimitedMoney":
-                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Money"), Localize.UnlimitedMoneyConflict));
+                        list.Add(new BuiltinConflictModInfo(info.name, Locale.Get("MOD_NAME", "Unlimited Money"), ModLocalizationManager.Localize("UnlimitedMoneyConflict")));
                         info.isEnabled = false;
-                        Mod.Log.Info("Disabled builtin mod: UnlimitedMoney");
+                        LogManager.GetLogger().Info("Disabled builtIn mod: UnlimitedMoney");
                         break;
                 }
             }
@@ -43,17 +51,17 @@ public partial class Manager {
     }
 }
 
-public class BuiltinCompatibilityMessageBox : MessageBoxBase {
-    public void Init(List<BuiltinConflictModInfo> builtinConflictModInfo) {
-        TitleText = $"{ModMainInfo<Mod>.ModName} {GameAnarchy.Localize.BuiltinModCheck}";
-        AddLabelInMainPanel(GameAnarchy.Localize.BuiltinModWarning);
-        builtinConflictModInfo.ForEach(a => AddItem(a));
-        AddButton(CommonLocalize.MessageBox_OK, Close);
+public class BuiltInCompatibilityMessageBox : MessageBoxBase {
+    public void Init(List<BuiltinConflictModInfo> builtInConflictModInfo) {
+        TitleText = $"{SingletonMod<Mod>.Instance.ModName} {Localize("BuiltinModCheck")}";
+        AddLabelInMainPanel(Localize("BuiltinModWarning"));
+        builtInConflictModInfo.ForEach(a => AddItem(a));
+        AddButton(Localize("MessageBox_OK"), Close);
     }
 
     private AlphaSinglePropertyPanel AddItem(BuiltinConflictModInfo mod) {
         var panel = MainPanel.AddUIComponent<AlphaSinglePropertyPanel>();
-        panel.Atlas = CustomUIAtlas.MbyronModsAtlas;
+        panel.Atlas = CustomUIAtlas.CSSharedAtlas;
         panel.BgSprite = CustomUIAtlas.RoundedRectangle3;
         panel.BgNormalColor = CustomUIColor.CPPrimaryBg;
         panel.Padding = new UnityEngine.RectOffset(10, 10, 10, 10);

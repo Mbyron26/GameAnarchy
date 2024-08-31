@@ -1,6 +1,9 @@
-﻿namespace GameAnarchy;
+﻿using CSShared.Debug;
+using CSShared.Tools;
 using ICities;
 using System.Reflection;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     private ItemClass.SubService[] PublicTransportSubService { get; set; } = new ItemClass.SubService[]  {
@@ -116,7 +119,7 @@ public partial class Manager {
                 UnlockManager.instance.m_properties.m_InfoModeMilestones[(int)item] = null;
             }
         }
-        Mod.Log.Info("Custom unlock: Info Views");
+        LogManager.GetLogger().Info("Custom unlock: Info Views");
     }
 
     public void UnlockPolicies() {
@@ -150,7 +153,7 @@ public partial class Manager {
                 cityPlanningPanel[i] = null;
             }
         }
-        Mod.Log.Info("Custom unlock: Policies");
+        LogManager.GetLogger().Info("Custom unlock: Policies");
     }
 
     public void UnlockUniqueBuildings() {
@@ -165,7 +168,7 @@ public partial class Manager {
                 UnlockManager.instance.m_properties.m_FeatureMilestones[(int)feature] = null;
             };
         }
-        Mod.Log.Info("Custom unlock: Unique Buildings");
+        LogManager.GetLogger().Info("Custom unlock: Unique Buildings");
     }
 
     public void UnlockAllRoads() {
@@ -184,17 +187,17 @@ public partial class Manager {
                 buildingInfo.m_UnlockMilestone = null;
                 var intersectionAI = buildingInfo.m_buildingAI as IntersectionAI;
                 if (intersectionAI is not null) {
-                    UnityHelper.SetFieldValue<MilestoneInfo>(intersectionAI, "m_cachedUnlockMilestone", BindingFlags.NonPublic | BindingFlags.Instance, null);
+                    TypeTools.SetFieldValue<MilestoneInfo>(intersectionAI, "m_cachedUnlockMilestone", BindingFlags.NonPublic | BindingFlags.Instance, null);
                 }
             }
         }
-        Mod.Log.Info("Custom unlock: All Roads");
+        LogManager.GetLogger().Info("Custom unlock: All Roads");
     }
 
     public void UnlockMilestone(IMilestones milestones) {
         if (Config.Instance.MilestoneLevel != 0) {
             milestones.UnlockMilestone($"Milestone{Config.Instance.MilestoneLevel}");
-            Mod.Log.Info($"Custom unlock milestone: {Config.Instance.MilestoneLevel}");
+            LogManager.GetLogger().Info($"Custom unlock milestone: {Config.Instance.MilestoneLevel}");
         }
     }
 
@@ -204,7 +207,7 @@ public partial class Manager {
         }
         if (!UnlockManager.instance.Unlocked(UnlockManager.Feature.Landscaping) && UnlockManager.instance.m_properties.m_FeatureMilestones is not null) {
             UnlockManager.instance.m_properties.m_FeatureMilestones[(int)UnlockManager.Feature.Landscaping] = null;
-            Mod.Log.Info("Custom unlock: Landscaping");
+            LogManager.GetLogger().Info("Custom unlock: Landscaping");
         };
     }
 
@@ -217,7 +220,7 @@ public partial class Manager {
         UnlockPublicTransportSubService();
         UnlockPublicTransportBuildings();
         UnlockPublicTransportNet();
-        Mod.Log.Info("Custom unlock: Public Transport");
+        LogManager.GetLogger().Info("Custom unlock: Public Transport");
     }
 
     private void UnlockPublicTransportService() {

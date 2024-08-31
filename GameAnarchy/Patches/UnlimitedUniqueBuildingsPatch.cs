@@ -1,8 +1,9 @@
-﻿namespace GameAnarchy.Patches;
-
+﻿using CSShared.Patch;
 using Epic.OnlineServices.Presence;
 using HarmonyLib;
 using System.Reflection;
+
+namespace GameAnarchy.Patches;
 
 public static class UnlimitedUniqueBuildingsPatch {
     public static void Patch(HarmonyPatcher harmonyPatcher) {

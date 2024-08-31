@@ -1,8 +1,9 @@
-﻿namespace GameAnarchy;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
 using ICities;
 using System.Collections.Generic;
 using System.Linq;
+
+namespace GameAnarchy.Managers;
 
 public partial class Manager {
     public void UnlockAll(IManagers managers, IMilestones milestonesManager) {

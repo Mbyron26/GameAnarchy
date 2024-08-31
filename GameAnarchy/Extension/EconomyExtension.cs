@@ -1,22 +1,25 @@
-﻿namespace GameAnarchy;
-using ColossalFramework;
+﻿using ColossalFramework;
+using CSShared.Debug;
+using CSShared.Manager;
+using GameAnarchy.Managers;
 using ICities;
-using MbyronModsCommon;
+
+namespace GameAnarchy.Extension;
 
 public class EconomyExtension : EconomyExtensionBase {
     public override void OnCreated(IEconomy economy) {
         base.OnCreated(economy);
-        Mod.Log.Info("Call economy extension OnCreated");
+        LogManager.GetLogger().Info("Call economy extension OnCreated");
     }
 
-    public override void OnReleased() => Mod.Log.Info("Call economy extension OnReleased");
+    public override void OnReleased() => LogManager.GetLogger().Info("Call economy extension OnReleased");
 
     public override long OnUpdateMoneyAmount(long internalMoneyAmount) {
         if (Singleton<EconomyManager>.exists && Singleton<EconomyManager>.instance.m_properties is not null)
             Singleton<EconomyManager>.instance.m_properties.m_bailoutLimit = Config.Instance.CityBankruptcyWarningThreshold * 100;
         if (Config.Instance.UnlimitedMoney)
             return long.MaxValue;
-        managers.threading.QueueMainThread(() => SingletonManager<Manager>.Instance.AutoAddMoney(() => managers.economy.internalMoneyAmount));
+        managers.threading.QueueMainThread(() => ManagerPool.GetOrCreateManager<Manager>().AutoAddMoney(() => managers.economy.internalMoneyAmount));
         return internalMoneyAmount;
     }
 

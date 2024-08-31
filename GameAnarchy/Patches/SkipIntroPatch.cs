@@ -1,9 +1,11 @@
-﻿namespace GameAnarchy.Patches;
+﻿using CSShared.Patch;
 using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+
+namespace GameAnarchy.Patches;
 
 public static class SkipIntroPatch {
     public static void Patch(HarmonyPatcher harmonyPatcher) {

@@ -1,7 +1,8 @@
-﻿namespace GameAnarchy;
+﻿using CSShared.Common;
 using System.Xml.Serialization;
 using UnityEngine;
-using static DistrictPolicies;
+
+namespace GameAnarchy;
 
 [XmlRoot("ModConfig")]
 public class Config : SingletonConfig<Config> {

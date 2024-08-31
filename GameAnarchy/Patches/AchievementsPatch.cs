@@ -1,11 +1,13 @@
-﻿namespace GameAnarchy.Patches;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
 using ColossalFramework;
 using System;
 using ColossalFramework.Plugins;
 using HarmonyLib;
 using ColossalFramework.Globalization;
-using System.Reflection;
+using CSShared.Patch;
+using CSShared.Debug;
+
+namespace GameAnarchy.Patches;
 
 public static class AchievementsPatch {
     public static void Patch(HarmonyPatcher harmonyPatcher) {
@@ -30,7 +32,7 @@ public static class AchievementsPatch {
             }
         }
         catch (Exception e) {
-            Mod.Log.Error(e, $"Achievements patched failed");
+            LogManager.GetLogger().Error(e, $"Achievements patched failed");
         }
     }
 }
