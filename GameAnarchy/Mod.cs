@@ -31,7 +31,7 @@ public class Mod : ModPatcherBase<Mod, Config> {
 
     protected override void Enable() {
         base.Enable();
-        ManagerPool.GetOrCreateManager<Manager>();     
+        ManagerPool.GetOrCreateManager<Manager>();
     }
 
     public override void IntroActions() {
@@ -80,6 +80,9 @@ public class Mod : ModPatcherBase<Mod, Config> {
     };
 
     public override List<ChangelogInfo> Changelog => new() {
+        new ChangelogInfo(new Version(1, 2, 1), new(2024, 9, 7), new List<ChangelogContent> {
+            new(ChangelogFlag.Fixed, "Fixed serialization exception issues."),
+        }),
         new ChangelogInfo(new Version(1, 2, 0), new(2024, 8, 31), new List<ChangelogContent> {
             new(ChangelogFlag.Updated, Localize("Changelog_1_2_0")),
             new(ChangelogFlag.Updated, Localize("Changelog_1_2_1")),

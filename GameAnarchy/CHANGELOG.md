@@ -1,5 +1,8 @@
 ﻿# Changelog
 
+## [1.2.1] - 2024-09-07
+- Fixed serialization exception issues.
+
 ## [1.2.0] - 2024-08-31
 - Updated to CSShared framework.
 - Updated localization.
