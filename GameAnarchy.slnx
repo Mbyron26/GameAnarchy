@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Alpha" />
+    <BuildType Name="Beta" />
+    <BuildType Name="Stable" />
+  </Configurations>
+  <Folder Name="/ModsCommon/">
+    <Project Path="../CSLModsCommon/CSLModsCommonShared.Patch/CSLModsCommonShared.Patch.shproj" />
+    <Project Path="../CSLModsCommon/CSLModsCommonShared.ToolButton/CSLModsCommonShared.ToolButton.shproj" />
+    <Project Path="../CSLModsCommon/CSLModsCommonShared/CSLModsCommonShared.shproj" />
+  </Folder>
+  <Project Path="GameAnarchy/GameAnarchy.csproj" />
+</Solution>

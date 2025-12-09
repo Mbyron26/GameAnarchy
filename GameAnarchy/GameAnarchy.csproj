@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net35</TargetFramework>
+        <LangVersion>12</LangVersion>
+        <Authors>Mbyron26</Authors>
+        <Copyright>Copyright © 2022 Mbyron26</Copyright>
+        <Version Condition="'$(Configuration)' == 'Stable'">1.3.0</Version>
+        <Version Condition="'$(Configuration)' == 'Beta' OR '$(Configuration)' == 'Alpha'">
+            1.3.0-beta$([System.DateTime]::Now.ToString("yyyyMMddHHmm"))
+        </Version>
+        <!-- Steam workshop title, will auto set title from this property. -->
+        <Product>Game Anarchy</Product>
+        <!-- Steam workshop stable release Id, set to 0 for initial release. -->
+        <StableID>2781804786</StableID>
+        <!-- Steam workshop beta release Id, set to 0 for initial release. -->
+        <BetaID>2917685008</BetaID>
+        <!--> Steam workshop visibility, 0: public, 1: friends only, 2: private, 3: unlisted -->
+        <Visibility>0</Visibility>
+    </PropertyGroup>
+
+    <Import Project="$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Modding\Mod.props" />
+    <Import Project="$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Modding\Mod.targets" />
+    <Import Project="..\..\CSLModsCommon\CSLModsCommonShared\CSLModsCommonShared.projitems" Label="Shared" />
+    <Import Project="..\..\CSLModsCommon\CSLModsCommonShared.Patch\CSLModsCommonShared.Patch.projitems" Label="Shared" />
+	<Import Project="..\..\CSLModsCommon\CSLModsCommonShared.ToolButton\CSLModsCommonShared.ToolButton.projitems" Label="Shared" />
+
+    <ItemGroup>
+        <None Include="$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Modding\Mod.props" Link="Properties\Mod.props" />
+        <None Include="$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Modding\Mod.targets" Link="Properties\Mod.targets" />
+        <Folder Include="Properties\" />
+        <PackageReference Include="Json.Net.Unity3D" Version="9.0.1" />
+        <PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
+        <PackageReference Include="UnifiedUILib" Version="2.2.12" />
+        <Content Include="Localization\**\*" CopyToOutputDirectory="Always" />
+        <EmbeddedResource Include="UI\Resources\InGameButton.png"/>
+        <None Update="Translations.tt">
+            <Generator>TextTemplatingFileGenerator</Generator>
+            <LastGenOutput>Translations.cs</LastGenOutput>
+        </None>
+        <Compile Update="Translations.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Translations.tt</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Copy SourceFiles="$(UserProfile)\.nuget\packages\microsoft.netframework.referenceassemblies.net35\1.0.3\build\.NETFramework\v3.5\System.Runtime.Serialization.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    </Target>
+	
+</Project>

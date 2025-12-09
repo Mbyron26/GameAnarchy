@@ -1,0 +1,147 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Reflection.Emit;
+using ColossalFramework.PlatformServices;
+using ColossalFramework.Plugins;
+using ColossalFramework.UI;
+using CSLModsCommon.Logging;
+using CSLModsCommon.Manager;
+using CSLModsCommon.Patch;
+using GameAnarchy.Localization;
+using GameAnarchy.Managers;
+using GameAnarchy.ModSettings;
+using HarmonyLib;
+
+namespace GameAnarchy.Patches;
+
+public class OptionsMainPanelPatch {
+    public static void Patch(HarmonyPatcher harmonyPatcher) {
+        harmonyPatcher.ApplyPostfix<OptionsMainPanel, OptionsMainPanelPatch>("OnVisibilityChanged", nameof(OnVisibilityChangedPostfix));
+        harmonyPatcher.ApplyTranspiler<OptionsMainPanel, OptionsMainPanelPatch>("AddUserMods", nameof(AddUserModsTranspiler));
+    }
+
+    public static void OnVisibilityChangedPostfix(UIComponent comp, bool visible) {
+        if (!visible) return;
+        try {
+            Domain.DefaultDomain.GetOrCreateManager<OptionsPanelCategoriesOffsetManager>().SetCategoriesOffset(comp);
+        }
+        catch (Exception e) {
+            LogManager.GetLogger().Error(e, "Options main panel OnVisibilityChanged patch failed");
+        }
+    }
+
+    public static IEnumerable<CodeInstruction> AddUserModsTranspiler(IEnumerable<CodeInstruction> instructions) {
+        var addCategory = typeof(OptionsMainPanel).GetMethod("AddCategory", BindingFlags.NonPublic | BindingFlags.Instance);
+        var getPluginsInfo = typeof(PluginManager).GetMethod("GetPluginsInfo", BindingFlags.Public | BindingFlags.Instance);
+        var addCategoryExtension = AccessTools.Method(typeof(OptionsMainPanelPatch), nameof(AddCategoryExtension));
+        var getPluginsInfoInOrder = AccessTools.Method(typeof(CSLModsCommon.Utilities.PluginHelper), nameof(CSLModsCommon.Utilities.PluginHelper.GetPluginsInfoSortedByName));
+        var categoriesField = AccessTools.Field(typeof(OptionsMainPanel), "m_Categories");
+        var categoriesContainerField = AccessTools.Field(typeof(OptionsMainPanel), "m_CategoriesContainer");
+        var dummiesField = AccessTools.Field(typeof(OptionsMainPanel), "m_Dummies");
+        var instructionsEnumerator = instructions.GetEnumerator();
+        while (instructionsEnumerator.MoveNext()) {
+            var instruction = instructionsEnumerator.Current;
+            if (instruction.Calls(getPluginsInfo)) instruction = new CodeInstruction(OpCodes.Call, getPluginsInfoInOrder);
+
+            if (instruction.Calls(addCategory)) {
+                yield return new CodeInstruction(OpCodes.Ldloc_0);
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Ldflda, categoriesField);
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Ldflda, categoriesContainerField);
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Ldflda, dummiesField);
+                instruction = new CodeInstruction(OpCodes.Call, addCategoryExtension);
+            }
+
+            yield return instruction;
+        }
+    }
+
+    private static string GetModUpdatedDate(PluginManager.PluginInfo pluginInfo) {
+        var updatedTime = pluginInfo.updateTime;
+        if (DateTime.Equals(updatedTime, DateTime.MinValue)) {
+            updatedTime = GetModUpdatedDate(pluginInfo.modPath);
+            LogManager.GetLogger().Debug(pluginInfo.publishedFileID.Equals(new PublishedFileId(ulong.MaxValue)) ? $"Plugin [{pluginInfo.name}] is a local mod, get last write time date: {updatedTime}" : $"Plugin [{pluginInfo.name}] updated time is not initialized yet, get last write time date: {updatedTime}");
+        }
+        else {
+            updatedTime = updatedTime.ToLocalTime();
+        }
+
+        var span = updatedTime - DateTime.Now;
+        var days = Math.Abs(span.Days);
+        var months = days / 30;
+        var years = months / 12;
+
+        string date;
+        if (days == 0) {
+            var newDay = new DateTime(updatedTime.Year, updatedTime.Month, updatedTime.Day).AddDays(1);
+            var flag = DateTime.Compare(newDay, DateTime.Now);
+            if (flag > 0)
+                date = "<color #8BBD3A>" + Translations.Updated_Today(updatedTime) + "</color>";
+            else
+                date = "<color #8BBD3A>" + Translations.Updated_YesterdayAt(updatedTime) + "</color>";
+        }
+        else if (days <= 30) {
+            if (days == 1)
+                date = "<color #059641>" + Translations.Updated_Yesterday + "</color>";
+            else
+                date = "<color #059641>" + Translations.Updated_DaysAgo(days) + "</color>";
+        }
+        else if (days <= 365) {
+            if (days <= 60)
+                date = "<color #009ED6>" + Translations.Updated_MonthAgo(months) + "</color>";
+            else if (days <= 90)
+                date = "<color #009ED6>" + Translations.Updated_MonthsAgo(months) + "</color>";
+            else if (days <= 180)
+                date = "<color #6A2A78>" + Translations.Updated_MonthsAgo(months) + "</color>";
+            else
+                date = "<color #F08E2B>" + Translations.Updated_MonthsAgo(months) + "</color>";
+        }
+        else {
+            if (days <= 730)
+                date = "<color #E92E32>" + Translations.Updated_LastYear + "</color>";
+            else
+                date = "<color #E92E32>" + Translations.Updated_YearsAgo(years) + "</color>";
+        }
+
+        return date;
+    }
+
+    private static void AddCategoryExtension(string name, UIComponent container, PluginManager.PluginInfo pluginInfo, ref UIListBox categories, ref UITabContainer categoriesContainer, ref List<UIComponent> dummies) {
+        if (Domain.DefaultDomain.GetOrCreateManager<SettingManager>().GetSetting<ModSetting>().OptionPanelCategoriesUpdated) {
+            if (pluginInfo.publishedFileID.Equals(new PublishedFileId(ulong.MaxValue))) name += " | <color #FEF011>Local</color>";
+
+            name = name + " | " + GetModUpdatedDate(pluginInfo);
+        }
+
+        List<string> list;
+        if (categories.items != null)
+            list = new List<string>(categories.items);
+        else
+            list = new List<string>();
+
+        list.Add(name);
+        if (container == null) {
+            container = categoriesContainer.AddUIComponent<UIPanel>();
+            dummies.Add(container);
+        }
+
+        container.zOrder = list.Count - 1;
+        categories.items = list.ToArray();
+    }
+
+    public static DateTime GetModUpdatedDate(string path) {
+        var dateTime = DateTime.MinValue;
+        if (!Directory.Exists(path)) return dateTime;
+        foreach (var filePAth in Directory.GetFiles(path, "*", SearchOption.AllDirectories)) {
+            if (Path.GetFileName(filePAth) == ".excluded") continue;
+            var lastWriteTime = File.GetLastWriteTime(filePAth);
+            if (lastWriteTime > dateTime) dateTime = lastWriteTime;
+        }
+
+        return dateTime;
+    }
+}

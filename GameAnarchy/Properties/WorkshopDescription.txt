@@ -1,0 +1,77 @@
+﻿[HR][/HR]
+[code][h1]Overview[/h1]
+[list][h2]Extends and optimize game's functions.[/h2][/list]
+[/code]
+
+[img]https://i.imgur.com/0O9w9Ta.png[/img]
+
+[quote]
+[u]New in version 1.2.1[/u]
+[list]
+[*]Fixed serialization exception issues.
+[/list]
+[/quote]
+
+[HR][/HR] 
+[h1]Contains Functions:[/h1]
+GA has a control panel in the game, use the shortcut Ctrl+Shift+G or the UUI button to invoke!
+[list] 
+[*] Fast Return - Allows you to exit the game quickly.
+[*] Sort Settings - Align options menu mod name.
+[*] Skip Intro - Further shorten the time to enter the game.
+[*] Option panel categories bar horizontal offset adjustment - Allows you to manually adjust the offset of the content categories on the left side of the options panel.
+[*] Option panel categories bar show mods updated date
+[*] Unlimited Unique Buildings - Unlimited placement of unique buildings, options are available only in the control panel.
+[*] City Services - Allows you to remove pollution, death, garbage, criminals, fire, maximize city attractiveness, maximize entertainment coverage, maximize land value, maximize education coverage, options are available only in the control panel.
+[*] Achievement - Achievement can be achieved by allowing mods to be enabled.
+[*] Money Anarchy - Increase cash automatically or manually, set the threshold and amount of money, or Vanilla Unlimited Money mode.
+[*] Unlock All - Unlock everything.
+[*] Custom Unlock - Custom milestones level, info view, base road, policy, transport.
+[*] Oil And Ore Anarchy - Adjust resource consumption rate, original to unlimited, options are available only in the control panel.
+[*] RICO Income Anarchy - Modify the RICO area's revenue multiplier to easily increase city revenue, options are available only in the control panel.
+[*] Refund Anarchy - Automatically refunds when Bulldozing buildings or segment, options are available only in the control panel.
+[/list]
+
+[HR][/HR] 
+[h1]Incompatible Mods:[/h1]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2881031511][img]https://imgur.com/mzpNwS8.png[/img][/url]
+[list] 
+[*] Achieve It! - This mod already includes same functionality.
+[*] Instant Return To Desktop - This mod already includes same functionality.
+[*] Sort Settings - This mod already includes same functionality.
+[*] Skip Intro - This mod already includes same functionality.
+[*] Not So Unique Buildings - This mod already includes same functionality.
+[*] Pollution Solution - This mod already includes same functionality.
+[*] Pollution, Death, Garbage and Crime Remover Mod - This mod already includes same functionality.
+[*] Unlock All + Wonders & Landmarks - This mod already includes same functionality.
+[*] Unlimited Money - Local mod and this mod already includes same functionality.
+[*] Unlock All - Local mod and this mod already includes same functionality.
+[*] Unlimited Oil And Ore- Local mod and this mod already includes same functionality.
+[*] Extended Game Options - This mod already includes same functionality.
+[*] UltimateMod 2.10.2 [STABLE] - This mod already includes same functionality.
+[*] UltimateMod v2.12.11 [BETA] - This mod already includes same functionality.
+[*] Unlock All Roads - This mod already includes same functionality.
+[*] No Fires - This mod already includes same functionality.
+[*] No Park Building Fire - This mod already includes same functionality.
+[*] InfoPanelOnLoad - This mod already includes same functionality.
+[*] Info View Button Enabler - This mod already includes same functionality.
+[*] Unlock LandScaping - This mod already includes same functionality.
+[*] Unlock Public Transport - This mod already includes same functionality.
+[*] You Can Build It - This mod already includes same functionality.
+[/list]
+
+[HR][/HR] 
+[h1]Language support:[/h1]
+If you would like to help add your language to this mod, please go to [url=https://crowdin.com/project/game-anarchy]Game Anarchy localize[/url] and [url=https://crowdin.com/project/csshared]Common localize[/url]
+
+[HR][/HR]
+[h1]Discussion and feedback:[/h1]
+[url=https://discord.gg/ZxbyzmvGxG][img]https://i.imgur.com/bnDNN2x.png[/img][/url]
+
+[HR][/HR] 
+[h1]Source code:[/h1]
+[url=https://github.com/Mbyron26/GameAnarchy][img]https://i.imgur.com/DczUXYq.png[/img][/url]
+
+[HR][/HR] 
+[h1]Thank you for your help and support:[/h1]
+[url=https://steamcommunity.com/profiles/76561198050938697]Quistar[/url], [url=https://steamcommunity.com/profiles/76561197968592937]algernon[/url], [url=https://steamcommunity.com/profiles/76561198063330220]macsergey[/url], [url=https://steamcommunity.com/id/chameleon_tbn]Chamëleon TBN[/url], [url=https://steamcommunity.com/profiles/76561198050123811]Keallu[/url], [url=https://steamcommunity.com/id/cgameworld]Cgameworld[/url], [url=https://steamcommunity.com/id/daegi]egi[/url], [url=https://steamcommunity.com/id/ShadowLink721]Shadow Link[/url], [url=https://steamcommunity.com/profiles/76561198998011726/]RilkeXS[/url], [url=https://steamcommunity.com/profiles/76561198048911880]Jose Gaspar[/url], all testers who helped test this mod and all translators who have added/improved translations to this mod.
