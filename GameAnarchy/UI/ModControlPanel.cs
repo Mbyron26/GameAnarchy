@@ -233,18 +233,9 @@ public class ModControlPanel : ControlPanelBase {
 
         var unlimitedUniqueBuildingsSection = AddSection(_generalPage, Translations.EnabledUnlimitedUniqueBuildings);
 
-        unlimitedUniqueBuildingsSection.AddEmptyLiteContainer(Translations.EnableOrDisableAll, null, v => {
-            v.Control.AutoLayout = true;
-            v.Control.AutoFitChildrenHorizontally = true;
-            v.Control.AutoFitChildrenVertically = true;
-            v.Control.Direction = FlexDirection.Row;
-            v.Control.ColumnGap = 6;
-
-            var enableAllButton = v.Control.AddUIComponent<NormalButton>();
-            SettingsSection.SetButtonSettings(enableAllButton, Translations.Enable, onButtonClicked: OnUnlimitedUniqueBuildingsEnableAllClicked);
-            
-            var disableAllButton = v.Control.AddUIComponent<NormalButton>();
-            SettingsSection.SetButtonSettings(disableAllButton, Translations.Disable, onButtonClicked: OnUnlimitedUniqueBuildingsDisableAllClicked);
+        unlimitedUniqueBuildingsSection.AddButtons(Translations.EnableOrDisableAll, null, v => {
+            v.RegisterButton(Translations.Enable, OnUnlimitedUniqueBuildingsEnableAllClicked);
+            v.RegisterButton(Translations.Disable, OnUnlimitedUniqueBuildingsDisableAllClicked);
         });
 
         _unlimitedMonumentElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMonument, Translations.Monument, null, (_, v) => _modSetting.UnlimitedMonument = v).Control;
@@ -308,7 +299,7 @@ public class ModControlPanel : ControlPanelBase {
 
     private void OnTabBarClicked(string arg) => SelectedTab = arg;
 
-    private void OnUnlimitedUniqueBuildingsDisableAllClicked(NormalButton _) {
+    private void OnUnlimitedUniqueBuildingsDisableAllClicked() {
         _unlimitedMonumentElement.IsOn = false;
         _unlimitedMainCampusBuildingElement.IsOn = false;
         _unlimitedUniqueFactoryElement.IsOn = false;
@@ -322,7 +313,7 @@ public class ModControlPanel : ControlPanelBase {
         _unlimitedParkAIElement.IsOn = false;
     }
 
-    private void OnUnlimitedUniqueBuildingsEnableAllClicked(NormalButton _) {
+    private void OnUnlimitedUniqueBuildingsEnableAllClicked() {
         _unlimitedMonumentElement.IsOn = true;
         _unlimitedMainCampusBuildingElement.IsOn = true;
         _unlimitedUniqueFactoryElement.IsOn = true;
