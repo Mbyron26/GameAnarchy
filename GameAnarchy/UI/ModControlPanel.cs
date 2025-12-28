@@ -2,6 +2,7 @@
 using CSLModsCommon.Collections;
 using CSLModsCommon.Localization;
 using CSLModsCommon.Manager;
+using CSLModsCommon.UI.Buttons;
 using CSLModsCommon.UI.Containers;
 using CSLModsCommon.UI.ControlPanel;
 using CSLModsCommon.UI.Labels;
@@ -15,9 +16,9 @@ using UnityEngine;
 namespace GameAnarchy.UI;
 
 public class ModControlPanel : ControlPanelBase {
-    private const string General = "General";
-    private const string Service = "Service";
-    private const string Economy = "Economy";
+    private const string General = nameof(General);
+    private const string Service = nameof(Service);
+    private const string Economy = nameof(Economy);
 
     private static string SelectedTab = General;
 
@@ -38,6 +39,17 @@ public class ModControlPanel : ControlPanelBase {
     private ReusableList<ISettingsCard> _segmentRefundOptions;
     private Label _segmentRefundMultipleFactorSliderCardHeaderElement;
     private Label _relocateBuildingSliderCardHeaderElement;
+    private ToggleSwitchIndicator _unlimitedMonumentElement;
+    private ToggleSwitchIndicator _unlimitedMainCampusBuildingElement;
+    private ToggleSwitchIndicator _unlimitedUniqueFactoryElement;
+    private ToggleSwitchIndicator _unlimitedStockExchangeElement;
+    private ToggleSwitchIndicator _unlimitedUniqueFacultyElement;
+    private ToggleSwitchIndicator _unlimitedWeatherRadarElement;
+    private ToggleSwitchIndicator _unlimitedSpaceRadarElement;
+    private ToggleSwitchIndicator _unlimitedFestivalAreaElement;
+    private ToggleSwitchIndicator _unlimitedLibraryAIMinorElement;
+    private ToggleSwitchIndicator _unlimitedSpaceElevatorElement;
+    private ToggleSwitchIndicator _unlimitedParkAIElement;
 
     protected override void OnCloseButtonClicked(UIComponent component, UIMouseEventParameter eventParam) => _inGameToolButtonManager.OnPanelClosed();
 
@@ -220,17 +232,32 @@ public class ModControlPanel : ControlPanelBase {
         #region UnlimitedUniqueBuildings
 
         var unlimitedUniqueBuildingsSection = AddSection(_generalPage, Translations.EnabledUnlimitedUniqueBuildings);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMonument, Translations.Monument, null, (_, v) => _modSetting.UnlimitedMonument = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMainCampusBuilding, Translations.MainCampusBuilding, null, (_, v) => _modSetting.UnlimitedMainCampusBuilding = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFactory, Translations.UniqueFactory, null, (_, v) => _modSetting.UnlimitedUniqueFactory = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedStockExchange, Translations.StockExchange, null, (_, v) => _modSetting.UnlimitedStockExchange = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFaculty, Translations.UniqueFaculty, null, (_, v) => _modSetting.UnlimitedUniqueFaculty = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedWeatherRadar, Translations.WeatherRadar, null, (_, v) => _modSetting.UnlimitedWeatherRadar = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceRadar, Translations.SpaceRadar, null, (_, v) => _modSetting.UnlimitedSpaceRadar = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedFestivalArea, Translations.FestivalArea, null, (_, v) => _modSetting.UnlimitedFestivalArea = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedLibraryAI, Translations.UnlimitedLibraryAI, Translations.UnlimitedLibraryAIMinor, (_, v) => _modSetting.UnlimitedLibraryAI = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevatorMinor, (_, v) => _modSetting.UnlimitedSpaceElevator = v);
-        unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedParkAI, Translations.UnlimitedParkAI, Translations.UnlimitedParkAIMinor, (_, v) => _modSetting.UnlimitedParkAI = v);
+
+        unlimitedUniqueBuildingsSection.AddEmptyLiteContainer(Translations.EnableOrDisableAll, null, v => {
+            v.Control.AutoLayout = true;
+            v.Control.AutoFitChildrenHorizontally = true;
+            v.Control.AutoFitChildrenVertically = true;
+            v.Control.Direction = FlexDirection.Row;
+            v.Control.ColumnGap = 6;
+
+            var enableAllButton = v.Control.AddUIComponent<NormalButton>();
+            SettingsSection.SetButtonSettings(enableAllButton, Translations.Enable, onButtonClicked: OnUnlimitedUniqueBuildingsEnableAllClicked);
+            
+            var disableAllButton = v.Control.AddUIComponent<NormalButton>();
+            SettingsSection.SetButtonSettings(disableAllButton, Translations.Disable, onButtonClicked: OnUnlimitedUniqueBuildingsDisableAllClicked);
+        });
+
+        _unlimitedMonumentElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMonument, Translations.Monument, null, (_, v) => _modSetting.UnlimitedMonument = v).Control;
+        _unlimitedMainCampusBuildingElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMainCampusBuilding, Translations.MainCampusBuilding, null, (_, v) => _modSetting.UnlimitedMainCampusBuilding = v).Control;
+        _unlimitedUniqueFactoryElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFactory, Translations.UniqueFactory, null, (_, v) => _modSetting.UnlimitedUniqueFactory = v).Control;
+        _unlimitedStockExchangeElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedStockExchange, Translations.StockExchange, null, (_, v) => _modSetting.UnlimitedStockExchange = v).Control;
+        _unlimitedUniqueFacultyElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFaculty, Translations.UniqueFaculty, null, (_, v) => _modSetting.UnlimitedUniqueFaculty = v).Control;
+        _unlimitedWeatherRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedWeatherRadar, Translations.WeatherRadar, null, (_, v) => _modSetting.UnlimitedWeatherRadar = v).Control;
+        _unlimitedSpaceRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceRadar, Translations.SpaceRadar, null, (_, v) => _modSetting.UnlimitedSpaceRadar = v).Control;
+        _unlimitedFestivalAreaElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedFestivalArea, Translations.FestivalArea, null, (_, v) => _modSetting.UnlimitedFestivalArea = v).Control;
+        _unlimitedLibraryAIMinorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedLibraryAI, Translations.UnlimitedLibraryAI, Translations.UnlimitedLibraryAIMinor, (_, v) => _modSetting.UnlimitedLibraryAI = v).Control;
+        _unlimitedSpaceElevatorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevatorMinor, (_, v) => _modSetting.UnlimitedSpaceElevator = v).Control;
+        _unlimitedParkAIElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedParkAI, Translations.UnlimitedParkAI, Translations.UnlimitedParkAIMinor, (_, v) => _modSetting.UnlimitedParkAI = v).Control;
 
         #endregion
 
@@ -280,4 +307,32 @@ public class ModControlPanel : ControlPanelBase {
     private string GetAnnualInterestRate() => Translations.AnnualInterestRate + $": {_modSetting.AnnualInterestRate:P2}";
 
     private void OnTabBarClicked(string arg) => SelectedTab = arg;
+
+    private void OnUnlimitedUniqueBuildingsDisableAllClicked(NormalButton _) {
+        _unlimitedMonumentElement.IsOn = false;
+        _unlimitedMainCampusBuildingElement.IsOn = false;
+        _unlimitedUniqueFactoryElement.IsOn = false;
+        _unlimitedStockExchangeElement.IsOn = false;
+        _unlimitedUniqueFacultyElement.IsOn = false;
+        _unlimitedWeatherRadarElement.IsOn = false;
+        _unlimitedSpaceRadarElement.IsOn = false;
+        _unlimitedFestivalAreaElement.IsOn = false;
+        _unlimitedLibraryAIMinorElement.IsOn = false;
+        _unlimitedSpaceElevatorElement.IsOn = false;
+        _unlimitedParkAIElement.IsOn = false;
+    }
+
+    private void OnUnlimitedUniqueBuildingsEnableAllClicked(NormalButton _) {
+        _unlimitedMonumentElement.IsOn = true;
+        _unlimitedMainCampusBuildingElement.IsOn = true;
+        _unlimitedUniqueFactoryElement.IsOn = true;
+        _unlimitedStockExchangeElement.IsOn = true;
+        _unlimitedUniqueFacultyElement.IsOn = true;
+        _unlimitedWeatherRadarElement.IsOn = true;
+        _unlimitedSpaceRadarElement.IsOn = true;
+        _unlimitedFestivalAreaElement.IsOn = true;
+        _unlimitedLibraryAIMinorElement.IsOn = true;
+        _unlimitedSpaceElevatorElement.IsOn = true;
+        _unlimitedParkAIElement.IsOn = true;
+    }
 }

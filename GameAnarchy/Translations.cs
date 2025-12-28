@@ -7,6 +7,21 @@ namespace GameAnarchy.Localization;
 
 public static class Translations {
     /// <summary>
+    /// Enable/Disable All
+    /// </summary>
+    public static string EnableOrDisableAll => LocalizationManager.Localize("EnableOrDisableAll");
+
+    /// <summary>
+    /// Disable
+    /// </summary>
+    public static string Disable => LocalizationManager.Localize("Disable");
+
+    /// <summary>
+    /// Enable
+    /// </summary>
+    public static string Enable => LocalizationManager.Localize("Enable");
+
+    /// <summary>
     /// Anarchy
     /// </summary>
     public static string Anarchy => LocalizationManager.Localize("Anarchy");
