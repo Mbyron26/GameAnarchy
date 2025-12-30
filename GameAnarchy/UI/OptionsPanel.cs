@@ -65,12 +65,12 @@ public partial class OptionsPanel : OptionsPanelBase {
 
         var optimizeSection = AddSection(page, Translations.OptimizeOptions);
 
-        optimizeSection.AddToggleSwitch(_modSetting.AchievementSystemEnabled, Translations.EnableAchievements, Translations.AllowsDynamicToggling, (_, b) => {
+        optimizeSection.AddToggleSwitch(_modSetting.AchievementSystemEnabled, Translations.EnableAchievements, Translations.AllowsDynamicToggling, b => {
             _modSetting.AchievementSystemEnabled = b;
             _domain.GetOrCreateManager<AchievementsManager>().UpdateAchievementSystemStatus();
         });
-        optimizeSection.AddToggleSwitch(_modSetting.SkipIntroEnabled, Translations.EnabledSkipIntro, null, (_, b) => _modSetting.SkipIntroEnabled = b);
-        optimizeSection.AddToggleSwitch(_modSetting.OptionsPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdatedMinor, (_, b) => _modSetting.OptionsPanelCategoriesUpdated = b);
+        optimizeSection.AddToggleSwitch(_modSetting.SkipIntroEnabled, Translations.EnabledSkipIntro, null, b => _modSetting.SkipIntroEnabled = b);
+        optimizeSection.AddToggleSwitch(_modSetting.OptionsPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdatedMinor, b => _modSetting.OptionsPanelCategoriesUpdated = b);
         _optionsMainPanelOffsetElement = optimizeSection.AddSlider(GetOptionPanelCategoriesHorizontalOffsetLocalized(), Translations.OptionPanelCategoriesHorizontalOffsetMinor, 0, 600f, 5f, _modSetting.OptionsPanelCategoriesHorizontalOffset, f => {
                 _modSetting.OptionsPanelCategoriesHorizontalOffset = (uint)f;
                 _domain.GetOrCreateManager<OptionsPanelCategoriesOffsetManager>().SetCategoriesOffset();
@@ -96,16 +96,16 @@ public partial class OptionsPanel : OptionsPanelBase {
 
         _customUnlockCards.Add(unlockSection.AddDropDown(Translations.MilestoneUnlockLevel, null, MilestoneLevelDropDownItems, v => v.Value == _modSetting.CurrentMilestoneLevel, t => _modSetting.CurrentMilestoneLevel = t.Value, 250, 30, c => c.HeaderElement.TextPadding.Left = 20));
 
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockBasicRoads, Translations.UnlockBasicRoadsMinor, callback: (_, b) => _modSetting.UnlockBasicRoads = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockBasicRoads, Translations.UnlockBasicRoadsMinor, callback: b => _modSetting.UnlockBasicRoads = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
 
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockInfoViews, Translations.UnlockInfoViews, callback: (_, b) => _modSetting.UnlockInfoViews = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockAllRoads, Translations.UnlockAllRoads, callback: (_, b) => _modSetting.UnlockAllRoads = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockPublicTransport, Translations.UnlockPublicTransport, callback: (_, b) => _modSetting.UnlockPublicTransport = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockTrainTrack, Translations.UnlockTrainTrack, callback: (_, b) => _modSetting.UnlockTrainTrack = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockMetroTrack, Translations.UnlockMetroTrack, callback: (_, b) => _modSetting.UnlockMetroTrack = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockPolicies, Translations.UnlockPolicies, callback: (_, b) => _modSetting.UnlockPolicies = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockUniqueBuildings, Translations.UnlockUniqueBuildingMinor, callback: (_, b) => _modSetting.UnlockUniqueBuildings = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
-        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockLandscaping, Translations.UnlockLandscaping, callback: (_, b) => _modSetting.UnlockLandscaping = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockInfoViews, Translations.UnlockInfoViews, callback: b => _modSetting.UnlockInfoViews = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockAllRoads, Translations.UnlockAllRoads, callback: b => _modSetting.UnlockAllRoads = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockPublicTransport, Translations.UnlockPublicTransport, callback: b => _modSetting.UnlockPublicTransport = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockTrainTrack, Translations.UnlockTrainTrack, callback: b => _modSetting.UnlockTrainTrack = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockMetroTrack, Translations.UnlockMetroTrack, callback: b => _modSetting.UnlockMetroTrack = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockPolicies, Translations.UnlockPolicies, callback: b => _modSetting.UnlockPolicies = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockUniqueBuildings, Translations.UnlockUniqueBuildingMinor, callback: b => _modSetting.UnlockUniqueBuildings = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
+        _customUnlockCards.Add(unlockSection.AddCheckBox(_modSetting.UnlockLandscaping, Translations.UnlockLandscaping, callback: b => _modSetting.UnlockLandscaping = b, beforeLayoutAction: p => p.Control.LayoutPadding.Left = 20));
 
         foreach (var c in _customUnlockCards) c.Self.isEnabled = _modSetting.CurrentUnlockMode == UnlockMode.CustomUnlock;
 
@@ -126,12 +126,12 @@ public partial class OptionsPanel : OptionsPanelBase {
                 .SelectionChanged += OnMoneyModeChanged;
         });
 
-        _moneyAnarchyCards.Add(resourceSection.AddLongField(Translations.AddMoneyThreshold, null, _modSetting.DefaultMinAmount, 100, 100000000, (v) => _modSetting.DefaultMinAmount = (int)v, beforeLayoutAction: p => p.HeaderElement.TextPadding.Left = 20));
-        _moneyAnarchyCards.Add(resourceSection.AddLongField(Translations.AddMoneyAmount, null, _modSetting.DefaultGetCash, 100, 100000000, (l) => _modSetting.DefaultGetCash = (int)l, beforeLayoutAction: p => p.HeaderElement.TextPadding.Left = 20));
+        _moneyAnarchyCards.Add(resourceSection.AddLongField(Translations.AddMoneyThreshold, null, _modSetting.DefaultMinAmount, 100, 100000000, v => _modSetting.DefaultMinAmount = (int)v, beforeLayoutAction: p => p.HeaderElement.TextPadding.Left = 20));
+        _moneyAnarchyCards.Add(resourceSection.AddLongField(Translations.AddMoneyAmount, null, _modSetting.DefaultGetCash, 100, 100000000, l => _modSetting.DefaultGetCash = (int)l, beforeLayoutAction: p => p.HeaderElement.TextPadding.Left = 20));
 
         foreach (var item in _moneyAnarchyCards) item.Self.isEnabled = _modSetting.CurrentMoneyMode == MoneyMode.Anarchy;
 
-        resourceSection.AddToggleSwitch(_modSetting.EnableStartMoney, Translations.StartMoneyMajor, Translations.StartMoneyMinor, (_, b) => {
+        resourceSection.AddToggleSwitch(_modSetting.EnableStartMoney, Translations.StartMoneyMajor, Translations.StartMoneyMinor, b => {
             _modSetting.EnableStartMoney = b;
             _startMoneyCard.isEnabled = _modSetting.EnableStartMoney;
         });
