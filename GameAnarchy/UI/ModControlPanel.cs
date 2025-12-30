@@ -50,6 +50,23 @@ public class ModControlPanel : ControlPanelBase {
     private ToggleSwitchIndicator _unlimitedLibraryAIMinorElement;
     private ToggleSwitchIndicator _unlimitedSpaceElevatorElement;
     private ToggleSwitchIndicator _unlimitedParkAIElement;
+    private ToggleSwitchIndicator _removeDeathElement;
+    private ToggleSwitchIndicator _removeCrimeElement;
+    private ToggleSwitchIndicator _removeGarbageElement;
+    private ToggleSwitchIndicator _maximizeAttractivenessElement;
+    private ToggleSwitchIndicator _maximizeEntertainmentElement;
+    private ToggleSwitchIndicator _maximizeLandValueElement;
+    private ToggleSwitchIndicator _maximizeEducationCoverageElement;
+    private ToggleSwitchIndicator _maximizeFireCoverageElement;
+    private ToggleSwitchIndicator _removePlayerBuildingFireElement;
+    private ToggleSwitchIndicator _removeResidentialBuildingFireElement;
+    private ToggleSwitchIndicator _removeIndustrialBuildingFireElement;
+    private ToggleSwitchIndicator _removeCommercialBuildingFireElement;
+    private ToggleSwitchIndicator _removeOfficeBuildingFireElement;
+    private ToggleSwitchIndicator _removeParkBuildingFireElement;
+    private ToggleSwitchIndicator _removeMuseumFireElement;
+    private ToggleSwitchIndicator _removeCampusBuildingFireElement;
+    private ToggleSwitchIndicator _removeAirportBuildingFireElement;
 
     protected override void OnCloseButtonClicked(UIComponent component, UIMouseEventParameter eventParam) => _inGameToolButtonManager.OnPanelClosed();
 
@@ -177,22 +194,27 @@ public class ModControlPanel : ControlPanelBase {
         #region RemovePollution
 
         var removePollutionSection = AddSection(_servicePage, Translations.RemovePollution);
-        removePollutionSection.AddToggleSwitch(_modSetting.RemoveNoisePollution, Translations.NoisePollution, null, (_, v) => _modSetting.RemoveNoisePollution = v);
-        removePollutionSection.AddToggleSwitch(_modSetting.RemoveGroundPollution, Translations.GroundPollution, null, (_, v) => _modSetting.RemoveGroundPollution = v);
-        removePollutionSection.AddToggleSwitch(_modSetting.RemoveWaterPollution, Translations.WaterPollution, null, (_, v) => _modSetting.RemoveWaterPollution = v);
+        removePollutionSection.AddToggleSwitch(_modSetting.RemoveNoisePollution, Translations.NoisePollution, null, v => _modSetting.RemoveNoisePollution = v);
+        removePollutionSection.AddToggleSwitch(_modSetting.RemoveGroundPollution, Translations.GroundPollution, null, v => _modSetting.RemoveGroundPollution = v);
+        removePollutionSection.AddToggleSwitch(_modSetting.RemoveWaterPollution, Translations.WaterPollution, null, v => _modSetting.RemoveWaterPollution = v);
 
         #endregion
 
         #region CityServiceOptions
 
         var cityServiceOptionsSection = AddSection(_servicePage, Translations.CityServiceOptions);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveDeath, Translations.RemoveDeath, null, (_, v) => _modSetting.RemoveDeath = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveCrime, Translations.RemoveCrime, null, (_, v) => _modSetting.RemoveCrime = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveGarbage, Translations.RemoveGarbage, null, (_, v) => _modSetting.RemoveGarbage = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeAttractiveness, Translations.MaximizeAttractiveness, null, (_, v) => _modSetting.MaximizeAttractiveness = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeEntertainment, Translations.MaximizeEntertainment, null, (_, v) => _modSetting.MaximizeEntertainment = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeLandValue, Translations.MaximizeLandValue, null, (_, v) => _modSetting.MaximizeLandValue = v);
-        cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeEducationCoverage, Translations.MaximizeEducationCoverage, null, (_, v) => _modSetting.MaximizeEducationCoverage = v);
+
+        cityServiceOptionsSection.AddButtons(Translations.EnableOrDisableAll, null, v => {
+            v.RegisterButton(Translations.Enable, OnCityServiceOptionsEnableAllClicked);
+            v.RegisterButton(Translations.Disable, OnCityServiceOptionsDisableAllClicked);
+        });
+        _removeDeathElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveDeath, Translations.RemoveDeath, null, v => _modSetting.RemoveDeath = v).Control;
+        _removeCrimeElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveCrime, Translations.RemoveCrime, null, v => _modSetting.RemoveCrime = v).Control;
+        _removeGarbageElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.RemoveGarbage, Translations.RemoveGarbage, null, v => _modSetting.RemoveGarbage = v).Control;
+        _maximizeAttractivenessElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeAttractiveness, Translations.MaximizeAttractiveness, null, v => _modSetting.MaximizeAttractiveness = v).Control;
+        _maximizeEntertainmentElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeEntertainment, Translations.MaximizeEntertainment, null, v => _modSetting.MaximizeEntertainment = v).Control;
+        _maximizeLandValueElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeLandValue, Translations.MaximizeLandValue, null, v => _modSetting.MaximizeLandValue = v).Control;
+        _maximizeEducationCoverageElement = cityServiceOptionsSection.AddToggleSwitch(_modSetting.MaximizeEducationCoverage, Translations.MaximizeEducationCoverage, null, v => _modSetting.MaximizeEducationCoverage = v).Control;
 
         #endregion
 
@@ -200,16 +222,21 @@ public class ModControlPanel : ControlPanelBase {
 
         var fireControlSection = AddSection(_servicePage, Translations.FireControl);
         fireControlSection.AddButton(Translations.PutOutBurningBuildings, null, Translations.PutOut, null, 24, _ => _fireControlManager.PutOutBurningBuildingsButtonClicked());
-        fireControlSection.AddToggleSwitch(_modSetting.MaximizeFireCoverage, Translations.MaximizeFireCoverage, null, (_, v) => _modSetting.MaximizeFireCoverage = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemovePlayerBuildingFire, Translations.RemovePlayerBuildingFire, null, (_, v) => _modSetting.RemovePlayerBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveResidentialBuildingFire, Translations.RemoveResidentialBuildingFire, null, (_, v) => _modSetting.RemoveResidentialBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveIndustrialBuildingFire, Translations.RemoveIndustrialBuildingFire, null, (_, v) => _modSetting.RemoveIndustrialBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveCommercialBuildingFire, Translations.RemoveCommercialBuildingFire, null, (_, v) => _modSetting.RemoveCommercialBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveOfficeBuildingFire, Translations.RemoveOfficeBuildingFire, null, (_, v) => _modSetting.RemoveOfficeBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveParkBuildingFire, Translations.RemoveParkBuildingFire, null, (_, v) => _modSetting.RemoveParkBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveMuseumFire, Translations.RemoveMuseumFire, null, (_, v) => _modSetting.RemoveMuseumFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveCampusBuildingFire, Translations.RemoveCampusBuildingFire, null, (_, v) => _modSetting.RemoveCampusBuildingFire = v);
-        fireControlSection.AddToggleSwitch(_modSetting.RemoveAirportBuildingFire, Translations.RemoveAirportBuildingFire, null, (_, v) => _modSetting.RemoveAirportBuildingFire = v);
+
+        fireControlSection.AddButtons(Translations.EnableOrDisableAll, null, v => {
+            v.RegisterButton(Translations.Enable, OnFireControlEnableAllClicked);
+            v.RegisterButton(Translations.Disable, OnFireControlDisableAllClicked);
+        });
+        _maximizeFireCoverageElement = fireControlSection.AddToggleSwitch(_modSetting.MaximizeFireCoverage, Translations.MaximizeFireCoverage, null, v => _modSetting.MaximizeFireCoverage = v).Control;
+        _removePlayerBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemovePlayerBuildingFire, Translations.RemovePlayerBuildingFire, null, v => _modSetting.RemovePlayerBuildingFire = v).Control;
+        _removeResidentialBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveResidentialBuildingFire, Translations.RemoveResidentialBuildingFire, null, v => _modSetting.RemoveResidentialBuildingFire = v).Control;
+        _removeIndustrialBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveIndustrialBuildingFire, Translations.RemoveIndustrialBuildingFire, null, v => _modSetting.RemoveIndustrialBuildingFire = v).Control;
+        _removeCommercialBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveCommercialBuildingFire, Translations.RemoveCommercialBuildingFire, null, v => _modSetting.RemoveCommercialBuildingFire = v).Control;
+        _removeOfficeBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveOfficeBuildingFire, Translations.RemoveOfficeBuildingFire, null, v => _modSetting.RemoveOfficeBuildingFire = v).Control;
+        _removeParkBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveParkBuildingFire, Translations.RemoveParkBuildingFire, null, v => _modSetting.RemoveParkBuildingFire = v).Control;
+        _removeMuseumFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveMuseumFire, Translations.RemoveMuseumFire, null, v => _modSetting.RemoveMuseumFire = v).Control;
+        _removeCampusBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveCampusBuildingFire, Translations.RemoveCampusBuildingFire, null, v => _modSetting.RemoveCampusBuildingFire = v).Control;
+        _removeAirportBuildingFireElement = fireControlSection.AddToggleSwitch(_modSetting.RemoveAirportBuildingFire, Translations.RemoveAirportBuildingFire, null, v => _modSetting.RemoveAirportBuildingFire = v).Control;
 
         var buildingSpreadFireProbabilityCard = fireControlSection.AddSlider(GetString(Translations.BuildingSpreadFireProbability, _modSetting.BuildingSpreadFireProbability, Translations.NoSpreadFire, Translations.Vanilla), null, 0, 100, 1, _modSetting.BuildingSpreadFireProbability, new Vector2(388, 16), v => {
             _modSetting.BuildingSpreadFireProbability = (uint)v;
@@ -238,17 +265,17 @@ public class ModControlPanel : ControlPanelBase {
             v.RegisterButton(Translations.Disable, OnUnlimitedUniqueBuildingsDisableAllClicked);
         });
 
-        _unlimitedMonumentElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMonument, Translations.Monument, null, (_, v) => _modSetting.UnlimitedMonument = v).Control;
-        _unlimitedMainCampusBuildingElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMainCampusBuilding, Translations.MainCampusBuilding, null, (_, v) => _modSetting.UnlimitedMainCampusBuilding = v).Control;
-        _unlimitedUniqueFactoryElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFactory, Translations.UniqueFactory, null, (_, v) => _modSetting.UnlimitedUniqueFactory = v).Control;
-        _unlimitedStockExchangeElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedStockExchange, Translations.StockExchange, null, (_, v) => _modSetting.UnlimitedStockExchange = v).Control;
-        _unlimitedUniqueFacultyElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFaculty, Translations.UniqueFaculty, null, (_, v) => _modSetting.UnlimitedUniqueFaculty = v).Control;
-        _unlimitedWeatherRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedWeatherRadar, Translations.WeatherRadar, null, (_, v) => _modSetting.UnlimitedWeatherRadar = v).Control;
-        _unlimitedSpaceRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceRadar, Translations.SpaceRadar, null, (_, v) => _modSetting.UnlimitedSpaceRadar = v).Control;
-        _unlimitedFestivalAreaElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedFestivalArea, Translations.FestivalArea, null, (_, v) => _modSetting.UnlimitedFestivalArea = v).Control;
-        _unlimitedLibraryAIMinorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedLibraryAI, Translations.UnlimitedLibraryAI, Translations.UnlimitedLibraryAIMinor, (_, v) => _modSetting.UnlimitedLibraryAI = v).Control;
-        _unlimitedSpaceElevatorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevatorMinor, (_, v) => _modSetting.UnlimitedSpaceElevator = v).Control;
-        _unlimitedParkAIElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedParkAI, Translations.UnlimitedParkAI, Translations.UnlimitedParkAIMinor, (_, v) => _modSetting.UnlimitedParkAI = v).Control;
+        _unlimitedMonumentElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMonument, Translations.Monument, null, v => _modSetting.UnlimitedMonument = v).Control;
+        _unlimitedMainCampusBuildingElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedMainCampusBuilding, Translations.MainCampusBuilding, null, v => _modSetting.UnlimitedMainCampusBuilding = v).Control;
+        _unlimitedUniqueFactoryElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFactory, Translations.UniqueFactory, null, v => _modSetting.UnlimitedUniqueFactory = v).Control;
+        _unlimitedStockExchangeElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedStockExchange, Translations.StockExchange, null, v => _modSetting.UnlimitedStockExchange = v).Control;
+        _unlimitedUniqueFacultyElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedUniqueFaculty, Translations.UniqueFaculty, null, v => _modSetting.UnlimitedUniqueFaculty = v).Control;
+        _unlimitedWeatherRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedWeatherRadar, Translations.WeatherRadar, null, v => _modSetting.UnlimitedWeatherRadar = v).Control;
+        _unlimitedSpaceRadarElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceRadar, Translations.SpaceRadar, null, v => _modSetting.UnlimitedSpaceRadar = v).Control;
+        _unlimitedFestivalAreaElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedFestivalArea, Translations.FestivalArea, null, v => _modSetting.UnlimitedFestivalArea = v).Control;
+        _unlimitedLibraryAIMinorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedLibraryAI, Translations.UnlimitedLibraryAI, Translations.UnlimitedLibraryAIMinor, v => _modSetting.UnlimitedLibraryAI = v).Control;
+        _unlimitedSpaceElevatorElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevator, Translations.UnlimitedSpaceElevatorMinor, v => _modSetting.UnlimitedSpaceElevator = v).Control;
+        _unlimitedParkAIElement = unlimitedUniqueBuildingsSection.AddToggleSwitch(_modSetting.UnlimitedParkAI, Translations.UnlimitedParkAI, Translations.UnlimitedParkAIMinor, v => _modSetting.UnlimitedParkAI = v).Control;
 
         #endregion
 
@@ -325,5 +352,51 @@ public class ModControlPanel : ControlPanelBase {
         _unlimitedLibraryAIMinorElement.IsOn = true;
         _unlimitedSpaceElevatorElement.IsOn = true;
         _unlimitedParkAIElement.IsOn = true;
+    }
+
+    private void OnCityServiceOptionsEnableAllClicked() {
+        _removeDeathElement.IsOn = true;
+        _removeCrimeElement.IsOn = true;
+        _removeGarbageElement.IsOn = true;
+        _maximizeAttractivenessElement.IsOn = true;
+        _maximizeEntertainmentElement.IsOn = true;
+        _maximizeLandValueElement.IsOn = true;
+        _maximizeEducationCoverageElement.IsOn = true;
+    }
+
+    private void OnCityServiceOptionsDisableAllClicked() {
+        _removeDeathElement.IsOn = false;
+        _removeCrimeElement.IsOn = false;
+        _removeGarbageElement.IsOn = false;
+        _maximizeAttractivenessElement.IsOn = false;
+        _maximizeEntertainmentElement.IsOn = false;
+        _maximizeLandValueElement.IsOn = false;
+        _maximizeEducationCoverageElement.IsOn = false;
+    }
+
+    private void OnFireControlEnableAllClicked() {
+        _maximizeFireCoverageElement.IsOn = true;
+        _removePlayerBuildingFireElement.IsOn = true;
+        _removeResidentialBuildingFireElement.IsOn = true;
+        _removeIndustrialBuildingFireElement.IsOn = true;
+        _removeCommercialBuildingFireElement.IsOn = true;
+        _removeOfficeBuildingFireElement.IsOn = true;
+        _removeParkBuildingFireElement.IsOn = true;
+        _removeMuseumFireElement.IsOn = true;
+        _removeCampusBuildingFireElement.IsOn = true;
+        _removeAirportBuildingFireElement.IsOn = true;
+    }
+    
+    private void OnFireControlDisableAllClicked() {
+        _maximizeFireCoverageElement.IsOn = false;
+        _removePlayerBuildingFireElement.IsOn = false;
+        _removeResidentialBuildingFireElement.IsOn = false;
+        _removeIndustrialBuildingFireElement.IsOn = false;
+        _removeCommercialBuildingFireElement.IsOn = false;
+        _removeOfficeBuildingFireElement.IsOn = false;
+        _removeParkBuildingFireElement.IsOn = false;
+        _removeMuseumFireElement.IsOn = false;
+        _removeCampusBuildingFireElement.IsOn = false;
+        _removeAirportBuildingFireElement.IsOn = false;
     }
 }
