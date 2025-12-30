@@ -2,10 +2,11 @@
 
 ## [1.3.0] - 2025-12-09
 - Updated to support game version 1.20.1
-- Updated to CSLModsCommon framework 1.0
+- Updated to CSLModsCommon framework 1.0.1
 - This update automatically resets all settings.
 - Added achievements system enabled prompt.
 - Fixed exception thrown when toggling achievement system before game.
+- UI improvements and optimizations.
 
 ## [1.2.1] - 2024-09-07
 - Fixed serialization exception issues.
