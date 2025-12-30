@@ -1,4 +1,7 @@
 {
+  "EnableOrDisableAll": "全部启用/禁用",
+  "Disable": "禁用",
+  "Enable": "启用",
   "Anarchy": "无碰撞",
   "MoneyMode": "金钱模式",
   "UnlockMode": "解锁模式",

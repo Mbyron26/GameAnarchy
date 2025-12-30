@@ -1,4 +1,7 @@
 {
+  "EnableOrDisableAll": "Enable/Disable All",
+  "Disable": "Disable",
+  "Enable": "Enable",
   "Anarchy": "Anarchy",
   "MoneyMode": "Money Mode",
   "UnlockMode": "Unlock Mode",
