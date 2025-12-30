@@ -24,11 +24,11 @@ public class OptionsPanelCategoriesOffsetManager : ManagerBase {
     public void SetCategoriesOffset(UIComponent component) {
         var categories = component.Find<UIListBox>("Categories");
         var optionsContainer = component.Find<UITabContainer>("OptionsContainer");
-        var delta = _modSetting.OptionPanelCategoriesHorizontalOffset + CategoriesDefaultWidth;
-        var panelTotalWidth = MainPanelWidth + _modSetting.OptionPanelCategoriesHorizontalOffset;
+        var delta = _modSetting.OptionsPanelCategoriesHorizontalOffset + CategoriesDefaultWidth;
+        var panelTotalWidth = MainPanelWidth + _modSetting.OptionsPanelCategoriesHorizontalOffset;
         component.width = panelTotalWidth;
         categories.width = delta;
         optionsContainer.width = ContainerDefaultWidth;
-        optionsContainer.relativePosition = new Vector2(ContainerDefaultPosX + _modSetting.OptionPanelCategoriesHorizontalOffset, ContainerDefaultPosY);
+        optionsContainer.relativePosition = new Vector2(ContainerDefaultPosX + _modSetting.OptionsPanelCategoriesHorizontalOffset, ContainerDefaultPosY);
     }
 }

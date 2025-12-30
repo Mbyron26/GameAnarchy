@@ -9,8 +9,8 @@ namespace GameAnarchy.ModSettings;
 public class ModSetting : ModSettingBase {
     public bool AchievementSystemEnabled { get; set; } = true;
     public bool SkipIntroEnabled { get; set; }
-    public uint OptionPanelCategoriesHorizontalOffset { get; set; } = 240;
-    public bool OptionPanelCategoriesUpdated { get; set; } = true;
+    public uint OptionsPanelCategoriesHorizontalOffset { get; set; } = 240;
+    public bool OptionsPanelCategoriesUpdated { get; set; } = true;
 
     public bool UnlockInfoViews { get; set; }
     public UnlockMode CurrentUnlockMode { get; set; }
@@ -95,8 +95,8 @@ public class ModSetting : ModSettingBase {
         base.SetDefaults();
         AchievementSystemEnabled = true;
         SkipIntroEnabled = false;
-        OptionPanelCategoriesHorizontalOffset = 240;
-        OptionPanelCategoriesUpdated = true;
+        OptionsPanelCategoriesHorizontalOffset = 240;
+        OptionsPanelCategoriesUpdated = true;
         UnlockInfoViews = false;
         UnlockBasicRoads = false;
         UnlockAllRoads = false;

@@ -111,7 +111,7 @@ public class OptionsMainPanelPatch {
     }
 
     private static void AddCategoryExtension(string name, UIComponent container, PluginManager.PluginInfo pluginInfo, ref UIListBox categories, ref UITabContainer categoriesContainer, ref List<UIComponent> dummies) {
-        if (Domain.DefaultDomain.GetOrCreateManager<SettingManager>().GetSetting<ModSetting>().OptionPanelCategoriesUpdated) {
+        if (Domain.DefaultDomain.GetOrCreateManager<SettingManager>().GetSetting<ModSetting>().OptionsPanelCategoriesUpdated) {
             if (pluginInfo.publishedFileID.Equals(new PublishedFileId(ulong.MaxValue))) name += " | <color #FEF011>Local</color>";
 
             name = name + " | " + GetModUpdatedDate(pluginInfo);

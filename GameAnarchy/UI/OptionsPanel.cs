@@ -70,9 +70,9 @@ public partial class OptionsPanel : OptionsPanelBase {
             _domain.GetOrCreateManager<AchievementsManager>().UpdateAchievementSystemStatus();
         });
         optimizeSection.AddToggleSwitch(_modSetting.SkipIntroEnabled, Translations.EnabledSkipIntro, null, (_, b) => _modSetting.SkipIntroEnabled = b);
-        optimizeSection.AddToggleSwitch(_modSetting.OptionPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdatedMinor, (_, b) => _modSetting.OptionPanelCategoriesUpdated = b);
-        _optionsMainPanelOffsetElement = optimizeSection.AddSlider(GetOptionPanelCategoriesHorizontalOffsetLocalized(), Translations.OptionPanelCategoriesHorizontalOffsetMinor, 0, 600f, 5f, _modSetting.OptionPanelCategoriesHorizontalOffset, f => {
-                _modSetting.OptionPanelCategoriesHorizontalOffset = (uint)f;
+        optimizeSection.AddToggleSwitch(_modSetting.OptionsPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdated, Translations.OptionPanelCategoriesUpdatedMinor, (_, b) => _modSetting.OptionsPanelCategoriesUpdated = b);
+        _optionsMainPanelOffsetElement = optimizeSection.AddSlider(GetOptionPanelCategoriesHorizontalOffsetLocalized(), Translations.OptionPanelCategoriesHorizontalOffsetMinor, 0, 600f, 5f, _modSetting.OptionsPanelCategoriesHorizontalOffset, f => {
+                _modSetting.OptionsPanelCategoriesHorizontalOffset = (uint)f;
                 _domain.GetOrCreateManager<OptionsPanelCategoriesOffsetManager>().SetCategoriesOffset();
                 _optionsMainPanelOffsetElement.Text = GetOptionPanelCategoriesHorizontalOffsetLocalized();
             })
@@ -152,7 +152,7 @@ public partial class OptionsPanel : OptionsPanelBase {
         _moneyAnarchyCards = new List<ISettingsCard>();
     }
 
-    private string GetOptionPanelCategoriesHorizontalOffsetLocalized() => $"{Translations.OptionsPanelHorizontalOffset}: {_modSetting.OptionPanelCategoriesHorizontalOffset}";
+    private string GetOptionPanelCategoriesHorizontalOffsetLocalized() => $"{Translations.OptionsPanelHorizontalOffset}: {_modSetting.OptionsPanelCategoriesHorizontalOffset}";
 
     private void OnUnlockModeChanged(RadioButtonItem<UnlockMode> obj) {
         var currentMode = obj.Value;
