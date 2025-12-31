@@ -15,7 +15,7 @@ public class ModSetting : ModSettingBase {
     public bool UnlockInfoViews { get; set; }
     public UnlockMode CurrentUnlockMode { get; set; }
     public MilestoneLevel CurrentMilestoneLevel { get; set; }
-    public MoneyMode CurrentMoneyMode { get; set; } = MoneyMode.Anarchy;
+    public MoneyMode CurrentMoneyMode { get; set; }
     public bool UnlockBasicRoads { get; set; }
     public bool UnlockAllRoads { get; set; }
     public bool UnlockTrainTrack { get; set; }
