@@ -3,17 +3,20 @@
 [list][h2]Extends and optimize game's functions.[/h2][/list]
 [/code]
 
-[img]https://i.imgur.com/0O9w9Ta.png[/img]
-
 [quote]
-[u]New in version 1.2.1[/u]
+[u]New in version 1.3[/u]
 [list]
-[*]Fixed serialization exception issues.
+[*] Updated to support game version 1.20.1
+[*] Updated to CSLModsCommon framework 1.0.1
+[*] This update automatically resets all settings.
+[*] Added achievements system enabled prompt.
+[*] Fixed exception thrown when toggling achievement system before game.
+[*] UI improvements and optimizations.
 [/list]
 [/quote]
 
 [HR][/HR] 
-[h1]Contains Functions:[/h1]
+[h1]Functions[/h1]
 GA has a control panel in the game, use the shortcut Ctrl+Shift+G or the UUI button to invoke!
 [list] 
 [*] Fast Return - Allows you to exit the game quickly.
@@ -33,7 +36,7 @@ GA has a control panel in the game, use the shortcut Ctrl+Shift+G or the UUI but
 [/list]
 
 [HR][/HR] 
-[h1]Incompatible Mods:[/h1]
+[h1]Incompatible Mods[/h1]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2881031511][img]https://imgur.com/mzpNwS8.png[/img][/url]
 [list] 
 [*] Achieve It! - This mod already includes same functionality.
@@ -61,17 +64,18 @@ GA has a control panel in the game, use the shortcut Ctrl+Shift+G or the UUI but
 [/list]
 
 [HR][/HR] 
-[h1]Language support:[/h1]
-If you would like to help add your language to this mod, please go to [url=https://crowdin.com/project/game-anarchy]Game Anarchy localize[/url] and [url=https://crowdin.com/project/csshared]Common localize[/url]
+[h1]Localization[/h1]
+To help improve translations, please contribute on Crowdin:
+[url=https://crowdin.com/project/game-anarchy][img]https://i.imgur.com/uG2NKvG.png[/img][/url]
 
 [HR][/HR]
-[h1]Discussion and feedback:[/h1]
+[h1]Discussion & Feedback[/h1]
 [url=https://discord.gg/ZxbyzmvGxG][img]https://i.imgur.com/bnDNN2x.png[/img][/url]
 
 [HR][/HR] 
-[h1]Source code:[/h1]
+[h1]Source code[/h1]
 [url=https://github.com/Mbyron26/GameAnarchy][img]https://i.imgur.com/DczUXYq.png[/img][/url]
 
 [HR][/HR] 
-[h1]Thank you for your help and support:[/h1]
+[h1]Credits[/h1]
 [url=https://steamcommunity.com/profiles/76561198050938697]Quistar[/url], [url=https://steamcommunity.com/profiles/76561197968592937]algernon[/url], [url=https://steamcommunity.com/profiles/76561198063330220]macsergey[/url], [url=https://steamcommunity.com/id/chameleon_tbn]Chamëleon TBN[/url], [url=https://steamcommunity.com/profiles/76561198050123811]Keallu[/url], [url=https://steamcommunity.com/id/cgameworld]Cgameworld[/url], [url=https://steamcommunity.com/id/daegi]egi[/url], [url=https://steamcommunity.com/id/ShadowLink721]Shadow Link[/url], [url=https://steamcommunity.com/profiles/76561198998011726/]RilkeXS[/url], [url=https://steamcommunity.com/profiles/76561198048911880]Jose Gaspar[/url], all testers who helped test this mod and all translators who have added/improved translations to this mod.

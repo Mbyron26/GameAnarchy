@@ -1,8 +1,9 @@
 ﻿Version 1.3
 [list]
 [*] Updated to support game version 1.20.1
-[*] Updated to CSLModsCommon framework 1.0
+[*] Updated to CSLModsCommon framework 1.0.1
 [*] This update automatically resets all settings.
 [*] Added achievements system enabled prompt.
 [*] Fixed exception thrown when toggling achievement system before game.
+[*] UI improvements and optimizations.
 [/list]

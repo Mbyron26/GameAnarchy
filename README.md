@@ -56,6 +56,3 @@
 To help improve translations, please contribute on Crowdin:
 
 [![Crowdin](https://img.shields.io/badge/Crowdin-Translate-2E3340?style=flat&logo=crowdin&logoColor=white)](https://crowdin.com/project/game-anarchy)
-
-## Discussion & Feedback
-[![Discord](https://img.shields.io/badge/Discord-Chat-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/ZxbyzmvGxG)
