@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "Serileştirme istisna sorunları düzeltildi.",
   "Changelog_v1_3_0_Added": "Başarım sistemi etkin uyarısı eklendi.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "Bu güncelleme tüm ayarları otomatik olarak sıfırlar."
+  "Changelog_v1_3_0_Attention": "Bu güncelleme tüm ayarları otomatik olarak sıfırlar.",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

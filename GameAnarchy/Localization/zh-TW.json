@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "修復序列化異常問題。",
   "Changelog_v1_3_0_Added": "新增成就系統啟用提示。",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "此更新會自動重置所有設置。"
+  "Changelog_v1_3_0_Attention": "此更新會自動重置所有設置。",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "Fixed serialization exception issues.",
   "Changelog_v1_3_0_Added": "Added achievements system enabled prompt.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "This update automatically resets all settings."
+  "Changelog_v1_3_0_Attention": "This update automatically resets all settings.",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

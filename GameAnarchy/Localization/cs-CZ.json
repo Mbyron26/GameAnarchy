@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "Opraveny problémy s výjimkami serializace.",
   "Changelog_v1_3_0_Added": "Přidáno upozornění na povolený systém úspěchů.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "Tato aktualizace automaticky resetuje všechna nastavení."
+  "Changelog_v1_3_0_Attention": "Tato aktualizace automaticky resetuje všechna nastavení.",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "シリアライズ例外問題を修正",
   "Changelog_v1_3_0_Added": "実績システム有効化通知を追加",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "この更新により全ての設定が自動的にリセットされます"
+  "Changelog_v1_3_0_Attention": "この更新により全ての設定が自動的にリセットされます",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

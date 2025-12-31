@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "تم إصلاح مشاكل استثناء التسلسل.",
   "Changelog_v1_3_0_Added": "تمت إضافة تنبيه نظام الإنجازات الممكّن.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "هذا التحديث يعيد تعيين جميع الإعدادات تلقائيًا."
+  "Changelog_v1_3_0_Attention": "هذا التحديث يعيد تعيين جميع الإعدادات تلقائيًا.",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

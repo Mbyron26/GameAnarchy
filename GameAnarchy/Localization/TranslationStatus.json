@@ -3,7 +3,7 @@
     "LanguageId": "ar",
     "LanguageName": "Arabic",
     "Locale": "ar-SA",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 147,
     "TranslationProgress": 84,
     "ApprovalProgress": 84
@@ -12,7 +12,7 @@
     "LanguageId": "cs",
     "LanguageName": "Czech",
     "Locale": "cs-CZ",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 149,
     "TranslationProgress": 85,
     "ApprovalProgress": 85
@@ -21,7 +21,7 @@
     "LanguageId": "de",
     "LanguageName": "German",
     "Locale": "de-DE",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 149,
     "TranslationProgress": 85,
     "ApprovalProgress": 82
@@ -30,7 +30,7 @@
     "LanguageId": "es-ES",
     "LanguageName": "Spanish",
     "Locale": "es-ES",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 151,
     "TranslationProgress": 86,
     "ApprovalProgress": 84
@@ -39,7 +39,7 @@
     "LanguageId": "fr",
     "LanguageName": "French",
     "Locale": "fr-FR",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 86,
     "TranslationProgress": 48,
     "ApprovalProgress": 48
@@ -48,7 +48,7 @@
     "LanguageId": "it",
     "LanguageName": "Italian",
     "Locale": "it-IT",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 143,
     "TranslationProgress": 82,
     "ApprovalProgress": 82
@@ -57,7 +57,7 @@
     "LanguageId": "ja",
     "LanguageName": "Japanese",
     "Locale": "ja-JP",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 144,
     "TranslationProgress": 83,
     "ApprovalProgress": 83
@@ -66,7 +66,7 @@
     "LanguageId": "ko",
     "LanguageName": "Korean",
     "Locale": "ko-KR",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 147,
     "TranslationProgress": 84,
     "ApprovalProgress": 84
@@ -75,7 +75,7 @@
     "LanguageId": "nl",
     "LanguageName": "Dutch",
     "Locale": "nl-NL",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 118,
     "TranslationProgress": 66,
     "ApprovalProgress": 66
@@ -84,7 +84,7 @@
     "LanguageId": "pl",
     "LanguageName": "Polish",
     "Locale": "pl-PL",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 96,
     "TranslationProgress": 54,
     "ApprovalProgress": 54
@@ -93,7 +93,7 @@
     "LanguageId": "pt-BR",
     "LanguageName": "Portuguese, Brazilian",
     "Locale": "pt-BR",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 147,
     "TranslationProgress": 84,
     "ApprovalProgress": 84
@@ -102,25 +102,25 @@
     "LanguageId": "pt-PT",
     "LanguageName": "Portuguese",
     "Locale": "pt-PT",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 145,
-    "TranslationProgress": 84,
-    "ApprovalProgress": 84
+    "TranslationProgress": 83,
+    "ApprovalProgress": 83
   },
   {
     "LanguageId": "ru",
     "LanguageName": "Russian",
     "Locale": "ru-RU",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 143,
-    "TranslationProgress": 83,
-    "ApprovalProgress": 83
+    "TranslationProgress": 82,
+    "ApprovalProgress": 82
   },
   {
     "LanguageId": "sk",
     "LanguageName": "Slovak",
     "Locale": "sk-SK",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 68,
     "TranslationProgress": 40,
     "ApprovalProgress": 40
@@ -129,7 +129,7 @@
     "LanguageId": "th",
     "LanguageName": "Thai",
     "Locale": "th-TH",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 144,
     "TranslationProgress": 83,
     "ApprovalProgress": 83
@@ -138,7 +138,7 @@
     "LanguageId": "tr",
     "LanguageName": "Turkish",
     "Locale": "tr-TR",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 149,
     "TranslationProgress": 85,
     "ApprovalProgress": 85
@@ -147,8 +147,8 @@
     "LanguageId": "zh-CN",
     "LanguageName": "Chinese Simplified",
     "Locale": "zh-CN",
-    "TotalStrings": 173,
-    "TranslatedStrings": 173,
+    "TotalStrings": 174,
+    "TranslatedStrings": 174,
     "TranslationProgress": 100,
     "ApprovalProgress": 100
   },
@@ -156,7 +156,7 @@
     "LanguageId": "zh-TW",
     "LanguageName": "Chinese Traditional",
     "Locale": "zh-TW",
-    "TotalStrings": 173,
+    "TotalStrings": 174,
     "TranslatedStrings": 144,
     "TranslationProgress": 82,
     "ApprovalProgress": 82

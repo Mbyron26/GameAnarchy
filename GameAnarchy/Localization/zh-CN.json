@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "修复序列化异常问题。",
   "Changelog_v1_3_0_Added": "添加的成就系统启用提示。",
   "Changelog_v1_3_0_Fixed": "修复游戏前切换成就系统时出现异常。",
-  "Changelog_v1_3_0_Attention": "此更新将自动重置所有设置。"
+  "Changelog_v1_3_0_Attention": "此更新将自动重置所有设置。",
+  "Changelog_v1_3_0_Optimized": "界面改进和优化。"
 }

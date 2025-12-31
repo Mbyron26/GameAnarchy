@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "Naprawiono problemy z wyjątkami serializacji.",
   "Changelog_v1_3_0_Added": "Dodano powiadomienie o włączonym systemie osiągnięć.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "Ta aktualizacja automatycznie resetuje wszystkie ustawienia."
+  "Changelog_v1_3_0_Attention": "Ta aktualizacja automatycznie resetuje wszystkie ustawienia.",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }

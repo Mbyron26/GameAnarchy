@@ -171,5 +171,6 @@
   "Changelog_v1_2_1_Fixed": "แก้ไขปัญหาข้อยกเว้นการซีเรียไลซ์",
   "Changelog_v1_3_0_Added": "เพิ่มการแจ้งเตือนระบบความสำเร็จที่เปิดใช้งาน",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
-  "Changelog_v1_3_0_Attention": "การอัปเดตนี้จะรีเซ็ตการตั้งค่าทั้งหมดโดยอัตโนมัติ"
+  "Changelog_v1_3_0_Attention": "การอัปเดตนี้จะรีเซ็ตการตั้งค่าทั้งหมดโดยอัตโนมัติ",
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
 }
