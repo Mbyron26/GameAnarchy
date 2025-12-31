@@ -1,6 +1,6 @@
 ﻿# Changelog
 
-## [1.3.0] - 2025-12-09
+## [1.3.0] - 2025-12-31
 - Updated to support game version 1.20.1
 - Updated to CSLModsCommon framework 1.0.1
 - This update automatically resets all settings.
