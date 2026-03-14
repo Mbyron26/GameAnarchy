@@ -1,10 +1,10 @@
 # Extends and optimize game's functions.
 
 [![Changelog](https://img.shields.io/badge/Changelog-Click%20to%20View-blue)](CHANGELOG.md)
-[![Stable](https://img.shields.io/badge/Stable%20Version-1.3-green)](https://steamcommunity.com/sharedfiles/filedetails/?id=2781804786)
+[![Stable](https://img.shields.io/badge/Stable%20Version-1.3.1-green)](https://steamcommunity.com/sharedfiles/filedetails/?id=2781804786)
 [![Beta](https://img.shields.io/badge/Beta%20Version-1.3-orange)](https://steamcommunity.com/sharedfiles/filedetails/?id=2917685008)
 
-![d](https://i.imgur.com/9ms8DIe.png)
+![d](https://i.imgur.com/8BfNPgj.png)
 
 ## Functions
 > [!IMPORTANT]
