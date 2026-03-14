@@ -172,5 +172,7 @@
   "Changelog_v1_3_0_Added": "Pridané upozornenie na povolený systém úspechov.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
   "Changelog_v1_3_0_Attention": "Táto aktualizácia automaticky resetuje všetky nastavenia.",
-  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations.",
+  "Changelog_v1_3_1_Fixed": "Fixed oil and ore resource consumption overflow issue.",
+  "Changelog_v1_3_1_Fixed1": "Fixed an issue where the building relocation cost factor was applied incorrectly."
 }

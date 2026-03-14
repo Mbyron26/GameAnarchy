@@ -871,4 +871,19 @@ public static class Translations {
     /// </summary>
     public static string Changelog_v1_3_0_Attention => LocalizationManager.Localize("Changelog_v1_3_0_Attention");
 
+    /// <summary>
+    /// UI improvements and optimizations.
+    /// </summary>
+    public static string Changelog_v1_3_0_Optimized => LocalizationManager.Localize("Changelog_v1_3_0_Optimized");
+
+    /// <summary>
+    /// Fixed oil and ore resource consumption overflow issue.
+    /// </summary>
+    public static string Changelog_v1_3_1_Fixed => LocalizationManager.Localize("Changelog_v1_3_1_Fixed");
+
+    /// <summary>
+    /// Fixed an issue where the building relocation cost factor was applied incorrectly.
+    /// </summary>
+    public static string Changelog_v1_3_1_Fixed1 => LocalizationManager.Localize("Changelog_v1_3_1_Fixed1");
+
 }

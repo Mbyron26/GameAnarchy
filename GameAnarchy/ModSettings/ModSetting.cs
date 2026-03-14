@@ -104,7 +104,7 @@ public class ModSetting : ModSettingBase {
         UnlockMetroTrack = false;
         CurrentUnlockMode = UnlockMode.Vanilla;
         CurrentMilestoneLevel = MilestoneLevel.Vanilla;
-        CurrentMoneyMode = MoneyMode.Anarchy;
+        CurrentMoneyMode = MoneyMode.Vanilla;
         UnlockPolicies = false;
         UnlockPublicTransport = false;
         UnlockUniqueBuildings = false;

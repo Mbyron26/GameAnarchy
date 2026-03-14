@@ -1,17 +1,17 @@
-﻿[HR][/HR]
+﻿[img]https://i.imgur.com/8BfNPgj.png[/img]
+
+[HR][/HR]
 [code][h1]Overview[/h1]
 [list][h2]Extends and optimize game's functions.[/h2][/list]
 [/code]
 
 [quote]
-[u]New in version 1.3[/u]
+[u]New in version 1.3.1[/u]
 [list]
-[*] Updated to support game version 1.20.1
-[*] Updated to CSLModsCommon framework 1.0.1
-[*] This update automatically resets all settings.
-[*] Added achievements system enabled prompt.
-[*] Fixed exception thrown when toggling achievement system before game.
-[*] UI improvements and optimizations.
+[*] Updated to support game version 1.21.1
+[*] Updated to CSLModsCommon framework 1.0.2
+[*] Fixed oil and ore resource consumption overflow issue.
+[*] Fixed an issue where the building relocation cost factor was applied incorrectly.
 [/list]
 [/quote]
 
@@ -49,7 +49,7 @@ GA has a control panel in the game, use the shortcut Ctrl+Shift+G or the UUI but
 [*] Unlock All + Wonders & Landmarks - This mod already includes same functionality.
 [*] Unlimited Money - Local mod and this mod already includes same functionality.
 [*] Unlock All - Local mod and this mod already includes same functionality.
-[*] Unlimited Oil And Ore- Local mod and this mod already includes same functionality.
+[*] Unlimited Oil And Ore - Local mod and this mod already includes same functionality.
 [*] Extended Game Options - This mod already includes same functionality.
 [*] UltimateMod 2.10.2 [STABLE] - This mod already includes same functionality.
 [*] UltimateMod v2.12.11 [BETA] - This mod already includes same functionality.

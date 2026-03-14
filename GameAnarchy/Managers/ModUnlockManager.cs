@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading;
+using ColossalFramework;
+using CSLModsCommon;
 using CSLModsCommon.Extension;
 using CSLModsCommon.Manager;
 using GameAnarchy.Data;
@@ -87,7 +91,7 @@ public class ModUnlockManager : ManagerBase {
         InfoManager.InfoMode.Financial,
         InfoManager.InfoMode.Hotel
     };
-
+    
     public void CustomUnlock(IMilestones milestones) {
         if (_modSetting.CurrentUnlockMode != UnlockMode.CustomUnlock)
             return;
@@ -187,7 +191,6 @@ public class ModUnlockManager : ManagerBase {
                 buildingInfo.m_UnlockMilestone = null;
                 var intersectionAI = buildingInfo.m_buildingAI as IntersectionAI;
                 intersectionAI?.SetField<MilestoneInfo>("m_cachedUnlockMilestone", null, BindingFlags.NonPublic | BindingFlags.Instance);
-                // TypeTools.SetFieldValue<MilestoneInfo>(intersectionAI, "m_cachedUnlockMilestone", BindingFlags.NonPublic | BindingFlags.Instance, null);
             }
         }
 
@@ -290,7 +293,6 @@ public class ModUnlockManager : ManagerBase {
         }
 
         if (managers.application.SupportsExpansion(Expansion.FinanceExpansion)) {
-            milestonesManager.UnlockMilestone("Stock Exchange Level 1 Created");
             milestonesManager.UnlockMilestone("Stock Exchange Level 2 Created");
             milestonesManager.UnlockMilestone("Stock Exchange Level 3 Created");
             milestonesManager.UnlockMilestone("Stock Exchange Level 4 Created");
@@ -550,5 +552,58 @@ public class ModUnlockManager : ManagerBase {
                     milestonesManager.UnlockMilestone($"{s} {postfix}");
             });
         }
+    }
+
+    private void UnlockMilestone(string name) {
+        var um = Singleton<UnlockManager>.instance;
+        MilestoneInfo milestoneInfo;
+        while (!Monitor.TryEnter(um.m_allMilestones, SimulationManager.SYNCHRONIZE_TIMEOUT)) { }
+
+        try {
+            if (!um.m_allMilestones.TryGetValue(name, out milestoneInfo)) { }
+        }
+        finally {
+            Monitor.Exit(um.m_allMilestones);
+        }
+
+        if (milestoneInfo != null) {
+            um.CheckMilestone(milestoneInfo, true, false);
+            Logger.Debug("Unlocked milestone: " + name);
+        }
+        else {
+            Logger.Error("Unknown milestone: " + name);
+        }
+    }
+
+    public void DumpAllMilestones() {
+        var um = Singleton<UnlockManager>.instance;
+        var sb = new StringBuilder(4096);
+
+        sb.AppendLine("=== Milestones Dump ===");
+
+        while (!Monitor.TryEnter(um.m_allMilestones, SimulationManager.SYNCHRONIZE_TIMEOUT)) { }
+
+        try {
+            foreach (var kv in um.m_allMilestones) {
+                var key = kv.Key;
+                var info = kv.Value;
+                var data = info.GetData();
+
+                sb.AppendLine($"Name: {key}");
+                sb.AppendLine($"Localized: {info.GetLocalizedName()}");
+                sb.AppendLine($"Passed: {data.m_passedCount != 0}");
+                sb.AppendLine($"Reward: {info.m_rewardCash}");
+                sb.AppendLine($"Global: {info.m_isGlobal}");
+                sb.AppendLine($"Hidden: {info.m_hidden}");
+                sb.AppendLine($"CanRelock: {info.m_canRelock}");
+                sb.AppendLine($"Progress: {data.m_progress}");
+                sb.AppendLine();
+            }
+        }
+        finally {
+            Monitor.Exit(um.m_allMilestones);
+        }
+
+        Logger.Debug(sb.ToString());
     }
 }
