@@ -3,6 +3,7 @@ using CSLModsCommon.Logging;
 using CSLModsCommon.Manager;
 using GameAnarchy.ModSettings;
 using ICities;
+using UnityEngine;
 
 namespace GameAnarchy.Extension;
 
@@ -18,15 +19,22 @@ public class OilAndOreResourceExtension : ResourceExtensionBase {
 
     public override void OnAfterResourcesModified(int x, int z, NaturalResource type, int amount) {
         if (amount >= 0) return;
-        if (type == NaturalResource.Oil) {
-            if (_modSetting.OilDepletionRate == 0)
-                resourceManager.SetResource(x, z, type, (byte)(resourceManager.GetResource(x, z, type) - amount), false);
-            else if (_modSetting.OilDepletionRate != 100 && Singleton<SimulationManager>.instance.m_randomizer.Int32(100u) >= _modSetting.OilDepletionRate) resourceManager.SetResource(x, z, type, (byte)(resourceManager.GetResource(x, z, type) - amount), false);
+
+        var rate = type switch {
+            NaturalResource.Oil => _modSetting.OilDepletionRate,
+            NaturalResource.Ore => _modSetting.OreDepletionRate,
+            _ => -1
+        };
+        if (rate is < 0 or 100) return;
+
+        if (rate != 0) {
+            if (Singleton<SimulationManager>.instance.m_randomizer.Int32(100u) < rate)
+                return;
         }
-        else if (type == NaturalResource.Ore) {
-            if (_modSetting.OreDepletionRate == 0)
-                resourceManager.SetResource(x, z, type, (byte)(resourceManager.GetResource(x, z, type) - amount), false);
-            else if (_modSetting.OreDepletionRate != 100 && Singleton<SimulationManager>.instance.m_randomizer.Int32(100u) >= _modSetting.OreDepletionRate) resourceManager.SetResource(x, z, type, (byte)(resourceManager.GetResource(x, z, type) - amount), false);
-        }
+
+        int current = resourceManager.GetResource(x, z, type);
+        var delta = -amount;
+        var newValue = Mathf.Clamp(current + delta, 0, 255);
+        resourceManager.SetResource(x, z, type, (byte)newValue, false);
     }
 }

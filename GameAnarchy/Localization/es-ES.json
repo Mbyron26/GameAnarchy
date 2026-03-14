@@ -1,10 +1,10 @@
 {
-  "EnableOrDisableAll": "Enable/Disable All",
-  "Disable": "Disable",
-  "Enable": "Enable",
+  "EnableOrDisableAll": "Habilitar/Deshabilitar todo",
+  "Disable": "Deshabilitar",
+  "Enable": "Habilitar",
   "Anarchy": "Anarchy",
-  "MoneyMode": "Money Mode",
-  "UnlockMode": "Unlock Mode",
+  "MoneyMode": "Modo Dinero",
+  "UnlockMode": "Modo de desbloqueo",
   "UnlockModeDescription": "Unlock All: If this option is not selected, some features may still be unlocked. Make sure you have disabled the [Unlock All] option in Find It! mod. Custom Unlock: Although custom unlock options take effect when the game refreshes milestones. Note: It is recommended to enable this before starting the game. The [Unlock All] option in Find It! mod only unlocks all assets in the Find It! menu, but does not unlock milestones.",
   "AddMoney": "Añadir dinero",
   "AddMoneyAmount": "Añadir monto de dinero",
@@ -172,5 +172,7 @@
   "Changelog_v1_3_0_Added": "Añadido aviso de sistema de logros activado.",
   "Changelog_v1_3_0_Fixed": "Fixed exception thrown when toggling achievement system before game.",
   "Changelog_v1_3_0_Attention": "Esta actualización reinicia automáticamente todos los ajustes.",
-  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations."
+  "Changelog_v1_3_0_Optimized": "UI improvements and optimizations.",
+  "Changelog_v1_3_1_Fixed": "Fixed oil and ore resource consumption overflow issue.",
+  "Changelog_v1_3_1_Fixed1": "Fixed an issue where the building relocation cost factor was applied incorrectly."
 }

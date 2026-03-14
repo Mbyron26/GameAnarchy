@@ -23,14 +23,12 @@ public class BuildingAIPatch {
     }
 
     public static bool GetRelocationCostPrefix(BuildingAI __instance, ref int __result) {
-        if (Mathf.Approximately(_modSetting.BuildingRelocationCostFactor, 0.2f)) {
-            var constructionCost = __instance.GetConstructionCost();
-            var result = (int)(constructionCost * _modSetting.BuildingRelocationCostFactor);
-            __result = result;
-            return false;
-        }
-
-        return true;
+        if (Mathf.Approximately(_modSetting.BuildingRelocationCostFactor, 0.2f)) return true;
+        
+        var constructionCost = __instance.GetConstructionCost();
+        var result = (int)(constructionCost * _modSetting.BuildingRelocationCostFactor);
+        __result = result;
+        return false;
     }
 }
 

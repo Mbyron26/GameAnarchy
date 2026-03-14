@@ -172,5 +172,7 @@
   "Changelog_v1_3_0_Added": "添加的成就系统启用提示。",
   "Changelog_v1_3_0_Fixed": "修复游戏前切换成就系统时出现异常。",
   "Changelog_v1_3_0_Attention": "此更新将自动重置所有设置。",
-  "Changelog_v1_3_0_Optimized": "界面改进和优化。"
+  "Changelog_v1_3_0_Optimized": "界面改进和优化。",
+  "Changelog_v1_3_1_Fixed": "修复石油和矿石资源消耗溢出的问题。",
+  "Changelog_v1_3_1_Fixed1": "修复了建筑物搬迁费用错误的问题。"
 }

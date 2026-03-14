@@ -14,7 +14,7 @@ namespace GameAnarchy.Managers;
 public class ModManager : PatchModManagerBase {
     public override string ModName => "Game Anarchy";
     public override string RowDescription => "Extends and optimize game's functions.";
-    public override DateTime VersionDate { get; } = new(2025, 12, 31);
+    public override DateTime VersionDate { get; } = new(2026, 3, 14);
     public override string ModTranslationURL => "https://crowdin.com/project/game-anarchy";
     public override string ModSteamURL => "https://steamcommunity.com/sharedfiles/filedetails/?id=2781804786";
 
@@ -73,10 +73,13 @@ public class ModManager : PatchModManagerBase {
 
     protected override void AddVersionModRule(IVersionModRule rule) {
         base.AddVersionModRule(rule);
-        rule.Set(1, 20, 1, 1);
+        rule.Set(1, 21, 1, 5);
     }
 
     protected override List<ChangelogCollection> GenerateChangelogs() => [
+        new ChangelogCollection(new Version(1, 3, 1), new DateTime(2026, 3, 14))
+            .AddEntry(ChangelogFlag.Updated, new FormattedString(nameof(SharedTranslations.UpdatedToCSLModsCommon), "1.0.2"))
+            .AddEntry(ChangelogFlag.Updated, new FormattedString(nameof(SharedTranslations.UpdatedToGameVersion), "1.21.1")),
         new ChangelogCollection(new Version(1, 3, 0), new DateTime(2025, 12, 31))
             .AddEntry(ChangelogFlag.Updated, new FormattedString(nameof(SharedTranslations.UpdatedToCSLModsCommon), "1.0.1"))
             .AddEntry(ChangelogFlag.Updated, new FormattedString(nameof(SharedTranslations.UpdatedToGameVersion), "1.20.1")),
